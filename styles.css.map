@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///webpack:///src/src/styles/styles.scss"],"names":[],"mappings":"AAAA,KACE,eAAiB","file":"styles.css","sourcesContent":["main {\n  margin-top: 50px;\n}\n\n\n\n/** WEBPACK FOOTER **\n ** webpack:///src/src/styles/styles.scss\n **/"],"sourceRoot":""}
