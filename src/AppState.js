@@ -1,17 +1,17 @@
-import { observable } from 'mobx';
+import { observable } from 'mobx'
 
 class AppState {
-  @observable timer = 0;
+  @observable timer = 0
 
   constructor() {
     setInterval(() => {
-      this.timer += 1;
-    }, 1000);
+      this.timer += 1
+    }, 1000)
   }
 
   resetTimer() {
-    this.timer = 0;
+    this.timer = 0
   }
 }
 
-export default AppState;
+export default AppState

@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
-import { observer } from 'mobx-react';
-import DevTools from 'mobx-react-devtools';
-import { Button } from 'react-bootstrap';
+import React, { Component } from 'react'
+import { observer } from 'mobx-react'
+import DevTools from 'mobx-react-devtools'
+import { Button } from 'react-bootstrap'
 
 @observer
 class App extends Component {
@@ -13,12 +13,12 @@ class App extends Component {
         </Button>
         <DevTools />
       </div>
-    );
+    )
   }
 
   onReset = () => {
-    this.props.appState.resetTimer();
+    this.props.appState.resetTimer()
   }
-};
+}
 
-export default App;
+export default App
