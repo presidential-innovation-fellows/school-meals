@@ -1,18 +1,22 @@
 import React, { Component, PropTypes } from 'react'
+import Navigation from './Navigation'
 import { Grid, Row, Col } from 'react-bootstrap'
 
 class Layout extends Component {
   render() {
     return (
-      <main>
-        <Grid>
-          <Row>
-            <Col xs={12}>
-              {this.props.children}
-            </Col>
-          </Row>
-        </Grid>
-      </main>
+      <div>
+        <Navigation />
+        <main>
+          <Grid>
+            <Row>
+              <Col xs={12}>
+                {this.props.children}
+              </Col>
+            </Row>
+          </Grid>
+        </main>
+      </div>
     )
   }
 }
