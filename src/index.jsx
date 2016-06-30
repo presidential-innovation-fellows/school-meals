@@ -2,7 +2,7 @@ import React from 'react';
 import { render } from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import AppState from './AppState';
-import App from './App';
+import App from './components/App';
 
 const appState = new AppState();
 
@@ -14,8 +14,8 @@ render(
 );
 
 if (module.hot) {
-  module.hot.accept('./App', () => {
-    const NextApp = require('./App').default;
+  module.hot.accept('./components/App', () => {
+    const NextApp = require('./components/App').default;
 
     render(
       <AppContainer>
