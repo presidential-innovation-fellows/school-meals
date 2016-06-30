@@ -1,15 +1,16 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
-import AppState from './AppState'
+import AppState from './stores/AppState'
 import App from './components/App'
+import Layout from './Layout'
 
 const appState = new AppState()
 
 render(
-  <AppContainer>
-    <App appState={appState} />
-  </AppContainer>,
+  <Layout>
+    <App />
+  </Layout>,
   document.getElementById('root')
 )
 
@@ -18,9 +19,9 @@ if (module.hot) {
     const NextApp = require('./components/App').default
 
     render(
-      <AppContainer>
-        <NextApp appState={appState} />
-      </AppContainer>,
+      <Layout>
+        <NextApp />
+      </Layout>,
       document.getElementById('root')
     )
   })
