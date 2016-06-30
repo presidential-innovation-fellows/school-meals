@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import { observer } from 'mobx-react';
 import DevTools from 'mobx-react-devtools';
+import { Button } from 'react-bootstrap';
 
 @observer
 class App extends Component {
   render() {
     return (
       <div>
-        <button onClick={this.onReset}>
+        <Button onClick={this.onReset}>
           Seconds passed: {this.props.appState.timer}
-        </button>
+        </Button>
         <DevTools />
       </div>
     );
