@@ -1,15 +1,15 @@
 import React from 'react'
 import { render } from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
-import AppState from './stores/AppState'
+import ApplicationData from './stores/ApplicationData'
 import App from './components/App'
 import Layout from './Layout'
 
-const appState = new AppState()
+const applicationData = new ApplicationData()
 
 render(
   <Layout>
-    <App />
+    <App applicationData={applicationData} />
   </Layout>,
   document.getElementById('root')
 )
@@ -20,7 +20,7 @@ if (module.hot) {
 
     render(
       <Layout>
-        <NextApp />
+        <NextApp applicationData={applicationData} />
       </Layout>,
       document.getElementById('root')
     )

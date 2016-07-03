@@ -5,16 +5,38 @@ import Welcome from './slides/Welcome'
 import BeforeYouBegin from './slides/BeforeYouBegin'
 import LegalStatements from './slides/LegalStatements'
 import Attestation from './slides/Attestation'
+import Students from './slides/Students'
 
 @observer
 class Application extends Component {
   render() {
+    const {attestation} = this.props.applicationData
+
     return (
       <div>
         <Welcome />
         <BeforeYouBegin />
         <LegalStatements />
-        <Attestation />
+        <Attestation attestation={attestation} />
+
+{/*
+        <Students />
+        <AssistancePrograms />
+        <OtherPrograms />
+        <OtherProgramsStudent />
+        <OtherStudents />
+        <YoungChildren />
+        <OtherChildren />
+        <ChildIncome />
+        <Military />
+        <MilitaryDetails />
+        <OtherHouseholdMembers />
+
+        <Ssn />
+        <Demographics />
+        <Summary />
+        <ThankYou />
+*/}
       </div>
     )
   }

@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <div>
         <DevTools />
-        <Application />
+        <Application applicationData={this.props.applicationData} />
       </div>
     )
   }
