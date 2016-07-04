@@ -6,6 +6,7 @@ import App from './components/App'
 import Layout from './Layout'
 
 const applicationData = new ApplicationData()
+window.applicationData = applicationData
 
 render(
   <Layout>

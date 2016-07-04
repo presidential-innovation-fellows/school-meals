@@ -10,7 +10,10 @@ import Students from './slides/Students'
 @observer
 class Application extends Component {
   render() {
-    const {attestation} = this.props.applicationData
+    const {
+      attestation,
+      students
+    } = this.props.applicationData
 
     return (
       <div>
@@ -18,9 +21,8 @@ class Application extends Component {
         <BeforeYouBegin />
         <LegalStatements />
         <Attestation attestation={attestation} />
-
+        <Students attestation={attestation} students={students} />
 {/*
-        <Students />
         <AssistancePrograms />
         <OtherPrograms />
         <OtherProgramsStudent />
