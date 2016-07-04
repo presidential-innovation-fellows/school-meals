@@ -1,7 +1,8 @@
 import React, { Component, PropTypes } from 'react'
-import { observer } from 'mobx-react'
 import Slide from '../Slide'
 import PersonCollection from '../PersonCollection'
+import { organization } from '../../../config'
+import { observer } from 'mobx-react'
 
 @observer
 class Students extends Component {
@@ -10,7 +11,7 @@ class Students extends Component {
 
     return (
       <Slide header="Students" nextDisabled={!students.isValid}>
-        <p>List the names of the students in your household that attend [insert school district], and that are applying for school meal benefits.</p>
+        <p>List the names of the students in your household that attend {organization.name} and are applying for school meal benefits.</p>
 
         <PersonCollection
             label="student"

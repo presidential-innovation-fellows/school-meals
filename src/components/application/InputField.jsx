@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
-import { clean, titleize } from 'underscore.string'
 import { FormGroup,
          FormControl,
          ControlLabel,
@@ -28,7 +27,9 @@ class InputField extends Component {
   }
 
   defaultSanitize(value) {
-    return clean(titleize(value))
+    // NOTE: trimming and titleizing caused input problems, e.g. could not
+    // add a space, could not type McFoo (would force Mcfoo), etc.
+    return value
   }
 
   render() {
