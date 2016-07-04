@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
 import InputField from '../InputField'
-import { computed, observer } from 'mobx-react'
+import { observer } from 'mobx-react'
 import { Form,
          FormGroup,
          FormControl,
@@ -17,9 +17,7 @@ class Attestation extends Component {
   }
 
   render() {
-    const {
-      attestation
-    } = this.props
+    const { attestation } = this.props
 
     return (
       <Slide header="Attestation" nextDisabled={!this.isValid}>

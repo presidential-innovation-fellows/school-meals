@@ -1,4 +1,5 @@
 import { action, computed, observable } from 'mobx'
+import { toSentenceSerial } from 'underscore.string'
 
 export default class ApplicationData {
   students = new StudentCollection()
@@ -44,6 +45,15 @@ class PersonCollection {
     return this.items.map(function(item) {
       return requiredFieldNames.map(fieldName => !!item[fieldName].length)
     }).reduce((a, b) => a.concat(b), []).reduce((a, b) => a && b, true)
+  }
+
+  // returns e.g. "Jill, Joe, and Joe Jr."
+  @computed get informalList() {
+    const names = this.items.map(function (person) {
+      return person.firstName + (person.suffix ? ` ${person.suffix}` : '')
+    })
+
+    return toSentenceSerial(names, ', ', ' and ')
   }
 
   toJSON() {

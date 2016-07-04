@@ -6,6 +6,7 @@ import BeforeYouBegin from './slides/BeforeYouBegin'
 import LegalStatements from './slides/LegalStatements'
 import Attestation from './slides/Attestation'
 import Students from './slides/Students'
+import AssistancePrograms from './slides/AssistancePrograms'
 
 @observer
 class Application extends Component {
@@ -22,8 +23,8 @@ class Application extends Component {
         <LegalStatements />
         <Attestation attestation={attestation} />
         <Students attestation={attestation} students={students} />
+        <AssistancePrograms students={students} />
 {/*
-        <AssistancePrograms />
         <OtherPrograms />
         <OtherProgramsStudent />
         <OtherStudents />
