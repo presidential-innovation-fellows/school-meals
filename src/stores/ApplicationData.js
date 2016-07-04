@@ -1,6 +1,6 @@
 import { action, computed, observable } from 'mobx'
 
-class ApplicationData {
+export default class ApplicationData {
   students = new StudentCollection()
 
   @observable attestation = {
@@ -75,5 +75,3 @@ class StudentCollection extends PersonCollection {
     return this.items.length >= 1 && super.isValid
   }
 }
-
-export default ApplicationData

@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
-import { Button, PageHeader, Panel } from 'react-bootstrap'
+import { Button, Form, PageHeader, Panel } from 'react-bootstrap'
 
 @observer
 class Slide extends Component {
@@ -10,22 +10,24 @@ class Slide extends Component {
         <PageHeader>{this.props.header}</PageHeader>
 
         <Panel>
-          {this.props.children}
+          <Form>
+            {this.props.children}
 
-          <footer>
-            {this.props.showBack &&
-             <Button onClick={this.props.handleBack}
-                     disabled={this.props.backDisabled}>
-               {this.props.backText}
-             </Button>}
-            {' '}
-            {this.props.showNext &&
-             <Button onClick={this.props.handleNext}
-                     disabled={this.props.nextDisabled}
-                     bsStyle="primary">
-               {this.props.nextText}
-             </Button>}
-          </footer>
+            <footer>
+              {this.props.showBack &&
+               <Button onClick={this.props.handleBack}
+                       disabled={this.props.backDisabled}>
+                 {this.props.backText}
+               </Button>}
+               {' '}
+               {this.props.showNext &&
+                <Button onClick={this.props.handleNext}
+                        disabled={this.props.nextDisabled}
+                        bsStyle="primary">
+                  {this.props.nextText}
+                </Button>}
+            </footer>
+          </Form>
         </Panel>
       </section>
     )
