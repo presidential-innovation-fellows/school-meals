@@ -7,6 +7,7 @@ import LegalStatements from './slides/LegalStatements'
 import Attestation from './slides/Attestation'
 import Students from './slides/Students'
 import AssistancePrograms from './slides/AssistancePrograms'
+import NoAssistancePrograms from './NoAssistancePrograms'
 
 @observer
 class Application extends Component {
@@ -26,17 +27,11 @@ class Application extends Component {
         <Students attestation={attestation} students={students} />
         <AssistancePrograms assistancePrograms={assistancePrograms}
                             students={students} />
-{/*
-        <OtherPrograms />
-        <OtherProgramsStudent />
-        <OtherStudents />
-        <YoungChildren />
-        <OtherChildren />
-        <ChildIncome />
-        <Military />
-        <MilitaryDetails />
-        <OtherHouseholdMembers />
 
+        {assistancePrograms.hasAny === false &&
+         <NoAssistancePrograms applicationData={this.props.applicationData} />
+        }
+{/*
         <Ssn />
         <Demographics />
         <Summary />
