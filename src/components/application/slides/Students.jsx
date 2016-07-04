@@ -13,7 +13,7 @@ class Students extends Component {
     } = this.props
 
     return (
-      <Slide header="Students">
+      <Slide header="Students" nextDisabled={!students.isValid}>
         <p>Thanks, {attestation.firstName}.</p>
         <p>List the names of the students in your household that attend [insert school district], and that are applying for school meal benefits.</p>
 

@@ -29,6 +29,7 @@ class PersonForm extends Component {
                 person={person}
                 name={field.name}
                 label={field.label}
+                required={!!field.required}
                 key={index} />
            )}
         </div>
@@ -50,7 +51,8 @@ PersonForm.propTypes = {
   person: PropTypes.object.isRequired,
   fields: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired
+    label: PropTypes.string.isRequired,
+    required: PropTypes.bool
   })).isRequired
 }
 */

@@ -28,7 +28,6 @@ class PersonCollection extends Component {
 
     return(
       <div>
-
         {!collection.length &&
           <Well><strong>No {labelPlural}</strong></Well>
         }
@@ -47,13 +46,6 @@ class PersonCollection extends Component {
             Add {collection.length ? 'another' : 'a'} {label}
           </Button>
         </div>
-
-        <ul>
-        {collection.map((person, index) =>
-          <li key={index}>{person.firstName} {person.lastName}</li>
-         )}
-        </ul>
-
       </div>
     )
   }

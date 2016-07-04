@@ -1,23 +1,9 @@
 import React, { Component, PropTypes } from 'react'
+import { observer } from 'mobx-react'
 import { Button, PageHeader, Panel } from 'react-bootstrap'
 
+@observer
 class Slide extends Component {
-  constructor(props, context) {
-    super(props, context);
-
-    if (props.showBack) {
-      this.back = (<Button onClick={props.handleBack}>
-                     {props.backText}
-                   </Button>)
-    }
-
-    if (props.showNext) {
-      this.next = (<Button onClick={props.handleNext} bsStyle="primary">
-                     {props.nextText}
-                   </Button>)
-    }
-  }
-
   render() {
     return (
       <section>
@@ -27,7 +13,18 @@ class Slide extends Component {
           {this.props.children}
 
           <footer>
-            {this.back}{' '}{this.next}
+            {this.props.showBack &&
+             <Button onClick={this.props.handleBack}
+                     disabled={this.props.backDisabled}>
+               {this.props.backText}
+             </Button>}
+            {' '}
+            {this.props.showNext &&
+             <Button onClick={this.props.handleNext}
+                     disabled={this.props.nextDisabled}
+                     bsStyle="primary">
+               {this.props.nextText}
+             </Button>}
           </footer>
         </Panel>
       </section>
@@ -42,6 +39,8 @@ Slide.propTypes = {
   handleNext: PropTypes.func,
   showBack: PropTypes.bool,
   showNext: PropTypes.bool,
+  backDisabled: PropTypes.bool,
+  nextDisabled: PropTypes.bool,
   backText: PropTypes.string,
   nextText: PropTypes.string
 }
@@ -51,6 +50,8 @@ Slide.defaultProps = {
   handleNext: () => {},
   showBack: true,
   showNext: true,
+  backDisabled: false,
+  nextDisabled: false,
   backText: 'Back',
   nextText: 'Continue'
 }

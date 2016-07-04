@@ -1,11 +1,8 @@
-import { action, observable } from 'mobx'
+import { action, computed, observable } from 'mobx'
 
 class ApplicationData {
-  constructor() {
-    this.students = new StudentCollection()
-  }
+  students = new StudentCollection()
 
-  @observable students
   @observable attestation = {
     firstName: '',
     lastName: ''
@@ -21,9 +18,9 @@ class PersonCollection {
 
   get fields() {
     return [
-      { name: 'firstName', label: 'First name' },
+      { name: 'firstName', label: 'First name', required: true },
       { name: 'middleName', label: 'Middle name' },
-      { name: 'lastName', label: 'Last name' },
+      { name: 'lastName', label: 'Last name', required: true },
       { name: 'suffix', label: 'Suffix' }
     ]
   }
@@ -36,8 +33,17 @@ class PersonCollection {
     return item
   }
 
-  get length() {
+  @computed get length() {
     return this.items.length
+  }
+
+  @computed get isValid() {
+    const requiredFieldNames =
+      this.fields.filter(f => f.required).map(f => f.name)
+
+    return this.items.map(function(item) {
+      return requiredFieldNames.map(fieldName => !!item[fieldName].length)
+    }).reduce((a, b) => a.concat(b), []).reduce((a, b) => a && b, true)
   }
 
   toJSON() {
@@ -60,9 +66,13 @@ class PersonCollection {
 class StudentCollection extends PersonCollection {
   get fields() {
     return super.fields.concat([
-      { name: 'school', label: 'School' },
-      { name: 'grade', label: 'Grade' }
+      { name: 'school', label: 'School', required: true },
+      { name: 'grade', label: 'Grade', required: true }
     ])
+  }
+
+  get isValid() {
+    return this.items.length >= 1 && super.isValid
   }
 }
 
