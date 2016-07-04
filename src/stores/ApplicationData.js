@@ -1,12 +1,55 @@
 import { action, computed, observable } from 'mobx'
 import { toSentenceSerial } from 'underscore.string'
+import { assistancePrograms as assistanceProgramNames } from '../config'
 
 export default class ApplicationData {
   students = new StudentCollection()
+  assistancePrograms = new AssistancePrograms()
 
   @observable attestation = {
     firstName: '',
     lastName: ''
+  }
+
+}
+
+export class AssistancePrograms {
+  @observable hasAny
+  @observable items
+
+  constructor(items = null) {
+    if (items) {
+      this.items = items
+    } else {
+      this.items = assistanceProgramNames.map(function(programName) {
+        return { name: programName, caseNumber: '' }
+      })
+    }
+  }
+
+  tojson() {
+    return this.items.toJSON()
+  }
+
+  map(func) {
+    return this.items.map(func)
+  }
+
+  @computed get length() {
+    return this.items.length
+  }
+
+  @computed get isValid() {
+    switch (this.hasAny) {
+      case true:
+        return this.items
+                   .map(item => !!item.caseNumber)
+                   .reduce((a, b) => a || b, false)
+      case false:
+        return true
+      default:
+        return false
+    }
   }
 }
 
@@ -34,6 +77,14 @@ class PersonCollection {
     return item
   }
 
+  toJSON() {
+    return this.items.toJSON()
+  }
+
+  map(func) {
+    return this.items.map(func)
+  }
+
   @computed get length() {
     return this.items.length
   }
@@ -54,14 +105,6 @@ class PersonCollection {
     })
 
     return toSentenceSerial(names, ', ', ' and ')
-  }
-
-  toJSON() {
-    return this.items.toJSON()
-  }
-
-  map(func) {
-    return this.items.map(func)
   }
 
   @action add() {

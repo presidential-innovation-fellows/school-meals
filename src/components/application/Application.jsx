@@ -13,7 +13,8 @@ class Application extends Component {
   render() {
     const {
       attestation,
-      students
+      students,
+      assistancePrograms
     } = this.props.applicationData
 
     return (
@@ -23,7 +24,8 @@ class Application extends Component {
         <LegalStatements />
         <Attestation attestation={attestation} />
         <Students attestation={attestation} students={students} />
-        <AssistancePrograms students={students} />
+        <AssistancePrograms assistancePrograms={assistancePrograms}
+                            students={students} />
 {/*
         <OtherPrograms />
         <OtherProgramsStudent />
