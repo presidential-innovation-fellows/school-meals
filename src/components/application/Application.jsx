@@ -8,6 +8,7 @@ import Attestation from './slides/Attestation'
 import Students from './slides/Students'
 import AssistancePrograms from './slides/AssistancePrograms'
 import NoAssistancePrograms from './NoAssistancePrograms'
+import ThankYou from './slides/ThankYou'
 
 @observer
 class Application extends Component {
@@ -34,8 +35,8 @@ class Application extends Component {
 {/*
         <Demographics />
         <Summary />
-        <ThankYou />
 */}
+        <ThankYou />
       </div>
     )
   }
