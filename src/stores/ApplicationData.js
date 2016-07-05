@@ -1,4 +1,4 @@
-import { action, computed, extendObservable, observable } from 'mobx'
+import { action, computed, observable } from 'mobx'
 import { toSentenceSerial } from 'underscore.string'
 import { assistancePrograms as assistanceProgramNames } from '../config'
 
@@ -84,10 +84,7 @@ class PersonCollection {
     for (let field of this.fields) {
       item[field.name] = ''
     }
-
-    extendObservable(item, this.propertiesOtherThanFields)
-
-    return item
+    return Object.assign(item, this.propertiesOtherThanFields)
   }
 
   toJSON() {
