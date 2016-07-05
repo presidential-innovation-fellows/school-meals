@@ -46,6 +46,7 @@ class PersonCollection extends Component {
             Add {collection.length ? 'another' : 'a'} {label}
           </Button>
         </div>
+        <br />
       </div>
     )
   }

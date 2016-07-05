@@ -32,7 +32,6 @@ class Application extends Component {
          <NoAssistancePrograms applicationData={this.props.applicationData} />
         }
 {/*
-        <Ssn />
         <Demographics />
         <Summary />
         <ThankYou />
