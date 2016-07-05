@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { observer } from 'mobx-react'
 import HouseholdIntro from './slides/HouseholdIntro'
+import OtherStudents from './slides/OtherStudents'
 
 @observer
 class HouseholdIncome extends Component {
@@ -8,13 +9,14 @@ class HouseholdIncome extends Component {
     const {
       attestation,
       students,
+      otherStudents,
     } = this.props.applicationData
 
     return (
       <div>
         <HouseholdIntro />
+        <OtherStudents otherStudents={otherStudents} />
 {/*
-        <OtherStudents />
         <YoungChildren />
         <OtherChildren />
         <ChildIncome />

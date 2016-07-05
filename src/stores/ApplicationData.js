@@ -4,6 +4,8 @@ import { assistancePrograms as assistanceProgramNames } from '../config'
 
 export default class ApplicationData {
   students = new StudentCollection()
+  otherStudents = new OptionalPersonCollection()
+
   assistancePrograms = new AssistancePrograms()
 
   @observable attestation = {
@@ -144,5 +146,22 @@ class StudentCollection extends PersonCollection {
 
   get isValid() {
     return this.items.length >= 1 && super.isValid
+  }
+}
+
+class OptionalPersonCollection extends PersonCollection {
+  @observable hasAny
+
+  get isValid() {
+    switch (this.hasAny) {
+      case true:
+        return this.items.length >= 1 && super.isValid
+        break
+      case false:
+        return true
+        break
+      default:
+        return false
+    }
   }
 }
