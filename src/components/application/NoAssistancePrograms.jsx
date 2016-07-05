@@ -4,6 +4,7 @@ import HouseholdIncome from './HouseholdIncome'
 import OtherPrograms from './slides/OtherPrograms'
 import Foster from './slides/Foster'
 import Homeless from './slides/Homeless'
+import Migrant from './slides/Migrant'
 
 @observer
 class NoAssistancePrograms extends Component {
@@ -28,8 +29,8 @@ class NoAssistancePrograms extends Component {
         <OtherPrograms students={students} />
         <Foster students={students} />
         <Homeless students={students} />
-{/*
         <Migrant students={students} />
+{/*
         <Runaway students={students} />
 */}
 
