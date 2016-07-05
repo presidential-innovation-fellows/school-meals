@@ -3,6 +3,7 @@ import { observer } from 'mobx-react'
 import HouseholdIncome from './HouseholdIncome'
 import OtherPrograms from './slides/OtherPrograms'
 import Foster from './slides/Foster'
+import Homeless from './slides/Homeless'
 
 @observer
 class NoAssistancePrograms extends Component {
@@ -26,8 +27,8 @@ class NoAssistancePrograms extends Component {
       <div>
         <OtherPrograms students={students} />
         <Foster students={students} />
-{/*
         <Homeless students={students} />
+{/*
         <Migrant students={students} />
         <Runaway students={students} />
 */}

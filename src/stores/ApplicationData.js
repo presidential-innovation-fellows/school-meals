@@ -35,10 +35,6 @@ export class AssistancePrograms {
     return this.items.map(func)
   }
 
-  @computed get first() {
-    return this.items[0]
-  }
-
   @computed get length() {
     return this.items.length
   }
@@ -101,6 +97,10 @@ class PersonCollection {
                .reduce((a, b) => a && b, true)
   }
 
+  @computed get first() {
+    return this.items[0]
+  }
+
   @computed get length() {
     return this.items.length
   }
@@ -142,7 +142,10 @@ class StudentCollection extends PersonCollection {
 
   get propertiesOtherThanFields() {
     return Object.assign({}, super.propertiesOtherThanFields, {
-      isFoster: null
+      isFoster: null,
+      isHomeless: null,
+      isMigrant: null,
+      isRunaway: null
     })
   }
 
