@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { observer } from 'mobx-react'
+import HouseholdIntro from './slides/HouseholdIntro'
 
 @observer
 class HouseholdIncome extends Component {
@@ -11,7 +12,7 @@ class HouseholdIncome extends Component {
 
     return (
       <div>
-        <p>Must collect full household income.</p>
+        <HouseholdIntro />
 {/*
         <OtherStudents />
         <YoungChildren />
