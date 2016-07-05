@@ -10,7 +10,6 @@ export default class ApplicationData {
     firstName: '',
     lastName: ''
   }
-
 }
 
 export class AssistancePrograms {
@@ -89,12 +88,6 @@ class PersonCollection {
 
   map(func) {
     return this.items.map(func)
-  }
-
-  allHaveProp(prop) {
-    return this.items
-               .map(item => item[prop] != undefined)
-               .reduce((a, b) => a && b, true)
   }
 
   @computed get first() {

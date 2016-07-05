@@ -5,15 +5,16 @@ import { observer } from 'mobx-react'
 @observer
 class Homeless extends Component {
   render() {
-    const { students } = this.props
+    const { studentItems, unless } = this.props
 
     return (
       <PersonCollectionAttributeSlide
           header="Homeless"
-          collection={students}
-          attribute="isHomeless">
+          collectionItems={studentItems}
+          attribute="isHomeless"
+      >
 
-        <p>{students.length === 1 ? <span>Does <strong>{students.first.firstName}</strong></span> : 'Do any students'} receive assistance under the McKinney-Vento Homeless Assistance Act, or does your household lack a permanent address, or stay together in a shelter, hotel, or other temporary housing arrangement?</p>
+        <p>{studentItems.length === 1 ? <span>Does <strong>{studentItems[0].firstName}</strong></span> : 'Do any students'} receive assistance under the McKinney-Vento Homeless Assistance Act, or does your household lack a permanent address, or stay together in a shelter, hotel, or other temporary housing arrangement?</p>
 
       </PersonCollectionAttributeSlide>
     )

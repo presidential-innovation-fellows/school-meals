@@ -12,7 +12,7 @@ class OtherPrograms extends Component {
 
         <p>No problem! There are other ways to qualify.</p>
 
-        <p>If <strong>{students.informalList}</strong> {students.length === 1 ? 'is a foster child' : 'are forster children'} or qualify as homeless, migrant or runaway, then they may be eligible for school meal benefits.</p>
+        <p>If <strong>{students.informalList}</strong> {students.length === 1 ? 'is a foster child' : 'are forster children'} or qualify as homeless, migrant, or runaway, then they may be eligible for school meal benefits.</p>
 
       </Slide>
     )

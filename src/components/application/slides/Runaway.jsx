@@ -5,17 +5,16 @@ import { observer } from 'mobx-react'
 @observer
 class Runaway extends Component {
   render() {
-    const { students } = this.props
+    const { studentItems, unless } = this.props
 
     return (
       <PersonCollectionAttributeSlide
           header="Runaway"
-          collection={students}
+          collectionItems={studentItems}
           attribute="isRunaway"
-          disqualifyingAttributes={['isFoster', 'isHomeless', 'isMigrant']}
       >
 
-        <p>{students.length === 1 ? <span>Does <strong>{students.first.firstName}</strong></span> : 'Do any students'} participate in any programs under the Runaway and Homeless Youth Act, or have they chosen to leave their prior family or household?</p>
+        <p>{studentItems.length === 1 ? <span>Does <strong>{studentItems[0].firstName}</strong></span> : 'Do any students'} participate in any programs under the Runaway and Homeless Youth Act, or have they chosen to leave their prior family or household?</p>
 
       </PersonCollectionAttributeSlide>
     )

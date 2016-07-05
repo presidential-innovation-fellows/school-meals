@@ -9,32 +9,67 @@ import Runaway from './slides/Runaway'
 
 @observer
 class NoAssistancePrograms extends Component {
-  constructor (props) {
-    super(props)
-//    this.allStudentsQualify = this.allStudentsQualify.bind(this)
+  constructor(props) {
+    super(props);
+    this.studentItemsExcept = this.studentItemsExcept.bind(this);
   }
 
-  allStudentsQualify() {
-    const students = this.props.applicationData.students
-    // TODO
+  get qualifyingAttributes() {
+    return [
+      'isFoster',
+      'isHomeless',
+      'isMigrant',
+      'isRunaway'
+    ]
+  }
+
+  get allStudentsQualify() {
+    const qualifyingAttributes = this.qualifyingAttributes
+
+    return this.props.applicationData.students
+      .map(student => {
+        return qualifyingAttributes
+                   .map(attr => student[attr] === true)
+                   .reduce((a, b) => a || b, false)
+      })
+      .reduce((a, b) => a && b, true)
+  }
+
+  studentItemsExcept(attributes = []) {
+    return this.props.applicationData.students.items.filter(student => {
+      return !attributes
+        .map(attr => student[attr] === true)
+        .reduce((a, b) => a || b, false)
+    })
   }
 
   render() {
-    const {
-      attestation,
-      students,
-    } = this.props.applicationData
+    // keep order of cascading consistent with order of presentation below
+    const studentItems = {
+      foster: this.studentItemsExcept([]),
+      homeless: this.studentItemsExcept(['isFoster']),
+      migrant: this.studentItemsExcept(['isFoster', 'isHomeless']),
+      runaway: this.studentItemsExcept(['isFoster', 'isHomeless', 'isMigrant'])
+    }
 
     return (
       <div>
-        <OtherPrograms students={students} />
-        <Foster students={students} />
-        <Homeless students={students} />
-        <Migrant students={students} />
-        <Runaway students={students} />
+        <OtherPrograms students={this.props.applicationData.students} />
 
-        {!this.allStudentsQualify() &&
-        <HouseholdIncome applicationData={this.props.applicationData} />
+        {!!studentItems.foster.length &&
+         <Foster studentItems={studentItems.foster} />
+        }
+        {!!studentItems.homeless.length &&
+         <Homeless studentItems={studentItems.homeless} />
+        }
+        {!!studentItems.migrant.length &&
+         <Migrant studentItems={studentItems.migrant} />
+        }
+        {!!studentItems.runaway.length &&
+         <Runaway studentItems={studentItems.runaway} />
+        }
+        {!this.allStudentsQualify &&
+         <HouseholdIncome applicationData={this.props.applicationData} />
         }
       </div>
     )

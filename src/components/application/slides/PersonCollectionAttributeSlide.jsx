@@ -6,19 +6,22 @@ import { ControlLabel } from 'react-bootstrap'
 
 @observer
 class PersonCollectionAttributeSlide extends Component {
+  // true if either true/false radio button has been clicked (is non-null)
   get isValid() {
-    return this.props.collection.allHaveProp(this.props.attribute)
+    return this.props.collectionItems
+               .map(item => item[this.props.attribute] != undefined)
+               .reduce((a, b) => a && b, true)
   }
 
   render() {
-    const { collection, attribute, header } = this.props
+    const { attribute, collectionItems, header } = this.props
 
     return (
       <Slide header={header} nextDisabled={!this.isValid}>
         {this.props.children}
-        {collection.map((person, i) =>
+        {collectionItems.map((person, i) =>
           <div key={i}>
-            {collection.length !== 1 &&
+            {collectionItems.length !== 1 &&
              <ControlLabel>{person.firstName}</ControlLabel>}
              <BooleanRadio name={attribute}
                            object={person}
@@ -32,7 +35,7 @@ class PersonCollectionAttributeSlide extends Component {
 
 PersonCollectionAttributeSlide.propTypes = {
   attribute: PropTypes.string.isRequired,
-  collection: PropTypes.object.isRequired,
+  collectionItems: PropTypes.arrayOf(PropTypes.object).isRequired,
   header: PropTypes.string.isRequired
 }
 
