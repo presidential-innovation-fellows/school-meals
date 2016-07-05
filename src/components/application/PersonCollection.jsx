@@ -32,13 +32,12 @@ class PersonCollection extends Component {
           <Well><strong>No {labelPlural}</strong></Well>
         }
 
-        {collection.map((person, index) =>
+        {collection.map(person =>
           <PersonForm person={person}
                       fields={collection.fields}
                       label={label}
-                      key={index}
-                      onRemove={this.onRemove}
-          />
+                      key={person.id}
+                      onRemove={this.onRemove} />
         )}
 
         <div>

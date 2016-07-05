@@ -12,9 +12,9 @@ class AssistanceProgramList extends Component {
       <div>
         <p>Please enter your case number(s):</p>
 
-        {assistancePrograms.map((program, i) =>
+        {assistancePrograms.map(program =>
           <InputField
-              key={i}
+              key={program.id}
               name="caseNumber"
               label={program.name}
               object={program}

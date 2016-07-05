@@ -19,13 +19,13 @@ class PersonCollectionAttributeSlide extends Component {
     return (
       <Slide header={header} nextDisabled={!this.isValid}>
         {this.props.children}
-        {collectionItems.map((person, i) =>
-          <div key={i}>
+        {collectionItems.map(person =>
+          <div key={person.id}>
             {collectionItems.length !== 1 &&
              <ControlLabel>{person.firstName}</ControlLabel>}
              <BooleanRadio name={attribute}
                            object={person}
-                           suffix={i.toString()} />
+                           suffix={person.id} />
           </div>
         )}
       </Slide>

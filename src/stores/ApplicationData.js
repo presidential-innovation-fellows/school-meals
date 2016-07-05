@@ -1,3 +1,4 @@
+import shortid from 'shortid'
 import { action, computed, observable } from 'mobx'
 import { assistancePrograms as assistanceProgramNames } from '../config'
 import { informalList } from '../helpers'
@@ -25,7 +26,7 @@ export class AssistancePrograms {
       this.items = items
     } else {
       this.items = assistanceProgramNames.map(function(programName) {
-        return { name: programName, caseNumber: '' }
+        return { id: shortid.generate(), name: programName, caseNumber: '' }
       })
     }
   }
@@ -79,10 +80,12 @@ class PersonCollection {
   }
 
   get newItem() {
-    let item = {}
+    let item = { id: shortid.generate() }
+
     for (let field of this.fields) {
       item[field.name] = ''
     }
+
     return Object.assign(item, this.propertiesOtherThanFields)
   }
 
