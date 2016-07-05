@@ -1,10 +1,12 @@
 import { action, computed, observable } from 'mobx'
-import { toSentenceSerial } from 'underscore.string'
 import { assistancePrograms as assistanceProgramNames } from '../config'
+import { informalList } from '../helpers'
 
 export default class ApplicationData {
   students = new StudentCollection()
   otherStudents = new OptionalPersonCollection()
+  youngChildren = new OptionalPersonCollection()
+  otherChildren = new OptionalPersonCollection()
 
   assistancePrograms = new AssistancePrograms()
 
@@ -111,11 +113,7 @@ class PersonCollection {
 
   // returns e.g. "Jill, Joe, and Joe Jr."
   @computed get informalList() {
-    const names = this.items.map(function (person) {
-      return person.firstName + (person.suffix ? ` ${person.suffix}` : '')
-    })
-
-    return toSentenceSerial(names, ', ', ' and ')
+    return informalList(this.items)
   }
 
   @action add() {
