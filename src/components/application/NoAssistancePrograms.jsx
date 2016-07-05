@@ -5,6 +5,7 @@ import OtherPrograms from './slides/OtherPrograms'
 import Foster from './slides/Foster'
 import Homeless from './slides/Homeless'
 import Migrant from './slides/Migrant'
+import Runaway from './slides/Runaway'
 
 @observer
 class NoAssistancePrograms extends Component {
@@ -30,9 +31,7 @@ class NoAssistancePrograms extends Component {
         <Foster students={students} />
         <Homeless students={students} />
         <Migrant students={students} />
-{/*
         <Runaway students={students} />
-*/}
 
         {!this.allStudentsQualify() &&
         <HouseholdIncome applicationData={this.props.applicationData} />
