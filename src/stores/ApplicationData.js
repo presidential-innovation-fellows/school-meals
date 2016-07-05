@@ -1,4 +1,4 @@
-import { action, computed, observable } from 'mobx'
+import { action, computed, extendObservable, observable } from 'mobx'
 import { toSentenceSerial } from 'underscore.string'
 import { assistancePrograms as assistanceProgramNames } from '../config'
 
@@ -35,6 +35,10 @@ export class AssistancePrograms {
     return this.items.map(func)
   }
 
+  @computed get first() {
+    return this.items[0]
+  }
+
   @computed get length() {
     return this.items.length
   }
@@ -69,11 +73,20 @@ class PersonCollection {
     ]
   }
 
+  // kind of ugly -- observable properties to track that aren't part of
+  // the visible properties that #fields returns for person creation
+  get propertiesOtherThanFields() {
+    return {}
+  }
+
   get newItem() {
     let item = {}
     for (let field of this.fields) {
       item[field.name] = ''
     }
+
+    extendObservable(item, this.propertiesOtherThanFields)
+
     return item
   }
 
@@ -83,6 +96,12 @@ class PersonCollection {
 
   map(func) {
     return this.items.map(func)
+  }
+
+  allHaveProp(prop) {
+    return this.items
+               .map(item => item[prop] != undefined)
+               .reduce((a, b) => a && b, true)
   }
 
   @computed get length() {
@@ -122,6 +141,12 @@ class StudentCollection extends PersonCollection {
       { name: 'school', label: 'School', required: true },
       { name: 'grade', label: 'Grade', required: true }
     ])
+  }
+
+  get propertiesOtherThanFields() {
+    return Object.assign({}, super.propertiesOtherThanFields, {
+      isFoster: null
+    })
   }
 
   get isValid() {

@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { observer } from 'mobx-react'
 import HouseholdIncome from './HouseholdIncome'
+import OtherPrograms from './slides/OtherPrograms'
+import Foster from './slides/Foster'
 
 @observer
 class NoAssistancePrograms extends Component {
@@ -22,13 +24,12 @@ class NoAssistancePrograms extends Component {
 
     return (
       <div>
-        <p>No assistance programs.</p>
+        <OtherPrograms students={students} />
+        <Foster students={students} />
 {/*
-        <OtherPrograms />
-        <Foster />
-        <Homeless />
-        <Migrant />
-        <Runaway />
+        <Homeless students={students} />
+        <Migrant students={students} />
+        <Runaway students={students} />
 */}
 
         {!this.allStudentsQualify() &&

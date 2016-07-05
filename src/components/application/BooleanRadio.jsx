@@ -12,7 +12,12 @@ class BooleanRadio extends Component {
 
   handleChange(event) {
     const handler = this.props.onChange || this.defaultOnChange
+    let name = event.target.name
     let value
+
+    if (this.props.suffix) {
+      name = name.slice(0, this.props.suffix.length * -1)
+    }
 
     switch (event.target.value) {
       case true:
@@ -27,7 +32,7 @@ class BooleanRadio extends Component {
         value = null
     }
 
-    handler(event.target.name, value)
+    handler(name, value)
   }
 
   // side effect, but easier to handle once here than pass in every time
@@ -36,15 +41,15 @@ class BooleanRadio extends Component {
   }
 
   render() {
-    const { name } = this.props
+    const { name, suffix } = this.props
 
     return (
       <FormGroup>
-        <Radio name={name} value={true} onChange={this.handleChange}>
+        <Radio name={name + suffix} value={true} onChange={this.handleChange}>
           Yes
         </Radio>
         {' '}
-        <Radio name={name} value={false} onChange={this.handleChange}>
+        <Radio name={name + suffix} value={false} onChange={this.handleChange}>
           No
         </Radio>
       </FormGroup>
@@ -55,7 +60,12 @@ class BooleanRadio extends Component {
 BooleanRadio.propTypes = {
   name: PropTypes.string.isRequired,
   object: PropTypes.object.isRequired,
+  suffix: PropTypes.string, // allows for multiple radio groups w/ same name
   onChange: PropTypes.func
+}
+
+BooleanRadio.defaultProps = {
+  suffix: ''
 }
 
 export default BooleanRadio
