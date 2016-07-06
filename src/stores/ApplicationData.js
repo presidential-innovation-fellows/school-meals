@@ -157,6 +157,13 @@ class AdultCollection extends PersonCollection {
             'selfEmployment': { has: null, amount: '', frequency: '' }
           }
         },
+        publicAssistance: {
+          isApplicable: null,
+          sources: {
+            'ssi':        { has: null, amount: '', frequency: '' },
+            'stateLocal': { has: null, amount: '', frequency: '' }
+          }
+        },
         spousal: {
           isApplicable: null,
           sources: {
@@ -183,12 +190,12 @@ class AdultCollection extends PersonCollection {
         other: {
           isApplicable: null,
           sources: {
-            'regularCashPayment': { has: null, amount: '', frequency: '' },
-            'rentalIncome':       { has: null, amount: '', frequency: '' },
-            'earnedInterest':     { has: null, amount: '', frequency: '' },
-            'invIncome':          { has: null, amount: '', frequency: '' },
-            'annuity':            { has: null, amount: '', frequency: '' },
-            'other':              { has: null, amount: '', frequency: '' }
+            'regularCashPayments': { has: null, amount: '', frequency: '' },
+            'rentalIncome':        { has: null, amount: '', frequency: '' },
+            'earnedInterest':      { has: null, amount: '', frequency: '' },
+            'investmentIncome':    { has: null, amount: '', frequency: '' },
+            'annuity':             { has: null, amount: '', frequency: '' },
+            'other':               { has: null, amount: '', frequency: '' }
           }
         }
       }

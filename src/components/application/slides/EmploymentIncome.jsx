@@ -26,7 +26,6 @@ class EmploymentIncome extends Component {
 
         {incomeType.isApplicable &&
          <div>
-
            <br />
 
            <IncomeSource incomeSources={incomeSources} name="salary">
