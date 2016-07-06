@@ -5,11 +5,11 @@ import { informalList } from '../helpers'
 
 export default class ApplicationData {
   students = new StudentCollection()
-  otherStudents = new OptionalPersonCollection()
-  youngChildren = new OptionalPersonCollection()
-  otherChildren = new OptionalPersonCollection()
-
   assistancePrograms = new AssistancePrograms()
+  otherStudents = new OptionalChildCollection()
+  youngChildren = new OptionalChildCollection()
+  otherChildren = new OptionalChildCollection()
+  adults = new AdultCollection()
 
   @observable attestation = {
     firstName: '',
@@ -26,7 +26,10 @@ export class AssistancePrograms {
       this.items = items
     } else {
       this.items = assistanceProgramNames.map(function(programName) {
-        return { id: shortid.generate(), name: programName, caseNumber: '' }
+        return {
+          id: shortid.generate(),
+          name: programName, caseNumber: ''
+        }
       })
     }
   }
@@ -76,17 +79,20 @@ class PersonCollection {
   // kind of ugly -- observable properties to track that aren't part of
   // the visible properties that #fields returns for person creation
   get propertiesOtherThanFields() {
-    return {}
+    return {
+      id: shortid.generate(),
+      hasIncome: null
+    }
   }
 
   get newItem() {
-    let item = { id: shortid.generate() }
+    let item = this.propertiesOtherThanFields
 
     for (let field of this.fields) {
       item[field.name] = ''
     }
 
-    return Object.assign(item, this.propertiesOtherThanFields)
+    return item
   }
 
   toJSON() {
@@ -128,7 +134,41 @@ class PersonCollection {
   }
 }
 
-class StudentCollection extends PersonCollection {
+class AdultCollection extends PersonCollection {
+}
+
+class ChildCollection extends PersonCollection {
+  get propertiesOtherThanFields() {
+    return Object.assign({}, super.propertiesOtherThanFields, {
+      income: {
+        'job':                 { has: null, amount: '', frequency: '' },
+        'socialSecurity':      { has: null, amount: '', frequency: '' },
+        'friendsFamily':       { has: null, amount: '', frequency: '' },
+        'pensionAnnuityTrust': { has: null, amount: '', frequency: '' },
+        'other':               { has: null, amount: '', frequency: '' }
+      }
+    })
+  }
+}
+
+class OptionalChildCollection extends ChildCollection {
+  @observable hasAny
+
+  get isValid() {
+    switch (this.hasAny) {
+      case true:
+        return this.items.length >= 1 && super.isValid
+        break
+      case false:
+        return true
+        break
+      default:
+        return false
+    }
+  }
+}
+
+class StudentCollection extends ChildCollection {
   get fields() {
     return super.fields.concat([
       { name: 'school', label: 'School', required: true },
@@ -147,22 +187,5 @@ class StudentCollection extends PersonCollection {
 
   get isValid() {
     return this.items.length >= 1 && super.isValid
-  }
-}
-
-class OptionalPersonCollection extends PersonCollection {
-  @observable hasAny
-
-  get isValid() {
-    switch (this.hasAny) {
-      case true:
-        return this.items.length >= 1 && super.isValid
-        break
-      case false:
-        return true
-        break
-      default:
-        return false
-    }
   }
 }

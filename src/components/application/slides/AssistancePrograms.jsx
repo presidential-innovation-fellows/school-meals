@@ -6,7 +6,7 @@ import { observer } from 'mobx-react'
 import { toSentenceSerial } from 'underscore.string'
 import { assistancePrograms as programNames } from '../../../config'
 import { AssistancePrograms as Store } from '../../../stores/ApplicationData'
-import { FormGroup, Radio, Well } from 'react-bootstrap'
+import { Well } from 'react-bootstrap'
 
 @observer
 class AssistancePrograms extends Component {

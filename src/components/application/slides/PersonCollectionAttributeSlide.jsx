@@ -23,9 +23,7 @@ class PersonCollectionAttributeSlide extends Component {
           <div key={person.id}>
             {collectionItems.length !== 1 &&
              <ControlLabel>{person.firstName}</ControlLabel>}
-             <BooleanRadio name={attribute}
-                           object={person}
-                           suffix={person.id} />
+             <BooleanRadio name={attribute} object={person} />
           </div>
         )}
       </Slide>

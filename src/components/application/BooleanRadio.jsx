@@ -1,9 +1,12 @@
+import shortid from 'shortid'
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
 import { FormGroup, Radio } from 'react-bootstrap'
 
 @observer
 class BooleanRadio extends Component {
+  name = shortid.generate()
+
   constructor (props) {
     super(props)
     this.defaultOnChange = this.defaultOnChange.bind(this)
@@ -12,12 +15,7 @@ class BooleanRadio extends Component {
 
   handleChange(event) {
     const handler = this.props.onChange || this.defaultOnChange
-    let name = event.target.name
     let value
-
-    if (this.props.suffix) {
-      name = name.slice(0, this.props.suffix.length * -1)
-    }
 
     switch (event.target.value) {
       case true:
@@ -32,7 +30,7 @@ class BooleanRadio extends Component {
         value = null
     }
 
-    handler(name, value)
+    handler(this.props.name, value)
   }
 
   // side effect, but easier to handle once here than pass in every time
@@ -41,17 +39,19 @@ class BooleanRadio extends Component {
   }
 
   render() {
-    const { name, suffix } = this.props
+    const { inline, name, object } = this.props
+    const value = object[name]
+    const props = {
+      name: this.name,
+      onChange: this.handleChange,
+      inline
+    }
 
     return (
       <FormGroup>
-        <Radio name={name + suffix} value={true} onChange={this.handleChange}>
-          Yes
-        </Radio>
+        <Radio {...props} checked={value === true} value={true}>Yes</Radio>
         {' '}
-        <Radio name={name + suffix} value={false} onChange={this.handleChange}>
-          No
-        </Radio>
+        <Radio {...props} checked={value === false} value={false}>No</Radio>
       </FormGroup>
     )
   }
@@ -60,12 +60,8 @@ class BooleanRadio extends Component {
 BooleanRadio.propTypes = {
   name: PropTypes.string.isRequired,
   object: PropTypes.object.isRequired,
-  suffix: PropTypes.string, // allows for multiple radio groups w/ same name
+  inline: PropTypes.bool,
   onChange: PropTypes.func
-}
-
-BooleanRadio.defaultProps = {
-  suffix: ''
 }
 
 export default BooleanRadio

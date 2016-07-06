@@ -7,7 +7,11 @@ class Slide extends Component {
   render() {
     return (
       <section>
-        <PageHeader>{this.props.header}</PageHeader>
+        <PageHeader>
+          {this.props.header}
+          {' '}
+          <small>{this.props.headerSmall}</small>
+        </PageHeader>
 
         <Panel>
           <Form>
@@ -37,6 +41,7 @@ class Slide extends Component {
 Slide.propTypes = {
   children: PropTypes.node.isRequired,
   header: PropTypes.string.isRequired,
+  headerSmall: PropTypes.string,
   handleBack: PropTypes.func,
   handleNext: PropTypes.func,
   showBack: PropTypes.bool,

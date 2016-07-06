@@ -4,6 +4,7 @@ import HouseholdIntro from './slides/HouseholdIntro'
 import OtherStudents from './slides/OtherStudents'
 import YoungChildren from './slides/YoungChildren'
 import OtherChildren from './slides/OtherChildren'
+import ChildIncome from './slides/ChildIncome'
 
 @observer
 class HouseholdIncome extends Component {
@@ -30,8 +31,12 @@ class HouseholdIncome extends Component {
                        alreadyNamed={[students,
                                       otherStudents,
                                       youngChildren]} />
+
+        <ChildIncome childCollections={[students,
+                                        otherStudents,
+                                        youngChildren,
+                                        otherChildren]} />
 {/*
-        <ChildIncome />
         <Military />
         <MilitaryDetails />
         <OtherHouseholdMembers />
