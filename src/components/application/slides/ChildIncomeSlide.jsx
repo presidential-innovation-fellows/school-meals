@@ -7,11 +7,41 @@ import { ControlLabel } from 'react-bootstrap'
 
 @observer
 class ChildIncomeSlide extends Component {
+  get incomeValues() {
+    const income = this.props.child.income
+    let result = []
+    for (let name in income) {
+      result.push(income[name])
+    }
+    return result
+  }
+
+  get isValid() {
+    switch (this.props.child.hasIncome) {
+      case true:
+        return this.incomeValues
+                   .map(income => {
+                     return(
+                       income.has === false ||
+                       !!(income.has && income.amount && income.frequency)
+                     )
+                   })
+                   .reduce((a, b) => a && b, true)
+        break
+      case false:
+        return true
+        break
+      default:
+        return false
+    }
+  }
+
   render() {
     const { child } = this.props
 
     return(
-      <Slide header="Child Income" headerSmall={child.firstName}>
+      <Slide header="Child Income" headerSmall={child.firstName}
+             nextDisabled={!this.isValid}>
         <p>Income earned or received by all household members, including the children you have entered so far, is included when determining eligibility for benefits. The next few questions are about your child[ren]'s income.</p>
         <p>Some common sources of income for children are:</p>
         <ul>
