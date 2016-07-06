@@ -1,8 +1,8 @@
 import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
+import Checkbox from '../Checkbox'
 import { observer } from 'mobx-react'
 import { FormControl, InputGroup } from 'react-bootstrap'
-import { Checkbox } from '../Checkbox'
 
 @observer
 class Signature extends Component {
@@ -45,7 +45,9 @@ class Signature extends Component {
                        disabled={!signature.hasSsn}
                        onChange={this.handleSsnChange} />
         </InputGroup>
-        <Checkbox object={signature} name="hasSsn" invert>No SSN</Checkbox>
+        <Checkbox object={signature} name="hasSsn" invert>
+          No SSN
+        </Checkbox>
 
       </Slide>
     )
