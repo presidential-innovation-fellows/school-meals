@@ -1,14 +1,14 @@
 import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
 import { observer } from 'mobx-react'
-import { FormControl, InputGroup, Checkbox } from 'react-bootstrap'
+import { FormControl, InputGroup } from 'react-bootstrap'
+import { Checkbox } from '../Checkbox'
 
 @observer
 class Signature extends Component {
   constructor (props) {
     super(props)
     this.handleSsnChange = this.handleSsnChange.bind(this)
-    this.handleHasSsnChange = this.handleHasSsnChange.bind(this)
   }
 
   handleSsnChange(event) {
@@ -19,10 +19,6 @@ class Signature extends Component {
     }
 
     this.props.signature.ssnLastFour = value
-  }
-
-  handleHasSsnChange(event) {
-    this.props.signature.hasSsn = !event.target.checked
   }
 
   get isValid() {
@@ -49,8 +45,7 @@ class Signature extends Component {
                        disabled={!signature.hasSsn}
                        onChange={this.handleSsnChange} />
         </InputGroup>
-        <Checkbox onChange={this.handleHasSsnChange}
-                  checked={!signature.hasSsn}>No SSN</Checkbox>
+        <Checkbox object={signature} name="hasSsn" invert>No SSN</Checkbox>
 
       </Slide>
     )

@@ -39,7 +39,7 @@ class BooleanRadio extends Component {
   }
 
   render() {
-    const { inline, name, object } = this.props
+    const { inline, name, object, trueLabel, falseLabel } = this.props
     const value = object[name]
     const props = {
       name: this.name,
@@ -49,9 +49,13 @@ class BooleanRadio extends Component {
 
     return (
       <FormGroup>
-        <Radio {...props} checked={value === true} value={true}>Yes</Radio>
+        <Radio {...props} checked={value === true} value={true}>
+          {trueLabel}
+        </Radio>
         {' '}
-        <Radio {...props} checked={value === false} value={false}>No</Radio>
+        <Radio {...props} checked={value === false} value={false}>
+          {falseLabel}
+        </Radio>
       </FormGroup>
     )
   }
@@ -60,8 +64,15 @@ class BooleanRadio extends Component {
 BooleanRadio.propTypes = {
   name: PropTypes.string.isRequired,
   object: PropTypes.object.isRequired,
+  trueLabel: PropTypes.string,
+  falseLabel: PropTypes.string,
   inline: PropTypes.bool,
   onChange: PropTypes.func
+}
+
+BooleanRadio.defaultProps = {
+  trueLabel: 'Yes',
+  falseLabel: 'No'
 }
 
 export default BooleanRadio

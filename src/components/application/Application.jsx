@@ -8,6 +8,7 @@ import Attestation from './slides/Attestation'
 import Students from './slides/Students'
 import AssistancePrograms from './slides/AssistancePrograms'
 import NoAssistancePrograms from './NoAssistancePrograms'
+import Demographics from './slides/Demographics'
 import ThankYou from './slides/ThankYou'
 
 @observer
@@ -32,8 +33,9 @@ class Application extends Component {
         {assistancePrograms.hasAny === false &&
          <NoAssistancePrograms applicationData={this.props.applicationData} />
         }
+
+        <Demographics students={students} />
 {/*
-        <Demographics />
         <Summary />
 */}
         <ThankYou />

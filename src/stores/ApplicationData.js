@@ -261,7 +261,15 @@ class StudentCollection extends ChildCollection {
       isFoster: null,
       isHomeless: null,
       isMigrant: null,
-      isRunaway: null
+      isRunaway: null,
+      demographics: {
+        isNativeAmerican: null,
+        isAsian: null,
+        isBlack: null,
+        isPacificIslander: null,
+        isWhite: null,
+        isHispanicLatino: null
+      }
     })
   }
 
