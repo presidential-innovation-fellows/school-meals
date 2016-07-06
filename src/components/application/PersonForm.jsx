@@ -33,7 +33,6 @@ class PersonForm extends Component {
                 key={index} />
            )}
         </div>
-
         <div>
           <Button bsStyle="danger" onClick={this.onRemove}>
             Remove {person.firstName || label}
@@ -44,7 +43,6 @@ class PersonForm extends Component {
   }
 }
 
-/*
 PersonForm.propTypes = {
   onRemove: PropTypes.func.isRequired,
   label: PropTypes.string.isRequired,
@@ -55,6 +53,5 @@ PersonForm.propTypes = {
     required: PropTypes.bool
   })).isRequired
 }
-*/
 
 export default PersonForm

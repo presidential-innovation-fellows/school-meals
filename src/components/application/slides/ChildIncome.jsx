@@ -4,16 +4,10 @@ import { observer } from 'mobx-react'
 
 @observer
 class ChildIncome extends Component {
-  get children() {
-    return this.props.childCollections
-               .map(collection => collection.items.slice())
-               .reduce((a, b) => a.concat(b), [])
-  }
-
   render() {
     return(
       <div>
-        {this.children.map(child =>
+        {this.props.allChildren.map(child =>
           <ChildIncomeSlide child={child} key={child.id} />
         )}
       </div>
@@ -22,7 +16,7 @@ class ChildIncome extends Component {
 }
 
 ChildIncome.propTypes = {
-  childCollections: PropTypes.arrayOf(PropTypes.object).isRequired
+  allChildren: PropTypes.arrayOf(PropTypes.object).isRequired
 }
 
 export default ChildIncome

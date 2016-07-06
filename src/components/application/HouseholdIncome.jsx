@@ -5,9 +5,19 @@ import OtherStudents from './slides/OtherStudents'
 import YoungChildren from './slides/YoungChildren'
 import OtherChildren from './slides/OtherChildren'
 import ChildIncome from './slides/ChildIncome'
+import Adults from './slides/Adults'
 
 @observer
 class HouseholdIncome extends Component {
+  get allChildren() {
+    return [this.props.applicationData.students,
+            this.props.applicationData.otherStudents,
+            this.props.applicationData.youngChildren,
+            this.props.applicationData.otherChildren]
+      .map(collection => collection.items.slice())
+      .reduce((a, b) => a.concat(b), [])
+  }
+
   render() {
     const {
       attestation,
@@ -15,6 +25,7 @@ class HouseholdIncome extends Component {
       otherStudents,
       youngChildren,
       otherChildren,
+      adults,
     } = this.props.applicationData
 
     return (
@@ -32,10 +43,8 @@ class HouseholdIncome extends Component {
                                       otherStudents,
                                       youngChildren]} />
 
-        <ChildIncome childCollections={[students,
-                                        otherStudents,
-                                        youngChildren,
-                                        otherChildren]} />
+        <ChildIncome allChildren={this.allChildren} />
+        <Adults adults={adults} allChildren={this.allChildren} />
 {/*
         <Military />
         <MilitaryDetails />

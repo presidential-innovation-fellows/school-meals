@@ -80,8 +80,7 @@ class PersonCollection {
   // the visible properties that #fields returns for person creation
   get propertiesOtherThanFields() {
     return {
-      id: shortid.generate(),
-      hasIncome: null
+      id: shortid.generate()
     }
   }
 
@@ -135,11 +134,29 @@ class PersonCollection {
 }
 
 class AdultCollection extends PersonCollection {
+  get propertiesOtherThanFields() {
+    return Object.assign({}, super.propertiesOtherThanFields, {
+      isMilitary: null,
+      isDeployed: null,
+      income: {
+        'job':                 { has: null, amount: '', frequency: '' },
+        'socialSecurity':      { has: null, amount: '', frequency: '' },
+        'friendsFamily':       { has: null, amount: '', frequency: '' },
+        'pensionAnnuityTrust': { has: null, amount: '', frequency: '' },
+        'other':               { has: null, amount: '', frequency: '' }
+      }
+    })
+  }
+
+  get isValid() {
+    return this.items.length >= 1 && super.isValid
+  }
 }
 
 class ChildCollection extends PersonCollection {
   get propertiesOtherThanFields() {
     return Object.assign({}, super.propertiesOtherThanFields, {
+      hasIncome: null,
       income: {
         'job':                 { has: null, amount: '', frequency: '' },
         'socialSecurity':      { has: null, amount: '', frequency: '' },
