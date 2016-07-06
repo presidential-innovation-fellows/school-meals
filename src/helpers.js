@@ -12,16 +12,28 @@ export const informalList =
       return toSentenceSerial(names, delimiter, lastDelimiter)
     }
 
-export const incomesAreValid = incomes => {
-  let incomeValues = []
-  for (let key in incomes) {
-    incomeValues.push(incomes[key])
+export const incomeTypeIsValid = (incomeType, mustNotBeNull = []) => {
+  switch(incomeType.isApplicable) {
+    case true:
+      if (mustNotBeNull.map(name => incomeType[name] == null)
+                       .reduce((a, b) => a || b, false)) {
+        return false
+      }
+      let incomeSources = []
+      for (let name in incomeType.sources) {
+        incomeSources.push(incomeType.sources[name])
+      }
+      return incomeSources
+        .map(incomeSource => { return(
+          incomeSource.has === false ||
+          !!(incomeSource.has && incomeSource.amount && incomeSource.frequency)
+        )})
+        .reduce((a, b) => a && b, true)
+      break
+    case false:
+      return true
+      break
+    default:
+      return false
   }
-
-  return incomeValues
-    .map(income => { return(
-      income.has === false ||
-      !!(income.has && income.amount && income.frequency)
-    )})
-    .reduce((a, b) => a && b, true)
 }

@@ -1,51 +1,38 @@
 import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
 import BooleanRadio from '../BooleanRadio'
-import IncomeQuestion from '../IncomeQuestion'
+import IncomeSource from '../IncomeSource'
 import { observer } from 'mobx-react'
 import { ControlLabel } from 'react-bootstrap'
-import { incomesAreValid } from '../../../helpers'
+import { incomeTypeIsValid } from '../../../helpers'
 
 @observer
-class Military extends Component {
-  get isValid() {
-    const military = this.props.person.military
-
-    switch (military.isMilitary) {
-      case true:
-        return military.isDeployed != null && incomesAreValid(military.income)
-        break
-      case false:
-        return true
-        break
-      default:
-        return false
-    }
-  }
-
+class MilitaryIncome extends Component {
   render() {
     const { person } = this.props
-    const military = person.military
+    const incomeType = person.incomeTypes.military
+    const incomeSources = incomeType.sources
 
     return(
-      <Slide header="Military" headerSmall={person.firstName}
-             nextDisabled={!this.isValid}>
+      <Slide header="Military Income"
+             headerSmall={person.firstName}
+             nextDisabled={!incomeTypeIsValid(incomeType, ['isDeployed'])}>
 
         <ControlLabel>Is {person.firstName} in the military?</ControlLabel>
-        <BooleanRadio name="isMilitary" object={military} />
+        <BooleanRadio name="isApplicable" object={incomeType} />
 
-        {military.isMilitary &&
+        {incomeType.isApplicable &&
          <div>
            <ControlLabel>
              Is {person.firstName} currently deployed?
            </ControlLabel>
-           <BooleanRadio name="isDeployed" object={military} />
+           <BooleanRadio name="isDeployed" object={incomeType} />
          </div>
         }
 
-        {military.isMilitary && military.isDeployed != null &&
+        {incomeType.isApplicable && incomeType.isDeployed != null &&
          <div>
-           {military.isDeployed ?
+           {incomeType.isDeployed ?
             <p>
               Military basic pay, drill pay, cash bonuses and allowances for off-base housing, food or clothing are includable income sources. Do not include combat pay, Family Substance Supplemental Allowance, or privatized housing allowances.
             </p>
@@ -60,19 +47,19 @@ class Military extends Component {
 
             <br />
 
-            <IncomeQuestion incomeObject={military.income} name="basic">
-              {military.isDeployed ?
+            <IncomeSource incomeSources={incomeSources} name="basic">
+              {incomeType.isDeployed ?
                'Military basic pay/drill pay' :
                'Military basic pay (made available to the household)'}
-            </IncomeQuestion>
+            </IncomeSource>
 
-            <IncomeQuestion incomeObject={military.income} name="cashBonus">
+            <IncomeSource incomeSources={incomeSources} name="cashBonus">
               Military cash bonus
-            </IncomeQuestion>
+            </IncomeSource>
 
-            <IncomeQuestion incomeObject={military.income} name="allowance">
+            <IncomeSource incomeSources={incomeSources} name="allowance">
               Military allowance for off-base housing (other than privatized housing allowances), food, clothing
-            </IncomeQuestion>
+            </IncomeSource>
          </div>
         }
       </Slide>
@@ -80,8 +67,8 @@ class Military extends Component {
   }
 }
 
-Military.propTypes = {
+MilitaryIncome.propTypes = {
   person: PropTypes.object.isRequired
 }
 
-export default Military
+export default MilitaryIncome

@@ -7,7 +7,6 @@ import OtherChildren from './slides/OtherChildren'
 import ChildIncome from './slides/ChildIncome'
 import Adults from './slides/Adults'
 import AdultIncome from './slides/AdultIncome'
-import Military from './slides/Military'
 
 @observer
 class HouseholdIncome extends Component {

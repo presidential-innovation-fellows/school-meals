@@ -7,8 +7,8 @@ class ChildIncome extends Component {
   render() {
     return(
       <div>
-        {this.props.allChildren.map(child =>
-          <ChildIncomeSlide child={child} key={child.id} />
+        {this.props.allChildren.map(person =>
+          <ChildIncomeSlide person={person} key={person.id} />
         )}
       </div>
     )

@@ -136,18 +136,61 @@ class PersonCollection {
 class AdultCollection extends PersonCollection {
   get propertiesOtherThanFields() {
     return Object.assign({}, super.propertiesOtherThanFields, {
-      military: {
-        isMilitary: null,
-        isDeployed: null,
-        income: {
-          'basic':     { has: null, amount: '', frequency: '' },
-          'cashBonus': { has: null, amount: '', frequency: '' },
-          'allowance': { has: null, amount: '', frequency: '' }
+      incomeTypes: {
+        military: {
+          isApplicable: null,
+          isDeployed: null,
+          sources: {
+            'basic':     { has: null, amount: '', frequency: '' },
+            'cashBonus': { has: null, amount: '', frequency: '' },
+            'allowance': { has: null, amount: '', frequency: '' }
+          }
+        },
+        employment: {
+          isApplicable: null,
+          sources: {
+            'salary':         { has: null, amount: '', frequency: '' },
+            'wages':          { has: null, amount: '', frequency: '' },
+            'tips':           { has: null, amount: '', frequency: '' },
+            'commission':     { has: null, amount: '', frequency: '' },
+            'cashBonus':      { has: null, amount: '', frequency: '' },
+            'selfEmployment': { has: null, amount: '', frequency: '' }
+          }
+        },
+        spousal: {
+          isApplicable: null,
+          sources: {
+            'alimony':      { has: null, amount: '', frequency: '' },
+            'childSupport': { has: null, amount: '', frequency: '' }
+          }
+        },
+        unemployment: {
+          isApplicable: null,
+          sources: {
+            'unemployment': { has: null, amount: '', frequency: '' },
+            'workersComp':  { has: null, amount: '', frequency: '' },
+            'strike':       { has: null, amount: '', frequency: '' },
+            'ssdi':         { has: null, amount: '', frequency: '' }
+          }
+        },
+        retirement: {
+          isApplicable: null,
+          sources: {
+            'socialSecurity': { has: null, amount: '', frequency: '' },
+            'privatePension': { has: null, amount: '', frequency: '' }
+          }
+        },
+        other: {
+          isApplicable: null,
+          sources: {
+            'regularCashPayment': { has: null, amount: '', frequency: '' },
+            'rentalIncome':       { has: null, amount: '', frequency: '' },
+            'earnedInterest':     { has: null, amount: '', frequency: '' },
+            'invIncome':          { has: null, amount: '', frequency: '' },
+            'annuity':            { has: null, amount: '', frequency: '' },
+            'other':              { has: null, amount: '', frequency: '' }
+          }
         }
-      },
-      income: {
-        'pensionAnnuityTrust': { has: null, amount: '', frequency: '' },
-        'other':               { has: null, amount: '', frequency: '' }
       }
     })
   }
@@ -160,13 +203,17 @@ class AdultCollection extends PersonCollection {
 class ChildCollection extends PersonCollection {
   get propertiesOtherThanFields() {
     return Object.assign({}, super.propertiesOtherThanFields, {
-      hasIncome: null,
-      income: {
-        'job':                 { has: null, amount: '', frequency: '' },
-        'socialSecurity':      { has: null, amount: '', frequency: '' },
-        'friendsFamily':       { has: null, amount: '', frequency: '' },
-        'pensionAnnuityTrust': { has: null, amount: '', frequency: '' },
-        'other':               { has: null, amount: '', frequency: '' }
+      incomeTypes: {
+        all: {
+          isApplicable: null,
+          sources: {
+            'job':                 { has: null, amount: '', frequency: '' },
+            'socialSecurity':      { has: null, amount: '', frequency: '' },
+            'friendsFamily':       { has: null, amount: '', frequency: '' },
+            'pensionAnnuityTrust': { has: null, amount: '', frequency: '' },
+            'other':               { has: null, amount: '', frequency: '' }
+          }
+        }
       }
     })
   }

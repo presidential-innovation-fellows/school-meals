@@ -3,7 +3,7 @@ import { observer } from 'mobx-react'
 import { FormControl } from 'react-bootstrap'
 
 @observer
-class IncomeQuestionFrequency extends Component {
+class IncomeSourceFrequency extends Component {
   constructor (props) {
     super(props)
     this.defaultOnChange = this.defaultOnChange.bind(this)
@@ -17,15 +17,15 @@ class IncomeQuestionFrequency extends Component {
 
   // side effect, but easier to handle once here than pass in every time
   defaultOnChange(fieldName, value) {
-    this.props.income[fieldName] = value
+    this.props.incomeSource[fieldName] = value
   }
 
   render() {
-    const { income, fieldName } = this.props
+    const { incomeSource, fieldName } = this.props
 
     return (
       <FormControl componentClass="select"
-                   value={income[fieldName]}
+                   value={incomeSource[fieldName]}
                    onChange={this.handleChange}>
         <option value="" disabled>Frequency…</option>
         <option value="monthly">Monthly</option>
@@ -37,10 +37,14 @@ class IncomeQuestionFrequency extends Component {
   }
 }
 
-IncomeQuestionFrequency.propTypes = {
-  income: PropTypes.object.isRequired,
-  fieldName: PropTypes.string.isRequired,
+IncomeSourceFrequency.propTypes = {
+  incomeSource: PropTypes.object.isRequired,
+  fieldName: PropTypes.string,
   onChange: PropTypes.func
 }
 
-export default IncomeQuestionFrequency
+IncomeSourceFrequency.defaultProps = {
+  fieldName: 'frequency'
+}
+
+export default IncomeSourceFrequency

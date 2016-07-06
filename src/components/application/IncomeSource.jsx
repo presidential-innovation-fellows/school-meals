@@ -1,8 +1,8 @@
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
 import BooleanRadio from './BooleanRadio'
-import IncomeQuestionAmount from './IncomeQuestionAmount'
-import IncomeQuestionFrequency from './IncomeQuestionFrequency'
+import IncomeSourceAmount from './IncomeSourceAmount'
+import IncomeSourceFrequency from './IncomeSourceFrequency'
 import { Row,
          Col,
          FormGroup,
@@ -12,10 +12,10 @@ import { Row,
          Radio } from 'react-bootstrap'
 
 @observer
-class IncomeQuestion extends Component {
+class IncomeSource extends Component {
   render() {
     const { name } = this.props
-    const income = this.props.incomeObject[name]
+    const incomeSource = this.props.incomeSources[name]
 
     return (
       <div>
@@ -26,16 +26,16 @@ class IncomeQuestion extends Component {
               <ControlLabel>{this.props.children}</ControlLabel>
             </Col>
             <Col xs={12} sm={4}>
-              <BooleanRadio name="has" object={income} inline />
+              <BooleanRadio name="has" object={incomeSource} inline />
             </Col>
           </Row>
 
-          {income.has && <Row>
+          {incomeSource.has && <Row>
             <Col xs={12} sm={8}>
-              <IncomeQuestionAmount income={income} fieldName="amount" />
+              <IncomeSourceAmount incomeSource={incomeSource} />
             </Col>
             <Col xs={12} sm={4}>
-              <IncomeQuestionFrequency income={income} fieldName="frequency" />
+              <IncomeSourceFrequency incomeSource={incomeSource} />
             </Col>
           </Row>}
 
@@ -45,9 +45,9 @@ class IncomeQuestion extends Component {
   }
 }
 
-IncomeQuestion.propTypes = {
-  incomeObject: PropTypes.object.isRequired,
+IncomeSource.propTypes = {
+  incomeSources: PropTypes.object.isRequired,
   name: PropTypes.string.isRequired
 }
 
-export default IncomeQuestion
+export default IncomeSource
