@@ -15,6 +15,11 @@ export default class ApplicationData {
     firstName: '',
     lastName: ''
   }
+
+  @observable signature = {
+    hasSsn: true,
+    ssnLastFour: ''
+  }
 }
 
 export class AssistancePrograms {
