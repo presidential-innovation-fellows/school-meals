@@ -9,6 +9,7 @@ import Students from './slides/Students'
 import AssistancePrograms from './slides/AssistancePrograms'
 import NoAssistancePrograms from './NoAssistancePrograms'
 import Demographics from './slides/Demographics'
+import Summary from './slides/Summary'
 import ThankYou from './slides/ThankYou'
 
 @observer
@@ -35,9 +36,7 @@ class Application extends Component {
         }
 
         <Demographics students={students} />
-{/*
-        <Summary />
-*/}
+        <Summary applicationData={this.props.applicationData} />
         <ThankYou />
       </div>
     )
