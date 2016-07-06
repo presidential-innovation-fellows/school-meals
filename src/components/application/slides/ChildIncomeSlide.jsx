@@ -4,29 +4,14 @@ import BooleanRadio from '../BooleanRadio'
 import ChildIncomeForm from './ChildIncomeForm'
 import { observer } from 'mobx-react'
 import { ControlLabel } from 'react-bootstrap'
+import { incomesAreValid } from '../../../helpers'
 
 @observer
 class ChildIncomeSlide extends Component {
-  get incomeValues() {
-    const income = this.props.child.income
-    let result = []
-    for (let name in income) {
-      result.push(income[name])
-    }
-    return result
-  }
-
   get isValid() {
     switch (this.props.child.hasIncome) {
       case true:
-        return this.incomeValues
-                   .map(income => {
-                     return(
-                       income.has === false ||
-                       !!(income.has && income.amount && income.frequency)
-                     )
-                   })
-                   .reduce((a, b) => a && b, true)
+        return incomesAreValid(this.props.child.income)
         break
       case false:
         return true

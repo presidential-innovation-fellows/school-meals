@@ -136,12 +136,16 @@ class PersonCollection {
 class AdultCollection extends PersonCollection {
   get propertiesOtherThanFields() {
     return Object.assign({}, super.propertiesOtherThanFields, {
-      isMilitary: null,
-      isDeployed: null,
+      military: {
+        isMilitary: null,
+        isDeployed: null,
+        income: {
+          'basic':     { has: null, amount: '', frequency: '' },
+          'cashBonus': { has: null, amount: '', frequency: '' },
+          'allowance': { has: null, amount: '', frequency: '' }
+        }
+      },
       income: {
-        'job':                 { has: null, amount: '', frequency: '' },
-        'socialSecurity':      { has: null, amount: '', frequency: '' },
-        'friendsFamily':       { has: null, amount: '', frequency: '' },
         'pensionAnnuityTrust': { has: null, amount: '', frequency: '' },
         'other':               { has: null, amount: '', frequency: '' }
       }
