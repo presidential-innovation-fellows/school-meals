@@ -1,15 +1,17 @@
 import React, { Component, PropTypes } from 'react'
-import ChildIncomeSlide from './ChildIncomeSlide'
+import ChildIncomeOverview from './ChildIncomeOverview'
+import ChildIncomeSlides from './ChildIncomeSlides'
 import { observer } from 'mobx-react'
 
 @observer
 class ChildIncome extends Component {
   render() {
+    const { allChildren } = this.props
+
     return(
       <div>
-        {this.props.allChildren.map(person =>
-          <ChildIncomeSlide person={person} key={person.id} />
-        )}
+        <ChildIncomeOverview allChildren={allChildren} />
+        <ChildIncomeSlides allChildren={allChildren} />
       </div>
     )
   }
