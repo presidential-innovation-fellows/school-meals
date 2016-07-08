@@ -3,7 +3,7 @@ import Slide from '../Slide'
 import BooleanRadio from '../BooleanRadio'
 import IncomeSource from '../IncomeSource'
 import { observer } from 'mobx-react'
-import { ControlLabel } from 'react-bootstrap'
+import { ControlLabel, Well } from 'react-bootstrap'
 import { incomeTypeIsValid } from '../../../helpers'
 
 @observer
@@ -45,7 +45,9 @@ class MilitaryIncome extends Component {
               Does <strong>{person.firstName}</strong> have earning from the following sources?
             </p>
 
-            <br />
+            <Well>
+              NOTE: Remember, to report gross income, which is all money earned before deductions, such as income taxes, employee's social security taxes, and insurance premiums.
+            </Well>
 
             <IncomeSource incomeSources={incomeSources} name="basic">
               {incomeType.isDeployed ?

@@ -3,7 +3,7 @@ import Slide from '../Slide'
 import BooleanRadio from '../BooleanRadio'
 import IncomeSource from '../IncomeSource'
 import { observer } from 'mobx-react'
-import { ControlLabel } from 'react-bootstrap'
+import { ControlLabel, Well } from 'react-bootstrap'
 import { incomeTypeIsValid } from '../../../helpers'
 
 @observer
@@ -26,9 +26,9 @@ class UnemploymentIncome extends Component {
 
         {incomeType.isApplicable &&
          <div>
-           <p>Note: Remember, to report gross income, which is all money earned before deductions, such as income taxes, employee's social security taxes, and insurance premiums.</p>
-
-           <br />
+           <Well>
+             NOTE: Remember, to report gross income, which is all money earned before deductions, such as income taxes, employee's social security taxes, and insurance premiums.
+           </Well>
 
            <IncomeSource incomeSources={incomeSources} name="unemployment">
              Unemployment benefits
