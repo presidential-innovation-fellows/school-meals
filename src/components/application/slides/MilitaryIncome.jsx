@@ -14,8 +14,8 @@ class MilitaryIncome extends Component {
     const incomeSources = incomeType.sources
 
     return(
-      <Slide header="Military Income"
-             headerSmall={person.firstName}
+      <Slide header={person.firstName}
+             headerSmall="Military Income"
              nextDisabled={!incomeTypeIsValid(incomeType, ['isDeployed'])}>
 
         <ControlLabel>Is {person.firstName} in the military?</ControlLabel>

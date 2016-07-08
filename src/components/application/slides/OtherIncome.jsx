@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
-import BooleanRadio from '../BooleanRadio'
 import IncomeSource from '../IncomeSource'
 import { observer } from 'mobx-react'
 import { ControlLabel, Well } from 'react-bootstrap'
@@ -14,47 +13,36 @@ class OtherIncome extends Component {
     const incomeSources = incomeType.sources
 
     return(
-      <Slide header="Other Income"
-             headerSmall={person.firstName}
+      <Slide header={person.firstName}
+             headerSmall="Other Income"
              nextDisabled={!incomeTypeIsValid(incomeType)}>
+        <Well>
+          NOTE: Remember, to report gross income, which is all money earned before deductions, such as income taxes, employee's social security taxes, and insurance premiums.
+        </Well>
 
-        <p>
-          Does <strong>{person.firstName}</strong> have other sources of income including regular cash payments from outside the household, rental income, earned interest, investment income and annuities, or any other source of income available to pay for children’s school meals?
-        </p>
+        <IncomeSource incomeSources={incomeSources} name="regularCashPayments">
+          Regular cash payments from outside the household
+        </IncomeSource>
 
-        <BooleanRadio name="isApplicable" object={incomeType} />
+        <IncomeSource incomeSources={incomeSources} name="rentalIncome">
+          Rental income
+        </IncomeSource>
 
-        {incomeType.isApplicable &&
-         <div>
-           <Well>
-             NOTE: Remember, to report gross income, which is all money earned before deductions, such as income taxes, employee's social security taxes, and insurance premiums.
-           </Well>
+        <IncomeSource incomeSources={incomeSources} name="earnedInterest">
+          Earned interest
+        </IncomeSource>
 
-           <IncomeSource incomeSources={incomeSources} name="regularCashPayments">
-             Regular cash payments from outside the household
-           </IncomeSource>
+        <IncomeSource incomeSources={incomeSources} name="investmentIncome">
+          Investment income
+        </IncomeSource>
 
-           <IncomeSource incomeSources={incomeSources} name="rentalIncome">
-             Rental income
-           </IncomeSource>
+        <IncomeSource incomeSources={incomeSources} name="annuity">
+          Annuity
+        </IncomeSource>
 
-           <IncomeSource incomeSources={incomeSources} name="earnedInterest">
-             Earned interest
-           </IncomeSource>
-
-           <IncomeSource incomeSources={incomeSources} name="investmentIncome">
-             Investment income
-           </IncomeSource>
-
-           <IncomeSource incomeSources={incomeSources} name="annuity">
-             Annuity
-           </IncomeSource>
-
-           <IncomeSource incomeSources={incomeSources} name="other">
-             Any other income available to pay for children's school meals
-           </IncomeSource>
-         </div>
-        }
+        <IncomeSource incomeSources={incomeSources} name="other">
+          Any other income available to pay for children's school meals
+        </IncomeSource>
       </Slide>
     )
   }

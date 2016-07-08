@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
-import BooleanRadio from '../BooleanRadio'
 import IncomeSource from '../IncomeSource'
 import { observer } from 'mobx-react'
 import { ControlLabel, Well } from 'react-bootstrap'
@@ -14,39 +13,28 @@ class UnemploymentIncome extends Component {
     const incomeSources = incomeType.sources
 
     return(
-      <Slide header="Unemployment Income"
-             headerSmall={person.firstName}
+      <Slide header={person.firstName}
+             headerSmall="Unemployment Income"
              nextDisabled={!incomeTypeIsValid(incomeType)}>
+        <Well>
+          NOTE: Remember, to report gross income, which is all money earned before deductions, such as income taxes, employee's social security taxes, and insurance premiums.
+        </Well>
 
-        <p>
-          Does <strong>{person.firstName}</strong> have income from unemployment benefits, worker's compensation, strike benefits, or Social Security Disability Insurance (SSDI)?
-        </p>
+        <IncomeSource incomeSources={incomeSources} name="unemployment">
+          Unemployment benefits
+        </IncomeSource>
 
-        <BooleanRadio name="isApplicable" object={incomeType} />
+        <IncomeSource incomeSources={incomeSources} name="workersComp">
+          Worker's compensation
+        </IncomeSource>
 
-        {incomeType.isApplicable &&
-         <div>
-           <Well>
-             NOTE: Remember, to report gross income, which is all money earned before deductions, such as income taxes, employee's social security taxes, and insurance premiums.
-           </Well>
+        <IncomeSource incomeSources={incomeSources} name="strike">
+          Strike benefits
+        </IncomeSource>
 
-           <IncomeSource incomeSources={incomeSources} name="unemployment">
-             Unemployment benefits
-           </IncomeSource>
-
-           <IncomeSource incomeSources={incomeSources} name="workersComp">
-             Worker's compensation
-           </IncomeSource>
-
-           <IncomeSource incomeSources={incomeSources} name="strike">
-             Strike benefits
-           </IncomeSource>
-
-           <IncomeSource incomeSources={incomeSources} name="ssdi">
-             Social Security Disability Insurance (SSDI)
-           </IncomeSource>
-         </div>
-        }
+        <IncomeSource incomeSources={incomeSources} name="ssdi">
+          Social Security Disability Insurance (SSDI)
+        </IncomeSource>
       </Slide>
     )
   }

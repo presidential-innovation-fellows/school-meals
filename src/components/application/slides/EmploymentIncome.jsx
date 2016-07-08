@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
-import BooleanRadio from '../BooleanRadio'
 import IncomeSource from '../IncomeSource'
 import { observer } from 'mobx-react'
 import { ControlLabel, Well } from 'react-bootstrap'
@@ -14,47 +13,36 @@ class EmploymentIncome extends Component {
     const incomeSources = incomeType.sources
 
     return(
-      <Slide header="Employment Income"
-             headerSmall={person.firstName}
+      <Slide header={person.firstName}
+             headerSmall="Employment Income"
              nextDisabled={!incomeTypeIsValid(incomeType)}>
+        <Well>
+          NOTE: Remember, to report gross income, which is all money earned before deductions, such as income taxes, employee's social security taxes, and insurance premiums.
+        </Well>
 
-        <p>
-          Does <strong>{person.firstName}</strong> have earnings from work including salary, wages, tips, commissions, cash bonuses or net income from self-employment{person.incomeTypes.military.isApplicable && ', not including earnings from the military that were already reported'}?
-        </p>
+        <IncomeSource incomeSources={incomeSources} name="salary">
+          Salary
+        </IncomeSource>
 
-        <BooleanRadio name="isApplicable" object={incomeType} />
+        <IncomeSource incomeSources={incomeSources} name="wages">
+          Wages
+        </IncomeSource>
 
-        {incomeType.isApplicable &&
-         <div>
-           <Well>
-             NOTE: Remember, to report gross income, which is all money earned before deductions, such as income taxes, employee's social security taxes, and insurance premiums.
-           </Well>
+        <IncomeSource incomeSources={incomeSources} name="tips">
+          Tips
+        </IncomeSource>
 
-           <IncomeSource incomeSources={incomeSources} name="salary">
-             Salary
-           </IncomeSource>
+        <IncomeSource incomeSources={incomeSources} name="commission">
+          Commission
+        </IncomeSource>
 
-           <IncomeSource incomeSources={incomeSources} name="wages">
-             Wages
-           </IncomeSource>
+        <IncomeSource incomeSources={incomeSources} name="cashBonus">
+          Cash bonus
+        </IncomeSource>
 
-           <IncomeSource incomeSources={incomeSources} name="tips">
-             Tips
-           </IncomeSource>
-
-           <IncomeSource incomeSources={incomeSources} name="commission">
-             Commission
-           </IncomeSource>
-
-           <IncomeSource incomeSources={incomeSources} name="cashBonus">
-             Cash bonus
-           </IncomeSource>
-
-           <IncomeSource incomeSources={incomeSources} name="selfEmployment">
-             Net income from self-employment
-           </IncomeSource>
-         </div>
-        }
+        <IncomeSource incomeSources={incomeSources} name="selfEmployment">
+          Net income from self-employment
+        </IncomeSource>
       </Slide>
     )
   }
