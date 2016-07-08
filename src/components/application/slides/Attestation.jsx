@@ -2,12 +2,6 @@ import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
 import InputField from '../InputField'
 import { observer } from 'mobx-react'
-import { Form,
-         FormGroup,
-         FormControl,
-         ControlLabel,
-         HelpBlock
-} from 'react-bootstrap'
 
 @observer
 class Attestation extends Component {
@@ -47,15 +41,11 @@ class Attestation extends Component {
   }
 }
 
-/* NOTE: causes unneeded component updates -- uncomment to debug.
- * https://github.com/mobxjs/mobx-react/issues/56
- *
 Attestation.propTypes = {
   attestation: PropTypes.shape({
     firstName: PropTypes.string.isRequired,
     lastName: PropTypes.string.isRequired
   }).isRequired
 }
-*/
 
 export default Attestation
