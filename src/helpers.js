@@ -1,6 +1,23 @@
 import { toSentenceSerial } from 'underscore.string'
 import { computed, observer } from 'mobx-react'
 
+// retuns zero padded YYYY-MM-DD given a date object
+export function formatDate(date) {
+  let dd = date.getDate().toString()
+  let mm = (date.getMonth() + 1).toString()
+  let yyyy = date.getFullYear().toString()
+
+  if (dd.length === 1) {
+    dd = '0' + dd
+  }
+
+  if (mm.length === 1) {
+    mm = '0' + mm
+  }
+
+  return `${yyyy}-${mm}-${dd}`
+}
+
 export function informalName(person) {
   return person.firstName + (person.suffix ? ` ${person.suffix}` : '')
 }

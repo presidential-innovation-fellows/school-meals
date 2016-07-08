@@ -1,7 +1,7 @@
 import shortid from 'shortid'
 import { action, computed, observable } from 'mobx'
 import { assistancePrograms as assistanceProgramNames } from '../config'
-import { informalList } from '../helpers'
+import { formatDate, informalList } from '../helpers'
 
 export default class ApplicationData {
   students = new StudentCollection()
@@ -12,7 +12,7 @@ export default class ApplicationData {
   adults = new AdultCollection()
 
   @observable attestation = {
-    date: '2016-06-08',
+    date: formatDate(new Date(Date.now())),
     firstName: '',
     lastName: ''
   }
