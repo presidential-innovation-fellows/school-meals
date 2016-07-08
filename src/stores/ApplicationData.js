@@ -17,6 +17,16 @@ export default class ApplicationData {
     lastName: ''
   }
 
+  @observable contact = {
+    phone: '',
+    email: '',
+    address1: '',
+    address2: '',
+    city: '',
+    state: '',
+    zip: ''
+  }
+
   @observable signature = {
     hasSsn: true,
     ssnLastFour: ''

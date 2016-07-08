@@ -8,6 +8,7 @@ import Attestation from './slides/Attestation'
 import Students from './slides/Students'
 import AssistancePrograms from './slides/AssistancePrograms'
 import NoAssistancePrograms from './NoAssistancePrograms'
+import Contact from './slides/Contact'
 import Demographics from './slides/Demographics'
 import Summary from './slides/Summary'
 import ThankYou from './slides/ThankYou'
@@ -18,6 +19,7 @@ class Application extends Component {
     const {
       attestation,
       students,
+      contact,
       assistancePrograms
     } = this.props.applicationData
 
@@ -34,6 +36,7 @@ class Application extends Component {
          <NoAssistancePrograms applicationData={this.props.applicationData} />
         }
 
+        <Contact contact={contact} />
         <Demographics students={students} />
         <LegalStatements />
         <Summary applicationData={this.props.applicationData} />
