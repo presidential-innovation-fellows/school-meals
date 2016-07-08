@@ -1,18 +1,20 @@
 import { toSentenceSerial } from 'underscore.string'
 import { computed, observer } from 'mobx-react'
 
+export function informalName(person) {
+  return person.firstName + (person.suffix ? ` ${person.suffix}` : '')
+}
+
 // given an array of people-like objects, return e.g. "Bob, Joe, and Joe Jr."
-export const informalList =
-  (people, delimiter = ', ', lastDelimiter = ' and ') =>
-    {
-      const names = people.map(person => {
-        return person.firstName + (person.suffix ? ` ${person.suffix}` : '')
-      })
+export function informalList(people,
+                             delimiter = ', ',
+                             lastDelimiter = ' and ') {
 
-      return toSentenceSerial(names, delimiter, lastDelimiter)
-    }
+  const names = people.map(person => informalName(person))
+  return toSentenceSerial(names, delimiter, lastDelimiter)
+}
 
-export const incomeTypeIsValid = (incomeType, mustNotBeNull = []) => {
+export function incomeTypeIsValid(incomeType, mustNotBeNull = []) {
   switch(incomeType.isApplicable) {
     case true:
       if (mustNotBeNull.map(name => incomeType[name] == null)
