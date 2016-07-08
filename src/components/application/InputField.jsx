@@ -1,3 +1,4 @@
+import shortid from 'shortid'
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
 import { FormGroup,
@@ -34,7 +35,7 @@ class InputField extends Component {
 
   render() {
     const input = this.props
-    const controlId = `control-${Math.random().toString(16).slice(-5)}` // HACK
+    const controlId = shortid.generate()
     return (
       <FormGroup controlId={controlId}>
         <ControlLabel>{input.label}</ControlLabel>

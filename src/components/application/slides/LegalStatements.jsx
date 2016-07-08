@@ -5,6 +5,7 @@ import { Well } from 'react-bootstrap'
 const LegalStatements = () => {
   return (
     <Slide header="Legal Statements">
+      <p>Almost done! Please read and acknowledge the following legal statements.</p>
       <h4>USDA Use of Information Statement</h4>
       <Well>
         The Richard B. Russell National School Lunch Act requires the information on this application. You do not have to give the information, but if you do not submit all needed information, we cannot approve your child for free or reduced price meals. You must include the last four digits of the social security number of the adult household member who signs the application. The social security number is not required when you apply on behalf of a foster child or you list a Supplemental Nutrition Assistance Program (SNAP), Temporary Assistance for Needy Families (TANF) Program or Food Distribution Program on Indian Reservations (FDPIR) case number or other FDPIR identifier for your child or when you indicate that the adult household member signing the application does not have a social security number. We will use your information to determine if your child is eligible for free or reduced price meals, and for administration and enforcement of the lunch and breakfast programs.

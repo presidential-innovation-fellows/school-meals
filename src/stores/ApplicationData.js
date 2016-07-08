@@ -12,6 +12,7 @@ export default class ApplicationData {
   adults = new AdultCollection()
 
   @observable attestation = {
+    date: '2016-06-08',
     firstName: '',
     lastName: ''
   }

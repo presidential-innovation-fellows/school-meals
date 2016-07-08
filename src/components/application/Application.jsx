@@ -25,7 +25,6 @@ class Application extends Component {
       <div>
         <Welcome />
         <BeforeYouBegin />
-        <LegalStatements />
         <Attestation attestation={attestation} />
         <Students attestation={attestation} students={students} />
         <AssistancePrograms assistancePrograms={assistancePrograms}
@@ -36,6 +35,7 @@ class Application extends Component {
         }
 
         <Demographics students={students} />
+        <LegalStatements />
         <Summary applicationData={this.props.applicationData} />
         <ThankYou />
       </div>

@@ -12,8 +12,9 @@ import { Form,
 @observer
 class Attestation extends Component {
   get isValid() {
-    return this.props.attestation.firstName !== '' &&
-           this.props.attestation.lastName !== ''
+    return this.props.attestation.firstName &&
+           this.props.attestation.lastName &&
+           this.props.attestation.date
   }
 
   render() {
@@ -32,6 +33,13 @@ class Attestation extends Component {
         <InputField
             name="lastName"
             label="Last name"
+            object={attestation}
+        />
+
+        <InputField
+            type="date"
+            name="date"
+            label="Today's date"
             object={attestation}
         />
       </Slide>

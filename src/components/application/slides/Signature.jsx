@@ -30,14 +30,14 @@ class Signature extends Component {
     const { attestation, signature } = this.props
 
     return (
-      <Slide header="Signature" nextDisabled={!this.isValid}>
+      <Slide header="SSN" nextDisabled={!this.isValid}>
         <p>Please provide the last four digits of the Social Security number for the person that signed at the beginning of the application <strong>({attestation.firstName} {attestation.lastName})</strong>. If that person does not have a Social Security number, please check the box below labeled "No SSN".</p>
 
         <InputGroup>
           <InputGroup.Addon>xxx-xx-</InputGroup.Addon>
           <FormControl type="number"
                        step="1"
-                       min="0"
+                       min="0001"
                        max="9999"
                        placeholder="xxxx"
                        pattern="\d{4}"

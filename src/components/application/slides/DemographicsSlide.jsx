@@ -13,7 +13,7 @@ class Demographics extends Component {
     const { student } = this.props
 
     return (
-      <Slide header="Demographics" headerSmall={student.firstName}>
+      <Slide header="Optional" headerSmall={student.firstName}>
         <p>We are required to ask for information about your children's race and ethnicity. This information is important and helps to make sure we are fully serving our community. Responding to this section is optional and does not affect your children’s eligibility for free or reduced price meals</p>
 
         <ControlLabel>Ethnicity</ControlLabel>
