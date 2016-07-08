@@ -6,6 +6,7 @@ import YoungChildren from './slides/YoungChildren'
 import OtherChildren from './slides/OtherChildren'
 import ChildIncome from './slides/ChildIncome'
 import Adults from './slides/Adults'
+import GrossIncome from './slides/GrossIncome'
 import AdultIncome from './slides/AdultIncome'
 import Signature from './slides/Signature'
 
@@ -48,6 +49,7 @@ class HouseholdIncome extends Component {
 
         <ChildIncome allChildren={this.allChildren} />
         <Adults adults={adults} allChildren={this.allChildren} />
+        <GrossIncome />
         <AdultIncome adults={adults} />
         <Signature attestation={attestation} signature={signature} />
       </div>
