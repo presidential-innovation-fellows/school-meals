@@ -1,9 +1,10 @@
 import React, { Component, PropTypes } from 'react'
-import Slide from '../Slide'
-import BooleanRadio from '../BooleanRadio'
+import IncomeType from './IncomeType'
+import IncomeTypeDefaultText from './IncomeTypeDefaultText'
 import IncomeSource from '../IncomeSource'
+import BooleanRadio from '../BooleanRadio'
 import { observer } from 'mobx-react'
-import { ControlLabel, Well } from 'react-bootstrap'
+import { ControlLabel } from 'react-bootstrap'
 import { incomeTypeIsValid } from '../../../helpers'
 
 @observer
@@ -12,25 +13,20 @@ class MilitaryIncome extends Component {
     const { person } = this.props
     const incomeType = person.incomeTypes.military
     const incomeSources = incomeType.sources
+    const incomeTypeProps = {
+      name: "military",
+      label: "Military Income",
+      person
+    }
 
     return(
-      <Slide header={person.firstName}
-             headerSmall="Military Income"
-             nextDisabled={!incomeTypeIsValid(incomeType, ['isDeployed'])}>
+      <IncomeType {...incomeTypeProps} showDefaultText={false}>
+        <ControlLabel>
+          Is {person.firstName} currently deployed?
+        </ControlLabel>
+        <BooleanRadio name="isDeployed" object={incomeType} />
 
-        <ControlLabel>Is {person.firstName} in the military?</ControlLabel>
-        <BooleanRadio name="isApplicable" object={incomeType} />
-
-        {incomeType.isApplicable &&
-         <div>
-           <ControlLabel>
-             Is {person.firstName} currently deployed?
-           </ControlLabel>
-           <BooleanRadio name="isDeployed" object={incomeType} />
-         </div>
-        }
-
-        {incomeType.isApplicable && incomeType.isDeployed != null &&
+        {incomeType.isDeployed != null &&
          <div>
            {incomeType.isDeployed ?
             <p>
@@ -41,13 +37,8 @@ class MilitaryIncome extends Component {
               Military basic pay made available to the household, cash bonuses and allowances for off-base housing, food or clothing are includable income sources. Do not include combat pay, Family Substance Supplemental Allowance, or privatized housing allowances.
             </p>
            }
-            <p>
-              Does <strong>{person.firstName}</strong> have earning from the following sources?
-            </p>
 
-            <Well>
-              NOTE: Remember, to report gross income, which is all money earned before deductions, such as income taxes, employee's social security taxes, and insurance premiums.
-            </Well>
+            <IncomeTypeDefaultText person={person} />
 
             <IncomeSource incomeSources={incomeSources} name="basic">
               {incomeType.isDeployed ?
@@ -64,7 +55,7 @@ class MilitaryIncome extends Component {
             </IncomeSource>
          </div>
         }
-      </Slide>
+      </IncomeType>
     )
   }
 }

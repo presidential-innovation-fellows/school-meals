@@ -1,9 +1,7 @@
 import React, { Component, PropTypes } from 'react'
-import Slide from '../Slide'
 import IncomeSource from '../IncomeSource'
+import IncomeType from './IncomeType'
 import { observer } from 'mobx-react'
-import { ControlLabel, Well } from 'react-bootstrap'
-import { incomeTypeIsValid } from '../../../helpers'
 
 @observer
 class RetirementIncome extends Component {
@@ -11,14 +9,14 @@ class RetirementIncome extends Component {
     const { person } = this.props
     const incomeType = person.incomeTypes.retirement
     const incomeSources = incomeType.sources
+    const incomeTypeProps = {
+      name: "retirement",
+      label: "Retirement Income",
+      person
+    }
 
     return(
-      <Slide header={person.firstName}
-             headerSmall="Retirement Income"
-             nextDisabled={!incomeTypeIsValid(incomeType)}>
-        <Well>
-          NOTE: Remember, to report gross income, which is all money earned before deductions, such as income taxes, employee's social security taxes, and insurance premiums.
-        </Well>
+      <IncomeType {...incomeTypeProps}>
 
         <IncomeSource incomeSources={incomeSources} name="socialSecurity">
           Social Security (including Black Lung Benefits and Railroad Retirement)
@@ -27,7 +25,7 @@ class RetirementIncome extends Component {
         <IncomeSource incomeSources={incomeSources} name="privatePension">
           Private pension
         </IncomeSource>
-      </Slide>
+      </IncomeType>
     )
   }
 }

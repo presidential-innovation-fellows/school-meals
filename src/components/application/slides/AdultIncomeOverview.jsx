@@ -7,7 +7,19 @@ import { ControlLabel } from 'react-bootstrap'
 @observer
 class AdultIncomeOverview extends Component {
   get isValid() {
-    return false
+    const incomeTypes = this.props.person.incomeTypes
+
+    for (let incomeType in incomeTypes) {
+      if (incomeType === 'military') {
+        continue
+      }
+
+      if (incomeTypes[incomeType].isApplicable == null) {
+        return false
+      }
+    }
+
+    return true
   }
 
   render() {
@@ -15,9 +27,14 @@ class AdultIncomeOverview extends Component {
 
     return(
       <Slide header={person.firstName} nextDisabled={!this.isValid}>
+        <p>
+          Is <strong>{person.firstName}</strong> in the military?
+        </p>
+        <BooleanRadio name="isApplicable"
+                      object={person.incomeTypes.military} />
 
         <p>
-          Does <strong>{person.firstName}</strong> have earnings from work including salary, wages, tips, commissions, cash bonuses or net income from self-employment{person.incomeTypes.military.isApplicable && ', not including earnings from the military that were already reported'}?
+          Does <strong>{person.firstName}</strong> have earnings from work including salary, wages, tips, commissions, cash bonuses or net income from self-employment{person.incomeTypes.military.isApplicable && ', not including earnings from the military'}?
         </p>
         <BooleanRadio name="isApplicable"
                       object={person.incomeTypes.employment} />
