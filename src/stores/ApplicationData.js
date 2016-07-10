@@ -140,8 +140,8 @@ class PersonCollection {
     return informalList(this.items)
   }
 
-  @action add() {
-    this.items.push(this.newItem)
+  @action add(props = {}) {
+    this.items.push(Object.assign(this.newItem, props))
   }
 
   @action remove(item) {
