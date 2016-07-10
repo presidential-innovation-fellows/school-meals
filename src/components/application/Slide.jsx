@@ -1,12 +1,13 @@
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
 import { Button, Form, PageHeader, Panel } from 'react-bootstrap'
+import { backSlide, nextSlide } from '../../helpers'
 
 @observer
 class Slide extends Component {
   render() {
     return (
-      <section>
+      <section className="slide">
         <PageHeader>
           {this.props.header}
           {' '}
@@ -53,8 +54,8 @@ Slide.propTypes = {
 }
 
 Slide.defaultProps = {
-  handleBack: () => {},
-  handleNext: () => {},
+  handleBack: backSlide,
+  handleNext: nextSlide,
   showBack: true,
   showNext: true,
   backDisabled: false,
