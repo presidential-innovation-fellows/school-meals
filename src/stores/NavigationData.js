@@ -92,10 +92,10 @@ export default class NavigationData {
   }
 
   init() {
-    if (window.location.hash === '#')
-      window.location.hash = '#/'
-    else
+    if (window.location.hash === '#/')
       window.location.hash = '#'
+    else
+      window.location.hash = '#/'
   }
 
   back() {
