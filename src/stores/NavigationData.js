@@ -53,7 +53,9 @@ export default class NavigationData {
 
     for (let i = 0; i < slides.length; i++) {
       // the current slide
-      for (let className of slides[i].classList) {
+      for (let j = 0; j < slides[i].classList.length; j++) {
+        let className = slides[i].classList[j]
+
         if (className === this.CURRENT_CLASS_NAME) {
           if (i === slides.length - 1) {
             // final slide -- no next
@@ -70,10 +72,12 @@ export default class NavigationData {
   }
 
   goToSlide(id) {
-    const slides = document.getElementsByClassName('slide')
+    const slides = this.slides
     const re = new RegExp(this.CURRENT_CLASS_NAME, 'g') // TODO: imperfect
 
-    for (let slide of slides) {
+    for (let i = 0; i < slides.length; i++) {
+      let slide = slides[i]
+
       if (slide.id === id || id === 'debug') {
         slide.className += ' ' + this.CURRENT_CLASS_NAME
       } else {
