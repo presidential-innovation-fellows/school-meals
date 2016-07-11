@@ -55,3 +55,20 @@ export function incomeTypeIsValid(incomeType, mustNotBeNull = []) {
       return false
   }
 }
+
+export function allStudentsAreFHMR(students) {
+  const qualifyingAttributes = [
+    'isFoster',
+    'isHomeless',
+    'isMigrant',
+    'isRunaway'
+  ]
+
+  return students
+    .map(student => {
+      return qualifyingAttributes
+        .map(attr => student[attr] === true)
+        .reduce((a, b) => a || b, false)
+    })
+    .reduce((a, b) => a && b, true)
+}

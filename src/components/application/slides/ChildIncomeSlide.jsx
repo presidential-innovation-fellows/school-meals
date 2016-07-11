@@ -10,13 +10,13 @@ import { incomeTypeIsValid } from '../../../helpers'
 class ChildIncomeSlide extends Component {
   render() {
     const { person } = this.props
-    const incomeType = person.incomeTypes.all
+    const incomeType = person.incomeTypes.child
     const incomeSources = incomeType.sources
 
     return(
       <Slide header="Child Income"
              headerSmall={person.firstName}
-             id={`child-income/${person.id}`}
+             id={`income/${person.id}/child`}
              nextDisabled={!incomeTypeIsValid(incomeType)}>
 
         <p>Does <strong>{person.firstName}</strong> have income from any of the following sources?</p>

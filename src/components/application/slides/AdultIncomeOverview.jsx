@@ -26,7 +26,7 @@ class AdultIncomeOverview extends Component {
     const { person } = this.props
 
     return(
-      <Slide header={person.firstName} id={`adult-income/${person.id}`}
+      <Slide header={person.firstName} id={`income/${person.id}`}
              nextDisabled={!this.isValid}>
         <p>
           Is <strong>{person.firstName}</strong> in the military?

@@ -14,7 +14,7 @@ class IncomeType extends Component {
     return(
       <Slide header={person.firstName}
              headerSmall={label}
-             id={`adult-income/${person.id}/${name}`}
+             id={`income/${person.id}/${name}`}
              nextDisabled={!incomeTypeIsValid(incomeType)}>
         {showDefaultText && <IncomeTypeDefaultText person={person} />}
         {this.props.children}

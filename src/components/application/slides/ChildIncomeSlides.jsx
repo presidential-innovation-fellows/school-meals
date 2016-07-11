@@ -6,7 +6,7 @@ import ChildIncomeSlide from './ChildIncomeSlide'
 class ChildIncomeSlides extends Component {
   get childrenWithIncome() {
     const children = this.props.allChildren
-    return children.filter(child => child.incomeTypes.all.isApplicable)
+    return children.filter(child => child.incomeTypes.child.isApplicable)
   }
 
   render() {

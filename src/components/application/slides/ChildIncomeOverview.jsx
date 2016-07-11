@@ -8,7 +8,7 @@ import { ControlLabel } from 'react-bootstrap'
 class ChildIncomeOverview extends Component {
   get isValid() {
     return this.props.allChildren
-               .map(child => child.incomeTypes.all.isApplicable != null)
+               .map(child => child.incomeTypes.child.isApplicable != null)
                .reduce((a, b) => a && b, true)
   }
 
@@ -32,7 +32,7 @@ class ChildIncomeOverview extends Component {
         {allChildren.map(child =>
           <div key={child.id}>
             <p>Does <strong>{child.firstName}</strong> have income from any of these, or any other, sources?</p>
-            <BooleanRadio name="isApplicable" object={child.incomeTypes.all} />
+            <BooleanRadio name="isApplicable" object={child.incomeTypes.child} />
           </div>
          )}
       </Slide>

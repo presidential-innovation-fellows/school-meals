@@ -44,7 +44,8 @@ export class AssistancePrograms {
       this.items = assistanceProgramNames.map(function(programName) {
         return {
           id: shortid.generate(),
-          name: programName, caseNumber: ''
+          name: programName,
+          caseNumber: ''
         }
       })
     }
@@ -56,6 +57,10 @@ export class AssistancePrograms {
 
   map(func) {
     return this.items.map(func)
+  }
+
+  @computed get applicable() {
+    return this.items.filter(item => !!item.caseNumber)
   }
 
   @computed get length() {
@@ -116,6 +121,38 @@ class PersonCollection {
 
   map(func) {
     return this.items.map(func)
+  }
+
+  @computed get allApplicableIncomeSources() {
+    let result = []
+
+    for (let i = 0; i < this.items.length; i++) {
+      let person = this.items[i]
+
+      for (let type in person.incomeTypes) {
+        let sources = person.incomeTypes[type].sources
+
+        if (!person.incomeTypes[type].isApplicable) {
+          continue
+        }
+
+        for (let sourceKey in sources) {
+          let source = sources[sourceKey]
+
+          if (source.has) {
+            result.push({
+              person: person,
+              source: sourceKey,
+              type: type,
+              amount: source.amount,
+              frequency: source.frequency
+            })
+          }
+        }
+      }
+    }
+
+    return result
   }
 
   @computed get first() {
@@ -227,7 +264,7 @@ class ChildCollection extends PersonCollection {
   get propertiesOtherThanFields() {
     return Object.assign({}, super.propertiesOtherThanFields, {
       incomeTypes: {
-        all: {
+        child: {
           isApplicable: null,
           sources: {
             'job':                 { has: null, amount: '', frequency: '' },
