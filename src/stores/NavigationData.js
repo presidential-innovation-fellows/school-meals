@@ -91,9 +91,8 @@ export default class NavigationData {
   }
 
   handleHashChange(event) {
-    let newId = event.newURL.split('#')[1] // new hash
-    newId = newId || '/' + this.slides[0].id // root (no hash)
-    newId = newId.substr(1) // trim leading slash
+    let newId = (event.newURL.split('#')[1] || '/').substr(1)
+    newId = newId || this.slides[0].id // root (no hash)
 
     this.goToSlide(newId)
   }
