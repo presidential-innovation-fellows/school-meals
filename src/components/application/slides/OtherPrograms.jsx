@@ -5,12 +5,26 @@ import { observer } from 'mobx-react'
 
 @observer
 class OtherPrograms extends Component {
+    get isValid() {
+      const students = this.props.students
+
+      if (students.length === 1) {
+        return(students.first.isFoster != null &&
+               students.first.isHomeless != null &&
+               students.first.isMigrant != null &&
+               students.first.isRunaway != null)
+      } else {
+        // multiple students ernder as check boxes; no negative action required
+        return true
+      }
+    }
+
   render() {
     const { students } = this.props
     const oneStudent = students.length === 1
 
     return (
-      <Slide header="Other Programs">
+      <Slide header="Other Programs" nextDisabled={!this.isValid}>
 
         <p>No problem! There are other ways to qualify.</p>
 
