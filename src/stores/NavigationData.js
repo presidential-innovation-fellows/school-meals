@@ -21,12 +21,6 @@ export default class NavigationData {
     this.CURRENT_CLASS_NAME = 'current'
     this.history = []
 
-    // start with a clean slate
-    if (window.location.hash) {
-      window.location.replace(window.location.pathname +
-                              window.location.search)
-    }
-
     // Workaround for event.newURL and event.oldURL:
     // https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onhashchange
     if (!window.HashChangeEvent) (function() {
@@ -98,8 +92,10 @@ export default class NavigationData {
   }
 
   init() {
-    // show first slide
-    this.goToSlide(this.nextSlide.id)
+    if (window.location.hash === '#')
+      window.location.hash = '#/'
+    else
+      window.location.hash = '#'
   }
 
   back() {
