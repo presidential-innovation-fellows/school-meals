@@ -1,5 +1,4 @@
 import { toSentenceSerial } from 'underscore.string'
-import { computed, observer } from 'mobx-react'
 
 // retuns zero padded YYYY-MM-DD given a date object
 export function formatDate(date) {
@@ -55,36 +54,4 @@ export function incomeTypeIsValid(incomeType, mustNotBeNull = []) {
     default:
       return false
   }
-}
-
-function _moveSlide(offset) {
-  const currentClass = 'current'
-  const re = new RegExp(currentClass, 'g')
-  const slides = document.getElementsByClassName('slide')
-  let newSlideIndex = 0
-
-  for (let i = 0; i < slides.length; i++) {
-    for (let className of slides[i].classList) {
-      if (className === currentClass) {
-        newSlideIndex = i + offset
-        slides[i].className = slides[i].className.replace(re, '')
-        break
-      }
-    }
-  }
-
-  slides[newSlideIndex].className += ' ' + currentClass
-  window.scrollTo(0, 0)
-}
-
-export function initSlide() {
-  _moveSlide(0)
-}
-
-export function backSlide() {
-  _moveSlide(-1)
-}
-
-export function nextSlide() {
-  _moveSlide(1)
 }

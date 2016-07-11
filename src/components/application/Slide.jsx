@@ -1,10 +1,23 @@
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
 import { Button, Form, PageHeader, Panel } from 'react-bootstrap'
-import { backSlide, nextSlide } from '../../helpers'
 
 @observer
 class Slide extends Component {
+  constructor(props, context) {
+    super(props, context)
+    this.handleBack = this.handleBack.bind(this)
+    this.handleNext = this.handleNext.bind(this)
+  }
+
+  handleBack() {
+    this.context.navigationData.backSlide()
+  }
+
+  handleNext() {
+    this.context.navigationData.nextSlide()
+  }
+
   render() {
     return (
       <section className="slide">
@@ -20,13 +33,13 @@ class Slide extends Component {
 
             <footer>
               {this.props.showBack &&
-               <Button onClick={this.props.handleBack}
+               <Button onClick={this.handleBack}
                        disabled={this.props.backDisabled}>
                  {this.props.backText}
                </Button>}
                {' '}
                {this.props.showNext &&
-                <Button onClick={this.props.handleNext}
+                <Button onClick={this.handleNext}
                         disabled={this.props.nextDisabled}
                         bsStyle="primary">
                   {this.props.nextText}
@@ -39,12 +52,17 @@ class Slide extends Component {
   }
 }
 
+Slide.contextTypes = {
+  navigationData: PropTypes.shape({
+    backSlide: PropTypes.func.isRequired,
+    nextSlide: PropTypes.func.isRequired
+  }).isRequired
+};
+
 Slide.propTypes = {
   children: PropTypes.node.isRequired,
   header: PropTypes.string.isRequired,
   headerSmall: PropTypes.string,
-  handleBack: PropTypes.func,
-  handleNext: PropTypes.func,
   showBack: PropTypes.bool,
   showNext: PropTypes.bool,
   backDisabled: PropTypes.bool,
@@ -54,8 +72,6 @@ Slide.propTypes = {
 }
 
 Slide.defaultProps = {
-  handleBack: backSlide,
-  handleNext: nextSlide,
   showBack: true,
   showNext: true,
   backDisabled: false,
