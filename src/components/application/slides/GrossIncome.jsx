@@ -8,7 +8,7 @@ class GrossIncome extends Component {
     const { students } = this.props
 
     return (
-      <Slide header="Gross Income">
+      <Slide header="Gross Income" id="gross-income">
 
         <p>The next section will ask you about the income of adults in your household. All of the income that you enter should be <strong>gross income</strong>.</p>
 

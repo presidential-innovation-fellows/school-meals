@@ -11,16 +11,16 @@ class Slide extends Component {
   }
 
   handleBack() {
-    this.context.navigationData.backSlide()
+    this.context.navigationData.back()
   }
 
   handleNext() {
-    this.context.navigationData.nextSlide()
+    this.context.navigationData.next()
   }
 
   render() {
     return (
-      <section className="slide">
+      <section className="slide" id={this.props.id}>
         <PageHeader>
           {this.props.header}
           {' '}
@@ -54,12 +54,13 @@ class Slide extends Component {
 
 Slide.contextTypes = {
   navigationData: PropTypes.shape({
-    backSlide: PropTypes.func.isRequired,
-    nextSlide: PropTypes.func.isRequired
+    back: PropTypes.func.isRequired,
+    next: PropTypes.func.isRequired
   }).isRequired
 };
 
 Slide.propTypes = {
+  id: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
   header: PropTypes.string.isRequired,
   headerSmall: PropTypes.string,

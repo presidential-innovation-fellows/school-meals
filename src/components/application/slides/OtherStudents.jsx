@@ -11,6 +11,7 @@ class OtherStudents extends Component {
           header="Other Students"
           label="student"
           labelPlural="other students"
+          id="other-students"
           collection={this.props.otherStudents}>
 
         <p>Are there any students in your household that are in grade 12 or below and attend school but not {organization.name}?</p>

@@ -6,7 +6,8 @@ import { observer } from 'mobx-react'
 class ThankYou extends Component {
   render() {
     return (
-      <Slide header="Thank You" showBack={false} showNext={false}>
+      <Slide header="Thank You" id="thank-you"
+             showBack={false} showNext={false}>
         <p>Your application has been submitted.</p>
         <p>Thank you for applying for school meal benefits!</p>
       </Slide>

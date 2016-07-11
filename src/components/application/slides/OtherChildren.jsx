@@ -17,6 +17,7 @@ class OtherChildren extends Component {
           header="Other Children"
           label="child"
           labelPlural="other children"
+          id="other-children"
           collection={this.props.otherChildren}>
 
         <p>

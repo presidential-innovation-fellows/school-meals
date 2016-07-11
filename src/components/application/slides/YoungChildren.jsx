@@ -17,6 +17,7 @@ class YoungChildren extends Component {
           header="Young Children"
           label="young child"
           labelPlural="young children"
+          id="young-children"
           collection={this.props.youngChildren}>
 
         <p>

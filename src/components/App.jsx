@@ -45,8 +45,8 @@ class App extends Component {
 
 App.childContextTypes = {
   navigationData: PropTypes.shape({
-    backSlide: PropTypes.func.isRequired,
-    nextSlide: PropTypes.func.isRequired
+    back: PropTypes.func.isRequired,
+    next: PropTypes.func.isRequired
   }).isRequired
 };
 

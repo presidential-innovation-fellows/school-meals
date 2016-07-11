@@ -24,7 +24,8 @@ class OtherPrograms extends Component {
     const oneStudent = students.length === 1
 
     return (
-      <Slide header="Other Programs" nextDisabled={!this.isValid}>
+      <Slide header="Other Programs" nextDisabled={!this.isValid}
+             id="other-programs">
 
         <p>No problem! There are other ways to qualify.</p>
 

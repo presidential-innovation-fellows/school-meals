@@ -10,7 +10,7 @@ class Students extends Component {
     const { students } = this.props
 
     return (
-      <Slide header="Students" nextDisabled={!students.isValid}>
+      <Slide header="Students" id="students" nextDisabled={!students.isValid}>
         <p>List the names of the students in your household that attend {organization.name} and are applying for school meal benefits.</p>
 
         <PersonCollection

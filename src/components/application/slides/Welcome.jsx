@@ -5,7 +5,7 @@ import { organization } from '../../../config'
 class Welcome extends React.Component {
   render() {
     return (
-      <Slide header="Welcome!!" showBack={false}>
+      <Slide header="Welcome!!" id="welcome" showBack={false}>
         <p>
           This is the {organization.name} electronic application for free and
           reduced priced meals for the USDA’s National School Lunch & School

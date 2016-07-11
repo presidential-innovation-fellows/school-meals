@@ -1,33 +1,112 @@
+// NOTE -- this is admittedly not very reacty. Navigation is basically just
+//         using CSS to show the appropriate section.slide at a given time.
+//         It's nicely wired up with he browser's forward/back buttons, but
+//         the entire questionaire is still rendered and made invisible.
+//         This has the advantage of keeping navigation simple (out of
+//         react/mobx land), making debugging easier (see the whole flow
+//         but entering a magic hash: http://localhost:3000/#debug/), and
+//         making slide transitions fast (since the next slide is already
+//         rendered) at the expense of making some UI interactions that
+//         modify observable data slower (as rendering happens at that time),
+//         though in practice it's not really noticable.
+//
+//         The only issue with this system is that it's possible for a user
+//         to get into a bad state using the browser's native Forward button
+//         after going back to make a change that modifies downstream parts
+//         of the application flow. In such a case, a new "forward path"
+//         should be created but the old "forward path" is still in the
+//         browser's history.
 export default class NavigationData {
-  _go(delta) {
-    const currentClass = 'current'
-    const re = new RegExp(currentClass, 'g')
-    const slides = document.getElementsByClassName('slide')
-    let newSlideIndex = 0
+  constructor() {
+    this.CURRENT_CLASS_NAME = 'current'
+    this.history = []
+
+    // Workaround for event.newURL and event.oldURL:
+    // https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onhashchange
+    if (!window.HashChangeEvent) (function() {
+      var lastURL=document.URL;
+      window.addEventListener('hashchange', function(event){
+        Object.defineProperty(event, 'oldURL', {
+          enumerable: true,
+          configurable: true,
+          value: lastURL
+        })
+        Object.defineProperty(event, 'newURL', {
+          enumerable: true,
+          configurable: true,
+          value: document.URL
+        })
+        lastURL = document.URL
+      })
+    }())
+
+    this.handleHashChange = this.handleHashChange.bind(this)
+    window.onhashchange = this.handleHashChange
+  }
+
+  get slides() {
+    return document.getElementsByClassName('slide')
+  }
+
+  get nextSlide() {
+    const slides = this.slides
 
     for (let i = 0; i < slides.length; i++) {
+      // the current slide
       for (let className of slides[i].classList) {
-        if (className === currentClass) {
-          newSlideIndex = i + delta
-          slides[i].className = slides[i].className.replace(re, '')
-          break
+        if (className === this.CURRENT_CLASS_NAME) {
+          if (i === slides.length - 1) {
+            // final slide -- no next
+            return null
+          } else {
+            return slides[i + 1]
+          }
         }
       }
     }
 
-    slides[newSlideIndex].className += ' ' + currentClass
+    // nothing is current -- the first slide should be next
+    return slides[0]
+  }
+
+  goToSlide(id) {
+    const slides = document.getElementsByClassName('slide')
+    const re = new RegExp(this.CURRENT_CLASS_NAME, 'g') // TODO: imperfect
+
+    for (let slide of slides) {
+      if (slide.id === id || id === 'debug') {
+        slide.className += ' ' + this.CURRENT_CLASS_NAME
+      } else {
+        slide.className = slide.className.replace(re, '')
+      }
+    }
+
     window.scrollTo(0, 0)
   }
 
+  handleHashChange(event) {
+    let newId = event.newURL.split('#')[1] // new hash
+    newId = newId || '/' + this.slides[0].id // root (no hash)
+    newId = newId.substr(1) // trim leading slash
+
+    this.goToSlide(newId)
+  }
+
   init() {
-    this._go(0)
+    // start with a clean slate
+    if (window.location.hash) {
+      window.location.replace(window.location.pathname +
+                              window.location.search)
+    }
+
+    this.goToSlide(this.nextSlide.id)
   }
 
-  backSlide() {
-    this._go(-1)
+  back() {
+    window.history.back()
   }
 
-  nextSlide() {
-    this._go(1)
+  next() {
+    window.location.hash = '#/' + this.nextSlide.id
   }
 }

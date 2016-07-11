@@ -9,7 +9,7 @@ class Contact extends Component {
     const { contact } = this.props
 
     return (
-      <Slide header="Contact Info">
+      <Slide header="Contact Info" id="contact">
         <p>OPTIONAL—please enter your contact information so that we can reach you in case there are any issues with your application.</p>
 
         <InputField

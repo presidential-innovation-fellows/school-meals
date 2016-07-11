@@ -16,6 +16,7 @@ class ChildIncomeSlide extends Component {
     return(
       <Slide header="Child Income"
              headerSmall={person.firstName}
+             id={`child-income/${person.id}`}
              nextDisabled={!incomeTypeIsValid(incomeType)}>
 
         <p>Does <strong>{person.firstName}</strong> have income from any of the following sources?</p>

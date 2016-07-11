@@ -9,7 +9,7 @@ const BeforeYouBegin = () => {
         toSentenceSerial(assistancePrograms, ', ', ' or ')
 
   return (
-    <Slide header="Before you begin">
+    <Slide header="Before you begin" id="before-you-begin">
       <p>We only need one application for all the children in your household that attend [insert school district].  If you have any questions, then please use the [help icons] or search through the [FAQs].</p>
       <p>Eligibility for free or reduced price school meal benefits is based on one of three things</p>
 

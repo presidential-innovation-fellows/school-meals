@@ -4,7 +4,7 @@ import { Well } from 'react-bootstrap'
 
 const LegalStatements = () => {
   return (
-    <Slide header="Legal Statements">
+    <Slide header="Legal Statements" id="legal-statements">
       <p>Almost done! Please read and acknowledge the following legal statements.</p>
       <h4>USDA Use of Information Statement</h4>
       <Well>

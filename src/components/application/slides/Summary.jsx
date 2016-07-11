@@ -12,7 +12,8 @@ class Summary extends Component {
     const { applicationData } = this.props
 
     return (
-      <Slide header="Summary" nextText="Submit" nextDisabled={!this.isValid}>
+      <Slide header="Summary" nextText="Submit" nextDisabled={!this.isValid}
+             id="summary">
         <p>This is a summary of the information you have provided in your application for school meal benefits. Please review the information and confirm that everything is correct.</p>
       </Slide>
     )

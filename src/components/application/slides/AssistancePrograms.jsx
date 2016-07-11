@@ -20,7 +20,7 @@ class AssistancePrograms extends Component {
           toSentenceSerial(programNames, ', ', ' or ')
 
     return(
-      <Slide header="Assistance Programs"
+      <Slide header="Assistance Programs" id="assistance-programs"
              nextDisabled={!assistancePrograms.isValid}>
         <p>If anyone in your household participates in {assistanceProgramList}, then <strong>{students.informalList}</strong> {students.length === 1 ? 'is' : 'are'} eligible for free school meals.</p>
         <Well>
