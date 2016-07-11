@@ -74,6 +74,7 @@ function _moveSlide(offset) {
   }
 
   slides[newSlideIndex].className += ' ' + currentClass
+  window.scrollTo(0, 0)
 }
 
 export function initSlide() {
