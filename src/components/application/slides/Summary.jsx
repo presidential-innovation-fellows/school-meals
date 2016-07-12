@@ -3,6 +3,7 @@ import Slide from '../Slide'
 import Link from '../Link'
 import SummaryLabel from './SummaryLabel'
 import SummaryLabelSmall from './SummaryLabelSmall'
+import Checkbox from '../Checkbox'
 import { observer } from 'mobx-react'
 import { Badge, Table, Well } from 'react-bootstrap'
 import { humanize, numberFormat } from 'underscore.string'
@@ -12,7 +13,7 @@ import { allStudentsAreFHMR } from '../../../helpers'
 @observer
 class Summary extends Component {
   get isValid() {
-    return true
+    return this.props.applicationData.certifiedCorrect
   }
 
   get allOtherChildren() {
@@ -255,6 +256,12 @@ class Summary extends Component {
            </span>
           }
         </Well>
+
+        <p>
+          <Checkbox name="certifiedCorrect" object={applicationData} inline>
+            I certify the above information is true and correct.
+          </Checkbox>
+        </p>
       </Slide>
     )
   }

@@ -11,6 +11,8 @@ export default class ApplicationData {
   otherChildren = new OptionalChildCollection()
   adults = new AdultCollection()
 
+  @observable certifiedCorrect = false
+
   @observable attestation = {
     date: formatDate(new Date(Date.now()))
   }
