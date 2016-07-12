@@ -64,6 +64,10 @@ export function allStudentsAreFHMR(students) {
     'isRunaway'
   ]
 
+  if (!students.length) {
+    return false
+  }
+
   return students
     .map(student => {
       return qualifyingAttributes

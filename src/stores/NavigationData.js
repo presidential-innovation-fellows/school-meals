@@ -1,3 +1,5 @@
+import { action, computed, observable } from 'mobx'
+
 // NOTE -- this is admittedly not very reacty. Navigation is basically just
 //         using CSS to show the appropriate section.slide at a given time.
 //         It's nicely wired up with he browser's forward/back buttons, but
@@ -17,6 +19,8 @@
 //         should be created but the old "forward path" is still in the
 //         browser's history.
 export default class NavigationData {
+  @observable stepsCompleted = null
+
   constructor() {
     this.CURRENT_CLASS_NAME = 'current'
     this.history = []
@@ -71,6 +75,22 @@ export default class NavigationData {
     return slides[0]
   }
 
+  reflectProgress(slide) {
+    const slides = this.slides
+    let sectionBeginningsSeen = 0
+
+    for (let i = 0; i < slides.length; i++) {
+      if (slides[i].hasAttribute('data-begins-section')) {
+        sectionBeginningsSeen++
+      }
+      if (slide == slides[i]) {
+        break
+      }
+    }
+
+    this.stepsCompleted = sectionBeginningsSeen - 1
+  }
+
   goToSlide(id) {
     const slides = this.slides
     const re = new RegExp(this.CURRENT_CLASS_NAME, 'g') // TODO: imperfect
@@ -80,6 +100,7 @@ export default class NavigationData {
 
       if (slide.id === id || id === 'debug') {
         slide.className += ' ' + this.CURRENT_CLASS_NAME
+        this.reflectProgress(slide)
       } else {
         slide.className = slide.className.replace(re, '')
       }
@@ -95,18 +116,18 @@ export default class NavigationData {
     this.goToSlide(newId)
   }
 
-  init() {
+  @action init() {
     if (window.location.hash === '#/')
       window.location.hash = '#'
     else
       window.location.hash = '#/'
   }
 
-  back() {
+  @action back() {
     window.history.back()
   }
 
-  next() {
+  @action next() {
     window.location.hash = '#/' + this.nextSlide.id
   }
 }

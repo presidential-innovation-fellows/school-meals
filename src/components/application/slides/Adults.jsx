@@ -10,7 +10,8 @@ class Adults extends Component {
     const { adults, allChildren } = this.props
 
     return (
-      <Slide header="Adults" id="adults" nextDisabled={!adults.isValid}>
+      <Slide header="Adults" id="adults" nextDisabled={!adults.isValid}
+             beginsSection>
         <p>Not including the people the people listed below, who else lives in the household?</p>
 
         <ul>

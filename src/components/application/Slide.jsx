@@ -20,7 +20,8 @@ class Slide extends Component {
 
   render() {
     return (
-      <section className="slide" id={this.props.id}>
+      <section className="slide" id={this.props.id}
+               data-begins-section={this.props.beginsSection}>
         <PageHeader>
           {this.props.header}
           {' '}
@@ -69,7 +70,8 @@ Slide.propTypes = {
   backDisabled: PropTypes.bool,
   nextDisabled: PropTypes.bool,
   backText: PropTypes.string,
-  nextText: PropTypes.string
+  nextText: PropTypes.string,
+  beginsSection: PropTypes.bool
 }
 
 Slide.defaultProps = {

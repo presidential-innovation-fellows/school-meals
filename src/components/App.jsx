@@ -6,6 +6,7 @@ import Application from './application/Application'
 import ApplicationData from '../stores/ApplicationData'
 import NavigationData from '../stores/NavigationData'
 import Navigation from '../Navigation'
+import Progress from '../Progress'
 
 const applicationData = new ApplicationData()
 const navigationData = new NavigationData()
@@ -28,6 +29,8 @@ class App extends Component {
     return (
       <div>
         <Navigation />
+        <Progress navigationData={navigationData}
+                  applicationData={applicationData}/>
         <main>
           <Grid>
             <Row>
