@@ -2,12 +2,12 @@ a {
   cursor: pointer;
 }
 
-main {
-  margin-top: 30px;
-}
-
 th {
   background-color: #f1f1f1;
+}
+
+main {
+  padding-top: 90px;
 }
 
 #summary h4 {
@@ -24,4 +24,72 @@ th {
 
 .slide.current {
   display: initial;
+}
+
+.progress-container {
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  top: 50px;
+  padding: 20px 0 0;
+  position: fixed;
+  width: 100%;
+  z-index: 1020;
+}
+
+@media (max-width: 768px) {
+  .panel,
+  .panel-body {
+    margin: 0;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .panel {
+    margin-bottom: 1em;
+  }
+}
+
+@media (min-width: 768px) {
+  main {
+    padding-top: 110px;
+  }
+
+  .progress-container {
+    padding: 23px 0 20px;
+  }
+}
+
+/* Hover */
+.rc-steps-status-finish:hover .rc-steps-head,
+.rc-steps-status-finish:hover .rc-steps-main {
+  cursor: pointer;
+}
+.rc-steps-status-finish:hover .rc-steps-head-inner {
+  border-color: #00a6d2 !important;
+  background-color: #00a6d2 !important;
+}
+.rc-steps-status-finish:hover .rc-steps-icon {
+  color: #fff !important;
+}
+.rc-steps-status-finish:hover .rc-steps-title {
+  color: #00a6d2 !important;
+}
+
+/* Current */
+.rc-steps .rc-steps-item.rc-steps-status-process .rc-steps-head-inner {
+  border-color: #0071bc;
+  background-color: #0071bc;
+}
+
+/* Completed */
+.rc-steps .rc-steps-item.rc-steps-status-finish .rc-steps-head-inner {
+  border-color: #0071bc;
+}
+.rc-steps .rc-steps-head-inner > .rc-steps-icon,
+.rc-steps .rc-steps-item.rc-steps-status-finish .rc-steps-head-inner > .rc-steps-icon {
+  color: #0071bc;
+}
+.rc-steps .rc-steps-item.rc-steps-status-finish .rc-steps-tail > i {
+  background-color: #0071bc;
 }
