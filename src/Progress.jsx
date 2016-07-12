@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import Steps, { Step } from 'rc-steps'
 import { observer } from 'mobx-react'
-import { Grid, Row, Col } from 'react-bootstrap'
+import { Grid, Row, Col, ProgressBar } from 'react-bootstrap'
 import { allStudentsAreFHMR } from './helpers'
 
 @observer
@@ -47,6 +47,11 @@ class Progress extends Component {
     return result
   }
 
+  get percent() {
+    const { currentSlideIndex, slides } = this.props.navigationData
+    return Math.round(100 * currentSlideIndex / (slides.length - 1))
+  }
+
   render() {
     const { stepsCompleted } = this.props.navigationData
 
@@ -55,9 +60,8 @@ class Progress extends Component {
         <Grid>
           <Row>
             <Col xs={12} smHidden mdHidden lgHidden>
-              <strong>
-                Section {stepsCompleted + 1} of {this.steps.length}
-              </strong>
+              <ProgressBar now={this.percent}
+                           label={!!this.percent && `${this.percent}%`} />
             </Col>
             <Col xsHidden sm={12}>
               <Steps current={stepsCompleted}>

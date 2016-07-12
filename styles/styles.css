@@ -7,7 +7,7 @@ th {
 }
 
 main {
-  padding-top: 75px;
+  padding-top: 90px;
 }
 
 #summary h4 {
@@ -30,7 +30,7 @@ main {
   background-color: white;
   border-bottom: 1px solid #ddd;
   top: 50px;
-  padding: 13px 0 10px;
+  padding: 20px 0 0;
   position: fixed;
   width: 100%;
   z-index: 1020;
@@ -66,15 +66,14 @@ main {
   cursor: pointer;
 }
 .rc-steps-status-finish:hover .rc-steps-head-inner {
-  border-color: #205493 !important;
-  background-color: #205493 !important;
+  border-color: #00a6d2 !important;
+  background-color: #00a6d2 !important;
 }
 .rc-steps-status-finish:hover .rc-steps-icon {
   color: #fff !important;
 }
 .rc-steps-status-finish:hover .rc-steps-title {
-  color: #205493 !important;
-  text-decoration: underline;
+  color: #00a6d2 !important;
 }
 
 /* Current */

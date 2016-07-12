@@ -20,6 +20,7 @@ import { action, computed, observable } from 'mobx'
 //         browser's history.
 export default class NavigationData {
   @observable stepsCompleted = null
+  @observable currentSlideIndex = 0
 
   constructor() {
     this.CURRENT_CLASS_NAME = 'current'
@@ -78,17 +79,22 @@ export default class NavigationData {
   reflectProgress(slide) {
     const slides = this.slides
     let sectionBeginningsSeen = 0
+    let slidesSeen = 0
 
     for (let i = 0; i < slides.length; i++) {
       if (slides[i].hasAttribute('data-begins-section')) {
         sectionBeginningsSeen++
       }
+
       if (slide == slides[i]) {
         break
       }
+
+      slidesSeen++
     }
 
     this.stepsCompleted = sectionBeginningsSeen - 1
+    this.currentSlideIndex = slidesSeen
   }
 
   goToSlide(id) {

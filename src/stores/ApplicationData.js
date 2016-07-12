@@ -187,6 +187,14 @@ class PersonCollection {
 }
 
 class AdultCollection extends PersonCollection {
+  constructor(props) {
+    super(props)
+
+    if (!this.length) {
+      this.add()
+    }
+  }
+
   get propertiesOtherThanFields() {
     return Object.assign({}, super.propertiesOtherThanFields, {
       incomeTypes: {
@@ -297,6 +305,14 @@ class OptionalChildCollection extends ChildCollection {
 }
 
 class StudentCollection extends ChildCollection {
+  constructor(props) {
+    super(props)
+
+    if (!this.length) {
+      this.add()
+    }
+  }
+
   get fields() {
     return super.fields.concat([
       { name: 'school', label: 'School', required: true },

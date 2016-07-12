@@ -32,7 +32,7 @@ class Application extends Component {
         <AssistancePrograms assistancePrograms={assistancePrograms}
                             students={students} />
 
-        {assistancePrograms.hasAny === false &&
+        {assistancePrograms.hasAny !== true &&
          <NoAssistancePrograms applicationData={this.props.applicationData} />
         }
 
