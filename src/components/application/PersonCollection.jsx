@@ -22,6 +22,7 @@ class PersonCollection extends Component {
   render() {
     const {
       collection,
+      filter,
       label,
       labelPlural
     } = this.props
@@ -32,7 +33,7 @@ class PersonCollection extends Component {
           <Well><strong>No {labelPlural}</strong></Well>
         }
 
-        {collection.map(person =>
+        {collection.items.filter(filter).map(person =>
           <PersonForm person={person}
                       fields={collection.fields}
                       label={label}
@@ -52,6 +53,7 @@ class PersonCollection extends Component {
 }
 
 PersonCollection.defaultProps = {
+  filter: person => true,
   label: 'person',
   labelPlural: 'people'
 }

@@ -23,7 +23,6 @@ class HouseholdIncome extends Component {
 
   render() {
     const {
-      attestation,
       students,
       otherStudents,
       youngChildren,
@@ -51,7 +50,7 @@ class HouseholdIncome extends Component {
         <Adults adults={adults} allChildren={this.allChildren} />
         <GrossIncome />
         <AdultIncome adults={adults} />
-        <Signature attestation={attestation} signature={signature} />
+        <Signature attestor={adults.first} signature={signature} />
       </div>
     )
   }

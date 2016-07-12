@@ -12,9 +12,7 @@ export default class ApplicationData {
   adults = new AdultCollection()
 
   @observable attestation = {
-    date: formatDate(new Date(Date.now())),
-    firstName: '',
-    lastName: ''
+    date: formatDate(new Date(Date.now()))
   }
 
   @observable contact = {
@@ -191,12 +189,13 @@ class AdultCollection extends PersonCollection {
     super(props)
 
     if (!this.length) {
-      this.add()
+      this.add({ isAttestor: true })
     }
   }
 
   get propertiesOtherThanFields() {
     return Object.assign({}, super.propertiesOtherThanFields, {
+      isAttestor: false,
       incomeTypes: {
         military: {
           isApplicable: null,

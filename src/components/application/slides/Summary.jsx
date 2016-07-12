@@ -87,10 +87,10 @@ class Summary extends Component {
   render() {
     const { applicationData } = this.props
     const { adults,
-            attestation,
             contact,
             students,
             assistancePrograms } = applicationData
+    const attestor = adults.first
     const showHousehold =
       !assistancePrograms.hasAny &&
       !allStudentsAreFHMR(students)
@@ -220,7 +220,7 @@ class Summary extends Component {
 
         <SummaryLabel id="contact">Contact Information</SummaryLabel>
         <Well>
-          { attestation.firstName } { attestation.lastName }
+          { attestor.firstName } { attestor.lastName }
           {!!contact.address1 &&
            <span>
              <br />

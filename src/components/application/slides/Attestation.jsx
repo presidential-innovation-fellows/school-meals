@@ -6,13 +6,13 @@ import { observer } from 'mobx-react'
 @observer
 class Attestation extends Component {
   get isValid() {
-    return this.props.attestation.firstName &&
-           this.props.attestation.lastName &&
+    return this.props.attestor.firstName &&
+           this.props.attestor.lastName &&
            this.props.attestation.date
   }
 
   render() {
-    const { attestation } = this.props
+    const { attestation, attestor } = this.props
 
     return (
       <Slide header="Attestation" id="attestation" nextDisabled={!this.isValid}>
@@ -20,20 +20,32 @@ class Attestation extends Component {
 
         <InputField
             name="firstName"
-            label="First name"
-            object={attestation}
+            label="First name *"
+            object={attestor}
+        />
+
+        <InputField
+            name="middleName"
+            label="Middle name"
+            object={attestor}
         />
 
         <InputField
             name="lastName"
-            label="Last name"
-            object={attestation}
+            label="Last name *"
+            object={attestor}
+        />
+
+        <InputField
+            name="suffix"
+            label="Suffix"
+            object={attestor}
         />
 
         <InputField
             type="date"
             name="date"
-            label="Today's date"
+            label="Today's date *"
             object={attestation}
         />
       </Slide>
@@ -42,9 +54,9 @@ class Attestation extends Component {
 }
 
 Attestation.propTypes = {
+  attestor: PropTypes.object.isRequired,
   attestation: PropTypes.shape({
-    firstName: PropTypes.string.isRequired,
-    lastName: PropTypes.string.isRequired
+    date: PropTypes.string.isRequired,
   }).isRequired
 }
 

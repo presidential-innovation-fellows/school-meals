@@ -27,11 +27,11 @@ class Signature extends Component {
   }
 
   render() {
-    const { attestation, signature } = this.props
+    const { attestor, signature } = this.props
 
     return (
       <Slide header="SSN" id="ssn" nextDisabled={!this.isValid}>
-        <p>Please provide the last four digits of the Social Security number for the person that signed at the beginning of the application <strong>({attestation.firstName} {attestation.lastName})</strong>. If that person does not have a Social Security number, please check the box below labeled "No SSN".</p>
+        <p>Please provide the last four digits of the Social Security number for the person that signed at the beginning of the application <strong>({attestor.firstName} {attestor.lastName})</strong>. If that person does not have a Social Security number, please check the box below labeled "No SSN".</p>
 
         <InputGroup>
           <InputGroup.Addon>xxx-xx-</InputGroup.Addon>
@@ -55,7 +55,7 @@ class Signature extends Component {
 }
 
 Signature.propTypes = {
-  attestation: PropTypes.object.isRequired,
+  attestor: PropTypes.object.isRequired,
   signature: PropTypes.object.isRequired
 }
 

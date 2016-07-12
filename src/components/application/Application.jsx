@@ -20,6 +20,7 @@ class Application extends Component {
       attestation,
       students,
       contact,
+      adults,
       assistancePrograms
     } = this.props.applicationData
 
@@ -27,8 +28,8 @@ class Application extends Component {
       <div>
         <Welcome />
         <BeforeYouBegin />
-        <Attestation attestation={attestation} />
-        <Students attestation={attestation} students={students} />
+        <Attestation attestation={attestation} attestor={adults.first} />
+        <Students students={students} />
         <AssistancePrograms assistancePrograms={assistancePrograms}
                             students={students} />
 
