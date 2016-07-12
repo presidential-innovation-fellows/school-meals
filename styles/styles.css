@@ -7,7 +7,7 @@ th {
 }
 
 main {
-  padding-top: 80px;
+  padding-top: 75px;
 }
 
 #summary h4 {
@@ -34,6 +34,20 @@ main {
   position: fixed;
   width: 100%;
   z-index: 1020;
+}
+
+@media (max-width: 768px) {
+  .panel,
+  .panel-body {
+    margin: 0;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .panel {
+    margin-bottom: 1em;
+  }
 }
 
 @media (min-width: 768px) {
