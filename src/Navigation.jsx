@@ -11,10 +11,12 @@ const Navigation = () => {
         <Navbar.Toggle />
       </Navbar.Header>
       <Navbar.Collapse>
+{/*
         <Nav pullRight>
           <NavItem eventKey={1} href="#/contact">Contact</NavItem>
           <NavItem eventKey={2} href="#/help">Help</NavItem>
         </Nav>
+*/}
       </Navbar.Collapse>
     </Navbar>
   )
