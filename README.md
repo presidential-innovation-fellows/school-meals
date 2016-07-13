@@ -1,20 +1,16 @@
-mobx-react-boilerplate
-=====================
+# school-meals
+Application for free/reduced [school meals](http://www.fns.usda.gov/school-meals/child-nutrition-programs).
 
-A minimal application that combines [MobX](https://mobxjs.github.io/mobx) with [React](https://facebook.github.io/react).
-Supports ES6 and JSX compilation through babel.
+## Developing
 
-* For a more sophisticated project to start with, see the full TodoMVC implementation: [mobx-react-todomvc](https://github.com/mobxjs/mobx-react-todomvc).
+1. Install [Node.js](https://nodejs.org)
+2. `npm install`
+3. `npm run start`
 
-### Run the example
+## Public domain
 
-```
-npm install
-npm start
-open http://localhost:3000
-```
+This project is in the worldwide [public domain](LICENSE.md). As stated in [CONTRIBUTING](CONTRIBUTING.md):
 
-
-### Credits
-
-* [Mendix](http://github.com/mendix) for providing the opportunity to battle test this approach (we're hiring!).
+> This project is in the public domain within the United States, and copyright and related rights in the work worldwide are waived through the [CC0 1.0 Universal public domain dedication](https://creativecommons.org/publicdomain/zero/1.0/).
+>
+> All contributions to this project will be released under the CC0 dedication. By submitting a pull request, you are agreeing to comply with this waiver of copyright interest.
