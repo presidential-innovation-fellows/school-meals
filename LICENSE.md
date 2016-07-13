@@ -2,7 +2,7 @@
 
 This repository was initially a fork of https://github.com/mobxjs/mobx-react-boilerplate, copyright Michel Weststrate, under the [MIT license](https://github.com/mobxjs/mobx-react-boilerplate/blob/3cf242639a9962b524b7c7b374f3f8d397afedcf/LICENSE).
 
-The files `vendor/styles/rc-steps.css` and `vendor/styles/rc-steps-iconfont.css` are from https://github.com/react-component/steps, by [yuhangge <abeyuhang@gmail.com>](https://github.com/react-component/steps/blob/a90e586715734f144dd5d8e4ac93870e81062d1e/package.json#L16), under the [MIT license](https://github.com/react-component/steps/blob/a90e586715734f144dd5d8e4ac93870e81062d1e/README.md#license).
+The files `vendor/styles/rc-steps.css` and `vendor/styles/rc-steps-iconfont.css` are from [rc-steps](https://github.com/react-component/steps), by [yuhangge](https://github.com/react-component/steps/blob/a90e586715734f144dd5d8e4ac93870e81062d1e/package.json#L16), under the [MIT license](https://github.com/react-component/steps/blob/a90e586715734f144dd5d8e4ac93870e81062d1e/README.md#license).
 
 The files `vendor/styles/bootstrap.min.css` and `vendor/styles/bootstrap-theme.min.css` are from [Bootstrap](http://getbootstrap.com), copyright [Twitter, Inc.](https://www.twitter.com), under the [MIT license](https://github.com/twbs/bootstrap/blob/4679c3ee306b07cc520c039f6b938a70b98b9915/LICENSE).
 
@@ -10,7 +10,7 @@ The file `vendor/styles/bootstrap.min.css` contains an additional attribution fo
 
 The file `vendor/js/html5shiv-printshiv.min.js` is from [HTML5 Shiv](https://github.com/aFarkas/html5shiv), copyright Alexander Farkas, under the [MIT license](https://github.com/aFarkas/html5shiv/blob/a3c7567c5f7055f9b76230bbbc79967d0b9f7003/MIT%20and%20GPL2%20licenses.md).
 
-The file `vendor/js/es5-shim.min.js` is from [es5-shim](https://github.com/es-shims/es5-shim), copyright Kristopher Michael Kowal and [contributors](https://github.com/es-shims/es5-shim/blob/922bfc2a3f930f2441d4aaaa60954d8d00dc9070/CONTRIBUTORS.md), under the [MIT license](https://github.com/es-shims/es5-shim/blob/922bfc2a3f930f2441d4aaaa60954d8d00dc9070/LICENSE) and other licenses as indicated by its [contributors](https://github.com/es-shims/es5-shim/blob/922bfc2a3f930f2441d4aaaa60954d8d00dc9070/CONTRIBUTORS.md) (inclusive of "MIT license", "3-clause BSD License", "Creative Commons Zero (public domain)", and nudefined licenses as indicated by "XXX TODO License or CLA").
+The file `vendor/js/es5-shim.min.js` is from [es5-shim](https://github.com/es-shims/es5-shim), copyright Kristopher Michael Kowal and [contributors](https://github.com/es-shims/es5-shim/blob/922bfc2a3f930f2441d4aaaa60954d8d00dc9070/CONTRIBUTORS.md), under the [MIT license](https://github.com/es-shims/es5-shim/blob/922bfc2a3f930f2441d4aaaa60954d8d00dc9070/LICENSE) and other licenses as indicated by its [contributors](https://github.com/es-shims/es5-shim/blob/922bfc2a3f930f2441d4aaaa60954d8d00dc9070/CONTRIBUTORS.md) (inclusive of "MIT license", "3-clause BSD License", "Creative Commons Zero (public domain)", and undefined licenses as indicated by "XXX TODO License or CLA").
 
 #### Full license text for the MIT licensed files:
 
