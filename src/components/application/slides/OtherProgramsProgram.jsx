@@ -9,7 +9,7 @@ class OtherProgramsProgram extends Component {
   render() {
     const { students, attribute } = this.props
     const oneStudent = students.length === 1
-console.debug(students)
+
     return (
       <div>
         <ControlLabel>
