@@ -18,6 +18,18 @@ main {
   margin-bottom: .5em;
 }
 
+.info-target {
+  border-bottom: 1px dotted #337ab7;
+  cursor: pointer;
+}
+
+.info-target .glyphicon {
+  color: #337ab7;
+  left: .2em;
+  top: .1em;
+  padding-right: .1em;
+}
+
 .slide {
   display: none;
 }

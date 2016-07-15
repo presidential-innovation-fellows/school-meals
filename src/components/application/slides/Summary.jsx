@@ -5,7 +5,7 @@ import SummaryLabel from './SummaryLabel'
 import SummaryLabelSmall from './SummaryLabelSmall'
 import Checkbox from '../Checkbox'
 import { observer } from 'mobx-react'
-import { Badge, Table, Well } from 'react-bootstrap'
+import { Badge, Glyphicon, OverlayTrigger, Table, Tooltip, Well } from 'react-bootstrap'
 import { humanize, numberFormat } from 'underscore.string'
 import { organization } from '../../../config'
 import { allStudentsAreFHMR } from '../../../helpers'
@@ -206,11 +206,20 @@ class Summary extends Component {
                </tbody>
                <tfoot>
                  <tr>
-                   <td colSpan="2"><strong>Total household income:</strong></td>
+                   <td colSpan="2">
+                     <strong>Total household income:</strong>
+                   </td>
                    <td>
-                     <strong>
-                       ${numberFormat(this.totalMonthlyHouseholdIncome)}
-                     </strong>
+                     <OverlayTrigger placement="top" overlay={
+                       <Tooltip>
+                         This number takes all the information you provided calculates a total household income.
+                       </Tooltip>
+                     }>
+                       <strong className="info-target">
+                         ${numberFormat(this.totalMonthlyHouseholdIncome)}
+                         <Glyphicon glyph="question-sign" />
+                       </strong>
+                     </OverlayTrigger>
                    </td>
                    <td><strong>Monthly</strong></td>
                  </tr>
