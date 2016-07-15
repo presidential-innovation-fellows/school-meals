@@ -9,7 +9,7 @@ class OtherProgramsProgram extends Component {
   render() {
     const { students, attribute } = this.props
     const oneStudent = students.length === 1
-
+console.debug(students)
     return (
       <div>
         <ControlLabel>
@@ -17,7 +17,7 @@ class OtherProgramsProgram extends Component {
         </ControlLabel>
 
         {oneStudent ?
-         <BooleanRadio object={students.first} name={attribute} />
+         <BooleanRadio object={students[0]} name={attribute} />
          :
          students.map(student =>
            <Checkbox object={student} name={attribute} key={student.id}>

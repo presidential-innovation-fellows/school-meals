@@ -26,6 +26,10 @@ main {
   display: initial;
 }
 
+.control-label strong {
+  text-decoration: underline;
+}
+
 .progress-container {
   background-color: white;
   border-bottom: 1px solid #ddd;
