@@ -21,40 +21,33 @@ class MilitaryIncome extends Component {
 
     return(
       <IncomeType {...incomeTypeProps} showDefaultText={false}>
-        <ControlLabel>
-          Is {person.firstName} currently deployed?
-        </ControlLabel>
-        <BooleanRadio name="isDeployed" object={incomeType} />
+        <div>
+          {incomeType.isDeployed ?
+           <p>
+             Military basic pay, drill pay, cash bonuses and allowances for off-base housing, food or clothing are includable income sources. Do not include combat pay, Family Substance Supplemental Allowance, or privatized housing allowances.
+           </p>
+           :
+           <p>
+             Military basic pay made available to the household, cash bonuses and allowances for off-base housing, food or clothing are includable income sources. Do not include combat pay, Family Substance Supplemental Allowance, or privatized housing allowances.
+           </p>
+          }
 
-        {incomeType.isDeployed != null &&
-         <div>
-           {incomeType.isDeployed ?
-            <p>
-              Military basic pay, drill pay, cash bonuses and allowances for off-base housing, food or clothing are includable income sources. Do not include combat pay, Family Substance Supplemental Allowance, or privatized housing allowances.
-            </p>
-            :
-            <p>
-              Military basic pay made available to the household, cash bonuses and allowances for off-base housing, food or clothing are includable income sources. Do not include combat pay, Family Substance Supplemental Allowance, or privatized housing allowances.
-            </p>
-           }
+           <IncomeTypeDefaultText person={person} />
 
-            <IncomeTypeDefaultText person={person} />
+           <IncomeSource incomeSources={incomeSources} name="basic">
+             {incomeType.isDeployed ?
+              'Military basic pay/drill pay' :
+              'Military basic pay (made available to the household)'}
+           </IncomeSource>
 
-            <IncomeSource incomeSources={incomeSources} name="basic">
-              {incomeType.isDeployed ?
-               'Military basic pay/drill pay' :
-               'Military basic pay (made available to the household)'}
-            </IncomeSource>
+           <IncomeSource incomeSources={incomeSources} name="cashBonus">
+             Military cash bonus
+           </IncomeSource>
 
-            <IncomeSource incomeSources={incomeSources} name="cashBonus">
-              Military cash bonus
-            </IncomeSource>
-
-            <IncomeSource incomeSources={incomeSources} name="allowance">
-              Military allowance for off-base housing (other than privatized housing allowances), food, clothing
-            </IncomeSource>
-         </div>
-        }
+           <IncomeSource incomeSources={incomeSources} name="allowance">
+             Military allowance for off-base housing (other than privatized housing allowances), food, clothing
+           </IncomeSource>
+        </div>
       </IncomeType>
     )
   }

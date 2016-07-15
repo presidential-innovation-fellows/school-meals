@@ -9,11 +9,12 @@ class AdultIncomeOverview extends Component {
   get isValid() {
     const incomeTypes = this.props.person.incomeTypes
 
-    for (let incomeType in incomeTypes) {
-      if (incomeType === 'military') {
-        continue
-      }
+    if (incomeTypes.military.isApplicable &&
+        incomeTypes.military.isDeployed == null) {
+      return false
+    }
 
+    for (let incomeType in incomeTypes) {
       if (incomeTypes[incomeType].isApplicable == null) {
         return false
       }
@@ -33,6 +34,16 @@ class AdultIncomeOverview extends Component {
         </p>
         <BooleanRadio name="isApplicable"
                       object={person.incomeTypes.military} />
+
+        {person.incomeTypes.military.isApplicable &&
+          <div>
+            <p>
+              Is <strong>{person.firstName}</strong> currently deployed?
+            </p>
+            <BooleanRadio name="isDeployed"
+                          object={person.incomeTypes.military} />
+          </div>
+        }
 
         <p>
           Does <strong>{person.firstName}</strong> have earnings from work including salary, wages, tips, commissions, cash bonuses or net income from self-employment{person.incomeTypes.military.isApplicable && ', not including earnings from the military'}?
