@@ -31,8 +31,11 @@ class OtherProgramsProgram extends Component {
 }
 
 OtherProgramsProgram.propTypes = {
-  students: PropTypes.object.isRequired,
-  attribute: PropTypes.string.isRequired
+  attribute: PropTypes.string.isRequired,
+  students: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.arrayOf(PropTypes.object)
+  ]).isRequired
 }
 
 export default OtherProgramsProgram
