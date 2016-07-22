@@ -65,7 +65,7 @@ export default class AdultIncomeOverview extends Component {
 
         <Topic title="How should I report my income if I work on a seasonal basis?">
           <p>
-            If you work on a seasonal basis and your household’s current, gross income is higher or lower than usual and does not fairly or accurately represent your household’s actual circumstances, see the ‘WHAT IF MY INCOME IS NOT ALWAYS THE SAME?’ question in the HELP. If you have additional questions, contact [insert contact info, e.g. school/district/person’s name at address, phone number, email], and they will help you figure out your household’s annual rate of income based on USDA guidelines.
+            If you work on a seasonal basis and your household’s current, gross income is higher or lower than usual and does not fairly or accurately represent your household’s actual circumstances, see the ‘WHAT IF MY INCOME IS NOT ALWAYS THE SAME?’ question in the HELP. If you have additional questions, contact {organization.name} ({organization.contact.phone} / {organization.contact.email} / {organization.contact.address}), and they will help you figure out your household’s annual rate of income based on USDA guidelines.
           </p>
         </Topic>
 

@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import Article from '../Article'
 import Topic from '../Topic'
-import { organization } from '../../../config'
+import { organization, localPrograms } from '../../../config'
 import { schoolYear } from '../../../helpers'
 import Household from '../topics/Household'
 import SharedCustody from '../topics/SharedCustody'
@@ -16,9 +16,9 @@ export default class AssistancePrograms extends Component {
           </p>
         </Topic>
 
-        <Topic title="My household participates in [SNAP] and/or [TANF]. Are my children eligible for free meals?">
+        <Topic title={`My household participates in ${localPrograms.snap.name} and/or ${localPrograms.tanf.name}. Are my children eligible for free meals?`}>
           <p>
-            All children in households are eligible for free meals when at least one household member is receiving benefits from [State SNAP], the Food Distribution Program on Indian Reservations (FDPIR), or [State TANF]. If you participate in other assistance programs, contact [insert contact info, e.g. school/district/person's name at address, phone number, email] to see if they qualify for you for school meal benefits. You may qualify for free meals!
+            All children in households are eligible for free meals when at least one household member is receiving benefits from {localPrograms.snap.name}, the Food Distribution Program on Indian Reservations (FDPIR), or {localPrograms.tanf.name}. If you participate in other assistance programs, contact {organization.name} ({organization.contact.phone} / {organization.contact.email} / {organization.contact.address}) to see if they qualify for you for school meal benefits. You may qualify for free meals!
           </p>
         </Topic>
 
@@ -30,7 +30,7 @@ export default class AssistancePrograms extends Component {
 
         <Topic title="My family needs more help. Are there other programs we might apply for?">
           <p>
-            To find out how to apply for [State SNAP] or other assistance benefits, contact your local assistance office at [insert contact info] or call [State hotline number].
+            To find out how to apply for {localPrograms.snap.name} or other assistance benefits, contact your local assistance office at {localPrograms.snap.localContact} or call {localPrograms.snap.stateHotline}.
           </p>
         </Topic>
 

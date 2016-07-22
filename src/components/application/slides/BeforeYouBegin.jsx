@@ -10,7 +10,7 @@ const BeforeYouBegin = () => {
 
   return (
     <Slide header="Before you begin" id="before-you-begin">
-      <p>We only need one application for all the children in your household that attend {organization.name}.  If you have any questions, then please use the [help icons] or search through the [FAQs].</p>
+      <p>We only need one application for all the children in your household that attend {organization.name}.  If you have any questions, please click the question mark icon to get help with the current section.</p>
       <p>Eligibility for free or reduced price school meal benefits is based on one of three things</p>
 
       <ul>

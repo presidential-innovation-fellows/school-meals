@@ -17,3 +17,17 @@ export const assistancePrograms = ['CalFresh',
                                    'State TANF',
                                    'FDPIR',
                                    'WepploCare']
+
+export const localPrograms = {
+  homelessness: {
+    contact: 'Julie Marie (888-555-1212)'
+  },
+  snap: {
+    name: 'CalFresh',
+    localContact: 'Robert Noyes (888-555-1212)',
+    stateHotline: '888-555-1212'
+  },
+  tanf: {
+    name: 'TANF'
+  }
+}
