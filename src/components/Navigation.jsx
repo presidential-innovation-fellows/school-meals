@@ -42,7 +42,7 @@ class Navigation extends Component {
         <Navbar.Collapse>
           <Nav pullRight>
             <NavDropdown eventKey="1" title={map[lang]} id="nav-dropdown">
-              <MenuItem eventKey="1.1" lang="en" href="/?lang=en">English</MenuItem>
+              <MenuItem eventKey="1.1" lang="en" href="/?lang=en">I speak English</MenuItem>
               <MenuItem eventKey="1.2" lang="zh" href="/?lang=zh">我说中文</MenuItem>
               <MenuItem eventKey="1.3" lang="fr" href="/?lang=fr">Je parle français</MenuItem>
               <MenuItem eventKey="1.4" lang="pa" href="/?lang=pa">ਇ ਸ੍ਪੇਆਕ ਪੰਜਾਬੀ</MenuItem>
