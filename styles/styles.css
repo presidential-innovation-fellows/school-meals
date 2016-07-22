@@ -1,5 +1,14 @@
+h1, h2, h3, h4, h5, h6 {
+  color: #0071bc;
+}
+
 a {
+  color: #0071bc;
   cursor: pointer;
+}
+
+a:hover {
+  color: #205493;
 }
 
 th {
@@ -67,8 +76,21 @@ main {
 }
 
 @media (min-width: 768px) {
+  body {
+    background: url(../img/background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
   main {
     padding-top: 110px;
+  }
+
+  .page-header {
+    border-bottom: 0;
+    margin-bottom: 1em;
   }
 
   .progress-container {
@@ -110,6 +132,13 @@ main {
   background-color: #0071bc;
 }
 
+.page-header {
+  position: relative;
+  padding-right: 3em;
+}
+
 .page-header .help {
-  float: right;
+  position: absolute;
+  right: 0;
+  top: 0;
 }

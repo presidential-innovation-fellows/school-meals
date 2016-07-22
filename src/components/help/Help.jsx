@@ -39,7 +39,10 @@ class Help extends Component {
   }
 
   hideHelp() {
-    this.props.helpData.isVisible = false
+    // wrap in conditional to mitigate strange bug
+    if (this) {
+      this.props.helpData.isVisible = false
+    }
   }
 
   render() {

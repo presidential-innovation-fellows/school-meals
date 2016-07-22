@@ -52,7 +52,9 @@
   transition: top 0.3s 0s;
 }
 .cd-panel-header h1 {
-  margin: .2em .4em;
+  color: #212121;
+  font-size: 28px;
+  margin: .35em 5%;
 }
 .from-right .cd-panel-header, .from-left .cd-panel-header {
   top: -50px;
@@ -197,25 +199,13 @@
   /* smooth scrolling on touch devices */
   -webkit-overflow-scrolling: touch;
 }
-.cd-panel-content p {
-  /* font-size: 14px; */
-  /* font-size: 0.875rem; */
-  /* color: #424f5c; */
-  /* line-height: 1.4; */
-  /* margin: 2em 0; */
-}
-.cd-panel-content p:first-of-type {
-  margin-top: 0;
-}
-@media only screen and (min-width: 768px) {
-  .cd-panel-content p {
-    /* font-size: 16px; */
-    /* font-size: 1rem; */
-    /* line-height: 1.6; */
-  }
-}
 
 .help-title {
+  color: #00a6d2;
   font-weight: bold;
-  text-transform: uppercase;
+  padding-top: 1em;
+}
+
+.help-topic:first-of-type .help-title {
+  padding-top: 0;
 }

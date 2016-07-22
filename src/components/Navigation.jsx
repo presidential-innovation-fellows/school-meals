@@ -6,11 +6,6 @@ import { Navbar, Nav, NavItem } from 'react-bootstrap'
 class Navigation extends Component {
   constructor (props) {
     super(props)
-    this.showHelp = this.showHelp.bind(this)
-  }
-
-  showHelp() {
-    this.props.helpData.isVisible = true
   }
 
   render () {
@@ -25,16 +20,11 @@ class Navigation extends Component {
         <Navbar.Collapse>
           <Nav pullRight>
             <NavItem eventKey={1} href="">English</NavItem>
-            <NavItem eventKey={2} href="" onClick={this.showHelp}>Help</NavItem>
           </Nav>
         </Navbar.Collapse>
       </Navbar>
     )
   }
 }
-
-Navigation.propTypes = {
-  helpData: PropTypes.object.isRequired
-};
 
 export default Navigation
