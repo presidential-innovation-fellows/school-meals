@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import Steps, { Step } from 'rc-steps'
 import { observer } from 'mobx-react'
 import { Grid, Row, Col, ProgressBar } from 'react-bootstrap'
-import { allStudentsAreFHMR } from './helpers'
+import { allStudentsAreFHMR } from '../helpers'
 
 @observer
 class Progress extends Component {

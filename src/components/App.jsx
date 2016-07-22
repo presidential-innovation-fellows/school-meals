@@ -5,8 +5,8 @@ import DevTools from 'mobx-react-devtools'
 import Application from './application/Application'
 import ApplicationData from '../stores/ApplicationData'
 import NavigationData from '../stores/NavigationData'
-import Navigation from '../Navigation'
-import Progress from '../Progress'
+import Navigation from './Navigation'
+import Progress from './Progress'
 
 const applicationData = new ApplicationData()
 const navigationData = new NavigationData()
