@@ -11,11 +11,11 @@ const BeforeYouBegin = () => {
   return (
     <Slide header="Before you begin" id="before-you-begin">
       <p>We only need one application for all the children in your household that attend {organization.name}.  If you have any questions, please click the question mark icon to get help with the current section.</p>
-      <p>Eligibility for free or reduced price school meal benefits is based on one of three things</p>
+      <p>Eligibility for free or reduced price school meal benefits is based on one of any three things:</p>
 
       <ul>
-      <li>your child’s individual status as foster, homeless, migrant or runaway</li>
-      <li>participation in an assistance program by any member of your household</li>
+      <li>your child’s individual status as foster, homeless, migrant or runaway, or</li>
+      <li>participation in an assistance program by any member of your household, or</li>
       <li>your total household income in the month the application is filled out, or the month before</li>
       </ul>
 
