@@ -5,15 +5,19 @@ import DevTools from 'mobx-react-devtools'
 import Application from './application/Application'
 import ApplicationData from '../stores/ApplicationData'
 import NavigationData from '../stores/NavigationData'
+import HelpData from '../stores/HelpData'
 import Navigation from './Navigation'
 import Progress from './Progress'
+import Help from './help/Help'
 
 const applicationData = new ApplicationData()
 const navigationData = new NavigationData()
+const helpData = new HelpData()
 
 // DEBUG
 window.applicationData = applicationData
 window.navigationData = navigationData
+window.helpData = helpData
 
 @observer
 class App extends Component {
@@ -28,7 +32,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Navigation />
+        <Navigation helpData={helpData} />
         <Progress navigationData={navigationData}
                   applicationData={applicationData}/>
         <main>
@@ -41,6 +45,7 @@ class App extends Component {
             </Row>
           </Grid>
         </main>
+        <Help helpData={helpData} />
       </div>
     )
   }
