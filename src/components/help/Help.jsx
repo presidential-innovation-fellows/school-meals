@@ -25,10 +25,11 @@ class Help extends Component {
   }
 
   render() {
+    const { article, isVisible } = this.props.helpData
     const classes = classNames(
       'cd-panel',
       'from-right',
-      { 'is-visible': this.props.helpData.isVisible }
+      { 'is-visible': isVisible }
     )
 
     return (
@@ -40,7 +41,12 @@ class Help extends Component {
 
         <div className="cd-panel-container">
           <div className="cd-panel-content">
-            <Welcome />
+            {(() => {
+               switch (article) {
+                 case 'welcome': return <Welcome />
+                 default: return '';
+               }
+             })()}
           </div>
         </div>
       </asside>
@@ -49,7 +55,10 @@ class Help extends Component {
 }
 
 Help.propTypes = {
-  helpData: PropTypes.object.isRequired
+  helpData: PropTypes.shape({
+    isVisible: PropTypes.bool.isRequired,
+    article: PropTypes.string.isRequired
+  }).isRequired
 };
 
 export default Help

@@ -22,7 +22,7 @@ window.helpData = helpData
 @observer
 class App extends Component {
   getChildContext() {
-    return { navigationData }
+    return { helpData, navigationData }
   }
 
   componentDidMount() {
@@ -55,6 +55,10 @@ App.childContextTypes = {
   navigationData: PropTypes.shape({
     back: PropTypes.func.isRequired,
     next: PropTypes.func.isRequired
+  }).isRequired,
+  helpData: PropTypes.shape({
+    article: PropTypes.string.isRequired,
+    isVisible: PropTypes.bool.isRequired
   }).isRequired
 };
 

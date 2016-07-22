@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
-import { Button, Form, PageHeader, Panel } from 'react-bootstrap'
+import { Button, Form, Glyphicon, PageHeader, Panel } from 'react-bootstrap'
 
 @observer
 class Slide extends Component {
@@ -8,6 +8,7 @@ class Slide extends Component {
     super(props, context)
     this.handleBack = this.handleBack.bind(this)
     this.handleNext = this.handleNext.bind(this)
+    this.handleHelp = this.handleHelp.bind(this)
   }
 
   handleBack() {
@@ -18,6 +19,11 @@ class Slide extends Component {
     this.context.navigationData.next()
   }
 
+  handleHelp() {
+    this.context.helpData.article = this.props.helpArticle || this.props.id
+    this.context.helpData.isVisible = true
+  }
+
   render() {
     return (
       <section className="slide" id={this.props.id}
@@ -26,6 +32,9 @@ class Slide extends Component {
           {this.props.header}
           {' '}
           <small>{this.props.headerSmall}</small>
+          <a onClick={this.handleHelp} title="Help" className="help">
+            <Glyphicon glyph="question-sign" />
+          </a>
         </PageHeader>
 
         <Panel>
@@ -57,6 +66,10 @@ Slide.contextTypes = {
   navigationData: PropTypes.shape({
     back: PropTypes.func.isRequired,
     next: PropTypes.func.isRequired
+  }).isRequired,
+  helpData: PropTypes.shape({
+    article: PropTypes.string.isRequired,
+    isVisible: PropTypes.bool.isRequired
   }).isRequired
 };
 
@@ -65,6 +78,7 @@ Slide.propTypes = {
   children: PropTypes.node.isRequired,
   header: PropTypes.string.isRequired,
   headerSmall: PropTypes.string,
+  helpArticle: PropTypes.string,
   showBack: PropTypes.bool,
   showNext: PropTypes.bool,
   backDisabled: PropTypes.bool,

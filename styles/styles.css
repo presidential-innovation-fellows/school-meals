@@ -109,3 +109,7 @@ main {
 .rc-steps .rc-steps-item.rc-steps-status-finish .rc-steps-tail > i {
   background-color: #0071bc;
 }
+
+.page-header .help {
+  float: right;
+}
