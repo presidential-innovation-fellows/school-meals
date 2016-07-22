@@ -211,7 +211,7 @@ class Summary extends Component {
                    </td>
                    <td>
                      <OverlayTrigger placement="top" overlay={
-                       <Tooltip>
+                       <Tooltip id="total-income">
                          This number takes all the information you provided calculates a total household income.
                        </Tooltip>
                      }>

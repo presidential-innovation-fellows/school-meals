@@ -6,25 +6,37 @@ export default class EmploymentIncome extends Component {
   render() {
     return (
       <Article>
-        <Topic>
+        <Topic title="Current income">
           <p>
             Current income is income earned or received in the current month, or in the month before the completion of this application.
           </p>
+        </Topic>
+        <Topic title="Salary">
           <p>
             A salary is an agreed-upon and regular compensation for employment that may be paid in any frequency, but is usually paid on a monthly basis, not on an hourly, daily or piece-work basis.
           </p>
+        </Topic>
+        <Topic title="Wages">
           <p>
             Wages are an amount of money that a worker is paid for work or services by the hour, day or week.
           </p>
+        </Topic>
+        <Topic title="Tips">
           <p>
             Tips are income earned by service professionals that are not paid by an employer, but by patrons or customers for services, such as gratuity at a restaurant.
           </p>
+        </Topic>
+        <Topic title="Commissions">
           <p>
             Commissions are an amount of money that a worker is paid based on the level of sales he or she made.
           </p>
+        </Topic>
+        <Topic title="Cash bonus">
           <p>
             A cash bonus is a lump sum of money awarded to an employee, either occasionally or periodically.
           </p>
+        </Topic>
+        <Topic title="Self-employment">
           <p>
             Income from self-employment should be reported as your current net income, equal to gross revenue (income) minus business expenses. Gross revenue (income) includes the total income from goods sold or services rendered by the business, or the value of all products sold.
           </p>

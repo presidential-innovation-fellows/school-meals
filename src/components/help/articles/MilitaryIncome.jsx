@@ -6,16 +6,22 @@ export default class MilitaryIncome extends Component {
   render() {
     return (
       <Article>
-        <Topic>
+        <Topic title="Current income">
           <p>
             Current income is income earned or received in the current month, or in the month before the completion of this application.
           </p>
+        </Topic>
+        <Topic title="Military basic pay">
           <p>
             Military basic pay is the base salary for a Military service member on active duty and counts for part of total military income. Basic Pay is electronically distributed on the 1st and 15th of every month, and should be reported as ‘twice monthly income’.
           </p>
+        </Topic>
+        <Topic title="Military benefits">
           <p>
             Military benefits are benefits paid directly to the service member, such as allowances for food and clothing, and housing allowances for households living off-base in the general commercial or private real estate market.
           </p>
+        </Topic>
+        <Topic title="Allowances">
           <p>
             Allowances for off-base housing, such as the Basic Allowance for Housing (BAH), is to help service members cover to the cost of housing in the private sector.
           </p>
