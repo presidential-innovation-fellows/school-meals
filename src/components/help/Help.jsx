@@ -12,7 +12,15 @@ import YoungChildren from './articles/YoungChildren'
 import OtherChildren from './articles/OtherChildren'
 import ChildIncome from './articles/ChildIncome'
 import Adults from './articles/Adults'
+import AdultIncomeOverview from './articles/AdultIncomeOverview'
 import MilitaryIncome from './articles/MilitaryIncome'
+import EmploymentIncome from './articles/EmploymentIncome'
+import PublicAssistanceIncome from './articles/PublicAssistanceIncome'
+import SpousalIncome from './articles/SpousalIncome'
+import UnemploymentIncome from './articles/UnemploymentIncome'
+import RetirementIncome from './articles/RetirementIncome'
+import OtherIncome from './articles/OtherIncome'
+import Signature from './articles/Signature'
 
 @observer
 class Help extends Component {
@@ -53,18 +61,27 @@ class Help extends Component {
           <div className="cd-panel-content">
             {(() => {
                switch (article) {
-                 case 'welcome':             return <Welcome />
-                 case 'before-you-begin':    return <BeforeYouBegin />
-                 case 'attestation':         return <Attestation />
-                 case 'assistance-programs': return <AssistancePrograms />
-                 case 'other-programs':      return <OtherPrograms />
-                 case 'other-students':      return <OtherStudents />
-                 case 'young-children':      return <YoungChildren />
-                 case 'other-children':      return <OtherChildren />
-                 case 'child-income':        return <ChildIncome />
-                 case 'adults':              return <Adults />
-                 case 'military-income':     return <MilitaryIncome />
-                 default:                    return '';
+                 case 'welcome':                 return <Welcome />
+                 case 'before-you-begin':        return <BeforeYouBegin />
+                 case 'attestation':             return <Attestation />
+                 case 'assistance-programs':     return <AssistancePrograms />
+                 case 'other-programs':          return <OtherPrograms />
+                 case 'other-students':          return <OtherStudents />
+                 case 'young-children':          return <YoungChildren />
+                 case 'other-children':          return <OtherChildren />
+                 case 'child-income':            return <ChildIncome />
+                 case 'adults':                  return <Adults />
+                 case 'adult-income-overview':   return <AdultIncomeOverview />
+                 case 'military-income':         return <MilitaryIncome />
+                 case 'employment-income':       return <EmploymentIncome />
+                 case 'publicAssistance-income': return <PublicAssistanceIncome />
+                 case 'spousal-income':          return <SpousalIncome />
+                 case 'unemployment-income':     return <UnemploymentIncome />
+                 case 'retirement-income':       return <RetirementIncome />
+                 case 'other-income':            return <OtherIncome />
+                 case 'ssn':                     return <Signature />
+                 case 'summary':                 return <Summary />
+                 default:                        return '';
                }
              })()}
           </div>

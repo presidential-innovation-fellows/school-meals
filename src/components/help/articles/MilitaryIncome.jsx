@@ -1,9 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import Article from '../Article'
 import Topic from '../Topic'
-import WhatIsGross from '../topics/WhatIsGross'
-import WhatIsNet from '../topics/WhatIsNet'
-import NotTheSame from '../topics/NotTheSame'
 
 export default class MilitaryIncome extends Component {
   render() {
@@ -23,9 +20,6 @@ export default class MilitaryIncome extends Component {
             Allowances for off-base housing, such as the Basic Allowance for Housing (BAH), is to help service members cover to the cost of housing in the private sector.
           </p>
         </Topic>
-
-        <WhatIsGross />
-        <WhatIsNet />
 
         <Topic title="We are in the military. Do we report our income differently?">
           <p>
@@ -56,8 +50,6 @@ export default class MilitaryIncome extends Component {
             Family Subsistence Supplemental Allowance (FSSA) is available to service members living in overseas locations that make less than 130 percent of the federal poverty line, and benefits equal the total dollars required to bring household income to that level.
           </p>
         </Topic>
-
-        <NotTheSame />
       </Article>
     )
   }

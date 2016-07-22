@@ -28,7 +28,7 @@ class AdultIncomeOverview extends Component {
 
     return(
       <Slide header={person.firstName} id={`income/${person.id}`}
-             nextDisabled={!this.isValid}>
+             helpArticle="adult-income-overview" nextDisabled={!this.isValid}>
         <p>
           Is <strong>{person.firstName}</strong> in the military?
         </p>

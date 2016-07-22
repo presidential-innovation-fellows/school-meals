@@ -7,7 +7,7 @@ class ThankYou extends Component {
   render() {
     return (
       <Slide header="Thank You" id="thank-you"
-             showBack={false} showNext={false} beginsSection>
+             showBack={false} showNext={false} showHelp={false} beginsSection>
         <p>Your application has been submitted.</p>
         <p>Thank you for applying for school meal benefits!</p>
       </Slide>
