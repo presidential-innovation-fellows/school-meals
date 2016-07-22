@@ -32,9 +32,11 @@ class Slide extends Component {
           {this.props.header}
           {' '}
           <small>{this.props.headerSmall}</small>
-          <a onClick={this.handleHelp} title="Help" className="help">
-            <Glyphicon glyph="question-sign" />
-          </a>
+          {this.props.showHelp &&
+            <a onClick={this.handleHelp} title="Help" className="help">
+              <Glyphicon glyph="question-sign" />
+            </a>
+          }
         </PageHeader>
 
         <Panel>
@@ -78,6 +80,7 @@ Slide.propTypes = {
   children: PropTypes.node.isRequired,
   header: PropTypes.string.isRequired,
   headerSmall: PropTypes.string,
+  showHelp: PropTypes.bool,
   helpArticle: PropTypes.string,
   showBack: PropTypes.bool,
   showNext: PropTypes.bool,
@@ -89,6 +92,7 @@ Slide.propTypes = {
 }
 
 Slide.defaultProps = {
+  showHelp: true,
   showBack: true,
   showNext: true,
   backDisabled: false,

@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
-import { organization } from '../../../config'
 import Article from '../Article'
 import Topic from '../Topic'
+import { organization } from '../../../config'
 
 export default class Welcome extends Component {
   render() {

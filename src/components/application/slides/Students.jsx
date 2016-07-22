@@ -11,7 +11,7 @@ class Students extends Component {
 
     return (
       <Slide header="Students" id="students" nextDisabled={!students.isValid}
-             beginsSection>
+             showHelp={false} beginsSection>
         <p>List the names of the students in your household that attend {organization.name} and are applying for school meal benefits.</p>
 
         <PersonCollection

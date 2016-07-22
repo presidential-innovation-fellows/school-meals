@@ -1,7 +1,8 @@
 import React, { PropTypes } from 'react'
+import { schoolYear } from '../../helpers'
 
 const SchoolYear = (props) => {
-  return <span>{props.startYear}–{props.startYear + 1}</span>
+  return <span>{schoolYear(props.startYear)}</span>
 }
 
 SchoolYear.propTypes = {

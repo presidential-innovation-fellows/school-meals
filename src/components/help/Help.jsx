@@ -3,6 +3,16 @@ import { observer } from 'mobx-react'
 import classNames from 'classnames'
 
 import Welcome from './articles/Welcome'
+import BeforeYouBegin from './articles/BeforeYouBegin'
+import Attestation from './articles/Attestation'
+import AssistancePrograms from './articles/AssistancePrograms'
+import OtherPrograms from './articles/OtherPrograms'
+import OtherStudents from './articles/OtherStudents'
+import YoungChildren from './articles/YoungChildren'
+import OtherChildren from './articles/OtherChildren'
+import ChildIncome from './articles/ChildIncome'
+import Adults from './articles/Adults'
+import MilitaryIncome from './articles/MilitaryIncome'
 
 @observer
 class Help extends Component {
@@ -43,8 +53,18 @@ class Help extends Component {
           <div className="cd-panel-content">
             {(() => {
                switch (article) {
-                 case 'welcome': return <Welcome />
-                 default: return '';
+                 case 'welcome':             return <Welcome />
+                 case 'before-you-begin':    return <BeforeYouBegin />
+                 case 'attestation':         return <Attestation />
+                 case 'assistance-programs': return <AssistancePrograms />
+                 case 'other-programs':      return <OtherPrograms />
+                 case 'other-students':      return <OtherStudents />
+                 case 'young-children':      return <YoungChildren />
+                 case 'other-children':      return <OtherChildren />
+                 case 'child-income':        return <ChildIncome />
+                 case 'adults':              return <Adults />
+                 case 'military-income':     return <MilitaryIncome />
+                 default:                    return '';
                }
              })()}
           </div>
