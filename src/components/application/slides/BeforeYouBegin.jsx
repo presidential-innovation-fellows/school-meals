@@ -1,7 +1,7 @@
 import React from 'react'
 import Slide from '../Slide'
 import SchoolYear from '../SchoolYear'
-import { assistancePrograms } from '../../../config'
+import { assistancePrograms, organization } from '../../../config'
 import { toSentenceSerial } from 'underscore.string'
 
 const BeforeYouBegin = () => {
@@ -10,7 +10,7 @@ const BeforeYouBegin = () => {
 
   return (
     <Slide header="Before you begin" id="before-you-begin">
-      <p>We only need one application for all the children in your household that attend [insert school district].  If you have any questions, then please use the [help icons] or search through the [FAQs].</p>
+      <p>We only need one application for all the children in your household that attend {organization.name}.  If you have any questions, then please use the [help icons] or search through the [FAQs].</p>
       <p>Eligibility for free or reduced price school meal benefits is based on one of three things</p>
 
       <ul>
@@ -20,7 +20,7 @@ const BeforeYouBegin = () => {
       </ul>
 
       <p>
-      If you are unsure of whether you will qualify, we encourage you to fill out an application anyway, and officials at [insert school district/name] will determine if you are eligible.
+      If you are unsure of whether you will qualify, we encourage you to fill out an application anyway, and officials at {organization.name} will determine if you are eligible.
       </p>
 
       <h3>Things you'll need</h3>

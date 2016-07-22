@@ -38,7 +38,7 @@ class Slide extends Component {
                        disabled={this.props.backDisabled}>
                  {this.props.backText}
                </Button>}
-               {' '}
+               {this.props.showBack && this.props.showNext && ' '}
                {this.props.showNext &&
                 <Button onClick={this.handleNext}
                         disabled={this.props.nextDisabled}
