@@ -42,14 +42,14 @@ class Navigation extends Component {
         <Navbar.Collapse>
           <Nav pullRight>
             <NavDropdown eventKey="1" title={map[lang]} id="nav-dropdown">
-              <MenuItem eventKey="1.1" lang="en" href="/?lang=en">I speak English</MenuItem>
-              <MenuItem eventKey="1.2" lang="zh" href="/?lang=zh">我说中文</MenuItem>
-              <MenuItem eventKey="1.3" lang="fr" href="/?lang=fr">Je parle français</MenuItem>
-              <MenuItem eventKey="1.4" lang="pa" href="/?lang=pa">ਇ ਸ੍ਪੇਆਕ ਪੰਜਾਬੀ</MenuItem>
-              <MenuItem eventKey="1.5" lang="ru" href="/?lang=ru">Я говoрю по-русски</MenuItem>
-              <MenuItem eventKey="1.6" lang="es" href="/?lang=es">Yo hablo español</MenuItem>
-              <MenuItem eventKey="1.7" lang="tl" href="/?lang=tl">Marunong po akong magsalita ng Tagalog</MenuItem>
-              <MenuItem eventKey="1.8" lang="vi" href="/?lang=vi">Tôi nói tiếng Việt</MenuItem>
+              <MenuItem eventKey="1.1" lang="en" href="./?lang=en">I speak English</MenuItem>
+              <MenuItem eventKey="1.2" lang="zh" href="./?lang=zh">我说中文</MenuItem>
+              <MenuItem eventKey="1.3" lang="fr" href="./?lang=fr">Je parle français</MenuItem>
+              <MenuItem eventKey="1.4" lang="pa" href="./?lang=pa">ਇ ਸ੍ਪੇਆਕ ਪੰਜਾਬੀ</MenuItem>
+              <MenuItem eventKey="1.5" lang="ru" href="./?lang=ru">Я говoрю по-русски</MenuItem>
+              <MenuItem eventKey="1.6" lang="es" href="./?lang=es">Yo hablo español</MenuItem>
+              <MenuItem eventKey="1.7" lang="tl" href="./?lang=tl">Marunong po akong magsalita ng Tagalog</MenuItem>
+              <MenuItem eventKey="1.8" lang="vi" href="./?lang=vi">Tôi nói tiếng Việt</MenuItem>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
