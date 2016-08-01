@@ -35,7 +35,7 @@ class Navigation extends Component {
       <Navbar fixedTop>
         <Navbar.Header>
           <Navbar.Brand>
-            School Meals
+            USDA National School Lunch and School Breakfast Programs
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>

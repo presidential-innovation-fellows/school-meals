@@ -30,7 +30,7 @@ class AssistancePrograms extends Component {
           This includes grandparents or other extended family members that are living with you. It also includes people that are not currently living with you, but are only away on a temporary basis, like kids that are away at college. It includes people regardless of age or whether they earn or receive income.
           <br />
           <br />
-          If you need more detailed information, see the ‘WHO SHOULD I INCLUDE IN MY HOUSEHOLD?’ question in the FAQs.
+          If you need more detailed information, see the ‘WHO SHOULD I INCLUDE IN MY HOUSEHOLD?’ question in the help section.
         </Well>
 
         <p>Does anyone in your household (including you) currently participate in {assistanceProgramList}?</p>

@@ -29,7 +29,7 @@ export default class Household extends Component {
           <li>renters</li>
           <li>boarders</li>
           <li>children who do not live with you (such as children that live permanently with other relatives or friends)</li>
-          <li>children for whom you do not have custody and therefore do not live with you (if you have joint custody, see the FAQ: WHAT IF I SHARE CUSTODY OF MY CHILD?</li>
+          <li>children for whom you do not have custody and therefore do not live with you (if you have joint custody, see the help question: WHAT IF I SHARE CUSTODY OF MY CHILD?</li>
         </ul>
       </Topic>
           )

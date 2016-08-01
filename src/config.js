@@ -1,22 +1,21 @@
 export const organization = {
-  name: 'Serra High School',
+  name: 'Baltimore School District',
   contact: {
-    address: '555 Main St., San Diego, CA 92124',
-    phone: '888-555-1212',
-    email: 'school@district.edu'
+    address: '200 E. North Avenue, Baltimore, MD 21202',
+    phone: '443-984-2000',
+    email: 'nutrition@bcps.k12.md.us'
   },
   paperApplication: {
-    url: 'http://www.fns.usda.gov/school-meals/applying-free-and-reduced-price-school-meals',
-    address: '555 Main St., San Diego, CA 92124',
-    phone: '888-555-1212',
-    email: 'school@district.edu'
+    url: 'http://www.baltimorecityschools.org/Page/24473',
+    address: '200 E. North Avenue, Baltimore, MD 21202',
+    phone: '443-984-2000',
+    email: 'nutrition@bcps.k12.md.us'
   }
 }
 
 export const assistancePrograms = ['CalFresh',
                                    'State TANF',
-                                   'FDPIR',
-                                   'WepploCare']
+                                   'FDPIR']
 
 export const localPrograms = {
   homelessness: {

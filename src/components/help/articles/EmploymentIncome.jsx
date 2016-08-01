@@ -46,7 +46,7 @@ export default class EmploymentIncome extends Component {
             <li>Net income for self-employed farmers is figured by subtracting the farmer’s operating expenses from the gross revenue (income). Gross income includes money received from the rental of farm land, buildings, or equipment to others; and incidental receipts from the sale of items such as wood, sand, or gravel. Operating expenses include cost of feed, fertilizer, seed, and other farming supplies; cash wages paid to farmhands; depreciation charges; cash rent; interest on farm mortgages; farm building repairs; and farm taxes;</li>
           </ul>
           <p>
-            If your current net income is not your usual income, you may use last year’s income as a basis to report net income, or refer to the question ‘WHAT IF MY INCOME IS NOT ALWAYS THE SAME?’ in the HELP.  If you have income from both wages and self-employment, see the FAQ question ‘WHAT IF I HAVE INCOME FROM BOTH WAGES AND SELF-EMPLOYMENT?’ for more information.
+            If your current net income is not your usual income, you may use last year’s income as a basis to report net income, or refer to the question ‘WHAT IF MY INCOME IS NOT ALWAYS THE SAME?’ in the HELP.  If you have income from both wages and self-employment, see the help question ‘WHAT IF I HAVE INCOME FROM BOTH WAGES AND SELF-EMPLOYMENT?’ for more information.
           </p>
         </Topic>
 
