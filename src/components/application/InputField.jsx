@@ -44,6 +44,7 @@ class InputField extends Component {
             name={input.name}
             value={input.object[input.name]}
             placeholder={input.placeholder || input.label}
+            disabled={input.disabled}
             onChange={this.handleChange}
         />
         <FormControl.Feedback />
@@ -61,11 +62,13 @@ InputField.propTypes = {
   sanitize: PropTypes.func,
   placeholder: PropTypes.string,
   help: PropTypes.string,
-  type: PropTypes.string
+  type: PropTypes.string,
+  disabled: PropTypes.bool
 }
 
 InputField.defaultProps = {
-  type: 'text'
+  type: 'text',
+  disabled: false
 }
 
 export default InputField

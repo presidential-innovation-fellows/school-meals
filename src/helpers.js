@@ -18,7 +18,7 @@ export function formatDate(date) {
     mm = '0' + mm
   }
 
-  return `${yyyy}-${mm}-${dd}`
+  return `${mm}/${dd}/${yyyy}`
 }
 
 export function informalName(person) {

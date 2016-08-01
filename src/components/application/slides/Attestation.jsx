@@ -43,10 +43,10 @@ class Attestation extends Component {
         />
 
         <InputField
-            type="date"
             name="date"
             label="Today's date *"
             object={attestation}
+            disabled
         />
       </Slide>
     )
