@@ -17,32 +17,19 @@ class Welcome extends React.Component {
           you are ready to apply, click the ‘Get Started’ button below to begin.
         </p>
         <p>
-          If you wish to apply using the paper application, you can print it
-          from <a href={organization.paperApplication.url}>here</a> or contact
-          the school to request an application. Then return the completed
-          application to:
-          <br />
-          <br />
-          {organization.name}
-          <br />
-          {organization.paperApplication.address}
-          <br />
-          {organization.paperApplication.phone}
-          <br />
-          {organization.paperApplication.email}
+          If you would like to apply using the paper application, you can print
+          it from <a href={organization.paperApplication.url}>here</a> or
+          contact {organization.name} (
+          {organization.paperApplication.phone}{' / '}
+          {organization.paperApplication.email}{' / '}
+          {organization.paperApplication.address}).
         </p>
         <p>
-          If you have any questions about the program or how to apply, contact
-          the school at:
-          <br />
-          <br />
-          {organization.name}
-          <br />
-          {organization.contact.address}
-          <br />
-          {organization.contact.phone}
-          <br />
-          {organization.contact.email}
+          If you have any questions about the program or how to apply,
+          contact {organization.name} (
+          {organization.contact.phone}{' / '}
+          {organization.contact.email}{' / '}
+          {organization.contact.address}).
         </p>
       </Slide>
     )
