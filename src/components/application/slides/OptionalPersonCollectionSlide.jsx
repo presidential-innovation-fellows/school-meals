@@ -31,9 +31,9 @@ class OptionalPersonCollectionSlide extends Component {
 OptionalPersonCollectionSlide.propTypes = {
   id: PropTypes.string.isRequired,
   collection: PropTypes.object.isRequired,
-  header: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  labelPlural: PropTypes.string.isRequired
+  labelPlural: PropTypes.string.isRequired,
+  header: PropTypes.string
 }
 
 export default OptionalPersonCollectionSlide

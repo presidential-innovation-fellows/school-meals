@@ -14,7 +14,6 @@ class OtherChildren extends Component {
   render() {
     return (
       <OptionalPersonCollectionSlide
-          header="Other Children"
           label="child"
           labelPlural="other children"
           id="other-children"

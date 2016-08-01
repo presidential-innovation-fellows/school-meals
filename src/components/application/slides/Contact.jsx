@@ -10,7 +10,7 @@ class Contact extends Component {
 
     return (
       <Slide header="Contact Info" id="contact" showHelp={false} beginsSection>
-        <p>OPTIONAL—please enter your contact information so that we can reach you in case there are any issues with your application.</p>
+        <p>Please enter your contact information so that we can reach you in case there are any issues with your application.</p>
 
         <InputField
             name="phone"
@@ -28,7 +28,7 @@ class Contact extends Component {
 
         <InputField
             name="address1"
-            label="Address"
+            label="Address (if available)"
             object={contact}
         />
 

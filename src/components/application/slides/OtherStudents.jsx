@@ -8,7 +8,6 @@ class OtherStudents extends Component {
   render() {
     return (
       <OptionalPersonCollectionSlide
-          header="Other Students"
           label="student"
           labelPlural="other students"
           id="other-students"

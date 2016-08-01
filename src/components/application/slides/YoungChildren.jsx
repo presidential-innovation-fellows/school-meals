@@ -14,7 +14,6 @@ class YoungChildren extends Component {
   render() {
     return (
       <OptionalPersonCollectionSlide
-          header="Young Children"
           label="young child"
           labelPlural="young children"
           id="young-children"

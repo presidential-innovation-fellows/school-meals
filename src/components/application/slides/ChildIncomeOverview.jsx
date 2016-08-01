@@ -16,8 +16,7 @@ class ChildIncomeOverview extends Component {
     const { allChildren } = this.props
 
     return(
-      <Slide header="Child Income" nextDisabled={!this.isValid}
-             id="child-income">
+      <Slide nextDisabled={!this.isValid} id="child-income">
 
         <p>Income earned or received by all household members, including the children you have entered so far, is included when determining eligibility for benefits. The next few questions are about your {allChildren.length === 1 ? 'child\'s' : 'childrens\''} income.</p>
         <p>Some common sources of income for children are:</p>

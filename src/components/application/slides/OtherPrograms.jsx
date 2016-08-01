@@ -34,12 +34,11 @@ class OtherPrograms extends Component {
     const oneNonFosterStudent = this.studentsExceptFoster.length === 1
 
     return (
-      <Slide header="Other Programs" nextDisabled={!this.isValid}
-             id="other-programs">
+      <Slide nextDisabled={!this.isValid} id="other-programs">
 
         <p>No problem! There are other ways to qualify.</p>
 
-        <p>If <strong>{students.informalList}</strong> {oneStudent ? 'is a foster child' : 'are forster children'} or qualify as homeless, migrant, or runaway, then they may be eligible for school meal benefits.</p>
+        <p>If <strong>{students.informalList}</strong> {oneStudent ? 'is a foster child' : 'are foster children'} or qualify as homeless, migrant, or runaway, then they may be eligible for school meal benefits.</p>
 
         <OtherProgramsProgram students={students.items} attribute="isFoster">
           {oneStudent ? <span>Is <strong>{students.first.firstName}</strong></span> : 'Are any students'} living with you under a formal (court-ordered) foster care arrangement?

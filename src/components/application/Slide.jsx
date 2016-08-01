@@ -30,7 +30,7 @@ class Slide extends Component {
                data-begins-section={this.props.beginsSection}>
         <PageHeader>
           {this.props.header}
-          {' '}
+          {!!this.props.header && !!this.props.headerSmall && ' '}
           <small>{this.props.headerSmall}</small>
           {this.props.showHelp &&
             <a onClick={this.handleHelp} title="Help" className="help">
@@ -78,7 +78,7 @@ Slide.contextTypes = {
 Slide.propTypes = {
   id: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
-  header: PropTypes.string.isRequired,
+  header: PropTypes.string,
   headerSmall: PropTypes.string,
   showHelp: PropTypes.bool,
   helpArticle: PropTypes.string,

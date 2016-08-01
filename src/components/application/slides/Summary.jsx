@@ -99,7 +99,7 @@ class Summary extends Component {
     return (
       <Slide header="Summary" nextText="Submit" nextDisabled={!this.isValid}
              id="summary">
-        <p>This is a summary of the information you have provided in your application for school meal benefits. Please review the information and confirm that everything is correct.</p>
+        <p>Awesome, you finished! Here is a summary of the information you provided in the application. We encourage you to save or print this screen for your records. If everything looks good, click the "Submit" button at the bottom of the page.</p>
 
         {!showHousehold &&
          <div>
@@ -268,7 +268,7 @@ class Summary extends Component {
 
         <p>
           <Checkbox name="certifiedCorrect" object={applicationData} inline>
-            I certify the above information is true and correct.
+            I certify that {this.totalHouseholdMembers} people are in my household and that our household income is ${numberFormat(this.totalMonthlyHouseholdIncome)} per month.
           </Checkbox>
         </p>
       </Slide>
