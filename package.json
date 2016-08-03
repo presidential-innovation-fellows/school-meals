@@ -41,6 +41,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
+    "babel-polyfill": "^6.9.1",
     "classnames": "^2.2.5",
     "mobx": "^2.2.2",
     "mobx-react": "^3.3.1",
