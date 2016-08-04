@@ -11,16 +11,16 @@ export default class OtherPrograms extends Component {
       <Article>
         <Topic>
           <p>
-            Foster children are eligible for free school meals. The foster status only applies to children who are formally placed by the State welfare agency or court in a caretaker household.
-          </p>
-          <p>
-            Even if your household is not eligible for free or reduced price meal benefits based on income, your foster child(ren) are still eligible for benefits
+            Even if your household is not eligible for free or reduced price meal benefits based on income, your foster child(ren) are still eligible for benefits. The foster status only applies to children who are formally placed by the State welfare agency or court in a caretaker household.
           </p>
         </Topic>
 
         <Topic title="What if my household does not qualify for free or reduced price meal benefits based on income, but I have a foster child, or a child who meets the definition for homeless, migrant or runaway?">
           <p>
             Children who are foster, or meet the definition of homeless, migrant, or runaway are still eligible for benefits regardless of household income.
+          </p>
+          <p>
+            Wondering if your child qualifies as homeless, migrant or runaway? See "HOW DO I KNOW IF MY CHILDREN QUALIFY AS HOMELESS, MIGRANT, OR RUNAWAY?"
           </p>
         </Topic>
 

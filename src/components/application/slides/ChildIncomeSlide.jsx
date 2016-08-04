@@ -29,7 +29,7 @@ class ChildIncomeSlide extends Component {
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="socialSecurity">
-          <a>Social Security from a disability (SSDI) or Social Security survivor benefits</a>
+          Social Security from a disability (SSDI) or Social Security survivor benefits
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="friendsFamily">
