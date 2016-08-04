@@ -26,10 +26,6 @@ export default class Welcome extends Component {
           </p>
         </Topic>
 
-        <Topic title="What if I have questions about the application or the school meal programs?">
-          <p>If you have any questions about the program or how to apply, contact {organization.name} ({organization.contact.phone} / {organization.contact.email} / {organization.contact.address}).</p>
-        </Topic>
-
         <Topic title="What information will I need to fill out the application?">
           <p>You may not need all this information, but if you have it handy, it will make the application process faster.</p>
           <ul>
