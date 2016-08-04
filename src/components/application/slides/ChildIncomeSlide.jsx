@@ -22,6 +22,8 @@ class ChildIncomeSlide extends Component {
 
         <p>Does <strong>{person.firstName}</strong> have income from any of the following sources?</p>
 
+        <p>Income reported here should be the child’s current, <em>gross</em> income.</p>
+
         <Well>Gross income means all money earned or received before deductions, such as income taxes, social security taxes, and insurance premiums. You should not report net income, which is the amount of money received in a pay check. Net income is total (or gross) income, minus taxes and deductions, and is commonly referred to as “take home pay”.</Well>
 
         <IncomeSource incomeSources={incomeSources} name="job">
