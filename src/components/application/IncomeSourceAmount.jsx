@@ -26,7 +26,7 @@ class IncomeSourceAmount extends Component {
     return (
       <InputGroup>
         <InputGroup.Addon>$</InputGroup.Addon>
-        <FormControl type="number"
+        <FormControl type="phone"
                      placeholder="Amount"
                      value={incomeSource[fieldName]}
                      onChange={this.handleChange} />
