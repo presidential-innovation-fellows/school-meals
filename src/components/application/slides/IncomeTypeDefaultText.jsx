@@ -10,7 +10,7 @@ class IncomeTypeDefaultText extends Component {
     return(
       <div>
         <p>
-          Does <strong>{person.firstName}</strong> have earning from the following sources?
+          Does <strong>{person.firstName}</strong> have earnings from the following sources?
         </p>
 
         <Well>
