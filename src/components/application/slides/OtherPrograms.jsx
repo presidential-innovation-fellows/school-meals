@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
 import OtherProgramsProgram from './OtherProgramsProgram'
 import { observer } from 'mobx-react'
+import { organization } from '../../../config'
 
 @observer
 class OtherPrograms extends Component {
@@ -32,6 +33,7 @@ class OtherPrograms extends Component {
     const { students } = this.props
     const oneStudent = students.length === 1
     const oneNonFosterStudent = this.studentsExceptFoster.length === 1
+    const contact = `${organization.name} (${organization.contact.phone} / ${organization.contact.email} / ${organization.contact.address})`
 
     return (
       <Slide nextDisabled={!this.isValid} id="other-programs">
@@ -46,19 +48,31 @@ class OtherPrograms extends Component {
 
         {this.studentsExceptFoster.length > 0 &&
           <OtherProgramsProgram students={this.studentsExceptFoster} attribute="isHomeless">
-            {oneNonFosterStudent ? <span>Does <strong>{this.studentsExceptFoster[0].firstName}</strong></span> : 'Do any students'} receive assistance under the McKinney-Vento Homeless Assistance Act, or does your household lack a permanent address, or stay together in a shelter, hotel, or other temporary housing arrangement?
+            {oneNonFosterStudent ? <span>Does <strong>{this.studentsExceptFoster[0].firstName}</strong></span> : 'Do any students'} receive assistance under the McKinney-Vento Homeless Assistance Act?
+            <br />
+            <small>
+              If not, but your household lacks a permanent address, or stays together in a shelter, hotel, or other temporary housing arrangement, contact {contact} to see whether they are eligible for benefits.
+            </small>
           </OtherProgramsProgram>
         }
 
         {this.studentsExceptFoster.length > 0 &&
           <OtherProgramsProgram students={this.studentsExceptFoster} attribute="isMigrant">
-            {oneNonFosterStudent ? <span>Does <strong>{this.studentsExceptFoster[0].firstName}</strong></span> : 'Do any students'} participate in the Migrant Education Program (MEP), or does your family relocate on a seasonal basis?
+            {oneNonFosterStudent ? <span>Does <strong>{this.studentsExceptFoster[0].firstName}</strong></span> : 'Do any students'} participate in the Migrant Education Program (MEP)?
+            <br />
+            <small>
+              If not, but your family relocates on a seasonal basis, contact {contact} to see whether they are eligible for benefits under this program.
+            </small>
           </OtherProgramsProgram>
         }
 
         {this.studentsExceptFoster.length > 0 &&
           <OtherProgramsProgram students={this.studentsExceptFoster} attribute="isRunaway">
-            {oneNonFosterStudent ? <span>Does <strong>{this.studentsExceptFoster[0].firstName}</strong></span> : 'Do any students'} participate in any programs under the Runaway and Homeless Youth Act, or have they chosen to leave their prior family or household?
+            {oneNonFosterStudent ? <span>Does <strong>{this.studentsExceptFoster[0].firstName}</strong></span> : 'Do any students'} participate in any programs under the Runaway and Homeless Youth Act?
+            <br />
+            <small>
+              If not, but they chose to leave their prior family or household, contact {contact} to see whether they are eligible for benefits under these programs.
+            </small>
           </OtherProgramsProgram>
         }
       </Slide>

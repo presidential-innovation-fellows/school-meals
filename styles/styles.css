@@ -47,8 +47,8 @@ main {
   display: block;
 }
 
-.control-label strong {
-  text-decoration: underline;
+.control-label small {
+  font-weight: 400;
 }
 
 .progress-container {

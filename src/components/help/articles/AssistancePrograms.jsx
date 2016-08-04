@@ -18,7 +18,7 @@ export default class AssistancePrograms extends Component {
 
         <Topic title={`My household participates in ${localPrograms.snap.name} and/or ${localPrograms.tanf.name}. Are my children eligible for free meals?`}>
           <p>
-            All children in households are eligible for free meals when at least one household member is receiving benefits from {localPrograms.snap.name}, the Food Distribution Program on Indian Reservations (FDPIR), or {localPrograms.tanf.name}. If you participate in other assistance programs, contact {organization.name} ({organization.contact.phone} / {organization.contact.email} / {organization.contact.address}) to see if they qualify for you for school meal benefits. You may qualify for free meals!
+            All children in households are eligible for free meals when at least one household member is receiving benefits from {localPrograms.snap.name}, the Food Distribution Program on Indian Reservations (FDPIR), or {localPrograms.tanf.name}. If you participate in other assistance programs, contact {organization.name} ({organization.contact.phone} / {organization.contact.email} / {organization.contact.address}) to see if they qualify for you for school meal benefits.
           </p>
         </Topic>
 
