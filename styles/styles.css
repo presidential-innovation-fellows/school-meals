@@ -44,7 +44,7 @@ main {
 }
 
 .slide.current {
-  display: initial;
+  display: block;
 }
 
 .control-label strong {
