@@ -1,5 +1,14 @@
+h1, h2, h3, h4, h5, h6 {
+  color: #0071bc;
+}
+
 a {
+  color: #0071bc;
   cursor: pointer;
+}
+
+a:hover {
+  color: #205493;
 }
 
 th {
@@ -18,12 +27,28 @@ main {
   margin-bottom: .5em;
 }
 
+.info-target {
+  border-bottom: 1px dotted #337ab7;
+  cursor: pointer;
+}
+
+.info-target .glyphicon {
+  color: #337ab7;
+  left: .2em;
+  top: .1em;
+  padding-right: .1em;
+}
+
 .slide {
   display: none;
 }
 
 .slide.current {
-  display: initial;
+  display: block;
+}
+
+.control-label strong {
+  text-decoration: underline;
 }
 
 .progress-container {
@@ -51,8 +76,21 @@ main {
 }
 
 @media (min-width: 768px) {
+  body {
+    background: url(../img/background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
   main {
     padding-top: 110px;
+  }
+
+  .page-header {
+    border-bottom: 0;
+    margin-bottom: 1em;
   }
 
   .progress-container {
@@ -92,4 +130,15 @@ main {
 }
 .rc-steps .rc-steps-item.rc-steps-status-finish .rc-steps-tail > i {
   background-color: #0071bc;
+}
+
+.page-header {
+  position: relative;
+  padding-right: 3em;
+}
+
+.page-header .help {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
