@@ -41,9 +41,9 @@ export default class EmploymentIncome extends Component {
             Income from self-employment should be reported as your current net income, equal to gross revenue (income) minus business expenses. Gross revenue (income) includes the total income from goods sold or services rendered by the business, or the value of all products sold.
           </p>
           <ul>
-            <li>Business expenses that you should subtract from your gross income include the cost of goods purchased; rent; utilities; depreciation charges; wages and salaries paid; and business taxes.</li>
-            <li>Business expenses that you cannot subtract from your gross income include the value of salable merchandise used by the proprietors of retail businesses; and personal, Federal, State, or local income taxes.</li>
-            <li>Net income for self-employed farmers is figured by subtracting the farmer’s operating expenses from the gross revenue (income). Gross income includes money received from the rental of farm land, buildings, or equipment to others; and incidental receipts from the sale of items such as wood, sand, or gravel. Operating expenses include cost of feed, fertilizer, seed, and other farming supplies; cash wages paid to farmhands; depreciation charges; cash rent; interest on farm mortgages; farm building repairs; and farm taxes;</li>
+            <li>Deductible business expenses include the cost of goods purchased; rent; utilities; depreciation charges; wages and salaries paid; and business taxes;</li>
+            <li>Non-deductible business expenses include the value of salable merchandise used by the proprietors of retail businesses; and personal, Federal, State, or local income taxes;</li>
+            <li>Net income for self-employed farmers is figured by subtracting the farmer’s operating expenses from the gross revenue (income). Gross income includes money received from the rental of farm land, buildings, or equipment to others; and incidental receipts from the sale of items such as wood, sand, or gravel. Operating expenses include cost of feed, fertilizer, seed, and other farming supplies; cash wages paid to farmhands; depreciation charges; cash rent; interest on farm mortgages; farm building repairs; and farm taxes.</li>
           </ul>
           <p>
             If your current net income is not your usual income, you may use last year’s income as a basis to report net income, or refer to the question ‘WHAT IF MY INCOME IS NOT ALWAYS THE SAME?’ in the HELP.  If you have income from both wages and self-employment, see the help question ‘WHAT IF I HAVE INCOME FROM BOTH WAGES AND SELF-EMPLOYMENT?’ for more information.
@@ -66,6 +66,9 @@ export default class EmploymentIncome extends Component {
         <Topic title="What if I am self-employed?">
           <p>
             If you are self-employed, report income from work as a net amount. This is calculated by subtracting the total operating expenses of your business from its gross receipts or revenue.
+          </p>
+          <p>
+            For more information, see ‘Self-employment’ in the HELP section.
           </p>
         </Topic>
 
