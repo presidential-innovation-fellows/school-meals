@@ -239,7 +239,8 @@ class AdultCollection extends PersonCollection {
             'unemployment': { has: null, amount: '', frequency: '' },
             'workersComp':  { has: null, amount: '', frequency: '' },
             'strike':       { has: null, amount: '', frequency: '' },
-            'ssdi':         { has: null, amount: '', frequency: '' }
+            'ssdi':         { has: null, amount: '', frequency: '' },
+            'veteran':      { has: null, amount: '', frequency: '' }
           }
         },
         retirement: {

@@ -26,6 +26,11 @@ export default class UnemploymentIncome extends Component {
             Social Security Disability Insurance (SSDI) are benefits paid to people who have worked long enough and paid Social Security taxes but who can’t work because they have a medical condition that is expected to last at least one year or result in death.
           </p>
         </Topic>
+        <Topic title="Veteran's benefits">
+          <p>
+            Benefits that are paid to veterans that have a service-connected disability and were not dishonorably discharged.
+          </p>
+        </Topic>
       </Article>
     )
   }

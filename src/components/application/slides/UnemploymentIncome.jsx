@@ -33,6 +33,10 @@ class UnemploymentIncome extends Component {
         <IncomeSource incomeSources={incomeSources} name="ssdi">
           Social Security Disability Insurance (SSDI)
         </IncomeSource>
+
+        <IncomeSource incomeSources={incomeSources} name="veteran">
+          Veteran's benefits
+        </IncomeSource>
       </IncomeType>
     )
   }
