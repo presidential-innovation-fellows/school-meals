@@ -23,7 +23,7 @@ export default class MilitaryIncome extends Component {
         </Topic>
         <Topic title="Allowances">
           <p>
-            Allowances for off-base housing, such as the Basic Allowance for Housing (BAH), is to help service members cover to the cost of housing in the private sector.
+            Allowances for off-base housing, such as the Basic Allowance for Housing (BAH), is to help service members cover the cost of housing in the private sector.
           </p>
         </Topic>
 
