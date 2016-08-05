@@ -64,7 +64,7 @@ class AdultIncomeOverview extends Component {
                       object={person.incomeTypes.spousal} />
 
         <p>
-          Does <strong>{person.firstName}</strong> have income from unemployment benefits, worker's compensation, strike benefits, or Social Security Disability Insurance (SSDI)?
+          Does <strong>{person.firstName}</strong> have income from unemployment benefits, Veteran's benefits, worker's compensation, strike benefits, or Social Security Disability Insurance (SSDI)?
         </p>
         <BooleanRadio name="isApplicable"
                       object={person.incomeTypes.unemployment} />
