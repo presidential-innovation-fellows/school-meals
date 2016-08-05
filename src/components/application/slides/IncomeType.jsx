@@ -7,9 +7,10 @@ import { incomeTypeIsValid } from '../../../helpers'
 @observer
 class IncomeType extends Component {
   render() {
-    const { person, name, label, showDefaultText } = this.props
+    const { person, name, label, showDefaultText, showMilitaryCaveat } = this.props
     const incomeType = person.incomeTypes[name]
     const incomeSources = incomeType.sources
+    const defaultTextProps = { person, showMilitaryCaveat }
 
     return(
       <Slide header={person.firstName}
@@ -17,7 +18,7 @@ class IncomeType extends Component {
              id={`income/${person.id}/${name}`}
              helpArticle={`${name}-income`}
              nextDisabled={!incomeTypeIsValid(incomeType)}>
-        {showDefaultText && <IncomeTypeDefaultText person={person} />}
+        {showDefaultText && <IncomeTypeDefaultText {...defaultTextProps} />}
         {this.props.children}
       </Slide>
     )
@@ -28,11 +29,13 @@ IncomeType.propTypes = {
   person: PropTypes.object.isRequired,
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
-  showDefaultText: PropTypes.bool
+  showDefaultText: PropTypes.bool,
+  showMilitaryCaveat: PropTypes.bool
 }
 
 IncomeType.defaultProps = {
-  showDefaultText: true
+  showDefaultText: true,
+  showMilitaryCaveat: false
 }
 
 export default IncomeType

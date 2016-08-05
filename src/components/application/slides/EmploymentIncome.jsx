@@ -12,6 +12,7 @@ class EmploymentIncome extends Component {
     const incomeTypeProps = {
       name: "employment",
       label: "Employment Income",
+      showMilitaryCaveat: person.incomeTypes.military.isApplicable,
       person
     }
 

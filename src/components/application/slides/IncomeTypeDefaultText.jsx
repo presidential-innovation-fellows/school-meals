@@ -5,12 +5,12 @@ import { Well } from 'react-bootstrap'
 @observer
 class IncomeTypeDefaultText extends Component {
   render() {
-    const { person } = this.props
+    const { person, showMilitaryCaveat } = this.props
 
     return(
       <div>
         <p>
-          Does <strong>{person.firstName}</strong> have earnings from the following sources?
+          Does <strong>{person.firstName}</strong> have earnings from the following sources{!!showMilitaryCaveat && ', not including earnings from the military that were already reported'}?
         </p>
 
         <Well>
@@ -22,7 +22,12 @@ class IncomeTypeDefaultText extends Component {
 }
 
 IncomeTypeDefaultText.propTypes = {
-  person: PropTypes.object.isRequired
+  person: PropTypes.object.isRequired,
+  showMilitaryCaveat: PropTypes.bool
+}
+
+IncomeTypeDefaultText.defaultProps = {
+  showMilitaryCaveat: false
 }
 
 export default IncomeTypeDefaultText
