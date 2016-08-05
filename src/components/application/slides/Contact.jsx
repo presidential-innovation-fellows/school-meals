@@ -14,14 +14,14 @@ class Contact extends Component {
 
         <InputField
             name="phone"
-            label="Phone number"
+            label="Phone number (optional)"
             type="tel"
             object={contact}
         />
 
         <InputField
             name="email"
-            label="Email"
+            label="Email (optional)"
             type="email"
             object={contact}
         />
