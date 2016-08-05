@@ -31,6 +31,7 @@ class Signature extends Component {
 
     return (
       <Slide id="ssn" nextDisabled={!this.isValid}>
+        <p>Great, you are almost done!</p>
         <p>Please provide the last four digits of the Social Security number for the person that signed at the beginning of the application <strong>({attestor.firstName} {attestor.lastName})</strong>. If that person does not have a Social Security number, please check the box below labeled "No SSN".</p>
 
         <InputGroup>
@@ -48,6 +49,12 @@ class Signature extends Component {
         <Checkbox object={signature} name="hasSsn" invert>
           No SSN
         </Checkbox>
+
+        <p>
+          <small>
+            Note: United States citizenship or immigration status is not a condition of eligibility for free and reduced price benefits. The non-cash benefits received through the school meal programs are not subject to public charge consideration. In other words, you will not be deported, denied entry to the country, or denied permanent status because you apply for or receive school meal benefits.
+          </small>
+        </p>
 
       </Slide>
     )
