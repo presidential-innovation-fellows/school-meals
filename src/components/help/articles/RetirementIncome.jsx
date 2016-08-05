@@ -8,17 +8,17 @@ export default class RetirementIncome extends Component {
       <Article>
         <Topic title="Social Security">
           <p>
-            Social Security retirement benefits are monthly payments to people (or family members of people) who are age 62 or older who have worked and paid taxes into the Social Security system.
+            Social Security retirement benefits are payments to people (or family members of people) who are age 62 or older who have worked and paid taxes into the Social Security system.
           </p>
         </Topic>
-        <Topic title="Black Lung">
+        <Topic title="Black Lung Benefits">
           <p>
-            Black Lung benefits provide monthly payments and medical treatment for people that became disabled from black lung disease from working in or around the nation’s coal mines.
+            Black Lung benefits provide payments and medical treatment for people that became disabled from black lung disease from working in or around the nation’s coal mines.
           </p>
         </Topic>
-        <Topic title="Railroad">
+        <Topic title="Railroad Retirement">
           <p>
-            Railroad retirement benefits are monthly payments to qualified railroad employees that are retired or disabled.
+            Railroad retirement benefits are payments to qualified railroad employees that are retired or disabled.
           </p>
         </Topic>
         <Topic title="Pension">
