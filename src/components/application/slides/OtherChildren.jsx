@@ -3,7 +3,7 @@ import Slide from '../Slide'
 import BooleanRadio from '../BooleanRadio'
 import PersonCollection from '../PersonCollection'
 import { ControlLabel } from 'react-bootstrap'
-import { observable } from 'mobx'
+import { computed, observable } from 'mobx'
 import { observer } from 'mobx-react'
 import { organization } from '../../../config'
 import { informalList } from '../../../helpers'
@@ -14,6 +14,20 @@ class OtherChildren extends Component {
     otherStudents: null,
     youngChildren: null,
     otherChildren: null
+  }
+
+  @computed get isValid() {
+    let anyNull = false
+
+    for (let category in this.categories) {
+      let value = this.categories[category]
+
+      if (value == null) {
+        anyNull = true
+      }
+    }
+
+    return this.props.otherChildren.isValid && !anyNull
   }
 
   constructor (props) {
@@ -27,7 +41,6 @@ class OtherChildren extends Component {
     let anyNull = false
     let anyTrue = false
 
-    // if any categories are true, set the store flag to true
     for (let category in this.categories) {
       let value = this.categories[category]
 
@@ -40,14 +53,25 @@ class OtherChildren extends Component {
       }
     }
 
-    this.props.otherChildren.hasAny = anyNull ? null : (anyTrue ? true : false)
+    this.props.otherChildren.hasAny = anyTrue ? true : (anyNull ? null : false)
+
+    // clear out any children that have been created if "no" to all questions
+    if (this.props.otherChildren.hasAny === false) {
+      this.props.otherChildren.empty()
+    }
+
+    // add a default child if "yes" to any questions
+    if (this.props.otherChildren.hasAny === true &&
+        this.props.otherChildren.length === 0) {
+      this.props.otherChildren.add()
+    }
   }
 
   render() {
     const { alreadyNamed, otherChildren } = this.props
 
     return (
-      <Slide nextDisabled={!otherChildren.isValid} id="other-children">
+      <Slide nextDisabled={!this.isValid} id="other-children">
 
         <p>Okay, it looks like we will need more information about your household and income in order to determine if you are eligible for benefits.</p>
 

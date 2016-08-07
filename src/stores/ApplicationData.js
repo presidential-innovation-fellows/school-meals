@@ -182,6 +182,10 @@ class PersonCollection {
   @action remove(item) {
     this.items.remove(item)
   }
+
+  @action empty() {
+    this.items = []
+  }
 }
 
 class AdultCollection extends PersonCollection {
