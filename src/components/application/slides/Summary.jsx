@@ -17,18 +17,12 @@ class Summary extends Component {
   }
 
   get allOtherChildren() {
-    return [this.props.applicationData.otherStudents,
-            this.props.applicationData.youngChildren,
-            this.props.applicationData.otherChildren]
-      .map(collection => collection.items.slice())
-      .reduce((a, b) => a.concat(b), [])
+    return this.props.applicationData.otherChildren
   }
 
   get allPeopleCollections() {
     return [
       this.props.applicationData.students,
-      this.props.applicationData.otherStudents,
-      this.props.applicationData.youngChildren,
       this.props.applicationData.otherChildren,
       this.props.applicationData.adults
     ]
@@ -153,7 +147,7 @@ class Summary extends Component {
                 )}
              </ul>
 
-             <SummaryLabelSmall id="household">
+             <SummaryLabelSmall id="other-children">
                Other Children
              </SummaryLabelSmall>
              <ul>

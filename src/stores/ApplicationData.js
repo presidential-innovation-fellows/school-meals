@@ -6,8 +6,6 @@ import { formatDate, informalList } from '../helpers'
 export default class ApplicationData {
   students = new StudentCollection()
   assistancePrograms = new AssistancePrograms()
-  otherStudents = new OptionalChildCollection()
-  youngChildren = new OptionalChildCollection()
   otherChildren = new OptionalChildCollection()
   adults = new AdultCollection()
 

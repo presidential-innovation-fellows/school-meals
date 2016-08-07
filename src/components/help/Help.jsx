@@ -7,8 +7,6 @@ import BeforeYouBegin from './articles/BeforeYouBegin'
 import Attestation from './articles/Attestation'
 import AssistancePrograms from './articles/AssistancePrograms'
 import OtherPrograms from './articles/OtherPrograms'
-import OtherStudents from './articles/OtherStudents'
-import YoungChildren from './articles/YoungChildren'
 import OtherChildren from './articles/OtherChildren'
 import ChildIncome from './articles/ChildIncome'
 import Adults from './articles/Adults'
@@ -69,8 +67,6 @@ class Help extends Component {
                  case 'attestation':             return <Attestation />
                  case 'assistance-programs':     return <AssistancePrograms />
                  case 'other-programs':          return <OtherPrograms />
-                 case 'other-students':          return <OtherStudents />
-                 case 'young-children':          return <YoungChildren />
                  case 'other-children':          return <OtherChildren />
                  case 'child-income':            return <ChildIncome />
                  case 'adults':                  return <Adults />

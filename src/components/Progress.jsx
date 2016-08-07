@@ -43,7 +43,7 @@ class Progress extends Component {
     result.push({ title: 'Programs', 'data-hash': 'assistance-programs' })
 
     if (this.showHousehold) {
-      result.push({ title: 'Other Children', 'data-hash': 'other-students' })
+      result.push({ title: 'Other Children', 'data-hash': 'other-children' })
       result.push({ title: 'Adults', 'data-hash': 'adults' })
     }
 

@@ -3,7 +3,7 @@ import Slide from '../Slide'
 import SchoolYear from '../SchoolYear'
 import { assistancePrograms, organization } from '../../../config'
 import { toSentenceSerial } from 'underscore.string'
-import { action, observable } from 'mobx'
+import { observable } from 'mobx'
 import { observer } from 'mobx-react'
 
 @observer
