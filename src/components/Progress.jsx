@@ -6,6 +6,11 @@ import { allStudentsAreFHMR } from '../helpers'
 
 @observer
 class Progress extends Component {
+  constructor (props) {
+    super(props)
+    this.oldPercent = 0
+  }
+
   componentDidMount() {
     // roll our own event delegation to capture step clicks
     document.addEventListener('click', function(e) {
@@ -47,9 +52,12 @@ class Progress extends Component {
     return result
   }
 
+  // never returns a value less than a value that's been previously returned
   get percent() {
     const { currentSlideIndex, slides } = this.props.navigationData
-    return Math.round(100 * currentSlideIndex / (slides.length - 1))
+    const newPercent = Math.round(100 * currentSlideIndex / (slides.length - 1))
+    this.oldPercent = Math.max(this.oldPercent, newPercent)
+    return this.oldPercent
   }
 
   render() {
