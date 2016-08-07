@@ -18,6 +18,7 @@ class AssistanceProgramList extends Component {
               name="caseNumber"
               label={program.name}
               object={program}
+              placeholder="Case number"
           />
         )}
       </div>
