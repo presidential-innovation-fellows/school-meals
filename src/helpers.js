@@ -37,6 +37,7 @@ export function informalList(people,
 export function incomeTypeIsValid(incomeType, mustNotBeNull = []) {
   switch(incomeType.isApplicable) {
     case true:
+      // Invalid if any of the non-nullable incomeType fields are null.
       if (mustNotBeNull.map(name => incomeType[name] == null)
                        .reduce((a, b) => a || b, false)) {
         return false
@@ -45,6 +46,14 @@ export function incomeTypeIsValid(incomeType, mustNotBeNull = []) {
       for (let name in incomeType.sources) {
         incomeSources.push(incomeType.sources[name])
       }
+
+      // Invalid if all are "No" for an applicable incomeType.
+      if (incomeSources
+        .map(incomeSource => incomeSource.has === false)
+        .reduce((a, b) => a && b, true)) {
+        return false
+      }
+
       return incomeSources
         .map(incomeSource => { return(
           incomeSource.has === false ||

@@ -5,7 +5,6 @@ import IncomeSource from '../IncomeSource'
 import BooleanRadio from '../BooleanRadio'
 import { observer } from 'mobx-react'
 import { ControlLabel } from 'react-bootstrap'
-import { incomeTypeIsValid } from '../../../helpers'
 import { organization } from '../../../config'
 
 @observer
