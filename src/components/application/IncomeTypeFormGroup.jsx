@@ -32,7 +32,7 @@ class IncomeTypeFormGroup extends Component {
   }
 
   render() {
-    const { boolAttribute, incomeTypeName, person } = this.props
+    const { boolAttribute, incomeDescription, incomeTypeName, person } = this.props
     const incomeType = person.incomeTypes[incomeTypeName]
 
     return (
@@ -43,9 +43,9 @@ class IncomeTypeFormGroup extends Component {
             <h4>Missing Income</h4>
             <p>
               You indicated that <strong>{person.firstName}</strong> receives
-              income of the following type, but you selected "No" for
+              {' ' + incomeDescription}, but you selected "No" for
               each related income source on a following page. Please
-              correct this answer or provide details on te following pages.
+              correct this answer or provide details on the following pages.
             </p>
           </Alert>
         }
@@ -60,11 +60,13 @@ IncomeTypeFormGroup.propTypes = {
   incomeTypeName: PropTypes.string.isRequired,
   person: PropTypes.object.isRequired,
   boolAttribute: PropTypes.string,
+  incomeDescription: PropTypes.string,
   validate: PropTypes.bool
 }
 
 IncomeTypeFormGroup.defaultProps = {
   boolAttribute: 'isApplicable',
+  incomeDescription: 'income of the following type',
   validate: true
 }
 

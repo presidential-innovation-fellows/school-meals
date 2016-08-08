@@ -2,12 +2,25 @@ import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
 import BooleanRadio from '../BooleanRadio'
 import IncomeSource from '../IncomeSource'
+import { computed } from 'mobx'
 import { observer } from 'mobx-react'
-import { ControlLabel, Well } from 'react-bootstrap'
+import { Alert, Button, ControlLabel, Well } from 'react-bootstrap'
 import { incomeTypeIsValid } from '../../../helpers'
 
 @observer
 class ChildIncomeSlide extends Component {
+  @computed get allSourcesFalse() {
+    const sources = this.props.person.incomeTypes.child.sources
+
+    for (let key in sources) {
+      if (sources[key].has !== false) {
+        return false
+      }
+    }
+
+    return true
+  }
+
   render() {
     const { person } = this.props
     const incomeType = person.incomeTypes.child
@@ -44,6 +57,18 @@ class ChildIncomeSlide extends Component {
         <IncomeSource incomeSources={incomeSources} name="other">
           Any other source of income
         </IncomeSource>
+
+        { this.allSourcesFalse &&
+          <Alert bsStyle="danger">
+            <h4>Missing Income</h4>
+            <p>
+              On a previous page, you indicated
+              that <strong>{person.firstName}</strong> receives income.
+              Please enter this income above or correct your previous answer.
+            </p>
+            <Button href={`#/child-income`}>Change previous answer</Button>
+          </Alert>
+        }
       </Slide>
     )
   }

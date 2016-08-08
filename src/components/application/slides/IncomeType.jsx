@@ -13,9 +13,7 @@ class IncomeType extends Component {
     const sources = person.incomeTypes[name].sources
 
     for (let key in sources) {
-      if (sources[key].has === false) {
-        continue
-      } else {
+      if (sources[key].has !== false) {
         return false
       }
     }
@@ -40,10 +38,10 @@ class IncomeType extends Component {
           <Alert bsStyle="danger">
             <h4>Missing Income</h4>
             <p>
-              On a previous page, you indicated that
-              <strong>{person.firstName}</strong> receives income from one of
-              the above sources. Please enter your income above or correct
-              your previous answer.
+              On a previous page, you indicated
+              that <strong>{person.firstName}</strong> receives income from
+              one of the above sources. Please enter this income above or
+              correct your previous answer.
             </p>
             <Button href={`#/income/${person.id}`}>Change previous answer</Button>
           </Alert>

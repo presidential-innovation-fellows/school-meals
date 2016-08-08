@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
-import BooleanRadio from '../BooleanRadio'
+import IncomeTypeFormGroup from '../IncomeTypeFormGroup'
 import { observer } from 'mobx-react'
 import { ControlLabel } from 'react-bootstrap'
 
@@ -29,11 +29,12 @@ class ChildIncomeOverview extends Component {
         <p>Do not include infrequent earnings, such as income from occasional baby-sitting or mowing lawns.</p>
 
         {allChildren.map(child =>
-          <div key={child.id}>
-            <p>Does <strong>{child.firstName}</strong> have income from any of these, or any other, sources?</p>
-            <BooleanRadio name="isApplicable" object={child.incomeTypes.child} />
-          </div>
-         )}
+          <IncomeTypeFormGroup person={child} incomeTypeName="child"
+                               key={child.id} incomeDescription="income">
+            Does <strong>{child.firstName}</strong> have
+            income from any of these, or any other, sources?
+          </IncomeTypeFormGroup>
+        )}
       </Slide>
     )
   }
