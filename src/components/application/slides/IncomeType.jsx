@@ -14,7 +14,6 @@ class IncomeType extends Component {
 
     return(
       <Slide header={person.firstName}
-             headerSmall={label}
              id={`income/${person.id}/${name}`}
              helpArticle={`${name}-income`}
              nextDisabled={!incomeTypeIsValid(incomeType)}>
