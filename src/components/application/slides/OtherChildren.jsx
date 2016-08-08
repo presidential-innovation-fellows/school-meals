@@ -71,7 +71,7 @@ class OtherChildren extends Component {
     const { alreadyNamed, otherChildren } = this.props
 
     return (
-      <Slide nextDisabled={!this.isValid} id="other-children">
+      <Slide nextDisabled={!this.isValid} id="other-children" beginsSection>
 
         <p>Okay, it looks like we will need more information about your household and income in order to determine if you are eligible for benefits.</p>
 
