@@ -16,7 +16,7 @@ th {
 }
 
 main {
-  padding-top: 90px;
+  padding-top: 140px;
 }
 
 #summary h4 {
@@ -54,7 +54,7 @@ main {
 .progress-container {
   background-color: white;
   border-bottom: 1px solid #ddd;
-  top: 50px;
+  top: 100px;
   padding: 20px 0 0;
   position: fixed;
   width: 100%;
@@ -95,6 +95,7 @@ main {
 
   .progress-container {
     padding: 23px 0 20px;
+    top: 50px;
   }
 }
 
