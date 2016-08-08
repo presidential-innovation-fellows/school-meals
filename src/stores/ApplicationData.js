@@ -121,6 +121,22 @@ class PersonCollection {
     return this.items.map(func)
   }
 
+  @computed get hasAnyIncome() {
+    for (let i = 0; i < this.items.length; i++) {
+      let person = this.items[i]
+
+      for (let type in person.incomeTypes) {
+        let sources = person.incomeTypes[type].sources
+
+        if (person.incomeTypes[type].isApplicable) {
+          return true
+        }
+      }
+    }
+
+    return false
+  }
+
   @computed get allApplicableIncomeSources() {
     let result = []
 

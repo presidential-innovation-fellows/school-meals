@@ -33,7 +33,7 @@ class AssistancePrograms extends Component {
           If you need more detailed information, see the ‘WHO SHOULD I INCLUDE IN MY HOUSEHOLD?’ question in the help section.
         </Well>
 
-        <p>Does anyone in your household (including you) currently participate in any of the following programs?</p>
+        <p>Does anyone in your household (including you) currently participate in any of the above programs?</p>
 
         <BooleanRadio name="hasAny" object={assistancePrograms} />
 

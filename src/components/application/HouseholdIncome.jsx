@@ -1,19 +1,31 @@
 import React, { Component } from 'react'
+import { computed } from 'mobx'
 import { observer } from 'mobx-react'
 import OtherChildren from './slides/OtherChildren'
 import ChildIncome from './slides/ChildIncome'
 import Adults from './slides/Adults'
-import GrossIncome from './slides/GrossIncome'
 import AdultIncome from './slides/AdultIncome'
 import Signature from './slides/Signature'
 
 @observer
 class HouseholdIncome extends Component {
-  get allChildren() {
+  get allChildCollections() {
     return [this.props.applicationData.students,
             this.props.applicationData.otherChildren]
-      .map(collection => collection.items.slice())
-      .reduce((a, b) => a.concat(b), [])
+  }
+
+  @computed get allChildren() {
+    let result = this.allChildCollections
+                     .map(collection => collection.items.slice())
+                     .reduce((a, b) => a.concat(b), [])
+    return result
+  }
+
+  @computed get anyChildIncome() {
+    let result = this.allChildCollections
+                     .map(collection => collection.hasAnyIncome)
+                     .reduce((a, b) => a || b, false)
+    return result
   }
 
   render() {
@@ -29,10 +41,11 @@ class HouseholdIncome extends Component {
         <OtherChildren otherChildren={otherChildren}
                        alreadyNamed={students} />
 
-        <ChildIncome allChildren={this.allChildren} />
+        <ChildIncome allChildren={this.allChildren}
+                     showGrossIncomeDefinition={this.anyChildIncome} />
         <Adults adults={adults} allChildren={this.allChildren} />
-        <GrossIncome />
-        <AdultIncome adults={adults} />
+        <AdultIncome adults={adults}
+                     showGrossIncomeDefinition={!this.anyChildIncome} />
         <Signature attestor={adults.first} signature={signature} />
       </div>
     )
