@@ -3,6 +3,7 @@ import Article from '../Article'
 import Topic from '../Topic'
 import { organization } from '../../../config'
 import SchoolYear from '../../application/SchoolYear'
+import ApplyLater from '../topics/ApplyLater'
 
 export default class BeforeYouBegin extends Component {
   render() {
@@ -20,11 +21,7 @@ export default class BeforeYouBegin extends Component {
           </p>
         </Topic>
 
-        <Topic title="If I don't qualify now, may I apply later?">
-          <p>
-            Yes, you may apply at any time during the school year.  For example, children with a parent or guardian who becomes unemployed may become eligible for free or reduced price meals if the household income drops below the income limit.
-          </p>
-        </Topic>
+        <ApplyLater />
       </Article>
     )
   }

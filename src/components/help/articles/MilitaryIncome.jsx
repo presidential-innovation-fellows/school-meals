@@ -1,6 +1,8 @@
 import React, { Component, PropTypes } from 'react'
 import Article from '../Article'
 import Topic from '../Topic'
+import NotTheSame from '../topics/NotTheSame'
+import ApplyLater from '../topics/ApplyLater'
 
 export default class MilitaryIncome extends Component {
   render() {
@@ -56,6 +58,9 @@ export default class MilitaryIncome extends Component {
             Family Subsistence Supplemental Allowance (FSSA) is available to service members living in overseas locations that make less than 130 percent of the federal poverty line, and benefits equal the total dollars required to bring household income to that level.
           </p>
         </Topic>
+
+        <NotTheSame />
+        <ApplyLater />
       </Article>
     )
   }

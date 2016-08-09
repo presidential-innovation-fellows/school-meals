@@ -1,8 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import Topic from '../Topic'
-import { organization } from '../../../config'
 
-export default class NoIncome extends Component {
+export default class NotTheSame extends Component {
   render() {
     return (
         <Topic title="What if my income is not always the same?">
