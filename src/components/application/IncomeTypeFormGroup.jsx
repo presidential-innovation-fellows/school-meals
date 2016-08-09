@@ -3,6 +3,7 @@ import { computed } from 'mobx'
 import { observer } from 'mobx-react'
 import BooleanRadio from './BooleanRadio'
 import { Alert, ControlLabel, FormGroup } from 'react-bootstrap'
+import { informalName } from '../../helpers'
 
 @observer
 class IncomeTypeFormGroup extends Component {
@@ -42,7 +43,8 @@ class IncomeTypeFormGroup extends Component {
           <Alert bsStyle="danger">
             <h4>Missing Income</h4>
             <p>
-              You indicated that <strong>{person.firstName}</strong> receives
+              You indicated
+              that <strong>{informalName(person)}</strong> receives
               {' ' + incomeDescription}, but you selected "No" for
               each related income source on a following page. Please
               correct this answer or provide details on the following pages.

@@ -13,7 +13,8 @@ class AssistancePrograms extends Component {
   render() {
     const {
       students,
-      assistancePrograms
+      assistancePrograms,
+      allPeopleCollections
     } = this.props
 
     const assistanceProgramList =
@@ -22,7 +23,7 @@ class AssistancePrograms extends Component {
     return(
       <Slide id="assistance-programs"
              nextDisabled={!assistancePrograms.isValid} beginsSection>
-        <p>If anyone in your household participates in {assistanceProgramList}, then <strong>{students.informalList}</strong> {students.length === 1 ? 'is' : 'are'} eligible for free school meals.</p>
+        <p>If anyone in your household participates in {assistanceProgramList}, then <strong>{students.informalList(allPeopleCollections)}</strong> {students.length === 1 ? 'is' : 'are'} eligible for free school meals.</p>
         <Well>
           A household is defined as a group of people, related or unrelated, that usually live together and share income and expenses.
           <br />

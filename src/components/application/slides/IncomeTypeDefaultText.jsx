@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
 import { Well } from 'react-bootstrap'
+import { informalName } from '../../../helpers'
 
 @observer
 class IncomeTypeDefaultText extends Component {
@@ -10,7 +11,7 @@ class IncomeTypeDefaultText extends Component {
     return(
       <div>
         <p>
-          Does <strong>{person.firstName}</strong> have earnings from the following sources{!!showMilitaryCaveat && ', not including earnings from the military that were already reported'}?
+          Does <strong>{informalName(person)}</strong> have earnings from the following sources{!!showMilitaryCaveat && ', not including earnings from the military that were already reported'}?
         </p>
 
         <Well>

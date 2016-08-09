@@ -29,6 +29,12 @@ export default class ApplicationData {
     hasSsn: true,
     ssnLastFour: ''
   }
+
+  get allPeopleCollections() {
+    return [this.students,
+            this.otherChildren,
+            this.adults]
+  }
 }
 
 export class AssistancePrograms {
@@ -121,6 +127,11 @@ class PersonCollection {
     return this.items.map(func)
   }
 
+  // returns e.g. "Jill, Joe, and Joe Jr."
+  informalList(allPeople) {
+    return informalList(this.items, allPeople)
+  }
+
   @computed get hasAnyIncome() {
     for (let i = 0; i < this.items.length; i++) {
       let person = this.items[i]
@@ -186,11 +197,6 @@ class PersonCollection {
     }).reduce((a, b) => a.concat(b), []).reduce((a, b) => a && b, true)
   }
 
-  // returns e.g. "Jill, Joe, and Joe Jr."
-  @computed get informalList() {
-    return informalList(this.items)
-  }
-
   @action add(props = {}) {
     this.items.push(Object.assign(this.newItem, props))
   }
@@ -215,6 +221,7 @@ class AdultCollection extends PersonCollection {
 
   get propertiesOtherThanFields() {
     return Object.assign({}, super.propertiesOtherThanFields, {
+      isAdult: true,
       isAttestor: false,
       incomeTypes: {
         military: {
@@ -291,6 +298,7 @@ class AdultCollection extends PersonCollection {
 class ChildCollection extends PersonCollection {
   get propertiesOtherThanFields() {
     return Object.assign({}, super.propertiesOtherThanFields, {
+      isChild: true,
       incomeTypes: {
         child: {
           isApplicable: null,
@@ -342,6 +350,7 @@ class StudentCollection extends ChildCollection {
 
   get propertiesOtherThanFields() {
     return Object.assign({}, super.propertiesOtherThanFields, {
+      isStudent: true,
       isFoster: null,
       isHomeless: null,
       isMigrant: null,

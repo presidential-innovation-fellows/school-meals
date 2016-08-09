@@ -3,6 +3,7 @@ import Slide from '../Slide'
 import Checkbox from '../Checkbox'
 import { observer } from 'mobx-react'
 import { FormControl, InputGroup } from 'react-bootstrap'
+import { fullName } from '../../../helpers'
 
 @observer
 class Signature extends Component {
@@ -32,7 +33,7 @@ class Signature extends Component {
     return (
       <Slide id="ssn" nextDisabled={!this.isValid}>
         <p>Great, you are almost done!</p>
-        <p>Please provide the last four digits of the Social Security number for the person that signed at the beginning of the application <strong>({attestor.firstName} {attestor.lastName})</strong>. If that person does not have a Social Security number, please check the box below labeled "No SSN".</p>
+        <p>Please provide the last four digits of the Social Security number for the person that signed at the beginning of the application <strong>({fullName(attestor)})</strong>. If that person does not have a Social Security number, please check the box below labeled "No SSN".</p>
 
         <InputGroup>
           <InputGroup.Addon>xxx-xx-</InputGroup.Addon>

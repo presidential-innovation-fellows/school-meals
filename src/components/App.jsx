@@ -14,10 +14,10 @@ const applicationData = new ApplicationData()
 const navigationData = new NavigationData()
 const helpData = new HelpData()
 
-// DEBUG
+// some things occasionally rely on these references (unfortunate shortcut)
 window.applicationData = applicationData
-window.navigationData = navigationData
 window.helpData = helpData
+window.navigationData = navigationData
 
 @observer
 class App extends Component {
@@ -52,13 +52,13 @@ class App extends Component {
 }
 
 App.childContextTypes = {
-  navigationData: PropTypes.shape({
-    back: PropTypes.func.isRequired,
-    next: PropTypes.func.isRequired
-  }).isRequired,
   helpData: PropTypes.shape({
     article: PropTypes.string.isRequired,
     isVisible: PropTypes.bool.isRequired
+  }).isRequired,
+  navigationData: PropTypes.shape({
+    back: PropTypes.func.isRequired,
+    next: PropTypes.func.isRequired
   }).isRequired
 };
 

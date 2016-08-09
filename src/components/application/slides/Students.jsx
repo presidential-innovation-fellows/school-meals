@@ -7,7 +7,7 @@ import { observer } from 'mobx-react'
 @observer
 class Students extends Component {
   render() {
-    const { students } = this.props
+    const { students, allPeopleCollections } = this.props
 
     return (
       <Slide id="students" nextDisabled={!students.isValid}

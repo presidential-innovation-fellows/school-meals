@@ -4,7 +4,7 @@ import IncomeTypeDefaultText from './IncomeTypeDefaultText'
 import { computed } from 'mobx'
 import { observer } from 'mobx-react'
 import { Alert, Button } from 'react-bootstrap'
-import { incomeTypeIsValid } from '../../../helpers'
+import { incomeTypeIsValid, informalName } from '../../../helpers'
 
 @observer
 class IncomeType extends Component {
@@ -25,9 +25,9 @@ class IncomeType extends Component {
     const { person, name, label, showDefaultText, showMilitaryCaveat } = this.props
     const incomeType = person.incomeTypes[name]
     const defaultTextProps = { person, showMilitaryCaveat }
-
+    const personName = informalName(person)
     return(
-      <Slide header={person.firstName}
+      <Slide header={personName}
              id={`income/${person.id}/${name}`}
              helpArticle={`${name}-income`}
              nextDisabled={!incomeTypeIsValid(incomeType)}>
@@ -39,7 +39,7 @@ class IncomeType extends Component {
             <h4>Missing Income</h4>
             <p>
               On a previous page, you indicated
-              that <strong>{person.firstName}</strong> receives income from
+              that <strong>{personName}</strong> receives income from
               one of the above sources. Please enter this income above or
               correct your previous answer.
             </p>

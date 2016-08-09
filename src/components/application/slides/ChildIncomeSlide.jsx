@@ -5,7 +5,7 @@ import IncomeSource from '../IncomeSource'
 import { computed } from 'mobx'
 import { observer } from 'mobx-react'
 import { Alert, Button, ControlLabel, Well } from 'react-bootstrap'
-import { incomeTypeIsValid } from '../../../helpers'
+import { incomeTypeIsValid, informalName } from '../../../helpers'
 
 @observer
 class ChildIncomeSlide extends Component {
@@ -25,14 +25,15 @@ class ChildIncomeSlide extends Component {
     const { person } = this.props
     const incomeType = person.incomeTypes.child
     const incomeSources = incomeType.sources
+    const name = informalName(person)
 
     return(
-      <Slide header={person.firstName}
+      <Slide header={name}
              id={`income/${person.id}/child`}
              helpArticle="child-income"
              nextDisabled={!incomeTypeIsValid(incomeType)}>
 
-        <p>Does <strong>{person.firstName}</strong> have income from any of the following sources?</p>
+        <p>Does <strong>{name}</strong> have income from any of the following sources?</p>
 
         <p>Income reported here should be the child’s current, <em>gross</em> income.</p>
 
@@ -63,7 +64,7 @@ class ChildIncomeSlide extends Component {
             <h4>Missing Income</h4>
             <p>
               On a previous page, you indicated
-              that <strong>{person.firstName}</strong> receives income.
+              that <strong>{name}</strong> receives income.
               Please enter this income above or correct your previous answer.
             </p>
             <Button href={`#/child-income`}>Change previous answer</Button>

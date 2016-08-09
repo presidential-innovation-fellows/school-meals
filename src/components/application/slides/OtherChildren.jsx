@@ -68,7 +68,7 @@ class OtherChildren extends Component {
   }
 
   render() {
-    const { alreadyNamed, otherChildren } = this.props
+    const { allPeopleCollections, alreadyNamed, otherChildren } = this.props
 
     return (
       <Slide nextDisabled={!this.isValid} id="other-children" beginsSection>
@@ -83,14 +83,14 @@ class OtherChildren extends Component {
                       onChange={this.onChange} />
 
         <ControlLabel>
-          Is there anyone in your household that attends day care or pre-school, or is not of school age, including infants, not including those you already named <strong>({informalList(alreadyNamed)})</strong>?
+          Is there anyone in your household that attends day care or pre-school, or is not of school age, including infants, not including those you already named <strong>({informalList(alreadyNamed, allPeopleCollections)})</strong>?
         </ControlLabel>
 
         <BooleanRadio name="youngChildren" object={this.categories}
                       onChange={this.onChange} />
 
         <ControlLabel>
-          Is there anyone 18 years of age or younger living in your household that does not currently attend school, again, not including those you have already named <strong>({informalList(alreadyNamed)})</strong>?
+          Is there anyone 18 years of age or younger living in your household that does not currently attend school, again, not including those you have already named <strong>({informalList(alreadyNamed, allPeopleCollections)})</strong>?
         </ControlLabel>
 
         <BooleanRadio name="otherChildren" object={this.categories}

@@ -4,6 +4,7 @@ import PersonCollection from '../PersonCollection'
 import { organization } from '../../../config'
 import { fullName } from '../../../helpers'
 import { observer } from 'mobx-react'
+import { informalName } from '../../../helpers'
 
 @observer
 class Adults extends Component {
@@ -15,7 +16,7 @@ class Adults extends Component {
       <Slide header="Adults" id="adults" nextDisabled={!adults.isValid}
              beginsSection>
         <p>Okay, now let's talk about other members of your household.</p>
-        <p>Not including {attestors[0].firstName}, what other adults live in the household?</p>
+        <p>Not including {informalName(attestors[0])}, what other adults live in the household?</p>
 
         <p>Adults:</p>
         <ul>

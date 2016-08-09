@@ -3,6 +3,7 @@ import BooleanRadio from '../BooleanRadio'
 import Checkbox from '../Checkbox'
 import { observer } from 'mobx-react'
 import { ControlLabel } from "react-bootstrap"
+import { informalName } from '../../../helpers'
 
 @observer
 class OtherProgramsProgram extends Component {
@@ -21,7 +22,7 @@ class OtherProgramsProgram extends Component {
          :
          students.map(student =>
            <Checkbox object={student} name={attribute} key={student.id}>
-             {student.firstName}
+             {informalName(student)}
            </Checkbox>
          )
         }

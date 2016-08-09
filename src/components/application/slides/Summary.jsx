@@ -8,7 +8,7 @@ import { observer } from 'mobx-react'
 import { Badge, Glyphicon, OverlayTrigger, Table, Tooltip, Well } from 'react-bootstrap'
 import { humanize, numberFormat } from 'underscore.string'
 import { organization } from '../../../config'
-import { allStudentsAreFHMR } from '../../../helpers'
+import { allStudentsAreFHMR, fullName, informalName } from '../../../helpers'
 
 @observer
 class Summary extends Component {
@@ -20,22 +20,14 @@ class Summary extends Component {
     return this.props.applicationData.otherChildren
   }
 
-  get allPeopleCollections() {
-    return [
-      this.props.applicationData.students,
-      this.props.applicationData.otherChildren,
-      this.props.applicationData.adults
-    ]
-  }
-
   get totalHouseholdMembers() {
-    return this.allPeopleCollections
+    return this.props.applicationData.allPeopleCollections
                .map(collection => collection.length)
                .reduce((a, b) => a + b, 0)
   }
 
   get allIncomes() {
-    return this.allPeopleCollections
+    return this.props.applicationData.allPeopleCollections
       .map(collection => collection.allApplicableIncomeSources)
       .reduce((a, b) => a.concat(b), [])
   }
@@ -103,7 +95,7 @@ class Summary extends Component {
            <ul>
              {students.map(person =>
                <li key={person.id}>
-                 {person.firstName}
+                 {informalName(person)}
                  { !!this.fhmr(person).length &&
                    ` (${this.fhmr(person).join(', ')})`
                  }
@@ -139,7 +131,7 @@ class Summary extends Component {
              <ul>
                {students.map(person =>
                  <li key={person.id}>
-                   {person.firstName}
+                   {informalName(person)}
                    { !!this.fhmr(person).length &&
                      ` (${this.fhmr(person).join(', ')})`
                    }
@@ -152,7 +144,7 @@ class Summary extends Component {
              </SummaryLabelSmall>
              <ul>
                {this.allOtherChildren.map(person =>
-                 <li key={person.id}>{person.firstName}</li>
+                 <li key={person.id}>{informalName(person)}</li>
                 )}
                  {!this.allOtherChildren.length && <li><em>none</em></li>}
              </ul>
@@ -160,7 +152,7 @@ class Summary extends Component {
              <SummaryLabelSmall id="adults">Adults</SummaryLabelSmall>
              <ul>
                {adults.map(person =>
-                 <li key={person.id}>{person.firstName}</li>
+                 <li key={person.id}>{informalName(person)}</li>
                 )}
                  {!adults.length && <li><em>none</em></li>}
              </ul>
@@ -187,7 +179,7 @@ class Summary extends Component {
              <tbody>
                {this.allIncomes.map(income =>
                  <tr key={income.person.id + income.type + income.source}>
-                   <td>{income.person.firstName}</td>
+                   <td>{informalName(income.person)}</td>
                    <td>
                      {humanize(income.type)} income
                      {' '}
@@ -224,7 +216,7 @@ class Summary extends Component {
 
         <SummaryLabel id="contact">Contact Information</SummaryLabel>
         <Well>
-          { attestor.firstName } { attestor.lastName }
+          { fullName(attestor) }
           {!!contact.address1 &&
            <span>
              <br />

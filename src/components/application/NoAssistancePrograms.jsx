@@ -8,12 +8,14 @@ import OtherPrograms from './slides/OtherPrograms'
 class NoAssistancePrograms extends Component {
   render() {
     const { applicationData } = this.props
+    const { allPeopleCollections, students } = applicationData
 
     return (
       <div>
-        <OtherPrograms students={applicationData.students} />
+        <OtherPrograms students={students}
+                       allPeopleCollections={allPeopleCollections} />
 
-        {!allStudentsAreFHMR(applicationData.students) &&
+        {!allStudentsAreFHMR(students) &&
          <HouseholdIncome applicationData={applicationData} />
         }
       </div>

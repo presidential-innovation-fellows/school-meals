@@ -3,6 +3,7 @@ import BooleanRadio from '../BooleanRadio'
 import Checkbox from '../Checkbox'
 import { observer } from 'mobx-react'
 import { Button, ControlLabel, Well } from 'react-bootstrap'
+import { informalName } from '../../../helpers'
 
 @observer
 class Demographics extends Component {
@@ -24,7 +25,7 @@ class Demographics extends Component {
 
     return (
       <div>
-        <h3>{student.firstName}</h3>
+        <h3>{informalName(student)}</h3>
         <Well>
           <ControlLabel>Ethnicity</ControlLabel>
           <BooleanRadio name="isHispanicLatino"

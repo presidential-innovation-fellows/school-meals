@@ -21,7 +21,8 @@ class Application extends Component {
       students,
       contact,
       adults,
-      assistancePrograms
+      assistancePrograms,
+      allPeopleCollections
     } = this.props.applicationData
 
     return (
@@ -29,9 +30,10 @@ class Application extends Component {
         <Welcome />
         <BeforeYouBegin />
         <Attestation attestation={attestation} attestor={adults.first} />
-        <Students students={students} />
+        <Students students={students} allPeopleCollections={allPeopleCollections} />
         <AssistancePrograms assistancePrograms={assistancePrograms}
-                            students={students} />
+                            students={students}
+                            allPeopleCollections={allPeopleCollections} />
 
         {assistancePrograms.hasAny !== true &&
          <NoAssistancePrograms applicationData={this.props.applicationData} />

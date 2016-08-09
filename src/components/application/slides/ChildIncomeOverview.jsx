@@ -3,6 +3,7 @@ import Slide from '../Slide'
 import IncomeTypeFormGroup from '../IncomeTypeFormGroup'
 import { observer } from 'mobx-react'
 import { ControlLabel } from 'react-bootstrap'
+import { informalName } from '../../../helpers'
 
 @observer
 class ChildIncomeOverview extends Component {
@@ -31,7 +32,7 @@ class ChildIncomeOverview extends Component {
         {allChildren.map(child =>
           <IncomeTypeFormGroup person={child} incomeTypeName="child"
                                key={child.id} incomeDescription="income">
-            Does <strong>{child.firstName}</strong> have
+            Does <strong>{informalName(child)}</strong> have
             income from any of these, or any other, sources?
           </IncomeTypeFormGroup>
         )}

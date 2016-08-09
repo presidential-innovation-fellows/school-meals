@@ -30,23 +30,95 @@ export function fullName(person) {
 
   result += ' ' + person.lastName
 
-  if (person.middleName) {
+  if (person.suffix) {
     result += ' ' + person.suffix
   }
 
   return result
 }
 
-export function informalName(person) {
-  return person.firstName + (person.suffix ? ` ${person.suffix}` : '')
+// returns the shortest possible unique representation of a name
+export function informalName(person,
+                             allPeopleCollections = window.applicationData.allPeopleCollections, // quick hack to avoid passing around in context everywhere
+                             disambiguate = true) {
+  let result = person.firstName
+
+  let includeLast = false
+  let includeMiddle = false
+  let includeSuffix = false
+  let includeDisambig = false
+
+  for (let i = 0; i < allPeopleCollections.length; i++) {
+    for (let j = 0; j < allPeopleCollections[i].items.length; j++) {
+      let otherPerson = allPeopleCollections[i].items[j]
+
+      if (person.id === otherPerson.id) {
+        continue
+      }
+
+      if (person.firstName === otherPerson.firstName) {
+        if (person.lastName === otherPerson.lastName) {
+          if (!person.middleName ||
+              person.middleName === otherPerson.middleName) {
+            if (!person.suffix || person.suffix === otherPerson.suffix) {
+              includeDisambig = true
+            } else {
+              includeSuffix = true
+            }
+          } else {
+            includeMiddle = true
+          }
+        } else {
+          includeLast = true
+        }
+      }
+    }
+  }
+
+  if (includeMiddle) {
+    includeLast = true
+  }
+
+  if (includeMiddle) {
+    result += ' ' + person.middleName
+  }
+
+  if (includeLast) {
+    result += ' ' + person.lastName
+  }
+
+  if (includeSuffix) {
+    result += ' ' + person.suffix
+  }
+
+  if (includeDisambig && disambiguate) {
+    if (person.school && person.grade) {
+      result += ` (${person.school}, grade ${person.grade})`
+    } else if (person.isStudent) {
+      result += ' (student)'
+    } else if (person.isChild) {
+      result += ' (child)'
+    } else if (person.isAdult) {
+      result += ' (adult)'
+    } else {
+      // should never happen, but good ot have a default
+      result += ` (${person.id})`
+    }
+  }
+
+  return result
 }
 
 // given an array of people-like objects, return e.g. "Bob, Joe, and Joe Jr."
 export function informalList(people,
+                             allPeopleCollections,
+                             disambiguate = false,
                              delimiter = ', ',
                              lastDelimiter = ' and ') {
 
-  const names = people.map(person => informalName(person))
+  const names = people.map(person => informalName(person,
+                                                  allPeopleCollections,
+                                                  disambiguate))
   return toSentenceSerial(names, delimiter, lastDelimiter)
 }
 
