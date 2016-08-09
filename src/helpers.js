@@ -21,6 +21,22 @@ export function formatDate(date) {
   return `${mm}/${dd}/${yyyy}`
 }
 
+export function fullName(person) {
+  let result = person.firstName
+
+  if (person.middleName) {
+    result += ' ' + person.middleName
+  }
+
+  result += ' ' + person.lastName
+
+  if (person.middleName) {
+    result += ' ' + person.suffix
+  }
+
+  return result
+}
+
 export function informalName(person) {
   return person.firstName + (person.suffix ? ` ${person.suffix}` : '')
 }

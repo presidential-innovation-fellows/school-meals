@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
 import PersonCollection from '../PersonCollection'
 import { organization } from '../../../config'
+import { fullName } from '../../../helpers'
 import { observer } from 'mobx-react'
 
 @observer
@@ -19,14 +20,14 @@ class Adults extends Component {
         <p>Adults:</p>
         <ul>
           {attestors.map(person =>
-            <li key={person.id}><strong>{person.firstName}</strong></li>
+            <li key={person.id}><strong>{fullName(person)}</strong></li>
            )}
         </ul>
 
         <p>Children:</p>
         <ul>
           {allChildren.map(person =>
-            <li key={person.id}><strong>{person.firstName}</strong></li>
+            <li key={person.id}><strong>{fullName(person)}</strong></li>
            )}
         </ul>
 
