@@ -48,6 +48,8 @@ class Summary extends Component {
           return amount * 26.0714286
         case 'weekly':
           return amount * 52.1428571
+        case 'hourly':
+          return amount * 2,087
         default:
           return 0
       }
