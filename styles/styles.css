@@ -27,6 +27,15 @@ main {
   margin-bottom: .5em;
 }
 
+.footer {
+  background-color: #323a45;
+  padding: 1em;
+  color: white;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
 .info-target {
   border-bottom: 1px dotted #337ab7;
   cursor: pointer;
