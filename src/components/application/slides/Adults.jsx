@@ -8,17 +8,23 @@ import { observer } from 'mobx-react'
 class Adults extends Component {
   render() {
     const { adults, allChildren } = this.props
+    const attestors = adults.items.filter(person => person.isAttestor)
 
     return (
       <Slide header="Adults" id="adults" nextDisabled={!adults.isValid}
              beginsSection>
         <p>Okay, now let's talk about other members of your household.</p>
-        <p>Not including the people the people listed below, who else lives in the household?</p>
+        <p>Not including {attestors[0].firstName}, what other adults live in the household?</p>
 
+        <p>Adults:</p>
         <ul>
-          {adults.items.filter(person => person.isAttestor).map(person =>
+          {attestors.map(person =>
             <li key={person.id}><strong>{person.firstName}</strong></li>
            )}
+        </ul>
+
+        <p>Children:</p>
+        <ul>
           {allChildren.map(person =>
             <li key={person.id}><strong>{person.firstName}</strong></li>
            )}
