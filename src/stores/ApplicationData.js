@@ -236,8 +236,7 @@ class AdultCollection extends PersonCollection {
         employment: {
           isApplicable: null,
           sources: {
-            'salary':         { has: null, amount: '', frequency: '' },
-            'wages':          { has: null, amount: '', frequency: '' },
+            'salaryWages':    { has: null, amount: '', frequency: '' },
             'tips':           { has: null, amount: '', frequency: '' },
             'commission':     { has: null, amount: '', frequency: '' },
             'cashBonus':      { has: null, amount: '', frequency: '' },
