@@ -30,7 +30,7 @@ class Adults extends Component {
            )}
         </ul>
 
-        <p>Keep in mind the definition of a household. Don't forget about grandparents or other extended family members who are living with you. Also include people that are not currently living with you, but are only away on a temporary basis, like kids that are away at college, or members of your family that are in the military, but deployed. Include people regardless of age or whether they earn or receive income.</p>
+        <p>Keep in mind the definition of a household. Don't forget about grandparents or other extended family members that are living with you. Also include people that are not currently living with you, but are only away on a temporary basis, like kids that are away at college, or members of your family that are in the military, but deployed. Include people regardless of age or whether they earn or receive income.</p>
 
         <PersonCollection collection={adults}
                           filter={person => !person.isAttestor} />
