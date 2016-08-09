@@ -1,6 +1,8 @@
 import React, { Component, PropTypes } from 'react'
 import Article from '../Article'
 import Topic from '../Topic'
+import NotTheSame from '../topics/NotTheSame'
+import ApplyLater from '../topics/ApplyLater'
 
 export default class EmploymentIncome extends Component {
   render() {
@@ -78,13 +80,8 @@ export default class EmploymentIncome extends Component {
           </p>
         </Topic>
 
-        <Topic title="">
-          <p></p>
-        </Topic>
-
-        <Topic title="">
-          <p></p>
-        </Topic>
+        <NotTheSame />
+        <ApplyLater />
       </Article>
     )
   }
