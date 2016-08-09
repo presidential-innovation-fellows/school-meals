@@ -2,10 +2,23 @@ import React, { Component, PropTypes } from 'react'
 import BooleanRadio from '../BooleanRadio'
 import Checkbox from '../Checkbox'
 import { observer } from 'mobx-react'
-import { ControlLabel, Well } from 'react-bootstrap'
+import { Button, ControlLabel, Well } from 'react-bootstrap'
 
 @observer
 class Demographics extends Component {
+  constructor (props) {
+    super(props)
+    this.clear = this.clear.bind(this)
+  }
+
+  clear() {
+    const { demographics } = this.props.student
+
+    for (let key in demographics) {
+      demographics[key] = null
+    }
+  }
+
   render() {
     const { student } = this.props
 
@@ -35,6 +48,8 @@ class Demographics extends Component {
           <Checkbox object={student.demographics} name="isWhite">
             White
           </Checkbox>
+
+          <div><Button bsSize="small" onClick={this.clear}>Clear</Button></div>
         </Well>
       </div>
     )
