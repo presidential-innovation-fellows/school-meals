@@ -271,7 +271,7 @@ class Summary extends Component {
 
         <p>
           <Checkbox name="certifiedCorrect" object={applicationData} inline>
-            I certify that {this.totalHouseholdMembers} people are in my household and that our household income is about ${numberFormat(this.totalMonthlyHouseholdIncome)} per month.
+            <strong>I certify that <Badge>{this.totalHouseholdMembers}</Badge> people are in my household and that our household income is about <Badge>${numberFormat(this.totalMonthlyHouseholdIncome)}</Badge> per month.</strong>
           </Checkbox>
         </p>
       </Slide>
