@@ -1,7 +1,8 @@
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
+import Button from './Button'
+import Form from './Form'
 import PersonForm from './PersonForm'
-import { Button, Well } from 'react-bootstrap'
 
 @observer
 class PersonCollection extends Component {
@@ -30,23 +31,28 @@ class PersonCollection extends Component {
     return(
       <div>
         {!collection.length &&
-          <Well><strong>No {labelPlural}</strong></Well>
+         <Form>
+           <div className="well">
+             <strong>No {labelPlural}</strong>
+           </div>
+         </Form>
         }
 
-        {collection.items.filter(filter).map(person =>
-          <PersonForm person={person}
-                      fields={collection.fields}
-                      label={label}
-                      key={person.id}
-                      onRemove={this.onRemove} />
-        )}
-
         <div>
-          <Button bsStyle="success" onClick={this.onAdd}>
-            Add {collection.length ? 'another' : 'a'} {label}
-          </Button>
+          {collection.items.filter(filter).map(person =>
+            <PersonForm person={person}
+                        fields={collection.fields}
+                        label={label}
+                        key={person.id}
+                        onRemove={this.onRemove} />
+          )}
         </div>
-        <br />
+
+        <Button onClick={this.onAdd}
+                className="usa-button-secondary add-person">
+          Add {collection.length ? 'another ' : 'a '}
+          <span className="lowercase">{label}</span>
+        </Button>
       </div>
     )
   }

@@ -12,10 +12,10 @@ class Students extends Component {
     return (
       <Slide id="students" nextDisabled={!students.isValid}
              showHelp={false} beginsSection>
-        <p>List the names of the students in your household that attend {organization.name} and are applying for school meal benefits.</p>
+        <p className="usa-font-lead">List the names of the students in your household that attend {organization.name} and are applying for school meal benefits.</p>
 
         <PersonCollection
-            label="student"
+            label="Student"
             labelPlural="students"
             collection={students}
         />

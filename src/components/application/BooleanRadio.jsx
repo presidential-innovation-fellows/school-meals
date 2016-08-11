@@ -1,11 +1,12 @@
 import shortid from 'shortid'
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
-import { FormGroup, Radio } from 'react-bootstrap'
 
 @observer
 class BooleanRadio extends Component {
   name = shortid.generate()
+  trueId = name = '-true'
+  falseId = name = '-false'
 
   constructor (props) {
     super(props)
@@ -39,24 +40,36 @@ class BooleanRadio extends Component {
   }
 
   render() {
-    const { inline, name, object, trueLabel, falseLabel } = this.props
+    const { name, object, trueLabel, falseLabel } = this.props
+    const legend = this.props.legend || `${trueLabel} / ${falseLabel}`
     const value = object[name]
     const props = {
       name: this.name,
       onChange: this.handleChange,
-      inline
+      type: 'radio'
     }
 
     return (
-      <FormGroup>
-        <Radio {...props} checked={value === true} value={true}>
-          {trueLabel}
-        </Radio>
-        {' '}
-        <Radio {...props} checked={value === false} value={false}>
-          {falseLabel}
-        </Radio>
-      </FormGroup>
+      <fieldset className="usa-fieldset-inputs usa-sans">
+        <legend className="usa-sr-only">{legend}</legend>
+
+        <ul className="usa-unstyled-list">
+          <li>
+            <input {...props}
+                   id={this.trueId}
+                   value={true}
+                   checked={value === true} />
+            <label for={this.trueId}>{trueLabel}</label>
+          </li>
+          <li>
+            <input {...props}
+                   id={this.falseId}
+                   value={false}
+                   checked={value === false} />
+            <label for={this.falseId}>{falseLabel}</label>
+          </li>
+        </ul>
+      </fieldset>
     )
   }
 }
@@ -64,9 +77,9 @@ class BooleanRadio extends Component {
 BooleanRadio.propTypes = {
   name: PropTypes.string.isRequired,
   object: PropTypes.object.isRequired,
+  legend: PropTypes.string,
   trueLabel: PropTypes.string,
   falseLabel: PropTypes.string,
-  inline: PropTypes.bool,
   onChange: PropTypes.func
 }
 

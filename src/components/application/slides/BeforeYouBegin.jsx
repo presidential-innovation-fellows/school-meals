@@ -25,14 +25,14 @@ class BeforeYouBegin extends React.Component {
 
     return (
       <Slide header="Before you begin" id="before-you-begin">
-        <p>Before you begin, there are a few things you should know:</p>
+        <p className="usa-font-lead">Before you begin, there are a few things you should know.</p>
 
         <p>If you received a letter from the school saying that your children were automatically approved (directly certified) for free meals for the <SchoolYear /> school year because someone in your household participates in {assistanceProgramList} then you do not need to submit an application. If there are other children in your household who weren’t listed in that letter, they also qualify for free meals, so contact the school as soon as possible to correct the mistake.</p>
 
         <p>We only need one application for all the children in your household that attend {organization.name}.</p>
         <p>Eligibility for free or reduced price school meal benefits is based on any one of these three things:</p>
 
-        <ul>
+        <ul className="usa-content-list">
           <li>your child’s individual status as foster, homeless, migrant or runaway, or</li>
           <li>participation in an assistance program by any member of your household, or</li>
           <li>your total household income in the month the application is filled out, or the month before</li>
@@ -48,14 +48,14 @@ class BeforeYouBegin extends React.Component {
 
         <p>If you have questions at any point during the application, click the question mark icon to get help with the current section.</p>
 
-        <h3>Things you'll need</h3>
+        <h2>Things you'll need</h2>
 
         <p>Lastly, we compiled a list of the information you might need to complete the application. <a onClick={this.handleCheckItOut}>Check it out!</a></p>
 
         {!!this.showExtraContent &&
          <div>
            <p>If you have this information handy, it will make the application process fast and easy.</p>
-           <ul>
+           <ul className="usa-content-list">
              <li>If you participate in {assistanceProgramList} you will need to know your case number (not your card or account number).</li>
              <li>
                If you do not participate in any of the above assistance program, you will need to report your total household income. In that case…

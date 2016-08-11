@@ -10,13 +10,13 @@ class IncomeTypeDefaultText extends Component {
 
     return(
       <div>
-        <p>
+        <p className="usa-font-lead">
           Does <strong>{informalName(person)}</strong> have earnings from the following sources{!!showMilitaryCaveat && ', not including earnings from the military that were already reported'}?
         </p>
 
-        <Well>
+        <p>
           NOTE: Remember, to report gross income, which is all money earned before deductions, such as income taxes, employee's social security taxes, and insurance premiums.
-        </Well>
+        </p>
       </div>
     )
   }

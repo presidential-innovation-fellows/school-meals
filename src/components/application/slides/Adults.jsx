@@ -15,7 +15,7 @@ class Adults extends Component {
     return (
       <Slide header="Adults" id="adults" nextDisabled={!adults.isValid}
              beginsSection>
-        <p>Okay, now let's talk about other members of your household.</p>
+        <p className="usa-font-lead">Okay, now let's talk about other members of your household.</p>
         <p>Not including {informalName(attestors[0])}, what other adults live in the household?</p>
 
         <p>Adults:</p>
@@ -35,6 +35,8 @@ class Adults extends Component {
         <p>Keep in mind the definition of a household. Don't forget about grandparents or other extended family members that are living with you. Also include people that are not currently living with you, but are only away on a temporary basis, like kids that are away at college, or members of your family that are in the military, but deployed. Include people regardless of age or whether they earn or receive income.</p>
 
         <PersonCollection collection={adults}
+                          label="Adult"
+                          labelPlural="adults"
                           filter={person => !person.isAttestor} />
       </Slide>
     )

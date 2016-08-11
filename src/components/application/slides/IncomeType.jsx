@@ -1,9 +1,10 @@
 import React, { Component, PropTypes } from 'react'
+import Button from '../Button'
 import Slide from '../Slide'
 import IncomeTypeDefaultText from './IncomeTypeDefaultText'
 import { computed } from 'mobx'
 import { observer } from 'mobx-react'
-import { Alert, Button } from 'react-bootstrap'
+import { Alert } from 'react-bootstrap'
 import { incomeTypeIsValid, informalName } from '../../../helpers'
 
 @observer

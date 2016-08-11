@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
 import Checkbox from '../Checkbox'
+import Checkboxes from '../Checkboxes'
 import { observer } from 'mobx-react'
 import { FormControl, InputGroup } from 'react-bootstrap'
 import { fullName } from '../../../helpers'
@@ -32,11 +33,10 @@ class Signature extends Component {
 
     return (
       <Slide id="ssn" nextDisabled={!this.isValid}>
-        <p>Great, you are almost done!</p>
-        <p>Please provide the last four digits of the Social Security number for the person that signed at the beginning of the application <strong>({fullName(attestor)})</strong>. If that person does not have a Social Security number, please check the box below labeled "No SSN".</p>
+        <p className="usa-font-lead">Great, you are almost done!</p>
+        <p>Please provide the last four digits of the Social Security number for the person that signed at the beginning of the application <strong>({fullName(attestor)})</strong>. If that person does not have a Social Security number, please check the box below labeled "No <abbr title="Social Security number">SSN</abbr>".</p>
 
         <InputGroup>
-          <InputGroup.Addon>xxx-xx-</InputGroup.Addon>
           <FormControl type="phone"
                        step="1"
                        min="0001"
@@ -47,9 +47,12 @@ class Signature extends Component {
                        disabled={!signature.hasSsn}
                        onChange={this.handleSsnChange} />
         </InputGroup>
-        <Checkbox object={signature} name="hasSsn" invert>
-          No SSN
-        </Checkbox>
+
+        <Checkboxes legend="No <abbr title='Social Security number'>SSN</abbr>">
+          <Checkbox object={signature} name="hasSsn" invert>
+            No SSN
+          </Checkbox>
+        </Checkboxes>
 
         <p>
           <small>

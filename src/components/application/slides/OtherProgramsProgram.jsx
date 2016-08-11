@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import BooleanRadio from '../BooleanRadio'
 import Checkbox from '../Checkbox'
+import Checkboxes from '../Checkboxes'
 import { observer } from 'mobx-react'
 import { ControlLabel } from "react-bootstrap"
 import { informalName } from '../../../helpers'
@@ -20,11 +21,15 @@ class OtherProgramsProgram extends Component {
         {oneStudent ?
          <BooleanRadio object={students[0]} name={attribute} />
          :
-         students.map(student =>
-           <Checkbox object={student} name={attribute} key={student.id}>
-             {informalName(student)}
-           </Checkbox>
-         )
+         <Checkboxes legend="Students">
+           {
+             students.map(student =>
+               <Checkbox object={student} name={attribute} key={student.id}>
+                 {informalName(student)}
+               </Checkbox>
+             )
+           }
+         </Checkboxes>
         }
       </div>
     )

@@ -1,11 +1,7 @@
+import classnames from 'classnames'
 import shortid from 'shortid'
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
-import { FormGroup,
-         FormControl,
-         ControlLabel,
-         HelpBlock
-} from 'react-bootstrap'
 
 @observer
 class InputField extends Component {
@@ -36,20 +32,34 @@ class InputField extends Component {
   render() {
     const input = this.props
     const controlId = shortid.generate()
+    const className = classnames({
+      'usa-input-error': input.error,
+      'input-field': true
+    })
+    const inputProps = {
+      id: controlId,
+      name: input.name,
+      type: input.type,
+      value: input.object[input.name],
+      placeholder: input.placeholder || input.label,
+      disabled: input.disabled,
+      onChange: this.handleChange
+    }
+
+    if (input.error) {
+      inputProps['aria-describedby'] = 'input-error-message'
+    }
+
     return (
-      <FormGroup controlId={controlId}>
-        <ControlLabel>{input.label}</ControlLabel>
-        <FormControl
-            type={input.type}
-            name={input.name}
-            value={input.object[input.name]}
-            placeholder={input.placeholder || input.label}
-            disabled={input.disabled}
-            onChange={this.handleChange}
-        />
-        <FormControl.Feedback />
-        <HelpBlock>{input.help}</HelpBlock>
-      </FormGroup>
+      <div className={className}>
+        <label for={controlId}>{input.label}</label>
+        {input.error &&
+         <span className="usa-input-error-message"
+               id={`input-error-message-#{controlId}`}
+               role="alert">{input.error}</span>
+        }
+        <input {...inputProps} />
+      </div>
     )
   }
 }
@@ -58,10 +68,10 @@ InputField.propTypes = {
   label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   object: PropTypes.object.isRequired,
+  error: PropTypes.string,
   onChange: PropTypes.func,
   sanitize: PropTypes.func,
   placeholder: PropTypes.string,
-  help: PropTypes.string,
   type: PropTypes.string,
   disabled: PropTypes.bool
 }

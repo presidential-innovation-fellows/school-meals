@@ -39,7 +39,9 @@ class OtherPrograms extends Component {
     return (
       <Slide nextDisabled={!this.isValid} id="other-programs">
 
-        <p>No problem! There are other ways to qualify.</p>
+        <p className="usa-font-lead">
+          No problem! There are other ways to qualify.
+        </p>
 
         <p>If <strong>{students.informalList(allPeopleCollections)}</strong> {oneStudent ? 'is a foster child' : 'are foster children'} or qualify as homeless, migrant, or runaway, then they may be eligible for school meal benefits.</p>
 

@@ -36,14 +36,12 @@ class App extends Component {
         <Progress navigationData={navigationData}
                   applicationData={applicationData}/>
         <main>
-          <Grid>
-            <Row>
-              <Col xs={12}>
-                <DevTools />
-                <Application applicationData={applicationData} />
-              </Col>
-            </Row>
-          </Grid>
+          <div className="usa-grid">
+            <div className="usa-width-one-whole">
+              <DevTools />
+              <Application applicationData={applicationData} />
+            </div>
+          </div>
         </main>
         <Help helpData={helpData} />
       </div>

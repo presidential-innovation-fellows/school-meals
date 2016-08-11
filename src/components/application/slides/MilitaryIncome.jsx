@@ -33,7 +33,7 @@ class MilitaryIncome extends Component {
           }
 
            <p>
-             If your household's current, gross income is higher or lower than usual and does not fairly or accurately represent your household's actual circumstances, see the 'WHAT IF MY INCOME IS NOT ALWAYS THE SAME?' or 'IF I DO NOT QUALIFY RIGHT NOW, MAY I APPLY LATER?' questions on the HELP section. If you have additional questions, contact {organization.name} ({organization.contact.phone} / {organization.contact.email} / {organization.contact.address}), and they will help you figure out your household's annual rate of income based on USDA guidelines.
+             If your household's current, gross income is higher or lower than usual and does not fairly or accurately represent your household's actual circumstances, see the 'WHAT IF MY INCOME IS NOT ALWAYS THE SAME?' or 'IF I DO NOT QUALIFY RIGHT NOW, MAY I APPLY LATER?' questions on the HELP section. If you have additional questions, contact {organization.name} ({organization.contact.phone} / {organization.contact.email} / {organization.contact.address}), and they will help you figure out your household's annual rate of income based on <abbr title="United States Department of Agriculture">USDA</abbr> guidelines.
            </p>
 
            <IncomeTypeDefaultText person={person} />

@@ -19,9 +19,9 @@ class ChildIncomeOverview extends Component {
     return(
       <Slide nextDisabled={!this.isValid} id="child-income">
 
-        <p>Income earned or received by all household members, including the children you have entered so far, is included when determining eligibility for benefits. The next few questions are about your {allChildren.length === 1 ? 'child\'s' : 'childrens\''} income.</p>
+        <p className="usa-font-lead">Income earned or received by all household members, including the children you have entered so far, is included when determining eligibility for benefits. The next few questions are about your {allChildren.length === 1 ? 'child\'s' : 'childrens\''} income.</p>
         <p>Some common sources of income for children are:</p>
-        <ul>
+        <ul className="usa-content-list">
           <li>a full-time or part-time job,</li>
           <li>Social Security benefits, if the child is blind or disabled, or is the beneficiary of another person’s Social Security benefits,</li>
           <li>spending money regularly received from extended family or friends, or</li>

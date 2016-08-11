@@ -11,6 +11,14 @@ a:hover {
   color: #205493;
 }
 
+ol ul,
+ol ol,
+ul ul,
+ul ol {
+  margin-top: .75em;
+  margin-bottom: 0;
+}
+
 th {
   background-color: #f1f1f1;
 }
@@ -25,6 +33,23 @@ main {
 
 #summary table {
   margin-bottom: .5em;
+}
+
+abbr[title] {
+  border-bottom: 0;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.well {
+  border-left: 2px solid #205493;
+  padding-left: 1em;
+}
+
+.well h2 {
+  margin-top: 0;
 }
 
 .footer {
@@ -56,7 +81,20 @@ main {
   display: block;
 }
 
-.control-label small {
+.slide-content {
+  margin-top: 2em;
+  margin-bottom: 2em;
+  background-color: #fff;
+  padding: 3rem;
+  border: 1px solid #eee;
+}
+
+.person-form {
+  margin-bottom: 1em;
+  padding: .5em 0;
+}
+
+.label small {
   font-weight: 400;
 }
 
@@ -70,17 +108,26 @@ main {
   z-index: 1020;
 }
 
+.slide-content footer {
+  line-height: 0;
+  margin-bottom: 1em;
+}
+
+.remove-person {
+  margin-top: .5em;
+}
+
+.demographics-container form {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
 @media (max-width: 768px) {
-  .panel,
-  .panel-body {
+  .slide-content {
     margin: 0;
     border: 0;
     box-shadow: none;
     padding: 0;
-  }
-
-  .panel {
-    margin-bottom: 1em;
   }
 }
 
@@ -105,6 +152,30 @@ main {
   .progress-container {
     padding: 23px 0 20px;
     top: 50px;
+  }
+
+  .slide-content > :first-child,
+  .slide-content > :first-child > :first-child,
+  .slide-content > :first-child > :first-child > :first-child {
+    margin-top: 0;
+  }
+
+  .slide-content footer {
+    margin-top: 1em;
+    margin-bottom: 0;
+  }
+
+  .slide-content footer button {
+    margin-bottom: 0;
+  }
+
+  .remove-person {
+    margin-top: 2em;
+  }
+
+  .demographics-container form {
+    margin-top: 1em;
+    margin-bottom: 1em;
   }
 }
 

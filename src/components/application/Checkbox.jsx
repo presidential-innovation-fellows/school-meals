@@ -1,10 +1,11 @@
 import shortid from 'shortid'
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
-import { Checkbox as RBCheckbox } from 'react-bootstrap'
 
 @observer
 class Checkbox extends Component {
+  name = shortid.generate()
+
   constructor (props) {
     super(props)
     this.defaultOnChange = this.defaultOnChange.bind(this)
@@ -22,22 +23,28 @@ class Checkbox extends Component {
   }
 
   render() {
-    const { inline, invert, name, object } = this.props
+    const { invert, name, object } = this.props
     const value = object[name]
     const props = {
       checked: invert ? (value !== true) : (value === true),
       onChange: this.handleChange,
-      inline
+      id: this.name,
+      name: this.name,
+      type: 'checkbox'
     }
 
-    return <RBCheckbox {...props}>{this.props.children}</RBCheckbox>
+    return (
+      <li>
+        <input {...props} />
+        <label for={this.id}>{this.props.children}</label>
+      </li>
+    )
   }
 }
 
 Checkbox.propTypes = {
   name: PropTypes.string.isRequired,
   object: PropTypes.object.isRequired,
-  inline: PropTypes.bool,
   invert: PropTypes.bool,
   onChange: PropTypes.func
 }

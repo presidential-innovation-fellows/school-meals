@@ -48,6 +48,7 @@
     "mobx-react-devtools": "^4.2.0",
     "react": "^15.1.0",
     "react-bootstrap": "^0.29.5",
-    "react-dom": "^15.1.0"
+    "react-dom": "^15.1.0",
+    "uswds": "^0.11.0"
   }
 }

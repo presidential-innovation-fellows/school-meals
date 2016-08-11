@@ -1,10 +1,11 @@
 import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
 import BooleanRadio from '../BooleanRadio'
+import Button from '../Button'
 import IncomeSource from '../IncomeSource'
 import { computed } from 'mobx'
 import { observer } from 'mobx-react'
-import { Alert, Button, ControlLabel, Well } from 'react-bootstrap'
+import { Alert } from 'react-bootstrap'
 import { incomeTypeIsValid, informalName } from '../../../helpers'
 
 @observer
@@ -33,11 +34,11 @@ class ChildIncomeSlide extends Component {
              helpArticle="child-income"
              nextDisabled={!incomeTypeIsValid(incomeType)}>
 
-        <p>Does <strong>{name}</strong> have income from any of the following sources?</p>
+        <p className="usa-font-lead">Does <strong>{name}</strong> have income from any of the following sources?</p>
 
         <p>Income reported here should be the child’s current, <em>gross</em> income.</p>
 
-        <Well>Gross income means all money earned or received before deductions, such as income taxes, social security taxes, and insurance premiums. You should not report net income, which is the amount of money received in a pay check. Net income is total (or gross) income, minus taxes and deductions, and is commonly referred to as “take home pay”.</Well>
+        <p className="well"><dfn>Gross income</dfn> means all money earned or received before deductions, such as income taxes, social security taxes, and insurance premiums. You should not report net income, which is the amount of money received in a pay check. Net income is total (or gross) income, minus taxes and deductions, and is commonly referred to as “take home pay”.</p>
 
         <IncomeSource incomeSources={incomeSources} name="job">
           Money earned from a full or part-time job

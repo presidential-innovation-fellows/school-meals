@@ -27,7 +27,7 @@ class IncomeSource extends Component {
               <ControlLabel>{this.props.children}</ControlLabel>
             </Col>
             <Col xs={12} sm={4}>
-              <BooleanRadio name="has" object={incomeSource} inline />
+              <BooleanRadio name="has" object={incomeSource} />
             </Col>
           </Row>
 

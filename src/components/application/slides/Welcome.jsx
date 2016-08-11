@@ -6,19 +6,20 @@ class Welcome extends React.Component {
   render() {
     return (
       <Slide header="Welcome!" id="welcome" showBack={false} nextText="Get Started" beginsSection>
-        <p>
+        <p className="usa-font-lead">
           This is the {organization.name} electronic application for free and
-          reduced priced meals for the USDA’s National School Lunch & School
-          Breakfast Programs.
+          reduced priced meals for
+          the <abbr title="United States Department of Agriculture">USDA</abbr>&rsquo;s National School Lunch &amp; School Breakfast Programs.
         </p>
         <p>
           This interactive application will guide you through the application
           process and send your response directly to {organization.name}. When
-          you are ready to apply, click the ‘Get Started’ button below to begin.
+          you are ready to apply, click the ‘Get Started’ button below to
+          begin.
         </p>
         <p>
-          If you would like to apply using the paper application, you can print
-          it from <a href={organization.paperApplication.url}>here</a> or
+          If you would like to apply using the paper application, you can
+          print it from <a href={organization.paperApplication.url}>here</a> or
           contact {organization.name} (
           {organization.paperApplication.phone}{' / '}
           {organization.paperApplication.email}{' / '}

@@ -1,7 +1,8 @@
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
+import Button from './Button'
+import Form from './Form'
 import PersonAttributeInput from './PersonAttributeInput'
-import { Button, Well } from 'react-bootstrap'
 
 @observer
 class PersonForm extends Component {
@@ -21,24 +22,32 @@ class PersonForm extends Component {
       fields,
     } = this.props
 
+    const name = person.firstName || label
+
     return(
-      <Well>
-        <div>
-          {fields.map((field, index) =>
-            <PersonAttributeInput
-                person={person}
-                name={field.name}
-                label={field.label}
-                required={!!field.required}
-                key={index} />
-           )}
-        </div>
-        <div>
-          <Button bsStyle="danger" onClick={this.onRemove}>
-            Remove {person.firstName || label}
-          </Button>
-        </div>
-      </Well>
+      <div className="person-form">
+        <Form>
+          <div className="well">
+            <div>
+              <h2>{name}</h2>
+              {fields.map((field, index) =>
+                <PersonAttributeInput
+                    person={person}
+                    name={field.name}
+                    label={field.label}
+                    required={!!field.required}
+                    key={index} />
+               )}
+            </div>
+            <div>
+              <Button onClick={this.onRemove}
+                      className="usa-button-gray remove-person">
+                Remove {name}
+              </Button>
+            </div>
+          </div>
+        </Form>
+      </div>
     )
   }
 }

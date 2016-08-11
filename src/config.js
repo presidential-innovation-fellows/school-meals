@@ -13,9 +13,11 @@ export const organization = {
   }
 }
 
-export const assistancePrograms = ['CalFresh',
-                                   'State TANF',
-                                   'Food Distribution Program on Indian Reservations (FDPIR)']
+export const assistancePrograms = [
+  'Supplemental Nutrition Assistance Program (SNAP)',
+  'Temporary Assistance for Needy Families (TANF)',
+  'Food Distribution Program on Indian Reservations (FDPIR)'
+]
 
 export const localPrograms = {
   homelessness: {

@@ -73,7 +73,7 @@ class OtherChildren extends Component {
     return (
       <Slide nextDisabled={!this.isValid} id="other-children" beginsSection>
 
-        <p>Okay, it looks like we will need more information about your household and income in order to determine if you are eligible for benefits.</p>
+        <p className="usa-font-lead">Okay, it looks like we will need more information about your household and income in order to determine if you are eligible for benefits.</p>
 
         <p>Both income and total household size are important for determining eligibility for school meal benefits. Remember, for the purposes of applying for school meal benefits, a household is defined as a group of people, related or unrelated, that usually live together and share income and expenses. If this sounds complicated, don’t worry! We will help you determine who should be included in your application, as well as which income sources to report.</p>
 
@@ -98,7 +98,7 @@ class OtherChildren extends Component {
 
         {otherChildren.hasAny &&
          <PersonCollection
-             label="child"
+             label="Child"
              labelPlural="other children"
              collection={otherChildren}
          />

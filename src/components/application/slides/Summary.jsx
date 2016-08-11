@@ -4,8 +4,9 @@ import Link from '../Link'
 import SummaryLabel from './SummaryLabel'
 import SummaryLabelSmall from './SummaryLabelSmall'
 import Checkbox from '../Checkbox'
+import Checkboxes from '../Checkboxes'
 import { observer } from 'mobx-react'
-import { Badge, Glyphicon, OverlayTrigger, Table, Tooltip, Well } from 'react-bootstrap'
+import { Glyphicon, OverlayTrigger, Table, Tooltip, Well } from 'react-bootstrap'
 import { humanize, numberFormat } from 'underscore.string'
 import { organization } from '../../../config'
 import { allStudentsAreFHMR, fullName, informalName } from '../../../helpers'
@@ -98,7 +99,8 @@ class Summary extends Component {
     return (
       <Slide header="Summary" nextText="Submit" nextDisabled={!this.isValid}
              id="summary">
-        <p>Awesome, you finished! Here is a summary of the information you provided in the application. We encourage you to save or print this screen for your records. If everything looks good, click the "Submit" button at the bottom of the page.</p>
+        <p className="usa-font-lead">Awesome, you finished!</p>
+        <p>Here is a summary of the information you provided in the application. We encourage you to save or print this screen for your records. If everything looks good, click the "Submit" button at the bottom of the page.</p>
 
         {!showHousehold &&
          <div>
@@ -172,9 +174,7 @@ class Summary extends Component {
 
              <div>
                <SummaryLabelSmall>
-                 Total household members
-                 {' '}
-                 <Badge>{this.totalHouseholdMembers}</Badge>
+                 Total household members: {this.totalHouseholdMembers}
                </SummaryLabelSmall>
              </div>
            </Well>
@@ -269,11 +269,11 @@ class Summary extends Component {
           }
         </Well>
 
-        <p>
+        <Checkboxes legend="Certification">
           <Checkbox name="certifiedCorrect" object={applicationData} inline>
-            <strong>I certify that <Badge>{this.totalHouseholdMembers}</Badge> people are in my household and that our household income is about <Badge>${numberFormat(this.totalMonthlyHouseholdIncome)}</Badge> per month.</strong>
+            <strong>I certify that {this.totalHouseholdMembers} people are in my household and that our household income is about ${numberFormat(this.totalMonthlyHouseholdIncome)} per month.</strong>
           </Checkbox>
-        </p>
+        </Checkboxes>
       </Slide>
     )
   }

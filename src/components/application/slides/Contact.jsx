@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
+import Form from '../Form'
 import InputField from '../InputField'
 import { observer } from 'mobx-react'
 
@@ -10,52 +11,53 @@ class Contact extends Component {
 
     return (
       <Slide header="Contact Info" id="contact" showHelp={false} beginsSection>
-        <p>Please enter your contact information so that we can reach you in case there are any issues with your application.</p>
+        <p className="usa-font-lead">Please enter your contact information so that we can reach you in case there are any issues with your application.</p>
 
-        <InputField
-            name="phone"
-            label="Phone number (optional)"
-            type="tel"
-            object={contact}
-        />
+        <Form>
+          <InputField
+              name="phone"
+              label="Phone number (optional)"
+              type="tel"
+              object={contact}
+          />
 
-        <InputField
-            name="email"
-            label="Email (optional)"
-            type="email"
-            object={contact}
-        />
+          <InputField
+              name="email"
+              label="Email (optional)"
+              type="email"
+              object={contact}
+          />
 
-        <InputField
-            name="address1"
-            label="Address (if available)"
-            object={contact}
-        />
+          <InputField
+              name="address1"
+              label="Address (if available)"
+              object={contact}
+          />
 
-        <InputField
-            name="address2"
-            label="Apartment/Unit Number"
-            object={contact}
-        />
+          <InputField
+              name="address2"
+              label="Apartment/Unit Number"
+              object={contact}
+          />
 
-        <InputField
-            name="city"
-            label="City"
-            object={contact}
-        />
+          <InputField
+              name="city"
+              label="City"
+              object={contact}
+          />
 
-        <InputField
-            name="state"
-            label="State"
-            object={contact}
-        />
+          <InputField
+              name="state"
+              label="State"
+              object={contact}
+          />
 
-        <InputField
-            name="zip"
-            label="ZIP Code"
-            object={contact}
-        />
-
+          <InputField
+              name="zip"
+              label="ZIP Code"
+              object={contact}
+          />
+        </Form>
       </Slide>
     )
   }
