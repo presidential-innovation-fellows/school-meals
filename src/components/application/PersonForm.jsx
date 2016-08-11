@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
 import Button from './Button'
 import Form from './Form'
+import Fieldset from './Fieldset'
 import PersonAttributeInput from './PersonAttributeInput'
 
 @observer
@@ -27,25 +28,27 @@ class PersonForm extends Component {
     return(
       <div className="person-form">
         <Form>
-          <div className="well">
-            <div>
-              <h2>{name}</h2>
-              {fields.map((field, index) =>
-                <PersonAttributeInput
-                    person={person}
-                    name={field.name}
-                    label={field.label}
-                    required={!!field.required}
-                    key={index} />
-               )}
+          <Fieldset legend="Name">
+            <div className="well">
+              <div>
+                <h2>{name}</h2>
+                {fields.map((field, index) =>
+                  <PersonAttributeInput
+                      person={person}
+                      name={field.name}
+                      label={field.label}
+                      required={!!field.required}
+                      key={index} />
+                 )}
+              </div>
+              <div>
+                <Button onClick={this.onRemove}
+                        className="usa-button-gray remove-person">
+                  Remove {name}
+                </Button>
+              </div>
             </div>
-            <div>
-              <Button onClick={this.onRemove}
-                      className="usa-button-gray remove-person">
-                Remove {name}
-              </Button>
-            </div>
-          </div>
+          </Fieldset>
         </Form>
       </div>
     )

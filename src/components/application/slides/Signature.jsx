@@ -45,6 +45,7 @@ class Signature extends Component {
           <InputField type="phone"
                       name="ssnLastFour"
                       placeholder="xxxx"
+                      className="usa-input-medium"
                       object={signature}
                       value={signature.hasSsn && signature.ssnLastFour || ''}
                       disabled={!signature.hasSsn}

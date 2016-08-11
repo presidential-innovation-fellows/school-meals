@@ -43,7 +43,7 @@ class OtherPrograms extends Component {
           No problem! There are other ways to qualify.
         </p>
 
-        <p>If <strong>{students.informalList(allPeopleCollections)}</strong> {oneStudent ? 'is a foster child' : 'are foster children'} or qualify as homeless, migrant, or runaway, then they may be eligible for school meal benefits.</p>
+        <p>If {students.informalList(allPeopleCollections)} {oneStudent ? 'is a foster child' : 'are foster children'} or qualify as homeless, migrant, or runaway, then they may be eligible for school meal benefits.</p>
 
         <OtherProgramsProgram students={students.items} attribute="isFoster">
           {oneStudent ? <span>Is <strong>{informalName(students.first)}</strong></span> : <span>Are <strong>{students.informalList(allPeopleCollections)}</strong></span>} living with you under a formal (court-ordered) foster care arrangement?

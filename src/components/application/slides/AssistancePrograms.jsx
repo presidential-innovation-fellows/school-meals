@@ -22,7 +22,7 @@ class AssistancePrograms extends Component {
     return(
       <Slide id="assistance-programs"
              nextDisabled={!assistancePrograms.isValid} beginsSection>
-        <p className="usa-font-lead">If anyone in your household participates in {assistanceProgramList}, then <strong>{students.informalList(allPeopleCollections)}</strong> {students.length === 1 ? 'is' : 'are'} eligible for free school meals.</p>
+        <p className="usa-font-lead">If anyone in your household participates in {assistanceProgramList}, then {students.informalList(allPeopleCollections)} {students.length === 1 ? 'is' : 'are'} eligible for free school meals.</p>
 
         <div className="well">
           <p>
@@ -36,7 +36,7 @@ class AssistancePrograms extends Component {
           </p>
         </div>
 
-        <p>Does anyone in your household (including you) currently participate in any of the above programs?</p>
+        <label>Does anyone in your household (including you) currently participate in any of the above programs?</label>
 
         <BooleanRadio name="hasAny" object={assistancePrograms} />
 

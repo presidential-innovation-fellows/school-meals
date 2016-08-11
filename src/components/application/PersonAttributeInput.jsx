@@ -15,9 +15,10 @@ class PersonAttributeInput extends Component {
     return(
       <InputField
           name={name}
-          label={label + (required ? ' *' : '')}
+          label={label}
           placeholder={label}
           object={person}
+          required={required}
       />
     )
   }

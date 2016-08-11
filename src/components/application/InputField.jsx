@@ -32,7 +32,7 @@ class InputField extends Component {
   render() {
     const input = this.props
     const controlId = shortid.generate()
-    const className = classnames({
+    const containerClassName = classnames({
       'usa-input-error': input.error,
       'input-field': true
     })
@@ -43,7 +43,8 @@ class InputField extends Component {
       value: input.value == null ? input.object[input.name] : input.value,
       placeholder: input.placeholder || input.label,
       disabled: input.disabled,
-      onChange: this.handleChange
+      onChange: this.handleChange,
+      className: classnames(input.className)
     }
 
     if (input.error) {
@@ -51,8 +52,15 @@ class InputField extends Component {
     }
 
     return (
-      <div className={className}>
-        {input.label && <label for={controlId}>{input.label}</label>}
+      <div className={containerClassName}>
+        {(input.label || input.required) &&
+         <label for={controlId}>
+           {input.label}
+           {input.required &&
+            <span className="usa-additional_text">Required</span>
+           }
+         </label>
+        }
         {input.error &&
          <span className="usa-input-error-message"
                id={`input-error-message-#{controlId}`}
@@ -67,6 +75,7 @@ class InputField extends Component {
 InputField.propTypes = {
   name: PropTypes.string.isRequired,
   object: PropTypes.object.isRequired,
+  classname: PropTypes.string,
   label: PropTypes.string,
   error: PropTypes.string,
   onChange: PropTypes.func,
@@ -74,6 +83,7 @@ InputField.propTypes = {
   placeholder: PropTypes.string,
   type: PropTypes.string,
   disabled: PropTypes.bool,
+  required: PropTypes.bool,
   value: PropTypes.string
 }
 

@@ -1,6 +1,7 @@
 import shortid from 'shortid'
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
+import Fieldset from './Fieldset'
 
 @observer
 class BooleanRadio extends Component {
@@ -50,9 +51,7 @@ class BooleanRadio extends Component {
     }
 
     return (
-      <fieldset className="usa-fieldset-inputs usa-sans">
-        <legend className="usa-sr-only">{legend}</legend>
-
+      <Fieldset legend={legend} type="radio">
         <ul className="usa-unstyled-list">
           <li>
             <input {...props}
@@ -69,7 +68,7 @@ class BooleanRadio extends Component {
             <label for={this.falseId}>{falseLabel}</label>
           </li>
         </ul>
-      </fieldset>
+      </Fieldset>
     )
   }
 }

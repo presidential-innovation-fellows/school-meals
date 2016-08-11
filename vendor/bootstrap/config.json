@@ -386,10 +386,11 @@
     "responsive-utilities.less",
     "glyphicons.less",
     "navs.less",
+    "navbar.less",
     "progress-bars.less",
     "dropdowns.less",
     "tooltip.less"
   ],
   "js": [],
-  "customizerUrl": "http://getbootstrap.com/customize/?id=518e3042fa9a9ae5349d3eabf1c591c7"
+  "customizerUrl": "http://getbootstrap.com/customize/?id=decb0aaa6e844b82dd59b3a8b9010abe"
 }

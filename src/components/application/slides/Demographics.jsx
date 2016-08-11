@@ -15,8 +15,6 @@ class Demographics extends Component {
 
         <p>This information is important and helps to make sure we are fully serving our community. Responding to this section is optional and does not affect your children's eligibility for free or reduced price meals.</p>
 
-        <p>Please complete the following questions:</p>
-
         {students.map(student =>
           <DemographicsForm student={student} key={student.id} />
         )}

@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
+import Fieldset from './Fieldset'
 
 @observer
 class Checkboxes extends Component {
@@ -7,12 +8,11 @@ class Checkboxes extends Component {
     const { legend } = this.props
 
     return (
-      <fieldset className="usa-fieldset-inputs usa-sans">
-        <legend className="usa-sr-only">{legend}</legend>
+      <Fieldset legend={legend} type="checkbox">
         <ul className="usa-unstyled-list">
           {this.props.children}
         </ul>
-      </fieldset>
+      </Fieldset>
     )
   }
 }

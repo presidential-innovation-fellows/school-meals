@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
+import { humanize } from 'underscore.string'
 import BooleanRadio from './BooleanRadio'
 import Form from './Form'
 import IncomeSourceAmount from './IncomeSourceAmount'
@@ -28,16 +29,19 @@ class IncomeSource extends Component {
                                     fieldName="hourlyHours"
                                     placeholder="Hours" />
                 <IncomeSourceHourlyPeriod incomeSource={incomeSource} />
-                {
-                  !!incomeSource.hourlyHours && !!incomeSource.hourlyPeriod &&
-                  <p>
-                    <em>
-                      = ${incomeSource.amount * incomeSource.hourlyHours}
-                      {' '} per {incomeSource.hourlyPeriod}
-                    </em>
-                  </p>
-                }
               </div>
+             }
+             {incomeSource.frequency && !!incomeSource.amount &&
+              (incomeSource.frequency !== 'hourly' ||
+               !!incomeSource.hourlyHours && !!incomeSource.hourlyPeriod) &&
+              <span className="usa-label income-source-total">
+                ${incomeSource.amount *
+                  (incomeSource.frequency === 'hourly' ?
+                   incomeSource.hourlyHours : 1)}
+                {' '} {incomeSource.frequency === 'hourly' ?
+                       `per ${incomeSource.hourlyPeriod}` :
+                       humanize(incomeSource.frequency)}
+              </span>
              }
            </div>
           }
