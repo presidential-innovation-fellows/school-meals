@@ -18,9 +18,9 @@ class Welcome extends React.Component {
           begin.
         </p>
         <p>
-          If you would like to apply using the paper application, you can
-          print it from <a href={organization.paperApplication.url}>here</a> or
-          contact {organization.name} (
+          If you would like to apply using
+          <a href={organization.paperApplication.url}>the paper application</a>,
+          you can print it and return it to us or contact {organization.name} (
           {organization.paperApplication.phone}{' / '}
           {organization.paperApplication.email}{' / '}
           {organization.paperApplication.address}).
