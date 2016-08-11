@@ -32,13 +32,11 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Navigation />
         <Progress navigationData={navigationData}
                   applicationData={applicationData}/>
         <main>
           <div className="usa-grid">
             <div className="usa-width-one-whole">
-              <DevTools />
               <Application applicationData={applicationData} />
             </div>
           </div>

@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import Steps, { Step } from 'rc-steps'
 import { observer } from 'mobx-react'
-import { Grid, Row, Col, ProgressBar } from 'react-bootstrap'
+import { ProgressBar } from 'react-bootstrap'
 import { allStudentsAreFHMR } from '../helpers'
 
 @observer
@@ -65,21 +65,17 @@ class Progress extends Component {
 
     return (
       <div className="progress-container">
-        <Grid>
-          <Row>
-            <Col xs={12} smHidden mdHidden lgHidden>
-              <ProgressBar now={this.percent}
-                           label={!!this.percent && `${this.percent}%`} />
-            </Col>
-            <Col xsHidden sm={12}>
-              <Steps current={stepsCompleted}>
-                {this.steps.map(step =>
-                  <Step {...step} key={step['data-hash']} />
-                 )}
-              </Steps>
-            </Col>
-          </Row>
-        </Grid>
+        <div className="progress-mobile">
+          <ProgressBar now={this.percent}
+                       label={!!this.percent && `${this.percent}%`} />
+        </div>
+        <div className="progress-desktop">
+          <Steps current={stepsCompleted}>
+            {this.steps.map(step =>
+              <Step {...step} key={step['data-hash']} />
+             )}
+          </Steps>
+        </div>
       </div>
     )
   }
