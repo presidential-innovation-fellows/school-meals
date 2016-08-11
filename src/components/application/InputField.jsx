@@ -52,7 +52,7 @@ class InputField extends Component {
 
     return (
       <div className={className}>
-        <label for={controlId}>{input.label}</label>
+        {input.label && <label for={controlId}>{input.label}</label>}
         {input.error &&
          <span className="usa-input-error-message"
                id={`input-error-message-#{controlId}`}
@@ -65,9 +65,9 @@ class InputField extends Component {
 }
 
 InputField.propTypes = {
-  label: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   object: PropTypes.object.isRequired,
+  label: PropTypes.string,
   error: PropTypes.string,
   onChange: PropTypes.func,
   sanitize: PropTypes.func,

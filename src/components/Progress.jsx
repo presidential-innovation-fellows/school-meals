@@ -65,16 +65,18 @@ class Progress extends Component {
 
     return (
       <div className="progress-container">
-        <div className="progress-mobile">
-          <ProgressBar now={this.percent}
-                       label={!!this.percent && `${this.percent}%`} />
-        </div>
-        <div className="progress-desktop">
-          <Steps current={stepsCompleted}>
-            {this.steps.map(step =>
-              <Step {...step} key={step['data-hash']} />
-             )}
-          </Steps>
+        <div className="usa-grid">
+          <div className="progress-mobile">
+            <ProgressBar now={this.percent}
+                         label={!!this.percent && `${this.percent}%`} />
+          </div>
+          <div className="progress-desktop">
+            <Steps current={stepsCompleted}>
+              {this.steps.map(step =>
+                <Step {...step} key={step['data-hash']} />
+               )}
+            </Steps>
+          </div>
         </div>
       </div>
     )

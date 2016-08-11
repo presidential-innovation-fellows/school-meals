@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
-import { FormControl, InputGroup } from 'react-bootstrap'
+import InputField from './InputField'
 
 @observer
 class IncomeSourceAmount extends Component {
@@ -21,16 +21,13 @@ class IncomeSourceAmount extends Component {
   }
 
   render() {
-    const { incomeSource, fieldName, placeholder, addon, type } = this.props
+    const { incomeSource, fieldName, placeholder, type } = this.props
 
     return (
-      <InputGroup>
-        { addon && <InputGroup.Addon>{addon}</InputGroup.Addon> }
-        <FormControl type={type}
-                     placeholder={placeholder}
-                     value={incomeSource[fieldName]}
-                     onChange={this.handleChange} />
-      </InputGroup>
+      <InputField type={type}
+                  object={incomeSource}
+                  name={fieldName}
+                  placeholder={placeholder} />
     )
   }
 }
@@ -40,15 +37,13 @@ IncomeSourceAmount.propTypes = {
   fieldName: PropTypes.string,
   type: PropTypes.string,
   placeholder: PropTypes.string,
-  addon: PropTypes.string,
   onChange: PropTypes.func
 }
 
 IncomeSourceAmount.defaultProps = {
   fieldName: 'amount',
   type: 'phone',
-  placeholder: 'Amount',
-  addon: '$'
+  placeholder: 'Amount'
 }
 
 export default IncomeSourceAmount

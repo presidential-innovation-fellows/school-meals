@@ -2,7 +2,6 @@ import React, { Component, PropTypes } from 'react'
 import { computed } from 'mobx'
 import { observer } from 'mobx-react'
 import BooleanRadio from './BooleanRadio'
-import { Alert, ControlLabel, FormGroup } from 'react-bootstrap'
 import { informalName } from '../../helpers'
 
 @observer
@@ -37,23 +36,25 @@ class IncomeTypeFormGroup extends Component {
     const incomeType = person.incomeTypes[incomeTypeName]
 
     return (
-      <FormGroup validationState={this.isError && 'error' || null}>
+      <div>
         {
           this.isError &&
-          <Alert bsStyle="danger">
-            <h4>Missing Income</h4>
-            <p>
-              You indicated
-              that <strong>{informalName(person)}</strong> receives
-              {' ' + incomeDescription}, but you selected "No" for
-              each related income source on a following page. Please
-              correct this answer or provide details on the following pages.
-            </p>
-          </Alert>
+          <div className="usa-alert usa-alert-warning">
+            <div className="usa-alert-body">
+              <h3 className="usa-alert-heading">Missing Income</h3>
+              <p className="usa-alert-text">
+                You indicated
+                that <strong>{informalName(person)}</strong> receives
+                {' ' + incomeDescription}, but you selected "No" for
+                each related income source on a following page. Please
+                correct this answer or provide details on the following pages.
+              </p>
+            </div>
+          </div>
         }
-        <ControlLabel>{this.props.children}</ControlLabel>
+        <label>{this.props.children}</label>
         <BooleanRadio name={boolAttribute} object={incomeType} />
-      </FormGroup>
+      </div>
     )
   }
 }

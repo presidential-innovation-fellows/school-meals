@@ -1,16 +1,10 @@
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
 import BooleanRadio from './BooleanRadio'
+import Form from './Form'
 import IncomeSourceAmount from './IncomeSourceAmount'
 import IncomeSourceFrequency from './IncomeSourceFrequency'
 import IncomeSourceHourlyPeriod from './IncomeSourceHourlyPeriod'
-import { Row,
-         Col,
-         FormGroup,
-         FormControl,
-         ControlLabel,
-         InputGroup,
-         Radio } from 'react-bootstrap'
 
 @observer
 class IncomeSource extends Component {
@@ -20,44 +14,25 @@ class IncomeSource extends Component {
 
     return (
       <div>
-        <FormGroup>
-
-          <Row>
-            <Col xs={12} sm={8}>
-              <ControlLabel>{this.props.children}</ControlLabel>
-            </Col>
-            <Col xs={12} sm={4}>
-              <BooleanRadio name="has" object={incomeSource} />
-            </Col>
-          </Row>
+        <Form>
+          <label>{this.props.children}</label>
+          <BooleanRadio name="has" object={incomeSource} />
 
           {incomeSource.has &&
            <div>
-             <Row>
-               <Col xs={5} sm={8}>
-                 <IncomeSourceAmount incomeSource={incomeSource} />
-               </Col>
-               <Col xs={7} sm={4}>
-                 <IncomeSourceFrequency incomeSource={incomeSource} />
-               </Col>
-             </Row>
+             <IncomeSourceAmount incomeSource={incomeSource} />
+             <IncomeSourceFrequency incomeSource={incomeSource} />
              {incomeSource.frequency === 'hourly' &&
-              <Row>
-                <Col xs={5} sm={8}>
-                  <IncomeSourceAmount incomeSource={incomeSource}
-                                      fieldName="hourlyHours"
-                                      placeholder="Hours"
-                                      addon="" />
-                </Col>
-                <Col xs={7} sm={4}>
-                  <IncomeSourceHourlyPeriod incomeSource={incomeSource} />
-                </Col>
-              </Row>
+              <div>
+                <IncomeSourceAmount incomeSource={incomeSource}
+                                    fieldName="hourlyHours"
+                                    placeholder="Hours" />
+                <IncomeSourceHourlyPeriod incomeSource={incomeSource} />
+              </div>
              }
            </div>
           }
-
-        </FormGroup>
+        </Form>
       </div>
     )
   }

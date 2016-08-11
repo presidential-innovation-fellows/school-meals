@@ -5,7 +5,6 @@ import Button from '../Button'
 import IncomeSource from '../IncomeSource'
 import { computed } from 'mobx'
 import { observer } from 'mobx-react'
-import { Alert } from 'react-bootstrap'
 import { incomeTypeIsValid, informalName } from '../../../helpers'
 
 @observer
@@ -61,15 +60,18 @@ class ChildIncomeSlide extends Component {
         </IncomeSource>
 
         { this.allSourcesFalse &&
-          <Alert bsStyle="danger">
-            <h4>Missing Income</h4>
-            <p>
-              On a previous page, you indicated
-              that <strong>{name}</strong> receives income.
-              Please enter this income above or correct your previous answer.
-            </p>
-            <Button slideId="child-income">Change previous answer</Button>
-          </Alert>
+          <div className="usa-alert usa-alert-warning">
+            <div className="usa-alert-body">
+              <h3 className="usa-alert-heading">Missing Income</h3>
+              <p className="usa-alert-text">
+                On a previous page, you indicated
+                that <strong>{name}</strong> receives income.
+                Please enter this income above or correct your previous answer.
+              </p>
+              <Button className="usa-button-gray"
+                      slideId="child-income">Change previous answer</Button>
+            </div>
+          </div>
         }
       </Slide>
     )

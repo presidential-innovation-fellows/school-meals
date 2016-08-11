@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
-import { Grid, Row, Col } from 'react-bootstrap'
 import DevTools from 'mobx-react-devtools'
 import Application from './application/Application'
 import ApplicationData from '../stores/ApplicationData'

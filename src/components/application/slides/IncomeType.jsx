@@ -4,7 +4,6 @@ import Slide from '../Slide'
 import IncomeTypeDefaultText from './IncomeTypeDefaultText'
 import { computed } from 'mobx'
 import { observer } from 'mobx-react'
-import { Alert } from 'react-bootstrap'
 import { incomeTypeIsValid, informalName } from '../../../helpers'
 
 @observer
@@ -36,16 +35,19 @@ class IncomeType extends Component {
         {this.props.children}
 
         { this.allSourcesFalse &&
-          <Alert bsStyle="danger">
-            <h4>Missing Income</h4>
-            <p>
-              On a previous page, you indicated
-              that <strong>{personName}</strong> receives income from
-              one of the above sources. Please enter this income above or
-              correct your previous answer.
-            </p>
-            <Button slideId={`income/${person.id}`}>Change previous answer</Button>
-          </Alert>
+          <div className="usa-alert usa-alert-warning">
+            <div className="usa-alert-body">
+              <h3 className="usa-alert-heading">Missing Income</h3>
+              <p className="usa-alert-text">
+                On a previous page, you indicated
+                that <strong>{personName}</strong> receives income from
+                one of the above sources. Please enter this income above or
+                correct your previous answer.
+              </p>
+              <Button slideId={`income/${person.id}`}
+                      className="usa-button-gray">Change previous answer</Button>
+            </div>
+          </div>
         }
       </Slide>
     )
