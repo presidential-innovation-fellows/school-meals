@@ -11,6 +11,11 @@ a:hover {
   color: #205493;
 }
 
+input[type="checkbox"],
+input[type="radio"] {
+  cursor: pointer;
+}
+
 ol ul,
 ol ol,
 ul ul,
@@ -37,6 +42,10 @@ main {
 
 abbr[title] {
   border-bottom: 0;
+}
+
+label small {
+  font-weight: normal;
 }
 
 .usa-alert-heading {
@@ -97,10 +106,6 @@ abbr[title] {
 .person-form {
   margin-bottom: 1em;
   padding: .5em 0;
-}
-
-.label small {
-  font-weight: 400;
 }
 
 .progress-container {

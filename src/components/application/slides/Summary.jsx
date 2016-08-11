@@ -270,8 +270,8 @@ class Summary extends Component {
         </Well>
 
         <Checkboxes legend="Certification">
-          <Checkbox name="certifiedCorrect" object={applicationData} inline>
-            <strong>I certify that <span class="usa-label-big">{this.totalHouseholdMembers}</span> people are in my household and that our household income is about <span class="usa-label-big">${numberFormat(this.totalMonthlyHouseholdIncome)}</span> per month.</strong>
+          <Checkbox name="certifiedCorrect" object={applicationData}>
+            <strong>I certify that <span className="usa-label-big">{this.totalHouseholdMembers}</span> people are in my household and that our household income is about <span className="usa-label-big">${numberFormat(this.totalMonthlyHouseholdIncome)}</span> per month.</strong>
           </Checkbox>
         </Checkboxes>
       </Slide>
