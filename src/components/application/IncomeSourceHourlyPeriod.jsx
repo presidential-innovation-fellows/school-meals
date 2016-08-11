@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
-import { FormControl } from 'react-bootstrap'
 
 @observer
 class IncomeSourceHourlyPeriod extends Component {
@@ -25,14 +24,13 @@ class IncomeSourceHourlyPeriod extends Component {
     const hours = incomeSource.hourlyHours
 
     return (
-      <FormControl componentClass="select"
-                   value={incomeSource[fieldName]}
-                   onChange={this.handleChange}>
+      <select value={incomeSource[fieldName]}
+              onChange={this.handleChange}>
         <option value="" disabled>{hours} hours per…</option>
         <option value="day">{hours} hours per day</option>
         <option value="week">{hours} hours per week</option>
         <option value="month">{hours} hours per month</option>
-      </FormControl>
+      </select>
     )
   }
 }

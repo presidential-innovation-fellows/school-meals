@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
-import { FormControl } from 'react-bootstrap'
 
 @observer
 class IncomeSourceFrequency extends Component {
@@ -24,9 +23,8 @@ class IncomeSourceFrequency extends Component {
     const { incomeSource, fieldName } = this.props
 
     return (
-      <FormControl componentClass="select"
-                   value={incomeSource[fieldName]}
-                   onChange={this.handleChange}>
+      <select value={incomeSource[fieldName]}
+              onChange={this.handleChange}>
         <option value="" disabled>Frequency…</option>
         <option value="anually">Anually</option>
         <option value="monthly">Monthly</option>
@@ -34,7 +32,7 @@ class IncomeSourceFrequency extends Component {
         <option value="everyTwoWeeks">Every two weeks</option>
         <option value="weekly">Weekly</option>
         <option value="hourly">Hourly</option>
-      </FormControl>
+      </select>
     )
   }
 }

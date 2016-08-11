@@ -28,6 +28,15 @@ class IncomeSource extends Component {
                                     fieldName="hourlyHours"
                                     placeholder="Hours" />
                 <IncomeSourceHourlyPeriod incomeSource={incomeSource} />
+                {
+                  !!incomeSource.hourlyHours && !!incomeSource.hourlyPeriod &&
+                  <p>
+                    <em>
+                      = ${incomeSource.amount * incomeSource.hourlyHours}
+                      {' '} per {incomeSource.hourlyPeriod}
+                    </em>
+                  </p>
+                }
               </div>
              }
            </div>
