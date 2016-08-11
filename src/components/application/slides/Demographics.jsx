@@ -19,8 +19,7 @@ class Demographics extends Component {
 
         {students.map(student =>
           <DemographicsForm student={student} key={student.id} />
-         )}
-        </div>
+        )}
       </Slide>
     )
   }

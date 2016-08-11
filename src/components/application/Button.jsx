@@ -5,13 +5,19 @@ import { observer } from 'mobx-react'
 @observer
 class Button extends Component {
   render() {
-    const { disabled, onClick, type } = this.props
-    let { className } = this.props
+    const { disabled, type, slideId } = this.props
+    let { className, onClick } = this.props
 
     if (typeof className === 'string') {
       let key = className
       className = {}
       className[key] = true
+    }
+
+    if (slideId) {
+      onClick = function() {
+        window.location.hash = '#/' + slideId
+      }
     }
 
     className['usa-button-disabled'] = disabled
@@ -34,7 +40,8 @@ Button.propTypes = {
     PropTypes.string
   ]),
   disabled: PropTypes.bool,
-  onClick: PropTypes.func.isRequired,
+  onClick: PropTypes.func,
+  slideId: PropTypes.string,
   type: PropTypes.string
 }
 

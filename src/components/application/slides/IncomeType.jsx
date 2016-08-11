@@ -44,7 +44,7 @@ class IncomeType extends Component {
               one of the above sources. Please enter this income above or
               correct your previous answer.
             </p>
-            <Button href={`#/income/${person.id}`}>Change previous answer</Button>
+            <Button slideId={`income/${person.id}`}>Change previous answer</Button>
           </Alert>
         }
       </Slide>
