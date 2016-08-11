@@ -3,7 +3,7 @@ import { observer } from 'mobx-react'
 import { FormControl } from 'react-bootstrap'
 
 @observer
-class IncomeSourceFrequency extends Component {
+class IncomeSourceHourlyPeriod extends Component {
   constructor (props) {
     super(props)
     this.defaultOnChange = this.defaultOnChange.bind(this)
@@ -22,31 +22,29 @@ class IncomeSourceFrequency extends Component {
 
   render() {
     const { incomeSource, fieldName } = this.props
+    const hours = incomeSource.hourlyHours
 
     return (
       <FormControl componentClass="select"
                    value={incomeSource[fieldName]}
                    onChange={this.handleChange}>
-        <option value="" disabled>Frequency…</option>
-        <option value="anually">Anually</option>
-        <option value="monthly">Monthly</option>
-        <option value="twicePerMonth">Twice per month</option>
-        <option value="everyTwoWeeks">Every two weeks</option>
-        <option value="weekly">Weekly</option>
-        <option value="hourly">Hourly</option>
+        <option value="" disabled>{hours} hours per…</option>
+        <option value="day">{hours} hours per day</option>
+        <option value="week">{hours} hours per week</option>
+        <option value="month">{hours} hours per month</option>
       </FormControl>
     )
   }
 }
 
-IncomeSourceFrequency.propTypes = {
+IncomeSourceHourlyPeriod.propTypes = {
   incomeSource: PropTypes.object.isRequired,
   fieldName: PropTypes.string,
   onChange: PropTypes.func
 }
 
-IncomeSourceFrequency.defaultProps = {
-  fieldName: 'frequency'
+IncomeSourceHourlyPeriod.defaultProps = {
+  fieldName: 'hourlyPeriod'
 }
 
-export default IncomeSourceFrequency
+export default IncomeSourceHourlyPeriod

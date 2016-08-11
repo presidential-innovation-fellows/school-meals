@@ -170,7 +170,9 @@ class PersonCollection {
               source: sourceKey,
               type: type,
               amount: source.amount,
-              frequency: source.frequency
+              frequency: source.frequency,
+              hourlyHours: source.hourlyHours,
+              hourlyPeriod: source.hourlyPeriod
             })
           }
         }
@@ -228,61 +230,61 @@ class AdultCollection extends PersonCollection {
           isApplicable: null,
           isDeployed: null,
           sources: {
-            'basic':     { has: null, amount: '', frequency: '' },
-            'cashBonus': { has: null, amount: '', frequency: '' },
-            'allowance': { has: null, amount: '', frequency: '' }
+            'basic':     { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
+            'cashBonus': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
+            'allowance': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' }
           }
         },
         employment: {
           isApplicable: null,
           sources: {
-            'salaryWages':    { has: null, amount: '', frequency: '' },
-            'tips':           { has: null, amount: '', frequency: '' },
-            'commission':     { has: null, amount: '', frequency: '' },
-            'cashBonus':      { has: null, amount: '', frequency: '' },
-            'selfEmployment': { has: null, amount: '', frequency: '' }
+            'salaryWages':    { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
+            'tips':           { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
+            'commission':     { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
+            'cashBonus':      { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
+            'selfEmployment': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' }
           }
         },
         publicAssistance: {
           isApplicable: null,
           sources: {
-            'ssi':        { has: null, amount: '', frequency: '' },
-            'stateLocal': { has: null, amount: '', frequency: '' }
+            'ssi':        { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
+            'stateLocal': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' }
           }
         },
         spousal: {
           isApplicable: null,
           sources: {
-            'alimony':      { has: null, amount: '', frequency: '' },
-            'childSupport': { has: null, amount: '', frequency: '' }
+            'alimony':      { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
+            'childSupport': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' }
           }
         },
         unemployment: {
           isApplicable: null,
           sources: {
-            'unemployment': { has: null, amount: '', frequency: '' },
-            'workersComp':  { has: null, amount: '', frequency: '' },
-            'strike':       { has: null, amount: '', frequency: '' },
-            'ssdi':         { has: null, amount: '', frequency: '' },
-            'veteran':      { has: null, amount: '', frequency: '' }
+            'unemployment': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
+            'workersComp':  { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
+            'strike':       { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
+            'ssdi':         { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
+            'veteran':      { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' }
           }
         },
         retirement: {
           isApplicable: null,
           sources: {
-            'socialSecurity': { has: null, amount: '', frequency: '' },
-            'privatePension': { has: null, amount: '', frequency: '' }
+            'socialSecurity': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
+            'privatePension': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' }
           }
         },
         other: {
           isApplicable: null,
           sources: {
-            'regularCashPayments': { has: null, amount: '', frequency: '' },
-            'rentalIncome':        { has: null, amount: '', frequency: '' },
-            'earnedInterest':      { has: null, amount: '', frequency: '' },
-            'investmentIncome':    { has: null, amount: '', frequency: '' },
-            'annuity':             { has: null, amount: '', frequency: '' },
-            'other':               { has: null, amount: '', frequency: '' }
+            'regularCashPayments': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
+            'rentalIncome':        { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
+            'earnedInterest':      { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
+            'investmentIncome':    { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
+            'annuity':             { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
+            'other':               { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' }
           }
         }
       }
@@ -302,11 +304,11 @@ class ChildCollection extends PersonCollection {
         child: {
           isApplicable: null,
           sources: {
-            'job':                 { has: null, amount: '', frequency: '' },
-            'socialSecurity':      { has: null, amount: '', frequency: '' },
-            'friendsFamily':       { has: null, amount: '', frequency: '' },
-            'pensionAnnuityTrust': { has: null, amount: '', frequency: '' },
-            'other':               { has: null, amount: '', frequency: '' }
+            'job':                 { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
+            'socialSecurity':      { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
+            'friendsFamily':       { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
+            'pensionAnnuityTrust': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
+            'other':               { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' }
           }
         }
       }

@@ -145,7 +145,15 @@ export function incomeTypeIsValid(incomeType, mustNotBeNull = []) {
       return incomeSources
         .map(incomeSource => { return(
           incomeSource.has === false ||
-          !!(incomeSource.has && incomeSource.amount && incomeSource.frequency)
+          !!(
+            incomeSource.has &&
+            incomeSource.amount &&
+            incomeSource.frequency &&
+            (
+              incomeSource.frequency !== 'hourly' ||
+              (incomeSource.hourlyHours && incomeSource.hourlyPeriod)
+            )
+          )
         )})
         .reduce((a, b) => a && b, true)
       break

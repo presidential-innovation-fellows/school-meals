@@ -21,13 +21,13 @@ class IncomeSourceAmount extends Component {
   }
 
   render() {
-    const { incomeSource, fieldName } = this.props
+    const { incomeSource, fieldName, placeholder, addon, type } = this.props
 
     return (
       <InputGroup>
-        <InputGroup.Addon>$</InputGroup.Addon>
-        <FormControl type="phone"
-                     placeholder="Amount"
+        { addon && <InputGroup.Addon>{addon}</InputGroup.Addon> }
+        <FormControl type={type}
+                     placeholder={placeholder}
                      value={incomeSource[fieldName]}
                      onChange={this.handleChange} />
       </InputGroup>
@@ -38,11 +38,17 @@ class IncomeSourceAmount extends Component {
 IncomeSourceAmount.propTypes = {
   incomeSource: PropTypes.object.isRequired,
   fieldName: PropTypes.string,
+  type: PropTypes.string,
+  placeholder: PropTypes.string,
+  addon: PropTypes.string,
   onChange: PropTypes.func
 }
 
 IncomeSourceAmount.defaultProps = {
-  fieldName: 'amount'
+  fieldName: 'amount',
+  type: 'phone',
+  placeholder: 'Amount',
+  addon: '$'
 }
 
 export default IncomeSourceAmount
