@@ -4,7 +4,6 @@ import IncomeTypeDefaultText from './IncomeTypeDefaultText'
 import IncomeSource from '../IncomeSource'
 import BooleanRadio from '../BooleanRadio'
 import { observer } from 'mobx-react'
-import { ControlLabel } from 'react-bootstrap'
 import { organization } from '../../../config'
 
 @observer

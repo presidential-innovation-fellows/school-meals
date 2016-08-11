@@ -79,6 +79,7 @@ abbr[title] {
 
 .slide {
   display: none;
+  position: relative;
 }
 
 .slide.current {
@@ -229,13 +230,11 @@ abbr[title] {
   padding-right: 3em;
 }
 
-.page-header .help {
+.help-button {
   position: absolute;
   right: 0;
   top: 0;
 }
-
-
 
 .progress {
   overflow: hidden;

@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
-import { Well } from 'react-bootstrap'
 import { informalName } from '../../../helpers'
 
 @observer

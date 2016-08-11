@@ -2,7 +2,6 @@ import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
 import IncomeTypeFormGroup from '../IncomeTypeFormGroup'
 import { observer } from 'mobx-react'
-import { ControlLabel } from 'react-bootstrap'
 import { informalName } from '../../../helpers'
 
 @observer

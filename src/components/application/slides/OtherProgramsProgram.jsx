@@ -3,7 +3,6 @@ import BooleanRadio from '../BooleanRadio'
 import Checkbox from '../Checkbox'
 import Checkboxes from '../Checkboxes'
 import { observer } from 'mobx-react'
-import { ControlLabel } from "react-bootstrap"
 import { informalName } from '../../../helpers'
 
 @observer
@@ -14,9 +13,7 @@ class OtherProgramsProgram extends Component {
 
     return (
       <div>
-        <ControlLabel>
-          {this.props.children}
-        </ControlLabel>
+        <label>{this.props.children}</label>
 
         {oneStudent ?
          <BooleanRadio object={students[0]} name={attribute} />

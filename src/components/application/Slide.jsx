@@ -30,9 +30,9 @@ class Slide extends Component {
       <section className="slide" id={this.props.id}
                data-begins-section={this.props.beginsSection}>
         <h1>
-          {this.props.header}
+          {this.props.header || <span>&nbsp;</span>}
           {this.props.showHelp &&
-            <a onClick={this.handleHelp} title="Help" className="help">
+            <a onClick={this.handleHelp} title="Help" className="help-button">
               <Glyphicon glyph="question-sign" />
             </a>
           }

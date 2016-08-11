@@ -1,9 +1,10 @@
 import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
+import Form from '../Form'
 import Checkbox from '../Checkbox'
 import Checkboxes from '../Checkboxes'
+import InputField from '../InputField'
 import { observer } from 'mobx-react'
-import { FormControl, InputGroup } from 'react-bootstrap'
 import { fullName } from '../../../helpers'
 
 @observer
@@ -13,9 +14,13 @@ class Signature extends Component {
     this.handleSsnChange = this.handleSsnChange.bind(this)
   }
 
-  handleSsnChange(event) {
-    const value = event.target.value
+  handleSsnChange(name, value) {
+    // only allow numbers
+    if (value && parseInt(value).toString() !== value) {
+      return
+    }
 
+    // only allow 4 digits
     if (value.length > 4) {
       return
     }
@@ -36,23 +41,21 @@ class Signature extends Component {
         <p className="usa-font-lead">Great, you are almost done!</p>
         <p>Please provide the last four digits of the Social Security number for the person that signed at the beginning of the application <strong>({fullName(attestor)})</strong>. If that person does not have a Social Security number, please check the box below labeled "No <abbr title="Social Security number">SSN</abbr>".</p>
 
-        <InputGroup>
-          <FormControl type="phone"
-                       step="1"
-                       min="0001"
-                       max="9999"
-                       placeholder="xxxx"
-                       pattern="\d{4}"
-                       value={signature.hasSsn && signature.ssnLastFour || ''}
-                       disabled={!signature.hasSsn}
-                       onChange={this.handleSsnChange} />
-        </InputGroup>
+        <Form>
+          <InputField type="phone"
+                      name="ssnLastFour"
+                      placeholder="xxxx"
+                      object={signature}
+                      value={signature.hasSsn && signature.ssnLastFour || ''}
+                      disabled={!signature.hasSsn}
+                      onChange={this.handleSsnChange} />
 
-        <Checkboxes legend="No <abbr title='Social Security number'>SSN</abbr>">
-          <Checkbox object={signature} name="hasSsn" invert>
-            No SSN
-          </Checkbox>
-        </Checkboxes>
+          <Checkboxes legend="No <abbr title='Social Security number'>SSN</abbr>">
+            <Checkbox object={signature} name="hasSsn" invert>
+              No SSN
+            </Checkbox>
+          </Checkboxes>
+        </Form>
 
         <p>
           <small>

@@ -2,7 +2,6 @@ import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
 import BooleanRadio from '../BooleanRadio'
 import PersonCollection from '../PersonCollection'
-import { ControlLabel } from 'react-bootstrap'
 import { computed, observable } from 'mobx'
 import { observer } from 'mobx-react'
 import { organization } from '../../../config'
@@ -77,21 +76,21 @@ class OtherChildren extends Component {
 
         <p>Both income and total household size are important for determining eligibility for school meal benefits. Remember, for the purposes of applying for school meal benefits, a household is defined as a group of people, related or unrelated, that usually live together and share income and expenses. If this sounds complicated, don’t worry! We will help you determine who should be included in your application, as well as which income sources to report.</p>
 
-        <ControlLabel>Are there any students in your household that are in grade 12 or below and attend school but not {organization.name}?</ControlLabel>
+        <label>Are there any students in your household that are in grade 12 or below and attend school but not {organization.name}?</label>
 
         <BooleanRadio name="otherStudents" object={this.categories}
                       onChange={this.onChange} />
 
-        <ControlLabel>
+        <label>
           Is there anyone in your household that attends day care or pre-school, or is not of school age, including infants, not including those you already named <strong>({informalList(alreadyNamed, allPeopleCollections)})</strong>?
-        </ControlLabel>
+        </label>
 
         <BooleanRadio name="youngChildren" object={this.categories}
                       onChange={this.onChange} />
 
-        <ControlLabel>
+        <label>
           Is there anyone 18 years of age or younger living in your household that does not currently attend school, again, not including those you have already named <strong>({informalList(alreadyNamed, allPeopleCollections)})</strong>?
-        </ControlLabel>
+        </label>
 
         <BooleanRadio name="otherChildren" object={this.categories}
                       onChange={this.onChange} />

@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap'
 import { organization } from '../config'
 
 @observer

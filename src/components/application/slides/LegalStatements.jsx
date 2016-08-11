@@ -1,6 +1,5 @@
 import React from 'react'
 import Slide from '../Slide'
-import { Well } from 'react-bootstrap'
 
 const LegalStatements = () => {
   return (

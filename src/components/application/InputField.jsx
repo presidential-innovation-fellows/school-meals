@@ -40,7 +40,7 @@ class InputField extends Component {
       id: controlId,
       name: input.name,
       type: input.type,
-      value: input.object[input.name],
+      value: input.value == null ? input.object[input.name] : input.value,
       placeholder: input.placeholder || input.label,
       disabled: input.disabled,
       onChange: this.handleChange
@@ -73,7 +73,8 @@ InputField.propTypes = {
   sanitize: PropTypes.func,
   placeholder: PropTypes.string,
   type: PropTypes.string,
-  disabled: PropTypes.bool
+  disabled: PropTypes.bool,
+  value: PropTypes.string
 }
 
 InputField.defaultProps = {
