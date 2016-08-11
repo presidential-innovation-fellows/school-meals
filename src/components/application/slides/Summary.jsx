@@ -49,7 +49,18 @@ class Summary extends Component {
         case 'weekly':
           return amount * 52.1428571
         case 'hourly':
-          return amount * 2087.0
+          let hours = parseInt(income.hourlyHours, 10)
+
+          switch (income.hourlyPeriod) {
+            case 'day':
+              return amount * hours * 365.242199
+            case 'week':
+              return amount * hours * 52.1428571
+            case 'month':
+              return amount * hours * 12.0
+            default:
+              return 0
+          }
         default:
           return 0
       }
@@ -188,7 +199,11 @@ class Summary extends Component {
                      (<Link id={`income/${income.person.id}/${income.type}`}>edit</Link>)
                    </td>
                    <td>${numberFormat(parseInt(income.amount, 10))}</td>
-                   <td>{humanize(income.frequency)}</td>
+                   <td>
+                     {humanize(income.frequency)}
+                     {income.frequency === 'hourly' &&
+                      ` (${income.hourlyHours} hrs./${income.hourlyPeriod})`}
+                   </td>
                  </tr>
                 )}
                </tbody>
