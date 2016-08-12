@@ -38,6 +38,7 @@ class Contact extends Component {
               label="Email"
               type="email"
               additional="Optional"
+              pattern="^\S+@\S+\.\S+$"
               object={contact}
           />
 
