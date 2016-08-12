@@ -26,7 +26,6 @@ class IncomeSourceAmount extends Component {
                   size="small"
                   placeholder={placeholder}
                   onChange={this.handleChange}
-                  className={{'usa-input-success': value}}
                   value={value ? `${prepend}${value}` : null} />
     )
   }

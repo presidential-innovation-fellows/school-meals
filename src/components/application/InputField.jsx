@@ -33,8 +33,19 @@ class InputField extends Component {
     const input = this.props
     const controlId = shortid.generate()
     const additional = input.additional || input.required && 'Required'
+    const value = input.object[input.name]
 
-    let className = classnames(input.className)
+    let className = input.className
+    if (typeof className === 'string') {
+      let key = className
+      className = {}
+      className[key] = true
+    }
+    className = classnames(className)
+    if (input.reflectSuccessOnValue && value && !input.error) {
+      className += ' usa-input-success'
+    }
+
     let containerClassName = classnames({
       'usa-input-error': input.error,
       'usa-input-grid': input.grid,
@@ -53,12 +64,12 @@ class InputField extends Component {
       id: controlId,
       name: input.name,
       type: input.type,
-      value: input.value == null ? input.object[input.name] : input.value,
+      value: input.value == null ? value : input.value,
       placeholder: input.placeholder || input.label,
       disabled: input.disabled,
       onChange: this.handleChange,
-      className: className,
-      required: input.required
+      required: input.required,
+      className
     }
 
     if (input.error) {
@@ -89,7 +100,7 @@ class InputField extends Component {
 InputField.propTypes = {
   name: PropTypes.string.isRequired,
   object: PropTypes.object.isRequired,
-  classname: PropTypes.string,
+  className: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
   label: PropTypes.string,
   error: PropTypes.string,
   onChange: PropTypes.func,
@@ -100,12 +111,15 @@ InputField.propTypes = {
   required: PropTypes.bool,
   grid: PropTypes.bool,
   value: PropTypes.string,
+  reflectSuccessOnValue: PropTypes.bool,
   size: PropTypes.oneOf(['tiny', 'small', 'medium'])
 }
 
 InputField.defaultProps = {
-  type: 'text',
-  disabled: false
+  className: {},
+  disabled: false,
+  reflectSuccessOnValue: true,
+  type: 'text'
 }
 
 export default InputField
