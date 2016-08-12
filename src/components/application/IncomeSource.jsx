@@ -56,7 +56,8 @@ class IncomeSource extends Component {
              }
              {error && <span className="usa-input-error-message"
                              role="alert">{error}</span>}
-             {!error && <IncomeSourceSummary incomeSource={incomeSource} />}
+             {!error && incomeSource.frequency === 'hourly' &&
+              <IncomeSourceSummary incomeSource={incomeSource} />}
            </div>
           }
         </Form>
