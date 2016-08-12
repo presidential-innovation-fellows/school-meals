@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react'
+import Alert from '../Alert'
 import Button from '../Button'
 import Slide from '../Slide'
 import IncomeTypeDefaultText from './IncomeTypeDefaultText'
@@ -35,19 +36,14 @@ class IncomeType extends Component {
         {this.props.children}
 
         { this.allSourcesFalse &&
-          <div className="usa-alert usa-alert-warning">
-            <div className="usa-alert-body">
-              <h3 className="usa-alert-heading">Missing Income</h3>
-              <p className="usa-alert-text">
-                On a previous page, you indicated
-                that <strong>{personName}</strong> receives income from
-                one of the above sources. Please enter this income above or
-                correct your previous answer.
-              </p>
-              <Button slideId={`income/${person.id}`}
-                      className="usa-button-gray">Change previous answer</Button>
-            </div>
-          </div>
+          <Alert heading="Missing Income">
+            On a previous page, you indicated
+            that <strong>{personName}</strong> receives income from
+            one of the above sources. Please enter this income above or
+            correct your previous answer.
+            <Button slideId={`income/${person.id}`}
+                    className="usa-button-gray">Change previous answer</Button>
+          </Alert>
         }
       </Slide>
     )

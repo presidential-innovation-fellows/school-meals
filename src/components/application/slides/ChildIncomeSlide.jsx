@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
 import BooleanRadio from '../BooleanRadio'
+import Alert from '../Alert'
 import Button from '../Button'
 import IncomeSource from '../IncomeSource'
 import { computed } from 'mobx'
@@ -60,18 +61,13 @@ class ChildIncomeSlide extends Component {
         </IncomeSource>
 
         { this.allSourcesFalse &&
-          <div className="usa-alert usa-alert-warning">
-            <div className="usa-alert-body">
-              <h3 className="usa-alert-heading">Missing Income</h3>
-              <p className="usa-alert-text">
-                On a previous page, you indicated
-                that <strong>{name}</strong> receives income.
-                Please enter this income above or correct your previous answer.
-              </p>
-              <Button className="usa-button-gray"
-                      slideId="child-income">Change previous answer</Button>
-            </div>
-          </div>
+          <Alert heading="Missing Income">
+            On a previous page, you indicated
+            that <strong>{name}</strong> receives income.
+            Please enter this income above or correct your previous answer.
+            <Button className="usa-button-gray"
+                    slideId="child-income">Change previous answer</Button>
+          </Alert>
         }
       </Slide>
     )
