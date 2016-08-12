@@ -1,3 +1,4 @@
+import classnames from 'classnames'
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
 
@@ -21,18 +22,22 @@ class IncomeSourceFrequency extends Component {
 
   render() {
     const { incomeSource, fieldName } = this.props
+    const value = incomeSource[fieldName]
 
     return (
-      <select value={incomeSource[fieldName]}
-              onChange={this.handleChange}>
-        <option value="" disabled>Frequency…</option>
-        <option value="anually">Anually</option>
-        <option value="monthly">Monthly</option>
-        <option value="twicePerMonth">Twice per month</option>
-        <option value="everyTwoWeeks">Every two weeks</option>
-        <option value="weekly">Weekly</option>
-        <option value="hourly">Hourly</option>
-      </select>
+      <div className="usa-input-grid usa-input-grid-medium">
+        <select value={value}
+                className={classnames({'usa-input-success': value})}
+                onChange={this.handleChange}>
+          <option value="" disabled>Frequency…</option>
+          <option value="anually">Anually</option>
+          <option value="monthly">Monthly</option>
+          <option value="twicePerMonth">Twice per month</option>
+          <option value="everyTwoWeeks">Every two weeks</option>
+          <option value="weekly">Weekly</option>
+          <option value="hourly">Hourly</option>
+        </select>
+      </div>
     )
   }
 }

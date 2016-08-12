@@ -1,11 +1,11 @@
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
-import { humanize } from 'underscore.string'
 import BooleanRadio from './BooleanRadio'
 import Form from './Form'
 import IncomeSourceAmount from './IncomeSourceAmount'
 import IncomeSourceFrequency from './IncomeSourceFrequency'
 import IncomeSourceHourlyPeriod from './IncomeSourceHourlyPeriod'
+import IncomeSourceSummary from './IncomeSourceSummary'
 
 @observer
 class IncomeSource extends Component {
@@ -20,29 +20,21 @@ class IncomeSource extends Component {
           <BooleanRadio name="has" object={incomeSource} />
 
           {incomeSource.has &&
-           <div>
-             <IncomeSourceAmount incomeSource={incomeSource} />
-             <IncomeSourceFrequency incomeSource={incomeSource} />
+           <div className="income-source-details">
+             <div>
+               <IncomeSourceAmount incomeSource={incomeSource} />
+               <IncomeSourceFrequency incomeSource={incomeSource} />
+             </div>
              {incomeSource.frequency === 'hourly' &&
               <div>
                 <IncomeSourceAmount incomeSource={incomeSource}
                                     fieldName="hourlyHours"
-                                    placeholder="Hours" />
+                                    placeholder="Hours"
+                                    prepend="" />
                 <IncomeSourceHourlyPeriod incomeSource={incomeSource} />
               </div>
              }
-             {incomeSource.frequency && !!incomeSource.amount &&
-              (incomeSource.frequency !== 'hourly' ||
-               !!incomeSource.hourlyHours && !!incomeSource.hourlyPeriod) &&
-              <span className="usa-label income-source-total">
-                ${incomeSource.amount *
-                  (incomeSource.frequency === 'hourly' ?
-                   incomeSource.hourlyHours : 1)}
-                {' '} {incomeSource.frequency === 'hourly' ?
-                       `per ${incomeSource.hourlyPeriod}` :
-                       humanize(incomeSource.frequency)}
-              </span>
-             }
+             <IncomeSourceSummary incomeSource={incomeSource} />
            </div>
           }
         </Form>

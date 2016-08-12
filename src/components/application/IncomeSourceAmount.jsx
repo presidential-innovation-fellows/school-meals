@@ -6,28 +6,28 @@ import InputField from './InputField'
 class IncomeSourceAmount extends Component {
   constructor (props) {
     super(props)
-    this.defaultOnChange = this.defaultOnChange.bind(this)
     this.handleChange = this.handleChange.bind(this)
   }
 
-  handleChange(event) {
-    const handler = this.props.onChange || this.defaultOnChange
-    handler(this.props.fieldName, event.target.value)
-  }
-
-  // side effect, but easier to handle once here than pass in every time
-  defaultOnChange(fieldName, value) {
+  handleChange(fieldName, value) {
+    value = value.replace(/[^\d.]/g, '')
     this.props.incomeSource[fieldName] = value
   }
 
   render() {
-    const { incomeSource, fieldName, placeholder, type } = this.props
+    const { incomeSource, fieldName, placeholder, prepend, type } = this.props
+    const value = incomeSource[fieldName]
 
     return (
       <InputField type={type}
                   object={incomeSource}
                   name={fieldName}
-                  placeholder={placeholder} />
+                  grid={true}
+                  size="small"
+                  placeholder={placeholder}
+                  onChange={this.handleChange}
+                  className={{'usa-input-success': value}}
+                  value={value ? `${prepend}${value}` : null} />
     )
   }
 }
@@ -37,13 +37,15 @@ IncomeSourceAmount.propTypes = {
   fieldName: PropTypes.string,
   type: PropTypes.string,
   placeholder: PropTypes.string,
+  prepend: PropTypes.string,
   onChange: PropTypes.func
 }
 
 IncomeSourceAmount.defaultProps = {
   fieldName: 'amount',
   type: 'phone',
-  placeholder: 'Amount'
+  placeholder: 'Amount',
+  prepend: '$'
 }
 
 export default IncomeSourceAmount

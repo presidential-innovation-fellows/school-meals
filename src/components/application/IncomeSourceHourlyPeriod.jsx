@@ -1,3 +1,4 @@
+import classnames from 'classnames'
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
 
@@ -22,15 +23,19 @@ class IncomeSourceHourlyPeriod extends Component {
   render() {
     const { incomeSource, fieldName } = this.props
     const hours = incomeSource.hourlyHours
+    const value = incomeSource[fieldName]
 
     return (
-      <select value={incomeSource[fieldName]}
-              onChange={this.handleChange}>
-        <option value="" disabled>{hours} hours per…</option>
-        <option value="day">{hours} hours per day</option>
-        <option value="week">{hours} hours per week</option>
-        <option value="month">{hours} hours per month</option>
-      </select>
+      <div className="usa-input-grid usa-input-grid-medium">
+        <select value={incomeSource[fieldName]}
+                className={classnames({'usa-input-success': value})}
+                onChange={this.handleChange}>
+          <option value="" disabled>{hours} hours per…</option>
+          <option value="day">{hours} hours per day</option>
+          <option value="week">{hours} hours per week</option>
+          <option value="month">{hours} hours per month</option>
+        </select>
+      </div>
     )
   }
 }

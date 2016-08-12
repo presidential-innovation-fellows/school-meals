@@ -53,8 +53,17 @@ label small {
   font-weight: normal;
 }
 
-.income-source-total {
+.income-source-details .usa-input-grid input,
+.income-source-details .usa-input-grid select {
+  margin-bottom: 1rem;
+}
+
+.income-source-summary {
   text-transform: lowercase;
+}
+
+select.usa-input-success {
+  padding-top: 8px;
 }
 
 .usa-alert-heading {
