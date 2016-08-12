@@ -1,6 +1,6 @@
-import classnames from 'classnames'
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
+import Select from './Select'
 
 @observer
 class IncomeSourceHourlyPeriod extends Component {
@@ -24,17 +24,18 @@ class IncomeSourceHourlyPeriod extends Component {
     const { incomeSource, fieldName } = this.props
     const hours = incomeSource.hourlyHours
     const value = incomeSource[fieldName]
+    const prefix = (hours ? `${hours} ` : '') +
+                   'hour' + (parseInt(hours) === 1 ? '' : 's') + ' per'
 
     return (
       <div className="usa-input-grid usa-input-grid-medium">
-        <select value={incomeSource[fieldName]}
-                className={classnames({'usa-input-success': value})}
+        <Select value={incomeSource[fieldName]}
                 onChange={this.handleChange}>
-          <option value="" disabled>{hours} hours per…</option>
-          <option value="day">{hours} hours per day</option>
-          <option value="week">{hours} hours per week</option>
-          <option value="month">{hours} hours per month</option>
-        </select>
+          <option value="" disabled>{prefix}…</option>
+          <option value="day">{prefix} day</option>
+          <option value="week">{prefix} week</option>
+          <option value="month">{prefix} month</option>
+        </Select>
       </div>
     )
   }

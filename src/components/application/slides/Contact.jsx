@@ -1,4 +1,5 @@
 import React, { Component, PropTypes } from 'react'
+import Select from '../Select'
 import Slide from '../Slide'
 import Form from '../Form'
 import Fieldset from '../Fieldset'
@@ -66,7 +67,7 @@ class Contact extends Component {
 
               <div className="usa-input-grid usa-input-grid-small">
                 <label for="state">State</label>
-                <select id="state" name="state" value={contact.state}
+                <Select id="state" name="state" value={contact.state}
                         onChange={this.onUsStateChange}>
                   <option value=""></option>
                   <option value="AL">Alabama</option>
@@ -120,7 +121,7 @@ class Contact extends Component {
                   <option value="WV">West Virginia</option>
                   <option value="WI">Wisconsin</option>
                   <option value="WY">Wyoming</option>
-                </select>
+                </Select>
               </div>
             </div>
 

@@ -1,6 +1,6 @@
-import classnames from 'classnames'
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
+import Select from './Select'
 
 @observer
 class IncomeSourceFrequency extends Component {
@@ -26,8 +26,7 @@ class IncomeSourceFrequency extends Component {
 
     return (
       <div className="usa-input-grid usa-input-grid-medium">
-        <select value={value}
-                className={classnames({'usa-input-success': value})}
+        <Select value={value}
                 onChange={this.handleChange}>
           <option value="" disabled>Frequency…</option>
           <option value="anually">Anually</option>
@@ -36,7 +35,7 @@ class IncomeSourceFrequency extends Component {
           <option value="everyTwoWeeks">Every two weeks</option>
           <option value="weekly">Weekly</option>
           <option value="hourly">Hourly</option>
-        </select>
+        </Select>
       </div>
     )
   }
