@@ -43,11 +43,9 @@ class HouseholdIncome extends Component {
                        alreadyNamed={students}
                        allPeopleCollections={allPeopleCollections} />
 
-        <ChildIncome allChildren={this.allChildren}
-                     showGrossIncomeDefinition={this.anyChildIncome} />
+        <ChildIncome allChildren={this.allChildren} />
         <Adults adults={adults} allChildren={this.allChildren} />
-        <AdultIncome adults={adults}
-                     showGrossIncomeDefinition={!this.anyChildIncome} />
+        <AdultIncome adults={adults} />
         <Signature attestor={adults.first} signature={signature} />
       </div>
     )
