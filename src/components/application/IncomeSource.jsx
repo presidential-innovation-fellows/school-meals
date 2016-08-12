@@ -28,9 +28,14 @@ class IncomeSource extends Component {
   }
 
   render() {
-    const { name } = this.props
+    const { name, showHourly, showAnnual } = this.props
     const incomeSource = this.props.incomeSources[name]
     const error = this.error
+    const frequencyProps = {
+      incomeSource,
+      showHourly,
+      showAnnual
+    }
 
     return (
       <div>
@@ -42,7 +47,7 @@ class IncomeSource extends Component {
            <div className="income-source-details">
              <div>
                <IncomeSourceAmount incomeSource={incomeSource} />
-               <IncomeSourceFrequency incomeSource={incomeSource} />
+               <IncomeSourceFrequency {...frequencyProps} />
              </div>
              {incomeSource.frequency === 'hourly' &&
               <div>
@@ -68,7 +73,14 @@ class IncomeSource extends Component {
 
 IncomeSource.propTypes = {
   incomeSources: PropTypes.object.isRequired,
-  name: PropTypes.string.isRequired
+  name: PropTypes.string.isRequired,
+  showHourly: PropTypes.bool,
+  showAnnual: PropTypes.bool
+}
+
+IncomeSource.defaultProps = {
+  showHourly: false,
+  showAnnual: false
 }
 
 export default IncomeSource

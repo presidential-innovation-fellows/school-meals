@@ -40,7 +40,8 @@ class ChildIncomeSlide extends Component {
 
         <p className="well"><dfn>Gross income</dfn> means all money earned or received before deductions, such as income taxes, social security taxes, and insurance premiums. You should not report net income, which is the amount of money received in a pay check. Net income is total (or gross) income, minus taxes and deductions, and is commonly referred to as “take home pay”.</p>
 
-        <IncomeSource incomeSources={incomeSources} name="job">
+        <IncomeSource incomeSources={incomeSources} name="job"
+                      showHourly={true} showAnnual={true}>
           Money earned from a full or part-time job
         </IncomeSource>
 

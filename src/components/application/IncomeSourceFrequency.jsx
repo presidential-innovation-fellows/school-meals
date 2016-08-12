@@ -21,7 +21,7 @@ class IncomeSourceFrequency extends Component {
   }
 
   render() {
-    const { incomeSource, fieldName } = this.props
+    const { incomeSource, fieldName, showHourly, showAnnual } = this.props
     const value = incomeSource[fieldName]
 
     return (
@@ -29,12 +29,12 @@ class IncomeSourceFrequency extends Component {
         <Select value={value}
                 onChange={this.handleChange}>
           <option value="" disabled>Frequency…</option>
-          <option value="anually">Anually</option>
+          {showAnnual && <option value="anually">Anually</option>}
           <option value="monthly">Monthly</option>
           <option value="twicePerMonth">Twice per month</option>
           <option value="everyTwoWeeks">Every two weeks</option>
           <option value="weekly">Weekly</option>
-          <option value="hourly">Hourly</option>
+          {showHourly && <option value="hourly">Hourly</option>}
         </Select>
       </div>
     )
@@ -44,11 +44,16 @@ class IncomeSourceFrequency extends Component {
 IncomeSourceFrequency.propTypes = {
   incomeSource: PropTypes.object.isRequired,
   fieldName: PropTypes.string,
-  onChange: PropTypes.func
+  onChange: PropTypes.func,
+  showHourly: PropTypes.bool,
+  showAnnual: PropTypes.bool
 }
 
 IncomeSourceFrequency.defaultProps = {
-  fieldName: 'frequency'
+  fieldName: 'frequency',
+  showHourly: false,
+  showAnnual: false
+
 }
 
 export default IncomeSourceFrequency

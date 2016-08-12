@@ -18,7 +18,8 @@ class EmploymentIncome extends Component {
 
     return(
       <IncomeType {...incomeTypeProps}>
-        <IncomeSource incomeSources={incomeSources} name="salaryWages">
+        <IncomeSource incomeSources={incomeSources} name="salaryWages"
+                      showHourly={true} showAnnual={true}>
           Salary / Wages
         </IncomeSource>
 
