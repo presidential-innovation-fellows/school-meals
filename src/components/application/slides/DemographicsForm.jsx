@@ -12,7 +12,7 @@ class Demographics extends Component {
     const { student } = this.props
 
     return (
-      <Form>
+      <Form large>
         <div className="well">
           <h2>{informalName(student)}</h2>
           <label>Ethnicity</label>

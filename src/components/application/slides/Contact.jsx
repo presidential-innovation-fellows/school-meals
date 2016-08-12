@@ -24,7 +24,7 @@ class Contact extends Component {
       <Slide header="Contact Info" id="contact" showHelp={false} beginsSection>
         <p className="usa-font-lead">Please enter your contact information so that we can reach you in case there are any issues with your application.</p>
 
-        <Form large={true}>
+        <Form large>
           <InputField
               name="phone"
               label="Phone number"

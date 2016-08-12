@@ -42,13 +42,14 @@ class Signature extends Component {
         <p>Please provide the last four digits of the Social Security number for the person that signed at the beginning of the application <strong>({fullName(attestor)})</strong>. If that person does not have a Social Security number, please check the box below labeled "No <abbr title="Social Security number">SSN</abbr>".</p>
 
         <Form>
-          <InputField type="phone"
+          <InputField type="tel"
                       name="ssnLastFour"
                       placeholder="xxxx"
                       className="usa-input-medium"
                       object={signature}
                       value={signature.hasSsn && signature.ssnLastFour || ''}
                       disabled={!signature.hasSsn}
+                      pattern="^\d{4}$"
                       onChange={this.handleSsnChange} />
 
           <Checkboxes legend="No <abbr title='Social Security number'>SSN</abbr>">

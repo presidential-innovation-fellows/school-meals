@@ -42,7 +42,9 @@ class InputField extends Component {
       className[key] = true
     }
     className = classnames(className)
-    if (input.reflectSuccessOnValue && value && !input.error) {
+
+    if (input.pattern && !input.error &&
+        (input.value == null ? value : input.value).match(input.pattern)) {
       className += ' usa-input-success'
     }
 
@@ -111,14 +113,14 @@ InputField.propTypes = {
   required: PropTypes.bool,
   grid: PropTypes.bool,
   value: PropTypes.string,
-  reflectSuccessOnValue: PropTypes.bool,
+  pattern: PropTypes.string,
   size: PropTypes.oneOf(['tiny', 'small', 'medium'])
 }
 
 InputField.defaultProps = {
   className: {},
   disabled: false,
-  reflectSuccessOnValue: true,
+  pattern: '.+',
   type: 'text'
 }
 
