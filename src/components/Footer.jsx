@@ -10,13 +10,14 @@ class Footer extends Component {
 
   render () {
     return (
-      <div className="footer">
-        <div className="container">
+      <footer className="pageFooter">
+        <div className="usa-grid">
+          <img className="logo" src="img/USDA_logo.png" alt="USDA Logo" />
           <div>{organization.name}</div>
           <div>{organization.contact.phone} / {organization.contact.email}</div>
           <div>{organization.contact.address}</div>
         </div>
-      </div>
+      </footer>
     )
   }
 }

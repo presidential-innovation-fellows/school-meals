@@ -88,13 +88,13 @@ select.usa-input-success {
   margin-top: 0;
 }
 
-.footer {
-  background-color: #323a45;
-  padding: 1em;
-  color: white;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
+footer.pageFooter {
+  padding: 1em 0;
+}
+
+footer .logo {
+  float: right;
+  width: 100px;
 }
 
 .info-target {
@@ -120,7 +120,6 @@ select.usa-input-success {
 
 .slide-content {
   margin-top: 110px;
-  margin-bottom: 2em;
   background-color: #fff;
   padding: 3rem;
   border: 1px solid #eee;
@@ -157,6 +156,15 @@ select.usa-input-success {
 
 @media (max-width: 768px) {
   .progress-desktop {
+    display: none;
+  }
+
+  footer.pageFooter {
+    background-color: #323a45;
+    color: white;
+  }
+
+  footer .logo {
     display: none;
   }
 

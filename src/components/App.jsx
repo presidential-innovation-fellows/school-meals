@@ -6,6 +6,7 @@ import NavigationData from '../stores/NavigationData'
 import HelpData from '../stores/HelpData'
 import Navigation from './Navigation'
 import Progress from './Progress'
+import Footer from './Footer'
 import Help from './help/Help'
 
 const applicationData = new ApplicationData()
@@ -41,6 +42,7 @@ class App extends Component {
           </div>
         </main>
         <Help helpData={helpData} />
+        <Footer />
       </div>
     )
   }
