@@ -19,6 +19,7 @@ import UnemploymentIncome from './articles/UnemploymentIncome'
 import RetirementIncome from './articles/RetirementIncome'
 import OtherIncome from './articles/OtherIncome'
 import Signature from './articles/Signature'
+import Summary from './articles/Summary'
 
 @observer
 class Help extends Component {
