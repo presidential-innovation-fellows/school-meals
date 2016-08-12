@@ -122,6 +122,21 @@ export function informalList(people,
   return toSentenceSerial(names, delimiter, lastDelimiter)
 }
 
+export function hoursExceedPeriodCapacity(incomeSource) {
+  const hours = incomeSource.hourlyHours || 0
+
+  switch(incomeSource.hourlyPeriod) {
+    case 'day':
+      return hours > 24
+    case 'week':
+      return hours > 168
+    case 'month':
+      return hours > 730
+    default:
+      return false
+  }
+}
+
 export function incomeTypeIsValid(incomeType, mustNotBeNull = []) {
   switch(incomeType.isApplicable) {
     case true:
@@ -151,7 +166,8 @@ export function incomeTypeIsValid(incomeType, mustNotBeNull = []) {
             incomeSource.frequency &&
             (
               incomeSource.frequency !== 'hourly' ||
-              (incomeSource.hourlyHours && incomeSource.hourlyPeriod)
+              (incomeSource.hourlyHours && incomeSource.hourlyPeriod &&
+               !hoursExceedPeriodCapacity(incomeSource))
             )
           )
         )})

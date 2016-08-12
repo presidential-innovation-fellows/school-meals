@@ -58,6 +58,11 @@ label small {
   margin-bottom: 1rem;
 }
 
+.income-source-details .usa-input-error-message {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .income-source-summary {
   text-transform: lowercase;
 }

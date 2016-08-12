@@ -75,7 +75,7 @@ class InputField extends Component {
     }
 
     if (input.error) {
-      inputProps['aria-describedby'] = 'input-error-message'
+      inputProps['aria-describedby'] = `input-error-message-${controlId}`
     }
 
     return (

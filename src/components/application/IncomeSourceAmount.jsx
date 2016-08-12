@@ -26,6 +26,7 @@ class IncomeSourceAmount extends Component {
                   size="small"
                   placeholder={placeholder}
                   onChange={this.handleChange}
+                  pattern={this.props.error ? 'xxx' : '.+'}
                   value={value ? `${prepend}${value}` : null} />
     )
   }
@@ -37,6 +38,7 @@ IncomeSourceAmount.propTypes = {
   type: PropTypes.string,
   placeholder: PropTypes.string,
   prepend: PropTypes.string,
+  error: PropTypes.bool,
   onChange: PropTypes.func
 }
 
