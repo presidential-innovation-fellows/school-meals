@@ -29,17 +29,18 @@ class Slide extends Component {
     return (
       <section className="slide" id={this.props.id}
                data-begins-section={this.props.beginsSection}>
-        <h1>
-          {this.props.header || <span>&nbsp;</span>}
-          {this.props.showHelp &&
-            <a onClick={this.handleHelp} title="Help" className="help-button">
-              <Glyphicon glyph="question-sign" />
-            </a>
-          }
-        </h1>
 
         <div className="usa-content slide-content">
-          {this.props.children}
+          <h1>
+            {this.props.header}
+            {this.props.showHelp &&
+             <a onClick={this.handleHelp} title="Help" className="help-button">
+               <Glyphicon glyph="question-sign" />
+             </a>
+            }
+          </h1>
+
+        {this.props.children}
 
           <footer>
             {

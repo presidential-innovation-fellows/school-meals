@@ -33,9 +33,15 @@ class Navigation extends Component {
 
     return (
       <Navbar fixedTop>
+        <div className="usa-grid">
         <Navbar.Header>
           <Navbar.Brand>
-            USDA National School Lunch and School Breakfast Programs
+            <span className="hidden-xs">
+              USDA National School Lunch and School Breakfast Programs
+            </span>
+            <span className="hidden-sm hidden-md hidden-lg">
+              USDA NSBP/NSLP
+            </span>
           </Navbar.Brand>
           <Navbar.Toggle />
         </Navbar.Header>
@@ -53,6 +59,7 @@ class Navigation extends Component {
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
+        </div>
       </Navbar>
     )
   }
