@@ -13,7 +13,7 @@ export default class Welcome extends Component {
       <Article>
         <Topic title="Can I apply using a paper application?">
           <p>
-            Yes. If you would like to apply using the paper application, you can print it from <a href={organization.paperApplication.url}>here</a> or contact {organization.name} ({organization.contact.phone} / {organization.contact.email} / {organization.contact.address}) to request an application. Then return the completed application to:
+            Yes. If you would like to apply using the paper application, you can print it from <a href={organization.paperApplication.url} target="_blank">here</a> or contact {organization.name} ({organization.contact.phone} / {organization.contact.email} / {organization.contact.address}) to request an application. Then return the completed application to:
           </p>
           <p>
             {organization.name}

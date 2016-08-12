@@ -19,7 +19,7 @@ class Welcome extends React.Component {
         </p>
         <p>
           If you would like to apply using
-          the <a href={organization.paperApplication.url}>paper application</a>,
+          the <a href={organization.paperApplication.url} target="_blank">paper application</a>,
           you can print it and return it to us or contact {organization.name} (
           {organization.paperApplication.phone}{' / '}
           {organization.paperApplication.email}{' / '}
