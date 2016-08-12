@@ -15,7 +15,7 @@ class IncomeSourceSummary extends Component {
 
     switch (frequency) {
       case 'yearly':
-      case 'anually':
+      case 'annually':
         return `per year`
       case 'monthly':
         return `per month`

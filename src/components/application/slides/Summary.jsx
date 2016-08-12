@@ -39,7 +39,7 @@ class Summary extends Component {
 
       switch (income.frequency) {
         case 'yearly':
-        case 'anually':
+        case 'annually':
           return amount * 1.0
         case 'monthly':
           return amount * 12.0

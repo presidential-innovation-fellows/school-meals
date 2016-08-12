@@ -29,7 +29,7 @@ class IncomeSourceFrequency extends Component {
         <Select value={value}
                 onChange={this.handleChange}>
           <option value="" disabled>Frequency…</option>
-          {showAnnual && <option value="anually">Anually</option>}
+          {showAnnual && <option value="annually">Annually</option>}
           <option value="monthly">Monthly</option>
           <option value="twicePerMonth">Twice per month</option>
           <option value="everyTwoWeeks">Every two weeks</option>
