@@ -5,8 +5,8 @@ import { observer } from 'mobx-react'
 class Fieldset extends Component {
   render() {
     const { legend, type } = this.props
-    const className = (type === 'radio' || type === 'checkbox') &&
-                      'usa-fieldset-inputs'
+    const className = (type === 'radio' || type === 'checkbox') ?
+                      'usa-fieldset-inputs' : ''
     return (
       <fieldset className={className}>
         {legend && <legend className="usa-sr-only">{legend}</legend>}

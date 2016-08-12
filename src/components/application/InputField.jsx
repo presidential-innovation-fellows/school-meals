@@ -32,10 +32,23 @@ class InputField extends Component {
   render() {
     const input = this.props
     const controlId = shortid.generate()
-    const containerClassName = classnames({
+    const additional = input.additional || input.required && 'Required'
+
+    let className = classnames(input.className)
+    let containerClassName = classnames({
       'usa-input-error': input.error,
+      'usa-input-grid': input.grid,
       'input-field': true
     })
+
+    if (input.size) {
+      if (input.grid) {
+        containerClassName += ` usa-input-grid-${input.size}`
+      } else {
+        className += ` usa-input-${input.size}`
+      }
+    }
+
     const inputProps = {
       id: controlId,
       name: input.name,
@@ -44,7 +57,8 @@ class InputField extends Component {
       placeholder: input.placeholder || input.label,
       disabled: input.disabled,
       onChange: this.handleChange,
-      className: classnames(input.className)
+      className: className,
+      required: input.required
     }
 
     if (input.error) {
@@ -53,11 +67,11 @@ class InputField extends Component {
 
     return (
       <div className={containerClassName}>
-        {(input.label || input.required) &&
+        {(input.label || input.required || input.additional) &&
          <label for={controlId}>
            {input.label}
-           {input.required &&
-            <span className="usa-additional_text">Required</span>
+           {additional &&
+            <span className="usa-additional_text">{additional}</span>
            }
          </label>
         }
@@ -84,7 +98,9 @@ InputField.propTypes = {
   type: PropTypes.string,
   disabled: PropTypes.bool,
   required: PropTypes.bool,
-  value: PropTypes.string
+  grid: PropTypes.bool,
+  value: PropTypes.string,
+  size: PropTypes.oneOf(['tiny', 'small', 'medium'])
 }
 
 InputField.defaultProps = {
