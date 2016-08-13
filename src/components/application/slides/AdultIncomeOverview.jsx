@@ -32,6 +32,17 @@ class AdultIncomeOverview extends Component {
       <Slide header={name} id={`income/${person.id}`}
              helpArticle="adult-income-overview" nextDisabled={!this.isValid}>
 
+        <p>This page is all about {name}.</p>
+
+        <p>
+          On questions about income, all amounts should
+          be {name}'s <strong>gross income</strong>.
+        </p>
+
+        <p>
+          <dfn>Gross income</dfn> means <strong>all money earned or received <em>before</em> deductions</strong> such as income taxes, social security taxes, and insurance premiums. You should not report net income, which is the amount of money received in a pay check. Net income is total (or gross) income, minus taxes and deductions, and is commonly referred to as "take home pay".
+          </p>
+
         <IncomeTypeFormGroup person={person} incomeTypeName="military">
           Is <strong>{name}</strong> in the military?
         </IncomeTypeFormGroup>
