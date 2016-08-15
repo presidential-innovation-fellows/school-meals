@@ -178,11 +178,7 @@ footer .logo {
 
 @media (min-width: 768px) {
   body {
-    background: url(../img/background.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    background-color: #dce4ef;
   }
 
   main {
