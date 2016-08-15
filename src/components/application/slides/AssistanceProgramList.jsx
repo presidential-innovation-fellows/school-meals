@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react'
-import Form from '../Form'
-import Fieldset from '../Fieldset'
-import InputField from '../InputField'
+import Checkboxes from '../Checkboxes'
+import AssistanceProgram from './AssistanceProgram'
 import { observer } from 'mobx-react'
 import { AssistancePrograms as Store } from '../../../stores/ApplicationData'
 
@@ -11,21 +10,11 @@ class AssistanceProgramList extends Component {
     const { assistancePrograms } = this.props
 
     return(
-      <Form large>
-        <Fieldset legend="Case numbers">
-          <p>Please enter your case number(s):</p>
-
-          {assistancePrograms.map(program =>
-            <InputField
-                key={program.id}
-                name="caseNumber"
-                label={program.name}
-                object={program}
-                placeholder="Case number"
-            />
-           )}
-        </Fieldset>
-      </Form>
+      <Checkboxes legend="Assistance programs">
+        {assistancePrograms.map(program =>
+          <AssistanceProgram program={program} />
+         )}
+      </Checkboxes>
     )
   }
 }

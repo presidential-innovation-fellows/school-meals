@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
 import AssistanceProgramList from './AssistanceProgramList'
-import BooleanRadio from '../BooleanRadio'
 import { observer } from 'mobx-react'
 import { toSentenceSerial } from 'underscore.string'
 import { assistancePrograms as programNames } from '../../../config'
@@ -36,13 +35,9 @@ class AssistancePrograms extends Component {
           </p>
         </div>
 
-        <label>Does anyone in your household (including you) currently participate in any of the above programs?</label>
+        <p><strong>Does anyone in your household (including you) currently participate in any of the following programs?</strong></p>
 
-        <BooleanRadio name="hasAny" object={assistancePrograms} />
-
-        {assistancePrograms.hasAny &&
-         <AssistanceProgramList assistancePrograms={assistancePrograms} />
-        }
+        <AssistanceProgramList assistancePrograms={assistancePrograms} />
       </Slide>
     )
   }

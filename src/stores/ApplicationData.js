@@ -38,7 +38,6 @@ export default class ApplicationData {
 }
 
 export class AssistancePrograms {
-  @observable hasAny
   @observable items
 
   constructor(items = null) {
@@ -47,6 +46,7 @@ export class AssistancePrograms {
     } else {
       this.items = assistanceProgramNames.map(function(programName) {
         return {
+          isApplicable: null,
           id: shortid.generate(),
           name: programName,
           caseNumber: ''
@@ -63,8 +63,14 @@ export class AssistancePrograms {
     return this.items.map(func)
   }
 
+  @computed get hasAny() {
+    return this.items
+               .map(item => item.isApplicable)
+               .reduce((a, b) => a || b, false)
+  }
+
   @computed get applicable() {
-    return this.items.filter(item => !!item.caseNumber)
+    return this.items.filter(item => item.isApplicable)
   }
 
   @computed get length() {
@@ -72,16 +78,9 @@ export class AssistancePrograms {
   }
 
   @computed get isValid() {
-    switch (this.hasAny) {
-      case true:
-        return this.items
-                   .map(item => !!item.caseNumber)
-                   .reduce((a, b) => a || b, false)
-      case false:
-        return true
-      default:
-        return false
-    }
+    return this.applicable
+               .map(item => !!item.caseNumber)
+               .reduce((a, b) => a && b, true)
   }
 }
 
