@@ -12,6 +12,10 @@ The file `vendor/js/html5shiv-printshiv.min.js` is from [HTML5 Shiv](https://git
 
 The file `vendor/js/es5-shim.min.js` is from [es5-shim](https://github.com/es-shims/es5-shim), copyright Kristopher Michael Kowal and [contributors](https://github.com/es-shims/es5-shim/blob/922bfc2a3f930f2441d4aaaa60954d8d00dc9070/CONTRIBUTORS.md), under the [MIT license](https://github.com/es-shims/es5-shim/blob/922bfc2a3f930f2441d4aaaa60954d8d00dc9070/LICENSE) and other licenses as indicated by its [contributors](https://github.com/es-shims/es5-shim/blob/922bfc2a3f930f2441d4aaaa60954d8d00dc9070/CONTRIBUTORS.md) (inclusive of "MIT license", "3-clause BSD License", "Creative Commons Zero (public domain)", and undefined licenses as indicated by "XXX TODO License or CLA").
 
+The file `img/noun_195001_cc.png` ("[Lunch Box](https://thenounproject.com/kmcarnes/collection/back-to-school/?i=195001)") is from [Kelly Carnes](https://thenounproject.com/kmcarnes/) and made available by [The Noun Project, Inc.](https://thenounproject.com/) under the [Creative Commons Attribution 3.0 United States (CC BY 3.0 US) license](https://creativecommons.org/licenses/by/3.0/us/).
+
+The file `img/noun_16498_cc.png` ("[List](https://thenounproject.com/search/?q=list&i=16498)") is from [Charlérik Lemieux](https://thenounproject.com/Charl%C3%A9rik/) and made available by [The Noun Project, Inc.](https://thenounproject.com/) under the [Creative Commons Attribution 3.0 United States (CC BY 3.0 US) license](https://creativecommons.org/licenses/by/3.0/us/).
+
 #### Full license text for the MIT licensed files:
 
 ```

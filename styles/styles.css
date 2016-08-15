@@ -97,6 +97,13 @@ footer .logo {
   width: 100px;
 }
 
+.icon {
+  float: left;
+  max-height: 5em;
+  max-width: 5em;
+  margin: 0 1em .5em 0;
+}
+
 .info-target {
   border-bottom: 1px dotted #337ab7;
   cursor: pointer;

@@ -11,6 +11,7 @@ class Welcome extends React.Component {
           reduced priced meals for
           the <abbr title="United States Department of Agriculture">USDA</abbr>&rsquo;s National School Lunch &amp; School Breakfast Programs.
         </p>
+        <img src="img/noun_195001_cc.png" className="icon" />
         <p>
           This interactive application will guide you through the application
           process and send your response directly to {organization.name}. When
