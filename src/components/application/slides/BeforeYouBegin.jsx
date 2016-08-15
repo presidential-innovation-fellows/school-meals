@@ -32,7 +32,7 @@ class BeforeYouBegin extends React.Component {
         <p>If you received a letter from the school saying that your children were automatically approved (directly certified) for free meals for the <SchoolYear /> school year because someone in your household participates in {assistanceProgramList} then you do not need to submit an application. If there are other children in your household who weren’t listed in that letter, they also qualify for free meals, so contact the school as soon as possible to correct the mistake.</p>
 
         <p>We only need one application for all the children in your household that attend {organization.name}.</p>
-        <p>Eligibility for free or reduced price school meal benefits is based on any one of these three things:</p>
+        <p><strong>Eligibility for free or reduced price school meal benefits is based on any one of these three things:</strong></p>
 
         <ul className="usa-content-list">
           <li>your child’s individual status as foster, homeless, migrant or runaway, or</li>
