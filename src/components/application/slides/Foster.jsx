@@ -53,10 +53,7 @@ class Foster extends Component {
           No problem! There are other ways to qualify.
         </p>
 
-        <OtherProgramsProgram attribute="isFoster" {...props}>
-          live with you under a formal (court-ordered) foster care
-          arrangement?
-        </OtherProgramsProgram>
+        <OtherProgramsProgram attribute="isFoster" {...props} />
       </Slide>
     )
   }

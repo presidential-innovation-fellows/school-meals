@@ -3,7 +3,7 @@ import BooleanRadio from '../BooleanRadio'
 import Checkbox from '../Checkbox'
 import Checkboxes from '../Checkboxes'
 import { observer } from 'mobx-react'
-import { informalList, informalName } from '../../../helpers'
+import { informalList, informalName, programDescription } from '../../../helpers'
 
 @observer
 class OtherProgramsProgram extends Component {
@@ -38,7 +38,15 @@ class OtherProgramsProgram extends Component {
 
     return (
       <div>
-        <label>{this.labelPrefix}{' '}{this.props.children}</label>
+        <label>
+          {this.labelPrefix} {programDescription(attribute)}?
+          {this.props.children &&
+           <small>
+             <br />
+             {this.props.children}
+           </small>
+          }
+        </label>
 
         {students.length === 1 ?
          <BooleanRadio object={students[0]} name={attribute} />
