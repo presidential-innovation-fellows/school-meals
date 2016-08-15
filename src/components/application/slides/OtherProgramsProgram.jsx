@@ -28,7 +28,7 @@ class OtherProgramsProgram extends Component {
     const { allPeopleCollections, students } = this.props
 
     return <span>
-        {students.length === 1 ? 'Is ' : 'Are '}
+        {students.length === 1 ? 'Does ' : 'Do '}
       <strong>{informalList(students, allPeopleCollections, ' or ')}</strong>
     </span>
   }

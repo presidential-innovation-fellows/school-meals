@@ -15,16 +15,26 @@ class OtherPrograms extends Component {
   }
 
   get isValid() {
-    for (let key in this.applicability) {
-      switch(this.applicability[key]) {
-        case null:
+    const students = this.props.students
+
+    if (students.length === 1) {
+      for (let key in this.applicability) {
+        if (students[0][key] == null) {
           return false
-        case true:
-          if (this.props.students
-                  .map(student => student[key] !== true)
-                  .reduce((a, b) => a && b, true)) {
+        }
+      }
+    } else {
+      for (let key in this.applicability) {
+        switch(this.applicability[key]) {
+          case null:
             return false
-          }
+          case true:
+            if (students
+              .map(student => student[key] !== true)
+              .reduce((a, b) => a && b, true)) {
+              return false
+            }
+        }
       }
     }
 
