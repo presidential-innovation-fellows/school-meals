@@ -112,9 +112,9 @@ export function informalName(person,
 // given an array of people-like objects, return e.g. "Bob, Joe, and Joe Jr."
 export function informalList(people,
                              allPeopleCollections,
+                             lastDelimiter = ' and ',
                              disambiguate = false,
-                             delimiter = ', ',
-                             lastDelimiter = ' and ') {
+                             delimiter = ', ') {
 
   const names = people.map(person => informalName(person,
                                                   allPeopleCollections,

@@ -127,8 +127,8 @@ class PersonCollection {
   }
 
   // returns e.g. "Jill, Joe, and Joe Jr."
-  informalList(allPeople) {
-    return informalList(this.items, allPeople)
+  informalList(allPeople, ...options) {
+    return informalList(this.items, allPeople, ...options)
   }
 
   @computed get hasAnyIncome() {

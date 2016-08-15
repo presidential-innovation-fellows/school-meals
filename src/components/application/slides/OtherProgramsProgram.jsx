@@ -3,19 +3,27 @@ import BooleanRadio from '../BooleanRadio'
 import Checkbox from '../Checkbox'
 import Checkboxes from '../Checkboxes'
 import { observer } from 'mobx-react'
-import { informalName } from '../../../helpers'
+import { informalList, informalName } from '../../../helpers'
 
 @observer
 class OtherProgramsProgram extends Component {
+  get labelPrefix() {
+    const { allPeopleCollections, students } = this.props
+
+    return <span>
+        {students.length === 1 ? 'Is ' : 'Are '}
+      <strong>{informalList(students, allPeopleCollections, ' or ')}</strong>
+    </span>
+  }
+
   render() {
-    const { students, attribute } = this.props
-    const oneStudent = students.length === 1
+    const { attribute, students } = this.props
 
     return (
       <div>
-        <label>{this.props.children}</label>
+        <label>{this.labelPrefix}{' '}{this.props.children}</label>
 
-        {oneStudent ?
+        {students.length === 1 ?
          <BooleanRadio object={students[0]} name={attribute} />
          :
          <Checkboxes legend="Students">
@@ -34,6 +42,7 @@ class OtherProgramsProgram extends Component {
 }
 
 OtherProgramsProgram.propTypes = {
+  allPeopleCollections: PropTypes.array.isRequired,
   attribute: PropTypes.string.isRequired,
   students: PropTypes.oneOfType([
     PropTypes.object,
