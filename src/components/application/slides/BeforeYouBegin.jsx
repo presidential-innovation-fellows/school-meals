@@ -27,8 +27,6 @@ class BeforeYouBegin extends React.Component {
       <Slide header="Before you begin" id="before-you-begin">
         <p className="usa-font-lead">Before you begin, there are a few things you should know.</p>
 
-        <img src="img/noun_16498_cc.png" className="icon" />
-
         <p>If you received a letter from the school saying that your children were automatically approved (directly certified) for free meals for the <SchoolYear /> school year because someone in your household participates in {assistanceProgramList} then you do not need to submit an application. If there are other children in your household who weren’t listed in that letter, they also qualify for free meals, so contact the school as soon as possible to correct the mistake.</p>
 
         <p>We only need one application for all the children in your household that attend {organization.name}.</p>
