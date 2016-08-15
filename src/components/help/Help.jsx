@@ -60,7 +60,7 @@ class Help extends Component {
         </header>
 
         <div className="cd-panel-container">
-          <div className="cd-panel-content">
+          <div className="cd-panel-content" id="help-content">
             {(() => {
                switch (article) {
                  case 'welcome':                 return <Welcome />

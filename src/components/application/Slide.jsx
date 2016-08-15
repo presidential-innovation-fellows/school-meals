@@ -21,8 +21,7 @@ class Slide extends Component {
   }
 
   handleHelp() {
-    this.context.helpData.article = this.props.helpArticle || this.props.id
-    this.context.helpData.isVisible = true
+    this.context.helpData.showArticle(this.props.helpArticle || this.props.id)
   }
 
   render() {
