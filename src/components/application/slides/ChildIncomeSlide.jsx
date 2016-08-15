@@ -66,6 +66,7 @@ class ChildIncomeSlide extends Component {
             On a previous page, you indicated
             that <strong>{name}</strong> receives income.
             Please enter this income above or correct your previous answer.
+            <br />
             <Button className="usa-button-gray"
                     slideId="child-income">Change previous answer</Button>
           </Alert>

@@ -41,6 +41,7 @@ class IncomeType extends Component {
             that <strong>{personName}</strong> receives income from
             one of the above sources. Please enter this income above or
             correct your previous answer.
+            <br />
             <Button slideId={`income/${person.id}`}
                     className="usa-button-gray">Change previous answer</Button>
           </Alert>

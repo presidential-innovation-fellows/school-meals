@@ -3,18 +3,23 @@ import Slide from '../Slide'
 import PersonCollection from '../PersonCollection'
 import { organization } from '../../../config'
 import { fullName } from '../../../helpers'
+import { computed } from 'mobx'
 import { observer } from 'mobx-react'
 import { informalName } from '../../../helpers'
 
 @observer
 class Adults extends Component {
+  @computed get nextText() {
+    return this.props.adults.length > 1 ? 'Continue' : 'No other adults'
+  }
+
   render() {
     const { adults } = this.props
     const attestors = adults.items.filter(person => person.isAttestor)
 
     return (
-      <Slide header="Adults" id="adults" nextDisabled={!adults.isValid}
-             beginsSection>
+      <Slide nextDisabled={!adults.isValid} nextText={this.nextText}
+             header="Adults" id="adults" beginsSection>
         <p className="usa-font-lead">Okay, now let’s talk about the adults in your household.</p>
         <p>Not including {informalName(attestors[0])}, what other adults live in the household?</p>
 

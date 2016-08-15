@@ -1,18 +1,23 @@
 import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
 import PersonCollection from '../PersonCollection'
+import { computed } from 'mobx'
 import { observer } from 'mobx-react'
 import { organization } from '../../../config'
 import { informalList } from '../../../helpers'
 
 @observer
 class OtherChildren extends Component {
+  @computed get nextText() {
+    return this.props.otherChildren.length ? 'Continue' : 'No other children'
+  }
+
   render() {
     const { allPeopleCollections, alreadyNamed, otherChildren } = this.props
 
     return (
-      <Slide nextDisabled={!otherChildren.isValid} id="other-children"
-             beginsSection>
+      <Slide nextDisabled={!otherChildren.isValid} nextText={this.nextText}
+             id="other-children" beginsSection>
 
         <p className="usa-font-lead">Okay, it looks like we will need more information about your household and income in order to determine if you are eligible for benefits.</p>
 
