@@ -6,7 +6,7 @@ import { formatDate, informalList } from '../helpers'
 export default class ApplicationData {
   students = new StudentCollection()
   assistancePrograms = new AssistancePrograms()
-  otherChildren = new OptionalChildCollection()
+  otherChildren = new ChildCollection()
   adults = new AdultCollection()
 
   @observable certifiedCorrect = false
@@ -313,23 +313,6 @@ class ChildCollection extends PersonCollection {
         }
       }
     })
-  }
-}
-
-class OptionalChildCollection extends ChildCollection {
-  @observable hasAny
-
-  get isValid() {
-    switch (this.hasAny) {
-      case true:
-        return this.items.length >= 1 && super.isValid
-        break
-      case false:
-        return true
-        break
-      default:
-        return false
-    }
   }
 }
 

@@ -30,14 +30,6 @@ class PersonCollection extends Component {
 
     return(
       <div>
-        {!collection.length &&
-         <Form>
-           <div className="well">
-             <strong>No {labelPlural}</strong>
-           </div>
-         </Form>
-        }
-
         <div>
           {collection.items.filter(filter).map(person =>
             <PersonForm person={person}
