@@ -32,7 +32,8 @@ class Progress extends Component {
 
   get showHousehold() {
     return !this.props.applicationData.assistancePrograms.hasAny &&
-           !allStudentsAreFHMR(this.props.applicationData.students)
+           (!allStudentsAreFHMR(this.props.applicationData.students) ||
+            this.props.applicationData.electToProvideIncome !== false)
   }
 
   get steps() {

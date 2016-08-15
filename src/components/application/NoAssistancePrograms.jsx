@@ -5,6 +5,7 @@ import { allStudentsAreFHMR } from '../../helpers'
 import HouseholdIncome from './HouseholdIncome'
 import Foster from './slides/Foster'
 import OtherPrograms from './slides/OtherPrograms'
+import IncomeElection from './slides/IncomeElection'
 
 @observer
 class NoAssistancePrograms extends Component {
@@ -15,7 +16,8 @@ class NoAssistancePrograms extends Component {
 
   render() {
     const { applicationData } = this.props
-    const { allPeopleCollections, students } = applicationData
+    const { allPeopleCollections, electToProvideIncome, students } =
+      applicationData
 
     return (
       <div>
@@ -27,7 +29,11 @@ class NoAssistancePrograms extends Component {
                         allPeopleCollections={allPeopleCollections} />
         }
 
-        {!allStudentsAreFHMR(students) &&
+        {allStudentsAreFHMR(students) &&
+         <IncomeElection applicationData={applicationData} />
+        }
+
+        {(electToProvideIncome || !allStudentsAreFHMR(students)) &&
          <HouseholdIncome applicationData={applicationData} />
         }
       </div>

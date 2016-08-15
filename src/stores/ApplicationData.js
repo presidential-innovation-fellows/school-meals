@@ -10,6 +10,7 @@ export default class ApplicationData {
   adults = new AdultCollection()
 
   @observable certifiedCorrect = false
+  @observable electToProvideIncome = null
 
   @observable attestation = {
     date: formatDate(new Date(Date.now()))
