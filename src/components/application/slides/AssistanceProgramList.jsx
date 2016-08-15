@@ -12,7 +12,7 @@ class AssistanceProgramList extends Component {
     return(
       <Checkboxes legend="Assistance programs">
         {assistancePrograms.map(program =>
-          <AssistanceProgram program={program} />
+          <AssistanceProgram program={program} key={program.id} />
          )}
       </Checkboxes>
     )
