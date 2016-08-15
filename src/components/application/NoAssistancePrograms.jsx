@@ -8,10 +8,9 @@ import OtherPrograms from './slides/OtherPrograms'
 
 @observer
 class NoAssistancePrograms extends Component {
-  @computed get allStudentsAreFoster() {
-    return this.props.applicationData.students
-               .map(student => !!student.isFoster)
-               .reduce((a, b) => a && b, true)
+  @computed get studentsExceptFoster() {
+    return this.props.applicationData.students.items
+               .filter(student => student.isFoster !== true)
   }
 
   render() {
@@ -23,8 +22,8 @@ class NoAssistancePrograms extends Component {
         <Foster students={students}
                 allPeopleCollections={allPeopleCollections} />
 
-        {!this.allStudentsAreFoster &&
-         <OtherPrograms students={students}
+        {!!this.studentsExceptFoster.length &&
+         <OtherPrograms students={this.studentsExceptFoster}
                         allPeopleCollections={allPeopleCollections} />
         }
 

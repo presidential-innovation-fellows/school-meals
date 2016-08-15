@@ -35,7 +35,7 @@ class OtherPrograms extends Component {
     const { allPeopleCollections, students } = this.props
     const contact = `${organization.name} (${organization.contact.phone} / ${organization.contact.email} / ${organization.contact.address})`
     const props = {
-      students: students.items,
+      students,
       allPeopleCollections,
       applicability: this.applicability
     }
@@ -83,7 +83,7 @@ class OtherPrograms extends Component {
 
 OtherPrograms.propTypes = {
   allPeopleCollections: PropTypes.array.isRequired,
-  students: PropTypes.object.isRequired
+  students: PropTypes.array.isRequired
 }
 
 export default OtherPrograms

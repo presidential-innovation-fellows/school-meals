@@ -48,6 +48,7 @@ class OtherProgramsProgram extends Component {
                          onChange={this.onIsApplicableChange} />
            {applicability[attribute] &&
             <Checkboxes legend="Students">
+              <label>Which students?</label>
               {
                 students.map(student =>
                   <Checkbox object={student} name={attribute} key={student.id}>
