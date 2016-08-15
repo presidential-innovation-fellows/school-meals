@@ -1,14 +1,34 @@
 import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
 import OtherProgramsProgram from './OtherProgramsProgram'
+import { observable } from 'mobx'
 import { observer } from 'mobx-react'
 import { organization } from '../../../config'
 import { informalName } from '../../../helpers'
 
 @observer
 class OtherPrograms extends Component {
+  @observable applicability = {
+    isHomeless: null,
+    isMigrant: null,
+    isRunaway: null
+  }
+
   get isValid() {
-    return false
+    for (let key in this.applicability) {
+      switch(this.applicability[key]) {
+        case null:
+          return false
+        case true:
+          if (this.props.students
+                  .map(student => student[key] !== true)
+                  .reduce((a, b) => a && b, true)) {
+            return false
+          }
+      }
+    }
+
+    return true
   }
 
   render() {
@@ -16,7 +36,8 @@ class OtherPrograms extends Component {
     const contact = `${organization.name} (${organization.contact.phone} / ${organization.contact.email} / ${organization.contact.address})`
     const props = {
       students: students.items,
-      allPeopleCollections
+      allPeopleCollections,
+      applicability: this.applicability
     }
 
     return (

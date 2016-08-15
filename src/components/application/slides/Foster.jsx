@@ -1,12 +1,30 @@
 import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
 import OtherProgramsProgram from './OtherProgramsProgram'
+import { observable } from 'mobx'
 import { observer } from 'mobx-react'
 import { organization } from '../../../config'
 
 @observer
 class Foster extends Component {
+  @observable applicability = {
+    isFoster: null
+  }
+
   get isValid() {
+    for (let key in this.applicability) {
+      switch(this.applicability[key]) {
+        case null:
+          return false
+        case true:
+          if (this.props.students
+                  .map(student => student[key] !== true)
+                  .reduce((a, b) => a && b, true)) {
+            return false
+          }
+      }
+    }
+
     return true
   }
 
@@ -15,7 +33,8 @@ class Foster extends Component {
     const contact = `${organization.name} (${organization.contact.phone} / ${organization.contact.email} / ${organization.contact.address})`
     const props = {
       students: students.items,
-      allPeopleCollections
+      allPeopleCollections,
+      applicability: this.applicability
     }
 
     return (

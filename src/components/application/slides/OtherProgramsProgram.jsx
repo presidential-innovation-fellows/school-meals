@@ -7,6 +7,23 @@ import { informalList, informalName } from '../../../helpers'
 
 @observer
 class OtherProgramsProgram extends Component {
+  constructor (props) {
+    super(props)
+    this.onIsApplicableChange = this.onIsApplicableChange.bind(this)
+  }
+
+  onIsApplicableChange(attrName, value) {
+    const students = this.props.students
+
+    this.props.applicability[attrName] = value
+
+    if (!value) {
+      for (let i = 0; i < students.length; i++) {
+        students[i][attrName] = false
+      }
+    }
+  }
+
   get labelPrefix() {
     const { allPeopleCollections, students } = this.props
 
@@ -17,7 +34,7 @@ class OtherProgramsProgram extends Component {
   }
 
   render() {
-    const { attribute, students } = this.props
+    const { applicability, attribute, students } = this.props
 
     return (
       <div>
@@ -26,15 +43,21 @@ class OtherProgramsProgram extends Component {
         {students.length === 1 ?
          <BooleanRadio object={students[0]} name={attribute} />
          :
-         <Checkboxes legend="Students">
-           {
-             students.map(student =>
-               <Checkbox object={student} name={attribute} key={student.id}>
-                 {informalName(student)}
-               </Checkbox>
-             )
+         <div>
+           <BooleanRadio object={applicability} name={attribute}
+                         onChange={this.onIsApplicableChange} />
+           {applicability[attribute] &&
+            <Checkboxes legend="Students">
+              {
+                students.map(student =>
+                  <Checkbox object={student} name={attribute} key={student.id}>
+                    {informalName(student)}
+                  </Checkbox>
+                )
+              }
+            </Checkboxes>
            }
-         </Checkboxes>
+         </div>
         }
       </div>
     )
@@ -43,6 +66,7 @@ class OtherProgramsProgram extends Component {
 
 OtherProgramsProgram.propTypes = {
   allPeopleCollections: PropTypes.array.isRequired,
+  applicability: PropTypes.object.isRequired,
   attribute: PropTypes.string.isRequired,
   students: PropTypes.oneOfType([
     PropTypes.object,
