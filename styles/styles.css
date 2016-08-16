@@ -119,10 +119,14 @@ footer .logo {
 }
 
 .slide-content {
-  margin-top: 110px;
+  margin-top: 60px;
   background-color: #fff;
   padding: 3rem;
-  border: 1px solid #eee;
+  border: 1px solid #d6d7d9;
+}
+
+.show-progress .slide-content {
+  margin-top: 110px;
 }
 
 .person-form {
@@ -133,11 +137,18 @@ footer .logo {
 .progress-container {
   background-color: white;
   border-bottom: 1px solid #ddd;
-  top: 50px;
+  top: -20px;
   padding: 20px 0 0;
   position: fixed;
   width: 100%;
   z-index: 1020;
+  -webkit-transition: top 0.4s;
+  -moz-transition: top 0.4s;
+  transition: top 0.4s;
+}
+
+.show-progress .progress-container {
+  top: 50px;
 }
 
 .slide-content footer {
@@ -186,6 +197,10 @@ footer .logo {
   }
 
   .slide-content {
+    margin-top: 25px;
+  }
+
+  .show-progress .slide-content {
     margin-top: 95px;
   }
 
