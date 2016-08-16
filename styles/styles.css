@@ -279,6 +279,10 @@ footer .logo {
   }
 }
 
+nav .glyphicon {
+  top: 2px;
+}
+
 nav li::before,
 nav li::after {
   content: '';
@@ -286,7 +290,7 @@ nav li::after {
   margin: 0;
 }
 
-nav .dropdown {
+ul.nav > li {
   margin: 0;
 }
 
