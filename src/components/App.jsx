@@ -1,3 +1,4 @@
+import classnames from 'classnames';
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
 import Application from './application/Application'
@@ -29,8 +30,12 @@ class App extends Component {
   }
 
   render() {
+    const className = classnames({
+      'show-progress': navigationData.currentSlideIndex >= 2
+    })
+
     return (
-      <div>
+      <div className={className}>
         <Navigation navigationData={navigationData} helpData={helpData} />
         <Progress navigationData={navigationData}
                   applicationData={applicationData} />
