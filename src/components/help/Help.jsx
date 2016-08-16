@@ -19,7 +19,8 @@ import UnemploymentIncome from './articles/UnemploymentIncome'
 import RetirementIncome from './articles/RetirementIncome'
 import OtherIncome from './articles/OtherIncome'
 import Signature from './articles/Signature'
-import Summary from './articles/Summary'
+
+import All from './articles/All'
 
 @observer
 class Help extends Component {
@@ -80,8 +81,8 @@ class Help extends Component {
                  case 'retirement-income':       return <RetirementIncome />
                  case 'other-income':            return <OtherIncome />
                  case 'ssn':                     return <Signature />
-                 case 'summary':                 return <Summary />
-                 default:                        return '';
+                 case 'summary':                 return <All />
+                 default:                        return <All />;
                }
              })()}
           </div>

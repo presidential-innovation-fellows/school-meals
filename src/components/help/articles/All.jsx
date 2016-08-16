@@ -20,7 +20,7 @@ import RetirementIncome from './RetirementIncome'
 import OtherIncome from './OtherIncome'
 import Signature from './Signature'
 
-export default class Summary extends Component {
+export default class All extends Component {
   render() {
     return (
       <div>

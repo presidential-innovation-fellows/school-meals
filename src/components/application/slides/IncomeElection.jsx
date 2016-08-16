@@ -25,7 +25,7 @@ class IncomeElection extends Component {
     }).map(slug => programDescription(slug)), ', ', singular ? ' and ' : ' or ')
 
     return (
-      <Slide id="income-election" showHelp={false}>
+      <Slide id="income-election">
 
         <p className="usa-font-lead">
           You have indicated that the

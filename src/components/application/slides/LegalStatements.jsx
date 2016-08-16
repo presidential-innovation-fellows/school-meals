@@ -3,7 +3,7 @@ import Slide from '../Slide'
 
 const LegalStatements = () => {
   return (
-    <Slide header="Legal Statements" id="legal-statements" showHelp={false}>
+    <Slide header="Legal Statements" id="legal-statements">
       <p className="usa-font-lead">Almost done! Please read and acknowledge the following legal statements.</p>
       <h2><abbr title="United States Department of Agriculture">USDA</abbr> Use of Information Statement</h2>
       <p>

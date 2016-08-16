@@ -10,8 +10,7 @@ class Students extends Component {
     const { students, allPeopleCollections } = this.props
 
     return (
-      <Slide id="students" nextDisabled={!students.isValid}
-             showHelp={false} beginsSection>
+      <Slide id="students" nextDisabled={!students.isValid} beginsSection>
         <p className="usa-font-lead">List the names of the students in your household that attend {organization.name} and are applying for school meal benefits.</p>
 
         <PersonCollection
