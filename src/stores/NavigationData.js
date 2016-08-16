@@ -80,6 +80,16 @@ export default class NavigationData {
     return slides[0]
   }
 
+  get jumpSlide() {
+    const slides = this.slides
+    const jumpSlide = slides[slides.length - 2]
+    return jumpSlide
+  }
+
+  get canJump() {
+    return true
+  }
+
   reflectProgress(slide) {
     const slides = this.slides
     let sectionBeginningsSeen = 0
@@ -139,5 +149,9 @@ export default class NavigationData {
 
   @action next() {
     window.location.hash = '#/' + this.nextSlide.id
+  }
+
+  @action jump() {
+    window.location.hash = '#/' + this.jumpSlide.id
   }
 }

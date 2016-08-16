@@ -60,7 +60,9 @@ App.childContextTypes = {
   }).isRequired,
   navigationData: PropTypes.shape({
     back: PropTypes.func.isRequired,
-    next: PropTypes.func.isRequired
+    next: PropTypes.func.isRequired,
+    jump: PropTypes.func.isRequired,
+    canJump: PropTypes.bool.isRequired
   }).isRequired
 };
 

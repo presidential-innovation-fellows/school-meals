@@ -16,6 +16,10 @@ export default class ApplicationData {
     date: formatDate(new Date(Date.now()))
   }
 
+  @computed get attestor() {
+    return this.adults.items.filter(adult => adult.isAttestor)[0]
+  }
+
   @observable contact = {
     phone: '',
     email: '',
@@ -31,7 +35,7 @@ export default class ApplicationData {
     ssnLastFour: ''
   }
 
-  get allPeopleCollections() {
+  @computed get allPeopleCollections() {
     return [this.students,
             this.otherChildren,
             this.adults]

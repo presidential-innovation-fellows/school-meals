@@ -8,6 +8,7 @@ class Slide extends Component {
     super(props, context)
     this.handleBack = this.handleBack.bind(this)
     this.handleNext = this.handleNext.bind(this)
+    this.handleJump = this.handleJump.bind(this)
   }
 
   handleBack() {
@@ -18,7 +19,13 @@ class Slide extends Component {
     this.context.navigationData.next()
   }
 
+  handleJump() {
+    this.context.navigationData.jump()
+  }
+
   render() {
+    const { applicationData, navigationData } = this.context
+
     return (
       <section className="slide" id={this.props.id}
                data-begins-section={this.props.beginsSection}
@@ -46,6 +53,13 @@ class Slide extends Component {
                 {this.props.nextText}
              </Button>
             }
+            {
+              navigationData.canJump &&
+              <Button onClick={this.handleJump}
+                      className="usa-button-primary-alt jump-button">
+                Resume →
+             </Button>
+            }
           </footer>
         </div>
       </section>
@@ -54,13 +68,15 @@ class Slide extends Component {
 }
 
 Slide.contextTypes = {
-  navigationData: PropTypes.shape({
-    back: PropTypes.func.isRequired,
-    next: PropTypes.func.isRequired
-  }).isRequired,
   helpData: PropTypes.shape({
     article: PropTypes.string.isRequired,
     isVisible: PropTypes.bool.isRequired
+  }).isRequired,
+  navigationData: PropTypes.shape({
+    back: PropTypes.func.isRequired,
+    next: PropTypes.func.isRequired,
+    jump: PropTypes.func.isRequired,
+    canJump: PropTypes.bool.isRequired
   }).isRequired
 };
 

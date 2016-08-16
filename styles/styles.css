@@ -292,6 +292,10 @@ footer .logo {
     right: .5em;
     top: .5em;
   }
+
+  .jump-button {
+    float: right;
+  }
 }
 
 nav .glyphicon {
