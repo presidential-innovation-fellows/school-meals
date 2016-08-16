@@ -1,14 +1,23 @@
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
-import { Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap'
+import { Glyphicon, Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap'
 
 @observer
 class Navigation extends Component {
-  constructor (props) {
-    super(props)
+  constructor (props, context) {
+    super(props, context)
+    this.handleHelp = this.handleHelp.bind(this)
   }
 
-  render () {
+  handleHelp(event) {
+    const { navigationData } = this.props
+    const { currentSlide } = navigationData
+    const article = currentSlide.getAttribute('data-help-article')
+
+    this.props.helpData.showArticle(article)
+  }
+
+  render() {
     let lang = 'en'
 
     if (window.location.search.split('?')[1]) {
@@ -47,6 +56,9 @@ class Navigation extends Component {
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav pullRight>
+            <NavItem eventKey={1} onClick={this.handleHelp}>
+              <Glyphicon glyph="question-sign" /> Help
+            </NavItem>
             <NavDropdown eventKey="1" title={map[lang]} id="nav-dropdown">
               <MenuItem eventKey="1.1" lang="en" href="./?lang=en">I speak English</MenuItem>
               <MenuItem eventKey="1.2" lang="zh" href="./?lang=zh">我说中文</MenuItem>
@@ -64,5 +76,10 @@ class Navigation extends Component {
     )
   }
 }
+
+Navigation.propTypes = {
+  navigationData: PropTypes.object.isRequired,
+  helpData: PropTypes.object.isRequired
+};
 
 export default Navigation

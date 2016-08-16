@@ -31,9 +31,9 @@ class App extends Component {
   render() {
     return (
       <div>
-        <Navigation />
+        <Navigation navigationData={navigationData} helpData={helpData} />
         <Progress navigationData={navigationData}
-                  applicationData={applicationData}/>
+                  applicationData={applicationData} />
         <main>
           <div className="usa-grid">
             <div className="usa-width-one-whole">

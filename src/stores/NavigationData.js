@@ -49,6 +49,10 @@ export default class NavigationData {
     window.onhashchange = this.handleHashChange
   }
 
+  get currentSlide() {
+    return document.getElementsByClassName(this.CURRENT_CLASS_NAME)[0]
+  }
+
   get slides() {
     return document.getElementsByClassName('slide')
   }
