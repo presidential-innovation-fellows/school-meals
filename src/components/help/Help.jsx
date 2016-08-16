@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
+import { organization } from '../../config'
 import classNames from 'classnames'
 
 import Welcome from './articles/Welcome'
@@ -54,7 +55,7 @@ class Help extends Component {
     )
 
     return (
-      <asside className={classes} onClick={this.handleClick}>
+      <asside className={classes} onClick={this.handleClick} id="help">
         <header className="cd-panel-header">
           <h1>Help</h1>
           <a className="cd-panel-close" onClick={this.hideHelp}>Close</a>
@@ -85,6 +86,11 @@ class Help extends Component {
                  default:                        return <All />;
                }
              })()}
+            <footer>
+              <p>
+                If you have any questions about the program or how to apply, contact {organization.name} ({organization.contact.phone} / {organization.contact.email} / {organization.contact.address}).
+              </p>
+            </footer>
           </div>
         </div>
       </asside>

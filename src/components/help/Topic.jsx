@@ -1,3 +1,4 @@
+import shortid from 'shortid'
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
 
@@ -5,12 +6,18 @@ import { observer } from 'mobx-react'
 class Topic extends Component {
   render() {
     const { title } = this.props
+    const id = shortid.generate()
 
     return (
-      <div className="help-topic">
-        {!!title && <p className="help-title">{title}</p>}
-        {this.props.children}
-      </div>
+      <li>
+        <button className="usa-accordion-button"
+                aria-controls={`amendment-${id}`}>
+          {title || '--- HELP ---'}
+        </button>
+        <div id={`amendment-${id}`} className="usa-accordion-content">
+          {this.props.children}
+        </div>
+      </li>
     )
   }
 }
