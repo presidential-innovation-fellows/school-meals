@@ -4,6 +4,10 @@ import { organization } from '../../config'
 
 @observer
 class Article extends Component {
+  componentDidMount() {
+    document.getElementById('help-content').scrollTop = 0;
+  }
+
   render() {
     return (
       <article>

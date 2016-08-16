@@ -6,11 +6,6 @@ export default class HelpData {
 
   @action showArticle(article) {
     this.article = article
-
-    // unfortunate to manipulate the DOM in here, but quick and easy
-    const helpContent = document.getElementById('help-content');
-    helpContent.scrollTop = 0;
-
     this.isVisible = true
   }
 }
