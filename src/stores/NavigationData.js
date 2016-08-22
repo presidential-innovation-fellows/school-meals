@@ -49,15 +49,15 @@ export default class NavigationData {
     window.onhashchange = this.handleHashChange
   }
 
-  @computed get slides() {
+  get slides() {
     return document.getElementsByClassName('slide')
   }
 
-  @computed get currentSlide() {
+  get currentSlide() {
     return this.slides[this.currentSlideIndex]
   }
 
-  @computed get nextSlide() {
+  get nextSlide() {
     const slides = this.slides
 
     for (let i = 0; i < slides.length; i++) {
@@ -96,7 +96,7 @@ export default class NavigationData {
     return this.firstIncompleteSlide
   }
 
-  @computed get canJump() {
+  get canJump() {
     if (this.jumpSlide == this.currentSlide) {
       return false
     }
