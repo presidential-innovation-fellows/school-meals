@@ -97,15 +97,11 @@ export default class NavigationData {
   }
 
   get canJump() {
-    if (this.jumpSlide == this.currentSlide) {
-      return false
-    }
-
-    if (this.jumpSlide == this.nextSlide) {
-      return false
-    }
-
-    return true
+    // TODO: complete feature -- difficulties include:
+    //  * when to allow jumping (only once Summary is reached?)
+    //  * which slides may be jumped (all but those with "next" disabled?)
+    //  * how to implement given disconnect of mobx land and navigation land
+    return false
   }
 
   @action reflectProgress(slide) {
