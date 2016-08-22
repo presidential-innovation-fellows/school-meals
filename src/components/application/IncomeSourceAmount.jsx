@@ -20,6 +20,9 @@ class IncomeSourceAmount extends Component {
     value = value.replace(/(\.\d)\./, '$1')
     value = value.replace(/\.\./, '.')
 
+    // cap at $999,999
+    value = value.replace(/(\d{6})[^.]+/, '$1')
+
     this.props.incomeSource[fieldName] = value
   }
 
