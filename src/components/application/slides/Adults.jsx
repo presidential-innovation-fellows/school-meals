@@ -19,7 +19,7 @@ class Adults extends Component {
 
     return (
       <Slide nextDisabled={!adults.isValid} nextText={this.nextText}
-             header="Adults" id="adults" beginsSection>
+             id="adults" beginsSection>
         <p className="usa-font-lead">Okay, now let’s talk about the adults in your household.</p>
         <p>Not including {informalName(attestors[0])}, what other adults live in the household?</p>
 
