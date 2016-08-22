@@ -35,7 +35,7 @@ class Summary extends Component {
 
   get totalAnnualHouseholdIncome() {
     function toAnnual(income) {
-      let amount = parseInt(income.amount, 10)
+      let amount = parseFloat(income.amount, 10)
 
       switch (income.frequency) {
         case 'yearly':
@@ -50,7 +50,7 @@ class Summary extends Component {
         case 'weekly':
           return amount * 52.1428571
         case 'hourly':
-          let hours = parseInt(income.hourlyHours, 10)
+          let hours = parseFloat(income.hourlyHours, 10)
 
           switch (income.hourlyPeriod) {
             case 'day':
@@ -60,10 +60,10 @@ class Summary extends Component {
             case 'month':
               return amount * hours * 12.0
             default:
-              return 0
+              return 0.0
           }
         default:
-          return 0
+          return 0.0
       }
     }
 
@@ -198,7 +198,7 @@ class Summary extends Component {
                      {' '}
                      (<Link id={`income/${income.person.id}/${income.type}`}>edit</Link>)
                    </td>
-                   <td>${numberFormat(parseInt(income.amount, 10))}</td>
+                   <td>${numberFormat(parseFloat(income.amount, 10), 2)}</td>
                    <td>
                      {humanize(income.frequency)}
                      {income.frequency === 'hourly' &&
@@ -219,7 +219,7 @@ class Summary extends Component {
                        </Tooltip>
                      }>
                        <strong className="info-target">
-                         ${numberFormat(this.totalMonthlyHouseholdIncome)}
+                         ${numberFormat(this.totalMonthlyHouseholdIncome, 2)}
                          <Glyphicon glyph="question-sign" />
                        </strong>
                      </OverlayTrigger>
