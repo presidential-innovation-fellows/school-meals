@@ -53,6 +53,10 @@ label small {
   font-weight: normal;
 }
 
+.income-source-details {
+  overflow: auto;
+}
+
 .income-source-details .usa-input-grid input,
 .income-source-details .usa-input-grid select {
   margin-bottom: 1rem;
@@ -291,6 +295,10 @@ footer .logo {
   .help-button {
     right: .5em;
     top: .5em;
+  }
+
+  .jump-button {
+    float: right;
   }
 }
 
