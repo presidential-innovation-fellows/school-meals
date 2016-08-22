@@ -49,15 +49,15 @@ export default class NavigationData {
     window.onhashchange = this.handleHashChange
   }
 
-  get currentSlide() {
-    return document.getElementsByClassName(this.CURRENT_CLASS_NAME)[0]
-  }
-
-  get slides() {
+  @computed get slides() {
     return document.getElementsByClassName('slide')
   }
 
-  get nextSlide() {
+  @computed get currentSlide() {
+    return this.slides[this.currentSlideIndex]
+  }
+
+  @computed get nextSlide() {
     const slides = this.slides
 
     for (let i = 0; i < slides.length; i++) {
@@ -80,17 +80,35 @@ export default class NavigationData {
     return slides[0]
   }
 
-  get jumpSlide() {
+  get firstIncompleteSlide() {
     const slides = this.slides
-    const jumpSlide = slides[slides.length - 2]
-    return jumpSlide
+
+    for (let i = 0; i < slides.length; i++) {
+      let slide = slides[i]
+
+      if (slide.hasAttribute('data-incomplete')) {
+        return slide
+      }
+    }
   }
 
-  get canJump() {
+  get jumpSlide() {
+    return this.firstIncompleteSlide
+  }
+
+  @computed get canJump() {
+    if (this.jumpSlide == this.currentSlide) {
+      return false
+    }
+
+    if (this.jumpSlide == this.nextSlide) {
+      return false
+    }
+
     return true
   }
 
-  reflectProgress(slide) {
+  @action reflectProgress(slide) {
     const slides = this.slides
     let sectionBeginningsSeen = 0
     let slidesSeen = 0
@@ -111,7 +129,7 @@ export default class NavigationData {
     this.currentSlideIndex = slidesSeen
   }
 
-  goToSlide(id) {
+  @action goToSlide(id) {
     const slides = this.slides
     const re = new RegExp(this.CURRENT_CLASS_NAME, 'g') // TODO: imperfect
 

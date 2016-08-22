@@ -1,3 +1,4 @@
+import classNames from 'classnames'
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
 import Button from './Button'
@@ -24,12 +25,20 @@ class Slide extends Component {
   }
 
   render() {
-    const { applicationData, navigationData } = this.context
+    const { navigationData } = this.context
+    const props = {
+      className: "slide",
+      id: this.props.id,
+      'data-begins-section': this.props.beginsSection,
+      'data-help-article': this.props.helpArticle || this.props.id,
+    }
+
+    if (this.props.nextDisabled) {
+      props['data-incomplete'] = true
+    }
 
     return (
-      <section className="slide" id={this.props.id}
-               data-begins-section={this.props.beginsSection}
-               data-help-article={this.props.helpArticle || this.props.id}>
+      <section {...props}>
 
         <div className="usa-content slide-content">
           {this.props.header && <h1>{this.props.header}</h1>}
