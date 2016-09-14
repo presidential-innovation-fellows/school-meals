@@ -191,7 +191,7 @@ class Summary extends Component {
              </thead>
              <tbody>
                {this.allIncomes.map(income =>
-                 <tr key={income.person.id + income.type + income.source}>
+                 <tr key={income.person.id + income.type + income.source + income.num}>
                    <td>{informalName(income.person)}</td>
                    <td>
                      {humanize(income.type)} income

@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
 import { hoursExceedPeriodCapacity } from '../../helpers'
 import BooleanRadio from './BooleanRadio'
+import Checkbox from './Checkbox'
 import Form from './Form'
 import IncomeSourceAmount from './IncomeSourceAmount'
 import IncomeSourceFrequency from './IncomeSourceFrequency'
@@ -59,11 +60,15 @@ class IncomeSource extends Component {
                 <IncomeSourceHourlyPeriod incomeSource={incomeSource} />
               </div>
              }
+
+
              {error && <span className="usa-input-error-message"
                              role="alert">{error}</span>}
              {!error && incomeSource.frequency === 'hourly' &&
               <IncomeSourceSummary incomeSource={incomeSource} />}
-           </div>
+
+
+             </div>
           }
         </Form>
       </div>

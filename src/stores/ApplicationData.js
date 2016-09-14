@@ -2,6 +2,11 @@ import shortid from 'shortid'
 import { action, computed, observable } from 'mobx'
 import { assistancePrograms as assistanceProgramNames } from '../config'
 import { formatDate, informalList } from '../helpers'
+import { testData } from '../debug'
+
+// set DEBUG to true to pull in test data into the AppllicationData object from debug.js
+// this will allow you automatically input all Adult and Student answers in advance
+const DEBUG = true;
 
 export default class ApplicationData {
   students = new StudentCollection()
@@ -39,6 +44,60 @@ export default class ApplicationData {
     return [this.students,
             this.otherChildren,
             this.adults]
+  }
+
+  constructor(){
+    if (DEBUG) {
+      console.log("Loading Default Test Data! \n");
+
+      //Choose the test scenario to import
+      let scenario = "OneAdult_OneStudent";
+
+      console.log("Test Scenario: " + scenario + "\n");
+
+      //Set the values in ApplicationData using the debug test data
+
+      // signature collection
+      this.signature = JSON.parse(JSON.stringify(testData[scenario].signature));
+
+      console.log("Printing signature info...\n");
+      console.log(JSON.stringify(this.signature, undefined, 2));
+
+      // contact info collection
+      this.contact = JSON.parse(JSON.stringify(testData[scenario].contact));
+
+      console.log("Printing signature info...\n");
+      console.log(JSON.stringify(this.contact, undefined, 2));
+
+      // adults collection
+      this.adults.items = testData[scenario].adults.items.map( function (adult){
+                return ( JSON.parse(JSON.stringify(adult)));
+      });
+
+      console.log("Printing Adults... \n");
+      console.log(JSON.stringify(this.adults.items,undefined,2));
+
+
+      this.students.items = testData[scenario].students.items.map ( function(student){
+                return(JSON.parse(JSON.stringify(student)));
+      });
+
+      console.log("Printing Students... \n");
+      console.log(JSON.stringify(this.students.items,undefined,2));
+
+
+      this.otherChildren.items = testData[scenario].otherChildren.items.map ( function(child){
+                return(JSON.parse(JSON.stringify(child)));
+      });
+
+      console.log("Printing Other Children... \n");
+      console.log(JSON.stringify(this.otherChildren.items,undefined,2));
+
+
+      console.log("Finished loading...");
+      console.log("Test Scenario: " + scenario + " is fully loaded!\n");
+      console.log(this);
+    }
   }
 }
 
@@ -168,17 +227,62 @@ class PersonCollection {
         for (let sourceKey in sources) {
           let source = sources[sourceKey]
 
+          console.log(sourceKey + "...\n");
           if (source.has) {
+            console.log("Has is true\n");
+            console.log(source);
             result.push({
               person: person,
               source: sourceKey,
               type: type,
+              num: 0,
               amount: source.amount,
               frequency: source.frequency,
               hourlyHours: source.hourlyHours,
               hourlyPeriod: source.hourlyPeriod
-            })
+            });
+
+            // Erren: New code to add additional income sources to the total
+            // User can add additional income for each sourceKey in UI
+            // Example: User has 2 Salary/Wage jobs -- Uber and Waiter
+            // This code looks to see if user "hasMore" if so loops through "more" array
+            // for the particular income source
+            console.log("Value of hasMore: " + source.hasMore + "\n");
+            console.log("hasMore in Source: " + ("hasMore" in source) + "\n");
+            console.log(source.more);
+            /* if (sourceKey == "salaryWages"){
+              source.hasMore = true;
+            }
+            console.log("Value of hasMore: " + source.hasMore + "\n"); */
+            if (("hasMore" in source) && source.hasMore){
+              console.log("Has More is true\n");
+              console.log("More has " + source.more.length + " items!\n");
+              console.log("Entering For loop...");
+
+              for (let moreKey=0,len=source.more.length; moreKey<len; moreKey++){
+                console.log("For loop key : " + moreKey + "\n");
+
+                let moreIncome = source.more[moreKey];
+
+                console.log(moreIncome);
+
+                result.push({
+                  person: person,
+                  source: sourceKey,
+                  type: type,
+                  num: moreKey + 1, // needed for printing summary later
+                  amount: moreIncome.amount,
+                  frequency: moreIncome.frequency,
+                  hourlyHours: moreIncome.hourlyHours,
+                  hourlyPeriod: moreIncome.hourlyPeriod
+                });
+
+              } // end of for loop
+              console.log("Done with For Loop!");
+            }
+
           }
+
         }
       }
     }
@@ -242,7 +346,7 @@ class AdultCollection extends PersonCollection {
         employment: {
           isApplicable: null,
           sources: {
-            'salaryWages':    { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
+            'salaryWages':    { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', hasMore: true, more: [{amount: '157', frequency: 'monthly', hourlyHours: '0', hourlyPeriod: '0'}] },
             'tips':           { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
             'commission':     { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
             'cashBonus':      { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
@@ -358,3 +462,6 @@ class StudentCollection extends ChildCollection {
     return this.items.length >= 1 && super.isValid
   }
 }
+
+
+
