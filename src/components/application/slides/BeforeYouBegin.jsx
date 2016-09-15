@@ -27,7 +27,7 @@ class BeforeYouBegin extends React.Component {
       <Slide header="Before you begin" id="before-you-begin">
         <p className="usa-font-lead">Before you begin, there are a few things you should know.</p>
 
-        <p>If you received a letter from the school saying that your children were automatically approved (directly certified) for free meals for the <SchoolYear /> school year because someone in your household participates in {assistanceProgramList} then you do not need to submit an application. If there are other children in your household who weren’t listed in that letter, they also qualify for free meals, so contact the school as soon as possible to correct the mistake.</p>
+        <p>If you received a letter from the school saying that your children were automatically approved (directly certified) for free meals for the <SchoolYear /> school year because someone in your household participates in {assistanceProgramList} then you do not need to submit an application.</p>
 
         <p>We only need one application for all the children in your household that attend {organization.name}.</p>
         <p><strong>Eligibility for free or reduced price school meal benefits is based on any one of these three things:</strong></p>
@@ -38,13 +38,7 @@ class BeforeYouBegin extends React.Component {
           <li>your total household income in the month the application is filled out, or the month before</li>
         </ul>
 
-        <p>If you are unsure of whether you will qualify, we encourage you to fill out an application anyway, and officials at {organization.name} will determine if you are eligible.</p>
-
-        <p>If you do not qualify now, but for some reason your financial situation changes in the future, for example if you were to lose your job, you may apply at any time in the school year.</p>
-
         <p>Your US citizenship or immigration status does not affect your eligibility for free and reduced price benefits.</p>
-
-        <p>The non-cash benefits received through the school meal programs are not subject to public charge consideration. In other words, you will not be deported, denied entry to the country, or denied permanent status because you apply for or receive school meal benefits.</p>
 
         <p>If you have questions at any point during the application, click the question mark icon to get help with the current section.</p>
 
