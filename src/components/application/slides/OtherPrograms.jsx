@@ -53,26 +53,23 @@ class OtherPrograms extends Component {
     return (
       <Slide nextDisabled={!this.isValid} id="other-programs">
         <p className="usa-font-lead">
-          No problem! There are other ways to qualify.
+          Your children can also qualify for free meals if any of these apply.
         </p>
 
         <OtherProgramsProgram attribute="isHomeless" {...props}>
           If not, but your household lacks a permanent address,
           or stays together in a shelter, hotel, or other temporary
-          housing arrangement, contact {contact} to see whether they are
-          eligible for benefits.
+          housing arrangement, contact {contact} for help.
         </OtherProgramsProgram>
 
         <OtherProgramsProgram attribute="isMigrant" {...props}>
           If not, but your family relocates on a seasonal basis,
-          contact {contact} to see whether they are eligible for benefits
-          under this program.
+          contact {contact} for help.
         </OtherProgramsProgram>
 
         <OtherProgramsProgram attribute="isRunaway" {...props}>
           If not, but they chose to leave their prior family or household,
-          contact {contact} to see whether they are eligible for benefits
-          under these programs.
+          contact {contact} for help.
         </OtherProgramsProgram>
       </Slide>
     )
