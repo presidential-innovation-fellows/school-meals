@@ -60,8 +60,6 @@ class IncomeSource extends Component {
                 <IncomeSourceHourlyPeriod incomeSource={incomeSource} />
               </div>
              }
-
-
              {error && <span className="usa-input-error-message"
                              role="alert">{error}</span>}
              {!error && incomeSource.frequency === 'hourly' &&

@@ -32,7 +32,6 @@ class IncomeSourceHourlyPeriod extends Component {
         <Select value={incomeSource[fieldName]}
                 onChange={this.handleChange}>
           <option value="" disabled>{prefix}…</option>
-          <option value="day">{prefix} day</option>
           <option value="week">{prefix} week</option>
           <option value="month">{prefix} month</option>
         </Select>

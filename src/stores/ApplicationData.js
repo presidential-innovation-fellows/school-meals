@@ -60,13 +60,13 @@ export default class ApplicationData {
       // signature collection
       this.signature = JSON.parse(JSON.stringify(testData[scenario].signature));
 
-      console.log("Printing signature info...\n");
+      console.log("Loading signature info...\n");
       console.log(JSON.stringify(this.signature, undefined, 2));
 
       // contact info collection
       this.contact = JSON.parse(JSON.stringify(testData[scenario].contact));
 
-      console.log("Printing signature info...\n");
+      console.log("Loading contact info...\n");
       console.log(JSON.stringify(this.contact, undefined, 2));
 
       // adults collection
@@ -74,7 +74,7 @@ export default class ApplicationData {
                 return ( JSON.parse(JSON.stringify(adult)));
       });
 
-      console.log("Printing Adults... \n");
+      console.log("Loading Adults... \n");
       console.log(JSON.stringify(this.adults.items,undefined,2));
 
 
@@ -82,7 +82,7 @@ export default class ApplicationData {
                 return(JSON.parse(JSON.stringify(student)));
       });
 
-      console.log("Printing Students... \n");
+      console.log("Loading Students... \n");
       console.log(JSON.stringify(this.students.items,undefined,2));
 
 
@@ -90,7 +90,7 @@ export default class ApplicationData {
                 return(JSON.parse(JSON.stringify(child)));
       });
 
-      console.log("Printing Other Children... \n");
+      console.log("Loading Other Children... \n");
       console.log(JSON.stringify(this.otherChildren.items,undefined,2));
 
 
