@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { computed } from 'mobx'
 import { observer } from 'mobx-react'
-import { allStudentsAreFHMR } from '../../helpers'
+import { allStudentsAreFHMR, allStudentsAreFoster } from '../../helpers'
 import HouseholdIncome from './HouseholdIncome'
 import Foster from './slides/Foster'
 import OtherPrograms from './slides/OtherPrograms'
@@ -24,12 +24,13 @@ class NoAssistancePrograms extends Component {
         <Foster students={students}
                 allPeopleCollections={allPeopleCollections} />
 
+
         {!!this.studentsExceptFoster.length &&
          <OtherPrograms students={this.studentsExceptFoster}
                         allPeopleCollections={allPeopleCollections} />
         }
 
-        {allStudentsAreFHMR(students) &&
+        {!allStudentsAreFoster(students) && allStudentsAreFHMR(students) &&
          <IncomeElection applicationData={applicationData} />
         }
 
