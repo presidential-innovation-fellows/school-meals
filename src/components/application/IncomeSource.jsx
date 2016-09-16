@@ -65,7 +65,6 @@ class IncomeSource extends Component {
              {!error && incomeSource.frequency === 'hourly' &&
               <IncomeSourceSummary incomeSource={incomeSource} />}
 
-
              </div>
           }
         </Form>

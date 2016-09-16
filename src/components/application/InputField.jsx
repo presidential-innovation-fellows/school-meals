@@ -11,6 +11,8 @@ class InputField extends Component {
     this.handleChange = this.handleChange.bind(this)
   }
 
+
+
   handleChange(event) {
     const handler = this.props.onChange || this.defaultOnChange
     const sanitizer = this.props.sanitize || this.defaultSanitize

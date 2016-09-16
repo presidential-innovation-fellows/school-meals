@@ -30,6 +30,7 @@ class Contact extends Component {
               label="Phone number"
               type="tel"
               additional="Optional"
+              pattern="( \d{3}- | \(\d{3}\) )?\d{3}-\d{4}"
               object={contact}
           />
 
