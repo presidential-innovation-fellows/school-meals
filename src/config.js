@@ -1,6 +1,6 @@
 export const organization = {
-  name: 'Your School District ',
-  logoUrl: 'img/USDA_logo.png',
+  name: 'Applewood School District ',
+  logoUrl: 'img/Applewood_logo.png',
   contact: {
     address: '100 Main Street, Anytown, USA 12345',
     phone: '555-123-4567',
