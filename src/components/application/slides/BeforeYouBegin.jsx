@@ -32,7 +32,7 @@ class BeforeYouBegin extends React.Component {
           If you received a 
             <OverlayTrigger placement="top" overlay={
               <Tooltip id="letter"> 
-                Check that the letter includes all the students in the household, because they are all eligible for free meals. If not, contact the school to correct the mistake. 
+                Check that the letter includes all the students in the household, because they are all eligible for free meals. If not, contact the school to correct the mistake. &nbsp;
               </Tooltip>
             }> 
               <strong className="info-target"> 
@@ -40,7 +40,7 @@ class BeforeYouBegin extends React.Component {
                 <Glyphicon glyph="question-sign" /> 
               </strong> 
             </OverlayTrigger>
-          from the school saying that your children were automatically approved (directly certified) for free meals for the <SchoolYear /> school year because someone in your household participates in {assistanceProgramList} then you do not need to submit an application.
+          &nbsp; from the school saying that your children were automatically approved (directly certified) for free meals for the <SchoolYear /> school year because someone in your household participates in {assistanceProgramList} then you do not need to submit an application.
         </p>
 
         <p>We only need one application for all the children in your household that attend {organization.name}.</p>
