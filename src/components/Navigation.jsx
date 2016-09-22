@@ -46,10 +46,10 @@ class Navigation extends Component {
         <Navbar.Header>
           <Navbar.Brand>
             <span className="hidden-xs">
-              USDA National School Lunch and School Breakfast Programs
+              Applewood School District Application for Free and Reduced Price School Meals
             </span>
             <span className="hidden-sm hidden-md hidden-lg">
-              USDA NSBP/NSLP
+              ASD Application for School Meals
             </span>
           </Navbar.Brand>
           <Navbar.Toggle />
