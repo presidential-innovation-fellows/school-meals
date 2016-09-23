@@ -23,17 +23,13 @@ class MilitaryIncome extends Component {
         <div>
           {incomeType.isDeployed ?
            <p>
-             Military basic pay made available to the household, cash bonuses and allowances for off-base housing, food or clothing (including BAH) are includable income sources. Do not include combat pay, Family Subsistence Supplemental Allowance, or Military Housing Privatization Initiative.
+             Military basic pay, drill pay, and cash bonuses made available to the household, as well as allowances for off-base housing, food or clothing (including BAH) are includable income sources. Do not include combat pay, Family Subsistence Supplemental Allowance (FSSA), or Military Housing Privatization Initiative (MHPI).
            </p>
            :
            <p>
-             Military basic pay, drill pay, cash bonuses and allowances for off-base housing, food, or clothing (including BAH) count as income for purposes of applying for school meal benefits. Do not include combat pay, Family Subsistence Supplemental Allowance, or Military Housing Privatization Initiative.
+             Military basic pay, drill pay, cash bonuses and allowances for off-base housing, food, or clothing (including BAH) count as income for purposes of applying for school meal benefits. Do not include combat pay, Family Subsistence Supplemental Allowance (FSSA), or Military Housing Privatization Initiative (MHPI).
            </p>
           }
-
-           <p>
-             If your household's current, gross income is higher or lower than usual and does not fairly or accurately represent your household's actual circumstances, see the 'WHAT IF MY INCOME IS NOT ALWAYS THE SAME?' or 'IF I DO NOT QUALIFY RIGHT NOW, MAY I APPLY LATER?' questions on the HELP section. If you have additional questions, contact {organization.name} ({organization.contact.phone} / {organization.contact.email} / {organization.contact.address}), and they will help you figure out your household's annual rate of income based on <abbr title="United States Department of Agriculture">USDA</abbr> guidelines.
-           </p>
 
            <IncomeTypeDefaultText person={person} />
 
@@ -46,7 +42,7 @@ class MilitaryIncome extends Component {
            </IncomeSource>
 
            <IncomeSource incomeSources={incomeSources} name="allowance">
-             Military allowance for off-base housing (other than privatized housing allowances), food, clothing
+             Military allowance for off-base housing, food, clothing (other than FSSA and MHPI)
            </IncomeSource>
         </div>
       </IncomeType>
