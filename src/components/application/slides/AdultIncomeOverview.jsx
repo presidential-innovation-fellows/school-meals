@@ -71,7 +71,7 @@ class AdultIncomeOverview extends Component {
         </IncomeTypeFormGroup>
 
         <IncomeTypeFormGroup person={person} incomeTypeName="retirement">
-          Does <strong>{name}</strong> have retirement income from Social Security (including Black Lung Benefits and Railroad Retirement) or private pensions?
+          Does <strong>{name}</strong> have retirement income from Social Security (including Black Lung Benefits and Railroad Retirement) or pensions?
         </IncomeTypeFormGroup>
 
         <IncomeTypeFormGroup person={person} incomeTypeName="other">
