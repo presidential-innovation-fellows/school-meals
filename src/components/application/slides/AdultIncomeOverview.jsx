@@ -40,7 +40,7 @@ class AdultIncomeOverview extends Component {
         </p>
 
         <p>
-          <dfn>Gross income</dfn> means <strong>all money earned or received <em>before</em> deductions</strong> such as income taxes, social security taxes, and insurance premiums. You should not report net income, which is the amount of money received in a pay check. Net income is total (or gross) income, minus taxes and deductions, and is commonly referred to as "take home pay".
+          <dfn>Gross income</dfn> means <strong>all money earned or received <em>before</em> deductions</strong> such as income taxes, social security taxes, and insurance premiums. You should not report net income, which is the amount of money received in a pay check.
           </p>
 
         <IncomeTypeFormGroup person={person} incomeTypeName="military">
@@ -71,7 +71,7 @@ class AdultIncomeOverview extends Component {
         </IncomeTypeFormGroup>
 
         <IncomeTypeFormGroup person={person} incomeTypeName="retirement">
-          Does <strong>{name}</strong> have retirement income from Social Security (including Black Lung Benefits and Railroad Retirement) or private pensions?
+          Does <strong>{name}</strong> have retirement income from Social Security (including Black Lung Benefits and Railroad Retirement) or pensions?
         </IncomeTypeFormGroup>
 
         <IncomeTypeFormGroup person={person} incomeTypeName="other">

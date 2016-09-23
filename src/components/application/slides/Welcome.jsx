@@ -13,17 +13,15 @@ class Welcome extends React.Component {
         </p>
         <p>
           This interactive application will guide you through the application
-          process and send your response directly to {organization.name}. When
+          process. When
           you are ready to apply, click the ‘Get Started’ button below to
           begin.
         </p>
         <p>
           If you would like to apply using
           the <a href={organization.paperApplication.url} target="_blank">paper application</a>,
-          you can print it and return it to us or contact {organization.name} (
-          {organization.paperApplication.phone}{' / '}
-          {organization.paperApplication.email}{' / '}
-          {organization.paperApplication.address}).
+          you can print and complete it and then return it to us at 
+          {organization.paperApplication.address}.
         </p>
         <p>
           If you have any questions about the program or how to apply,
