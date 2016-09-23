@@ -21,9 +21,8 @@ class OtherChildren extends Component {
 
         <p className="usa-font-lead">Okay, it looks like we will need more information about your household and income in order to determine if you are eligible for benefits.</p>
 
-        <p>Both income and total household size are important for determining eligibility for school meal benefits. Remember, for the purposes of applying for school meal benefits, a household is defined as a group of people, related or unrelated, that usually live together and share income and expenses. If this sounds complicated, don’t worry! We will help you determine who should be included in your application, as well as which income sources to report.</p>
 
-        <p>Before we talk about the adults, let’s finish up the kids in the house. Other than {informalList(alreadyNamed)}, are there any other children in your household? Don’t forget to include:</p>
+        <p>Let's talk about the other kids in the house, and then we'll move on to the adults.  Other than {informalList(alreadyNamed)}, are there any other children in your household? Don’t forget to include:</p>
 
         <ul className="usa-content-list">
           <li>students that are in grade 12 or below and attend school in a school district other than {organization.name}</li>
