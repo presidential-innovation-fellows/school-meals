@@ -24,7 +24,6 @@ class Article extends Component {
   render() {
     return (
       <article>
-        <SearchTopics />
         <ul className="usa-accordion">
           {this.props.children}
         </ul>

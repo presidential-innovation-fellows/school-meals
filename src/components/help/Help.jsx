@@ -21,7 +21,10 @@ import RetirementIncome from './articles/RetirementIncome'
 import OtherIncome from './articles/OtherIncome'
 import Signature from './articles/Signature'
 
+
 import All from './articles/All'
+
+import SearchTopics from './SearchTopics'
 
 @observer
 class Help extends Component {
@@ -62,7 +65,9 @@ class Help extends Component {
         </header>
 
         <div className="cd-panel-container">
+
           <div className="cd-panel-content" id="help-content">
+             <SearchTopics/>
             {(() => {
                switch (article) {
                  case 'welcome':                 return <Welcome />
