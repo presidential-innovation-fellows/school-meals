@@ -23,7 +23,7 @@ class RetirementIncome extends Component {
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="privatePension">
-          Private pension
+          Pension
         </IncomeSource>
       </IncomeType>
     )
