@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react'
+﻿import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
 import OtherProgramsProgram from './OtherProgramsProgram'
 import { observable } from 'mobx'
@@ -43,7 +43,6 @@ class OtherPrograms extends Component {
 
   render() {
     const { allPeopleCollections, students } = this.props
-    const contact = `${organization.name} (${organization.contact.phone} / ${organization.contact.email} / ${organization.contact.address})`
     const props = {
       students,
       allPeopleCollections,
@@ -59,17 +58,17 @@ class OtherPrograms extends Component {
         <OtherProgramsProgram attribute="isHomeless" {...props}>
           If not, but your household lacks a permanent address,
           or stays together in a shelter, hotel, or other temporary
-          housing arrangement, contact {contact} for help.
+          housing arrangement, contact {organization.name} for help.
         </OtherProgramsProgram>
 
         <OtherProgramsProgram attribute="isMigrant" {...props}>
           If not, but your family relocates on a seasonal basis,
-          contact {contact} for help.
+          contact {organization.name} for help.
         </OtherProgramsProgram>
 
         <OtherProgramsProgram attribute="isRunaway" {...props}>
           If not, but they chose to leave their prior family or household,
-          contact {contact} for help.
+          contact {organization.name} for help.
         </OtherProgramsProgram>
       </Slide>
     )

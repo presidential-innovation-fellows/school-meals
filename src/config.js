@@ -4,7 +4,8 @@ export const organization = {
   contact: {
     address: '100 Main Street, Anytown, USA 12345',
     phone: '555-123-4567',
-    email: 'sfa@state.us'
+    email: 'sfa@state.us',
+    shortname: 'ASD'
   },
   paperApplication: {
     url: 'http://www.fns.usda.gov/sites/default/files/cn/SP34-2016a2.pdf',
