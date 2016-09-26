@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react'
+﻿import React, { Component, PropTypes } from 'react'
 import Steps, { Step } from 'rc-steps'
 import { observer } from 'mobx-react'
 import { ProgressBar } from 'react-bootstrap'
@@ -44,7 +44,7 @@ class Progress extends Component {
     result.push({ title: 'Programs', 'data-hash': 'assistance-programs' })
 
     if (this.showHousehold) {
-      result.push({ title: 'Children', 'data-hash': 'other-children' })
+      result.push({ title: 'Other Kids', 'data-hash': 'other-children' })
       result.push({ title: 'Adults', 'data-hash': 'adults' })
     }
 

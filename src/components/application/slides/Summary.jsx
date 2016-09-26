@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react'
+﻿import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
 import Link from '../Link'
 import SummaryLabel from './SummaryLabel'
@@ -46,17 +46,17 @@ class Summary extends Component {
         case 'twicePerMonth':
           return amount * 24.0
         case 'everyTwoWeeks':
-          return amount * 26.0714286
+          return amount * 26.0
         case 'weekly':
-          return amount * 52.1428571
+          return amount * 52.0
         case 'hourly':
           let hours = parseFloat(income.hourlyHours, 10)
 
           switch (income.hourlyPeriod) {
             case 'day':
-              return amount * hours * 365.242199
+              return amount * hours * 365.0
             case 'week':
-              return amount * hours * 52.1428571
+              return amount * hours * 52.0
             case 'month':
               return amount * hours * 12.0
             default:

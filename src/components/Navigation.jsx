@@ -1,6 +1,7 @@
-import React, { Component, PropTypes } from 'react'
+﻿import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
 import { Glyphicon, Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap'
+import { organization } from '../config'
 
 @observer
 class Navigation extends Component {
@@ -46,10 +47,10 @@ class Navigation extends Component {
         <Navbar.Header>
           <Navbar.Brand>
             <span className="hidden-xs">
-              USDA National School Lunch and School Breakfast Programs
+              {organization.name} Application for Free and Reduced Price School Meals
             </span>
             <span className="hidden-sm hidden-md hidden-lg">
-              USDA NSBP/NSLP
+              {organization.contact.shortname} Application for School Meals
             </span>
           </Navbar.Brand>
           <Navbar.Toggle />
