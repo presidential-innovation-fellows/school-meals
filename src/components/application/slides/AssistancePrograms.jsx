@@ -35,7 +35,7 @@ class AssistancePrograms extends Component {
           </p>
         </div>
 
-        <p><strong>Does anyone in your household (including you) currently participate in any of the following programs?</strong></p>
+        <p><strong>Please select from the checkboxes below if anyone in your household (including you) currently participates in any of the following programs. Otherwise, leave blank and press continue.</strong></p>
 
         <AssistanceProgramList assistancePrograms={assistancePrograms} />
       </Slide>

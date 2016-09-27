@@ -2,6 +2,7 @@ import jQuery from 'jquery'
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
 import Accordion from '../../../node_modules/uswds/src/js/components/accordion';
+import SearchTopics from "./SearchTopics";
 
 @observer
 class Article extends Component {

@@ -93,7 +93,7 @@ class Summary extends Component {
             assistancePrograms } = applicationData
     const attestor = adults.first
     const showHousehold =
-      !assistancePrograms.hasAny &&
+      !assistancePrograms.hasAny ||
       !allStudentsAreFHMR(students)
 
     return (

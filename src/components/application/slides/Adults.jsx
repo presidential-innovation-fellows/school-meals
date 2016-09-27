@@ -29,7 +29,7 @@ class Adults extends Component {
           <li>
           Also include people that are not currently living with you, but are only away on a temporary basis, like:
             <ul>
-              <li>kids that are away at college,</il>
+              <li>kids that are away at college,</li>
               <li>members of your family that are in the military, and are deployed</li>
             </ul>
           </li>

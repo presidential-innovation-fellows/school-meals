@@ -29,16 +29,16 @@ class BeforeYouBegin extends React.Component {
         <p className="usa-font-lead">Before you begin, there are a few things you should know.</p>
 
         <p>
-          If you received a 
+          If you received a &nbsp;
             <OverlayTrigger placement="top" overlay={
-              <Tooltip id="letter"> 
+                <Tooltip id="letter">
                 Check that the letter includes all the students in the household, because they are all eligible for free meals. If not, contact the school to correct the mistake. &nbsp;
-              </Tooltip>
-            }> 
-              <strong className="info-target"> 
-                letter 
-                <Glyphicon glyph="question-sign" /> 
-              </strong> 
+                </Tooltip>
+              }>
+                <strong className="info-target">
+                  letter
+                  <Glyphicon glyph="question-sign" />
+                </strong>
             </OverlayTrigger>
           &nbsp; from the school saying that your children were automatically approved (directly certified) for free meals for the <SchoolYear /> school year because someone in your household participates in {assistanceProgramList} then you do not need to submit an application.
         </p>

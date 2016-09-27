@@ -202,6 +202,19 @@ export function allStudentsAreFHMR(students) {
     .reduce((a, b) => a && b, true)
 }
 
+// Added a new function to calculate if all students are Foster
+export function allStudentsAreFoster(students) {
+  const qualifyingAttribute = "isFoster";
+
+  if (!students.length) {
+    return false
+  }
+
+  return students
+    .map(student => student.isFoster)
+    .reduce ( (acc, item) => acc && item, true);
+}
+
 export function programDescription(slug) {
   return {
     isFoster: 'live with you under a formal (court-ordered) foster care arrangement',
