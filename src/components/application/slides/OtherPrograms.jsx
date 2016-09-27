@@ -56,9 +56,10 @@ class OtherPrograms extends Component {
         </p>
 
         <OtherProgramsProgram attribute="isHomeless" {...props}>
-          If not, but your household lacks a permanent address,
-          or stays together in a shelter, hotel, or other temporary
-          housing arrangement, contact {organization.name} for help.
+          If not, but you moved your household into a different
+          school district within the last three years to gain or look for
+          temporary/seasonal work in agriculture or fishing,
+          contact {organization.name} for help.
         </OtherProgramsProgram>
 
         <OtherProgramsProgram attribute="isMigrant" {...props}>
