@@ -45,14 +45,14 @@ class BeforeYouBegin extends React.Component {
         </p>
 
         <p>We need only one application for all the children in your household that attend {organization.name}.</p>
-        <p><strong>Eligibility for free or reduced price school meal benefits is based on </strong>
+        <p><strong>Eligibility for free or reduced price school meal benefits is based on any one of these </strong>
             <OverlayTrigger placement="top" overlay={
                 <Tooltip id="threethings">
                 {tooltiptext.threethingsfirst} {organization.name} {tooltiptext.threethingssecond} &nbsp;
                 </Tooltip>
               }>
                 <strong className="info-target">
-                  any one of these three things:
+                  three things:
                   <Glyphicon glyph="question-sign" />
                 </strong>
             </OverlayTrigger>
