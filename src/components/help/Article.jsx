@@ -21,13 +21,41 @@ class Article extends Component {
     document.getElementById('help-content').scrollTop = 0;
   }
 
+  getChildrenArray(){
+    let childArray = []
+    let children = this.props.children
+
+    /* Object.keys(children).forEach(function(key){
+      let child = children[key]
+      childArray.push(child);
+    })
+    */
+    console.log("Printing out Help Children...\n")
+
+    for (var i in children){
+
+      console.log(children[i]);
+      if (children[i] != null && typeof(children[i].type) != "undefined"){
+        console.log(children[i].type.name);
+      }
+    }
+
+    console.log("Finished Printing!\n")
+    return (childArray);
+  }
+
+
+
+
   render() {
     return (
-      <article>
-        <ul className="usa-accordion">
+      <ul className="usa-accordion">
+        {/* <ul className="usa-accordion"> */}
           {this.props.children}
-        </ul>
-      </article>
+          { this.getChildrenArray() }
+
+        {/* </ul> */}
+      </ul>
     )
   }
 }
