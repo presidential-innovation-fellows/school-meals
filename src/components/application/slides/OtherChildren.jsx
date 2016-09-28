@@ -1,10 +1,12 @@
-import React, { Component, PropTypes } from 'react'
+﻿import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
 import PersonCollection from '../PersonCollection'
 import { computed } from 'mobx'
 import { observer } from 'mobx-react'
 import { organization } from '../../../config'
 import { informalList } from '../../../helpers'
+import { Glyphicon, OverlayTrigger, Tooltip } from 'react-bootstrap'
+import { tooltiptext } from '../../Tooltiptext'
 
 @observer
 class OtherChildren extends Component {
@@ -19,8 +21,19 @@ class OtherChildren extends Component {
       <Slide nextDisabled={!otherChildren.isValid} nextText={this.nextText}
              id="other-children" beginsSection>
 
-        <p className="usa-font-lead">Okay, it looks like we will need more information about your household and income in order to determine if you are eligible for benefits.</p>
-
+        <p className="usa-font-lead">Okay, it looks like we will need more information about your &nbsp;
+            <OverlayTrigger placement="top" overlay={
+                <Tooltip id="household-reminder">
+                {tooltiptext.householdreminder}
+                </Tooltip>
+              }>
+                <strong className="info-target">
+                  household
+                  <Glyphicon glyph="question-sign" />
+                </strong>
+            </OverlayTrigger>
+          &nbsp;  and income in order to determine if you are eligible for benefits.
+        </p>
 
         <p>Let's talk about the other kids in the house, and then we'll move on to the adults.  Other than {informalList(alreadyNamed)}, are there any other children in your household? Don’t forget to include:</p>
 
