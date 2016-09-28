@@ -347,7 +347,7 @@ class AdultCollection extends PersonCollection {
           isApplicable: null,
           sources: {
             'salaryWages':    { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', hasMore: true, more: [{amount: '157', frequency: 'monthly', hourlyHours: '0', hourlyPeriod: '0'}] },
-            'tips':           { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
+            'tips':           { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [{amount: '157', frequency: 'monthly', hourlyHours: '0', hourlyPeriod: '0'}] },
             'commission':     { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
             'cashBonus':      { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
             'selfEmployment': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' }

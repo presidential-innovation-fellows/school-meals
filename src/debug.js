@@ -76,8 +76,11 @@ export const testData = {
                   frequency: 'monthly',
                   hourlyHours : '',
                   hourlyPeriod : '',
-                  hasMore: null,
-                  more: []
+                  hasMore: true,
+                  more: [
+                    {amount: '123', frequency: 'monthly', hourlyHours: '0', hourlyPeriod: '0'},
+                    {amount: '456', frequency: 'monthly', hourlyHours: '0', hourlyPeriod: '0'}
+                  ]
                 },
                 commission: {
                   has: false
@@ -86,7 +89,12 @@ export const testData = {
                   has: false
                 },
                 tips: {
-                  has: false
+                  has: true,
+                  amount: 1000,
+                  frequency: 'monthly',
+                  hourlyHours : '',
+                  hourlyPeriod : '',
+                  hasMore: null
                 },
                 selfEmployment: {
                   has: false

@@ -8,6 +8,8 @@ import IncomeSourceAmount from './IncomeSourceAmount'
 import IncomeSourceFrequency from './IncomeSourceFrequency'
 import IncomeSourceHourlyPeriod from './IncomeSourceHourlyPeriod'
 import IncomeSourceSummary from './IncomeSourceSummary'
+import IncomeSourceSingle from './IncomeSourceSingle'
+import AdditionalIncome from './IncomeSourceAdditional'
 
 @observer
 class IncomeSource extends Component {
@@ -43,29 +45,15 @@ class IncomeSource extends Component {
         <Form>
           <label>{this.props.children}</label>
           <BooleanRadio name="has" object={incomeSource} />
-
+          {console.log("source: " + name + " income source has = " + incomeSource.has)}
           {incomeSource.has &&
            <div className="income-source-details">
-             <div>
-               <IncomeSourceAmount incomeSource={incomeSource} />
-               <IncomeSourceFrequency {...frequencyProps} />
-             </div>
-             {incomeSource.frequency === 'hourly' &&
-              <div>
-                <IncomeSourceAmount incomeSource={incomeSource}
-                                    fieldName="hourlyHours"
-                                    placeholder="Hours"
-                                    prepend=""
-                                    error={!!error} />
-                <IncomeSourceHourlyPeriod incomeSource={incomeSource} />
-              </div>
-             }
-             {error && <span className="usa-input-error-message"
-                             role="alert">{error}</span>}
-             {!error && incomeSource.frequency === 'hourly' &&
-              <IncomeSourceSummary incomeSource={incomeSource} />}
 
-             </div>
+              <IncomeSourceSingle incomeSource={incomeSource} name={name} showHourly={showHourly} showAnnual={showAnnual}/>
+
+              <AdditionalIncome incomeSource={incomeSource} name={name} showHourly={showHourly} showAnnual={showAnnual}/>
+
+           </div>
           }
         </Form>
       </div>

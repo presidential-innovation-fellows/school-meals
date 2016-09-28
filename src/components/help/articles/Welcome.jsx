@@ -9,6 +9,7 @@ export default class Welcome extends Component {
     const assistanceProgramList =
       toSentenceSerial(assistancePrograms, ', ', ' or ')
 
+
     return (
       <Article>
         <Topic title="Can I apply using a paper application?">

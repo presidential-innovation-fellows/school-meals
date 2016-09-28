@@ -67,7 +67,8 @@ class Help extends Component {
         <div className="cd-panel-container">
 
           <div className="cd-panel-content" id="help-content">
-             <SearchTopics/>
+            <SearchTopics/>
+
             {(() => {
                switch (article) {
                  case 'welcome':                 return <Welcome />
@@ -91,6 +92,7 @@ class Help extends Component {
                  default:                        return <All />;
                }
              })()}
+
             <footer>
               <p>
                 If you have any questions about the program or how to apply, contact {organization.name} ({organization.contact.phone} / {organization.contact.email} / {organization.contact.address}).
