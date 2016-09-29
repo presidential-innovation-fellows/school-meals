@@ -1,4 +1,4 @@
-import React from 'react'
+﻿import React from 'react'
 import Slide from '../Slide'
 import { organization } from '../../../config'
 
@@ -22,13 +22,6 @@ class Welcome extends React.Component {
           the <a href={organization.paperApplication.url} target="_blank">paper application</a>,
           you can print and complete it and then return it to us at 
           {organization.paperApplication.address}.
-        </p>
-        <p>
-          If you have any questions about the program or how to apply,
-          contact {organization.name} (
-          {organization.contact.phone}{' / '}
-          {organization.contact.email}{' / '}
-          {organization.contact.address}).
         </p>
       </Slide>
     )
