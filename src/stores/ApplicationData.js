@@ -74,6 +74,9 @@ export default class ApplicationData {
                 return ( JSON.parse(JSON.stringify(adult)));
       });
 
+      //testing to see if I can re-attach the class methods for adding / removing
+      Object.assign(this.adults.items[0].incomeTypes.employment.sources.salaryWages, {add: this.adults.addIncomeSource, remove: this.adults.removeIncomeSource})
+
       console.log("Loading Adults... \n");
       console.log(JSON.stringify(this.adults.items,undefined,2));
 
@@ -180,6 +183,10 @@ class PersonCollection {
     }
 
     return item
+  }
+
+  get newIncome() {
+
   }
 
   toJSON() {
@@ -346,10 +353,26 @@ class AdultCollection extends PersonCollection {
         employment: {
           isApplicable: null,
           sources: {
-            'salaryWages':    { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', hasMore: true, more: [{amount: '157', frequency: 'monthly', hourlyHours: '0', hourlyPeriod: '0'}] },
-            'tips':           { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [{amount: '157', frequency: 'monthly', hourlyHours: '0', hourlyPeriod: '0'}] },
-            'commission':     { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
-            'cashBonus':      { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
+            'salaryWages':    { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '',
+                                hasMore: null,
+                                more: [],
+                                add: this.addIncomeSource,
+                                remove: this.removeIncomeSource},
+            'tips':           { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '',
+                                hasMore: null,
+                                more: [],
+                                add: this.addIncomeSource,
+                                remove: this.removeIncomeSource},
+            'commission':     { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '',
+                                hasMore: null,
+                                more: [],
+                                add: this.addIncomeSource,
+                                remove: this.removeIncomeSource},
+            'cashBonus':      { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '',
+                                hasMore: null,
+                                more: [],
+                                add: this.addIncomeSource,
+                                remove: this.removeIncomeSource},
             'selfEmployment': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' }
           }
         },
@@ -401,6 +424,25 @@ class AdultCollection extends PersonCollection {
 
   get isValid() {
     return this.items.length >= 1 && super.isValid
+  }
+
+  @action addIncomeSource(source) {
+
+    if (source.more.length == 0){
+      source.hasMore = true
+    }
+    source.more.push({amount: '0', frequency: 'monthly', hourlyHours: '0', hourlyPeriod: '0'})
+
+  }
+
+  @action removeIncomeSource(source, i) {
+    if (i < source.more.length) {
+      source.more.splice(i,1)
+
+      if (source.more.length == 0){
+        source.hasMore = false
+      }
+    }
   }
 }
 

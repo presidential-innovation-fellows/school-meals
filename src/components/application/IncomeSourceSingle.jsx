@@ -33,6 +33,7 @@ class IncomeSourceSingle extends Component {
     const { name, showHourly, showAnnual } = this.props
     const incomeSource = this.props.incomeSource
     const error = this.error
+
     const frequencyProps = {
       incomeSource,
       showHourly,
@@ -45,6 +46,7 @@ class IncomeSourceSingle extends Component {
              <div>
                <IncomeSourceAmount incomeSource={incomeSource} />
                <IncomeSourceFrequency {...frequencyProps} />
+
              </div>
              {incomeSource.frequency === 'hourly' &&
               <div>

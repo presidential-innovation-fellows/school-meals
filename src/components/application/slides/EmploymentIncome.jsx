@@ -31,11 +31,11 @@ class EmploymentIncome extends Component {
           Commission
         </IncomeSource>
 
-        <IncomeSource incomeSources={incomeSources} name="cashBonus">
+        <IncomeSource incomeSources={incomeSources} showAnnual={true} name="cashBonus">
           Cash bonus
         </IncomeSource>
 
-        <IncomeSource incomeSources={incomeSources} name="selfEmployment">
+        <IncomeSource incomeSources={incomeSources} showHourly={true} showAnnual={true} name="selfEmployment">
           Net income from self-employment
         </IncomeSource>
       </IncomeType>

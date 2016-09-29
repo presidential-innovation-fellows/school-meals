@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-import { observer } from 'mobx-react'
+import { observer, observable} from 'mobx-react'
 import { hoursExceedPeriodCapacity } from '../../helpers'
 import BooleanRadio from './BooleanRadio'
 import Checkbox from './Checkbox'
@@ -12,6 +12,8 @@ import IncomeSource from './IncomeSource'
 
 import IncomeSourceSingle from './IncomeSourceSingle'
 
+import shortid from 'shortid'
+
 @observer
 class AdditionalIncome extends Component {
 
@@ -21,6 +23,7 @@ class AdditionalIncome extends Component {
     this.deleteIncome = this.deleteIncome.bind(this)
     this.onAddIncomeClick = this.onAddIncomeClick.bind(this)
     this.onDeleteIncomeClick = this.onDeleteIncomeClick.bind(this)
+
   }
 
 
@@ -48,19 +51,62 @@ class AdditionalIncome extends Component {
         Need a function to remove an income line from the list and from the
         more[] array.
      */
+
+    console.log("Removing from element: " + index);
+
+
+
   }
 
   onAddIncomeClick(){
     /*
         Need to handle the event when user clicks the Add Income link
      */
-    console.log("onAddIncomeClick was called\n")
+
+    let incomeSource = this.props.incomeSource
+
+
+    if (typeof(incomeSource.more) != "undefined") {
+
+      console.log("onAddIncomeClick was called\n")
+      console.log("Before: \n")
+
+      console.log(incomeSource.more)
+
+      incomeSource.add(incomeSource)
+
+
+      console.log("After: \n")
+      console.log(incomeSource.more)
+    }
+
   }
 
-  onDeleteIncomeClick(){
+  onDeleteIncomeClick(event){
     /*
         Need to handle the event when the user clicks the Delete Income button
      */
+
+
+    let incomeSource = this.props.incomeSource
+
+    let i = event.target.id
+
+    console.log("onDeleteIncomeClick was called for : " + i + "\n")
+
+    incomeSource.remove(incomeSource, i)
+  }
+
+  onDeleteTest(event){
+
+    // let event = event || window.event
+
+    console.log("Entering OnDeleteTest...\n")
+    console.log(event)
+    console.log(event.target)
+    console.log("This is a " + event.target.tagName + " and the id is " + event.target.id)
+
+
   }
 
 
@@ -68,11 +114,29 @@ class AdditionalIncome extends Component {
     const { name, showHourly, showAnnual } = this.props
     const incomeSource = this.props.incomeSource
     const error = this.error
-    const frequencyProps = {
-      incomeSource,
-      showHourly,
-      showAnnual
+    const incomeSourceProps = {
+      name: name,
+      showHourly: showHourly,
+      showAnnual: showAnnual,
+      key: shortid.generate()
     }
+    const addButtonProps = {
+      key: shortid.generate(),
+      name: "addIncomeButton",
+      type: "button",
+      className: "usa-button-secondary",
+      onClick: this.onAddIncomeClick
+    }
+
+    const deleteButtonProps = {
+      name: "deleteIncomeButton",
+      key: shortid.generate(),
+      type: "button",
+      className: "usa-button-gray",
+      onClick: this.onDeleteIncomeClick
+    }
+
+
 
 
     return (
@@ -82,10 +146,13 @@ class AdditionalIncome extends Component {
 
             {
               incomeSource.more.map( function(source, i) {
-                return (<div><strong>{i+2}:</strong> <a href="#">[Delete]</a> <IncomeSourceSingle incomeSource={source} name={name} showHourly={showHourly} showAnnual={showAnnual}/> </div>)
-              })
+
+                return (<div> <div style={{borderTop: "1px solid LightGray", marginTop: "10px", paddingTop: "10px"}} key={shortid.generate()}> <IncomeSourceSingle incomeSource={source} {...incomeSourceProps}/>  <button id={i} {...deleteButtonProps}>Remove</button> </div></div>)
+
+                //return (<div key={shortid.generate()}> <IncomeSourceSingle incomeSource={source} {...incomeSourceProps}/>  <button id={i} {...deleteButtonProps}>Remove {i+2}</button> </div>)
+              }, this)
             }
-            <button type="button" className="btn-xs" name="something" id="123"  onClick={this.onAddIncomeClick()} >+ Add New</button>
+            <button {...addButtonProps} >+ Add Income Source</button>
           </div>
         }
       </div>

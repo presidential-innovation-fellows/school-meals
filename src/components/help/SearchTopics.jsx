@@ -1,4 +1,5 @@
 import jQuery from 'jquery'
+import uswds from 'uswds'
 import React, { Component, PropTypes } from 'react'
 
 const NUM_TOPICS_SEARCH_THRESHOLD = 0;
@@ -39,9 +40,9 @@ class SearchTopics extends Component {
   render() {
     if (this.state.shouldShowSearch) {
       return (
-        <div class="usa-grid">
-          <div class="usa-width-one-whole">
-            <form class="usa-search usa-search-small">
+        <div className="usa-grid">
+          <div className="usa-width-one-whole">
+            <form className="usa-search usa-search-small">
               <div role="search">
                 <input
                  id="search-field-small"
