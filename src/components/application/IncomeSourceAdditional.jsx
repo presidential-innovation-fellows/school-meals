@@ -19,8 +19,7 @@ class AdditionalIncome extends Component {
 
   constructor (props) {
     super(props)
-    this.addNewIncome = this.addNewIncome.bind(this)
-    this.deleteIncome = this.deleteIncome.bind(this)
+
     this.onAddIncomeClick = this.onAddIncomeClick.bind(this)
     this.onDeleteIncomeClick = this.onDeleteIncomeClick.bind(this)
 
@@ -33,81 +32,34 @@ class AdditionalIncome extends Component {
   }
 
 
-  addNewIncome(){
-    /*
-        This is a function to add a new item. Creates an empty income object
-        and adds it to the more[] array for the incomeSource
-    */
-  }
 
   /*
-        Note: Edits should already be covered because I pass a pointer to the
-        the income object in the more array to the IncomeSourceSingle component
-   */
-
-
-  deleteIncome(index){
-    /*
-        Need a function to remove an income line from the list and from the
-        more[] array.
-     */
-
-    console.log("Removing from element: " + index);
-
-
-
-  }
-
+        Handle the event when user clicks the Add Income Source Button
+  */
   onAddIncomeClick(){
-    /*
-        Need to handle the event when user clicks the Add Income link
-     */
 
     let incomeSource = this.props.incomeSource
 
-
     if (typeof(incomeSource.more) != "undefined") {
-
-      console.log("onAddIncomeClick was called\n")
-      console.log("Before: \n")
-
-      console.log(incomeSource.more)
 
       incomeSource.add(incomeSource)
 
-
-      console.log("After: \n")
-      console.log(incomeSource.more)
     }
 
   }
 
+  /*
+        Handle the event when user clicks the Delete Income Source Button
+  */
   onDeleteIncomeClick(event){
-    /*
-        Need to handle the event when the user clicks the Delete Income button
-     */
-
 
     let incomeSource = this.props.incomeSource
 
     let i = event.target.id
 
-    console.log("onDeleteIncomeClick was called for : " + i + "\n")
-
     incomeSource.remove(incomeSource, i)
   }
 
-  onDeleteTest(event){
-
-    // let event = event || window.event
-
-    console.log("Entering OnDeleteTest...\n")
-    console.log(event)
-    console.log(event.target)
-    console.log("This is a " + event.target.tagName + " and the id is " + event.target.id)
-
-
-  }
 
 
   render() {
@@ -135,8 +87,6 @@ class AdditionalIncome extends Component {
       className: "usa-button-gray",
       onClick: this.onDeleteIncomeClick
     }
-
-
 
 
     return (

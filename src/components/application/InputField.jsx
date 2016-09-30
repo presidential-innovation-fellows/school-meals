@@ -45,6 +45,7 @@ class InputField extends Component {
     }
     className = classnames(className)
 
+
     if (input.pattern && !input.error &&
         (input.value == null ? value : input.value).match(input.pattern)) {
       className += ' usa-input-success'

@@ -78,27 +78,46 @@ export const testData = {
                   hourlyPeriod : '',
                   hasMore: true,
                   more: [
-                    {amount: 123, frequency: 'monthly', hourlyHours: '', hourlyPeriod: ''},
-                    {amount: 456, frequency: 'monthly', hourlyHours: '', hourlyPeriod: ''}
+                    {amount: 100, frequency: 'monthly', hourlyHours: '', hourlyPeriod: ''},
+                    {amount: 200, frequency: 'monthly', hourlyHours: '', hourlyPeriod: ''}
                   ]
-                },
-                commission: {
-                  has: false
-                },
-                cashBonus: {
-                  has: false
                 },
                 tips: {
                   has: true,
-                  amount: 1000,
+                  amount: 2000,
                   frequency: 'monthly',
                   hourlyHours : '',
                   hourlyPeriod : '',
                   hasMore: null,
                   more: []
                 },
+                commission: {
+                  has: false,
+                  amount: '',
+                  frequency: '',
+                  hourlyHours : '',
+                  hourlyPeriod : '',
+                  hasMore: false,
+                  more: []
+                },
+                cashBonus: {
+                  has: false,
+                  amount: '',
+                  frequency: '',
+                  hourlyHours : '',
+                  hourlyPeriod : '',
+                  hasMore: false,
+                  more: []
+                },
+
                 selfEmployment: {
-                  has: false
+                  has: false,
+                  amount: '',
+                  frequency: '',
+                  hourlyHours : '',
+                  hourlyPeriod : '',
+                  hasMore: false,
+                  more: []
                 }
               }
             },

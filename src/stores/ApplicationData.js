@@ -74,12 +74,35 @@ export default class ApplicationData {
                 return ( JSON.parse(JSON.stringify(adult)));
       });
 
-      //testing to see if I can re-attach the class methods for adding / removing
-      Object.assign(this.adults.items[0].incomeTypes.employment.sources.salaryWages, {add: this.adults.addIncomeSource, remove: this.adults.removeIncomeSource})
+      // Object.assign(this.adults.items[0].incomeTypes.employment.sources.salaryWages, {add: this.adults.addIncomeSource, remove: this.adults.removeIncomeSource})
 
       console.log("Loading Adults... \n");
       console.log(JSON.stringify(this.adults.items,undefined,2));
 
+
+       //testing to see if I can re-attach the class methods for adding / removing
+      console.log("Re-attached class methods for adding/removing income sources...\n")
+      for (let i=0 ; i < this.adults.items.length; i++){
+        console.log("Re-attaching for item: " + i + "\n")
+        let item = this.adults.items[i];
+
+        Object.keys(item.incomeTypes.employment.sources).forEach(function(k,s){
+
+          console.log("Source: " + k + "\n")
+          let source = item.incomeTypes.employment.sources[k]
+
+          if (typeof(source.more) != "undefined") {
+
+            Object.assign(source, {add: this.adults.addIncomeSource, remove: this.adults.removeIncomeSource})
+
+          }
+
+        }, this)
+
+      }
+
+      console.log("Loading Adults... \n");
+      console.log(JSON.stringify(this.adults.items,undefined,2));
 
       this.students.items = testData[scenario].students.items.map ( function(student){
                 return(JSON.parse(JSON.stringify(student)));
@@ -185,9 +208,7 @@ class PersonCollection {
     return item
   }
 
-  get newIncome() {
 
-  }
 
   toJSON() {
     return this.items.toJSON()
@@ -234,10 +255,9 @@ class PersonCollection {
         for (let sourceKey in sources) {
           let source = sources[sourceKey]
 
-          console.log(sourceKey + "...\n");
+
           if (source.has) {
-            console.log("Has is true\n");
-            console.log(source);
+
             result.push({
               person: person,
               source: sourceKey,
@@ -249,29 +269,21 @@ class PersonCollection {
               hourlyPeriod: source.hourlyPeriod
             });
 
-            // Erren: New code to add additional income sources to the total
+            // New code to add additional income sources to the total
             // User can add additional income for each sourceKey in UI
             // Example: User has 2 Salary/Wage jobs -- Uber and Waiter
             // This code looks to see if user "hasMore" if so loops through "more" array
             // for the particular income source
-            console.log("Value of hasMore: " + source.hasMore + "\n");
-            console.log("hasMore in Source: " + ("hasMore" in source) + "\n");
-            console.log(source.more);
-            /* if (sourceKey == "salaryWages"){
-              source.hasMore = true;
-            }
-            console.log("Value of hasMore: " + source.hasMore + "\n"); */
+
             if (("hasMore" in source) && source.hasMore){
-              console.log("Has More is true\n");
-              console.log("More has " + source.more.length + " items!\n");
-              console.log("Entering For loop...");
+
 
               for (let moreKey=0,len=source.more.length; moreKey<len; moreKey++){
-                console.log("For loop key : " + moreKey + "\n");
+
 
                 let moreIncome = source.more[moreKey];
 
-                console.log(moreIncome);
+
 
                 result.push({
                   person: person,
@@ -285,7 +297,7 @@ class PersonCollection {
                 });
 
               } // end of for loop
-              console.log("Done with For Loop!");
+
             }
 
           }
@@ -373,7 +385,11 @@ class AdultCollection extends PersonCollection {
                                 more: [],
                                 add: this.addIncomeSource,
                                 remove: this.removeIncomeSource},
-            'selfEmployment': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' }
+            'selfEmployment': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '',
+                                hasMore: null,
+                                more: [],
+                                add: this.addIncomeSource,
+                                remove: this.removeIncomeSource}
           }
         },
         publicAssistance: {
@@ -428,10 +444,8 @@ class AdultCollection extends PersonCollection {
 
   @action addIncomeSource(source) {
 
-    if (source.more.length == 0){
-      source.hasMore = true
-    }
-    source.more.push({amount: '0', frequency: 'monthly', hourlyHours: '0', hourlyPeriod: '0'})
+    source.more.push({amount: '', frequency: '', hourlyHours: '0', hourlyPeriod: '0'})
+    source.hasMore = true
 
   }
 

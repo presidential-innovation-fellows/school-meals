@@ -7,7 +7,13 @@ import { organization } from '../config'
 class Navigation extends Component {
   constructor (props, context) {
     super(props, context)
+    this.handleData = this.handleData.bind(this)
     this.handleHelp = this.handleHelp.bind(this)
+  }
+
+
+  handleData(event) {
+    window.location.hash = '#/viewappdata'
   }
 
   handleHelp(event) {
@@ -57,6 +63,9 @@ class Navigation extends Component {
         </Navbar.Header>
         <Navbar.Collapse>
           <Nav pullRight>
+            <NavItem eventKey={2} onClick={this.handleData}>
+              <Glyphicon glyph="list-alt" /> Data
+            </NavItem>
             <NavItem eventKey={1} onClick={this.handleHelp}>
               <Glyphicon glyph="question-sign" /> Help
             </NavItem>

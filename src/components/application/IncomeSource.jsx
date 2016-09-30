@@ -45,7 +45,7 @@ class IncomeSource extends Component {
         <Form>
           <label>{this.props.children}</label>
           <BooleanRadio name="has" object={incomeSource} />
-          {console.log("source: " + name + " income source has = " + incomeSource.has)}
+
           {incomeSource.has &&
            <div className="income-source-details">
 

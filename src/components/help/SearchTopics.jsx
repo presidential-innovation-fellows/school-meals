@@ -40,9 +40,9 @@ class SearchTopics extends Component {
   render() {
     if (this.state.shouldShowSearch) {
       return (
-        <div className="usa-grid">
-          <div className="usa-width-one-whole">
-            <form className="usa-search usa-search-small">
+        <div >
+          <div>
+            <form style={{width: "100%"}}>
               <div role="search">
                 <input
                  id="search-field-small"
