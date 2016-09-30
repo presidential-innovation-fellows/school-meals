@@ -1,4 +1,4 @@
-import { toSentenceSerial } from 'underscore.string'
+﻿import { toSentenceSerial } from 'underscore.string'
 
 export function schoolYear(startYear = new Date().getFullYear()) {
   return `${startYear}–${startYear + 1}`
@@ -220,7 +220,7 @@ export function programDescription(slug) {
     isFoster: 'live with you under a formal (court-ordered) foster care arrangement',
     isHomeless: 'receive assistance under the McKinney-Vento Homeless Assistance Act',
     isMigrant: 'participate in the Migrant Education Program (MEP)',
-    isRunaway: 'participate in any programs under the Runaway and Homeless Youth Act'
+    isRunaway: 'participate in a program under the Runaway and Homeless Youth Act'
   }[slug]
 }
 

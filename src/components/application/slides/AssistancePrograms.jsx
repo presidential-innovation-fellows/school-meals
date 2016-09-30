@@ -1,10 +1,12 @@
-import React, { Component, PropTypes } from 'react'
+﻿import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
 import AssistanceProgramList from './AssistanceProgramList'
 import { observer } from 'mobx-react'
 import { toSentenceSerial } from 'underscore.string'
 import { assistancePrograms as programNames } from '../../../config'
 import { AssistancePrograms as Store } from '../../../stores/ApplicationData'
+import { Glyphicon, OverlayTrigger, Tooltip } from 'react-bootstrap'
+import { tooltiptext } from '../../Tooltiptext'
 
 @observer
 class AssistancePrograms extends Component {
@@ -25,8 +27,20 @@ class AssistancePrograms extends Component {
 
         <div className="well">
           <p>
-            A <dfn>household</dfn> is defined as a group of people, related or unrelated, that usually live together and share income and expenses.
-          </p>
+            A &nbsp;
+            <OverlayTrigger placement="top" overlay={
+                <Tooltip id="household">
+                {tooltiptext.household} &nbsp;
+                </Tooltip>
+              }>
+                <strong className="info-target">
+                  <dfn>household</dfn>
+                  <Glyphicon glyph="question-sign" />
+                </strong>
+            </OverlayTrigger>
+          &nbsp; is defined as a group of people, related or unrelated, that usually live together and share income and expenses.
+        </p>            
+            
           <p>
             This includes grandparents or other extended family members that are living with you. It also includes people that are not currently living with you, but are only away on a temporary basis, like kids that are away at college. It includes people regardless of age or whether they earn or receive income.
           </p>

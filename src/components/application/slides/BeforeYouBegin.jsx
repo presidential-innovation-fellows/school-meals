@@ -1,4 +1,4 @@
-import React from 'react'
+﻿import React from 'react'
 import Slide from '../Slide'
 import SchoolYear from '../SchoolYear'
 import { assistancePrograms, organization } from '../../../config'
@@ -6,6 +6,7 @@ import { toSentenceSerial } from 'underscore.string'
 import { observable } from 'mobx'
 import { observer } from 'mobx-react'
 import { Glyphicon, OverlayTrigger, Tooltip } from 'react-bootstrap'
+import { tooltiptext } from '../../Tooltiptext'
 
 @observer
 class BeforeYouBegin extends React.Component {
@@ -32,7 +33,7 @@ class BeforeYouBegin extends React.Component {
           If you received a &nbsp;
             <OverlayTrigger placement="top" overlay={
                 <Tooltip id="letter">
-                Check that the letter includes all the students in the household, because they are all eligible for free meals. If not, contact the school to correct the mistake. &nbsp;
+                {tooltiptext.letter} &nbsp;
                 </Tooltip>
               }>
                 <strong className="info-target">
@@ -44,7 +45,19 @@ class BeforeYouBegin extends React.Component {
         </p>
 
         <p>We need only one application for all the children in your household that attend {organization.name}.</p>
-        <p><strong>Eligibility for free or reduced price school meal benefits is based on any one of these three things:</strong></p>
+        <p><strong>Eligibility for free or reduced price school meal benefits is based on any one of these </strong>
+            <OverlayTrigger placement="top" overlay={
+                <Tooltip id="threethings">
+                {tooltiptext.threethingsfirst} {organization.name} {tooltiptext.threethingssecond} &nbsp;
+                </Tooltip>
+              }>
+                <strong className="info-target">
+                  three things:
+                  <Glyphicon glyph="question-sign" />
+                </strong>
+            </OverlayTrigger>
+          &nbsp;
+        </p>        
 
         <ul className="usa-content-list">
           <li>your total household income and size in the month the application is filled out, or the month before, or</li>
@@ -52,7 +65,19 @@ class BeforeYouBegin extends React.Component {
           <li>participation in an assistance program by any member of your household</li>
         </ul>
 
-        <p>Your US citizenship or immigration status does not affect your eligibility for free and reduced price benefits.</p>
+        <p>Your &nbsp;
+            <OverlayTrigger placement="top" overlay={
+                <Tooltip id="status">
+                {tooltiptext.status} &nbsp;
+                </Tooltip>
+              }>
+                <strong className="info-target">
+                  US citizenship or immigration status
+                  <Glyphicon glyph="question-sign" />
+                </strong>
+            </OverlayTrigger>
+          &nbsp; does not affect your eligibility for free and reduced price benefits.
+        </p>           
 
         <p>If you have questions at any point during the application, click the question mark icon to get help with the current section.</p>
 
