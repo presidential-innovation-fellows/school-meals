@@ -48,6 +48,7 @@ class SearchTopics extends Component {
                  id="search-field-small"
                  type="search"
                  name="search"
+                 placeholder="Search Term"
                  value={this.state.searchVal}
                  onChange={this.handleChange.bind(this)}
                 />
