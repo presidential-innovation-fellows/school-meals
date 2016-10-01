@@ -6,7 +6,7 @@ import { testData } from '../debug'
 
 // set DEBUG to true to pull in test data into the AppllicationData object from debug.js
 // this will allow you automatically input all Adult and Student answers in advance
-const DEBUG = true;
+const DEBUG = false;
 
 export default class ApplicationData {
   students = new StudentCollection()
