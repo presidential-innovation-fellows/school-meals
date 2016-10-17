@@ -59,14 +59,14 @@ class BooleanRadio extends Component {
                    id={this.trueId}
                    value={true}
                    checked={value === true} />
-            <label for={this.trueId}>{trueLabel}</label>
+            <label htmlFor={this.trueId}>{trueLabel}</label>
           </li>
           <li>
             <input {...props}
                    id={this.falseId}
                    value={false}
                    checked={value === false} />
-            <label for={this.falseId}>{falseLabel}</label>
+            <label htmlFor={this.falseId}>{falseLabel}</label>
           </li>
         </ul>
       </Fieldset>

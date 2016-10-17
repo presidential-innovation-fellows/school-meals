@@ -7,6 +7,7 @@ import { assistancePrograms as programNames } from '../../../config'
 import { AssistancePrograms as Store } from '../../../stores/ApplicationData'
 import { Glyphicon, OverlayTrigger, Tooltip } from 'react-bootstrap'
 import { tooltiptext } from '../../Tooltiptext'
+import Tooltipcomp from '../Tooltip'
 
 @observer
 class AssistancePrograms extends Component {
@@ -28,16 +29,7 @@ class AssistancePrograms extends Component {
         <div className="well">
           <p>
             A &nbsp;
-            <OverlayTrigger placement="top" overlay={
-                <Tooltip id="household">
-                {tooltiptext.household} &nbsp;
-                </Tooltip>
-              }>
-                <strong className="info-target">
-                  <dfn>household</dfn>
-                  <Glyphicon glyph="question-sign" />
-                </strong>
-            </OverlayTrigger>
+            <Tooltipcomp id="household" text={tooltiptext.household} target="household" />
           &nbsp; is defined as a group of people, related or unrelated, that usually live together and share income and expenses.
         </p>            
             
@@ -45,11 +37,11 @@ class AssistancePrograms extends Component {
             This includes grandparents or other extended family members that are living with you. It also includes people that are not currently living with you, but are only away on a temporary basis, like kids that are away at college. It includes people regardless of age or whether they earn or receive income.
           </p>
           <p>
-            If you need more detailed information, see the ‘WHO SHOULD I INCLUDE IN MY HOUSEHOLD?’ question in the help section.
+            If you need more detailed information, see the ‘WHO SHOULD I INCLUDE IN MY HOUSEHOLD?’ question in Help.
           </p>
         </div>
 
-        <p><strong>Please select from the checkboxes below if anyone in your household (including you) currently participates in any of the following programs. Otherwise, leave blank and press continue.</strong></p>
+        <p><strong>If anyone in your household (including you) currently participates in any of the following programs, please select one or more of the checkboxes below. If not, press continue.</strong></p>
 
         <AssistanceProgramList assistancePrograms={assistancePrograms} />
       </Slide>

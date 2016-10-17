@@ -2,6 +2,8 @@ import React, { Component, PropTypes } from 'react'
 import IncomeSource from '../IncomeSource'
 import IncomeType from './IncomeType'
 import { observer } from 'mobx-react'
+import { tooltiptext } from '../../Tooltiptext'
+import Tooltipcomp from '../Tooltip'
 
 @observer
 class RetirementIncome extends Component {
@@ -19,11 +21,16 @@ class RetirementIncome extends Component {
       <IncomeType {...incomeTypeProps}>
 
         <IncomeSource incomeSources={incomeSources} name="socialSecurity">
-          Social Security (including Black Lung Benefits and Railroad Retirement)
+            <Tooltipcomp id="socialSecurity" text={tooltiptext.socialSecurity} target="Social Security" />
+          &nbsp; (including 
+            <Tooltipcomp id="blackLung" text={tooltiptext.blackLung} target="Black Lung benefits" />
+          &nbsp; and &nbsp;
+            <Tooltipcomp id="railroad" text={tooltiptext.railroad} target="Railroad Retirement" />
+          &nbsp; )
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="privatePension">
-          Pension
+          <Tooltipcomp id="pension" text={tooltiptext.pension} target="Pension" />
         </IncomeSource>
       </IncomeType>
     )

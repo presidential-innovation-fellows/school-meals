@@ -84,7 +84,7 @@ class InputField extends Component {
     return (
       <div className={containerClassName}>
         {(input.label || input.required || input.additional) &&
-         <label for={controlId}>
+         <label htmlFor={controlId}>
            {input.label}
            {additional &&
             <span className="usa-additional_text">{additional}</span>

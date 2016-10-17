@@ -7,6 +7,8 @@ import IncomeSource from '../IncomeSource'
 import { computed } from 'mobx'
 import { observer } from 'mobx-react'
 import { incomeTypeIsValid, informalName } from '../../../helpers'
+import { tooltiptext } from '../../Tooltiptext'
+import Tooltipcomp from '../Tooltip'
 
 @observer
 class ChildIncomeSlide extends Component {
@@ -36,7 +38,9 @@ class ChildIncomeSlide extends Component {
 
         <p className="usa-font-lead">Does <strong>{name}</strong> have income from any of the following sources?</p>
 
-        <p>Income reported here should be the child’s current, <em>gross</em> income.</p>
+        <p>Income reported here should be the child’s &nbsp;
+        <Tooltipcomp id="current" text={tooltiptext.currentChild} target="current" />
+        &nbsp;, <em>gross</em> income.</p>
 
         <p className="well"><dfn>Gross income</dfn> means all money earned or received before deductions, such as income taxes, social security taxes, and insurance premiums. You should not report net income, which is the amount of money received in a pay check. Net income is total (or gross) income, minus taxes and deductions, and is commonly referred to as “take home pay”.</p>
 
@@ -46,15 +50,23 @@ class ChildIncomeSlide extends Component {
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="socialSecurity">
-          Social Security from a disability (SSDI) or Social Security survivor benefits
+            <Tooltipcomp id="SSDI" text={tooltiptext.SSDI} target="Social Security Disability Insurance (SSDI)" />
+          &nbsp; or &nbsp;
+            <Tooltipcomp id="socialSecurity" text={tooltiptext.socialsecurity} target="Social Security" />
+          &nbsp; survivor benefits
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="friendsFamily">
-          Money regularly received from extended family or friends outside the household
+            <Tooltipcomp id="regularCashPayments" text={tooltiptext.regularCashPayments} target="Money" />
+          &nbsp; regularly received from extended family or friends outside the household
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="pensionAnnuityTrust">
-          Private pension fund, annuity, or trust
+          <Tooltipcomp id="pension" text={tooltiptext.pension} target="Pension" />
+          &nbsp;, &nbsp;
+          <Tooltipcomp id="annuity" text={tooltiptext.annuity} target="annuity" />
+          &nbsp;, or &nbsp;
+          <Tooltipcomp id="trust" text={tooltiptext.trust} target="trust" />
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="other">

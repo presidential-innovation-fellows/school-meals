@@ -1,4 +1,4 @@
-﻿import React, { Component, PropTypes } from 'react'
+﻿import React, { Component, PropTypes, responsive, bordered } from 'react'
 import Slide from '../Slide'
 import Link from '../Link'
 import SummaryLabel from './SummaryLabel'
@@ -10,6 +10,7 @@ import { Glyphicon, OverlayTrigger, Table, Tooltip, Well } from 'react-bootstrap
 import { humanize, numberFormat } from 'underscore.string'
 import { organization } from '../../../config'
 import { allStudentsAreFHMR, fullName, informalName } from '../../../helpers'
+import { tooltiptext } from '../../Tooltiptext'
 
 @observer
 class Summary extends Component {
@@ -215,7 +216,7 @@ class Summary extends Component {
                    <td>
                      <OverlayTrigger placement="top" overlay={
                        <Tooltip id="total-income">
-                         This number takes all the information you provided calculates a total household income.
+                         {tooltiptext.monthlyIncomeSum}
                        </Tooltip>
                      }>
                        <strong className="info-target">

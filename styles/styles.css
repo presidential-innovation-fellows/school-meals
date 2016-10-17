@@ -18,7 +18,7 @@ a:hover {
 
 input[type="checkbox"],
 input[type="radio"] {
-  cursor: pointer;
+  cursor: pointer; width: 75px; height: 35px; margin-left: -10px; margin-top: -5px;
 }
 
 ol ul,
@@ -364,4 +364,3 @@ button.navbar-toggle:focus {
 .navbar-nav a {
   box-shadow: none;
 }
-

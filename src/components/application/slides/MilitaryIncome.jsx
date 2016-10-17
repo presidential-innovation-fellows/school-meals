@@ -5,6 +5,8 @@ import IncomeSource from '../IncomeSource'
 import BooleanRadio from '../BooleanRadio'
 import { observer } from 'mobx-react'
 import { organization } from '../../../config'
+import { tooltiptext } from '../../Tooltiptext'
+import Tooltipcomp from '../Tooltip'
 
 @observer
 class MilitaryIncome extends Component {
@@ -34,15 +36,19 @@ class MilitaryIncome extends Component {
            <IncomeTypeDefaultText person={person} />
 
            <IncomeSource incomeSources={incomeSources} name="basic">
-             Military basic pay (made available to the household)
+             <Tooltipcomp id="militaryBasicPay" text={tooltiptext.basicPay} target="Military basic pay" />
+             &nbsp; (made available to the household)
            </IncomeSource>
 
            <IncomeSource incomeSources={incomeSources} name="cashBonus">
-             Military cash bonus
+             Military &nbsp;
+             <Tooltipcomp id="cashBonus" text={tooltiptext.cashBonus} target="cash bonus" />
            </IncomeSource>
 
            <IncomeSource incomeSources={incomeSources} name="allowance">
-             Military allowance for off-base housing, food, clothing (other than FSSA and MHPI)
+             Military &nbsp;
+             <Tooltipcomp id="allowance" text={tooltiptext.allowances} target="allowance" />
+             &nbsp; for off-base housing, food, clothing (other than FSSA and MHPI)
            </IncomeSource>
         </div>
       </IncomeType>

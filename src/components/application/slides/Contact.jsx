@@ -68,7 +68,7 @@ class Contact extends Component {
               />
 
               <div className="usa-input-grid usa-input-grid-small">
-                <label for="state">State</label>
+                <label htmlFor="state">State</label>
                 <Select id="state" name="state" value={contact.state}
                         onChange={this.onUsStateChange}>
                   <option value=""></option>

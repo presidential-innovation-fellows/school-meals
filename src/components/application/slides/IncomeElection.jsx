@@ -11,7 +11,7 @@ class IncomeElection extends Component {
   render() {
     const { applicationData } = this.props
     const { allPeopleCollections, students } = applicationData
-    const names = students.informalList(allPeopleCollections, ' or ')
+    const names = students.informalList(allPeopleCollections, ' and ')
     const singular = students.length === 1
     const programDescriptions = toSentenceSerial([
       'isFoster',
@@ -28,18 +28,17 @@ class IncomeElection extends Component {
       <Slide id="income-election">
 
         <p className="usa-font-lead">
-          You have indicated that the
-          {singular ? ' child who attends ' : ' children who attend '}
-          {organization.name}
+          You have indicated that&nbsp;
+          {names}
           {singular ? ' does ' : ' '}
           {programDescriptions}.
         </p>
 
         <p>
-          We will need to confirm that with a school administrator. If it is determined that {names} {singular ? 'is' : 'are'} not eligible, you will need to provide an application with income information to be eligible for free or reduced price meals.
+          We just need to confirm that with program staff. If we are unable to do that, you will need to submit an application with income information to determine your benefit level.
         </p>
 
-        <label>Please choose one of the followig:</label>
+        <label>Please choose one of the following:</label>
 
         <BooleanRadio object={applicationData}
                       name="electToProvideIncome"

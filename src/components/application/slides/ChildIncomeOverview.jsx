@@ -5,6 +5,7 @@ import { observer } from 'mobx-react'
 import { informalName } from '../../../helpers'
 import { Glyphicon, OverlayTrigger, Tooltip } from 'react-bootstrap'
 import { tooltiptext } from '../../Tooltiptext'
+import Tooltipcomp from '../Tooltip'
 
 @observer
 class ChildIncomeOverview extends Component {
@@ -17,74 +18,31 @@ class ChildIncomeOverview extends Component {
   render() {
     const { allChildren } = this.props
 
+    const $allChildren = (allChildren.length === 1 ? 'child\'s' : 'childrens\'') + ' income'
+
     return(
       <Slide nextDisabled={!this.isValid} id="child-income">
 
         <p className="usa-font-lead">The next few questions are about your &nbsp;
-           <OverlayTrigger placement="top" overlay={
-                <Tooltip id="child-income">
-                {tooltiptext.childincome} &nbsp;
-                </Tooltip>
-              }>
-                <strong className="info-target">
-                  {allChildren.length === 1 ? 'child\'s' : 'childrens\''} income.
-                  <Glyphicon glyph="question-sign" />
-                </strong>
-            </OverlayTrigger>
-          &nbsp;
+           <Tooltipcomp id="child-income" text={tooltiptext.childincome} target={$allChildren} />
+          &nbsp;.
         </p>        
         
         <p>Some common sources of income for children are:</p>
         <ul className="usa-content-list">
           <li>a full-time or part-time job,</li>
           <li>
-            <OverlayTrigger placement="top" overlay={
-                <Tooltip id="social-security">
-                {tooltiptext.socialsecurity} &nbsp;
-                </Tooltip>
-              }>
-                <strong className="info-target">
-                  Social Security
-                  <Glyphicon glyph="question-sign" />
-                </strong>
-            </OverlayTrigger>
+            <Tooltipcomp id="social-security" text={tooltiptext.socialsecurity} target='Social Security' />
           &nbsp; benefits, if the child is blind or disabled, or is the beneficiary of another person’s Social Security benefits,
         </li>
         
-          <li>spending money regularly received from extended family or friends, or</li>
+          <li>money regularly received from extended family or friends outside the household, or</li>
           <li>money from a &nbsp;
-          <OverlayTrigger placement="top" overlay={
-                <Tooltip id="pension">
-                {tooltiptext.pension} &nbsp;
-                </Tooltip>
-              }>
-                <strong className="info-target">
-                  pension fund
-                  <Glyphicon glyph="question-sign" />
-                </strong>
-            </OverlayTrigger>
+          <Tooltipcomp id="pension" text={tooltiptext.pension} target='pension fund' />
          &nbsp;, &nbsp;
-          <OverlayTrigger placement="top" overlay={
-                <Tooltip id="annuity">
-                {tooltiptext.annuity} &nbsp;
-                </Tooltip>
-              }>
-                <strong className="info-target">
-                  annuity
-                  <Glyphicon glyph="question-sign" />
-                </strong>
-            </OverlayTrigger>
+          <Tooltipcomp id="annuity" text={tooltiptext.annuity} target='annuity' />
           &nbsp;, or &nbsp;
-          <OverlayTrigger placement="top" overlay={
-                <Tooltip id="trust">
-                {tooltiptext.trust} &nbsp;
-                </Tooltip>
-              }>
-                <strong className="info-target">
-                  trust
-                  <Glyphicon glyph="question-sign" />
-                </strong>
-            </OverlayTrigger>
+          <Tooltipcomp id="trust" text={tooltiptext.trust} target='trust' />
         </li>
         </ul>
         
