@@ -1,3 +1,4 @@
+import React, { Component, PropTypes } from 'react'
 import { organization, localPrograms } from '../../../config'
 import { schoolYear } from '../../../helpers'
 
@@ -50,4 +51,37 @@ export const help = {
 
   localProgramTitle: 'My household participates in ' + localPrograms.snap.name + ' and/or ' + localPrograms.tanf.name + '. Are my children eligible for free meals?',
   localProgramBody: 'All children in households are eligible for free meals when at least one household member is receiving benefits from ' + localPrograms.snap.name + ' , the Food Distribution Program on Indian Reservations (FDPIR), or ' + localPrograms.tanf.name + '. If you participate in other assistance programs, contact ' + organization.name +  ' (' + organization.contact.phone + ' / ' + organization.contact.email + ' / ' + organization.contact.address + ') to see if they qualify for you for school meal benefits.',
+
+  checkedTitle: 'Will the information I give be checked?',
+  checkedBody: 'Yes, each application is reviewed by the district to determine eligibility. We may also ask you to send proof of your household’s income.',
+
+  newAppTitle: 'My child’s application was approved last year. Do I need to fill out a new one?',
+  newAppBody: 'Yes. Eligibility for free or reduced price meals only lasts for one school year. However, eligibility for the previous year carries over for the first few days of the new school year, or until the new eligibility determination is made. Please complete a new application unless you received a letter from the school saying that your child is eligible for the upcoming ' + <schoolYear /> + ' school year.',
+
+  childAppTitle: 'Do I need to fill out an application for each child?',
+  childAppBody: 'No. Use one Free and Reduced Price School Meals Application for all students that attend ' + organization.name + ' in your household.',
+
+  childIncomeTitle: 'What is child income?',
+  childIncomeBody: 'Child income is money received from <em>outside</em> your household that is paid directly to your children. Many households do not have any child income.',
+
+
+}
+
+export const define = {
+	//variables are paired by contentTerm contentDef
+	currentTerm: 'Current income',
+	currentDef: 'Current income is income earned or received in the current month, or in the month before the completion of this application.',
+
+	ssdiTerm: 'Social Security Disability Insurance (SSDI)',
+	ssdiDef: 'Social Security Disability Insurance (SSDI) are benefits paid to people who have worked long enough and paid Social Security taxes, but who can’t work because they have a medical condition that is expected to last at least one year or result in death.',
+
+	pensionTerm: 'Pension',
+	pensionDef: 'A pension is generally a series of payments made to you after you retire from work. Pension payments are made regularly and are based on such factors as years of service and prior compensation.',
+
+	annuityTerm: 'Annuity',
+	annuityDef: 'An annuity is a series of payments under a contract made at regular intervals over a period of more than one full year. They can be either fixed (under which you receive a definite amount) or variable (not fixed). Annuities can be purchased by individuals alone, or with the help of an employer.',
+
+	trustTerm: 'Trust',
+	trustDef: 'A trust is, in general, a relationship in which one person holds title to property, subject to an obligation to keep or use the property for the benefit of another.',
+
 }
