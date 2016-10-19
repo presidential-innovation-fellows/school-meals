@@ -64,7 +64,14 @@ export const help = {
   childIncomeTitle: 'What is child income?',
   childIncomeBody: 'Child income is money received from <em>outside</em> your household that is paid directly to your children. Many households do not have any child income.',
 
+  earningsDifferencesTitle: 'What is the difference between earnings from a salary and earnings from wages?',
+  earningsDifferencesBody: 'A salary is an agreed-upon, fixed amount of money paid to an employee every year. Salaries may be paid in any frequency, but are usually paid on a monthly basis. Wages are also payment for work, but are agreed upon and paid on an hourly, daily or weekly basis.',
+//incomplete, contains formatting
+  reportTipsTitle: 'Do I need to report income from tips, commissions and cash bonuses?',
+  reportTipsBody: 'Yes. Income from tips, commissions and cash bonuses is considered household income and should be reported in your application.' + <p> + 'If your earnings from tips and commissions vary a lot from month to month, see the ‘WHAT IF MY INCOME IS NOT ALWAYS THE SAME?’ question in the HELP.' + </p>,
 
+  wagesSelfemploymentTitle: 'What if I have income from both wages and self-employment?',
+  wagesSelfemploymentBody: 'For a household with income from wages and self-employment, each amount must be listed separately. When there is a business loss, income from wages must not be reduced by the amount of the business loss. If income from self-employment is negative, you should report it as $0 (zero) on your application.',
 }
 
 export const define = {
@@ -83,5 +90,25 @@ export const define = {
 
 	trustTerm: 'Trust',
 	trustDef: 'A trust is, in general, a relationship in which one person holds title to property, subject to an obligation to keep or use the property for the benefit of another.',
+
+  salaryTerm: 'Salary',
+  salaryDef: 'A salary is an agreed-upon and regular compensation for employment that may be paid in any frequency, but is usually paid on a monthly basis, not on an hourly, daily or piece-work basis.',
+
+  wagesTerm: 'Wages',
+  wagesDef: 'Wages are an amount of money that a worker is paid for work or services by the hour, day or week.',
+
+  tipsTerm: 'Tips',
+  tipsDef: 'Tips are income earned by service professionals that are not paid by an employer, but by patrons or customers for services, such as gratuity at a restaurant.',
+
+  commissionsTerm: 'Commissions',
+  commissionsDef: 'Commissions are an amount of money that a worker is paid based on the level of sales he or she made.',
+
+  cashBonusTerm: 'Cash Bonus',
+  cashBonusDef: 'A cash bonus is a lump sum of money awarded to an employee, either occasionally or periodically.',
+
+//incomplete, contains formatting
+  selfemploymentTerm: 'Self-employment',
+  selfemploymentDef: 'Income from self-employment should be reported as your current net income, equal to gross revenue (income) minus business expenses. Gross revenue (income) includes the total income from goods sold or services rendered by the business, or the value of all products sold.',
+
 
 }
