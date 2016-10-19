@@ -57,7 +57,7 @@ class Attestation extends Component {
             />
           </Fieldset>
         </Form>
-        <p>*Deliberate misrepresentation of information may subject applicants to prosecution under applicable State and Federal law.</p>
+        <p><em>*Deliberate misrepresentation of information may subject applicants to prosecution under applicable State and Federal law.</em></p>
       </Slide>
     )
   }
