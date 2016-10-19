@@ -66,12 +66,85 @@ export const help = {
 
   earningsDifferencesTitle: 'What is the difference between earnings from a salary and earnings from wages?',
   earningsDifferencesBody: 'A salary is an agreed-upon, fixed amount of money paid to an employee every year. Salaries may be paid in any frequency, but are usually paid on a monthly basis. Wages are also payment for work, but are agreed upon and paid on an hourly, daily or weekly basis.',
-//incomplete, contains formatting
+
   reportTipsTitle: 'Do I need to report income from tips, commissions and cash bonuses?',
-  reportTipsBody: 'Yes. Income from tips, commissions and cash bonuses is considered household income and should be reported in your application.' + <p> + 'If your earnings from tips and commissions vary a lot from month to month, see the ‘WHAT IF MY INCOME IS NOT ALWAYS THE SAME?’ question in the HELP.' + </p>,
+  reportTipsBody: {
+    first: 'Yes. Income from tips, commissions and cash bonuses is considered household income and should be reported in your application.',
+    second:'If your earnings from tips and commissions vary a lot from month to month, see the ‘WHAT IF MY INCOME IS NOT ALWAYS THE SAME?’ question in the HELP.',
+  },
 
   wagesSelfemploymentTitle: 'What if I have income from both wages and self-employment?',
-  wagesSelfemploymentBody: 'For a household with income from wages and self-employment, each amount must be listed separately. When there is a business loss, income from wages must not be reduced by the amount of the business loss. If income from self-employment is negative, you should report it as $0 (zero) on your application.',
+  wagesSelfemploymentBody: {
+    first: 'For a household with income from wages and self-employment, each amount must be listed separately. When there is a business loss, income from wages must not be reduced by the amount of the business loss. If income from self-employment is negative, you should report it as $0 (zero) on your application.',
+  second: 'For more information, see ‘Self-employment’ in the HELP section.',
+  },
+
+  combatPayTitle: 'Do I need to report my combat pay as income on my application?',
+  combatPayBody: {
+    first: 'No, as long as the following conditions are met:',
+    second: 'It was received in addition to basic pay;',
+    third: 'It was received for the deployment to or service in an area designated as a combat zone; and',
+    fourth: 'It was not received prior to deployment to or service in the designated combat zone.',
+    fifth: 'If any of these conditions are not met, you should report the amount as military basic pay.',
+  },
+
+  deipTitle: 'I get deployment extension incentive pay (DEIP). Should I report that as income in my application?',
+  deipBody: ' Maybe. If you are not deployed, then it is included in your household income, but if you are away from your home station, then you are exempt from including it as household income.',
+
+  fssaTitle: 'What is the family subsistence supplemental allowance?',
+  fssaBody: 'Family Subsistence Supplemental Allowance (FSSA) is available to service members living in overseas locations that make less than 130 percent of the federal poverty line, and benefits equal the total dollars required to bring household income to that level.',
+
+  fosterQualifyTitle: 'What if my household does not qualify for free or reduced price meal benefits based on income, but I have a foster child, or a child who meets the definition for homeless, migrant or runaway?',
+  fosterQualifyBody: {
+    first: 'Children who are foster, or meet the definition of homeless, migrant, or runaway are still eligible for benefits regardless of household income.',
+    second: 'Wondering if your child qualifies as homeless, migrant or runaway? See "HOW DO I KNOW IF MY CHILDREN QUALIFY AS HOMELESS, MIGRANT, OR RUNAWAY?"',
+  },
+
+  hmrTitle: 'How do I know if my children qualify as homeless, migrant, or runaway?',
+  hmrBody: {
+    first: 'Your children may qualify as homeless, migrant, or runaway if…',
+    second: 'your household lacks a permanent address,',
+    third: 'you are staying together in a shelter, hotel, or other temporary housing arrangement,',
+    fourth: 'your family relocates on a seasonal basis,',
+    fifth: 'or any children living with you who have chosen to leave their prior family or household.',
+    sixth: 'If you believe children in your household meet one or more of these descriptions and you haven’t been told your children will get free meals, please call or e-mail ' + localPrograms.homelessness.contact + ' to confirm their eligibility.',
+  },
+
+  permanentTitle: 'I am the permanent guardian of a child. Do they automatically qualify for free meals as a foster child?',
+  permanentBody: 'No. The foster status only applies to children who are formally placed by the State welfare agency or court in a caretaker household. It does not apply to informal arrangements, such as caretaker arrangements or to permanent guardianship placements, which may exist outside of State or court based systems. The child may still be eligible based on your household income, so we encourage you to complete an application.',
+
+  fosterTitle: 'I adopted a foster child. Are they still eligible for free meals?',
+  fosterBody: 'Congratulations on the adoption! And the answer is maybe. If your child was approved for free meals before the adoption went through, then your child is eligible to receive free meals for the rest of the school year. But next year the child will no longer eligible for free meals based on foster status, though they may still qualify based on household income, so we encourage you to submit an application.',
+
+  ssnTitle: 'What if I do not have a Social Security number?',
+  ssnBody: 'Don’t worry, you don’t need to have a Social Security number to receive free or reduced price benefits.',
+
+  usCitizenTitle: 'May I apply if someone in my household is not a U.S. citizen?',
+  usCitizenBody: 'Yes. You, your children, or other household members do not have to be U.S. citizens to apply for free or reduced price meals.',
+
+  publicChargeTitle: 'Will my child or I be subject to public charge if I apply for or receive school meal benefits?',
+  publicChargeBody: 'No, the non-cash benefits received through the National School Lunch Program and School Breakfast Programs are not subject to public charge consideration. In other words, you will not be deported, denied entry to the country, or denied permanent status because you apply for or receive school meal benefits.',
+
+  paperAppTitle: 'Can I apply using a paper application?',
+  paperAppBody: {
+    first: 'Yes. If you would like to apply using the paper application, you can print it from ' + <a href={organization.paperApplication.url} target="_blank"> + 'here' + </a> + ' or contact ' + organization.name +  ' (' + organization.contact.phone + ' / ' + organization.contact.email + ' / ' + organization.contact.address + ') to request an application. Then return the completed application to:',
+    second: organization.name,
+    third: organization.paperApplication.address,
+    fourth: organization.paperApplication.phone,
+    fifth: organization.paperApplication.email,
+  },
+
+  informationTitle: 'What information will I need to fill out the application?',
+  informationBody: {
+    first: 'You may not need all this information, but if you have it handy, it will make the application process faster.',
+    second: 'If you participate in {assistanceProgramList} you will need to know your case number (not your card or account number).',
+    third: 'If you do not participate in any of the above assistance program, you will need to report your total household income. In that case…',
+    fourth: 'if anyone in your house has a job, you may need to reference the earnings statements or pay stubs to report your gross income, which is different than the amount in your paycheck.',
+    fifth: 'if anyone receives Social Security or retirement benefits, you may need to gather the benefit statements to report the amount and frequency of the payments.',
+    sixth: 'you may also need to reference other financial documents for additional sources of income.',
+    seventh: 'Still not sure if you have everything you need? Don’t worry. The income section of the application contains detailed instructions and explanations about the sources of income you must include, and you can gather additional information then.',
+  },
+
 }
 
 export const define = {
@@ -106,9 +179,63 @@ export const define = {
   cashBonusTerm: 'Cash Bonus',
   cashBonusDef: 'A cash bonus is a lump sum of money awarded to an employee, either occasionally or periodically.',
 
-//incomplete, contains formatting
   selfemploymentTerm: 'Self-employment',
-  selfemploymentDef: 'Income from self-employment should be reported as your current net income, equal to gross revenue (income) minus business expenses. Gross revenue (income) includes the total income from goods sold or services rendered by the business, or the value of all products sold.',
+  selfemploymentDef: {
+    first: 'Income from self-employment should be reported as your current net income, equal to gross revenue (income) minus business expenses. Gross revenue (income) includes the total income from goods sold or services rendered by the business, or the value of all products sold.',
+    second: 'Deductible business expenses include the cost of goods purchased; rent; utilities; depreciation charges; wages and salaries paid; and business taxes;',
+    third: 'Non-deductible business expenses include the value of salable merchandise used by the proprietors of retail businesses; and personal, Federal, State, or local income taxes',
+    fourth: 'Net income for self-employed farmers is figured by subtracting the farmer’s operating expenses from the gross revenue (income). Gross income includes money received from the rental of farm land, buildings, or equipment to others; and incidental receipts from the sale of items such as wood, sand, or gravel. Operating expenses include cost of feed, fertilizer, seed, and other farming supplies; cash wages paid to farmhands; depreciation charges; cash rent; interest on farm mortgages; farm building repairs; and farm taxes.',
+    fifth: 'If your current net income is not your usual income, you may use last year’s income as a basis to report net income, or refer to the question ‘WHAT IF MY INCOME IS NOT ALWAYS THE SAME?’ in the HELP.  If you have income from both wages and self-employment, see the help question ‘WHAT IF I HAVE INCOME FROM BOTH WAGES AND SELF-EMPLOYMENT?’ for more information.',
+  },
 
+  militaryBasicTerm: 'Military basic pay',
+  militaryBasicDef: 'Military basic pay is the base salary for a Military service member on active duty and counts for part of total military income. Basic Pay is electronically distributed on the 1st and 15th of every month, and should be reported as ‘twice monthly income’.',
 
+  allowancesTerm: 'Allowances',
+  allowancesDef: 'Allowances for off-base housing, such as the Basic Allowance for Housing (BAH), is to help service members cover the cost of housing in the private sector.',
+
+  regularCashTerm: 'Regular cash payments',
+  regularCashDef: {
+    first: 'Regular cash payments from outside the household is money regularly received from extended family or friends that do not live with you.  For example, if parents or grandparents regularly help cover the cost of groceries, bills, or rent, that money is considered household income and should be reported in your application for school meal benefits.',
+    second: 'One-time payments should not be reported as current, monthly income since they are not received on a regular basis. However, if you receive a one-time payment, such as from an award, settlement, inheritance or prize winnings, and then regularly draw on that money for living expenses later on, the amount withdrawn should be reported in your application for school meal benefits in the space for ‘Any other income available to pay for children’s school meals’.',
+  },
+
+  earnedInterestTerm: 'Earned interest',
+  earnedInterestDef: 'Earned interest is a fee that is paid for the use of another person’s money. It is usually a percentage of the amount borrowed.',
+
+  ssiTerm: 'Supplemental Security Income (SSI)',
+  ssiDef: {
+    first: 'Supplemental Security Income (SSI) provides cash to meet basic needs for food, clothing, and shelter to aged, blind, and disabled people who have little or no income.',
+    second: 'Benefits that are paid to veterans that have a service-connected disability and were not dishonorably discharged.',
+  },
+
+  cashAssistanceTerm: 'Cash assistance',
+  cashAssistanceDef: 'Income in the form of cash benefits, including housing subsidies, from state or local government programs should be reported as household income. If you have questions about whether to include benefits from a specific program, contact ' + organization.name +  ' (' + organization.contact.phone + ' / ' + organization.contact.email + ' / ' + organization.contact.address + ').',
+
+  socialSecurityTerm: 'Social Security',
+  socialSecurityDef: 'Social Security retirement benefits are payments to people (or family members of people) who are age 62 or older who have worked and paid taxes into the Social Security system.',
+
+  blackLungTerm: 'Black Lung Benefits',
+  blackLungDef: 'Black Lung benefits provide payments and medical treatment for people that became disabled from black lung disease from working in or around the nation’s coal mines.',
+
+  railroadRetirementTerm: 'Railroad Retirement',
+  railroadRetirementDef: 'Railroad retirement benefits are payments to qualified railroad employees that are retired or disabled.',
+
+  alimonyTerm: 'Alimony',
+  alimonyDef: 'Alimony is income from payments paid by a spouse or former spouse from whom you are divorced or legally separated.',
+
+  childSupportTerm: 'Child support',
+  childSupportDef: 'Child support payments are payments from one parent to another to cover the cost of raising a child. Child support should be reported as adult income, rather than child income.',
+
+  strikeBenefitsTerm: 'Strike benefits',
+  strikeBenefitsDef: 'Strike benefits are compensation paid by a union to workers on strike.',
+
+  unemploymentTerm: 'Unemployment benefits',
+  unemploymentDef: 'Unemployment benefits are payments from the government or a labor union to a person who is unemployed.',
+
+  workersCompTerm: 'Worker’s compensation',
+  workersCompDef: 'Worker’s compensation benefits are payments to cover lost wages and medical expenses of an employee who is injured on the job.',
+
+  veteransBenefitsTerm: 'Verteran’s benefits',
+  veteransBenefitsDef: 'Benefits that are paid to veterans that have a service-connected disability and were not dishonorably discharged.',
 }
