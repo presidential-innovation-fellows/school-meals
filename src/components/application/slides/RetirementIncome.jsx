@@ -22,9 +22,9 @@ class RetirementIncome extends Component {
 
         <IncomeSource incomeSources={incomeSources} name="socialSecurity">
             <Tooltipcomp id="socialSecurity" text={tooltiptext.socialSecurity} target="Social Security" />
-          &nbsp; (including 
+          &nbsp; (including survivor benefits, &nbsp;
             <Tooltipcomp id="blackLung" text={tooltiptext.blackLung} target="Black Lung benefits" />
-          &nbsp; and &nbsp;
+          &nbsp;, and &nbsp;
             <Tooltipcomp id="railroad" text={tooltiptext.railroad} target="Railroad Retirement" />
           &nbsp; )
         </IncomeSource>

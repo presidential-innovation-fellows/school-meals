@@ -102,7 +102,7 @@ class AdultIncomeOverview extends Component {
         </IncomeTypeFormGroup>
 
         <IncomeTypeFormGroup person={person} incomeTypeName="retirement">
-          Does <strong>{name}</strong> have retirement income from Social Security (including &nbsp;
+          Does <strong>{name}</strong> have retirement income from Social Security (including survivor benefits, &nbsp;
             <Tooltipcomp id="blackLungBenefits" text={tooltiptext.blackLung} target="Black Lung Benefits" />
           &nbsp; and &nbsp;
             <Tooltipcomp id="railroadRetirement" text={tooltiptext.railroad} target="Railroad Retirement" />
