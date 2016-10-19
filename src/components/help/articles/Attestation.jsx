@@ -6,6 +6,7 @@ export default class Attestation extends Component {
   render() {
     return (
       <Article>
+//included
         <Topic title="Will the information I give be checked?">
           <p>
             Yes, each application is reviewed by the district to determine eligibility. We may also ask you to send proof of your household’s income.
