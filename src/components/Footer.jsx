@@ -12,7 +12,7 @@ class Footer extends Component {
     return (
       <footer className="pageFooter">
         <div className="usa-grid">
-          <div><strong>THIS IS NOT A REAL APPLICATION FOR SCHOOL MEAL BENEFITS.</strong></div>
+          <div><strong>THIS IS NOT A REAL APPLICATION FOR SCHOOL MEAL BENEFITS</strong></div>
           <img className="logo" src={organization.logoUrl} alt="Applewood Logo" />
           <div>{organization.name}</div>
           <div>{organization.contact.phone} / {organization.contact.email}</div>
