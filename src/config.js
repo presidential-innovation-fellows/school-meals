@@ -1,5 +1,5 @@
 export const organization = {
-  name: 'Applewood School District ',
+  name: 'Super Awesome School District ',
   logoUrl: 'img/Applewood_logo.png',
   contact: {
     address: '100 Main Street, Anytown, USA 12345',
