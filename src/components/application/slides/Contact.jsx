@@ -22,14 +22,13 @@ class Contact extends Component {
 
     return (
       <Slide header="Contact Info" id="contact" beginsSection>
-        <p className="usa-font-lead">Please enter your contact information so that we can reach you in case there are any issues with your application.</p>
+        <p className="usa-font-lead">Please enter your contact information so that we can reach you in case there are any issues with your application. This information is optional, but we strongly encourage you to provide it.</p>
 
         <Form large>
           <InputField
               name="phone"
               label="Phone number"
               type="tel"
-              additional="Optional"
               pattern="( \d{3}- | \(\d{3}\) )?\d{3}-\d{4}"
               object={contact}
           />
@@ -38,7 +37,6 @@ class Contact extends Component {
               name="email"
               label="Email"
               type="email"
-              additional="Optional"
               pattern="^\S+@\S+\.\S+$"
               object={contact}
           />
@@ -47,14 +45,12 @@ class Contact extends Component {
             <InputField
                 name="address1"
                 label="Street address 1"
-                additional="If available"
                 object={contact}
             />
 
             <InputField
                 name="address2"
                 label="Street address 2"
-                additional="Optional"
                 object={contact}
             />
 
