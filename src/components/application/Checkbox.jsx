@@ -36,7 +36,7 @@ class Checkbox extends Component {
     return (
       <li>
         <input {...props} />
-        <label for={this.id}>{this.props.children}</label>
+        <label htmlFor={this.id}>{this.props.children}</label>
       </li>
     )
   }

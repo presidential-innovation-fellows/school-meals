@@ -1,11 +1,9 @@
-/*** COMMENTED OUT BY ROSS DAKIN
 * {
   box-sizing: border-box;
 }
 body {
   line-height: 1.5;
 }
-***/
 .rc-steps {
   font-size: 0;
   width: 100%;

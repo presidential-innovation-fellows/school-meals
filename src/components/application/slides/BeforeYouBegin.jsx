@@ -7,6 +7,7 @@ import { observable } from 'mobx'
 import { observer } from 'mobx-react'
 import { Glyphicon, OverlayTrigger, Tooltip } from 'react-bootstrap'
 import { tooltiptext } from '../../Tooltiptext'
+import Tooltipcomp from '../Tooltip'
 
 @observer
 class BeforeYouBegin extends React.Component {
@@ -25,37 +26,23 @@ class BeforeYouBegin extends React.Component {
     const assistanceProgramList =
       toSentenceSerial(assistancePrograms, ', ', ' or ')
 
+    const threethings = tooltiptext.threethingsfirst + ' ' + organization.name + ' ' + tooltiptext.threethingssecond
+
     return (
-      <Slide header="Before you begin" id="before-you-begin">
-        <p className="usa-font-lead">Before you begin, there are a few things you should know.</p>
+      <Slide header="Before you begin..." id="before-you-begin">
+        <p className="usa-font-lead">there are a few things you should know.</p>
 
         <p>
           If you received a &nbsp;
-            <OverlayTrigger placement="top" overlay={
-                <Tooltip id="letter">
-                {tooltiptext.letter} &nbsp;
-                </Tooltip>
-              }>
-                <strong className="info-target">
-                  letter
-                  <Glyphicon glyph="question-sign" />
-                </strong>
-            </OverlayTrigger>
+            <Tooltipcomp id="letter" text={tooltiptext.letter} target="letter" />
           &nbsp; from the school saying that your children were automatically approved (directly certified) for free meals for the <SchoolYear /> school year because someone in your household participates in {assistanceProgramList} then you do not need to submit an application.
         </p>
 
         <p>We need only one application for all the children in your household that attend {organization.name}.</p>
-        <p><strong>Eligibility for free or reduced price school meal benefits is based on any one of these </strong>
-            <OverlayTrigger placement="top" overlay={
-                <Tooltip id="threethings">
-                {tooltiptext.threethingsfirst} {organization.name} {tooltiptext.threethingssecond} &nbsp;
-                </Tooltip>
-              }>
-                <strong className="info-target">
-                  three things:
-                  <Glyphicon glyph="question-sign" />
-                </strong>
-            </OverlayTrigger>
+        <p>
+            <Tooltipcomp id="eligibility" text={tooltiptext.eligibility} target="Eligibility" />
+          &nbsp; <strong>for free or reduced price school meal benefits is based on any one of these </strong>
+            <Tooltipcomp id="threethings" text={threethings} target="three things:" />
           &nbsp;
         </p>        
 
@@ -66,16 +53,7 @@ class BeforeYouBegin extends React.Component {
         </ul>
 
         <p>Your &nbsp;
-            <OverlayTrigger placement="top" overlay={
-                <Tooltip id="status">
-                {tooltiptext.status} &nbsp;
-                </Tooltip>
-              }>
-                <strong className="info-target">
-                  US citizenship or immigration status
-                  <Glyphicon glyph="question-sign" />
-                </strong>
-            </OverlayTrigger>
+            <Tooltipcomp id="status" text={tooltiptext.status} target="US citizenship or immigration status" />
           &nbsp; does not affect your eligibility for free and reduced price benefits.
         </p>           
 

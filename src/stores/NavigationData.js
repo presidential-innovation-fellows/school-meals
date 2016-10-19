@@ -26,6 +26,7 @@ export default class NavigationData {
     this.CURRENT_CLASS_NAME = 'current'
     this.history = []
 
+
     // Workaround for event.newURL and event.oldURL:
     // https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onhashchange
     if (!window.HashChangeEvent) (function() {
@@ -44,7 +45,7 @@ export default class NavigationData {
         lastURL = document.URL
       })
     }())
-
+  
     this.handleHashChange = this.handleHashChange.bind(this)
     window.onhashchange = this.handleHashChange
   }
@@ -79,6 +80,30 @@ export default class NavigationData {
     // nothing is current -- the first slide should be next
     return slides[0]
   }
+
+  get lastSlide() {
+    const slides = this.slides
+
+    for (let i = 0; i < slides.length; i++) {
+      // the current slide
+      for (let j = 0; j < slides[i].classList.length; j++) {
+        let className = slides[i].classList[j]
+
+        if (className === this.CURRENT_CLASS_NAME) {
+          if (i === slides.length - 1) {
+            // final slide -- no next
+            return null
+          } else {
+            return slides[i - 1]
+          }
+        }
+      }
+    }
+
+    // nothing is current -- the first slide should be next
+    return slides[0]
+  }
+
 
   get firstIncompleteSlide() {
     const slides = this.slides
@@ -158,7 +183,7 @@ export default class NavigationData {
   }
 
   @action back() {
-    window.history.back()
+    window.location.hash = '#/' + this.lastSlide.id
   }
 
   @action next() {

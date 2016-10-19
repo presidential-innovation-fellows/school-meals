@@ -491,8 +491,8 @@ class StudentCollection extends ChildCollection {
 
   get fields() {
     return super.fields.concat([
-      { name: 'school', label: 'School', required: true },
-      { name: 'grade', label: 'Grade', required: true }
+      { name: 'school', label: 'School' },
+      { name: 'grade', label: 'Grade' }
     ])
   }
 

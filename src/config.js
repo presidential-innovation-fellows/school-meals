@@ -1,5 +1,5 @@
 export const organization = {
-  name: 'Applewood School District ',
+  name: 'Applewood School District',
   logoUrl: 'img/Applewood_logo.png',
   contact: {
     address: '100 Main Street, Anytown, USA 12345',
@@ -34,3 +34,7 @@ export const localPrograms = {
     name: 'TANF'
   }
 }
+
+export const thankYou = [
+  'You will hear from us soon with your certification decision!'
+]
