@@ -17,9 +17,9 @@ class Attestation extends Component {
     const { attestation, attestor } = this.props
 
     return (
-      <Slide id="attestation" nextDisabled={!this.isValid}>
-        <p className="usa-font-lead">I certify (promise) that all information on this application is true and that all income is reported.</p>
-        <p>I understand that this information is given in connection with the receipt of Federal funds, and that school o­fficials may verify (check) the information. I am aware that if I purposely give false information, my children may lose meal benefits, and I may be prosecuted under applicable State and Federal laws.</p>
+      <Slide header="I certify (promise)..." id="attestation" nextDisabled={!this.isValid}>
+        <p className="usa-font-lead">that all information on this application is true and that all income is reported.</p>
+        <p>I understand that this information is given in connection with the receipt of Federal funds, and that school o­fficials may verify (check) the information. I am aware that if I purposely* give false information, my children may lose meal benefits.</p>
 
         <Form>
           <Fieldset legend="Attestation">
@@ -57,6 +57,7 @@ class Attestation extends Component {
             />
           </Fieldset>
         </Form>
+        <p>*Deliberate misrepresentation of information may subject applicants to prosecution under applicable State and Federal law.</p>
       </Slide>
     )
   }

@@ -1,6 +1,8 @@
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
 import { informalName } from '../../../helpers'
+import { tooltiptext } from '../../Tooltiptext'
+import Tooltipcomp from '../Tooltip'
 
 @observer
 class IncomeTypeDefaultText extends Component {
@@ -14,7 +16,11 @@ class IncomeTypeDefaultText extends Component {
         </p>
 
         <p>
-          NOTE: Remember to report current, gross income, which is all money earned before deductions, such as income taxes, employee's social security taxes, and insurance premiums.
+          NOTE: Remember to report &nbsp;
+          <Tooltipcomp id="currentAdult" text={tooltiptext.currentAdult} target="current" />
+          &nbsp;, &nbsp;
+          <Tooltipcomp id="gross" text={tooltiptext.gross} target="gross" />
+          &nbsp; income.
         </p>
       </div>
     )

@@ -1,4 +1,4 @@
-﻿import React, { Component, PropTypes } from 'react'
+﻿import React, { Component, PropTypes, responsive, bordered } from 'react'
 import Slide from '../Slide'
 import Link from '../Link'
 import SummaryLabel from './SummaryLabel'
@@ -10,6 +10,7 @@ import { Glyphicon, OverlayTrigger, Table, Tooltip, Well } from 'react-bootstrap
 import { humanize, numberFormat } from 'underscore.string'
 import { organization } from '../../../config'
 import { allStudentsAreFHMR, fullName, informalName } from '../../../helpers'
+import { tooltiptext } from '../../Tooltiptext'
 
 @observer
 class Summary extends Component {
@@ -215,7 +216,7 @@ class Summary extends Component {
                    <td>
                      <OverlayTrigger placement="top" overlay={
                        <Tooltip id="total-income">
-                         This number takes all the information you provided calculates a total household income.
+                         {tooltiptext.monthlyIncomeSum}
                        </Tooltip>
                      }>
                        <strong className="info-target">
@@ -271,9 +272,10 @@ class Summary extends Component {
 
         <Checkboxes legend="Certification">
           <Checkbox name="certifiedCorrect" object={applicationData}>
-            <strong>I certify that <span className="usa-label-big">{this.totalHouseholdMembers}</span> people are in my household and that our household income is about <span className="usa-label-big">${numberFormat(this.totalMonthlyHouseholdIncome)}</span> per month.</strong>
+            <strong>I certify* that <span className="usa-label-big">{this.totalHouseholdMembers}</span> people are in my household and that our household income is about <span className="usa-label-big">${numberFormat(this.totalMonthlyHouseholdIncome)}</span> per month.</strong>
           </Checkbox>
         </Checkboxes>
+        <p><small>*I understand that this information is given in connection with the receipt of Federal funds, and that school o­fficials may verify (check) the information. I am aware that if I purposely give false information, my children may lose meal benefits. Deliberate misrepresentation of information may subject applicants to prosecution under applicable State and Federal law.</small></p>
       </Slide>
     )
   }

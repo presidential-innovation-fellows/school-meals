@@ -7,6 +7,7 @@ import { organization } from '../../../config'
 import { informalList } from '../../../helpers'
 import { Glyphicon, OverlayTrigger, Tooltip } from 'react-bootstrap'
 import { tooltiptext } from '../../Tooltiptext'
+import Tooltipcomp from '../Tooltip'
 
 @observer
 class OtherChildren extends Component {
@@ -22,16 +23,7 @@ class OtherChildren extends Component {
              id="other-children" beginsSection>
 
         <p className="usa-font-lead">Okay, it looks like we will need more information about your &nbsp;
-            <OverlayTrigger placement="top" overlay={
-                <Tooltip id="household-reminder">
-                {tooltiptext.householdreminder}
-                </Tooltip>
-              }>
-                <strong className="info-target">
-                  household
-                  <Glyphicon glyph="question-sign" />
-                </strong>
-            </OverlayTrigger>
+            <Tooltipcomp id="household-reminder" text={tooltiptext.householdreminder} target="household" />
           &nbsp;  and income in order to determine if you are eligible for benefits.
         </p>
 

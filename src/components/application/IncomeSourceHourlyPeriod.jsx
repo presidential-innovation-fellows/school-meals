@@ -31,9 +31,9 @@ class IncomeSourceHourlyPeriod extends Component {
       <div className="usa-input-grid usa-input-grid-medium">
         <Select value={incomeSource[fieldName]}
                 onChange={this.handleChange}>
-          <option value="" disabled>{prefix}…</option>
-          <option value="week">{prefix} week</option>
-          <option value="month">{prefix} month</option>
+          <option value="" disabled>hours per…</option>
+          <option value="week">hours per week</option>
+          <option value="month">hours per month</option>
         </Select>
       </div>
     )

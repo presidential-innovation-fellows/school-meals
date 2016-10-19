@@ -23,7 +23,7 @@ class Adults extends Component {
         <p className="usa-font-lead">Okay, now let’s talk about the adults in your household.</p>
         <p>Not including {informalName(attestors[0])}, what other adults live in the household?</p>
 
-        <p>Keep in mind the definition of a household. Don't forget about:</p>
+        <p>Remember, for the purposes of applying for school meal benefits, a household is defined as a group of people, related or unrelated, that usually live together and share income and expenses. Don't forget about:</p>
         <ul className="usa-content-list">
           <li>grandparents or other extended family members that are living with you</li>
           <li>
