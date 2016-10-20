@@ -3,6 +3,8 @@ import Article from '../Article'
 import Topic from '../Topic'
 import { toSentenceSerial } from 'underscore.string'
 import { assistancePrograms, organization } from '../../../config'
+import { help } from './HelpText'
+import Standard from '../TopicStandard'
 
 export default class Welcome extends Component {
   render() {
@@ -26,6 +28,8 @@ export default class Welcome extends Component {
             {organization.paperApplication.email}
           </p>
         </Topic>
+        
+        <Standard title={help.netTitle} body={help.netBody} />
 
         <Topic title="What information will I need to fill out the application?">
           <p>You may not need all this information, but if you have it handy, it will make the application process faster.</p>
