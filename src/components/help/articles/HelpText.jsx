@@ -1,6 +1,8 @@
 import React, { Component, PropTypes } from 'react'
-import { organization, localPrograms } from '../../../config'
-import { schoolYear } from '../../../helpers'
+import { organization, localPrograms, assistancePrograms, schoolYear } from '../../../config'
+import { toSentenceSerial } from 'underscore.string'
+
+const assistanceProgramList = toSentenceSerial(assistancePrograms, ', ', ' or ')
 
 export const help = {
   //variables are paired by contentTitle and contentBody;
@@ -36,28 +38,28 @@ export const help = {
 
   deployedTitle: 'Should I include a member of our household on the application if they are currently deployed?',
   deployedBody: 'Yes. Members of the armed services who are activated or deployed are counted as household members. Any money made available by them or on their behalf for the household is included as income to the household with the exception of combat pay.',
-
+//F8
   wicTitle: 'I get WIC. Can my children get free meals?',
   wicBody: 'Participation in the Special Supplemental Nutrition Program for Women, Infants and Children, or WIC program, does not automatically qualify your children for free or reduced price school meals. You will need to qualify based on your household income by completing this application.',
-
+//F10
   otherProgramsTitle: 'My family needs more help. Are there other programs we might apply for?',
   otherProgramsBody: 'To find out how to apply for ' + localPrograms.snap.name + 'or other assistance benefits, contact your local assistance office at ' + localPrograms.snap.localContact + ' or call ' + localPrograms.snap.stateHotline + '.',
-
+//F9
   headStartTitle: 'My child attends head start. Is he/she eligible for free school meals and do I need to fill out an application?',
   headStartBody: 'Yes. Children enrolled in Head Start are automatically eligible for free meals. You do not need to submit an application for school meal benefits unless you are requesting benefits for other school age children in your household.',
-
-  letterTitle: 'I received a letter from the school saying that my children were automatically approved for free meals for the upcoming ' + schoolYear() + ' school year. Do I still need to complete an application?',
+//F4
+  letterTitle: 'I received a letter from the school saying that my children were automatically approved for free meals for the upcoming ' + schoolYear + ' school year. Do I still need to complete an application?',
   letterBody: 'No, but please read the letter carefully. If any children in your household were missing from your eligibility notification letter, they are also eligible for free meals, so you should contact ' + organization.name +  ' (' + organization.contact.phone + ' / ' + organization.contact.email + ' / ' + organization.contact.address + ') immediately.',
-
+//F6
   localProgramTitle: 'My household participates in ' + localPrograms.snap.name + ' and/or ' + localPrograms.tanf.name + '. Are my children eligible for free meals?',
-  localProgramBody: 'All children in households are eligible for free meals when at least one household member is receiving benefits from ' + localPrograms.snap.name + ' , the Food Distribution Program on Indian Reservations (FDPIR), or ' + localPrograms.tanf.name + '. If you participate in other assistance programs, contact ' + organization.name +  ' (' + organization.contact.phone + ' / ' + organization.contact.email + ' / ' + organization.contact.address + ') to see if they qualify for you for school meal benefits.',
-
+  localProgramBody: 'All children in households are eligible for free meals when at least one household member is receiving benefits from ' + localPrograms.snap.name + ' , the Food Distribution Program on Indian Reservations (FDPIR), or ' + localPrograms.tanf.name + '. If you participate in other assistance programs, contact ' + organization.name +  ' (' + organization.contact.phone + ' / ' + organization.contact.email + ' / ' + organization.contact.address + ') to see if they qualify for you for school meal benefits. You may qualify for free meals!',
+//F13
   checkedTitle: 'Will the information I give be checked?',
   checkedBody: 'Yes, each application is reviewed by the district to determine eligibility. We may also ask you to send proof of your household’s income.',
-
+//F2
   newAppTitle: 'My child’s application was approved last year. Do I need to fill out a new one?',
-  newAppBody: 'Yes. Eligibility for free or reduced price meals only lasts for one school year. However, eligibility for the previous year carries over for the first few days of the new school year, or until the new eligibility determination is made. Please complete a new application unless you received a letter from the school saying that your child is eligible for the upcoming ' + <schoolYear /> + ' school year.',
-
+  newAppBody: 'Yes. Eligibility for free or reduced price meals only lasts for one school year. However, eligibility for the previous year carries over for the first few days of the new school year, or until the new eligibility determination is made. Please complete a new application unless you received a letter from the school saying that your child is eligible for the upcoming ' + schoolYear + ' school year.',
+//F3
   childAppTitle: 'Do I need to fill out an application for each child?',
   childAppBody: 'No. Use one Free and Reduced Price School Meals Application for all students that attend ' + organization.name + ' in your household.',
 
@@ -66,13 +68,13 @@ export const help = {
 
   earningsDifferencesTitle: 'What is the difference between earnings from a salary and earnings from wages?',
   earningsDifferencesBody: 'A salary is an agreed-upon, fixed amount of money paid to an employee every year. Salaries may be paid in any frequency, but are usually paid on a monthly basis. Wages are also payment for work, but are agreed upon and paid on an hourly, daily or weekly basis.',
-
+//delete
   reportTipsTitle: 'Do I need to report income from tips, commissions and cash bonuses?',
   reportTipsBody: {
     first: 'Yes. Income from tips, commissions and cash bonuses is considered household income and should be reported in your application.',
     second:'If your earnings from tips and commissions vary a lot from month to month, see the ‘WHAT IF MY INCOME IS NOT ALWAYS THE SAME?’ question in the HELP.',
   },
-
+//delete
   wagesSelfemploymentTitle: 'What if I have income from both wages and self-employment?',
   wagesSelfemploymentBody: {
     first: 'For a household with income from wages and self-employment, each amount must be listed separately. When there is a business loss, income from wages must not be reduced by the amount of the business loss. If income from self-employment is negative, you should report it as $0 (zero) on your application.',
@@ -93,12 +95,9 @@ export const help = {
 
   fssaTitle: 'What is the family subsistence supplemental allowance?',
   fssaBody: 'Family Subsistence Supplemental Allowance (FSSA) is available to service members living in overseas locations that make less than 130 percent of the federal poverty line, and benefits equal the total dollars required to bring household income to that level.',
-
-  fosterQualifyTitle: 'What if my household does not qualify for free or reduced price meal benefits based on income, but I have a foster child, or a child who meets the definition for homeless, migrant or runaway?',
-  fosterQualifyBody: {
-    first: 'Children who are foster, or meet the definition of homeless, migrant, or runaway are still eligible for benefits regardless of household income.',
-    second: 'Wondering if your child qualifies as homeless, migrant or runaway? See "HOW DO I KNOW IF MY CHILDREN QUALIFY AS HOMELESS, MIGRANT, OR RUNAWAY?"',
-  },
+//F7
+  fosterQualifyTitle: 'What if my household does not qualify for free or reduced price meal benefits based on income, but I have a foster child?',
+  fosterQualifyBody: 'Foster children who are formally placed by the State welfare agency or court in a caretaker household are eligible for benefits regardless of household income.',
 
   hmrTitle: 'How do I know if my children qualify as homeless, migrant, or runaway?',
   hmrBody: {
@@ -118,33 +117,31 @@ export const help = {
 
   ssnTitle: 'What if I do not have a Social Security number?',
   ssnBody: 'Don’t worry, you don’t need to have a Social Security number to receive free or reduced price benefits.',
-
+//F11
   usCitizenTitle: 'May I apply if someone in my household is not a U.S. citizen?',
   usCitizenBody: 'Yes. You, your children, or other household members do not have to be U.S. citizens to apply for free or reduced price meals.',
-
+//F12
   publicChargeTitle: 'Will my child or I be subject to public charge if I apply for or receive school meal benefits?',
   publicChargeBody: 'No, the non-cash benefits received through the National School Lunch Program and School Breakfast Programs are not subject to public charge consideration. In other words, you will not be deported, denied entry to the country, or denied permanent status because you apply for or receive school meal benefits.',
 
-  paperAppTitle: 'Can I apply using a paper application?',
-  paperAppBody: {
-    first: 'Yes. If you would like to apply using the paper application, you can print it from ' + <a href={organization.paperApplication.url} target="_blank"> + 'here' + </a> + ' or contact ' + organization.name +  ' (' + organization.contact.phone + ' / ' + organization.contact.email + ' / ' + organization.contact.address + ') to request an application. Then return the completed application to:',
-    second: organization.name,
-    third: organization.paperApplication.address,
-    fourth: organization.paperApplication.phone,
-    fifth: organization.paperApplication.email,
-  },
+//F5
+  applyLaterTitle: 'If I don’t qualify now, may I apply later?',
+  applyLaterBody: 'Yes, you may apply at any time during the school year.  For example, children with a parent or guardian who becomes unemployed may become eligible for free or reduced price meals if the household income drops below the income limit.',
 
-  informationTitle: 'What information will I need to fill out the application?',
-  informationBody: {
-    first: 'You may not need all this information, but if you have it handy, it will make the application process faster.',
-    second: 'If you participate in {assistanceProgramList} you will need to know your case number (not your card or account number).',
-    third: 'If you do not participate in any of the above assistance program, you will need to report your total household income. In that case…',
-    fourth: 'if anyone in your house has a job, you may need to reference the earnings statements or pay stubs to report your gross income, which is different than the amount in your paycheck.',
-    fifth: 'if anyone receives Social Security or retirement benefits, you may need to gather the benefit statements to report the amount and frequency of the payments.',
-    sixth: 'you may also need to reference other financial documents for additional sources of income.',
-    seventh: 'Still not sure if you have everything you need? Don’t worry. The income section of the application contains detailed instructions and explanations about the sources of income you must include, and you can gather additional information then.',
-  },
+  noIncomeTitle: 'What if some household members have no income to report?',
+  noIncomeBody: 'You should still list these household members on your application.  Household members may not earn or receive some of the types of income we ask you to report, or they may not receive income at all. Remember your eligibility determination is based on both household income and household size.',
 
+  irregularIncomeTitle: 'What if my income is not always the same?',
+  irregularIncomeBody: 'If your income is different this month than a normal month because of overtime, holiday pay, missing a couple of shifts at work, or some other unexpected reason, put down what you would have made if those things hadn’t happened. For example, if you normally make $1000 each month, but you missed some work last month and only made $900, put down that you make $1000 per month. Similarly, if you normally make $500 per month, but you worked overtime and made $750, put down that you make $500 per month.',
+//F16
+  sharedCustodyTitle: 'What if I share custody of my child?',
+  sharedCustodyBody: 'If time is split between houses, both parents may apply for benefits. If the eligibility statuses are different, the highest level of benefits will apply. For example, if you qualify for free meals but your child’s other parent does not, no matter which house your child is staying at, he or she can still receive free meals. However, if either parent chooses not to have your child receive free meal benefits while residing with them then that parent may simply pay for the meals.',
+
+  grossTitle: 'What is gross income?',
+  grossBody: 'Gross income is all money earned before deductions, such as income taxes, employee’s social security taxes, and insurance premiums. Gross income also includes money that is garnished from wages, or in the case of bankruptcy, income that is ordered to be paid to creditors.',
+
+  netTitle: 'What is net income?',
+  netBody: 'Commonly referred to as "take home pay," net income is the amount of money you receive in your pay check. It is your total (or gross) income, minus taxes and deductions.',
 }
 
 export const define = {
@@ -239,3 +236,8 @@ export const define = {
   veteransBenefitsTerm: 'Verteran’s benefits',
   veteransBenefitsDef: 'Benefits that are paid to veterans that have a service-connected disability and were not dishonorably discharged.',
 }
+
+//F1 = PaperApp.jsx
+//F14 = WhatInformation.jsx
+//F15 = Household.jsx
+//F16 STOP
