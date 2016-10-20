@@ -1,6 +1,8 @@
 import React, { Component, PropTypes } from 'react'
 import Topic from '../Topic'
 
+//delete
+//spelling mistake in classname
 export default class SharedCustory extends Component {
   render() {
     return (
