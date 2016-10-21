@@ -24,7 +24,12 @@ class AssistancePrograms extends Component {
     return(
       <Slide id="assistance-programs"
              nextDisabled={!assistancePrograms.isValid} beginsSection>
-        <p className="usa-font-lead">If anyone in your household participates in {assistanceProgramsVar.snap.accronym}, {assistanceProgramsVar.tanf.accronym}, or {assistanceProgramsVar.fdpir.accronym}, then {students.informalList(allPeopleCollections)} {students.length === 1 ? 'is' : 'are'} eligible for free school meals.</p>
+        <p className="usa-font-lead">If anyone in your household participates in &nbsp;
+          <Tooltipcomp id="snap" text={tooltiptext.snap} target={assistanceProgramsVar.snap.accronym} />, &nbsp;
+          <Tooltipcomp id="tanf" text={tooltiptext.tanf} target={assistanceProgramsVar.tanf.accronym} />, or &nbsp;
+          <Tooltipcomp id="fdpir" text={tooltiptext.fdpir} target={assistanceProgramsVar.fdpir.accronym} />, &nbsp;
+          then {students.informalList(allPeopleCollections)} {students.length === 1 ? 'is' : 'are'} eligible for free school meals.
+        </p>
 
         <div className="well">
           <p>
