@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import Topic from '../Topic'
+import { organization } from '../../../config'
 
 //F1
 export default class PaperApp extends Component {
