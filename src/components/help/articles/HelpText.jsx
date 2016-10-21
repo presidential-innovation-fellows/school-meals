@@ -113,6 +113,9 @@ export const help = {
 //F42
   contactTitle: 'Do I have to provide my contact information?',
   contactBody: 'No, but it is very helpful to have your contact information in case we need to get in touch with you about your application. Also, if your contact information changes in the future, please let us know so that we can maintain up-to-date information for your household throughout the year.',
+//F43
+  disagreeTitle: 'What if I disagree with the school’s decision about my application?',
+  disagreeBody: 'You should talk to school officials. You also may ask for a hearing by calling or writing to ' + organization.name +  ' (' + organization.contact.phone + ' / ' + organization.contact.email + ' / ' + organization.contact.address + ').'
 //was this deleted?
   childSupportTitle: 'Are my alimony and child support payments considered household income?',
   childSupportBody: 'Yes. Income from alimony and child support payments are considered household income and should be reported in your application for school meal benefits.',
@@ -195,6 +198,18 @@ export const define = {
 //D23
 	trustTerm: 'Trust',
 	trustDef: 'A trust is, in general, a relationship in which one person holds title to property, subject to an obligation to keep or use the property for the benefit of another.',
+//D24
+  ssdiChildTerm: 'Social Security Disability Insurance (SSDI) for children',
+  ssdiChildDef: '',
+//D25
+  ssiChildrenTerm: 'Supplemental Security Income (SSI) for children',
+  ssiChildrenDef: 'Supplemental Security Income (SSI) provides cash to meet basic needs for food, clothing, and shelter to children younger than age 18 who have a physical or mental condition, or combination of conditions, that meets Social Security’s definition of disability for children, and if his or her income and resources fall within the eleigibility limits.',
+//D26
+  ssSurvivorTerm: 'Social Security survivor benefits',
+  ssSurvivorDef: '',
+//D27
+  pensionBeneficiaryTerm: 'Pension beneficiary or survivor',
+  pensionBeneficiaryDef: '',
 //deleted?
   salaryTerm: 'Salary',
   salaryDef: 'A salary is an agreed-upon and regular compensation for employment that may be paid in any frequency, but is usually paid on a monthly basis, not on an hourly, daily or piece-work basis.',
