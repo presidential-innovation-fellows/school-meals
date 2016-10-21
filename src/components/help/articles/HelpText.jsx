@@ -1,9 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import { schoolYear } from '../../../helpers'
-import { organization, localPrograms, assistancePrograms } from '../../../config'
+import { organization, assistanceProgramsVar } from '../../../config'
 import { toSentenceSerial } from 'underscore.string'
-
-const assistanceProgramList = toSentenceSerial(assistancePrograms, ', ', ' or ')
 
 export const help = {
   //variables are paired by contentTitle and contentBody;
@@ -44,7 +42,7 @@ export const help = {
   wicBody: 'Participation in the Special Supplemental Nutrition Program for Women, Infants and Children, or WIC program, does not automatically qualify your children for free or reduced price school meals. You will need to qualify based on your household income by completing this application.',
 //F10
   otherProgramsTitle: 'My family needs more help. Are there other programs we might apply for?',
-  otherProgramsBody: 'To find out how to apply for ' + localPrograms.snap.name + 'or other assistance benefits, contact your local assistance office at ' + localPrograms.snap.localContact + ' or call ' + localPrograms.snap.stateHotline + '.',
+  otherProgramsBody: 'To find out how to apply for ' + assistanceProgramsVar.snap.fullname + 'or other assistance benefits, contact your ' + organization.name + '.',
 //F9
   headStartTitle: 'My child attends head start. Is he/she eligible for free school meals and do I need to fill out an application?',
   headStartBody: 'Yes. Children enrolled in Head Start are automatically eligible for free meals. You do not need to submit an application for school meal benefits unless you are requesting benefits for other school age children in your household.',
@@ -52,8 +50,8 @@ export const help = {
   letterTitle: 'I received a letter from the school saying that my children were automatically approved for free meals for the upcoming ' + schoolYear() + ' school year. Do I still need to complete an application?',
   letterBody: 'No, but please read the letter carefully. If any children in your household were missing from your eligibility notification letter, they are also eligible for free meals, so you should contact ' + organization.name +  ' (' + organization.contact.phone + ' / ' + organization.contact.email + ' / ' + organization.contact.address + ') immediately.',
 //F6
-  localProgramTitle: 'My household participates in ' + localPrograms.snap.name + ' and/or ' + localPrograms.tanf.name + '. Are my children eligible for free meals?',
-  localProgramBody: 'All children in households are eligible for free meals when at least one household member is receiving benefits from ' + localPrograms.snap.name + ' , the Food Distribution Program on Indian Reservations (FDPIR), or ' + localPrograms.tanf.name + '. If you participate in other assistance programs, contact ' + organization.name +  ' (' + organization.contact.phone + ' / ' + organization.contact.email + ' / ' + organization.contact.address + ') to see if they qualify for you for school meal benefits. You may qualify for free meals!',
+  localProgramTitle: 'My household participates in ' + assistanceProgramsVar.snap.fullname + ' and/or ' + assistanceProgramsVar.tanf.fullname + '. Are my children eligible for free meals?',
+  localProgramBody: 'All children in households are eligible for free meals when at least one household member is receiving benefits from ' + assistanceProgramsVar.snap.fullname + ' , the Food Distribution Program on Indian Reservations (FDPIR), or ' + assistanceProgramsVar.tanf.fullname + '. If you participate in other assistance programs, contact ' + organization.name +  ' (' + organization.contact.phone + ' / ' + organization.contact.email + ' / ' + organization.contact.address + ') to see if they qualify for you for school meal benefits. You may qualify for free meals!',
 //F13
   checkedTitle: 'Will the information I give be checked?',
   checkedBody: 'Yes, each application is reviewed by the district to determine eligibility. We may also ask you to send proof of your household’s income.',
@@ -104,7 +102,7 @@ export const help = {
     third: 'you are staying together in a shelter, hotel, or other temporary housing arrangement,',
     fourth: 'your family relocates on a seasonal basis,',
     fifth: 'or any children living with you who have chosen to leave their prior family or household.',
-    sixth: 'If you believe children in your household meet one or more of these descriptions and you haven’t been told your children will get free meals, please call or e-mail ' + localPrograms.homelessness.contact + ' to confirm their eligibility.',
+    sixth: 'If you believe children in your household meet one or more of these descriptions and you haven’t been told your children will get free meals, please contact ' + organization.name +  '.',
   },
 //F18
   permanentTitle: 'I am the permanent guardian of a child. Do they automatically qualify for free meals as a foster child?',

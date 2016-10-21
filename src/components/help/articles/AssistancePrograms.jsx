@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import Article from '../Article'
 import Topic from '../Topic'
-import { organization, localPrograms } from '../../../config'
+import { organization, assistanceProgramsVar } from '../../../config'
 import { schoolYear } from '../../../helpers'
 import Household from '../topics/Household'
 import SharedCustody from '../topics/SharedCustody'
@@ -17,9 +17,9 @@ export default class AssistancePrograms extends Component {
           </p>
         </Topic>
 //included
-        <Topic title={`My household participates in ${localPrograms.snap.name} and/or ${localPrograms.tanf.name}. Are my children eligible for free meals?`}>
+        <Topic title={`My household participates in ${assistanceProgramsVar.snap.accronym} and/or ${assistanceProgramsVar.tanf.accronym}. Are my children eligible for free meals?`}>
           <p>
-            All children in households are eligible for free meals when at least one household member is receiving benefits from {localPrograms.snap.name}, the Food Distribution Program on Indian Reservations (FDPIR), or {localPrograms.tanf.name}. If you participate in other assistance programs, contact {organization.name} ({organization.contact.phone} / {organization.contact.email} / {organization.contact.address}) to see if they qualify for you for school meal benefits.
+            All children in households are eligible for free meals when at least one household member is receiving benefits from {assistanceProgramsVar.snap.accronym}, the Food Distribution Program on Indian Reservations (FDPIR), or {assistanceProgramsVar.tanf.accronym}. If you participate in other assistance programs, contact {organization.name} ({organization.contact.phone} / {organization.contact.email} / {organization.contact.address}) to see if they qualify for you for school meal benefits.
           </p>
         </Topic>
 //included
@@ -31,7 +31,7 @@ export default class AssistancePrograms extends Component {
 //included
         <Topic title="My family needs more help. Are there other programs we might apply for?">
           <p>
-            To find out how to apply for {localPrograms.snap.name} or other assistance benefits, contact your local assistance office at {localPrograms.snap.localContact} or call {localPrograms.snap.stateHotline}.
+            To find out how to apply for {assistanceProgramsVar.snap.accronym} or other assistance benefits, contact {organization.name}.
           </p>
         </Topic>
 //included

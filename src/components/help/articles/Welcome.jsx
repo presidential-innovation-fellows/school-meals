@@ -2,14 +2,13 @@ import React, { Component, PropTypes } from 'react'
 import Article from '../Article'
 import Topic from '../Topic'
 import { toSentenceSerial } from 'underscore.string'
-import { assistancePrograms, organization } from '../../../config'
+import { assistanceProgramsVar, organization } from '../../../config'
 import { help } from './HelpText'
 import Standard from '../TopicStandard'
 
 export default class Welcome extends Component {
   render() {
-    const assistanceProgramList =
-      toSentenceSerial(assistancePrograms, ', ', ' or ')
+//    const assistanceProgramList = assistanceProgramsVar.snap.fullname +' (' assistanceProgramsVar.snap.accronym + ') ' + assistanceProgramsVar.tanf.fullname + ' (' + assistanceProgramsVar.tanf.accronym + ') ' + assistanceProgramsVar.fdpir.fullname + ' (' + assistanceProgramsVar.fdpir.accronym +') '
 
 
     return (
@@ -34,7 +33,7 @@ export default class Welcome extends Component {
         <Topic title="What information will I need to fill out the application?">
           <p>You may not need all this information, but if you have it handy, it will make the application process faster.</p>
           <ul>
-            <li>If you participate in {assistanceProgramList} you will need to know your case number (not your card or account number).</li>
+            <li>If you participate in assistanceProgramsVar.snap.fullname (assistanceProgramsVar.snap.accronym), assistanceProgramsVar.tanf.fullname (assistanceProgramsVar.tanf.accronym), or assistanceProgramsVar.fdpir.fullname (assistanceProgramsVar.fdpir.accronym) you will need to know your case number (not your card or account number).</li>
             <li>
               If you do not participate in any of the above assistance program, you will need to report your total household income. In that case…
               <ul>

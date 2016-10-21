@@ -3,7 +3,7 @@ import Article from '../Article'
 import Topic from '../Topic'
 import Household from '../topics/Household'
 import SharedCustody from '../topics/SharedCustody'
-import { localPrograms } from '../../../config'
+import { organization } from '../../../config'
 
 export default class OtherPrograms extends Component {
   render() {
@@ -35,7 +35,7 @@ export default class OtherPrograms extends Component {
             <li>or any children living with you who have chosen to leave their prior family or household.</li>
           </ul>
           <p>
-            If you believe children in your household meet one or more of these descriptions and you haven’t been told your children will get free meals, please call or e-mail { localPrograms.homelessness.contact } to confirm their eligibility.
+            If you believe children in your household meet one or more of these descriptions and you haven’t been told your children will get free meals, please contact {organization.name}.
           </p>
         </Topic>
 
