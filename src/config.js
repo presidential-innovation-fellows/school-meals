@@ -15,13 +15,13 @@ export const organization = {
   }
 }
 
-export const assistanceProgramsArray = [
+export const assistancePrograms = [
   'Supplemental Nutrition Assistance Program (SNAP)',
   'Temporary Assistance for Needy Families (TANF)',
   'Food Distribution Program on Indian Reservations (FDPIR)'
 ]
 
-export const assistanceProgramsVar {
+export const assistanceProgramsVar = {
   snap: {
     fullName: 'Supplemental Nutrition Assistance Program',
     accronym: 'SNAP',
@@ -33,7 +33,7 @@ export const assistanceProgramsVar {
   fdpir: {
     fullName: 'Food Distribution Program on Indian Reservations',
     accronym: 'FDPIR',
-  },
+  }
 }
 
 export const thankYou = [
