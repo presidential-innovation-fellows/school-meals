@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import Topic from '../Topic'
 
+//F1
 export default class PaperApp extends Component {
   render() {
     return (
