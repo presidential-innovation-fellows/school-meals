@@ -5,18 +5,19 @@ import { toSentenceSerial } from 'underscore.string'
 
 export const help = {
   //variables are paired by contentTitle and contentBody;
+//was this deleted?
   ssiTitle: 'Is supplemental security income (SSI) included in my household income?',
   ssiBody: 'Yes. SSI benefits should be reported as household income in your application for school meal benefits.',
   //F36
   govProgramTitle: 'What government program benefits should I include in my household income?',
   govProgramBody: 'If you have questions about whether to include benefits from a specific program, contact ' + organization.name +  ' (' + organization.contact.phone + ' / ' + organization.contact.email + ' / ' + organization.contact.address + ').',
-
+//was this deleted?
   childSupportTitle: 'Are my alimony and child support payments considered household income?',
   childSupportBody: 'Yes. Income from alimony and child support payments are considered household income and should be reported in your application for school meal benefits.',
-
+//was this deleted?
   unemploymentBenefitsTitle: 'Do I need to report unemployment benefits, worker’s comp, social security disability insurance (SSDI) or Black Lung benefit payments in my household income?',
   unemploymentBenefitsBody: 'Yes. Even if you are currently unemployed or not working, if you or anyone in your household receives unemployment benefits, worker’s comp payments, SSDI, or Black Lung benefits, you must report that in your application for school meal benefits.',
-
+//was this deleted?
   retirementBenefitsTitle: 'Are retirement benefits, such as Social Security, railroad retirement, or private pensions, considered household income?',
   retirementBenefitsBody: 'Yes. Income from public (government) or private (non-government) retirement plans are considered household income and should be reported in your application for school meal benefits.',
 //F37
@@ -94,7 +95,6 @@ export const help = {
 //F12
   publicChargeTitle: 'Will my child or I be subject to public charge if I apply for or receive school meal benefits?',
   publicChargeBody: 'No, the non-cash benefits received through the National School Lunch Program and School Breakfast Programs are not subject to public charge consideration. In other words, you will not be deported, denied entry to the country, or denied permanent status because you apply for or receive school meal benefits.',
-
 //F5
   applyLaterTitle: 'If I don’t qualify now, may I apply later?',
   applyLaterBody: 'Yes, you may apply at any time during the school year.  For example, children with a parent or guardian who becomes unemployed may become eligible for free or reduced price meals if the household income drops below the income limit.',
@@ -123,95 +123,88 @@ export const help = {
 
 export const define = {
 	//variables are paired by contentTerm contentDef
-	currentTerm: 'Current income',
+//D5
+  currentTerm: 'Current income',
 	currentDef: 'Current income is income earned or received in the current month, or in the month before the completion of this application.',
-
+//D15
 	ssdiTerm: 'Social Security Disability Insurance (SSDI)',
-	ssdiDef: 'Social Security Disability Insurance (SSDI) are benefits paid to people who have worked long enough and paid Social Security taxes, but who can’t work because they have a medical condition that is expected to last at least one year or result in death.',
-
+	ssdiDef: 'Social Security Disability Insurance (SSDI) are benefits paid to people who have worked long enough and paid Social Security taxes but who can’t work because they have a medical condition that is expected to last at least one year or result in death.',
+//D21
 	pensionTerm: 'Pension',
 	pensionDef: 'A pension is generally a series of payments made to you after you retire from work. Pension payments are made regularly and are based on such factors as years of service and prior compensation.',
-
+//D22
 	annuityTerm: 'Annuity',
 	annuityDef: 'An annuity is a series of payments under a contract made at regular intervals over a period of more than one full year. They can be either fixed (under which you receive a definite amount) or variable (not fixed). Annuities can be purchased by individuals alone, or with the help of an employer.',
-
+//D23
 	trustTerm: 'Trust',
 	trustDef: 'A trust is, in general, a relationship in which one person holds title to property, subject to an obligation to keep or use the property for the benefit of another.',
-
+//deleted?
   salaryTerm: 'Salary',
   salaryDef: 'A salary is an agreed-upon and regular compensation for employment that may be paid in any frequency, but is usually paid on a monthly basis, not on an hourly, daily or piece-work basis.',
-
+//deleted?
   wagesTerm: 'Wages',
   wagesDef: 'Wages are an amount of money that a worker is paid for work or services by the hour, day or week.',
-
+//deleted?
   tipsTerm: 'Tips',
   tipsDef: 'Tips are income earned by service professionals that are not paid by an employer, but by patrons or customers for services, such as gratuity at a restaurant.',
-
+//deleted?
   commissionsTerm: 'Commissions',
   commissionsDef: 'Commissions are an amount of money that a worker is paid based on the level of sales he or she made.',
-
+//D6
   cashBonusTerm: 'Cash Bonus',
   cashBonusDef: 'A cash bonus is a lump sum of money awarded to an employee, either occasionally or periodically.',
-
-  selfemploymentTerm: 'Self-employment',
-  selfemploymentDef: {
-    first: 'Income from self-employment should be reported as your current net income, equal to gross revenue (income) minus business expenses. Gross revenue (income) includes the total income from goods sold or services rendered by the business, or the value of all products sold.',
-    second: 'Deductible business expenses include the cost of goods purchased; rent; utilities; depreciation charges; wages and salaries paid; and business taxes;',
-    third: 'Non-deductible business expenses include the value of salable merchandise used by the proprietors of retail businesses; and personal, Federal, State, or local income taxes',
-    fourth: 'Net income for self-employed farmers is figured by subtracting the farmer’s operating expenses from the gross revenue (income). Gross income includes money received from the rental of farm land, buildings, or equipment to others; and incidental receipts from the sale of items such as wood, sand, or gravel. Operating expenses include cost of feed, fertilizer, seed, and other farming supplies; cash wages paid to farmhands; depreciation charges; cash rent; interest on farm mortgages; farm building repairs; and farm taxes.',
-    fifth: 'If your current net income is not your usual income, you may use last year’s income as a basis to report net income, or refer to the question ‘WHAT IF MY INCOME IS NOT ALWAYS THE SAME?’ in the HELP.  If you have income from both wages and self-employment, see the help question ‘WHAT IF I HAVE INCOME FROM BOTH WAGES AND SELF-EMPLOYMENT?’ for more information.',
-  },
-
+//delete
   militaryBasicTerm: 'Military basic pay',
   militaryBasicDef: 'Military basic pay is the base salary for a Military service member on active duty and counts for part of total military income. Basic Pay is electronically distributed on the 1st and 15th of every month, and should be reported as ‘twice monthly income’.',
-
+//delete
   allowancesTerm: 'Allowances',
   allowancesDef: 'Allowances for off-base housing, such as the Basic Allowance for Housing (BAH), is to help service members cover the cost of housing in the private sector.',
-
-  regularCashTerm: 'Regular cash payments',
-  regularCashDef: {
-    first: 'Regular cash payments from outside the household is money regularly received from extended family or friends that do not live with you.  For example, if parents or grandparents regularly help cover the cost of groceries, bills, or rent, that money is considered household income and should be reported in your application for school meal benefits.',
-    second: 'One-time payments should not be reported as current, monthly income since they are not received on a regular basis. However, if you receive a one-time payment, such as from an award, settlement, inheritance or prize winnings, and then regularly draw on that money for living expenses later on, the amount withdrawn should be reported in your application for school meal benefits in the space for ‘Any other income available to pay for children’s school meals’.',
-  },
-
+//delete
   earnedInterestTerm: 'Earned interest',
   earnedInterestDef: 'Earned interest is a fee that is paid for the use of another person’s money. It is usually a percentage of the amount borrowed.',
-
+//D8
   ssiTerm: 'Supplemental Security Income (SSI)',
-  ssiDef: {
-    first: 'Supplemental Security Income (SSI) provides cash to meet basic needs for food, clothing, and shelter to aged, blind, and disabled people who have little or no income.',
-    second: 'Benefits that are paid to veterans that have a service-connected disability and were not dishonorably discharged.',
-  },
-
-  cashAssistanceTerm: 'Cash assistance',
-  cashAssistanceDef: 'Income in the form of cash benefits, including housing subsidies, from state or local government programs should be reported as household income. If you have questions about whether to include benefits from a specific program, contact ' + organization.name +  ' (' + organization.contact.phone + ' / ' + organization.contact.email + ' / ' + organization.contact.address + ').',
-
-  socialSecurityTerm: 'Social Security',
-  socialSecurityDef: 'Social Security retirement benefits are payments to people (or family members of people) who are age 62 or older who have worked and paid taxes into the Social Security system.',
-
-  blackLungTerm: 'Black Lung Benefits',
-  blackLungDef: 'Black Lung benefits provide payments and medical treatment for people that became disabled from black lung disease from working in or around the nation’s coal mines.',
-
-  railroadRetirementTerm: 'Railroad Retirement',
-  railroadRetirementDef: 'Railroad retirement benefits are payments to qualified railroad employees that are retired or disabled.',
-
+  ssiDef: 'Supplemental Security Income (SSI) provides cash to meet basic needs for food, clothing, and shelter to aged, blind, and disabled people who have little or no income.',
+//D9
+  cashAssistanceTerm: 'Cash assistance from state or local government',
+  cashAssistanceDef: 'Income in the form of cash benefits, including housing assistance, from state or local government programs should be reported as household income. If you have questions about whether to include benefits from a specific program, contact ' + organization.name +  ' (' + organization.contact.phone + ' / ' + organization.contact.email + ' / ' + organization.contact.address + ').',
+//D17
+  socialSecurityTerm: 'Social Security benefits',
+  socialSecurityDef: 'Social Security retirement benefits are monthly payments to people (or spouses, or dependent children of people) who are retired or disabled, but have worked and paid taxes into the Social Security system. Payments are based on your reported earnings. Also, upon death, survivors can collect benefits.',
+//D18
+  blackLungTerm: 'Black Lung benefits',
+  blackLungDef: 'Black Lung benefits provide monthly payments and medical treatment for people that became disabled from black lung disease from working in or around the nation’s coal mines.',
+//D19
+  railroadRetirementTerm: 'Railroad Retirement benefits',
+  railroadRetirementDef: 'Railroad retirement benefits provide retirement and disability annuities for qualified railroad employees, spouse annuities for their wives or husbands, and survivor benefits for the families of deceased employees who were insured under the Railroad Retirement Act.',
+//D10
   alimonyTerm: 'Alimony',
   alimonyDef: 'Alimony is income from payments paid by a spouse or former spouse from whom you are divorced or legally separated.',
-
+//D11
   childSupportTerm: 'Child support',
-  childSupportDef: 'Child support payments are payments from one parent to another to cover the cost of raising a child. Child support should be reported as adult income, rather than child income.',
-
+  childSupportDef: 'Child support payments are payments received by one parent from another to cover the cost of raising a child.',
+//D14
   strikeBenefitsTerm: 'Strike benefits',
   strikeBenefitsDef: 'Strike benefits are compensation paid by a union to workers on strike.',
-
+//D12
   unemploymentTerm: 'Unemployment benefits',
   unemploymentDef: 'Unemployment benefits are payments from the government or a labor union to a person who is unemployed.',
-
+//D13
   workersCompTerm: 'Worker’s compensation',
   workersCompDef: 'Worker’s compensation benefits are payments to cover lost wages and medical expenses of an employee who is injured on the job.',
-
+//D16
   veteransBenefitsTerm: 'Verteran’s benefits',
   veteransBenefitsDef: 'Benefits that are paid to veterans that have a service-connected disability and were not dishonorably discharged.',
+//D2
+  mckinneyTerm: 'McKinney-Vento Homeless Assistance Act',
+  mckinneyDef: 'The McKinney-Vento Education of Homeless Children and Youth Assistance Act provides Federal money for homeless shelter programs and facilitates public school access for homeless children and youth.',
+//D3
+  mepTerm: 'Migrant Education Program (MEP)',
+  mepDef: 'MEP provides services to children who have moved across school district lines, within the last three years, in order to accompany or join a parent or guardian who seeks or obtains temporary or seasonal work in agriculture or fishing.',
+//D4
+  runawayHomelessActTerm: 'Runaway and Homeless Youth Act',
+  runawayHomelessActDef: 'The Runaway and Homeless Youth Act authorizes community-based runaway and homeless youth projects to provide temporary shelter and care to runaway or otherwise homeless youth who are in need of temporary shelter, counseling, and aftercare services.',
+
 }
 
 //F1 = PaperApp.jsx
@@ -223,3 +216,7 @@ export const define = {
 //F24 = WhatIncome.jsx
 //F28 = NotTheSame.jsx
 //F30 = ReportCombat.jsx
+
+//D1 = IEG.jsx
+//D7 = NetSelfEmployment.jsx
+//D20 = RegularCash.jsx
