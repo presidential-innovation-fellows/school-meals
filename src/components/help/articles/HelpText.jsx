@@ -33,10 +33,10 @@ export const help = {
 
   seasonalTitle: 'How should I report my income if I work on a seasonal basis?',
   seasonalBody: 'If you work on a seasonal basis and your household’s current, gross income is higher or lower than usual and does not fairly or accurately represent your household’s actual circumstances, see the ‘WHAT IF MY INCOME IS NOT ALWAYS THE SAME?’ question in the HELP. If you have additional questions, contact '  + organization.name +  ' (' + organization.contact.phone + ' / ' + organization.contact.email + ' / ' + organization.contact.address + ')' + ', and they will help you figure out your household’s annual rate of income based on USDA guidelines.',
-
+//F29
   militaryTitle: 'We are in the military. Do we report our income differently?',
   militaryBody: 'Your basic pay and cash bonuses must be reported as income. If you get any cash value allowances for off-base housing, food, or clothing, (including BAH), it must also be included as income. However, if your housing is part of the Military Housing Privatization Initiative, do not include your housing allowance as income. Do not include payments from the Family Subsistence Supplemental Allowance (FSSA). Any additional combat pay resulting from deployment is also excluded from income. If the service member is deployed, include only the portion that is made available by them or on their behalf to the household as income.',
-
+//F17
   deployedTitle: 'Should I include a member of our household on the application if they are currently deployed?',
   deployedBody: 'Yes. Members of the armed services who are activated or deployed are counted as household members. Any money made available by them or on their behalf for the household is included as income to the household with the exception of combat pay.',
 //F8
@@ -63,24 +63,21 @@ export const help = {
 //F3
   childAppTitle: 'Do I need to fill out an application for each child?',
   childAppBody: 'No. Use one Free and Reduced Price School Meals Application for all students that attend ' + organization.name + ' in your household.',
-
+//F25
   childIncomeTitle: 'What is child income?',
-  childIncomeBody: 'Child income is money received from <em>outside</em> your household that is paid directly to your children. Many households do not have any child income.',
-
+  childIncomeBody: 'Child income is money received from outside your household that is paid directly to your children. Many households do not have any child income.',
+//F33
   earningsDifferencesTitle: 'What is the difference between earnings from a salary and earnings from wages?',
-  earningsDifferencesBody: 'A salary is an agreed-upon, fixed amount of money paid to an employee every year. Salaries may be paid in any frequency, but are usually paid on a monthly basis. Wages are also payment for work, but are agreed upon and paid on an hourly, daily or weekly basis.',
+  earningsDifferencesBody: 'A salary is an agreed-upon, fixed amount of money paid to an employee every year.  Employers pay salaries in different frequencies depending on the work, but often the frequency is monthly, twice a month, or every two weeks. Wages are also an agreed-upon payment for work. Employers usually pay wages at an hourly, daily or weekly frequency.',
 //delete
   reportTipsTitle: 'Do I need to report income from tips, commissions and cash bonuses?',
   reportTipsBody: {
     first: 'Yes. Income from tips, commissions and cash bonuses is considered household income and should be reported in your application.',
     second:'If your earnings from tips and commissions vary a lot from month to month, see the ‘WHAT IF MY INCOME IS NOT ALWAYS THE SAME?’ question in the HELP.',
   },
-//delete
+//F35
   wagesSelfemploymentTitle: 'What if I have income from both wages and self-employment?',
-  wagesSelfemploymentBody: {
-    first: 'For a household with income from wages and self-employment, each amount must be listed separately. When there is a business loss, income from wages must not be reduced by the amount of the business loss. If income from self-employment is negative, you should report it as $0 (zero) on your application.',
-  second: 'For more information, see ‘Self-employment’ in the HELP section.',
-  },
+  wagesSelfemploymentBody: 'For a household with income from wages and self-employment, each amount must be listed separately. When there is a business loss, income from wages must not be reduced by the amount of the business loss. If income from self-employment is negative, you should report it as $0 (zero) on your application.',
 
   combatPayTitle: 'Do I need to report my combat pay as income on my application?',
   combatPayBody: {
@@ -90,16 +87,16 @@ export const help = {
     fourth: 'It was not received prior to deployment to or service in the designated combat zone.',
     fifth: 'If any of these conditions are not met, you should report the amount as military basic pay.',
   },
-
+//F31
   deipTitle: 'I get deployment extension incentive pay (DEIP). Should I report that as income in my application?',
-  deipBody: ' Maybe. If you are not deployed, then it is included in your household income, but if you are away from your home station, then you are exempt from including it as household income.',
-
+  deipBody: 'Maybe. If you are not deployed, then it is included in your household income, but if you are away from your home station, then you are exempt from including it as household income.',
+//F32
   fssaTitle: 'What is the family subsistence supplemental allowance?',
   fssaBody: 'Family Subsistence Supplemental Allowance (FSSA) is available to service members living in overseas locations that make less than 130 percent of the federal poverty line, and benefits equal the total dollars required to bring household income to that level.',
 //F7
   fosterQualifyTitle: 'What if my household does not qualify for free or reduced price meal benefits based on income, but I have a foster child?',
   fosterQualifyBody: 'Foster children who are formally placed by the State welfare agency or court in a caretaker household are eligible for benefits regardless of household income.',
-
+//delete and include as separate file
   hmrTitle: 'How do I know if my children qualify as homeless, migrant, or runaway?',
   hmrBody: {
     first: 'Your children may qualify as homeless, migrant, or runaway if…',
@@ -109,10 +106,10 @@ export const help = {
     fifth: 'or any children living with you who have chosen to leave their prior family or household.',
     sixth: 'If you believe children in your household meet one or more of these descriptions and you haven’t been told your children will get free meals, please call or e-mail ' + localPrograms.homelessness.contact + ' to confirm their eligibility.',
   },
-
+//F18
   permanentTitle: 'I am the permanent guardian of a child. Do they automatically qualify for free meals as a foster child?',
   permanentBody: 'No. The foster status only applies to children who are formally placed by the State welfare agency or court in a caretaker household. It does not apply to informal arrangements, such as caretaker arrangements or to permanent guardianship placements, which may exist outside of State or court based systems. The child may still be eligible based on your household income, so we encourage you to complete an application.',
-
+//F19
   fosterTitle: 'I adopted a foster child. Are they still eligible for free meals?',
   fosterBody: 'Congratulations on the adoption! And the answer is maybe. If your child was approved for free meals before the adoption went through, then your child is eligible to receive free meals for the rest of the school year. But next year the child will no longer eligible for free meals based on foster status, though they may still qualify based on household income, so we encourage you to submit an application.',
 
@@ -137,10 +134,10 @@ export const help = {
 //F16
   sharedCustodyTitle: 'What if I share custody of my child?',
   sharedCustodyBody: 'If time is split between houses, both parents may apply for benefits. If the eligibility statuses are different, the highest level of benefits will apply. For example, if you qualify for free meals but your child’s other parent does not, no matter which house your child is staying at, he or she can still receive free meals. However, if either parent chooses not to have your child receive free meal benefits while residing with them then that parent may simply pay for the meals.',
-
+//F26
   grossTitle: 'What is gross income?',
   grossBody: 'Gross income is all money earned before deductions, such as income taxes, employee’s social security taxes, and insurance premiums. Gross income also includes money that is garnished from wages, or in the case of bankruptcy, income that is ordered to be paid to creditors.',
-
+//F27
   netTitle: 'What is net income?',
   netBody: 'Commonly referred to as "take home pay," net income is the amount of money you receive in your pay check. It is your total (or gross) income, minus taxes and deductions.',
 }
@@ -241,4 +238,12 @@ export const define = {
 //F1 = PaperApp.jsx
 //F14 = WhatInformation.jsx
 //F15 = Household.jsx
-//F16 STOP
+//F20 = Write this as single article
+//F21 = TBD for next release
+//F22 = Write this as single article
+//F23 ???
+//F24 ???
+//F28 = Write this as single article
+//F30 = Write this as single article
+//F34 ???
+//F36 STOP
