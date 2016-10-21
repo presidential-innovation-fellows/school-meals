@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import Topic from '../Topic'
 
+//No longer included in help documentation.  Delete??
 export default class TipsCommissions extends Component {
   render() {
     return (
