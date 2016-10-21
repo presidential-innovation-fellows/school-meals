@@ -115,7 +115,7 @@ export const help = {
   contactBody: 'No, but it is very helpful to have your contact information in case we need to get in touch with you about your application. Also, if your contact information changes in the future, please let us know so that we can maintain up-to-date information for your household throughout the year.',
 //F43
   disagreeTitle: 'What if I disagree with the school’s decision about my application?',
-  disagreeBody: 'You should talk to school officials. You also may ask for a hearing by calling or writing to ' + organization.name +  ' (' + organization.contact.phone + ' / ' + organization.contact.email + ' / ' + organization.contact.address + ').'
+  disagreeBody: 'You should talk to school officials. You also may ask for a hearing by calling or writing to ' + organization.name +  ' (' + organization.contact.phone + ' / ' + organization.contact.email + ' / ' + organization.contact.address + ').',
 //was this deleted?
   childSupportTitle: 'Are my alimony and child support payments considered household income?',
   childSupportBody: 'Yes. Income from alimony and child support payments are considered household income and should be reported in your application for school meal benefits.',
