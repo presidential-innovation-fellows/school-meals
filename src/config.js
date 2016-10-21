@@ -15,24 +15,25 @@ export const organization = {
   }
 }
 
-export const assistancePrograms = [
+export const assistanceProgramsArray = [
   'Supplemental Nutrition Assistance Program (SNAP)',
   'Temporary Assistance for Needy Families (TANF)',
   'Food Distribution Program on Indian Reservations (FDPIR)'
 ]
 
-export const localPrograms = {
-  homelessness: {
-    contact: 'Cersei Lannister (888-555-1212)'
-  },
+export const assistanceProgramsVar {
   snap: {
-    name: 'CalFresh',
-    localContact: 'Jon Snow (888-555-1212)',
-    stateHotline: '888-555-1212'
+    fullName: 'Supplemental Nutrition Assistance Program',
+    accronym: 'SNAP',
   },
   tanf: {
-    name: 'TANF'
-  }
+    fullName: 'Temporary Assistance for Needy Families',
+    accronym: 'TANF',
+  },
+  fdpir: {
+    fullName: 'Food Distribution Program on Indian Reservations',
+    accronym: 'FDPIR',
+  },
 }
 
 export const thankYou = [
