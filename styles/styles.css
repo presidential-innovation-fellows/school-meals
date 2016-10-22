@@ -361,17 +361,17 @@ button.navbar-toggle:focus {
 }
 
 button.usa-button-secondary.add-person {
-  background-color: #4aa564;
+  background-color: #00a6d2;
 }
 
 button.usa-button-secondary.add-person:hover {
-  background-color: #2e8540;
+  background-color: #046b99;
 }
 
 button.usa-button-secondary.add-income {
-  background-color: #4aa564;
+  background-color: #00a6d2;
 }
 
 button.usa-button-secondary.add-income:hover {
-  background-color: #2e8540;
+  background-color: #046b99;
 }
