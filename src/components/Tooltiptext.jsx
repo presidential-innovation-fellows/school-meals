@@ -43,6 +43,10 @@
   deployed: 'We ask because we only count the portion of a deployed service member’s income that is made available to the household.',
   gross: 'All money earned or received before deductions, such as income taxes, Social Security taxes, and insurance premiums.',
   eligibility: 'See Help for the Income Eligibility Guidelines for reduced price benefits.',
+  ssiChildren: 'Supplemental Security Income (SSI) provides cash to meet basic needs for food, clothing, and shelter to children younger than age 18 who have a physical or mental condition, or combination of conditions, that meets Social Security’s definition of disability for children, and if his or her income and resources fall within the eligibility limits.',
+  ssSurvivor: 'Social Security survivor benefits are monthly payments to children of a deceased parent who was retired or disabled, but worked and paid taxes into the Social Security system.',
+  pensionChildren: 'A child may receive payments from the pension of a deceased parent.',
+  annuityChildren: 'A child may be the recipient of payments from an annuity. See Help for the definition of an annuity.',
   littleguy: '’',
 }
 
