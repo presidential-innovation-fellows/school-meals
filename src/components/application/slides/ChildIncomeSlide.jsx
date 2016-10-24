@@ -50,10 +50,10 @@ class ChildIncomeSlide extends Component {
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="socialSecurity">
-            <Tooltipcomp id="SSDI" text={tooltiptext.SSDI} target="Social Security Disability Insurance (SSDI)" />
-          &nbsp; or &nbsp;
-            <Tooltipcomp id="socialSecurity" text={tooltiptext.socialsecurity} target="Social Security" />
-          &nbsp; survivor benefits
+          Supplemental Security Insurance &nbsp;
+            <Tooltipcomp id="ssiChildren" text={tooltiptext.ssiChildren} target= "(SSI)" />
+          &nbsp; or Social Security &nbsp;
+            <Tooltipcomp id="ssSurvivor" text={tooltiptext.ssSurvivor} target="survivor benefits" />
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="friendsFamily">
@@ -62,9 +62,9 @@ class ChildIncomeSlide extends Component {
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="pensionAnnuityTrust">
-          <Tooltipcomp id="pension" text={tooltiptext.pension} target="Pension" />
+          <Tooltipcomp id="pensionChildren" text={tooltiptext.pensionChildren} target="Pension" />
           &nbsp;, &nbsp;
-          <Tooltipcomp id="annuity" text={tooltiptext.annuity} target="annuity" />
+          <Tooltipcomp id="annuityChildren" text={tooltiptext.annuityChildren} target="annuity" />
           &nbsp;, or &nbsp;
           <Tooltipcomp id="trust" text={tooltiptext.trust} target="trust" />
         </IncomeSource>
