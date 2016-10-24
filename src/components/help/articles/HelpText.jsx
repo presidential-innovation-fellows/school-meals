@@ -116,21 +116,6 @@ export const help = {
 //F43
   disagreeTitle: 'What if I disagree with the school’s decision about my application?',
   disagreeBody: 'You should talk to school officials. You also may ask for a hearing by calling or writing to ' + organization.name +  ' (' + organization.contact.phone + ' / ' + organization.contact.email + ' / ' + organization.contact.address + ').',
-//was this deleted?
-  childSupportTitle: 'Are my alimony and child support payments considered household income?',
-  childSupportBody: 'Yes. Income from alimony and child support payments are considered household income and should be reported in your application for school meal benefits.',
-//was this deleted?
-  unemploymentBenefitsTitle: 'Do I need to report unemployment benefits, worker’s comp, social security disability insurance (SSDI) or Black Lung benefit payments in my household income?',
-  unemploymentBenefitsBody: 'Yes. Even if you are currently unemployed or not working, if you or anyone in your household receives unemployment benefits, worker’s comp payments, SSDI, or Black Lung benefits, you must report that in your application for school meal benefits.',
-//was this deleted?
-  retirementBenefitsTitle: 'Are retirement benefits, such as Social Security, railroad retirement, or private pensions, considered household income?',
-  retirementBenefitsBody: 'Yes. Income from public (government) or private (non-government) retirement plans are considered household income and should be reported in your application for school meal benefits.',
-//was this deleted?
-  annuityTitle: 'What is an annuity and how do I know if I have income from one?',
-  annuityBody: 'An annuity is a series of payments under a contract made at regular intervals over a period of more than one full year. They can be either fixed (under which you receive a definite amount) or variable (not fixed). Annuities can be purchased by individuals alone, or with the help of an employer. If you are unsure whether you have income from an annuity, you should contact ' + organization.name +  ' (' + organization.contact.phone + ' / ' + organization.contact.email + ' / ' + organization.contact.address + ').',
-//was this deleted?
-  ssiTitle: 'Is supplemental security income (SSI) included in my household income?',
-  ssiBody: 'Yes. SSI benefits should be reported as household income in your application for school meal benefits.',
 }
 
 export const define = {
@@ -199,37 +184,16 @@ export const define = {
 	trustTerm: 'Trust',
 	trustDef: 'A trust is, in general, a relationship in which one person holds title to property, subject to an obligation to keep or use the property for the benefit of another.',
 //D24
-  ssdiChildTerm: 'Social Security Disability Insurance (SSDI) for children',
-  ssdiChildDef: '',
-//D25
   ssiChildrenTerm: 'Supplemental Security Income (SSI) for children',
   ssiChildrenDef: 'Supplemental Security Income (SSI) provides cash to meet basic needs for food, clothing, and shelter to children younger than age 18 who have a physical or mental condition, or combination of conditions, that meets Social Security’s definition of disability for children, and if his or her income and resources fall within the eleigibility limits.',
-//D26
+//D25
   ssSurvivorTerm: 'Social Security survivor benefits',
-  ssSurvivorDef: '',
-//D27
+  ssSurvivorDef: 'Social Security survivor benefits are monthly payments to children of a deceased parent who was retired or disabled, but worked and paid taxes into the Social Security system.',
+//D26
   pensionBeneficiaryTerm: 'Pension beneficiary or survivor',
-  pensionBeneficiaryDef: '',
-//deleted?
-  salaryTerm: 'Salary',
-  salaryDef: 'A salary is an agreed-upon and regular compensation for employment that may be paid in any frequency, but is usually paid on a monthly basis, not on an hourly, daily or piece-work basis.',
-//deleted?
-  wagesTerm: 'Wages',
-  wagesDef: 'Wages are an amount of money that a worker is paid for work or services by the hour, day or week.',
-//deleted?
-  tipsTerm: 'Tips',
-  tipsDef: 'Tips are income earned by service professionals that are not paid by an employer, but by patrons or customers for services, such as gratuity at a restaurant.',
-//deleted?
-  commissionsTerm: 'Commissions',
-  commissionsDef: 'Commissions are an amount of money that a worker is paid based on the level of sales he or she made.',
-//delete
-  militaryBasicTerm: 'Military basic pay',
-  militaryBasicDef: 'Military basic pay is the base salary for a Military service member on active duty and counts for part of total military income. Basic Pay is electronically distributed on the 1st and 15th of every month, and should be reported as ‘twice monthly income’.',
-//delete
-  allowancesTerm: 'Allowances',
-  allowancesDef: 'Allowances for off-base housing, such as the Basic Allowance for Housing (BAH), is to help service members cover the cost of housing in the private sector.',
-//delete
-  earnedInterestTerm: 'Earned interest',
-  earnedInterestDef: 'Earned interest is a fee that is paid for the use of another person’s money. It is usually a percentage of the amount borrowed.',
+  pensionBeneficiaryDef: 'A child may receive payments from a pension of a deceased parent.',
+//D27
+  annuityChildrenTerm: 'Annuity for a child',
+  annuityChildrenDef: 'A child may be the recipient of payments from an annuity.  See Help for the definition of an annuity.',
 
 }
