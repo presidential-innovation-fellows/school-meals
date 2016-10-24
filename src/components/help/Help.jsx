@@ -6,6 +6,7 @@ import classNames from 'classnames'
 import Welcome from './articles/Welcome'
 import BeforeYouBegin from './articles/BeforeYouBegin'
 import Attestation from './articles/Attestation'
+import Students from './articles/Students'
 import AssistancePrograms from './articles/AssistancePrograms'
 import OtherPrograms from './articles/OtherPrograms'
 import OtherChildren from './articles/OtherChildren'
@@ -20,6 +21,14 @@ import UnemploymentIncome from './articles/UnemploymentIncome'
 import RetirementIncome from './articles/RetirementIncome'
 import OtherIncome from './articles/OtherIncome'
 import Signature from './articles/Signature'
+import Foster from './articles/Foster'
+import ReportChildIncome from './articles/ReportChildIncome'
+import Summary from './articles/Summary'
+import ContactInfo from './articles/ContactInfo'
+import RaceEthnicity from './articles/RaceEthnicity'
+import ThankYou from './articles/ThankYou'
+import LegalStatements from './articles/LegalStatements'
+
 
 
 import All from './articles/All'
@@ -74,10 +83,14 @@ class Help extends Component {
                  case 'welcome':                 return <Welcome />
                  case 'before-you-begin':        return <BeforeYouBegin />
                  case 'attestation':             return <Attestation />
+                 case 'students':                return <Students />
                  case 'assistance-programs':     return <AssistancePrograms />
+                 case 'foster':                  return <Foster />
                  case 'other-programs':          return <OtherPrograms />
+                 case 'income-election':         return <IncomeElection />
                  case 'other-children':          return <OtherChildren />
                  case 'child-income':            return <ChildIncome />
+                 case 'child':                   return <ChildIncome />
                  case 'adults':                  return <Adults />
                  case 'adult-income-overview':   return <AdultIncomeOverview />
                  case 'military-income':         return <MilitaryIncome />
@@ -88,7 +101,7 @@ class Help extends Component {
                  case 'retirement-income':       return <RetirementIncome />
                  case 'other-income':            return <OtherIncome />
                  case 'ssn':                     return <Signature />
-                 case 'summary':                 return <All />
+                 case 'summary':                 return <Summary />
                  default:                        return <All />;
                }
              })()}
