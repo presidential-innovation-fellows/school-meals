@@ -37,6 +37,7 @@ class PersonForm extends Component {
                       person={person}
                       name={field.name}
                       label={field.label}
+                      placeholder={field.placeholder}
                       required={!!field.required}
                       key={index} />
                  )}

@@ -186,7 +186,7 @@ class PersonCollection {
       { name: 'firstName', label: 'First name', required: true },
       { name: 'middleName', label: 'Middle name' },
       { name: 'lastName', label: 'Last name', required: true },
-      { name: 'suffix', label: 'Suffix' }
+      { name: 'suffix', label: 'Suffix (e.g. Jr., Sr., I, II, III)', placeholder: 'Suffix' }
     ]
   }
 
