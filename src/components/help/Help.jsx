@@ -27,6 +27,7 @@ import ContactInfo from './articles/ContactInfo'
 import RaceEthnicity from './articles/RaceEthnicity'
 import ThankYou from './articles/ThankYou'
 import LegalStatements from './articles/LegalStatements'
+import IncomeElection from './articles/IncomeElection'
 
 
 
@@ -100,7 +101,10 @@ class Help extends Component {
                  case 'retirement-income':       return <RetirementIncome />
                  case 'other-income':            return <OtherIncome />
                  case 'ssn':                     return <Signature />
+                 case 'contact':                 return <ContactInfo />
+                 case 'legal-statements':        return <LegalStatements />
                  case 'summary':                 return <Summary />
+                 case 'thank-you':               return <ThankYou />
                  default:                        return <All />;
                }
              })()}

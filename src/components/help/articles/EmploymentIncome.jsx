@@ -14,11 +14,11 @@ export default class EmploymentIncome extends Component {
     return (
       <Article>
             <NotTheSame />
-			<Standard title={help.earningsDifferencesTitle} body={help.earningsDifferencesBody} />
+			      <Standard title={help.earningsDifferencesTitle} body={help.earningsDifferencesBody} />
             <Standard title={help.selfEmployedTitle} body={help.selfEmployedBody} />
             <Standard title={help.wagesSelfemploymentTitle} body={help.wagesSelfemploymentBody} />
             <Standard title={help.seasonalTitle} body={help.seasonalBody} />
-			<Standard title={help.grossTitle} body={help.grossBody} />
+			      <Standard title={help.grossTitle} body={help.grossBody} />
             <Standard title={help.netTitle} body={help.netBody} />
             <WhatIncome />            
             <Standard title={define.currentTerm} body={define.currentDef} />

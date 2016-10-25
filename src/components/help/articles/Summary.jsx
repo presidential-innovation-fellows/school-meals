@@ -3,12 +3,9 @@ import Article from '../Article'
 import Topic from '../Topic'
 import { help, define } from './HelpText'
 import Standard from '../TopicStandard'
-import WhatInformation from '../topics/WhatInformation'
 import Household from '../topics/Household'
 import IEG from '../topics/IEG'
 import NetSelfEmployment from '../topics/NetSelfEmployment'
-import NotTheSame from '../topics/NotTheSame'
-import PaperApp from '../topics/PaperApp'
 import QualifyHomeless from '../topics/QualifyHomeless'
 import QualifyMigrant from '../topics/QualifyMigrant'
 import RegularCash from '../topics/RegularCash'
@@ -17,34 +14,13 @@ import WhatIncome from '../topics/WhatIncome'
 
 //F15, F24, F40, F26-39, F16, F20, F22-23, F5, F41, F11-13, F42, F10, F43, D1-23
 
-export default class All extends Component {
+export default class Summary extends Component {
   render() {
     return (
         <Article>
-            <PaperApp />
-            <Standard title={help.newAppTitle} body={help.newAppBody} />
-            <Standard title={help.childAppTitle} body={help.childAppBody} />
-            <Standard title={help.letterTitle} body={help.letterBody} />
-            <Standard title={help.applyLaterTitle} body={help.applyLaterBody} />
-            <Standard title={help.localProgramTitle} body={help.localProgramBody} />
-            <Standard title={help.fosterQualifyTitle} body={help.fosterQualifyBody} />
-            <Standard title={help.wicTitle} body={help.wicBody} />
-            <Standard title={help.headStartTitle} body={help.headStartBody} />
-            <Standard title={help.otherProgramsTitle} body={help.otherProgramsBody} />
-            <Standard title={help.usCitizenTitle} body={help.usCitizenBody} />
-            <Standard title={help.publicChargeTitle} body={help.publicChargeBody} />
-            <Standard title={help.checkedTitle} body={help.checkedBodY} />
-            <WhatInformation />
             <Household />
-            <Standard title={help.sharedCustodyTitle} body={help.sharedCustodyBody} />
-            <Standard title={help.deployedTitle} body={help.deployedBody} />
-            <Standard title={help.permanentTitle} body={help.permanentBody} />
-            <Standard title={help.fosterTitle} body={help.fosterBody} />
-            <QualifyMigrant />
-            <QualifyHomeless />
-            <Standard title={help.qualifyRunawayTitle} body={help.qualifyRunawayBody} />
             <WhatIncome />
-            <Standard title={help.childIncomeTitle} body={help.childIncomeBody} />
+            <Standard title={help.noIncomeTitle} body={help.noIncomeBody} />
             <Standard title={help.grossTitle} body={help.grossBody} />
             <Standard title={help.netTitle} body={help.netBody} />
             <NotTheSame />
@@ -59,9 +35,17 @@ export default class All extends Component {
             <Standard title={help.rentalTitle} body={help.rentalBody} />
             <Standard title={help.interestTitle} body={help.interestBody} />
             <Standard title={help.seasonalTitle} body={help.seasonalBody} />
-            <Standard title={help.noIncomeTitle} body={help.noIncomeBody} />
+            <Standard title={help.sharedCustodyTitle} body={help.sharedCustodyBody} />
+            <QualifyMigrant />
+            <QualifyHomeless />
+            <Standard title={help.qualifyRunawayTitle} body={help.qualifyRunawayBody} />
+            <Standard title={help.applyLaterTitle} body={help.applyLaterBody} />
             <Standard title={help.ssnTitle} body={help.ssnBody} />
+            <Standard title={help.usCitizenTitle} body={help.usCitizenBody} />
+            <Standard title={help.publicChargeTitle} body={help.publicChargeBody} />
+            <Standard title={help.checkedTitle} body={help.checkedBodY} />
             <Standard title={help.contactTitle} body={help.contactBody} />
+            <Standard title={help.otherProgramsTitle} body={help.otherProgramsBody} />       
             <Standard title={help.disagreeTitle} body={help.disagreeBody} />
             <IEG />
             <Standard title={define.mckinneyTerm} body={define.mckinneyDef} />
@@ -86,10 +70,6 @@ export default class All extends Component {
             <Standard title={define.pensionTerm} body={define.pensionDef} />
             <Standard title={define.annuityTerm} body={define.annuityDef} />
             <Standard title={define.trustTerm} body={define.trustDef} />
-            <Standard title={define.ssiChildrenTerm} body={define.ssiChildrenDef} />
-            <Standard title={define.ssSurvivorTerm} body={define.ssSurvivorDef} />
-            <Standard title={define.pensionBeneficiaryTerm} body={define.pensionBeneficiaryDef} />
-            <Standard title={define.annuityChildrenTerm} body={define.annuityChildrenDef} />
         </Article>
     )
   }

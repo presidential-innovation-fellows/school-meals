@@ -7,6 +7,7 @@ import NotTheSame from '../topics/NotTheSame'
 import ReportCombat from '../topics/ReportCombat'
 import Household from '../topics/Household'
 import RegularCash from '../topics/RegularCash'
+import NetSelfEmployment from '../topics/NetSelfEmployment'
 
 //F24, F26-F40, F13, F15, D5-D23
 
@@ -30,7 +31,7 @@ export default class AdultIncomeOverview extends Component {
             <Standard title={help.seasonalTitle} body={help.seasonalBody} />
             <Standard title={help.noIncomeTitle} body={help.noIncomeBody} />
             <Standard title={help.ssnTitle} body={help.ssnBody} />
- 			<Standard title={help.checkedTitle} body={help.checkedBodY} />
+ 		<Standard title={help.checkedTitle} body={help.checkedBodY} />
             <Household />
             <Standard title={define.currentTerm} body={define.currentDef} />
             <Standard title={define.cashBonusTerm} body={define.cashBonusDef} />
