@@ -42,7 +42,7 @@ class PersonCollection extends Component {
 
         <Button onClick={this.onAdd}
                 className="usa-button-secondary add-person">
-          Add {collection.length ? 'another ' : 'a '}
+          + Add {collection.length ? 'another ' : 'a '}
           <span className="lowercase">{label}</span>
         </Button>
       </div>
