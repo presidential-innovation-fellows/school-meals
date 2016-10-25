@@ -444,7 +444,7 @@ class AdultCollection extends PersonCollection {
 
   @action addIncomeSource(source) {
 
-    source.more.push({amount: '', frequency: '', hourlyHours: '0', hourlyPeriod: '0'})
+    source.more.push({amount: '', frequency: '', hourlyHours: '', hourlyPeriod: ''})
     source.hasMore = true
 
   }
@@ -468,7 +468,11 @@ class ChildCollection extends PersonCollection {
         child: {
           isApplicable: null,
           sources: {
-            'job':                 { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
+            'job':                 { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '',
+                                                  hasMore: null,
+                                                  more: [],
+                                                  add: this.addIncomeSource,
+                                                  remove: this.removeIncomeSource},
             'socialSecurity':      { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
             'friendsFamily':       { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
             'pensionAnnuityTrust': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
@@ -478,6 +482,24 @@ class ChildCollection extends PersonCollection {
       }
     })
   }
+
+  @action addIncomeSource(source) {
+
+    source.more.push({amount: '', frequency: '', hourlyHours: '', hourlyPeriod: ''})
+    source.hasMore = true
+
+  }
+
+  @action removeIncomeSource(source, i) {
+    if (i < source.more.length) {
+      source.more.splice(i,1)
+
+      if (source.more.length == 0){
+        source.hasMore = false
+      }
+    }
+  }
+
 }
 
 class StudentCollection extends ChildCollection {
