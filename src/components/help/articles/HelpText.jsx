@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { schoolYear } from '../../../helpers'
-import { organization, assistanceProgramsVar } from '../../../config'
+import { organization, assistanceProgramsVar, hmrPrograms } from '../../../config'
 import { toSentenceSerial } from 'underscore.string'
 
 export const help = {
@@ -122,14 +122,14 @@ export const define = {
 	//variables are paired by contentTerm contentDef
 //D1 = IEG.jsx
 //D2
-  mckinneyTerm: 'McKinney-Vento Homeless Assistance Act',
-  mckinneyDef: 'The McKinney-Vento Education of Homeless Children and Youth Assistance Act provides Federal money for homeless shelter programs and facilitates public school access for homeless children and youth.',
+  mckinneyTerm: hmrPrograms.mckinney.shortName,
+  mckinneyDef: hmrPrograms.mckinney.fullName + ' provides Federal money for homeless shelter programs and facilitates public school access for homeless children and youth.',
 //D3
-  mepTerm: 'Migrant Education Program (MEP)',
-  mepDef: 'MEP provides services to children who have moved across school district lines, within the last three years, in order to accompany or join a parent or guardian who seeks or obtains temporary or seasonal work in agriculture or fishing.',
+  mepTerm: hmrPrograms.mep.fullName + ' (' + hmrPrograms.mep.accronym + ')',
+  mepDef: hmrPrograms.mep.accronym + ' provides services to children who have moved across school district lines, within the last three years, in order to accompany or join a parent or guardian who seeks or obtains temporary or seasonal work in agriculture or fishing.',
 //D4
-  runawayHomelessActTerm: 'Runaway and Homeless Youth Act',
-  runawayHomelessActDef: 'The Runaway and Homeless Youth Act authorizes community-based runaway and homeless youth projects to provide temporary shelter and care to runaway or otherwise homeless youth who are in need of temporary shelter, counseling, and aftercare services.',
+  runawayHomelessActTerm: hmrPrograms.runaway,
+  runawayHomelessActDef: hmrPrograms.runaway + ' authorizes community-based runaway and homeless youth projects to provide temporary shelter and care to runaway or otherwise homeless youth who are in need of temporary shelter, counseling, and aftercare services.',
 //D5
   currentTerm: 'Current income',
 	currentDef: 'Current income is income earned or received in the current month, or in the month before the completion of this application.',

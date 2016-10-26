@@ -58,8 +58,8 @@ class ChildIncomeSlide extends Component {
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="friendsFamily">
-            <Tooltipcomp id="regularCashPayments" text={tooltiptext.regularCashPayments} target="Money" />
-          &nbsp; regularly received from extended family or friends outside the household
+            <Tooltipcomp id="regularCashPayments" text={tooltiptext.regularCashPayments} target="Money regularly received" />
+          &nbsp; from extended family or friends outside the household
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="pensionAnnuityTrust">

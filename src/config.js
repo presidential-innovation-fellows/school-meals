@@ -43,8 +43,11 @@ export const thankYou = [
 export const hmrPrograms = {
   mep: {
     fullName: 'Migrant Education Program',
-    accronym: '(MEP)',
+    accronym: 'MEP',
   },
-  mckinney: 'McKinney-Vento Homeless Assistance Act',
+  mckinney: {
+    shortName: 'McKinney-Vento Homeless Assistance Act',
+    fullName: 'McKinney-Vento Education of Homeless Chilren and Youth Assistance Act',
+  },
   runaway: 'Runaway and Homeless Youth Act',
 }
