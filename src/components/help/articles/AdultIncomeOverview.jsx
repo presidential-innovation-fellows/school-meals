@@ -31,8 +31,9 @@ export default class AdultIncomeOverview extends Component {
             <Standard title={help.seasonalTitle} body={help.seasonalBody} />
             <Standard title={help.noIncomeTitle} body={help.noIncomeBody} />
             <Standard title={help.ssnTitle} body={help.ssnBody} />
- 		<Standard title={help.checkedTitle} body={help.checkedBodY} />
+ 		<Standard title={help.checkedTitle} body={help.checkedBody} />
             <Household />
+            <bodyLabels>Definitions</bodyLabels>
             <Standard title={define.currentTerm} body={define.currentDef} />
             <Standard title={define.cashBonusTerm} body={define.cashBonusDef} />
             <NetSelfEmployment />

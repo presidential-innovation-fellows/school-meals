@@ -21,6 +21,7 @@ export default class EmploymentIncome extends Component {
 			      <Standard title={help.grossTitle} body={help.grossBody} />
             <Standard title={help.netTitle} body={help.netBody} />
             <WhatIncome />            
+            <bodyLabels>Definitions</bodyLabels>
             <Standard title={define.currentTerm} body={define.currentDef} />
             <Standard title={define.cashBonusTerm} body={define.cashBonusDef} />
             <NetSelfEmployment />

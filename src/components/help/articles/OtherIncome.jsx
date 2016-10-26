@@ -20,6 +20,7 @@ export default class OtherIncome extends Component {
 		    <Standard title={help.netTitle} body={help.netBody} />
         <NotTheSame />
         <Standard title={help.childIncomeTitle} body={help.childIncomeBody} />
+        <bodyLabels>Definitions</bodyLabels>
         <RegularCash />
         <Standard title={define.pensionTerm} body={define.pensionDef} />
         <Standard title={define.annuityTerm} body={define.annuityDef} />

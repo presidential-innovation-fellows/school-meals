@@ -22,10 +22,11 @@ export default class BeforeYouBegin extends Component {
         <Standard title={help.otherProgramsTitle} body={help.otherProgramsBody} />
         <Standard title={help.usCitizenTitle} body={help.usCitizenBody} />
         <Standard title={help.publicChargeTitle} body={help.publicChargeBody} />
-        <Standard title={help.checkedTitle} body={help.checkedBodu} />
+        <Standard title={help.checkedTitle} body={help.checkedBody} />
         <WhatInformation />
         <Household />
         <Standard title={help.disagreeTitle} body={help.disagreeBody} />
+        <bodyLabels>Definitions</bodyLabels>
         <IEG />
       </Article>
     )

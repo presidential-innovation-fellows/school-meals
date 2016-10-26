@@ -17,6 +17,7 @@ export default class UnemploymentIncome extends Component {
             <Standard title={help.grossTitle} body={help.grossBody} />
             <Standard title={help.netTitle} body={help.netBody} />
             <WhatIncome />
+            <bodyLabels>Definitions</bodyLabels>
             <Standard title={define.unemploymentTerm} body={define.unemploymentDef} />
             <Standard title={define.workersCompTerm} body={define.workersCompDef} />
             <Standard title={define.strikeBenefitsTerm} body={define.strikeBenefitsDef} />

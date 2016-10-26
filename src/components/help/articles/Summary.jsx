@@ -43,10 +43,11 @@ export default class Summary extends Component {
             <Standard title={help.ssnTitle} body={help.ssnBody} />
             <Standard title={help.usCitizenTitle} body={help.usCitizenBody} />
             <Standard title={help.publicChargeTitle} body={help.publicChargeBody} />
-            <Standard title={help.checkedTitle} body={help.checkedBodY} />
+            <Standard title={help.checkedTitle} body={help.checkedBody} />
             <Standard title={help.contactTitle} body={help.contactBody} />
             <Standard title={help.otherProgramsTitle} body={help.otherProgramsBody} />       
             <Standard title={help.disagreeTitle} body={help.disagreeBody} />
+            <bodyLabels>Definitions</bodyLabels>
             <IEG />
             <Standard title={define.mckinneyTerm} body={define.mckinneyDef} />
             <Standard title={define.mepTerm} body={define.mepDef} />

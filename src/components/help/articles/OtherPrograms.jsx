@@ -21,6 +21,7 @@ export default class OtherPrograms extends Component {
 		<Standard title={help.publicChargeTitle} body={help.publicChargeBody} />
 		<Standard title={help.otherProgramsTitle} body={help.otherProgramsBody} />
 		<Standard title={help.childAppTitle} body={help.childAppBody} />
+		<bodyLabels>Definitions</bodyLabels>
 		<Standard title={define.mckinneyTerm} body={define.mckinneyDef} />
 		<Standard title={define.mepTerm} body={define.mepDef} />
 		<Standard title={define.runawayHomelessActTerm} body={define.runawayHomelessActDef} />

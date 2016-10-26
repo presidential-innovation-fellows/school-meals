@@ -16,6 +16,7 @@ export default class PublicAssistanceIncome extends Component {
 	    <Standard title={help.netTitle} body={help.netBody} />
 	    <NotTheSame />
 	    <Standard title={help.childIncomeTitle} body={help.childIncomeBody} />
+	    <bodyLabels>Definitions</bodyLabels>
 	    <Standard title={define.ssiTerm} body={define.ssiDef} />
 	    <Standard title={define.cashAssistanceTerm} body={define.cashAssistanceDef} />
 	    <Standard title={define.currentTerm} body={define.currentDef} />

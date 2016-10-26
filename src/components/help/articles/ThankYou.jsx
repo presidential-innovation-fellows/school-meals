@@ -13,7 +13,7 @@ export default class All extends Component {
             <Standard title={help.applyLaterTitle} body={help.applyLaterBody} />
             <Standard title={help.otherProgramsTitle} body={help.otherProgramsBody} />
             <Standard title={help.publicChargeTitle} body={help.publicChargeBody} />
-            <Standard title={help.checkedTitle} body={help.checkedBodY} />
+            <Standard title={help.checkedTitle} body={help.checkedBody} />
             <Standard title={help.disagreeTitle} body={help.disagreeBody} />
         </Article>
     )

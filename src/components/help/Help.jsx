@@ -77,7 +77,7 @@ class Help extends Component {
 
           <div className="cd-panel-content" id="help-content">
             <SearchTopics/>
-
+            <bodyLabels>Frequently Asked Questions</bodyLabels>
             {(() => {
                switch (article) {
                  case 'welcome':                 return <Welcome />

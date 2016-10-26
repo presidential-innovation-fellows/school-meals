@@ -16,7 +16,8 @@ export default class ChildIncome extends Component {
     		<Standard title={help.qualifyRunawayTitle} body={help.qualifyRunawayBody} />
     		<Household />
     		<Standard title={help.sharedCustodyTitle} body={help.sharedCustodyBody} />
-    		<Standard title={define.ssiChildrenTerm} body={define.ssiChildrenDef} />
+    		<bodyLabels>Definitions</bodyLabels>
+        <Standard title={define.ssiChildrenTerm} body={define.ssiChildrenDef} />
         <Standard title={define.ssSurvivorTerm} body={define.ssSurvivorDef} />
         <Standard title={define.currentTerm} body={define.currentDef} />
         <RegularCash />

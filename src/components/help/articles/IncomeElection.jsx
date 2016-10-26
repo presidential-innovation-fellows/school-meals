@@ -20,6 +20,7 @@ export default class IncomeElection extends Component {
             <WhatIncome />
             <Standard title={help.applyLaterTitle} body={help.applyLaterBody} />
             <Standard title={help.publicChargeTitle} body={help.publicChargeBody} />
+            <bodyLabels>Definitions</bodyLabels>
             <Standard title={define.mckinneyTerm} body={define.mckinneyDef} />
             <Standard title={define.mepTerm} body={define.mepDef} />
             <Standard title={define.runawayHomelessActTerm} body={define.runawayHomelessActDef} />

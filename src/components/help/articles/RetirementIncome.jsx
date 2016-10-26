@@ -16,6 +16,7 @@ export default class RetirementIncome extends Component {
         <Standard title={help.netTitle} body={help.netBody} />
         <NotTheSame />
         <Standard title={help.childIncomeTitle} body={help.childIncomeBody} />
+        <bodyLabels>Definitions</bodyLabels>
         <Standard title={define.socialSecurityTerm} body={define.socialSecurityDef} />
         <Standard title={define.blackLungTerm} body={define.blackLungDef} />
         <Standard title={define.railroadRetirementTerm} body={define.railroadRetirementDef} />

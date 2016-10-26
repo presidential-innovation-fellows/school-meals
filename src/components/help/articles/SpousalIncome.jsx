@@ -17,6 +17,7 @@ export default class SpousalIncome extends Component {
         <NotTheSame />
         <Standard title={help.childIncomeTitle} body={help.childIncomeBody} />
         <Standard title={help.sharedCustodyTitle} body={help.sharedCustodyBody} />
+        <bodyLabels>Definitions</bodyLabels>
         <Standard title={define.alimonyTerm} body={define.alimonyDef} />
         <Standard title={define.childSupportTerm} body={define.childSupportDef} />
        	<Standard title={define.currentTerm} body={define.currentDef} />
