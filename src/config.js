@@ -39,3 +39,12 @@ export const assistanceProgramsVar = {
 export const thankYou = [
   'You will hear from us soon with your certification decision!'
 ]
+
+export const hmrPrograms = {
+  mep: {
+    fullName: 'Migrant Education Program',
+    accronym: '(MEP)',
+  },
+  mckinney: 'McKinney-Vento Homeless Assistance Act',
+  runaway: 'Runaway and Homeless Youth Act',
+}
