@@ -22,7 +22,7 @@ import OtherIncome from './articles/OtherIncome'
 import Signature from './articles/Signature'
 
 
-import All from './articles/All_flat'
+import All from './articles/All'
 
 import SearchTopics from './SearchTopics'
 

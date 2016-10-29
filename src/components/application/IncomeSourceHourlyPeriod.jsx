@@ -24,8 +24,6 @@ class IncomeSourceHourlyPeriod extends Component {
     const { incomeSource, fieldName } = this.props
     const hours = incomeSource.hourlyHours
     const value = incomeSource[fieldName]
-    const prefix = (hours ? `${hours} ` : '') +
-                   'hour' + (parseInt(hours) === 1 ? '' : 's') + ' per'
 
     return (
       <div className="usa-input-grid usa-input-grid-medium">

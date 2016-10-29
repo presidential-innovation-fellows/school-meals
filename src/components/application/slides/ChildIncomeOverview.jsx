@@ -18,16 +18,17 @@ class ChildIncomeOverview extends Component {
   render() {
     const { allChildren } = this.props
 
-    const $allChildren = (allChildren.length === 1 ? 'child\'s' : 'childrens\'') + ' income'
+    const pluralizedChildrenIncome =
+      (allChildren.length === 1 ? 'child\'s' : 'childrens\'') + ' income'
 
     return(
       <Slide nextDisabled={!this.isValid} id="child-income">
 
         <p className="usa-font-lead">The next few questions are about your &nbsp;
-           <Tooltipcomp id="child-income" text={tooltiptext.childincome} target={$allChildren} />
+           <Tooltipcomp id="child-income" text={tooltiptext.childincome} target={pluralizedChildrenIncome} />
           &nbsp;.
-        </p>        
-        
+        </p>
+
         <p>Some common sources of income for children are:</p>
         <ul className="usa-content-list">
           <li>a full-time or part-time job,</li>
@@ -35,7 +36,7 @@ class ChildIncomeOverview extends Component {
             <Tooltipcomp id="social-security" text={tooltiptext.socialsecurity} target='Social Security' />
           &nbsp; benefits, if the child is blind or disabled, or is the beneficiary of another person’s Social Security benefits,
         </li>
-        
+
           <li>money regularly received from extended family or friends outside the household, or</li>
           <li>money from a &nbsp;
           <Tooltipcomp id="pension" text={tooltiptext.pension} target='pension fund' />
@@ -45,7 +46,7 @@ class ChildIncomeOverview extends Component {
           <Tooltipcomp id="trust" text={tooltiptext.trust} target='trust' />
         </li>
         </ul>
-        
+
         <p>Do not include infrequent earnings, such as income from occasional baby-sitting or mowing lawns.</p>
 
         {allChildren.map(child =>
