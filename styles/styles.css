@@ -16,11 +16,6 @@ a:hover {
   color: #205493;
 }
 
-input[type="checkbox"],
-input[type="radio"] {
-  cursor: pointer;
-}
-
 ol ul,
 ol ol,
 ul ul,
