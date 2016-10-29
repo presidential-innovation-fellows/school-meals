@@ -18,7 +18,7 @@ a:hover {
 
 input[type="checkbox"],
 input[type="radio"] {
-  cursor: pointer; width: 75px; height: 35px; margin-left: -10px; margin-top: -5px;
+  cursor: pointer;
 }
 
 ol ul,
