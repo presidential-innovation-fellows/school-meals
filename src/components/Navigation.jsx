@@ -13,7 +13,7 @@ class Navigation extends Component {
 
 
   handleData(event) {
-    window.location.hash = '#/viewappdata'
+    window.location.replace('#/viewappdata')
   }
 
   handleHelp(event) {

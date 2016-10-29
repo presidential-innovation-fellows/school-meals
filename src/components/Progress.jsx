@@ -20,7 +20,7 @@ class Progress extends Component {
           for (let i = 0; i < target.classList.length; i++) {
             if (target.classList[i] === 'rc-steps-status-finish' ||
                 target.classList[i] === 'rc-steps-status-process') {
-              window.location.hash = '#/' + target.getAttribute('data-hash')
+              window.location.replace('#/' + target.getAttribute('data-hash'))
               break
             }
           }
