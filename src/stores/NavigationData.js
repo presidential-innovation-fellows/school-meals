@@ -48,6 +48,9 @@ export default class NavigationData {
 
     this.handleHashChange = this.handleHashChange.bind(this)
     window.onhashchange = this.handleHashChange
+
+    this.handlebeforeunload = this.handlebeforeunload.bind(this)
+    window.onbeforeunload = this.handlebeforeunload
   }
 
   get slides() {
@@ -175,22 +178,27 @@ export default class NavigationData {
     this.goToSlide(newId)
   }
 
+  handlebeforeunload(event) {
+    // let the browser's default behavior handle i18n
+    return 'Changes you made may not be saved.'
+  }
+
   @action init() {
     if (window.location.hash === '#/')
-      window.location.hash = '#'
+      window.location.replace('#')
     else
-      window.location.hash = '#/'
+      window.location.replace('#/')
   }
 
   @action back() {
-    window.location.hash = '#/' + this.prevSlide.id
+    window.location.replace('#/' + this.prevSlide.id)
   }
 
   @action next() {
-    window.location.hash = '#/' + this.nextSlide.id
+    window.location.replace('#/' + this.nextSlide.id)
   }
 
   @action jump() {
-    window.location.hash = '#/' + this.jumpSlide.id
+    window.location.replace('#/' + this.jumptSlide.id)
   }
 }
