@@ -90,8 +90,8 @@ export default class NavigationData {
         let className = slides[i].classList[j]
 
         if (className === this.CURRENT_CLASS_NAME) {
-          if (i === slides.length - 1) {
-            // final slide -- no next
+          if (i === 0) {
+            // first slide -- no prev
             return null
           } else {
             return slides[i - 1]
@@ -100,7 +100,7 @@ export default class NavigationData {
       }
     }
 
-    // nothing is current -- the first slide should be next
+    // nothing is current -- the first slide should be prev
     return slides[0]
   }
 
