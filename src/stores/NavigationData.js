@@ -45,7 +45,7 @@ export default class NavigationData {
         lastURL = document.URL
       })
     }())
-  
+
     this.handleHashChange = this.handleHashChange.bind(this)
     window.onhashchange = this.handleHashChange
   }
@@ -81,7 +81,7 @@ export default class NavigationData {
     return slides[0]
   }
 
-  get lastSlide() {
+  get prevSlide() {
     const slides = this.slides
 
     for (let i = 0; i < slides.length; i++) {
@@ -183,7 +183,7 @@ export default class NavigationData {
   }
 
   @action back() {
-    window.location.hash = '#/' + this.lastSlide.id
+    window.location.hash = '#/' + this.prevSlide.id
   }
 
   @action next() {
