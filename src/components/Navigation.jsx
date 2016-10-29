@@ -56,7 +56,7 @@ class Navigation extends Component {
               {organization.name} Application for Free and Reduced Price School Meals
             </span>
             <span className="hidden-sm hidden-md hidden-lg">
-              {organization.contact.shortname} Application for School Meals
+              {organization.shortname} Application for School Meals
             </span>
           </Navbar.Brand>
           <Navbar.Toggle />

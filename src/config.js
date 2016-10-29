@@ -1,11 +1,11 @@
 export const organization = {
   name: 'Applewood School District',
+  shortname: 'ASD',
   logoUrl: 'img/Applewood_logo.png',
   contact: {
     address: '100 Main Street, Anytown, USA 12345',
     phone: '555-123-4567',
-    email: 'sfa@state.us',
-    shortname: 'ASD'
+    email: 'sfa@state.us'
   },
   paperApplication: {
     url: 'http://www.fns.usda.gov/sites/default/files/cn/SP34-2016a2.pdf',
