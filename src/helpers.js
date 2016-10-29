@@ -202,17 +202,14 @@ export function allStudentsAreFHMR(students) {
     .reduce((a, b) => a && b, true)
 }
 
-// Added a new function to calculate if all students are Foster
 export function allStudentsAreFoster(students) {
-  const qualifyingAttribute = "isFoster";
-
   if (!students.length) {
     return false
   }
 
   return students
     .map(student => student.isFoster)
-    .reduce ( (acc, item) => acc && item, true);
+    .reduce((a, b) => a && b, true)
 }
 
 export function programDescription(slug) {
@@ -223,6 +220,3 @@ export function programDescription(slug) {
     isRunaway: 'participate in a program under the Runaway and Homeless Youth Act'
   }[slug]
 }
-
-
-
