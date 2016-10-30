@@ -87,7 +87,7 @@ Slide.contextTypes = {
     jump: PropTypes.func.isRequired,
     canJump: PropTypes.bool.isRequired
   }).isRequired
-};
+}
 
 Slide.propTypes = {
   id: PropTypes.string.isRequired,
