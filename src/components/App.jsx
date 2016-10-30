@@ -1,8 +1,10 @@
 import classnames from 'classnames';
 import React, { Component, PropTypes } from 'react'
+import { IntlProvider } from 'react-intl'
 import { observer } from 'mobx-react'
 import Application from './application/Application'
 import ApplicationData from '../stores/ApplicationData'
+import LocaleData from '../stores/LocaleData'
 import NavigationData from '../stores/NavigationData'
 import HelpData from '../stores/HelpData'
 import Navigation from './Navigation'
@@ -11,6 +13,7 @@ import Footer from './Footer'
 import Help from './help/Help'
 
 const applicationData = new ApplicationData()
+const localeData = new LocaleData()
 const navigationData = new NavigationData()
 const helpData = new HelpData()
 
@@ -18,11 +21,12 @@ const helpData = new HelpData()
 window.applicationData = applicationData
 window.helpData = helpData
 window.navigationData = navigationData
+window.localeData = localeData
 
 @observer
 class App extends Component {
   getChildContext() {
-    return { helpData, navigationData }
+    return { helpData, localeData, navigationData }
   }
 
   componentDidMount() {
@@ -35,20 +39,22 @@ class App extends Component {
     })
 
     return (
-      <div className={className}>
-        <Navigation navigationData={navigationData} helpData={helpData} />
-        <Progress navigationData={navigationData}
-                  applicationData={applicationData} />
-        <main>
-          <div className="usa-grid">
-            <div className="usa-width-one-whole">
-              <Application applicationData={applicationData} />
+      <IntlProvider key={localeData.locale} locale={'en' || localeData.locale} messages={localeData.translations}>
+        <div className={className}>
+          <Navigation navigationData={navigationData} helpData={helpData} />
+          <Progress navigationData={navigationData}
+                    applicationData={applicationData} />
+          <main>
+            <div className="usa-grid">
+              <div className="usa-width-one-whole">
+                <Application applicationData={applicationData} />
+              </div>
             </div>
-          </div>
-        </main>
-        <Help helpData={helpData} />
-        <Footer />
-      </div>
+          </main>
+          <Help helpData={helpData} />
+          <Footer />
+        </div>
+      </IntlProvider>
     )
   }
 }
@@ -57,6 +63,10 @@ App.childContextTypes = {
   helpData: PropTypes.shape({
     article: PropTypes.string.isRequired,
     isVisible: PropTypes.bool.isRequired
+  }).isRequired,
+  localeData: PropTypes.shape({
+    locale: PropTypes.string.isRequired,
+    translations: PropTypes.object.isRequired
   }).isRequired,
   navigationData: PropTypes.shape({
     back: PropTypes.func.isRequired,
