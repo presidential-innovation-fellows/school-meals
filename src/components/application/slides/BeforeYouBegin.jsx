@@ -8,6 +8,7 @@ import { observer } from 'mobx-react'
 import { Glyphicon, OverlayTrigger, Tooltip } from 'react-bootstrap'
 import { tooltiptext } from '../../Tooltiptext'
 import Tooltipcomp from '../Tooltip'
+import FormattedMessage from '../FormattedMessage'
 
 @observer
 class BeforeYouBegin extends React.Component {
@@ -30,12 +31,25 @@ class BeforeYouBegin extends React.Component {
 
     return (
       <Slide header="Before you begin..." id="before-you-begin">
-        <p className="usa-font-lead">there are a few things you should know.</p>
+        <p className="usa-font-lead">
+          <FormattedMessage
+              id="app.slides.beforeYouBegin.subheading"
+              description="Introductory tagline."
+              defaultMessage="there are a few things you should know."
+          />
+        </p>
 
         <p>
-          If you received a &nbsp;
-            <Tooltipcomp id="letter" text={tooltiptext.letter} target="letter" />
-          &nbsp; from the school saying that your children were automatically approved (directly certified) for free meals for the <SchoolYear /> school year because someone in your household participates in {assistanceProgramList} then you do not need to submit an application.
+          <FormattedMessage
+              id="app.slides.beforeYouBegin.householdPrograms"
+              description="Hist that you can skip most of application with a household program."
+              defaultMessage="If you received a &nbsp;{tooltip}&nbsp; from the school saying that your children were automatically approved (directly certified) for free meals for the {schoolYear} school year because someone in your household participates in {assistanceProgramList} then you do not need to submit an application."
+              values={{
+                tooltip: <Tooltipcomp id="letter" text={tooltiptext.letter} target="letter" />,
+                schoolYear: <SchoolYear />,
+                assistanceProgramList: assistanceProgramList
+              }}
+          />
         </p>
 
         <p>We need only one application for all the children in your household that attend {organization.name}.</p>
@@ -44,7 +58,7 @@ class BeforeYouBegin extends React.Component {
           &nbsp; <strong>for free or reduced price school meal benefits is based on any one of these </strong>
             <Tooltipcomp id="threethings" text={threethings} target="three things:" />
           &nbsp;
-        </p>        
+        </p>
 
         <ul className="usa-content-list">
           <li>your total household income and size in the month the application is filled out, or the month before, or</li>
@@ -55,7 +69,7 @@ class BeforeYouBegin extends React.Component {
         <p>Your &nbsp;
             <Tooltipcomp id="status" text={tooltiptext.status} target="US citizenship or immigration status" />
           &nbsp; does not affect your eligibility for free and reduced price benefits.
-        </p>           
+        </p>
 
         <p>If you have questions at any point during the application, click the question mark icon to get help with the current section.</p>
 
