@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react'
-import { organization, localPrograms, assistancePrograms, schoolYear } from '../../../config'
+import { schoolYear } from '../../../helpers'
+import { organization, localPrograms, assistancePrograms } from '../../../config'
 import { toSentenceSerial } from 'underscore.string'
 
 const assistanceProgramList = toSentenceSerial(assistancePrograms, ', ', ' or ')
@@ -8,7 +9,7 @@ export const help = {
   //variables are paired by contentTitle and contentBody;
   ssiTitle: 'Is supplemental security income (SSI) included in my household income?',
   ssiBody: 'Yes. SSI benefits should be reported as household income in your application for school meal benefits.',
-  
+
   govProgramTitle: 'What government program benefits should I include in my household income?',
   govProgramBody: 'If you have questions about whether to include benefits from a specific program, contact ' + organization.name +  ' (' + organization.contact.phone + ' / ' + organization.contact.email + ' / ' + organization.contact.address + ').',
 
@@ -48,7 +49,7 @@ export const help = {
   headStartTitle: 'My child attends head start. Is he/she eligible for free school meals and do I need to fill out an application?',
   headStartBody: 'Yes. Children enrolled in Head Start are automatically eligible for free meals. You do not need to submit an application for school meal benefits unless you are requesting benefits for other school age children in your household.',
 //F4
-  letterTitle: 'I received a letter from the school saying that my children were automatically approved for free meals for the upcoming ' + schoolYear + ' school year. Do I still need to complete an application?',
+  letterTitle: 'I received a letter from the school saying that my children were automatically approved for free meals for the upcoming ' + schoolYear() + ' school year. Do I still need to complete an application?',
   letterBody: 'No, but please read the letter carefully. If any children in your household were missing from your eligibility notification letter, they are also eligible for free meals, so you should contact ' + organization.name +  ' (' + organization.contact.phone + ' / ' + organization.contact.email + ' / ' + organization.contact.address + ') immediately.',
 //F6
   localProgramTitle: 'My household participates in ' + localPrograms.snap.name + ' and/or ' + localPrograms.tanf.name + '. Are my children eligible for free meals?',
@@ -58,7 +59,7 @@ export const help = {
   checkedBody: 'Yes, each application is reviewed by the district to determine eligibility. We may also ask you to send proof of your household’s income.',
 //F2
   newAppTitle: 'My child’s application was approved last year. Do I need to fill out a new one?',
-  newAppBody: 'Yes. Eligibility for free or reduced price meals only lasts for one school year. However, eligibility for the previous year carries over for the first few days of the new school year, or until the new eligibility determination is made. Please complete a new application unless you received a letter from the school saying that your child is eligible for the upcoming ' + schoolYear + ' school year.',
+  newAppBody: 'Yes. Eligibility for free or reduced price meals only lasts for one school year. However, eligibility for the previous year carries over for the first few days of the new school year, or until the new eligibility determination is made. Please complete a new application unless you received a letter from the school saying that your child is eligible for the upcoming ' + <schoolYear /> + ' school year.',
 //F3
   childAppTitle: 'Do I need to fill out an application for each child?',
   childAppBody: 'No. Use one Free and Reduced Price School Meals Application for all students that attend ' + organization.name + ' in your household.',
