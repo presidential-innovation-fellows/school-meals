@@ -1,29 +1,31 @@
 import React, { Component, PropTypes } from 'react'
 import Article from '../Article'
 import Topic from '../Topic'
+import { help, define } from './HelpText'
+import Standard from '../TopicStandard'
+import NotTheSame from '../topics/NotTheSame'
+import RegularCash from '../topics/RegularCash'
+
+//F37-38, F36, F39, F28, F26, F27, F24, D20-23, D5
 
 export default class OtherIncome extends Component {
   render() {
     return (
       <Article>
-        <Topic title="Regular cash payments">
-          <p>
-            Regular cash payments from outside the household is money regularly received from extended family or friends that do not live with you.  For example, if parents or grandparents regularly help cover the cost of groceries, bills, or rent, that money is considered household income and should be reported in your application for school meal benefits.
-          </p>
-          <p>
-            One-time payments should not be reported as current, monthly income since they are not received on a regular basis. However, if you receive a one-time payment, such as from an award, settlement, inheritance or prize winnings, and then regularly draw on that money for living expenses later on, the amount withdrawn should be reported in your application for school meal benefits in the space for ‘Any other income available to pay for children’s school meals’.
-          </p>
-        </Topic>
-        <Topic title="Earned interest">
-          <p>
-            Earned interest is a fee that is paid for the use of another person’s money. It is usually a percentage of the amount borrowed.
-          </p>
-        </Topic>
-        <Topic title="Annuity">
-          <p>
-            An annuity is a series of payments under a contract made at regular intervals over a period of more than one full year. They can be either fixed (under which you receive a definite amount) or variable (not fixed). Annuities can be purchased by individuals alone, or with the help of an employer.
-          </p>
-        </Topic>
+		    <Standard title={help.interestTitle} body={help.interestBody} />
+        <Standard title={help.seasonalTitle} body={help.seasonalBody} />
+        <Standard title={help.rentalTitle} body={help.rentalBody} />
+        <Standard title={help.noIncomeTitle} body={help.noIncomeBody} />
+        <Standard title={help.militaryTitle} body={help.militaryBody} />
+		    <Standard title={help.netTitle} body={help.netBody} />
+        <NotTheSame />
+        <Standard title={help.childIncomeTitle} body={help.childIncomeBody} />
+        <bodyLabels>Definitions</bodyLabels>
+        <RegularCash />
+        <Standard title={define.pensionTerm} body={define.pensionDef} />
+        <Standard title={define.annuityTerm} body={define.annuityDef} />
+        <Standard title={define.trustTerm} body={define.trustDef} />
+        <Standard title={define.currentTerm} body={define.currentDef} />
       </Article>
     )
   }

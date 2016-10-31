@@ -1,81 +1,62 @@
 import React, { Component, PropTypes } from 'react'
 import Article from '../Article'
 import Topic from '../Topic'
-import WhatIsGross from '../topics/WhatIsGross'
-import WhatIsNet from '../topics/WhatIsNet'
+import { help, define } from './HelpText'
+import Standard from '../TopicStandard'
 import NotTheSame from '../topics/NotTheSame'
-import { organization } from '../../../config'
-import { help } from './HelpText'
+import ReportCombat from '../topics/ReportCombat'
+import Household from '../topics/Household'
+import RegularCash from '../topics/RegularCash'
+import NetSelfEmployment from '../topics/NetSelfEmployment'
+
+//F24, F26-F40, F13, F15, D5-D23
 
 export default class AdultIncomeOverview extends Component {
   render() {
     return (
       <Article>
-//!!OMITTED!!
-        <WhatIsGross />
-        <WhatIsNet />
-//included in HelpText
-        <Topic title="Is supplemental security income (SSI) included in my household income?">
-          <p>
-            Yes. SSI benefits should be reported as household income in your application for school meal benefits.
-          </p>
-        </Topic>
-//included in HelpText
-        <Topic title="What government program benefits should I include in my household income?">
-          <p>
-            If you have questions about whether to include benefits from a specific program, contact {organization.name} ({organization.contact.phone} / {organization.contact.email} / {organization.contact.address}).
-          </p>
-        </Topic>
-//included in HelpText
-        <Topic title="Are my alimony and child support payments considered household income?">
-          <p>
-            Yes. Income from alimony and child support payments are considered household income and should be reported in your application for school meal benefits.
-          </p>
-        </Topic>
-//included...
-        <Topic title="Do I need to report unemployment benefits, worker’s comp, social security disability insurance (SSDI) or Black Lung benefit payments in my household income?">
-          <p>
-            Yes. Even if you are currently unemployed or not working, if you or anyone in your household receives unemployment benefits, worker’s comp payments, SSDI, or Black Lung benefits, you must report that in your application for school meal benefits.
-          </p>
-        </Topic>
-//included...
-        <Topic title="Are retirement benefits, such as Social Security, railroad retirement, or private pensions, considered household income?">
-          <p>
-            Yes. Income from public (government) or private (non-government) retirement plans are considered household income and should be reported in your application for school meal benefits.
-          </p>
-        </Topic>
-//included...
-        <Topic title="How should I report income from rented space or properties? ">
-          <p>
-            If you receive income from a room or property that you rent out, you should report the net amount of income. In other words, take the total amount you receive in rent for one month (the gross income), and subtract the monthly cost of maintaining the property. If you have questions or need help figuring out how to estimate maintenance costs, contact {organization.name} ({organization.contact.phone} / {organization.contact.email} / {organization.contact.address}).
-          </p>
-        </Topic>
-//included...
-        <Topic title="How do I know if I have income from earned interest?">
-          <p>
-            If you have money in a savings or investment account, you should have income from earned interest. Interest payments are usually paid out on a quarterly basis, or four times per year. You should see any earned interest on your savings or investment account statement.
-          </p>
-        </Topic>
-//included...
-        <Topic title="What is an annuity and how do I know if I have income from one?">
-          <p>
-            An annuity is a series of payments under a contract made at regular intervals over a period of more than one full year. They can be either fixed (under which you receive a definite amount) or variable (not fixed). Annuities can be purchased by individuals alone, or with the help of an employer. If you are unsure whether you have income from an annuity, you should contact {organization.name} ({organization.contact.phone} / {organization.contact.email} / {organization.contact.address}).
-          </p>
-        </Topic>
-//!!OMITTED!!
-        <NotTheSame />
-//included...
-        <Topic title="How should I report my income if I work on a seasonal basis?">
-          <p>
-            If you work on a seasonal basis and your household’s current, gross income is higher or lower than usual and does not fairly or accurately represent your household’s actual circumstances, see the ‘WHAT IF MY INCOME IS NOT ALWAYS THE SAME?’ question in the HELP. If you have additional questions, contact {organization.name} ({organization.contact.phone} / {organization.contact.email} / {organization.contact.address}), and they will help you figure out your household’s annual rate of income based on <abbr title="United States Department of Agriculture">USDA</abbr> guidelines.
-          </p>
-        </Topic>
-//included...
-        <Topic title="We are in the military. Do we report our income differently?">
-          <p>
-            Your basic pay and cash bonuses must be reported as income. If you get any cash value allowances for off-base housing, food, or clothing, (including BAH), it must also be included as income. However, if your housing is part of the Military Housing Privatization Initiative, do not include your housing allowance as income. Do not include payments from the Family Subsistence Supplemental Allowance (FSSA). Any additional combat pay resulting from deployment is also excluded from income. If the service member is deployed, include only the portion that is made available by them or on their behalf to the household as income.
-          </p>
-        </Topic>
+            <Standard title={help.childIncomeTitle} body={help.childIncomeBody} />
+            <Standard title={help.netTitle} body={help.netBody} />
+            <NotTheSame />
+            <Standard title={help.militaryTitle} body={help.militaryBody} />
+            <ReportCombat />
+            <Standard title={help.deipTitle} body={help.deipBody} />
+            <Standard title={help.fssaTitle} body={help.fssaBody} />
+            <Standard title={help.earningsDifferencesTitle} body={help.earningsDifferencesBody} />
+            <Standard title={help.selfEmployedTitle} body={help.selfEmployedBody} />
+            <Standard title={help.wagesSelfemploymentTitle} body={help.wagesSelfemploymentBody} />
+            <Standard title={help.govProgramTitle} body={help.govProgramBody} />
+            <Standard title={help.rentalTitle} body={help.rentalBody} />
+            <Standard title={help.interestTitle} body={help.interestBody} />
+            <Standard title={help.seasonalTitle} body={help.seasonalBody} />
+            <Standard title={help.noIncomeTitle} body={help.noIncomeBody} />
+            <Standard title={help.ssnTitle} body={help.ssnBody} />
+ 		<Standard title={help.checkedTitle} body={help.checkedBody} />
+            <Household />
+            <bodyLabels>Definitions</bodyLabels>
+            <Standard title={define.currentTerm} body={define.currentDef} />
+            <Standard title={define.cashBonusTerm} body={define.cashBonusDef} />
+            <NetSelfEmployment />
+            <Standard title={define.ssiTerm} body={define.ssiDef} />
+            <Standard title={define.cashAssistanceTerm} body={define.cashAssistanceDef} />
+            <Standard title={define.alimonyTerm} body={define.alimonyDef} />
+            <Standard title={define.childSupportTerm} body={define.childSupportDef} />
+            <Standard title={define.unemploymentTerm} body={define.unemploymentDef} />
+            <Standard title={define.workersCompTerm} body={define.workersCompDef} />
+            <Standard title={define.strikeBenefitsTerm} body={define.strikeBenefitsDef} />
+            <Standard title={define.ssdiTerm} body={define.ssdiDef} />
+            <Standard title={define.veteransBenefitsTerm} body={define.veteransBenefitsDef} />
+            <Standard title={define.socialSecurityTerm} body={define.socialSecurityDef} />
+            <Standard title={define.blackLungTerm} body={define.blackLungDef} />
+            <Standard title={define.railroadRetirementTerm} body={define.railroadRetirementDef} />
+            <RegularCash />
+            <Standard title={define.pensionTerm} body={define.pensionDef} />
+            <Standard title={define.annuityTerm} body={define.annuityDef} />
+            <Standard title={define.trustTerm} body={define.trustDef} />
+            <Standard title={define.ssiChildrenTerm} body={define.ssiChildrenDef} />
+            <Standard title={define.ssSurvivorTerm} body={define.ssSurvivorDef} />
+            <Standard title={define.pensionBeneficiaryTerm} body={define.pensionBeneficiaryDef} />
+            <Standard title={define.annuityChildrenTerm} body={define.annuityChildrenDef} />
       </Article>
     )
   }

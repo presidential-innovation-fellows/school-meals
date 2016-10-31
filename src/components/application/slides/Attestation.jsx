@@ -45,7 +45,8 @@ class Attestation extends Component {
 
             <InputField
                 name="suffix"
-                label="Suffix"
+                label="Suffix (e.g. Jr., Sr., I, II, III)"
+                placeholder="Suffix"
                 object={attestor}
             />
 
@@ -57,7 +58,7 @@ class Attestation extends Component {
             />
           </Fieldset>
         </Form>
-        <p>*Deliberate misrepresentation of information may subject applicants to prosecution under applicable State and Federal law.</p>
+        <p><em>*Deliberate misrepresentation of information may subject applicants to prosecution under applicable State and Federal law.</em></p>
       </Slide>
     )
   }

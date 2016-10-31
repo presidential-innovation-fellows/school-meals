@@ -1,28 +1,33 @@
 import React, { Component, PropTypes } from 'react'
 import Article from '../Article'
 import Topic from '../Topic'
-import { organization } from '../../../config'
-import SchoolYear from '../../application/SchoolYear'
-import ApplyLater from '../topics/ApplyLater'
+import { help } from './HelpText'
+import Standard from '../TopicStandard'
+import WhatInformation from '../topics/WhatInformation'
+import Household from '../topics/Household'
+import IEG from '../topics/IEG'
 
 export default class BeforeYouBegin extends Component {
   render() {
     return (
       <Article>
-//included       
-        <Topic title="My child's application was approved last year. Do I need to fill out a new one?">
-          <p>
-            Yes. Eligibility for free or reduced price meals only lasts for one school year. However, eligibility for the previous year carries over for the first few days of the new school year, or until the new eligibility determination is made. Please complete a new application unless you received a letter from the school saying that your child is eligible for the upcoming <SchoolYear /> school year.
-          </p>
-        </Topic>
-//included
-        <Topic title="Do I need to fill out an application for each child?">
-          <p>
-            No. Use one Free and Reduced Price School Meals Application for all students that attend {organization.name} in your household.
-          </p>
-        </Topic>
-//!!OMITTED!!
-        <ApplyLater />
+        <Standard title={help.newAppTitle} body={help.newAppBody} />
+        <Standard title={help.childAppTitle} body={help.childAppBody} />
+        <Standard title={help.letterTitle} body={help.letterBody} />
+        <Standard title={help.applyLaterTitle} body={help.applyLaterBody} />
+        <Standard title={help.localProgramTitle} body={help.localProgramBody} />
+        <Standard title={help.fosterQualifyTitle} body={help.fosterQualifyBody} />
+        <Standard title={help.wicTitle} body={help.wicBody} />
+        <Standard title={help.headStartTitle} body={help.headStartBody} />
+        <Standard title={help.otherProgramsTitle} body={help.otherProgramsBody} />
+        <Standard title={help.usCitizenTitle} body={help.usCitizenBody} />
+        <Standard title={help.publicChargeTitle} body={help.publicChargeBody} />
+        <Standard title={help.checkedTitle} body={help.checkedBody} />
+        <WhatInformation />
+        <Household />
+        <Standard title={help.disagreeTitle} body={help.disagreeBody} />
+        <bodyLabels>Definitions</bodyLabels>
+        <IEG />
       </Article>
     )
   }

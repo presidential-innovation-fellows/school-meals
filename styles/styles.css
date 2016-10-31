@@ -359,3 +359,19 @@ button.navbar-toggle:focus {
 .navbar-nav a {
   box-shadow: none;
 }
+
+button.usa-button-secondary.add-person {
+  background-color: #00a6d2;
+}
+
+button.usa-button-secondary.add-person:hover {
+  background-color: #046b99;
+}
+
+button.usa-button-secondary.add-income {
+  background-color: #00a6d2;
+}
+
+button.usa-button-secondary.add-income:hover {
+  background-color: #046b99;
+}

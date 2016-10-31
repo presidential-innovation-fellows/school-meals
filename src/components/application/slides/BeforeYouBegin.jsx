@@ -1,7 +1,7 @@
 ﻿import React from 'react'
 import Slide from '../Slide'
 import SchoolYear from '../SchoolYear'
-import { assistancePrograms, organization } from '../../../config'
+import { assistancePrograms, organization, assistanceProgramsVar } from '../../../config'
 import { toSentenceSerial } from 'underscore.string'
 import { observable } from 'mobx'
 import { observer } from 'mobx-react'
@@ -81,7 +81,10 @@ class BeforeYouBegin extends React.Component {
          <div>
            <p>If you have this information handy, it will make the application process fast and easy.</p>
            <ul className="usa-content-list">
-             <li>If you participate in {assistanceProgramList} you will need to know your case number (not your card or account number).</li>
+             <li>If you participate in &nbsp;
+              <Tooltipcomp id="snap" text={tooltiptext.snap} target={assistanceProgramsVar.snap.accronym} />, &nbsp;
+              <Tooltipcomp id="tanf" text={tooltiptext.tanf} target={assistanceProgramsVar.tanf.accronym} />, or &nbsp;
+              <Tooltipcomp id="fdpir" text={tooltiptext.fdpir} target={assistanceProgramsVar.fdpir.accronym} /> &nbsp; you will need to know your case number (not your card or account number).</li>
              <li>
                If you do not participate in any of the above assistance programs, you will need to report your total household income. In that case…
                <ul>

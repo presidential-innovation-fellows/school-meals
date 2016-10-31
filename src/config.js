@@ -21,20 +21,33 @@ export const assistancePrograms = [
   'Food Distribution Program on Indian Reservations (FDPIR)'
 ]
 
-export const localPrograms = {
-  homelessness: {
-    contact: 'Cersei Lannister (888-555-1212)'
-  },
+export const assistanceProgramsVar = {
   snap: {
-    name: 'CalFresh',
-    localContact: 'Jon Snow (888-555-1212)',
-    stateHotline: '888-555-1212'
+    fullName: 'Supplemental Nutrition Assistance Program',
+    accronym: 'SNAP',
   },
   tanf: {
-    name: 'TANF'
+    fullName: 'Temporary Assistance for Needy Families',
+    accronym: 'TANF',
+  },
+  fdpir: {
+    fullName: 'Food Distribution Program on Indian Reservations',
+    accronym: 'FDPIR',
   }
 }
 
 export const thankYou = [
   'You will hear from us soon with your certification decision!'
 ]
+
+export const hmrPrograms = {
+  mep: {
+    fullName: 'Migrant Education Program',
+    accronym: 'MEP',
+  },
+  mckinney: {
+    shortName: 'McKinney-Vento Homeless Assistance Act',
+    fullName: 'McKinney-Vento Education of Homeless Chilren and Youth Assistance Act',
+  },
+  runaway: 'Runaway and Homeless Youth Act',
+}
