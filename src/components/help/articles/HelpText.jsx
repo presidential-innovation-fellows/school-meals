@@ -5,15 +5,15 @@ import { toSentenceSerial } from 'underscore.string'
 
 export const help = {
   //variables are paired by contentTitle and contentBody;
-//F1 = PaperApp.jsx 
+//F1 = PaperApp.jsx
 //F2
   newAppTitle: 'My child’s application was approved last year. Do I need to fill out a new one?',
-  newAppBody: 'Yes. Eligibility for free or reduced price meals only lasts for one school year. However, eligibility for the previous year carries over for the first few days of the new school year, or until the new eligibility determination is made. Please complete a new application unless you received a letter from the school saying that your child is eligible for the upcoming ' + schoolYear + ' school year.',
+  newAppBody: 'Yes. Eligibility for free or reduced price meals only lasts for one school year. However, eligibility for the previous year carries over for the first few days of the new school year, or until the new eligibility determination is made. Please complete a new application unless you received a letter from the school saying that your child is eligible for the upcoming ' + schoolYear() + ' school year.',
 //F3
   childAppTitle: 'Do I need to fill out an application for each child?',
   childAppBody: 'No. Use one Free and Reduced Price School Meals Application for all students that attend ' + organization.name + ' in your household.',
 //F4
-  letterTitle: 'I received a letter from the school saying that my children were automatically approved for free meals for the upcoming ' + schoolYear + ' school year. Do I still need to complete an application?',
+  letterTitle: 'I received a letter from the school saying that my children were automatically approved for free meals for the upcoming ' + schoolYear() + ' school year. Do I still need to complete an application?',
   letterBody: 'No, but please read the letter carefully. If any children in your household were missing from your eligibility notification letter, they are also eligible for free meals, so you should contact ' + organization.name +  ' (' + organization.contact.phone + ' / ' + organization.contact.email + ' / ' + organization.contact.address + ') immediately.',
 //F5
   applyLaterTitle: 'If I don’t qualify now, may I apply later?',
@@ -218,15 +218,3 @@ export const define = {
   earnedInterestDef: 'Earned interest is a fee that is paid for the use of another person’s money. It is usually a percentage of the amount borrowed.',
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
