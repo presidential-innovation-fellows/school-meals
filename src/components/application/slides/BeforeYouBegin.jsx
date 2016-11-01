@@ -76,16 +76,29 @@ class BeforeYouBegin extends React.Component {
         </p>
 
         <ul className="usa-content-list">
-          <FormattedMessage
-              id="app.slides.beforeYouBegin.usaContentList"
-              description="Content List"
-              defaultMessage="{list}{list2}{list3}"
-              values={{
-                list: <li>your total household income and size in the month the application is filled out, or the month before, or</li>,
-                list2: <li>your child’s individual status as foster, homeless, migrant or runaway, or</li>,
-                list3: <li>participation in an assistance program by any member of your household</li>
-              }}
-          />
+          <li>
+            <FormattedMessage
+                id="app.slides.beforeYouBegin.eligibility1"
+                description="Eligibility List item"
+                defaultMessage="your total household income and size in the month the application is filled out, or the month before, or"
+            />
+          </li>
+
+          <li>
+            <FormattedMessage
+                id="app.slides.beforeYouBegin.eligibility2"
+                description="Eligibility List item"
+                defaultMessage="your child’s individual status as foster, homeless, migrant or runaway, or"
+            />
+          </li>
+
+          <li>
+            <FormattedMessage
+                id="app.slides.beforeYouBegin.eligibility3"
+                description="Eligibility List item"
+                defaultMessage="participation in an assistance program by any member of your household"
+            />
+          </li>
         </ul>
 
         <p>
