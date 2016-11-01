@@ -37,7 +37,14 @@ class MilitaryIncome extends Component {
 
            <IncomeSource incomeSources={incomeSources} name="basic">
              <Tooltipcomp id="militaryBasicPay" text={tooltiptext.basicPay} target="Military basic pay" />
-             &nbsp; (made available to the household)
+             &nbsp; 
+              {incomeType.isDeployed ?
+                <span>(made available to the household)
+                </span>
+                :
+                <span>
+                </span>
+              }
            </IncomeSource>
 
            <IncomeSource incomeSources={incomeSources} name="cashBonus">

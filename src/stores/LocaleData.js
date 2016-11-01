@@ -2,28 +2,34 @@ import { action, observable } from 'mobx'
 import request from 'superagent'
 
 export default class LocaleData {
-  @observable locale = 'en'
+  @observable code = 'en'
   @observable translations = {}
-  @observable i = 0
 
-  @action setLocale(locale) {
-    const newLocale = locale.split('-')[0].toLowerCase()
+  @action setLocale(code) {
+    code = code.split('-')[0].toLowerCase()
+    console.debug('Setting new locale:', code)
 
-    request.get(`./translations/${newLocale}.json`, (err, res) => {
+    // English is the default -- there is no translation file
+    if (code === 'en') {
+      this.translations = {}
+      this.code = code
+      return
+    }
+
+    request.get(`./translations/${code}.json`, (err, res) => {
       if (err) {
-        alert(err)
+        console.error(err)
       } else {
         this.translations = res.body
-        this.locale = newLocale
+        this.code = code
+        console.debug('Translation loaded for locale code:', code, this.translations)
       }
     })
   }
 
   constructor() {
-    this.setLocale('es' || navigator.language ||
+    this.setLocale(navigator.language ||
                    navigator.browserLanguage ||
                    'en')
-    let self = this
-    window.setInterval(() => { self.i++ }, 1000)
   }
 }

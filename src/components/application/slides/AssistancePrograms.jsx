@@ -3,7 +3,7 @@ import Slide from '../Slide'
 import AssistanceProgramList from './AssistanceProgramList'
 import { observer } from 'mobx-react'
 import { toSentenceSerial } from 'underscore.string'
-import { assistancePrograms as programNames } from '../../../config'
+import { assistancePrograms as programNames, assistanceProgramsVar } from '../../../config'
 import { AssistancePrograms as Store } from '../../../stores/ApplicationData'
 import { Glyphicon, OverlayTrigger, Tooltip } from 'react-bootstrap'
 import { tooltiptext } from '../../Tooltiptext'
@@ -24,7 +24,12 @@ class AssistancePrograms extends Component {
     return(
       <Slide id="assistance-programs"
              nextDisabled={!assistancePrograms.isValid} beginsSection>
-        <p className="usa-font-lead">If anyone in your household participates in {assistanceProgramList}, then {students.informalList(allPeopleCollections)} {students.length === 1 ? 'is' : 'are'} eligible for free school meals.</p>
+        <p className="usa-font-lead">If anyone in your household participates in &nbsp;
+          <Tooltipcomp id="snap" text={tooltiptext.snap} target={assistanceProgramsVar.snap.accronym} />, &nbsp;
+          <Tooltipcomp id="tanf" text={tooltiptext.tanf} target={assistanceProgramsVar.tanf.accronym} />, or &nbsp;
+          <Tooltipcomp id="fdpir" text={tooltiptext.fdpir} target={assistanceProgramsVar.fdpir.accronym} />, &nbsp;
+          then {students.informalList(allPeopleCollections)} {students.length === 1 ? 'is' : 'are'} eligible for free school meals.
+        </p>
 
         <div className="well">
           <p>

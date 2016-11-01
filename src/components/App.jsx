@@ -1,6 +1,5 @@
 import classnames from 'classnames';
 import React, { Component, PropTypes } from 'react'
-import { IntlProvider } from 'react-intl'
 import { observer } from 'mobx-react'
 import Application from './application/Application'
 import ApplicationData from '../stores/ApplicationData'
@@ -39,22 +38,20 @@ class App extends Component {
     })
 
     return (
-      <IntlProvider key={localeData.locale} locale={'en' || localeData.locale} messages={localeData.translations}>
-        <div className={className}>
-          <Navigation navigationData={navigationData} helpData={helpData} />
-          <Progress navigationData={navigationData}
-                    applicationData={applicationData} />
-          <main>
-            <div className="usa-grid">
-              <div className="usa-width-one-whole">
-                <Application applicationData={applicationData} />
-              </div>
+      <div className={className}>
+        <Navigation navigationData={navigationData} helpData={helpData} />
+        <Progress navigationData={navigationData}
+                  applicationData={applicationData} />
+        <main>
+          <div className="usa-grid">
+            <div className="usa-width-one-whole">
+              <Application applicationData={applicationData} />
             </div>
-          </main>
-          <Help helpData={helpData} />
-          <Footer />
-        </div>
-      </IntlProvider>
+          </div>
+        </main>
+        <Help helpData={helpData} />
+        <Footer />
+      </div>
     )
   }
 }
@@ -65,7 +62,7 @@ App.childContextTypes = {
     isVisible: PropTypes.bool.isRequired
   }).isRequired,
   localeData: PropTypes.shape({
-    locale: PropTypes.string.isRequired,
+    code: PropTypes.string.isRequired,
     translations: PropTypes.object.isRequired
   }).isRequired,
   navigationData: PropTypes.shape({

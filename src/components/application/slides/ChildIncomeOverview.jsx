@@ -33,15 +33,17 @@ class ChildIncomeOverview extends Component {
         <ul className="usa-content-list">
           <li>a full-time or part-time job,</li>
           <li>
-            <Tooltipcomp id="social-security" text={tooltiptext.socialsecurity} target='Social Security' />
-          &nbsp; benefits, if the child is blind or disabled, or is the beneficiary of another person’s Social Security benefits,
+            <Tooltipcomp id="social-security-children" text={tooltiptext.ssiChildren} target='Social Security' />
+          &nbsp; benefits, if the child is disabled, or is the &nbsp;
+            <Tooltipcomp id="ssSurvivor" text={tooltiptext.ssSurvivor} target='beneficiary' />
+          &nbsp; of another person’s Social Security benefits,
         </li>
 
           <li>money regularly received from extended family or friends outside the household, or</li>
           <li>money from a &nbsp;
-          <Tooltipcomp id="pension" text={tooltiptext.pension} target='pension fund' />
+          <Tooltipcomp id="pensionChildren" text={tooltiptext.pensionChildren} target='pension' />
          &nbsp;, &nbsp;
-          <Tooltipcomp id="annuity" text={tooltiptext.annuity} target='annuity' />
+          <Tooltipcomp id="annuity" text={tooltiptext.annuityChildren} target='annuity' />
           &nbsp;, or &nbsp;
           <Tooltipcomp id="trust" text={tooltiptext.trust} target='trust' />
         </li>

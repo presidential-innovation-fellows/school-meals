@@ -275,7 +275,7 @@ class Summary extends Component {
             <strong>I certify* that <span className="usa-label-big">{this.totalHouseholdMembers}</span> people are in my household and that our household income is about <span className="usa-label-big">${numberFormat(this.totalMonthlyHouseholdIncome)}</span> per month.</strong>
           </Checkbox>
         </Checkboxes>
-        <p><small>*I understand that this information is given in connection with the receipt of Federal funds, and that school o­fficials may verify (check) the information. I am aware that if I purposely give false information, my children may lose meal benefits. Deliberate misrepresentation of information may subject applicants to prosecution under applicable State and Federal law.</small></p>
+        <p><small><em>*I understand that this information is given in connection with the receipt of Federal funds, and that school o­fficials may verify (check) the information. I am aware that if I purposely give false information, my children may lose meal benefits. Deliberate misrepresentation of information may subject applicants to prosecution under applicable State and Federal law.</em></small></p>
       </Slide>
     )
   }

@@ -57,7 +57,7 @@ class AdultIncomeOverview extends Component {
         { person.incomeTypes.military.isApplicable &&
           <IncomeTypeFormGroup person={person} incomeTypeName="military"
                                boolAttribute="isDeployed" validate={false}>
-            Is <strong>{name}</strong> currently 
+            Is <strong>{name}</strong> currently &nbsp;
             <Tooltipcomp id="deployed" text={tooltiptext.deployed} target="deployed" />
             &nbsp;?
           </IncomeTypeFormGroup>

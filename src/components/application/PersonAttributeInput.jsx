@@ -10,13 +10,14 @@ class PersonAttributeInput extends Component {
       name,
       label,
       required,
+      placeholder
     } = this.props
 
     return(
       <InputField
           name={name}
           label={label}
-          placeholder={label}
+          placeholder={placeholder}
           object={person}
           required={required}
       />
@@ -28,6 +29,7 @@ PersonAttributeInput.propTypes = {
   person: PropTypes.object.isRequired,
   name: PropTypes.string.isRequired,
   label: PropTypes.string.isRequired,
+  placeholder: PropTypes.string,
   required: PropTypes.bool
 }
 

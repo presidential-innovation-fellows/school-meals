@@ -43,6 +43,13 @@
   deployed: 'We ask because we only count the portion of a deployed service member’s income that is made available to the household.',
   gross: 'All money earned or received before deductions, such as income taxes, Social Security taxes, and insurance premiums.',
   eligibility: 'See Help for the Income Eligibility Guidelines for reduced price benefits.',
+  ssiChildren: 'Supplemental Security Income (SSI) provides cash to meet basic needs for food, clothing, and shelter to children younger than age 18 who have a physical or mental condition, or combination of conditions, that meets Social Security’s definition of disability for children, and if his or her income and resources fall within the eligibility limits.',
+  ssSurvivor: 'Social Security survivor benefits are monthly payments to children of a deceased parent who was retired or disabled, but worked and paid taxes into the Social Security system.',
+  pensionChildren: 'A child may receive payments from the pension of a deceased parent.',
+  annuityChildren: 'A child may be the recipient of payments from an annuity. See Help for the definition of an annuity.',
+  mckinney: 'Provides Federal money for homeless shelter programs and facilitates public school access for homeless children and youth.',
+  mep: 'Provides services to children who have moved across school district lines, within the last three years, in order to accompany or join a parent or guardian who seeks or obtains temporary or seasonal work in argiculture or fishing.',
+  runaway: 'Authorizes community-based runaway and homeless youth projects to provide temporary shelter and care to youth who are in need of temporary shelter, counseling, and aftercare services.',
   littleguy: '’',
 }
 
