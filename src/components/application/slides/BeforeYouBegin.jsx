@@ -64,16 +64,15 @@ class BeforeYouBegin extends React.Component {
 	</p>
 
         <p>
-	  <FormattedMessage
-              id="app.slides.beforeYouBegin.mealEligibility"
-              description="Only need one application for your household"
-              defaultMessage="{tooltip}&nbsp; {strong}{tooltip2}&nbsp;"
-              values={{
-		strong: <strong>for free or reduced price school meal benefits is based on any one of these </strong>,
-                tooltip: <Tooltipcomp id="eligibility" text={tooltiptext.eligibility} target="Eligibility" />,
-		tooltip2: <Tooltipcomp id="threethings" text={threethings} target="three things:" />
-              }}
-          />
+          <strong>
+            <Tooltipcomp id="eligibility" text={tooltiptext.eligibility} target="Eligibility" />&nbsp;
+	    <FormattedMessage
+                id="app.slides.beforeYouBegin.mealEligibilityDescription"
+                description="Only need one application for your household"
+                defaultMessage="for free or reduced price school meal benefits is based on any one of these"
+            />&nbsp;
+            <Tooltipcomp id="threethings" text={threethings} target="three things:" />
+          </strong>
         </p>
 
         <ul className="usa-content-list">
