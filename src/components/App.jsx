@@ -1,6 +1,5 @@
 import classnames from 'classnames';
 import React, { Component, PropTypes } from 'react'
-import { IntlProvider } from 'react-intl'
 import { observer } from 'mobx-react'
 import Application from './application/Application'
 import ApplicationData from '../stores/ApplicationData'
@@ -11,6 +10,10 @@ import Navigation from './Navigation'
 import Progress from './Progress'
 import Footer from './Footer'
 import Help from './help/Help'
+
+import { addLocaleData } from 'react-intl'
+import es from 'react-intl/locale-data/es';
+import en from 'react-intl/locale-data/en';
 
 const applicationData = new ApplicationData()
 const localeData = new LocaleData()
@@ -25,6 +28,11 @@ window.localeData = localeData
 
 @observer
 class App extends Component {
+  constructor(props, context) {
+    super(props, context)
+    addLocaleData([...es, ...en])
+  }
+
   getChildContext() {
     return { helpData, localeData, navigationData }
   }
@@ -39,22 +47,20 @@ class App extends Component {
     })
 
     return (
-      <IntlProvider key={localeData.code} locale={localeData.code} messages={localeData.translations}>
-        <div className={className}>
-          <Navigation navigationData={navigationData} helpData={helpData} />
-          <Progress navigationData={navigationData}
-                    applicationData={applicationData} />
-          <main>
-            <div className="usa-grid">
-              <div className="usa-width-one-whole">
-                <Application applicationData={applicationData} />
-              </div>
+      <div className={className}>
+        <Navigation navigationData={navigationData} helpData={helpData} />
+        <Progress navigationData={navigationData}
+                  applicationData={applicationData} />
+        <main>
+          <div className="usa-grid">
+            <div className="usa-width-one-whole">
+              <Application applicationData={applicationData} />
             </div>
-          </main>
-          <Help helpData={helpData} />
-          <Footer />
-        </div>
-      </IntlProvider>
+          </div>
+        </main>
+        <Help helpData={helpData} />
+        <Footer />
+      </div>
     )
   }
 }
