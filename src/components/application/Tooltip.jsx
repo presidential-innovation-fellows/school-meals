@@ -5,13 +5,13 @@ import { Glyphicon, OverlayTrigger, Tooltip } from 'react-bootstrap'
 @observer
 class Tooltipcomp extends Component {
   render() {
-    const { id, text, target, texttwo, } = this.props
+    const { id, text, target, children } = this.props
 
     return (
-      <OverlayTrigger placement="top" overlay={ 
-        <Tooltip id={this.props.id}> {this.props.text} &nbsp; </Tooltip> }>
+      <OverlayTrigger placement="top" overlay={
+        <Tooltip>{text}</Tooltip> }>
         <strong className="info-target">
-          {this.props.target}
+          {children || target}
           <Glyphicon glyph="question-sign" />
         </strong>
       </OverlayTrigger>
@@ -20,9 +20,9 @@ class Tooltipcomp extends Component {
 }
 
 Tooltipcomp.propTypes = {
-  id: PropTypes.any,
-  text: PropTypes.any,
-  target: PropTypes.any,
+  text: PropTypes.string.isRequired,
+  target: PropTypes.node,
+  children: PropTypes.node,
 }
 
 export default Tooltipcomp
