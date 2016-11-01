@@ -148,9 +148,6 @@ class BeforeYouBegin extends React.Component {
 
         {!!this.showExtraContent &&
          <div>
-
-
-
            <p>
              <FormattedMessage
                  id="app.slides.beforeYouBegin.informationHandy"
@@ -159,29 +156,50 @@ class BeforeYouBegin extends React.Component {
              />
            </p>
 
-           <FormattedMessage
-               id="app.slides.beforeYouBegin.listOfThings"
-               description="Things you'll need."
-               defaultMessage="{list}"
-               values={{
-                 list:
-                      <ul className="usa-content-list">
-                        <li>If you participate in &nbsp;
-                          <Tooltipcomp id="snap" text={tooltiptext.snap} target={assistanceProgramsVar.snap.accronym} />, &nbsp;
-                          <Tooltipcomp id="tanf" text={tooltiptext.tanf} target={assistanceProgramsVar.tanf.accronym} />, or &nbsp;
-                          <Tooltipcomp id="fdpir" text={tooltiptext.fdpir} target={assistanceProgramsVar.fdpir.accronym} /> &nbsp; you will need to know your case number (not your card or account number).
-                        </li>
-                        <li>
-                          If you do not participate in any of the above assistance programs, you will need to report your total household income. In that case…
-                          <ul>
-                            <li>if anyone in your house has a job, you may need to reference the earnings statements or pay stubs to report your gross income, which is different from the amount you actually receive in your paycheck.</li>
-                            <li>if anyone receives Social Security or retirement benefits, you may need to gather the benefit statements to report the amount and frequency of the payments.</li>
-                            <li>you may also need to reference other financial documents for additional sources of income.</li>
-                          </ul>
-                        </li>
-                      </ul>
-               }}
-           />
+           <ul className="usa-content-list">
+             <li>
+               <FormattedMessage
+                   id="app.slides.beforeYouBegin.caseNumber"
+                   description="List of programs that will require a case number."
+                   defaultMessage="If you participate in &nbsp;{snap}, &nbsp;{tanf} , or &nbsp;{fdpir}&nbsp; you will need to know your case number (not your card or account number)."
+                   values={{
+                     snap: <Tooltipcomp id="snap" text={tooltiptext.snap} target={assistanceProgramsVar.snap.accronym} />,
+                     tanf: <Tooltipcomp id="tanf" text={tooltiptext.tanf} target={assistanceProgramsVar.tanf.accronym} />,
+                     fdpir: <Tooltipcomp id="fdpir" text={tooltiptext.fdpir} target={assistanceProgramsVar.fdpir.accronym} />
+                   }}
+               />
+             </li>
+             <li>
+               <FormattedMessage
+                   id="app.slides.beforeYouBegin.whenReportHouseholdIncome"
+                   description="Description of when household income reporting is required."
+                   defaultMessage="If you do not participate in any of the above assistance programs, you will need to report your total household income. In that case…"
+               />
+               <ul>
+                 <li>
+                   <FormattedMessage
+                       id="app.slides.beforeYouBegin.whenReportHouseholdIncome1"
+                       description="Item required for household income reporting."
+                       defaultMessage="if anyone in your house has a job, you may need to reference the earnings statements or pay stubs to report your gross income, which is different from the amount you actually receive in your paycheck."
+                   />
+                 </li>
+                 <li>
+                   <FormattedMessage
+                       id="app.slides.beforeYouBegin.whenReportHouseholdIncome2"
+                       description="Item required for household income reporting."
+                       defaultMessage="if anyone receives Social Security or retirement benefits, you may need to gather the benefit statements to report the amount and frequency of the payments."
+                   />
+                 </li>
+                 <li>
+                   <FormattedMessage
+                       id="app.slides.beforeYouBegin.whenReportHouseholdIncome3"
+                       description="Item required for household income reporting."
+                       defaultMessage="you may also need to reference other financial documents for additional sources of income."
+                   />
+                 </li>
+               </ul>
+             </li>
+           </ul>
 
            <p>
              <FormattedMessage
