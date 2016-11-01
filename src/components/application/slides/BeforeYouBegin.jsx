@@ -5,7 +5,7 @@ import { assistancePrograms, organization, assistanceProgramsVar } from '../../.
 import { toSentenceSerial } from 'underscore.string'
 import { observable } from 'mobx'
 import { observer } from 'mobx-react'
-import { Glyphicon, OverlayTrigger, Tooltip } from 'react-bootstrap'
+import { Glyphicon, OverlayTrigger } from 'react-bootstrap'
 import { tooltiptext } from '../../Tooltiptext'
 import Tooltipcomp from '../Tooltip'
 import FormattedMessage from '../FormattedMessage'
@@ -45,7 +45,7 @@ class BeforeYouBegin extends React.Component {
               description="Hist that you can skip most of application with a household program."
               defaultMessage="If you received a &nbsp;{tooltip}&nbsp; from the school saying that your children were automatically approved (directly certified) for free meals for the {schoolYear} school year because someone in your household participates in {assistanceProgramList} then you do not need to submit an application."
               values={{
-                tooltip: <Tooltipcomp id="letter" text={tooltiptext.letter} target="letter" />,
+                tooltip: <Tooltipcomp id="letter" text={tooltiptext.letter}>letter</Tooltipcomp>,
                 schoolYear: <SchoolYear />,
                 assistanceProgramList: assistanceProgramList
               }}
@@ -65,13 +65,13 @@ class BeforeYouBegin extends React.Component {
 
         <p>
           <strong>
-            <Tooltipcomp id="eligibility" text={tooltiptext.eligibility} target="Eligibility" />&nbsp;
+            <Tooltipcomp id="eligibility" text={tooltiptext.eligibility}>Eligibility</Tooltipcomp>&nbsp;
             <FormattedMessage
                 id="app.slides.beforeYouBegin.mealEligibilityDescription"
                 description="Only need one application for your household"
                 defaultMessage="for free or reduced price school meal benefits is based on any one of these"
             />&nbsp;
-            <Tooltipcomp id="threethings" text={threethings} target="three things:" />
+            <Tooltipcomp id="threethings" text={threethings}>three things</Tooltipcomp>:
           </strong>
         </p>
 
@@ -107,7 +107,7 @@ class BeforeYouBegin extends React.Component {
               description="citizenship or immigration doesn't affect status"
               defaultMessage="Your &nbsp;{tooltip}&nbsp; does not affect your eligibility for free and reduced price benefits."
               values={{
-                tooltip: <Tooltipcomp id="status" text={tooltiptext.status} target="US citizenship or immigration status" />
+                tooltip: <Tooltipcomp id="status" text={tooltiptext.status}>US citizenship or immigration status</Tooltipcomp>
               }}
           />
         </p>
