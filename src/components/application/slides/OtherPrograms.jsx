@@ -5,6 +5,7 @@ import { observable } from 'mobx'
 import { observer } from 'mobx-react'
 import { organization } from '../../../config'
 import { informalName } from '../../../helpers'
+import FormattedMessage from '../FormattedMessage'
 
 @observer
 class OtherPrograms extends Component {
@@ -52,25 +53,44 @@ class OtherPrograms extends Component {
     return (
       <Slide nextDisabled={!this.isValid} id="other-programs">
         <p className="usa-font-lead">
-          Your children can also qualify for free meals if any of these apply.
+         <FormattedMessage
+              id="app.slides.otherPrograms.intro"
+              description="Introductory paragraph."
+              defaultMessage="Your children can also qualify for free meals if any of these apply."
+         />
         </p>
 
         <OtherProgramsProgram attribute="isHomeless" {...props}>
-           If not, but your household lacks a permanent address, or stays 
-           together in a shelter, hotel, or other temporary housing 
-           arrangement, contact {organization.name} for help.
+           <FormattedMessage
+              id="app.slides.otherPrograms.isHomeless"
+              description="Homeless organizations"
+              defaultMessage="If not, but your household lacks a permanent address, or stays together in a shelter, hotel, or other temporary housing arrangement, contact {organizationName} for help."
+              values={{
+                organizationName: organization.name
+              }}
+            />
         </OtherProgramsProgram>
 
         <OtherProgramsProgram attribute="isMigrant" {...props}>
-          If not, but you moved your household into a different
-          school district within the last three years to gain or look for
-          temporary/seasonal work in agriculture or fishing,
-          contact {organization.name} for help.
+          <FormattedMessage
+              id="app.slides.otherPrograms.isMigrant"
+              description="Migrant Organizations"
+              defaultMessage="If not, but you moved your household into a different school district within the last three years to gain or look for temporary/seasonal work in agriculture or fishing, contact {organizationName} for help."
+              values={{
+                organizationName: organization.name
+              }}
+          />
         </OtherProgramsProgram>
 
         <OtherProgramsProgram attribute="isRunaway" {...props}>
-          If not, but they chose to leave their prior family or household,
-          contact {organization.name} for help.
+          <FormattedMessage
+              id="app.slides.otherPrograms.isRunAway"
+              description="Run Away Organizations"
+              defaultMessage="If not, but they chose to leave their prior family or household, contact {organizationName} for help."
+              values={{
+                organizationName: organization.name
+              }}
+          />
         </OtherProgramsProgram>
       </Slide>
     )
