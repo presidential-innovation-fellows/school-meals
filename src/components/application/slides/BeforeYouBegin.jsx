@@ -131,10 +131,17 @@ class BeforeYouBegin extends React.Component {
         <p>
           <FormattedMessage
               id="app.slides.beforeYouBegin.thingsNeededMore"
-              description="List of things needed"
-              defaultMessage="Lastly, we compiled a list of the information you might need to complete the application. {checkitOut}"
+              description="Invitation to view full list of things needed to apply."
+              defaultMessage="Lastly, we compiled a list of the information you might need to complete the application. {link}"
               values={{
-                checkitOut: <a onClick={this.handleCheckItOut}>Check it out!</a>
+                link:
+                     <a onClick={this.handleCheckItOut}>
+                       <FormattedMessage
+                           id="app.slides.beforeYouBegin.thingsNeededMoreLinkText"
+                           description="Text for the link to view all information needed to apply."
+                           defaultMessage="Check it out!"
+                       />
+                     </a>
               }}
           />
         </p>
