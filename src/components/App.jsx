@@ -65,7 +65,7 @@ App.childContextTypes = {
     isVisible: PropTypes.bool.isRequired
   }).isRequired,
   localeData: PropTypes.shape({
-    locale: PropTypes.string.isRequired,
+    code: PropTypes.string.isRequired,
     translations: PropTypes.object.isRequired
   }).isRequired,
   navigationData: PropTypes.shape({
