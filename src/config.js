@@ -1,3 +1,5 @@
+
+
 export const organization = {
   name: 'Applewood School District',
   shortname: 'ASD',
@@ -52,10 +54,17 @@ export const hmrPrograms = {
   runaway: 'Runaway and Homeless Youth Act',
 }
 
-// Add to this list to support additional locales.
-// NOTE 1: keep English as the first entry.
-// NOTE 2: each locale must be accompanied by a corresponding
-//         translation JSON file in /translations/
+// To support an additional language:
+//     1. add an import statment for it:
+import es from 'react-intl/locale-data/es';
+import en from 'react-intl/locale-data/en';
+
+//     2. add its language code to the following array:
+import { addLocaleData } from 'react-intl'
+addLocaleData([...es, ...en])
+
+//     3. create a JSON file in /translations/ with the name of the locale code
+//     4. add locale to the following array (NOTE: keep English as first item)
 export const locales = [
   {
     code: 'en',
@@ -66,10 +75,5 @@ export const locales = [
     code: 'es',
     language: 'Español',
     iSpeak: 'Yo hablo español'
-  },
-  {
-    code: 'zh',
-    language: '中文',
-    iSpeak: '我说中文'
   },
 ]

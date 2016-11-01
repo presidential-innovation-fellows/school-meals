@@ -11,10 +11,6 @@ import Progress from './Progress'
 import Footer from './Footer'
 import Help from './help/Help'
 
-import { addLocaleData } from 'react-intl'
-import es from 'react-intl/locale-data/es';
-import en from 'react-intl/locale-data/en';
-
 const applicationData = new ApplicationData()
 const localeData = new LocaleData()
 const navigationData = new NavigationData()
@@ -28,11 +24,6 @@ window.localeData = localeData
 
 @observer
 class App extends Component {
-  constructor(props, context) {
-    super(props, context)
-    addLocaleData([...es, ...en])
-  }
-
   getChildContext() {
     return { helpData, localeData, navigationData }
   }
