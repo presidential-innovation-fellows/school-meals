@@ -120,14 +120,13 @@ class BeforeYouBegin extends React.Component {
           />
         </p>
 
-        <FormattedMessage
-            id="app.slides.beforeYouBegin.thingsNeeded"
-            description="Things you'll need."
-            defaultMessage="{things}"
-            values={{
-              things: <h2>Things you'll need</h2>
-            }}
-        />
+        <h2>
+          <FormattedMessage
+              id="app.slides.beforeYouBegin.thingsNeeded"
+              description="Things you'll need section header."
+              defaultMessage="Things you'll need"
+          />
+        </h2>
 
         <p>
           <FormattedMessage
