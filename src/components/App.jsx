@@ -39,7 +39,7 @@ class App extends Component {
     })
 
     return (
-      <IntlProvider key={localeData.locale} locale={'en' || localeData.locale} messages={localeData.translations}>
+      <IntlProvider key={localeData.code} locale={localeData.code} messages={localeData.translations}>
         <div className={className}>
           <Navigation navigationData={navigationData} helpData={helpData} />
           <Progress navigationData={navigationData}
