@@ -53,7 +53,7 @@ class BeforeYouBegin extends React.Component {
         </p>
 
         <p>
-	  <FormattedMessage
+          <FormattedMessage
               id="app.slides.beforeYouBegin.oneApplication"
               description="Only need one application for your household"
               defaultMessage="We need only one application for all the children in your household that attend {organizationName}."
@@ -61,112 +61,148 @@ class BeforeYouBegin extends React.Component {
                 organizationName: organization.name,
               }}
           />
-	</p>
+        </p>
 
         <p>
-	  <FormattedMessage
-              id="app.slides.beforeYouBegin.mealEligibility"
-              description="Only need one application for your household"
-              defaultMessage="{tooltip}&nbsp; {strong}{tooltip2}&nbsp;"
-              values={{
-		strong: <strong>for free or reduced price school meal benefits is based on any one of these </strong>,
-                tooltip: <Tooltipcomp id="eligibility" text={tooltiptext.eligibility} target="Eligibility" />,
-		tooltip2: <Tooltipcomp id="threethings" text={threethings} target="three things:" />
-              }}
-          />
+          <strong>
+            <Tooltipcomp id="eligibility" text={tooltiptext.eligibility} target="Eligibility" />&nbsp;
+            <FormattedMessage
+                id="app.slides.beforeYouBegin.mealEligibilityDescription"
+                description="Only need one application for your household"
+                defaultMessage="for free or reduced price school meal benefits is based on any one of these"
+            />&nbsp;
+            <Tooltipcomp id="threethings" text={threethings} target="three things:" />
+          </strong>
         </p>
 
         <ul className="usa-content-list">
-	  <FormattedMessage
-              id="app.slides.beforeYouBegin.usaContentList"
-              description="Content List"
-              defaultMessage="{list}{list2}{list3}"
-              values={{
-		list: <li>your total household income and size in the month the application is filled out, or the month before, or</li>,
-		list2: <li>your child’s individual status as foster, homeless, migrant or runaway, or</li>,
-		list3: <li>participation in an assistance program by any member of your household</li>
-              }}
-          />
+          <li>
+            <FormattedMessage
+                id="app.slides.beforeYouBegin.eligibility1"
+                description="Eligibility List item"
+                defaultMessage="your total household income and size in the month the application is filled out, or the month before, or"
+            />
+          </li>
+
+          <li>
+            <FormattedMessage
+                id="app.slides.beforeYouBegin.eligibility2"
+                description="Eligibility List item"
+                defaultMessage="your child’s individual status as foster, homeless, migrant or runaway, or"
+            />
+          </li>
+
+          <li>
+            <FormattedMessage
+                id="app.slides.beforeYouBegin.eligibility3"
+                description="Eligibility List item"
+                defaultMessage="participation in an assistance program by any member of your household"
+            />
+          </li>
         </ul>
 
         <p>
-	  <FormattedMessage
+          <FormattedMessage
               id="app.slides.beforeYouBegin.status"
               description="citizenship or immigration doesn't affect status"
               defaultMessage="Your &nbsp;{tooltip}&nbsp; does not affect your eligibility for free and reduced price benefits."
               values={{
-		tooltip: <Tooltipcomp id="status" text={tooltiptext.status} target="US citizenship or immigration status" />
+                tooltip: <Tooltipcomp id="status" text={tooltiptext.status} target="US citizenship or immigration status" />
               }}
           />
         </p>
 
         <p>
-	  <FormattedMessage
+          <FormattedMessage
               id="app.slides.beforeYouBegin.questions"
               description="Click the question mark icons"
               defaultMessage="If you have questions at any point during the application, click the question mark icon to get help with the current section."
           />
-	</p>
+        </p>
 
-        <FormattedMessage
-            id="app.slides.beforeYouBegin.thingsNeeded"
-            description="Things you'll need."
-            defaultMessage="{things}"
-	    values={{
-	      things: <h2>Things you'll need</h2>
-            }}
-        />
+        <h2>
+          <FormattedMessage
+              id="app.slides.beforeYouBegin.thingsNeeded"
+              description="Things you'll need section header."
+              defaultMessage="Things you'll need"
+          />
+        </h2>
 
         <p>
-	  <FormattedMessage
+          <FormattedMessage
               id="app.slides.beforeYouBegin.thingsNeededMore"
-              description="List of things needed"
-              defaultMessage="Lastly, we compiled a list of the information you might need to complete the application. {checkitOut}"
-	      values={{
-		checkitOut: <a onClick={this.handleCheckItOut}>Check it out!</a>
+              description="Invitation to view full list of things needed to apply."
+              defaultMessage="Lastly, we compiled a list of the information you might need to complete the application. {link}"
+              values={{
+                link:
+                     <a onClick={this.handleCheckItOut}>
+                       <FormattedMessage
+                           id="app.slides.beforeYouBegin.thingsNeededMoreLinkText"
+                           description="Text for the link to view all information needed to apply."
+                           defaultMessage="Check it out!"
+                       />
+                     </a>
               }}
           />
-	</p>
+        </p>
 
         {!!this.showExtraContent &&
          <div>
-
-
-
            <p>
-	     <FormattedMessage
+             <FormattedMessage
                  id="app.slides.beforeYouBegin.informationHandy"
                  description="Handy Information Lead"
                  defaultMessage="If you have this information handy, it will make the application process fast and easy."
              />
-	   </p>
+           </p>
 
-	   <FormattedMessage
-               id="app.slides.beforeYouBegin.listOfThings"
-               description="Things you'll need."
-               defaultMessage="{list}"
-	       values={{
-		 list:
-                      <ul className="usa-content-list">
-                        <li>If you participate in &nbsp;
-                          <Tooltipcomp id="snap" text={tooltiptext.snap} target={assistanceProgramsVar.snap.accronym} />, &nbsp;
-                          <Tooltipcomp id="tanf" text={tooltiptext.tanf} target={assistanceProgramsVar.tanf.accronym} />, or &nbsp;
-                          <Tooltipcomp id="fdpir" text={tooltiptext.fdpir} target={assistanceProgramsVar.fdpir.accronym} /> &nbsp; you will need to know your case number (not your card or account number).
-                        </li>
-                        <li>
-                          If you do not participate in any of the above assistance programs, you will need to report your total household income. In that case…
-                          <ul>
-                            <li>if anyone in your house has a job, you may need to reference the earnings statements or pay stubs to report your gross income, which is different from the amount you actually receive in your paycheck.</li>
-                            <li>if anyone receives Social Security or retirement benefits, you may need to gather the benefit statements to report the amount and frequency of the payments.</li>
-                            <li>you may also need to reference other financial documents for additional sources of income.</li>
-                          </ul>
-                        </li>
-                      </ul>
-               }}
-           />
+           <ul className="usa-content-list">
+             <li>
+               <FormattedMessage
+                   id="app.slides.beforeYouBegin.caseNumber"
+                   description="List of programs that will require a case number."
+                   defaultMessage="If you participate in &nbsp;{snap}, &nbsp;{tanf} , or &nbsp;{fdpir}&nbsp; you will need to know your case number (not your card or account number)."
+                   values={{
+                     snap: <Tooltipcomp id="snap" text={tooltiptext.snap} target={assistanceProgramsVar.snap.accronym} />,
+                     tanf: <Tooltipcomp id="tanf" text={tooltiptext.tanf} target={assistanceProgramsVar.tanf.accronym} />,
+                     fdpir: <Tooltipcomp id="fdpir" text={tooltiptext.fdpir} target={assistanceProgramsVar.fdpir.accronym} />
+                   }}
+               />
+             </li>
+             <li>
+               <FormattedMessage
+                   id="app.slides.beforeYouBegin.whenReportHouseholdIncome"
+                   description="Description of when household income reporting is required."
+                   defaultMessage="If you do not participate in any of the above assistance programs, you will need to report your total household income. In that case…"
+               />
+               <ul>
+                 <li>
+                   <FormattedMessage
+                       id="app.slides.beforeYouBegin.whenReportHouseholdIncome1"
+                       description="Item required for household income reporting."
+                       defaultMessage="if anyone in your house has a job, you may need to reference the earnings statements or pay stubs to report your gross income, which is different from the amount you actually receive in your paycheck."
+                   />
+                 </li>
+                 <li>
+                   <FormattedMessage
+                       id="app.slides.beforeYouBegin.whenReportHouseholdIncome2"
+                       description="Item required for household income reporting."
+                       defaultMessage="if anyone receives Social Security or retirement benefits, you may need to gather the benefit statements to report the amount and frequency of the payments."
+                   />
+                 </li>
+                 <li>
+                   <FormattedMessage
+                       id="app.slides.beforeYouBegin.whenReportHouseholdIncome3"
+                       description="Item required for household income reporting."
+                       defaultMessage="you may also need to reference other financial documents for additional sources of income."
+                   />
+                 </li>
+               </ul>
+             </li>
+           </ul>
 
            <p>
-	     <FormattedMessage
+             <FormattedMessage
                  id="app.slides.beforeYouBegin.notSure"
                  description="reassuring message for worried people"
                  defaultMessage="Still not sure if you have everything you need? Don’t worry! The income section of the application contains detailed instructions and explanations about the sources of income you must include, and you can gather additional information then."
