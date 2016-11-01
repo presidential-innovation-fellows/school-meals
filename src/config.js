@@ -51,3 +51,25 @@ export const hmrPrograms = {
   },
   runaway: 'Runaway and Homeless Youth Act',
 }
+
+// Add to this list to support additional locales.
+// NOTE 1: keep English as the first entry.
+// NOTE 2: each locale must be accompanied by a corresponding
+//         translation JSON file in /translations/
+export const locales = [
+  {
+    code: 'en',
+    language: 'English',
+    iSpeak: 'I speak English'
+  },
+  {
+    code: 'es',
+    language: 'Español',
+    iSpeak: 'Yo hablo español'
+  },
+  {
+    code: 'zh',
+    language: '中文',
+    iSpeak: '我说中文'
+  },
+]
