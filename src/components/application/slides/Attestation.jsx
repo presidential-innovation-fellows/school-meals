@@ -21,14 +21,14 @@ class Attestation extends Component {
       <Slide header="I certify (promise)..." id="attestation" nextDisabled={!this.isValid}>
         <p className="usa-font-lead">
         <FormattedMessage
-              id="app.slides.atteStation.intro"
+              id="app.slides.attestation.intro"
               description="Introductory paragraph."
               defaultMessage="that all information on this application is true and that all income is reported."
         />
         </p>
         <p>
         <FormattedMessage
-              id="app.slides.atteStation.understand"
+              id="app.slides.attestation.understand"
               description="Understand that the information give should be correct."
               defaultMessage="I understand that this information is given in connection with the receipt of Federal funds, and that school o­fficials may verify (check) the information. I am aware that if I purposely* give false information, my children may lose meal benefits."
         />
@@ -73,7 +73,7 @@ class Attestation extends Component {
         </Form>
         <p><em>
         <FormattedMessage
-              id="app.slides.atteStation.starred"
+              id="app.slides.attestation.starred"
               description="Starred message that lying on the form is fraud."
               defaultMessage="*Deliberate misrepresentation of information may subject applicants to prosecution under applicable State and Federal law."
         />
