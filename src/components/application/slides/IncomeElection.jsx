@@ -2,8 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import BooleanRadio from '../BooleanRadio'
 import Slide from '../Slide'
 import { organization } from '../../../config'
-import { programDescription } from '../../../helpers'
-import { toSentenceSerial } from 'underscore.string'
+import { programDescription, toSentenceSerialArray } from '../../../helpers'
 import { observer } from 'mobx-react'
 
 @observer
@@ -13,7 +12,7 @@ class IncomeElection extends Component {
     const { allPeopleCollections, students } = applicationData
     const names = students.informalList(allPeopleCollections, ' and ')
     const singular = students.length === 1
-    const programDescriptions = toSentenceSerial([
+    const programDescriptions = toSentenceSerialArray([
       'isFoster',
       'isHomeless',
       'isMigrant',
