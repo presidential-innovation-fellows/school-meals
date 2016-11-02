@@ -73,7 +73,7 @@ class Attestation extends Component {
         </Form>
         <p><em>
         <FormattedMessage
-              id="app.slides.attestation.starred"
+              id="app.slides.attestation.misrepresentation"
               description="Starred message that lying on the form is fraud."
               defaultMessage="*Deliberate misrepresentation of information may subject applicants to prosecution under applicable State and Federal law."
         />
