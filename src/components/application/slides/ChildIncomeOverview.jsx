@@ -19,8 +19,18 @@ class ChildIncomeOverview extends Component {
   render() {
     const { allChildren } = this.props
 
-    const pluralizedChildrenIncome =
-      (allChildren.length === 1 ? 'child\'s' : 'childrens\'') + ' income'
+    const pluralizedChildrenIncome = (allChildren.length === 1 ?
+      <FormattedMessage
+          id="app.slides.childIncomeOverview.singleChildIncome"
+          description="Possessive phrase for a single child's income."
+          defaultMessage="child's income"
+      /> :
+      <FormattedMessage
+          id="app.slides.childIncomeOverview.multipleChildIncome"
+          description="Possessive phrase for multiple children's income."
+          defaultMessage="children's income"
+      />
+    )
 
     return(
       <Slide nextDisabled={!this.isValid} id="child-income">
@@ -29,17 +39,10 @@ class ChildIncomeOverview extends Component {
         <FormattedMessage
               id="app.slides.childIncomeOverview.intro"
               description="Introductory paragraph."
-              defaultMessage="The next few questions are about your &nbsp;{tooltip}&nbsp;."
+              defaultMessage="The next few questions are about your {tooltip}."
               values={{
                 tooltip: <Tooltipcomp text={tooltiptext.childincome}>
-                            <FormattedMessage
-                                id="app.slides.childIncomeOverview.introToolTip"
-                                description="Introductory tooltip"
-                                defaultMessage="{income}"
-                                  values={{
-                                    income: pluralizedChildrenIncome
-                                  }}
-                            />
+                           {pluralizedChildrenIncome}
                          </Tooltipcomp>
               }}
           />
