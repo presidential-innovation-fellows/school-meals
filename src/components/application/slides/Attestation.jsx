@@ -4,6 +4,7 @@ import Form from '../Form'
 import Fieldset from '../Fieldset'
 import InputField from '../InputField'
 import { observer } from 'mobx-react'
+import FormattedMessage from '../FormattedMessage'
 
 @observer
 class Attestation extends Component {
@@ -18,8 +19,20 @@ class Attestation extends Component {
 
     return (
       <Slide header="I certify (promise)..." id="attestation" nextDisabled={!this.isValid}>
-        <p className="usa-font-lead">that all information on this application is true and that all income is reported.</p>
-        <p>I understand that this information is given in connection with the receipt of Federal funds, and that school o­fficials may verify (check) the information. I am aware that if I purposely* give false information, my children may lose meal benefits.</p>
+        <p className="usa-font-lead">
+        <FormattedMessage
+              id="app.slides.attestation.intro"
+              description="Introductory paragraph."
+              defaultMessage="that all information on this application is true and that all income is reported."
+        />
+        </p>
+        <p>
+        <FormattedMessage
+              id="app.slides.attestation.understand"
+              description="Understand that the information give should be correct."
+              defaultMessage="I understand that this information is given in connection with the receipt of Federal funds, and that school o­fficials may verify (check) the information. I am aware that if I purposely* give false information, my children may lose meal benefits."
+        />
+        </p>
 
         <Form>
           <Fieldset legend="Attestation">
@@ -58,7 +71,13 @@ class Attestation extends Component {
             />
           </Fieldset>
         </Form>
-        <p><em>*Deliberate misrepresentation of information may subject applicants to prosecution under applicable State and Federal law.</em></p>
+        <p><em>
+        <FormattedMessage
+              id="app.slides.attestation.misrepresentation"
+              description="Starred message that lying on the form is fraud."
+              defaultMessage="*Deliberate misrepresentation of information may subject applicants to prosecution under applicable State and Federal law."
+        />
+        </em></p>
       </Slide>
     )
   }
