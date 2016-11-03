@@ -33,9 +33,7 @@ class AssistancePrograms extends Component {
 
         <div className="well">
           <p>
-            A &nbsp;
-            <Tooltipcomp id="household" text={tooltiptext.household} target="household" />
-          &nbsp; is defined as a group of people, related or unrelated, that usually live together and share income and expenses.
+            A household is defined as a group of people, related or unrelated, that usually live together and share income and expenses.
         </p>            
             
           <p>
