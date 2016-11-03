@@ -12,8 +12,8 @@ export default class Adults extends Component {
     return (
       <Article>
             <Household />
-            <Standard title={help.deployedTitle} body={help.deployedBody} />
             <Standard title={help.noIncomeTitle} body={help.noIncomeBody} />
+            <Standard title={help.deployedTitle} body={help.deployedBody} />
       </Article>
     )
   }

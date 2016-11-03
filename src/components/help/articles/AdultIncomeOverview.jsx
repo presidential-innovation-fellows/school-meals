@@ -8,6 +8,7 @@ import ReportCombat from '../topics/ReportCombat'
 import Household from '../topics/Household'
 import RegularCash from '../topics/RegularCash'
 import NetSelfEmployment from '../topics/NetSelfEmployment'
+import WhatIncome from '../topics/WhatIncome'
 
 //F24, F26-F40, F13, F15, D5-D23
 
@@ -15,7 +16,8 @@ export default class AdultIncomeOverview extends Component {
   render() {
     return (
       <Article>
-            <Standard title={help.childIncomeTitle} body={help.childIncomeBody} />
+            <WhatIncome />
+            <Standard title={help.grossTitle} body={help.grossBody} />
             <Standard title={help.netTitle} body={help.netBody} />
             <NotTheSame />
             <Standard title={help.militaryTitle} body={help.militaryBody} />
@@ -30,8 +32,7 @@ export default class AdultIncomeOverview extends Component {
             <Standard title={help.interestTitle} body={help.interestBody} />
             <Standard title={help.seasonalTitle} body={help.seasonalBody} />
             <Standard title={help.noIncomeTitle} body={help.noIncomeBody} />
-            <Standard title={help.ssnTitle} body={help.ssnBody} />
- 		<Standard title={help.checkedTitle} body={help.checkedBody} />
+            <Standard title={help.checkedTitle} body={help.checkedBody} />
             <Household />
             <bodyLabels>Definitions</bodyLabels>
             <Standard title={define.currentTerm} body={define.currentDef} />
