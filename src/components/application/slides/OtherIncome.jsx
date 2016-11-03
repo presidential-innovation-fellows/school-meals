@@ -39,7 +39,6 @@ class OtherIncome extends Component {
 
         <IncomeSource incomeSources={incomeSources} name="annuity">
           <Tooltipcomp id="annuity" text={tooltiptext.annuity} target="Annuity" />
-          Annuity
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="other">
