@@ -3,6 +3,7 @@ import Article from '../Article'
 import Topic from '../Topic'
 import Household from '../topics/Household'
 import RegularCash from '../topics/RegularCash'
+import WhatIncome from '../topics/WhatIncome'
 import { help, define } from './HelpText'
 import Standard from '../TopicStandard'
 
@@ -13,7 +14,7 @@ export default class ChildIncome extends Component {
     		<Standard title={help.childIncomeTitle} body={help.childIncomeBody} />
     		<Standard title={help.grossTitle} body={help.grossBody} />
     		<Standard title={help.netTitle} body={help.netBody} />
-    		<Standard title={help.qualifyRunawayTitle} body={help.qualifyRunawayBody} />
+        <WhatIncome />
     		<Household />
     		<Standard title={help.sharedCustodyTitle} body={help.sharedCustodyBody} />
     		<bodyLabels>Definitions</bodyLabels>
