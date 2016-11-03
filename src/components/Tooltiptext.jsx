@@ -36,7 +36,7 @@
   strikeBenefits: 'Compensation paid by a union to workers on strike.',
   blackLung: 'Payments and medical treatment for people that become disabled from Black Lung Disease from working in or around the nation’s coal mines.',
   railroad: 'Payments to qualified railroad employees that are retired or disabled.',
-  monthlyIncomeSum: 'We calculated this number by converting all the income you reported into a monthly amount.',
+  monthlyIncomeSum: 'We calculated this number by converting all the income you reported into a monthly amount. Remember, this should be a gross amount, so it will be more than what you receive as take-home pay.',
   earnedInterest: 'See the FAQ "How do I know if I have income from earned interest?" in Help.',
   rental: 'See the FAQ "How should I report income from rented space or properties?" in Help.',
   military: 'See Help for information about sources of income in military that are and are not included as household income.',
