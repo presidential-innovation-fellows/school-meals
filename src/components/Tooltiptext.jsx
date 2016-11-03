@@ -50,7 +50,6 @@
   mckinney: 'Provides Federal money for homeless shelter programs and facilitates public school access for homeless children and youth.',
   mep: 'Provides services to children who have moved across school district lines, within the last three years, in order to accompany or join a parent or guardian who seeks or obtains temporary or seasonal work in argiculture or fishing.',
   runaway: 'Authorizes community-based runaway and homeless youth projects to provide temporary shelter and care to youth who are in need of temporary shelter, counseling, and aftercare services.',
-  calculatedIncome: 'We calculated this number by converting all the income you reported into a monthly amount.  Remember, this should be a gross amount, so it will be more than what you receive as take-home pay.',
   littleguy: '’',
 }
 
