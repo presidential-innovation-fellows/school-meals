@@ -48,18 +48,17 @@ class SearchTopics extends Component {
   render() {
     return (
       <div>
-        <form style={{width: "100%"}}>
-          <div role="search">
-            <input
-                id="search-field-small"
-                type="search"
-                name="search"
-                placeholder="Search term"
-                value={this.state.searchVal}
-                onChange={this.handleChange.bind(this)}
-            />
-          </div>
-        </form>
+        <div role="search">
+          <input
+              id="search-field-small"
+              type="search"
+              name="search"
+              placeholder="Search term"
+              value={this.state.searchVal}
+              onChange={this.handleChange.bind(this)}
+          />
+        </div>
+
         <div className="searchable-help-topics">
           <bodyLabels>Search Results</bodyLabels>
           <All showLabels={false} />
