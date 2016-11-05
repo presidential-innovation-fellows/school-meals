@@ -1,6 +1,5 @@
 import classnames from 'classnames';
 import React, { Component, PropTypes } from 'react'
-import { IntlProvider } from 'react-intl'
 import { observer } from 'mobx-react'
 import Application from './application/Application'
 import ApplicationData from '../stores/ApplicationData'
@@ -39,9 +38,6 @@ class App extends Component {
     })
 
     return (
-      <IntlProvider locale={localeData.code}
-                    messages={localeData.translations}>
-
       <div className={className}>
         <Navigation navigationData={navigationData} helpData={helpData} />
         <Progress navigationData={navigationData}
@@ -56,8 +52,6 @@ class App extends Component {
         <Help helpData={helpData} />
         <Footer />
       </div>
-
-      </IntlProvider>
     )
   }
 }

@@ -9,7 +9,6 @@ import { Glyphicon, OverlayTrigger } from 'react-bootstrap'
 import { tooltiptext } from '../../Tooltiptext'
 import Tooltipcomp from '../Tooltip'
 import FormattedMessage from '../FormattedMessage'
-import { IntlProvider, FormattedMessage as FM } from 'react-intl'
 
 @observer
 class BeforeYouBegin extends React.Component {
@@ -31,9 +30,9 @@ class BeforeYouBegin extends React.Component {
     const threethings = tooltiptext.threethingsfirst + ' ' + organization.name + ' ' + tooltiptext.threethingssecond
 
     return (
-        <Slide header="Before you begin..." id="before-you-begin">
+      <Slide header="Before you begin..." id="before-you-begin">
         <p className="usa-font-lead">
-          <FM
+          <FormattedMessage
               id="app.slides.beforeYouBegin.subheading"
               description="Introductory tagline."
               defaultMessage="there are a few things you should know."
