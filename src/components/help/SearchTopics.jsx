@@ -61,7 +61,7 @@ class SearchTopics extends Component {
 
         <div className="searchable-help-topics">
           <bodyLabels>Search Results</bodyLabels>
-          <All showLabels={false} />
+          { this.state.searchVal && <All showLabels={false} /> }
         </div>
       </div>
     )
