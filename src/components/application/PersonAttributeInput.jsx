@@ -5,21 +5,15 @@ import InputField from './InputField'
 @observer
 class PersonAttributeInput extends Component {
   render() {
-    const {
-      person,
-      name,
-      label,
-      required,
-      placeholder
-    } = this.props
+    const { field, person } = this.props
 
     return(
       <InputField
-          name={name}
-          label={label}
-          placeholder={placeholder}
+          name={field.name}
+          label={field.label}
+          placeholder={field.placeholder}
           object={person}
-          required={required}
+          required={!!field.required}
       />
     )
   }
@@ -27,14 +21,7 @@ class PersonAttributeInput extends Component {
 
 PersonAttributeInput.propTypes = {
   person: PropTypes.object.isRequired,
-  name: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
-  placeholder: PropTypes.string,
-  required: PropTypes.bool
-}
-
-PersonAttributeInput.defaultProps = {
-  required: false
+  field: PropTypes.object.isRequired
 }
 
 export default PersonAttributeInput
