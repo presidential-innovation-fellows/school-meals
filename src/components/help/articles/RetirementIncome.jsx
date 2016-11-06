@@ -2,7 +2,6 @@ import React, { Component, PropTypes } from 'react'
 import Article from '../Article'
 import Topic from '../Topic'
 import { help, define } from './HelpText'
-import Standard from '../TopicStandard'
 import NotTheSame from '../topics/NotTheSame'
 import WhatIncome from '../topics/WhatIncome'
 
@@ -14,14 +13,14 @@ export default class RetirementIncome extends Component {
     return (
       <Article>
         <NotTheSame />
-        <Standard title={help.grossTitle} body={help.grossBody} />
-        <Standard title={help.netTitle} body={help.netBody} />
+        <Topic title={help.grossTitle} body={help.grossBody} />
+        <Topic title={help.netTitle} body={help.netBody} />
         <WhatIncome />
         <bodyLabels>Definitions</bodyLabels>
-        <Standard title={define.socialSecurityTerm} body={define.socialSecurityDef} />
-        <Standard title={define.blackLungTerm} body={define.blackLungDef} />
-        <Standard title={define.railroadRetirementTerm} body={define.railroadRetirementDef} />
-        <Standard title={define.currentTerm} body={define.currentDef} />
+        <Topic title={define.socialSecurityTerm} body={define.socialSecurityDef} />
+        <Topic title={define.blackLungTerm} body={define.blackLungDef} />
+        <Topic title={define.railroadRetirementTerm} body={define.railroadRetirementDef} />
+        <Topic title={define.currentTerm} body={define.currentDef} />
       </Article>
     )
   }

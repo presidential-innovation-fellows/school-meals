@@ -4,7 +4,6 @@ import Topic from '../Topic'
 import { toSentenceSerial } from 'underscore.string'
 import { assistanceProgramsVar, organization } from '../../../config'
 import { help } from './HelpText'
-import Standard from '../TopicStandard'
 import PaperApp from '../topics/PaperApp'
 
 export default class Welcome extends Component {
@@ -15,19 +14,19 @@ export default class Welcome extends Component {
     return (
       <Article>
         <PaperApp />
-        <Standard title={help.newAppTitle} body={help.newAppBody} />
-        <Standard title={help.childAppTitle} body={help.childAppBody} />
-        <Standard title={help.letterTitle} body={help.letterBody} />
-        <Standard title={help.applyLaterTitle} body={help.applyLaterBody} />
-        <Standard title={help.localProgramTitle} body={help.localProgramBody} />
-        <Standard title={help.fosterQualifyTitle} body={help.fosterQualifyBody} />
-        <Standard title={help.wicTitle} body={help.wicBody} />
-        <Standard title={help.headStartTitle} body={help.headStartBody} />
-        <Standard title={help.otherProgramsTitle} body={help.otherProgramsBody} />
-        <Standard title={help.usCitizenTitle} body={help.usCitizenBody} />
-        <Standard title={help.publicChargeTitle} body={help.publicChargeBody} />
-        <Standard title={help.newAppTitle} body={help.newAppBody} />
-        <Standard title={help.disagreeTitle} body={help.disagreeBody} />
+        <Topic title={help.newAppTitle} body={help.newAppBody} />
+        <Topic title={help.childAppTitle} body={help.childAppBody} />
+        <Topic title={help.letterTitle} body={help.letterBody} />
+        <Topic title={help.applyLaterTitle} body={help.applyLaterBody} />
+        <Topic title={help.localProgramTitle} body={help.localProgramBody} />
+        <Topic title={help.fosterQualifyTitle} body={help.fosterQualifyBody} />
+        <Topic title={help.wicTitle} body={help.wicBody} />
+        <Topic title={help.headStartTitle} body={help.headStartBody} />
+        <Topic title={help.otherProgramsTitle} body={help.otherProgramsBody} />
+        <Topic title={help.usCitizenTitle} body={help.usCitizenBody} />
+        <Topic title={help.publicChargeTitle} body={help.publicChargeBody} />
+        <Topic title={help.newAppTitle} body={help.newAppBody} />
+        <Topic title={help.disagreeTitle} body={help.disagreeBody} />
       </Article>
     )
   }
