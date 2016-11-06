@@ -96,6 +96,10 @@ footer .logo {
   width: 100px;
 }
 
+footer .not-real-disclaimer {
+  text-transform: uppercase;
+}
+
 .info-target {
   border-bottom: 1px dotted #337ab7;
   cursor: pointer;
