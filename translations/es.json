@@ -51,5 +51,8 @@
   "tooltip.eligibility": "Vea Ayuda para las Directrices de Elegibilidad de Ingresos para beneficios de precio reducido.",
   "tooltip.letter": "Compruebe que la carta incluya a todos los estudiantes en el hogar, porque son elegibles para comidas gratis. Si no es así, comuníquese con la escuela para corregir el error.",
   "tooltip.threethings": "Si no está seguro si califica, llene una solicitud y los funcionarios de {organizationName} determinarán si usted es elegible.",
-  "tooltip.usStatus": "Los beneficios no monetarios recibidos a través de los programas de comidas escolares no están sujetos a consideración de cargo público. No se le deportará, se le denegará la entrada al país o se le negará el estatus permanente porque solicita o recibe beneficios de comidas escolares."
+  "tooltip.usStatus": "Los beneficios no monetarios recibidos a través de los programas de comidas escolares no están sujetos a consideración de cargo público. No se le deportará, se le denegará la entrada al país o se le negará el estatus permanente porque solicita o recibe beneficios de comidas escolares.",
+  "tooltip.snap": "El Programa de Asistencia de Nutrición Suplementaria (SNAP, por sus siglas en inglés) es un programa que ofrece asistencia nutricional a millones de individuos y familias elegibles y de bajos ingresos.",
+  "tooltip.tanf": "El programa de Asistencia Temporal para Familias Necesitadas (TANF, por sus siglas en inglés) está diseñado para ayudar a familias necesitadas a lograr la autosuficiencia proporcionando asistencia en efectivo, así como otros apoyos y servicios.",
+  "tooltip.fdpir": "El Programa de Distribución de Alimentos para Reservas Indígenas (FDPIR, por sus siglas en inglés) es un programa federal que provee alimentos del USDA a hogares de bajos índices, incluyendo ancianos que viven de reservas indias ya familias de nativos americanos residentes en áreas designadas cerca de reservas y en el Estado de Oklahoma."
 }
