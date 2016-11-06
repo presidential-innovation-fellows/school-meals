@@ -132,7 +132,7 @@ class BeforeYouBegin extends React.Component {
               defaultMessage="Your &nbsp;{tooltip}&nbsp; does not affect your eligibility for free and reduced price benefits."
               values={{
                 tooltip:
-                        <Tooltipcomp text={tooltiptext.status}>
+                        <Tooltipcomp text={tooltiptext.usStatus}>
                           <FormattedMessage
                               id="app.slides.beforeYouBegin.usStatus"
                               description="As in the status of the person/family applying for benefits."

@@ -50,5 +50,6 @@
 
   "tooltip.eligibility": "Vea Ayuda para las Directrices de Elegibilidad de Ingresos para beneficios de precio reducido.",
   "tooltip.letter": "Compruebe que la carta incluya a todos los estudiantes en el hogar, porque son elegibles para comidas gratis. Si no es así, comuníquese con la escuela para corregir el error.",
-  "tooltip.threethings": "Si no está seguro si califica, llene una solicitud y los funcionarios de {organizationName} determinarán si usted es elegible."
+  "tooltip.threethings": "Si no está seguro si califica, llene una solicitud y los funcionarios de {organizationName} determinarán si usted es elegible.",
+  "tooltip.usStatus": "Los beneficios no monetarios recibidos a través de los programas de comidas escolares no están sujetos a consideración de cargo público. No se le deportará, se le denegará la entrada al país o se le negará el estatus permanente porque solicita o recibe beneficios de comidas escolares."
 }
