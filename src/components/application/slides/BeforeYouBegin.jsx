@@ -50,7 +50,7 @@ class BeforeYouBegin extends React.Component {
           <FormattedMessage
               id="app.slides.beforeYouBegin.householdPrograms"
               description="Hist that you can skip most of application with a household program."
-              defaultMessage="If you received a &nbsp;{tooltip}&nbsp; from the school saying that your children were automatically approved (directly certified) for free meals for the {schoolYear} school year because someone in your household participates in {assistanceProgramList} then you do not need to submit an application."
+              defaultMessage="If you received a {tooltip} from the school saying that your children were automatically approved (directly certified) for free meals for the {schoolYear} school year because someone in your household participates in {assistanceProgramList} then you do not need to submit an application."
               values={{
                 tooltip:
                         <Tooltipcomp text={tooltiptext.letter}>
@@ -165,18 +165,16 @@ class BeforeYouBegin extends React.Component {
           <FormattedMessage
               id="app.slides.beforeYouBegin.thingsNeededMore"
               description="Invitation to view full list of things needed to apply."
-              defaultMessage="Lastly, we compiled a list of the information you might need to complete the application. {link}"
-              values={{
-                link:
-                     <a onClick={this.handleCheckItOut}>
-                       <FormattedMessage
-                           id="app.slides.beforeYouBegin.thingsNeededMoreLinkText"
-                           description="Text for the link to view all information needed to apply."
-                           defaultMessage="Check it out!"
-                       />
-                     </a>
-              }}
+              defaultMessage="Lastly, we compiled a list of the information you might need to complete the application."
           />
+          &nbsp;
+          <a onClick={this.handleCheckItOut}>
+            <FormattedMessage
+                id="app.slides.beforeYouBegin.thingsNeededMoreLinkText"
+                description="Text for the link to view all information needed to apply."
+                defaultMessage="Check it out!"
+            />
+          </a>
         </p>
 
         {!!this.showExtraContent &&
