@@ -1,28 +1,42 @@
 {
-  "nav.data": "Datos",
-  "nav.help": "Ayuda",
-  "nav.title": "Solicitud de Comidas Escolares Gratis oa Precio Reducido para {organizationName}",
-  "nav.shortTitle": "Solicitud de Comidas Escolares para {organizationShortName}",
-
-  "progress.begin": "Empezar",
-  "progress.students": "Estudiantes",
-  "progress.assistancePrograms": "Programas",
-  "progress.otherKids": "Otros Niños",
-  "progress.adults": "Adultos",
-  "progress.summary": "Resumen",
-
-  "footer.notRealDisclaimer": "Esto no es una solicitud real para beneficios de comida escolar",
-
   "app.slide.backButton": "Regresar",
   "app.slide.nextButton": "Seguir",
 
-  "app.slides.welcome.header": "¡Bienvenido!",
-  "app.slides.welcome.nextButton": "Comenzar",
-  "app.slides.welcome.intro": "Esta es la aplicación electrónica de {organizationName} de forma gratuita y comidas a precio reducido para los Programas Nacionales de {usda} para Desayuno y Almuerzo en Escuela.",
-  "app.slides.welcome.onlineInstructions": "Esta aplicación interactiva le guiará a través del proceso de solicitud. Cuando esté listo para aplicar, haga clic en el botón «{buttonText}» a continuación para comenzar.",
-  "app.slides.welcome.paperInstructions": "Si desea solicitar el uso de la {link}, puede imprimir y completar y luego volver a nosotros en {address}.",
-  "app.slides.welcome.paperApplication": "aplicación en papel",
-
+  "app.slides.beforeYouBegin.eligibility": "La elegibilidad",
+  "app.slides.beforeYouBegin.eligibility1": "el ingreso total de su hogar y su tamaño en el mes en que se llena la solicitud, o el mes anterior, o",
+  "app.slides.beforeYouBegin.eligibility2": "el estado individual de su hijo como adoptivo, sin hogar, migrante o fugitivo, o",
+  "app.slides.beforeYouBegin.eligibility3": "participación en un programa de asistencia por cualquier miembro de su hogar",
   "app.slides.beforeYouBegin.header": "Antes de que empiece…",
-  "app.slides.beforeYouBegin.subheading": "hay algunas cosas que usted debe saber."
+  "app.slides.beforeYouBegin.householdPrograms": "Si recibió una {tooltip} de la escuela diciendo que sus hijos fueron automáticamente aprobados (certificados directamente) para comidas gratis para el año escolar {schoolYear} porque alguien en su hogar participa en {assistanceProgramList} entonces no es necesario presentar una solicitud.",
+  "app.slides.beforeYouBegin.letter": "carta",
+  "app.slides.beforeYouBegin.mealEligibilityDescription": "para los beneficios de comidas escolares gratuitas oa precio reducido se basa en cualquiera de",
+  "app.slides.beforeYouBegin.oneApplication": "Solo necesitamos una solicitud para todos los niños de su hogar que asisten a {organizationName}",
+  "app.slides.beforeYouBegin.questions": "Si tiene preguntas en cualquier momento durante la aplicación, haga clic en el icono del signo de interrogación para obtener ayuda con la sección actual.",
+  "app.slides.beforeYouBegin.status": "Su {tooltip} no afecta su elegibilidad para recibir beneficios gratuitos oa precio reducido.",
+  "app.slides.beforeYouBegin.subheading": "hay algunas cosas que usted debe saber.",
+  "app.slides.beforeYouBegin.thingsNeeded": "Cosas que necesitarás",
+  "app.slides.beforeYouBegin.thingsNeededMore": "Por último, hemos compilado una lista de la información que podría necesitar para completar la aplicación.",
+  "app.slides.beforeYouBegin.thingsNeededMoreLinkText": "¡Echale un vistazo!",
+  "app.slides.beforeYouBegin.threeThings": "estas tres cosas:",
+  "app.slides.beforeYouBegin.usStatus": "estado de ciudadanía o inmigración estadounidense",
+  "app.slides.welcome.header": "¡Bienvenido!",
+  "app.slides.welcome.intro": "Esta es la aplicación electrónica de {organizationName} de forma gratuita y comidas a precio reducido para los Programas Nacionales de {usda} para Desayuno y Almuerzo en Escuela.",
+  "app.slides.welcome.nextButton": "Comenzar",
+  "app.slides.welcome.onlineInstructions": "Esta aplicación interactiva le guiará a través del proceso de solicitud. Cuando esté listo para aplicar, haga clic en el botón «{buttonText}» a continuación para comenzar.",
+  "app.slides.welcome.paperApplication": "aplicación en papel",
+  "app.slides.welcome.paperInstructions": "Si desea solicitar el uso de la {link}, puede imprimir y completar y luego volver a nosotros en {address}.",
+
+  "footer.notRealDisclaimer": "Esto no es una solicitud real para beneficios de comida escolar",
+
+  "nav.data": "Datos",
+  "nav.help": "Ayuda",
+  "nav.shortTitle": "Solicitud de Comidas Escolares para {organizationShortName}",
+  "nav.title": "Solicitud de Comidas Escolares Gratis oa Precio Reducido para {organizationName}",
+
+  "progress.adults": "Adultos",
+  "progress.assistancePrograms": "Programas",
+  "progress.begin": "Empezar",
+  "progress.otherKids": "Otros Niños",
+  "progress.students": "Estudiantes",
+  "progress.summary": "Resumen"
 }
