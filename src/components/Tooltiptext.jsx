@@ -2,7 +2,13 @@ import React from 'react'
 import FormattedMessage from './application/FormattedMessage'
 
 export const tooltiptext = {
-  letter: 'Check that the letter includes all the students in the household, because they are eligible for free meals.  If not, contact the school to correct the mistake.',
+
+  letter:
+         <FormattedMessage
+             id="tooltip.letter"
+             description="Tooltip text about letter requiring that all strudents are named.."
+             defaultMessage="Check that the letter includes all the students in the household, because they are eligible for free meals.  If not, contact the school to correct the mistake."
+         />,
   //split variable used on BeforeYouBegin slide.  Be sure to update both!
   threethingsfirst: 'If you are unsure if you qualify, fill out an application and officials at',
   threethingssecond: 'will determine if you are eligible.',

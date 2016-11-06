@@ -38,5 +38,7 @@
   "progress.begin": "Empezar",
   "progress.otherKids": "Otros Niños",
   "progress.students": "Estudiantes",
-  "progress.summary": "Resumen"
+  "progress.summary": "Resumen",
+
+  "tooltip.letter": "Compruebe que la carta incluya a todos los estudiantes en el hogar, porque son elegibles para comidas gratis. Si no es así, comuníquese con la escuela para corregir el error."
 }
