@@ -1,5 +1,6 @@
 import uswds from 'uswds'
 import React, { Component, PropTypes } from 'react'
+import FormattedMessage from '../application/FormattedMessage'
 
 import Welcome from './articles/Welcome'
 import BeforeYouBegin from './articles/BeforeYouBegin'
@@ -32,7 +33,13 @@ class SlideTopics extends Component {
   render() {
     return(
       <div>
-        <bodyLabels>Frequently Asked Questions</bodyLabels>
+        <bodyLabels>
+          <FormattedMessage
+              id="help.faq"
+              description="FAQ help section title."
+              defaultMessage="Frequently Asked Questions"
+          />
+        </bodyLabels>
         {(() => {
           switch (this.props.article) {
             case 'welcome':                 return <Welcome />
