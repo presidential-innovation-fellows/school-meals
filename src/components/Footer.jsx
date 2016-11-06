@@ -10,7 +10,7 @@ class Footer extends Component {
 
   render () {
     return (
-      <footer className="pageFooter">
+      <footer className="page-footer">
         <div className="usa-grid">
           <div><strong>THIS IS NOT A REAL APPLICATION FOR SCHOOL MEAL BENEFITS</strong></div>
           <img className="logo" src={organization.logoUrl} alt="Applewood Logo" />
