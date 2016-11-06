@@ -1,5 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
+import Checkbox from './Checkbox'
+import Checkboxes from './Checkboxes'
 import InputField from './InputField'
 
 @observer
@@ -7,15 +9,28 @@ class PersonAttributeInput extends Component {
   render() {
     const { field, person } = this.props
 
-    return(
-      <InputField
-          name={field.name}
-          label={field.label}
-          placeholder={field.placeholder}
-          object={person}
-          required={!!field.required}
-      />
-    )
+    switch(field.dataType) {
+      case PropTypes.bool:
+        return <div>
+          <br />
+          <Checkboxes>
+            <Checkbox
+                name={field.name}
+                object={person}
+            >
+              <strong>{field.label}</strong>
+            </Checkbox>
+          </Checkboxes>
+        </div>
+      default:
+        return <InputField
+                   label={field.label}
+                   name={field.name}
+                   object={person}
+                   placeholder={field.placeholder}
+                   required={!!field.required}
+               />
+    }
   }
 }
 
