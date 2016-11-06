@@ -87,13 +87,17 @@ select.usa-input-success {
   margin-top: 0;
 }
 
-footer.pageFooter {
+footer.page-footer {
   padding: 1em 0;
 }
 
 footer .logo {
   float: right;
   width: 100px;
+}
+
+footer .not-real-disclaimer {
+  text-transform: uppercase;
 }
 
 .info-target {
@@ -169,7 +173,7 @@ footer .logo {
     display: none;
   }
 
-  footer.pageFooter {
+  footer.page-footer {
     background-color: #323a45;
     color: white;
   }

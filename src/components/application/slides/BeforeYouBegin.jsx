@@ -27,10 +27,15 @@ class BeforeYouBegin extends React.Component {
     const assistanceProgramList =
       toSentenceSerial(assistancePrograms, ', ', ' or ')
 
-    const threethings = tooltiptext.threethingsfirst + ' ' + organization.name + ' ' + tooltiptext.threethingssecond
+    const headerText =
+      <FormattedMessage
+          id="app.slides.beforeYouBegin.header"
+          description="Text for the header of the slide."
+          defaultMessage="Before you begin…"
+      />
 
     return (
-      <Slide header="Before you begin..." id="before-you-begin">
+      <Slide header={headerText} id="before-you-begin">
         <p className="usa-font-lead">
           <FormattedMessage
               id="app.slides.beforeYouBegin.subheading"
@@ -43,7 +48,7 @@ class BeforeYouBegin extends React.Component {
           <FormattedMessage
               id="app.slides.beforeYouBegin.householdPrograms"
               description="Hist that you can skip most of application with a household program."
-              defaultMessage="If you received a &nbsp;{tooltip}&nbsp; from the school saying that your children were automatically approved (directly certified) for free meals for the {schoolYear} school year because someone in your household participates in {assistanceProgramList} then you do not need to submit an application."
+              defaultMessage="If you received a {tooltip} from the school saying that your children were automatically approved (directly certified) for free meals for the {schoolYear} school year because someone in your household participates in {assistanceProgramList} then you do not need to submit an application."
               values={{
                 tooltip:
                         <Tooltipcomp text={tooltiptext.letter}>
@@ -84,7 +89,7 @@ class BeforeYouBegin extends React.Component {
                 description="Only need one application for your household"
                 defaultMessage="for free or reduced price school meal benefits is based on any one of these"
             />&nbsp;
-            <Tooltipcomp text={threethings}>
+            <Tooltipcomp text={tooltiptext.threethings}>
               <FormattedMessage
                   id="app.slides.beforeYouBegin.threeThings"
                   description="As in the requirements for program qualification."
@@ -127,7 +132,7 @@ class BeforeYouBegin extends React.Component {
               defaultMessage="Your &nbsp;{tooltip}&nbsp; does not affect your eligibility for free and reduced price benefits."
               values={{
                 tooltip:
-                        <Tooltipcomp text={tooltiptext.status}>
+                        <Tooltipcomp text={tooltiptext.usStatus}>
                           <FormattedMessage
                               id="app.slides.beforeYouBegin.usStatus"
                               description="As in the status of the person/family applying for benefits."
@@ -158,18 +163,16 @@ class BeforeYouBegin extends React.Component {
           <FormattedMessage
               id="app.slides.beforeYouBegin.thingsNeededMore"
               description="Invitation to view full list of things needed to apply."
-              defaultMessage="Lastly, we compiled a list of the information you might need to complete the application. {link}"
-              values={{
-                link:
-                     <a onClick={this.handleCheckItOut}>
-                       <FormattedMessage
-                           id="app.slides.beforeYouBegin.thingsNeededMoreLinkText"
-                           description="Text for the link to view all information needed to apply."
-                           defaultMessage="Check it out!"
-                       />
-                     </a>
-              }}
+              defaultMessage="Lastly, we compiled a list of the information you might need to complete the application."
           />
+          &nbsp;
+          <a onClick={this.handleCheckItOut}>
+            <FormattedMessage
+                id="app.slides.beforeYouBegin.thingsNeededMoreLinkText"
+                description="Text for the link to view all information needed to apply."
+                defaultMessage="Check it out!"
+            />
+          </a>
         </p>
 
         {!!this.showExtraContent &&
@@ -187,7 +190,7 @@ class BeforeYouBegin extends React.Component {
                <FormattedMessage
                    id="app.slides.beforeYouBegin.caseNumber"
                    description="List of programs that will require a case number."
-                   defaultMessage="If you participate in &nbsp;{snap}, &nbsp;{tanf} , or &nbsp;{fdpir}&nbsp; you will need to know your case number (not your card or account number)."
+                   defaultMessage="If you participate in {snap}, {tanf} , or {fdpir} you will need to know your case number (not your card or account number)."
                    values={{
                      snap: <Tooltipcomp text={tooltiptext.snap} target={assistanceProgramsVar.snap.accronym} />,
                      tanf: <Tooltipcomp text={tooltiptext.tanf} target={assistanceProgramsVar.tanf.accronym} />,
@@ -230,7 +233,7 @@ class BeforeYouBegin extends React.Component {
            <p>
              <FormattedMessage
                  id="app.slides.beforeYouBegin.notSure"
-                 description="reassuring message for worried people"
+                 description="Reassuring message about the application prompting for information as needed."
                  defaultMessage="Still not sure if you have everything you need? Don’t worry! The income section of the application contains detailed instructions and explanations about the sources of income you must include, and you can gather additional information then."
              />
            </p>
