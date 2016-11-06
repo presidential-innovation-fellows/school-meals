@@ -2,6 +2,7 @@ import classNames from 'classnames'
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
 import Button from './Button'
+import FormattedMessage from './FormattedMessage'
 
 @observer
 class Slide extends Component {
@@ -92,14 +93,14 @@ Slide.contextTypes = {
 Slide.propTypes = {
   id: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
-  header: PropTypes.string,
+  header: PropTypes.node,
   helpArticle: PropTypes.string,
   showBack: PropTypes.bool,
   showNext: PropTypes.bool,
   backDisabled: PropTypes.bool,
   nextDisabled: PropTypes.bool,
-  backText: PropTypes.string,
-  nextText: PropTypes.string,
+  backText: PropTypes.node,
+  nextText: PropTypes.node,
   beginsSection: PropTypes.bool
 }
 
@@ -108,8 +109,18 @@ Slide.defaultProps = {
   showNext: true,
   backDisabled: false,
   nextDisabled: false,
-  backText: 'Back',
-  nextText: 'Continue'
+  backText:
+    <FormattedMessage
+        id="app.slide.backButton"
+        description="Default text for button to move back a slide."
+        defaultMessage="Back"
+    />,
+  nextText:
+    <FormattedMessage
+        id="app.slide.nextButton"
+        description="Default text for button to move forward a slide."
+        defaultMessage="Continue"
+    />
 }
 
 export default Slide

@@ -29,8 +29,15 @@ class BeforeYouBegin extends React.Component {
 
     const threethings = tooltiptext.threethingsfirst + ' ' + organization.name + ' ' + tooltiptext.threethingssecond
 
+    const headerText =
+      <FormattedMessage
+          id="app.slides.beforeYouBegin.header"
+          description="Text for the header of the slide."
+          defaultMessage="Before you begin…"
+      />
+
     return (
-      <Slide header="Before you begin..." id="before-you-begin">
+      <Slide header={headerText} id="before-you-begin">
         <p className="usa-font-lead">
           <FormattedMessage
               id="app.slides.beforeYouBegin.subheading"

@@ -1,7 +1,14 @@
 {
+  "app.slide.backButton": "Regresar",
+  "app.slide.nextButton": "Seguir",
+
+  "app.slides.welcome.header": "¡Bienvenido!",
+  "app.slides.welcome.nextButton": "Comenzar",
   "app.slides.welcome.intro": "Esta es la aplicación electrónica de {organizationName} de forma gratuita y comidas a precio reducido para los Programas Nacionales de {usda} para Desayuno y Almuerzo en Escuela.",
   "app.slides.welcome.onlineInstructions": "Esta aplicación interactiva le guiará a través del proceso de solicitud. Cuando esté listo para aplicar, haga clic en el botón «{buttonText}» a continuación para comenzar.",
   "app.slides.welcome.paperInstructions": "Si desea solicitar el uso de la {link}, puede imprimir y completar y luego volver a nosotros en {address}.",
   "app.slides.welcome.paperApplication": "aplicación en papel",
+
+  "app.slides.beforeYouBegin.header": "Antes de que empiece…",
   "app.slides.beforeYouBegin.subheading": "hay algunas cosas que usted debe saber."
 }
