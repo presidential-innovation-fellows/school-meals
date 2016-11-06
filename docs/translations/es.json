@@ -36,6 +36,16 @@
 
   "footer.notRealDisclaimer": "Esto no es una solicitud real para beneficios de comida escolar",
 
+  "help.title": "Ayuda",
+  "help.close": "Cerrar",
+  "help.footer": "Si tiene alguna pregunta sobre el programa o cómo solicitarlo, comuníquese con {organizationName} ({organizaitonContactInfo}).",
+  "help.faq": "Preguntas Frecuentes",
+  "help.searchResults": "Resultados de la Búsqueda",
+
+  "help.topic.paperApp.question": "¿Puedo aplicar usando una aplicación de papel?",
+  "help.topic.paperApp.answer": "Sí. Si desea aplicar con la aplicación en papel, puede imprimir la {paperApplicationLink} o ponerse en contacto con {organizationName} ({organizationContactInfo}) para solicitar una solicitud. A continuación, devuelva la solicitud completa a {organizationName}.",
+  "help.topic.paperApp.paperApplication": "aplicación en papel",
+
   "nav.data": "Datos",
   "nav.help": "Ayuda",
   "nav.shortTitle": "Solicitud de Comidas Escolares para {organizationShortName}",
