@@ -2,7 +2,7 @@
 import { observer } from 'mobx-react'
 import { Glyphicon, Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap'
 import { locales, organization } from '../config'
-import FormattedMessage from './Application/FormattedMessage'
+import FormattedMessage from './application/FormattedMessage'
 import LocalePicker from './LocalePicker'
 
 @observer

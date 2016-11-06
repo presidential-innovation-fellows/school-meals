@@ -1,6 +1,6 @@
 ﻿import React, { Component, PropTypes } from 'react'
 import Steps, { Step } from 'rc-steps'
-import FormattedMessage from './Application/FormattedMessage'
+import FormattedMessage from './application/FormattedMessage'
 import { observer } from 'mobx-react'
 import { ProgressBar } from 'react-bootstrap'
 import { allStudentsAreFHMR } from '../helpers'
