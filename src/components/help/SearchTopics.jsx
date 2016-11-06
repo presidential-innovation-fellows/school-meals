@@ -1,5 +1,6 @@
 import jQuery from 'jquery'
 import React, { Component, PropTypes } from 'react'
+import FormattedMessage from '../application/FormattedMessage'
 import All from './articles/All'
 
 class SearchTopics extends Component {
@@ -60,7 +61,13 @@ class SearchTopics extends Component {
         </div>
 
         <div className="searchable-help-topics">
-          <bodyLabels>Search Results</bodyLabels>
+          <bodyLabels>
+            <FormattedMessage
+                id="help.searchResults"
+                description="Search results help section title."
+                defaultMessage="Search Results"
+            />
+          </bodyLabels>
           { this.state.searchVal && <All showLabels={false} /> }
         </div>
       </div>
