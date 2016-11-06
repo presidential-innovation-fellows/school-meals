@@ -41,6 +41,7 @@ class App extends Component {
       <div className={className}>
         <Navigation navigationData={navigationData} helpData={helpData} />
         <Progress navigationData={navigationData}
+                  localeData={localeData}
                   applicationData={applicationData} />
         <main>
           <div className="usa-grid">

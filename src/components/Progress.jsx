@@ -103,6 +103,7 @@ class Progress extends Component {
 
   render() {
     const { stepsCompleted } = this.props.navigationData
+    const localeCode = this.props.localeData.code
 
     return (
       <div className="progress-container">
@@ -114,7 +115,7 @@ class Progress extends Component {
           <div className="progress-desktop">
             <Steps current={stepsCompleted}>
               {this.steps.map(step =>
-                <Step {...step} key={step['data-hash']} />
+                <Step {...step} key={localeCode + step['data-hash']} />
                )}
             </Steps>
           </div>
@@ -127,6 +128,9 @@ class Progress extends Component {
 Progress.propTypes = {
   navigationData: PropTypes.shape({
     stepsCompleted: PropTypes.number
+  }).isRequired,
+  localeData: PropTypes.shape({
+    code: PropTypes.string
   }).isRequired,
   applicationData: PropTypes.shape({
     assistancePrograms: PropTypes.object.isRequired,
