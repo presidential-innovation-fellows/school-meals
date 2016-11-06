@@ -39,7 +39,9 @@ class App extends Component {
 
     return (
       <div className={className}>
-        <Navigation navigationData={navigationData} helpData={helpData} />
+        <Navigation navigationData={navigationData}
+                    localeData={localeData}
+                    helpData={helpData} />
         <Progress navigationData={navigationData}
                   localeData={localeData}
                   applicationData={applicationData} />

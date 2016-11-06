@@ -2,7 +2,6 @@ import React, { Component, PropTypes } from 'react'
 import Article from '../Article'
 import Topic from '../Topic'
 import { help, define } from './HelpText'
-import Standard from '../TopicStandard'
 import WhatInformation from '../topics/WhatInformation'
 import Household from '../topics/Household'
 import IEG from '../topics/IEG'
@@ -20,78 +19,78 @@ import WhatIncome from '../topics/WhatIncome'
 export default class All extends Component {
   render() {
     return (
-        <Article>
-            <PaperApp />
-            <Standard title={help.newAppTitle} body={help.newAppBody} />
-            <Standard title={help.childAppTitle} body={help.childAppBody} />
-            <Standard title={help.letterTitle} body={help.letterBody} />
-            <Standard title={help.applyLaterTitle} body={help.applyLaterBody} />
-            <Standard title={help.localProgramTitle} body={help.localProgramBody} />
-            <Standard title={help.fosterQualifyTitle} body={help.fosterQualifyBody} />
-            <Standard title={help.wicTitle} body={help.wicBody} />
-            <Standard title={help.headStartTitle} body={help.headStartBody} />
-            <Standard title={help.otherProgramsTitle} body={help.otherProgramsBody} />
-            <Standard title={help.usCitizenTitle} body={help.usCitizenBody} />
-            <Standard title={help.publicChargeTitle} body={help.publicChargeBody} />
-            <Standard title={help.checkedTitle} body={help.checkedBody} />
-            <WhatInformation />
-            <Household />
-            <Standard title={help.sharedCustodyTitle} body={help.sharedCustodyBody} />
-            <Standard title={help.deployedTitle} body={help.deployedBody} />
-            <Standard title={help.permanentTitle} body={help.permanentBody} />
-            <Standard title={help.fosterTitle} body={help.fosterBody} />
-            <QualifyMigrant />
-            <QualifyHomeless />
-            <Standard title={help.qualifyRunawayTitle} body={help.qualifyRunawayBody} />
-            <WhatIncome />
-            <Standard title={help.childIncomeTitle} body={help.childIncomeBody} />
-            <Standard title={help.grossTitle} body={help.grossBody} />
-            <Standard title={help.netTitle} body={help.netBody} />
-            <NotTheSame />
-            <Standard title={help.militaryTitle} body={help.militaryBody} />
-            <ReportCombat />
-            <Standard title={help.deipTitle} body={help.deipBody} />
-            <Standard title={help.fssaTitle} body={help.fssaBody} />
-            <Standard title={help.earningsDifferencesTitle} body={help.earningsDifferencesBody} />
-            <Standard title={help.selfEmployedTitle} body={help.selfEmployedBody} />
-            <Standard title={help.wagesSelfemploymentTitle} body={help.wagesSelfemploymentBody} />
-            <Standard title={help.govProgramTitle} body={help.govProgramBody} />
-            <Standard title={help.rentalTitle} body={help.rentalBody} />
-            <Standard title={help.interestTitle} body={help.interestBody} />
-            <Standard title={help.seasonalTitle} body={help.seasonalBody} />
-            <Standard title={help.noIncomeTitle} body={help.noIncomeBody} />
-            <Standard title={help.ssnTitle} body={help.ssnBody} />
-            <Standard title={help.contactTitle} body={help.contactBody} />
-            <Standard title={help.disagreeTitle} body={help.disagreeBody} />
-            <bodyLabels>Definitions</bodyLabels>
-            <IEG />
-            <Standard title={define.mckinneyTerm} body={define.mckinneyDef} />
-            <Standard title={define.mepTerm} body={define.mepDef} />
-            <Standard title={define.runawayHomelessActTerm} body={define.runawayHomelessActDef} />
-            <Standard title={define.currentTerm} body={define.currentDef} />
-            <Standard title={define.cashBonusTerm} body={define.cashBonusDef} />
-            <NetSelfEmployment />
-            <Standard title={define.ssiTerm} body={define.ssiDef} />
-            <Standard title={define.cashAssistanceTerm} body={define.cashAssistanceDef} />
-            <Standard title={define.alimonyTerm} body={define.alimonyDef} />
-            <Standard title={define.childSupportTerm} body={define.childSupportDef} />
-            <Standard title={define.unemploymentTerm} body={define.unemploymentDef} />
-            <Standard title={define.workersCompTerm} body={define.workersCompDef} />
-            <Standard title={define.strikeBenefitsTerm} body={define.strikeBenefitsDef} />
-            <Standard title={define.ssdiTerm} body={define.ssdiDef} />
-            <Standard title={define.veteransBenefitsTerm} body={define.veteransBenefitsDef} />
-            <Standard title={define.socialSecurityTerm} body={define.socialSecurityDef} />
-            <Standard title={define.blackLungTerm} body={define.blackLungDef} />
-            <Standard title={define.railroadRetirementTerm} body={define.railroadRetirementDef} />
-            <RegularCash />
-            <Standard title={define.pensionTerm} body={define.pensionDef} />
-            <Standard title={define.annuityTerm} body={define.annuityDef} />
-            <Standard title={define.trustTerm} body={define.trustDef} />
-            <Standard title={define.ssiChildrenTerm} body={define.ssiChildrenDef} />
-            <Standard title={define.ssSurvivorTerm} body={define.ssSurvivorDef} />
-            <Standard title={define.pensionBeneficiaryTerm} body={define.pensionBeneficiaryDef} />
-            <Standard title={define.annuityChildrenTerm} body={define.annuityChildrenDef} />
-        </Article>
+      <Article>
+        <PaperApp />
+        <Topic title={help.newAppTitle} body={help.newAppBody} />
+        <Topic title={help.childAppTitle} body={help.childAppBody} />
+        <Topic title={help.letterTitle} body={help.letterBody} />
+        <Topic title={help.applyLaterTitle} body={help.applyLaterBody} />
+        <Topic title={help.localProgramTitle} body={help.localProgramBody} />
+        <Topic title={help.fosterQualifyTitle} body={help.fosterQualifyBody} />
+        <Topic title={help.wicTitle} body={help.wicBody} />
+        <Topic title={help.headStartTitle} body={help.headStartBody} />
+        <Topic title={help.otherProgramsTitle} body={help.otherProgramsBody} />
+        <Topic title={help.usCitizenTitle} body={help.usCitizenBody} />
+        <Topic title={help.publicChargeTitle} body={help.publicChargeBody} />
+        <Topic title={help.checkedTitle} body={help.checkedBody} />
+        <WhatInformation />
+        <Household />
+        <Topic title={help.sharedCustodyTitle} body={help.sharedCustodyBody} />
+        <Topic title={help.deployedTitle} body={help.deployedBody} />
+        <Topic title={help.permanentTitle} body={help.permanentBody} />
+        <Topic title={help.fosterTitle} body={help.fosterBody} />
+        <QualifyMigrant />
+        <QualifyHomeless />
+        <Topic title={help.qualifyRunawayTitle} body={help.qualifyRunawayBody} />
+        <WhatIncome />
+        <Topic title={help.childIncomeTitle} body={help.childIncomeBody} />
+        <Topic title={help.grossTitle} body={help.grossBody} />
+        <Topic title={help.netTitle} body={help.netBody} />
+        <NotTheSame />
+        <Topic title={help.militaryTitle} body={help.militaryBody} />
+        <ReportCombat />
+        <Topic title={help.deipTitle} body={help.deipBody} />
+        <Topic title={help.fssaTitle} body={help.fssaBody} />
+        <Topic title={help.earningsDifferencesTitle} body={help.earningsDifferencesBody} />
+        <Topic title={help.selfEmployedTitle} body={help.selfEmployedBody} />
+        <Topic title={help.wagesSelfemploymentTitle} body={help.wagesSelfemploymentBody} />
+        <Topic title={help.govProgramTitle} body={help.govProgramBody} />
+        <Topic title={help.rentalTitle} body={help.rentalBody} />
+        <Topic title={help.interestTitle} body={help.interestBody} />
+        <Topic title={help.seasonalTitle} body={help.seasonalBody} />
+        <Topic title={help.noIncomeTitle} body={help.noIncomeBody} />
+        <Topic title={help.ssnTitle} body={help.ssnBody} />
+        <Topic title={help.contactTitle} body={help.contactBody} />
+        <Topic title={help.disagreeTitle} body={help.disagreeBody} />
+        <bodyLabels>Definitions</bodyLabels>
+        <IEG />
+        <Topic title={define.mckinneyTerm} body={define.mckinneyDef} />
+        <Topic title={define.mepTerm} body={define.mepDef} />
+        <Topic title={define.runawayHomelessActTerm} body={define.runawayHomelessActDef} />
+        <Topic title={define.currentTerm} body={define.currentDef} />
+        <Topic title={define.cashBonusTerm} body={define.cashBonusDef} />
+        <NetSelfEmployment />
+        <Topic title={define.ssiTerm} body={define.ssiDef} />
+        <Topic title={define.cashAssistanceTerm} body={define.cashAssistanceDef} />
+        <Topic title={define.alimonyTerm} body={define.alimonyDef} />
+        <Topic title={define.childSupportTerm} body={define.childSupportDef} />
+        <Topic title={define.unemploymentTerm} body={define.unemploymentDef} />
+        <Topic title={define.workersCompTerm} body={define.workersCompDef} />
+        <Topic title={define.strikeBenefitsTerm} body={define.strikeBenefitsDef} />
+        <Topic title={define.ssdiTerm} body={define.ssdiDef} />
+        <Topic title={define.veteransBenefitsTerm} body={define.veteransBenefitsDef} />
+        <Topic title={define.socialSecurityTerm} body={define.socialSecurityDef} />
+        <Topic title={define.blackLungTerm} body={define.blackLungDef} />
+        <Topic title={define.railroadRetirementTerm} body={define.railroadRetirementDef} />
+        <RegularCash />
+        <Topic title={define.pensionTerm} body={define.pensionDef} />
+        <Topic title={define.annuityTerm} body={define.annuityDef} />
+        <Topic title={define.trustTerm} body={define.trustDef} />
+        <Topic title={define.ssiChildrenTerm} body={define.ssiChildrenDef} />
+        <Topic title={define.ssSurvivorTerm} body={define.ssSurvivorDef} />
+        <Topic title={define.pensionBeneficiaryTerm} body={define.pensionBeneficiaryDef} />
+        <Topic title={define.annuityChildrenTerm} body={define.annuityChildrenDef} />
+      </Article>
     )
   }
 }

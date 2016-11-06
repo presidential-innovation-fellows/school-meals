@@ -488,7 +488,7 @@ body {
 .usa-grid-full::after {
   clear: both;
   content: "";
-  display: table;
+  display: block;
 }
 
 @media screen and (min-width: 600px) {
@@ -1643,26 +1643,18 @@ input[type=range]:focus::-ms-thumb {
 
 ul,
 ol {
-  margin-top: 2em;
-  margin-bottom: 2em;
-  margin-left: 0.9em;
-  list-style: none;
-  padding-left: 0;
-  display: table;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  padding-left: 1.94em;
 }
 
-ul li,
-ol li {
+li {
   line-height: 1.5;
-  margin-bottom: 0.75em;
-  margin-top: 0.75em;
+  margin-bottom: 0.5em;
 }
 
-ul li::after,
-ol li::after {
-  content: '';
-  display: block;
-  margin-bottom: 0.5em;
+li:last-child {
+  margin-bottom: 0;
 }
 
 h1 + ul,
@@ -1682,49 +1674,15 @@ p + ol {
   margin-top: 0;
 }
 
-ul li {
-  display: table-row;
-}
-
-ul li::before {
-  content: '\2022';
-  display: table-cell;
-  padding-right: 0.4em;
-}
-
-ol > li {
-  counter-increment: table-ol;
-  display: table-row;
-}
-
-ol > li::before {
-  content: counter(table-ol) ".";
-  display: table-cell;
-  padding-right: 0.4em;
-  text-align: right;
-}
-
-li {
-  margin-bottom: 0.5em;
-}
-
 .usa-unstyled-list {
+  margin-top: 0;
+  margin-bottom: 0;
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  padding-left: 0;
 }
 
-.usa-unstyled-list li {
-  display: list-item;
-  margin: 0;
-}
-
-.usa-unstyled-list li::before {
-  display: none;
-}
-
-.usa-unstyled-list li::after {
-  display: none;
+.usa-unstyled-list > li {
+  margin-bottom: 0;
 }
 
 table {
@@ -1983,10 +1941,10 @@ dfn {
 
 .usa-accordion,
 .usa-accordion-bordered {
-  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  padding-left: 0;
   color: #212121;
   margin: 0;
   padding: 0;
@@ -1995,18 +1953,7 @@ dfn {
 
 .usa-accordion > li,
 .usa-accordion-bordered > li {
-  display: list-item;
-  margin: 0;
-}
-
-.usa-accordion > li::before,
-.usa-accordion-bordered > li::before {
-  display: none;
-}
-
-.usa-accordion > li::after,
-.usa-accordion-bordered > li::after {
-  display: none;
+  margin-bottom: 0;
 }
 
 .usa-accordion + .usa-accordion,
@@ -2018,10 +1965,10 @@ dfn {
 
 .usa-accordion > ul,
 .usa-accordion-bordered > ul {
-  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  padding-left: 0;
   color: #212121;
   margin: 0;
   padding: 0;
@@ -2030,18 +1977,7 @@ dfn {
 
 .usa-accordion > ul > li,
 .usa-accordion-bordered > ul > li {
-  display: list-item;
-  margin: 0;
-}
-
-.usa-accordion > ul > li::before,
-.usa-accordion-bordered > ul > li::before {
-  display: none;
-}
-
-.usa-accordion > ul > li::after,
-.usa-accordion-bordered > ul > li::after {
-  display: none;
+  margin-bottom: 0;
 }
 
 .usa-accordion > ul > li,
@@ -2889,7 +2825,7 @@ fieldset {
 .usa-search::after {
   clear: both;
   content: "";
-  display: table;
+  display: block;
 }
 
 .usa-search [type="search"],
@@ -2977,23 +2913,14 @@ fieldset {
 }
 
 .usa-sidenav-list {
-  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  padding-left: 0;
 }
 
 .usa-sidenav-list > li {
-  display: list-item;
-  margin: 0;
-}
-
-.usa-sidenav-list > li::before {
-  display: none;
-}
-
-.usa-sidenav-list > li::after {
-  display: none;
+  margin-bottom: 0;
 }
 
 .usa-sidenav-list li {
@@ -3034,25 +2961,16 @@ fieldset {
 }
 
 .usa-sidenav-sub_list {
-  display: block;
+  margin-top: 0;
+  margin-bottom: 0;
   list-style-type: none;
-  margin: 0;
-  padding: 0;
+  padding-left: 0;
   margin: 0;
   width: 100%;
 }
 
 .usa-sidenav-sub_list > li {
-  display: list-item;
-  margin: 0;
-}
-
-.usa-sidenav-sub_list > li::before {
-  display: none;
-}
-
-.usa-sidenav-sub_list > li::after {
-  display: none;
+  margin-bottom: 0;
 }
 
 .usa-sidenav-sub_list li {
