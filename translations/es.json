@@ -1,8 +1,8 @@
 {
-  "app.nav.data": "Datos",
-  "app.nav.help": "Ayuda",
-  "app.nav.title": "Solicitud de Comidas Escolares Gratis oa Precio Reducido para {organizationName}",
-  "app.nav.shortTitle": "Solicitud de Comidas Escolares para {organizationShortName}",
+  "nav.data": "Datos",
+  "nav.help": "Ayuda",
+  "nav.title": "Solicitud de Comidas Escolares Gratis oa Precio Reducido para {organizationName}",
+  "nav.shortTitle": "Solicitud de Comidas Escolares para {organizationShortName}",
 
   "progress.begin": "Empezar",
   "progress.students": "Estudiantes",
@@ -11,7 +11,7 @@
   "progress.adults": "Adultos",
   "progress.summary": "Resumen",
 
-  "app.footer.notRealDisclaimer": "Esto no es una solicitud real para beneficios de comida escolar",
+  "footer.notRealDisclaimer": "Esto no es una solicitud real para beneficios de comida escolar",
 
   "app.slide.backButton": "Regresar",
   "app.slide.nextButton": "Seguir",

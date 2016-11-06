@@ -16,7 +16,7 @@ class Footer extends Component {
           <div className="not-real-disclaimer">
             <strong>
               <FormattedMessage
-                  id="app.footer.notRealDisclaimer"
+                  id="footer.notRealDisclaimer"
                   description="Disclaimer that this it not a real application."
                   defaultMessage="This is not a real application for school meal benefits"
               />

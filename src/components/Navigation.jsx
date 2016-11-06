@@ -33,7 +33,7 @@ class Navigation extends Component {
           <Navbar.Brand>
             <span className="hidden-xs">
               <FormattedMessage
-                  id="app.nav.title"
+                  id="nav.title"
                   description="Text for the page title."
                   defaultMessage="{organizationName} Application for Free and Reduced Price School Meals"
                   values={{
@@ -43,7 +43,7 @@ class Navigation extends Component {
             </span>
             <span className="hidden-sm hidden-md hidden-lg">
               <FormattedMessage
-                  id="app.nav.shortTitle"
+                  id="nav.shortTitle"
                   description="Text for the page title on mobile devices."
                   defaultMessage="{organizationShortName} Application for School Meals"
                   values={{
@@ -59,7 +59,7 @@ class Navigation extends Component {
             <NavItem eventKey={2} onClick={this.handleData}>
               <Glyphicon glyph="list-alt" />&nbsp;
               <FormattedMessage
-                  id="app.nav.data"
+                  id="nav.data"
                   description="Text for the Data navigation item."
                   defaultMessage="Data"
               />
@@ -67,7 +67,7 @@ class Navigation extends Component {
             <NavItem eventKey={1} onClick={this.handleHelp}>
               <Glyphicon glyph="question-sign" />&nbsp;
               <FormattedMessage
-                  id="app.nav.help"
+                  id="nav.help"
                   description="Text for the Help navigation item."
                   defaultMessage="Help"
               />
