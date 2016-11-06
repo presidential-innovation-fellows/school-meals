@@ -27,8 +27,6 @@ class BeforeYouBegin extends React.Component {
     const assistanceProgramList =
       toSentenceSerial(assistancePrograms, ', ', ' or ')
 
-    const threethings = tooltiptext.threethingsfirst + ' ' + organization.name + ' ' + tooltiptext.threethingssecond
-
     const headerText =
       <FormattedMessage
           id="app.slides.beforeYouBegin.header"
@@ -91,7 +89,7 @@ class BeforeYouBegin extends React.Component {
                 description="Only need one application for your household"
                 defaultMessage="for free or reduced price school meal benefits is based on any one of these"
             />&nbsp;
-            <Tooltipcomp text={threethings}>
+            <Tooltipcomp text={tooltiptext.threethings}>
               <FormattedMessage
                   id="app.slides.beforeYouBegin.threeThings"
                   description="As in the requirements for program qualification."

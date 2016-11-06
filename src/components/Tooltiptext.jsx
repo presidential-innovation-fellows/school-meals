@@ -1,17 +1,21 @@
 import React from 'react'
 import FormattedMessage from './application/FormattedMessage'
+import { organization } from '../config'
 
 export const tooltiptext = {
-
-  letter:
-         <FormattedMessage
-             id="tooltip.letter"
-             description="Tooltip text about letter requiring that all strudents are named.."
-             defaultMessage="Check that the letter includes all the students in the household, because they are eligible for free meals.  If not, contact the school to correct the mistake."
-         />,
-  //split variable used on BeforeYouBegin slide.  Be sure to update both!
-  threethingsfirst: 'If you are unsure if you qualify, fill out an application and officials at',
-  threethingssecond: 'will determine if you are eligible.',
+  letter: <FormattedMessage
+    id="tooltip.letter"
+    description="Tooltip text about letter requiring that all strudents are named."
+    defaultMessage="Check that the letter includes all the students in the household, because they are eligible for free meals.  If not, contact the school to correct the mistake."
+  />,
+  threethings: <FormattedMessage
+    id="tooltip.threethings"
+    description="Tooltip text encouraging user to apply for program."
+    defaultMessage="If you are unsure if you qualify, fill out an application and officials at {organizationName} will determine if you are eligible."
+    values={{
+      organizationName: organization.name
+    }}
+  />,
   status: 'The non-cash benefits received through the school meal programs are not subject to public charge consideration.  You will not be deported, denied entry to the country, or denied permanent status because you apply for or receive school meal benefits.',
   snap: 'The Supplemental Nutrition Assistance Program (SNAP) is a program that offers nutrition assistance to millions of eligible, low-income individuals and families.',
   tanf: 'The Temporary Assistance for Needy Families (TANF) program is designed to help needy familities achieve self-sufficiency by providing cash assistance, as well as other supports and services.',
@@ -51,7 +55,11 @@ export const tooltiptext = {
   military: 'See Help for information about sources of income in military that are and are not included as household income.',
   deployed: 'We ask because we only count the portion of a deployed service member’s income that is made available to the household.',
   gross: 'All money earned or received before deductions, such as income taxes, Social Security taxes, and insurance premiums.',
-  eligibility: 'See Help for the Income Eligibility Guidelines for reduced price benefits.',
+  eligibility: <FormattedMessage
+    id="tooltip.eligibility"
+    description="Tooltip text for getting help on program eligibility."
+    defaultMessage="See Help for the Income Eligibility Guidelines for reduced price benefits."
+  />,
   ssiChildren: 'Supplemental Security Income (SSI) provides cash to meet basic needs for food, clothing, and shelter to children younger than age 18 who have a physical or mental condition, or combination of conditions, that meets Social Security’s definition of disability for children, and if his or her income and resources fall within the eligibility limits.',
   ssSurvivor: 'Social Security survivor benefits are monthly payments to children of a deceased parent who was retired or disabled, but worked and paid taxes into the Social Security system.',
   pensionChildren: 'A child may receive payments from the pension of a deceased parent.',

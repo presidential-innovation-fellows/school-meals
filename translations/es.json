@@ -48,5 +48,7 @@
   "progress.students": "Estudiantes",
   "progress.summary": "Resumen",
 
-  "tooltip.letter": "Compruebe que la carta incluya a todos los estudiantes en el hogar, porque son elegibles para comidas gratis. Si no es así, comuníquese con la escuela para corregir el error."
+  "tooltip.eligibility": "Vea Ayuda para las Directrices de Elegibilidad de Ingresos para beneficios de precio reducido.",
+  "tooltip.letter": "Compruebe que la carta incluya a todos los estudiantes en el hogar, porque son elegibles para comidas gratis. Si no es así, comuníquese con la escuela para corregir el error.",
+  "tooltip.threethings": "Si no está seguro si califica, llene una solicitud y los funcionarios de {organizationName} determinarán si usted es elegible."
 }
