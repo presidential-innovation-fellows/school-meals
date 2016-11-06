@@ -18,7 +18,7 @@ class Navigation extends Component {
   }
 
   handleHelp(event) {
-    const { navigationData } = this.props
+    const { localeData, navigationData } = this.props
     const { currentSlide } = navigationData
     const article = currentSlide.getAttribute('data-help-article')
 
