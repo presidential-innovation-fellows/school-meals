@@ -1,8 +1,11 @@
-﻿export const tooltiptext = {
+import React from 'react'
+import FormattedMessage from './application/FormattedMessage'
+
+export const tooltiptext = {
   letter: 'Check that the letter includes all the students in the household, because they are eligible for free meals.  If not, contact the school to correct the mistake.',
   //split variable used on BeforeYouBegin slide.  Be sure to update both!
-    threethingsfirst: 'If you are unsure if you qualify, fill out an application and officials at',
-    threethingssecond: 'will determine if you are eligible.',
+  threethingsfirst: 'If you are unsure if you qualify, fill out an application and officials at',
+  threethingssecond: 'will determine if you are eligible.',
   status: 'The non-cash benefits received through the school meal programs are not subject to public charge consideration.  You will not be deported, denied entry to the country, or denied permanent status because you apply for or receive school meal benefits.',
   snap: 'The Supplemental Nutrition Assistance Program (SNAP) is a program that offers nutrition assistance to millions of eligible, low-income individuals and families.',
   tanf: 'The Temporary Assistance for Needy Families (TANF) program is designed to help needy familities achieve self-sufficiency by providing cash assistance, as well as other supports and services.',
@@ -52,4 +55,3 @@
   runaway: 'Authorizes community-based runaway and homeless youth projects to provide temporary shelter and care to youth who are in need of temporary shelter, counseling, and aftercare services.',
   littleguy: '’',
 }
-
