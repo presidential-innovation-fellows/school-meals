@@ -192,7 +192,7 @@ class BeforeYouBegin extends React.Component {
                <FormattedMessage
                    id="app.slides.beforeYouBegin.caseNumber"
                    description="List of programs that will require a case number."
-                   defaultMessage="If you participate in &nbsp;{snap}, &nbsp;{tanf} , or &nbsp;{fdpir}&nbsp; you will need to know your case number (not your card or account number)."
+                   defaultMessage="If you participate in {snap}, {tanf} , or {fdpir} you will need to know your case number (not your card or account number)."
                    values={{
                      snap: <Tooltipcomp text={tooltiptext.snap} target={assistanceProgramsVar.snap.accronym} />,
                      tanf: <Tooltipcomp text={tooltiptext.tanf} target={assistanceProgramsVar.tanf.accronym} />,
@@ -235,7 +235,7 @@ class BeforeYouBegin extends React.Component {
            <p>
              <FormattedMessage
                  id="app.slides.beforeYouBegin.notSure"
-                 description="reassuring message for worried people"
+                 description="Reassuring message about the application prompting for information as needed."
                  defaultMessage="Still not sure if you have everything you need? Don’t worry! The income section of the application contains detailed instructions and explanations about the sources of income you must include, and you can gather additional information then."
              />
            </p>
