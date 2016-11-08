@@ -31,10 +31,16 @@ class Progress extends Component {
     }, false)
   }
 
+  get skipHousehold() {
+    return this.props.applicationData.assistancePrograms.hasAny ||
+           (
+             allStudentsAreFHMR(this.props.applicationData.students) &&
+             this.props.applicationData.electToProvideIncome === false
+           )
+  }
+
   get showHousehold() {
-    return !this.props.applicationData.assistancePrograms.hasAny &&
-           (!allStudentsAreFHMR(this.props.applicationData.students) ||
-            this.props.applicationData.electToProvideIncome !== false)
+    return !this.skipHousehold
   }
 
   get steps() {
