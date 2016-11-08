@@ -3,7 +3,7 @@ import Steps, { Step } from 'rc-steps'
 import FormattedMessage from './application/FormattedMessage'
 import { observer } from 'mobx-react'
 import { ProgressBar } from 'react-bootstrap'
-import { allStudentsAreFHMR } from '../helpers'
+import { allStudentsAreFHMR, allStudentsAreFoster } from '../helpers'
 
 @observer
 class Progress extends Component {
@@ -33,6 +33,7 @@ class Progress extends Component {
 
   get skipHousehold() {
     return this.props.applicationData.assistancePrograms.hasAny ||
+           allStudentsAreFoster(this.props.applicationData.students) ||
            (
              allStudentsAreFHMR(this.props.applicationData.students) &&
              this.props.applicationData.electToProvideIncome === false
