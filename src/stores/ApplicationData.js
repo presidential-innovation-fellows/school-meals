@@ -1,3 +1,4 @@
+import { PropTypes } from 'react'
 import shortid from 'shortid'
 import { action, computed, observable } from 'mobx'
 import { assistancePrograms as assistanceProgramNames } from '../config'
@@ -11,7 +12,7 @@ const DEBUG = false;
 export default class ApplicationData {
   students = new StudentCollection()
   assistancePrograms = new AssistancePrograms()
-  otherChildren = new ChildCollection()
+  otherChildren = new OtherChildrenCollection()
   adults = new AdultCollection()
 
   @observable certifiedCorrect = false
@@ -502,6 +503,16 @@ class ChildCollection extends PersonCollection {
 
 }
 
+class OtherChildrenCollection extends ChildCollection {
+  get fields() {
+    return super.fields.concat([
+      { name: 'isFoster',
+        label: 'Foster child',
+        dataType: PropTypes.bool }
+    ])
+  }
+}
+
 class StudentCollection extends ChildCollection {
   constructor(props) {
     super(props)
@@ -540,6 +551,3 @@ class StudentCollection extends ChildCollection {
     return this.items.length >= 1 && super.isValid
   }
 }
-
-
-
