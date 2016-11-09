@@ -92,9 +92,9 @@ class Progress extends Component {
     result.push({
       'data-hash': 'summary',
       'title': <FormattedMessage
-                   id="progress.students"
-                   description="Text for the Students progress bar step."
-                   defaultMessage="Students" />
+                   id="progress.summary"
+                   description="Text for the Summary progress bar step."
+                   defaultMessage="Summary" />
     })
 
     return result
