@@ -1,5 +1,3 @@
-
-
 export const organization = {
   name: 'Applewood School District',
   shortname: 'ASD',
@@ -23,19 +21,25 @@ export const assistancePrograms = [
   'Food Distribution Program on Indian Reservations (FDPIR)'
 ]
 
-export const assistanceProgramsVar = {
-  snap: {
+export const assistanceProgramsVarArray = [
+  {
     fullName: 'Supplemental Nutrition Assistance Program',
     accronym: 'SNAP',
   },
-  tanf: {
+  {
     fullName: 'Temporary Assistance for Needy Families',
     accronym: 'TANF',
   },
-  fdpir: {
+  {
     fullName: 'Food Distribution Program on Indian Reservations',
     accronym: 'FDPIR',
   }
+]
+
+export const assistanceProgramsVar = {
+  snap: assistanceProgramsVarArray[0],
+  tanf: assistanceProgramsVarArray[1],
+  fdpir: assistanceProgramsVarArray[2]
 }
 
 export const thankYou = [

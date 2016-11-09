@@ -1,7 +1,8 @@
 import { PropTypes } from 'react'
 import shortid from 'shortid'
 import { action, computed, observable } from 'mobx'
-import { assistancePrograms as assistanceProgramNames } from '../config'
+import { assistancePrograms as assistanceProgramNames,
+         assistanceProgramsVarArray } from '../config'
 import { allStudentsAreFHMR,
          allStudentsAreFoster,
          informalList } from '../helpers'
@@ -150,11 +151,12 @@ export class AssistancePrograms {
     if (items) {
       this.items = items
     } else {
-      this.items = assistanceProgramNames.map(function(programName) {
+      this.items = assistanceProgramNames.map((programName, i) => {
         return {
           isApplicable: null,
           id: shortid.generate(),
           name: programName,
+          accronym: assistanceProgramsVarArray[i].accronym,
           caseNumber: ''
         }
       })
