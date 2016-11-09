@@ -4,6 +4,7 @@ import Topic from '../Topic'
 import { organization } from '../../../config'
 import WhatIncome from '../topics/WhatIncome'
 import QualifyMigrant from '../topics/QualifyMigrant'
+import QualifyHomeless from '../topics/QualifyHomeless'
 import Household from '../topics/Household'
 import { help, define } from './HelpText'
 import Standard from '../TopicStandard'
@@ -13,8 +14,8 @@ export default class OtherPrograms extends Component {
     return (
       <Article>
       	<QualifyMigrant />
+      	<QualifyHomeless />
 		<Standard title={help.qualifyRunawayTitle} body={help.qualifyRunawayBody} />
-		<WhatIncome />
 		<Household />
 		<Standard title={help.sharedCustodyTitle} body={help.sharedCustodyBody} />
 		<Standard title={help.usCitizenTitle} body={help.usCitizenBody} />

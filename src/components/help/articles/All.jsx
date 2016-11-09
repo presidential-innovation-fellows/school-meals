@@ -16,7 +16,7 @@ import ReportCombat from '../topics/ReportCombat'
 import WhatIncome from '../topics/WhatIncome'
 
 
-export default class All extends Component {
+class All extends Component {
   render() {
     return (
         <Article>
@@ -62,7 +62,9 @@ export default class All extends Component {
             <Standard title={help.ssnTitle} body={help.ssnBody} />
             <Standard title={help.contactTitle} body={help.contactBody} />
             <Standard title={help.disagreeTitle} body={help.disagreeBody} />
-            <bodyLabels>Definitions</bodyLabels>
+
+            { this.props.showLabels && <bodyLabels>Definitions</bodyLabels> }
+
             <IEG />
             <Standard title={define.mckinneyTerm} body={define.mckinneyDef} />
             <Standard title={define.mepTerm} body={define.mepDef} />
@@ -94,3 +96,13 @@ export default class All extends Component {
     )
   }
 }
+
+All.propTypes = {
+  showLabels: PropTypes.bool
+}
+
+All.defaultProps = {
+  showLabels: true
+}
+
+export default All

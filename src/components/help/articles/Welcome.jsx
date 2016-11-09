@@ -13,8 +13,6 @@ export default class Welcome extends Component {
 
 //F1-F12, F43
     return (
-      <div>
-      <p>Frequently Asked Questions</p>
       <Article>
         <PaperApp />
         <Standard title={help.newAppTitle} body={help.newAppBody} />
@@ -31,7 +29,6 @@ export default class Welcome extends Component {
         <Standard title={help.newAppTitle} body={help.newAppBody} />
         <Standard title={help.disagreeTitle} body={help.disagreeBody} />
       </Article>
-      </div>
     )
   }
 }

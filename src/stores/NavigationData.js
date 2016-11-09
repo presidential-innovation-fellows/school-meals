@@ -199,6 +199,10 @@ export default class NavigationData {
   }
 
   @action jump() {
-    window.location.replace('#/' + this.jumptSlide.id)
+    window.location.replace('#/' + this.jumpSlide.id)
+  }
+
+  @action jumpTo(id) {
+    window.location.replace(`#/${id}`)
   }
 }
