@@ -2,7 +2,9 @@ import { PropTypes } from 'react'
 import shortid from 'shortid'
 import { action, computed, observable } from 'mobx'
 import { assistancePrograms as assistanceProgramNames } from '../config'
-import { formatDate, informalList } from '../helpers'
+import { allStudentsAreFHMR,
+         allStudentsAreFoster,
+         informalList } from '../helpers'
 import { testData } from '../debug'
 
 // set DEBUG to true to pull in test data into the AppllicationData object from debug.js
@@ -45,6 +47,19 @@ export default class ApplicationData {
     return [this.students,
             this.otherChildren,
             this.adults]
+  }
+
+  @computed get skipHousehold() {
+    return this.assistancePrograms.hasAny ||
+           allStudentsAreFoster(this.students) ||
+           (
+             allStudentsAreFHMR(this.students) &&
+             this.electToProvideIncome === false
+           )
+  }
+
+  @computed get showHousehold() {
+    return !this.skipHousehold
   }
 
   constructor(){
@@ -208,8 +223,6 @@ class PersonCollection {
 
     return item
   }
-
-
 
   toJSON() {
     return this.items.toJSON()

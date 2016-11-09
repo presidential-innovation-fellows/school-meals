@@ -34,7 +34,7 @@ class NoAssistancePrograms extends Component {
          <IncomeElection applicationData={applicationData} />
         }
 
-        {(electToProvideIncome || !allStudentsAreFHMR(students)) &&
+        {applicationData.showHousehold &&
          <HouseholdIncome applicationData={applicationData} />
         }
       </div>
