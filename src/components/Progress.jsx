@@ -1,8 +1,9 @@
 ﻿import React, { Component, PropTypes } from 'react'
 import Steps, { Step } from 'rc-steps'
+import FormattedMessage from './application/FormattedMessage'
 import { observer } from 'mobx-react'
 import { ProgressBar } from 'react-bootstrap'
-import { allStudentsAreFHMR } from '../helpers'
+import { allStudentsAreFHMR, allStudentsAreFoster } from '../helpers'
 
 @observer
 class Progress extends Component {
@@ -30,25 +31,71 @@ class Progress extends Component {
     }, false)
   }
 
+  get skipHousehold() {
+    return this.props.applicationData.assistancePrograms.hasAny ||
+           allStudentsAreFoster(this.props.applicationData.students) ||
+           (
+             allStudentsAreFHMR(this.props.applicationData.students) &&
+             this.props.applicationData.electToProvideIncome === false
+           )
+  }
+
   get showHousehold() {
-    return !this.props.applicationData.assistancePrograms.hasAny &&
-           (!allStudentsAreFHMR(this.props.applicationData.students) ||
-            this.props.applicationData.electToProvideIncome !== false)
+    return !this.skipHousehold
   }
 
   get steps() {
     let result = []
 
-    result.push({ title: 'Begin', 'data-hash': 'welcome' })
-    result.push({ title: 'Students', 'data-hash': 'students' })
-    result.push({ title: 'Programs', 'data-hash': 'assistance-programs' })
+    result.push({
+      'data-hash': 'welcome',
+      'title': <FormattedMessage
+                   id="progress.begin"
+                   description="Text for the Begin progress bar step."
+                   defaultMessage="Begin" />
+    })
+
+    result.push({
+      'data-hash': 'students',
+      'title': <FormattedMessage
+                   id="progress.students"
+                   description="Text for the Students progress bar step."
+                   defaultMessage="Students" />
+    })
+
+    result.push({
+      'data-hash': 'assistance-programs',
+      'title': <FormattedMessage
+                   id="progress.assistancePrograms"
+                   description="Text for the Programs progress bar step."
+                   defaultMessage="Programs" />
+    })
 
     if (this.showHousehold) {
-      result.push({ title: 'Other Kids', 'data-hash': 'other-children' })
-      result.push({ title: 'Adults', 'data-hash': 'adults' })
+      result.push({
+        'data-hash': 'other-children',
+        'title': <FormattedMessage
+                     id="progress.otherKids"
+                     description="Text for the Other Kids progress bar step."
+                     defaultMessage="Other Kids" />
+      })
+
+      result.push({
+        'data-hash': 'adults',
+        'title': <FormattedMessage
+                     id="progress.adults"
+                     description="Text for the Adults progress bar step."
+                     defaultMessage="Adults" />
+      })
     }
 
-    result.push({ title: 'Finish', 'data-hash': 'summary' })
+    result.push({
+      'data-hash': 'summary',
+      'title': <FormattedMessage
+                   id="progress.summary"
+                   description="Text for the Summary progress bar step."
+                   defaultMessage="Summary" />
+    })
 
     return result
   }
@@ -63,6 +110,7 @@ class Progress extends Component {
 
   render() {
     const { stepsCompleted } = this.props.navigationData
+    const localeCode = this.props.localeData.code
 
     return (
       <div className="progress-container">
@@ -74,7 +122,7 @@ class Progress extends Component {
           <div className="progress-desktop">
             <Steps current={stepsCompleted}>
               {this.steps.map(step =>
-                <Step {...step} key={step['data-hash']} />
+                <Step {...step} key={localeCode + step['data-hash']} />
                )}
             </Steps>
           </div>
@@ -87,6 +135,9 @@ class Progress extends Component {
 Progress.propTypes = {
   navigationData: PropTypes.shape({
     stepsCompleted: PropTypes.number
+  }).isRequired,
+  localeData: PropTypes.shape({
+    code: PropTypes.string
   }).isRequired,
   applicationData: PropTypes.shape({
     assistancePrograms: PropTypes.object.isRequired,

@@ -1,6 +1,5 @@
 ﻿import React from 'react'
-//import FormattedMessage from '../FormattedMessage'
-import { IntlProvider, FormattedMessage } from 'react-intl'
+import FormattedMessage from '../FormattedMessage'
 import Slide from '../Slide'
 import { organization } from '../../../config'
 import { observer } from 'mobx-react'
@@ -8,15 +7,24 @@ import { observer } from 'mobx-react'
 @observer
 class Welcome extends React.Component {
   render() {
-    // pulled out to be localized
-    const headerText = 'Welcome!'
-    const nextButtonText = 'Get Started'
+    const headerText =
+      <FormattedMessage
+          id="app.slides.welcome.header"
+          description="Text for the header of the slide."
+          defaultMessage="Welcome!"
+      />
+
+    const nextButtonText =
+      <FormattedMessage
+          id="app.slides.welcome.nextButton"
+          description="Text for button to advance to the next slide."
+          defaultMessage="Get started"
+      />
 
     return (
       <Slide header={headerText} id="welcome" showBack={false} nextText={nextButtonText} beginsSection>
 
         <p className="usa-font-lead">
-<IntlProvider>
           <FormattedMessage
               id="app.slides.welcome.intro"
               description="Introductory paragraph."
@@ -26,7 +34,6 @@ class Welcome extends React.Component {
                 usda: <abbr title="United States Department of Agriculture">USDA</abbr>
               }}
           />
-</IntlProvider>
         </p>
 
         <p>

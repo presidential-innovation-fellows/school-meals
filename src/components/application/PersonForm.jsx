@@ -35,10 +35,7 @@ class PersonForm extends Component {
                 {fields.map((field, index) =>
                   <PersonAttributeInput
                       person={person}
-                      name={field.name}
-                      label={field.label}
-                      placeholder={field.placeholder}
-                      required={!!field.required}
+                      field={field}
                       key={index} />
                  )}
               </div>

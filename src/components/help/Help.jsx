@@ -5,6 +5,7 @@ import { organization } from '../../config'
 import classNames from 'classnames'
 import SearchTopics from './SearchTopics'
 import SlideTopics from './SlideTopics'
+import FormattedMessage from '../application/FormattedMessage'
 
 @observer
 class Help extends Component {
@@ -47,8 +48,20 @@ class Help extends Component {
     return (
       <asside className={classes} onClick={this.handleClick} id="help">
         <header className="cd-panel-header">
-          <h1>Help</h1>
-          <a className="cd-panel-close" onClick={this.hideHelp}>Close</a>
+          <h1>
+            <FormattedMessage
+                id="help.title"
+                description="Text for the title bar of the help area."
+                defaultMessage="Help"
+            />
+          </h1>
+          <a className="cd-panel-close" onClick={this.hideHelp}>
+            <FormattedMessage
+                id="help.close"
+                description="Text for the link to close the help area."
+                defaultMessage="Close"
+            />
+          </a>
         </header>
 
         <div className="cd-panel-container">
@@ -60,7 +73,15 @@ class Help extends Component {
 
             <footer>
               <p>
-                If you have any questions about the program or how to apply, contact {organization.name} ({organization.contact.phone} / {organization.contact.email} / {organization.contact.address}).
+                <FormattedMessage
+                    id="help.footer"
+                    description="Footer text for the help area."
+                    defaultMessage="If you have any questions about the program or how to apply, contact {organizationName} ({organizaitonContactInfo})."
+                    values={{
+                      organizationName: organization.name,
+                      organizaitonContactInfo: `${organization.contact.phone} / ${organization.contact.email} / ${organization.contact.address}`
+                    }}
+                />
               </p>
             </footer>
           </div>

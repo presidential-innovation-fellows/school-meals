@@ -2,6 +2,7 @@
 import { observer } from 'mobx-react'
 import { Glyphicon, Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap'
 import { locales, organization } from '../config'
+import FormattedMessage from './application/FormattedMessage'
 import LocalePicker from './LocalePicker'
 
 @observer
@@ -17,7 +18,7 @@ class Navigation extends Component {
   }
 
   handleHelp(event) {
-    const { navigationData } = this.props
+    const { localeData, navigationData } = this.props
     const { currentSlide } = navigationData
     const article = currentSlide.getAttribute('data-help-article')
 
@@ -31,10 +32,24 @@ class Navigation extends Component {
         <Navbar.Header>
           <Navbar.Brand>
             <span className="hidden-xs">
-              {organization.name} Application for Free and Reduced Price School Meals
+              <FormattedMessage
+                  id="nav.title"
+                  description="Text for the page title."
+                  defaultMessage="{organizationName} Application for Free and Reduced Price School Meals"
+                  values={{
+                    organizationName: organization.name
+                  }}
+              />
             </span>
             <span className="hidden-sm hidden-md hidden-lg">
-              {organization.shortname} Application for School Meals
+              <FormattedMessage
+                  id="nav.shortTitle"
+                  description="Text for the page title on mobile devices."
+                  defaultMessage="{organizationShortName} Application for School Meals"
+                  values={{
+                    organizationShortName: organization.shortname
+                  }}
+              />
             </span>
           </Navbar.Brand>
           <Navbar.Toggle />
@@ -42,10 +57,20 @@ class Navigation extends Component {
         <Navbar.Collapse>
           <Nav pullRight>
             <NavItem eventKey={2} onClick={this.handleData}>
-              <Glyphicon glyph="list-alt" /> Data
+              <Glyphicon glyph="list-alt" />&nbsp;
+              <FormattedMessage
+                  id="nav.data"
+                  description="Text for the Data navigation item."
+                  defaultMessage="Data"
+              />
             </NavItem>
             <NavItem eventKey={1} onClick={this.handleHelp}>
-              <Glyphicon glyph="question-sign" /> Help
+              <Glyphicon glyph="question-sign" />&nbsp;
+              <FormattedMessage
+                  id="nav.help"
+                  description="Text for the Help navigation item."
+                  defaultMessage="Help"
+              />
             </NavItem>
             <LocalePicker localeData={localeData} locales={locales} />
           </Nav>
