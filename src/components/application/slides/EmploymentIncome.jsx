@@ -38,30 +38,22 @@ class EmploymentIncome extends Component {
           />
         </IncomeSource>
 
-        <IncomeSource incomeSources={incomeSources} name="Commission">
+        <IncomeSource incomeSources={incomeSources} name="commission">
           <FormattedMessage
-              id="app.slides.employmentIncome.Commission"
+              id="app.slides.employmentIncome.commission"
               description="Commission"
               defaultMessage="Commission"
           />
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} showAnnual={true} name="cashBonus">
-          <FormattedMessage
-              id="app.slides.employmentIncome.cashBonus"
-              description="Cash bonus"
-              defaultMessage="{tooltip}"
-              values={{
-                tooltip: <Tooltipcomp text={tooltiptext.cashBonus}>
+                <Tooltipcomp text={tooltiptext.cashBonus}>
                           <FormattedMessage
                               id="app.slides.employmentIncome.tooltipCashBonus"
                               description="Cash bonus tooltip"
                               defaultMessage="Cash bonus"
                           />
-                        </Tooltipcomp>
-              }}
-          />
-          <Tooltipcomp id="cashBonus" text={tooltiptext.cashBonus} target="Cash bonus" />
+                </Tooltipcomp>
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} showHourly={true} showAnnual={true} name="selfEmployment">
