@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
-import Link from '../Link'
+import SummaryEditLink from './SummaryEditLink'
 
 @observer
 class SummaryLabelContent extends Component {
@@ -8,9 +8,8 @@ class SummaryLabelContent extends Component {
     return (
       <span>
         {this.props.children}
-        {!!this.props.id &&
-         <span> (<Link id={this.props.id}>edit</Link>)</span>
-        }
+        {' '}
+        {!!this.props.id && <SummaryEditLink id={this.props.id} />}
       </span>
     )
   }

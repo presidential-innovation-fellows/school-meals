@@ -3,6 +3,11 @@ import FormattedMessage from './application/FormattedMessage'
 import { organization } from '../config'
 
 export const tooltiptext = {
+  totalHouseholdIncome: <FormattedMessage
+    id="tooltip.totalHouseholdIncome"
+    description="Tooltip text explaining total household income calculation methodoloty."
+    defaultMessage="We calculated this number by converting all the income you reported into a monthly amount."
+  />,
   letter: <FormattedMessage
     id="tooltip.letter"
     description="Tooltip text about letter requiring that all strudents are named."

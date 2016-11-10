@@ -4,6 +4,7 @@ import Slide from '../Slide'
 import { organization } from '../../../config'
 import { programDescription, toSentenceSerialArray } from '../../../helpers'
 import { observer } from 'mobx-react'
+import FormattedMessage from '../FormattedMessage'
 
 @observer
 class IncomeElection extends Component {
@@ -34,10 +35,20 @@ class IncomeElection extends Component {
         </p>
 
         <p>
-          We just need to confirm that with program staff. If we are unable to do that, you will need to submit an application with income information to determine your benefit level.
+        <FormattedMessage
+          id="app.slides.incomeElection.confirmWithStaff"
+          description="Need to confirm with program staff"
+          defaultMessage="We just need to confirm that with program staff. If we are unable to do that, you will need to submit an application with income information to determine your benefit level."
+        />
         </p>
 
-        <label>Please choose one of the following:</label>
+        <label>
+        <FormattedMessage
+          id="app.slides.incomeElection.chooseFollowing"
+          description="Label for the following radio buttons"
+          defaultMessage="Please choose one of the following:"
+        />
+        </label>
 
         <BooleanRadio object={applicationData}
                       name="electToProvideIncome"

@@ -6,6 +6,7 @@ import { observer } from 'mobx-react'
 import { informalName } from '../../../helpers'
 import { tooltiptext } from '../../Tooltiptext'
 import Tooltipcomp from '../Tooltip'
+import FormattedMessage from '../FormattedMessage'
 
 @observer
 class AdultIncomeOverview extends Component {
@@ -34,12 +35,40 @@ class AdultIncomeOverview extends Component {
       <Slide header={name} id={`income/${person.id}`}
              helpArticle="adult-income-overview" nextDisabled={!this.isValid}>
 
-        <p>This page is all about {name}.</p>
+        <p>
+        <FormattedMessage
+              id="app.slides.adultIncomeOverview.adultsInto"
+              description="Intro Paragraph"
+              defaultMessage="This page is all about {adult}."
+              values={{
+              adult: name
+              }}
+          />
+        </p>
 
         <p>
-          On questions about income, all amounts should be {name}’s &nbsp;
-            <Tooltipcomp id="current" text={tooltiptext.currentAdult} target="current" />
-          &nbsp;, <strong>gross income</strong>.
+          <FormattedMessage
+              id="app.slides.adultIncomeOverview.income"
+              description="Income intro"
+              defaultMessage="On questions about income, all amounts should be {adult}’s &nbsp;{tooltip}&nbsp;,{grossIncome}."
+              values={{
+              adult: name,
+              tooltip: <Tooltipcomp text={tooltiptext.currentAdult}>
+                        <FormattedMessage
+                            id="app.slides.adultIncomeOverview.current"
+                            description="Intro Paragraph"
+                            defaultMessage="current"
+                        />
+                       </Tooltipcomp>,
+              grossIncome: <strong>
+                      <FormattedMessage
+                            id="app.slides.adultIncomeOverview.grossIncome"
+                            description="gross income"
+                            defaultMessage="gross income"
+                        />
+                      </strong>
+              }}
+          />
         </p>
 
         <p>
@@ -49,78 +78,235 @@ class AdultIncomeOverview extends Component {
           </p>
 
         <IncomeTypeFormGroup person={person} incomeTypeName="military">
-          Is <strong>{name}</strong> in the &nbsp;
-          <Tooltipcomp id="military" text={tooltiptext.military} target="military" />
-          &nbsp;?
+          <FormattedMessage
+              id="app.slides.adultIncomeOverview.militaryQuestion"
+              description="Is adult in military"
+              defaultMessage="Is {adult} in the &nbsp;{tooltip}&nbsp;?"
+              values={{
+              adult:<strong>{name}</strong>,
+              tooltip:<Tooltipcomp text={tooltiptext.military}>
+                    <FormattedMessage
+                        id="app.slides.adultIncomeOverview.military"
+                        description="military"
+                        defaultMessage="military"
+                    />
+                  </Tooltipcomp>
+              }}
+          />
         </IncomeTypeFormGroup>
 
         { person.incomeTypes.military.isApplicable &&
           <IncomeTypeFormGroup person={person} incomeTypeName="military"
                                boolAttribute="isDeployed" validate={false}>
-            Is <strong>{name}</strong> currently &nbsp;
-            <Tooltipcomp id="deployed" text={tooltiptext.deployed} target="deployed" />
-            &nbsp;?
+            <FormattedMessage
+              id="app.slides.adultIncomeOverview.deployedQuestion"
+              description="Is adult deployed"
+              defaultMessage="Is {adult} currently &nbsp;{tooltip}&nbsp;?"
+              values={{
+              adult:<strong>{name}</strong>,
+              tooltip:<Tooltipcomp text={tooltiptext.deployed}>
+                    <FormattedMessage
+                        id="app.slides.adultIncomeOverview.deployed"
+                        description="deployed"
+                        defaultMessage="deployed"
+                    />
+                    </Tooltipcomp>
+                  }}
+              />
           </IncomeTypeFormGroup>
         }
 
         <IncomeTypeFormGroup person={person} incomeTypeName="employment">
-          Does <strong>{name}</strong> have earnings from work including salary, wages, tips, commissions, &nbsp;
-            <Tooltipcomp id="cashBonus" text={tooltiptext.cashBonus} target="cash bonuses" />
-          &nbsp; or net income from &nbsp;
-            <Tooltipcomp id="selfEmployment" text={tooltiptext.selfEmployment} target="self-employment" />
-          &nbsp;{person.incomeTypes.military.isApplicable && ', not including earnings from the military'}?
+        <FormattedMessage
+              id="app.slides.adultIncomeOverview.employmentQuestion"
+              description="Is adult employed"
+              defaultMessage="Does {adult} have earnings from work including salary, wages, tips, commissions, {tooltip}&nbsp; or net income from &nbsp;{tooltip2}&nbsp;"
+              values={{
+              adult:<strong>{name}</strong>,
+              tooltip:<Tooltipcomp text={tooltiptext.cashBonus}>
+                    <FormattedMessage
+                        id="app.slides.adultIncomeOverview.cashBonus"
+                        description="cash bonuses"
+                        defaultMessage="cash bonuses"
+                    />
+                    </Tooltipcomp>,
+              tooltip2: <Tooltipcomp text={tooltiptext.selfEmployment}>
+                    <FormattedMessage
+                        id="app.slides.adultIncomeOverview.selfEmployment"
+                        description="self-employment"
+                        defaultMessage="self-employment"
+                    />
+                    </Tooltipcomp>
+                  }}
+        />
+        {person.incomeTypes.military.isApplicable && ', not including earnings from the military'}?
         </IncomeTypeFormGroup>
 
         <IncomeTypeFormGroup person={person} incomeTypeName="publicAssistance">
-          Does <strong>{name}</strong> have income from public assistance including Supplemental Security Income &nbsp; 
-            <Tooltipcomp id="SupplementalSecurityIncome" text={tooltiptext.SSI} target="(SSI)" />
-          &nbsp;, or&nbsp;
-            <Tooltipcomp id="cashAssistance" text={tooltiptext.cashAssistance} target="cash assistance" />
-          &nbsp; or housing subsidies from state or local government?
+        <FormattedMessage
+              id="app.slides.adultIncomeOverview.publicAssistanceQuestion"
+              description="Is adult receiving public assistance"
+              defaultMessage="Does {adult} have income from public assistance including Supplemental Security Income &nbsp;{tooltip}&nbsp;, or&nbsp;{tooltip2}&nbsp; or housing subsidies from state or local government?"
+              values={{
+              adult:<strong>{name}</strong>,
+              tooltip:<Tooltipcomp text={tooltiptext.SSI}>
+                    <FormattedMessage
+                        id="app.slides.adultIncomeOverview.ssi"
+                        description="SSI"
+                        defaultMessage="(SSI)"
+                    />
+                    </Tooltipcomp>,
+              tooltip2: <Tooltipcomp text={tooltiptext.cashAssistance}>
+                    <FormattedMessage
+                        id="app.slides.adultIncomeOverview.cashAssistance"
+                        description="cash assistance"
+                        defaultMessage="cash assistance"
+                    />
+                    </Tooltipcomp>
+                  }}
+        />
         </IncomeTypeFormGroup>
 
         <IncomeTypeFormGroup person={person} incomeTypeName="spousal">
-          Does <strong>{name}</strong> have income from &nbsp;
-            <Tooltipcomp id="alimony" text={tooltiptext.alimony} target="alimony" />
-          &nbsp; or &nbsp;
-            <Tooltipcomp id="childSupport" text={tooltiptext.childSupport} target="child support" />
-          &nbsp; ?
+        <FormattedMessage
+              id="app.slides.adultIncomeOverview.publicAssistanceQuestion"
+              description="Is adult receiving public assistance"
+              defaultMessage="Does {adult} have income from &nbsp;{tooltip}&nbsp; or &nbsp;{tooltip2}&nbsp; ?"
+              values={{
+              adult:<strong>{name}</strong>,
+              tooltip:<Tooltipcomp text={tooltiptext.alimony}>
+                    <FormattedMessage
+                        id="app.slides.adultIncomeOverview.alimony"
+                        description="alimony"
+                        defaultMessage="alimony"
+                    />
+                    </Tooltipcomp>,
+              tooltip2: <Tooltipcomp text={tooltiptext.childSupport}>
+                    <FormattedMessage
+                        id="app.slides.adultIncomeOverview.childSupport"
+                        description="child support"
+                        defaultMessage="child support"
+                    />
+                    </Tooltipcomp>
+                  }}
+        />
         </IncomeTypeFormGroup>
 
         <IncomeTypeFormGroup person={person} incomeTypeName="unemployment">
-          Does <strong>{name}</strong> have income from &nbsp;
-            <Tooltipcomp id="unemployment" text={tooltiptext.unemployment} target="unemployment benefits" />
-          &nbsp;, &nbsp;
-            <Tooltipcomp id="veteranBenefits" text={tooltiptext.veteranBenefits} target="Veteran's benefits" />
-          &nbsp;, &nbsp;
-            <Tooltipcomp id="workersCompensation" text={tooltiptext.workersComp} target="worker's compensation" />
-          &nbsp;, &nbsp;
-            <Tooltipcomp id="strikeBenefits" text={tooltiptext.strikeBenefits} target="strike benefits" />
-          &nbsp;, or Social Security Disability Insurance &nbsp;
-            <Tooltipcomp id="SSDI" text={tooltiptext.SSDI} target="(SSDI)" />
-          &nbsp;?
+        <FormattedMessage
+              id="app.slides.adultIncomeOverview.publicAssistanceQuestion"
+              description="Is adult receiving public assistance"
+              defaultMessage="Does {adult} have income from &nbsp;{tooltip}&nbsp;, &nbsp;{tooltip2}&nbsp;, &nbsp;{tooltip3}&nbsp;, &nbsp;{tooltip4}&nbsp;, or Social Security Disability Insurance &nbsp;{tooltip5}&nbsp;?"
+              values={{
+              adult:<strong>{name}</strong>,
+              tooltip:<Tooltipcomp text={tooltiptext.unemployment}>
+                    <FormattedMessage
+                        id="app.slides.adultIncomeOverview.unemployment"
+                        description="unemployment benefits"
+                        defaultMessage="unemployment benefits"
+                    />
+                    </Tooltipcomp>,
+              tooltip2: <Tooltipcomp text={tooltiptext.veteranBenefits}>
+                    <FormattedMessage
+                        id="app.slides.adultIncomeOverview.veteranBenefits"
+                        description="Veteran's benefits"
+                        defaultMessage="Veteran's benefits"
+                    />
+                    </Tooltipcomp>,
+              tooltip3: <Tooltipcomp text={tooltiptext.workersComp}>
+                    <FormattedMessage
+                        id="app.slides.adultIncomeOverview.workersComp"
+                        description="worker's compensation"
+                        defaultMessage="worker's compensation"
+                    />
+                    </Tooltipcomp>,
+              tooltip4: <Tooltipcomp text={tooltiptext.strikeBenefits}>
+                    <FormattedMessage
+                        id="app.slides.adultIncomeOverview.strikeBenefits"
+                        description="strike benefits"
+                        defaultMessage="strike benefits"
+                    />
+                    </Tooltipcomp>,
+              tooltip5: <Tooltipcomp text={tooltiptext.SSDI}>
+                    <FormattedMessage
+                        id="app.slides.adultIncomeOverview.ssdi"
+                        description="SSDI"
+                        defaultMessage="(SSDI)"
+                    />
+                    </Tooltipcomp>
+                  }}
+        />
         </IncomeTypeFormGroup>
 
         <IncomeTypeFormGroup person={person} incomeTypeName="retirement">
-          Does <strong>{name}</strong> have retirement income from Social Security (including survivor benefits, &nbsp;
-            <Tooltipcomp id="blackLungBenefits" text={tooltiptext.blackLung} target="Black Lung Benefits" />
-          &nbsp; and &nbsp;
-            <Tooltipcomp id="railroadRetirement" text={tooltiptext.railroad} target="Railroad Retirement" />
-          &nbsp; ) or &nbsp;
-            <Tooltipcomp id="pensions" text={tooltiptext.pension} target="pensions" />
-          &nbsp;?
+        <FormattedMessage
+              id="app.slides.adultIncomeOverview.publicAssistanceQuestion"
+              description="Is adult receiving public assistance"
+              defaultMessage="Does {adult} have retirement income from Social Security (including survivor benefits, &nbsp;{tooltip}&nbsp; and &nbsp;{tooltip2}&nbsp; ) or &nbsp;{tooltip3}&nbsp;?"
+              values={{
+              adult:<strong>{name}</strong>,
+              tooltip:<Tooltipcomp text={tooltiptext.blackLung}>
+                    <FormattedMessage
+                        id="app.slides.adultIncomeOverview.blackLung"
+                        description="Black Lung Benefits"
+                        defaultMessage="Black Lung Benefits"
+                    />
+                    </Tooltipcomp>,
+              tooltip2: <Tooltipcomp text={tooltiptext.railroad}>
+                    <FormattedMessage
+                        id="app.slides.adultIncomeOverview.railroad"
+                        description="Railroad Retirement"
+                        defaultMessage="Railroad Retirement"
+                    />
+                    </Tooltipcomp>,
+              tooltip3: <Tooltipcomp text={tooltiptext.pension}>
+                    <FormattedMessage
+                        id="app.slides.adultIncomeOverview.pension"
+                        description="pensions"
+                        defaultMessage="pensions"
+                    />
+                    </Tooltipcomp>
+                  }}
+        />
         </IncomeTypeFormGroup>
 
         <IncomeTypeFormGroup person={person} incomeTypeName="other">
-          Does <strong>{name}</strong> have other sources of income including &nbsp;
-            <Tooltipcomp id="regularCashPayments" text={tooltiptext.regularCashPayments} target="regular cash payments" />
-          &nbsp; from outside the household, &nbsp;
-            <Tooltipcomp id="rental" text={tooltiptext.rental} target="rental income" />
-          &nbsp;,&nbsp; 
-            <Tooltipcomp id="earnedInterest" text={tooltiptext.earnedInterest} target="earned interest" />
-          &nbsp;, investment income and &nbsp;
-            <Tooltipcomp id="annuities" text={tooltiptext.annuity} target="annuities" />
-          &nbsp; , or any other source of income available to pay for children’s school meals?
+        <FormattedMessage
+              id="app.slides.adultIncomeOverview.publicAssistanceQuestion"
+              description="Is adult receiving public assistance"
+              defaultMessage="Does {adult} have other sources of income including &nbsp;{tooltip}&nbsp; from outside the household, &nbsp;{tooltip2}&nbsp;,&nbsp;{tooltip3}&nbsp;, investment income and &nbsp;{tooltip4}&nbsp; , or any other source of income available to pay for children’s school meals?"
+              values={{
+              adult:<strong>{name}</strong>,
+              tooltip:<Tooltipcomp text={tooltiptext.regularCashPayments}>
+                    <FormattedMessage
+                        id="app.slides.adultIncomeOverview.regularCashPayments"
+                        description="regular cash payments"
+                        defaultMessage="regular cash payments"
+                    />
+                    </Tooltipcomp>,
+              tooltip2: <Tooltipcomp text={tooltiptext.rental}>
+                    <FormattedMessage
+                        id="app.slides.adultIncomeOverview.rental"
+                        description="rental income"
+                        defaultMessage="rental income"
+                    />
+                    </Tooltipcomp>,
+              tooltip3: <Tooltipcomp text={tooltiptext.earnedInterest}>
+                    <FormattedMessage
+                        id="app.slides.adultIncomeOverview.earnedInterest"
+                        description="earned interest"
+                        defaultMessage="earned interest"
+                    />
+                    </Tooltipcomp>,
+              tooltip4: <Tooltipcomp text={tooltiptext.annuity}>
+                    <FormattedMessage
+                        id="app.slides.adultIncomeOverview.annuity"
+                        description="annuities"
+                        defaultMessage="annuities"
+                    />
+                    </Tooltipcomp>
+                  }}
+        />
         </IncomeTypeFormGroup>
 
       </Slide>
