@@ -50,7 +50,7 @@ class AdultIncomeOverview extends Component {
           <FormattedMessage
               id="app.slides.adultIncomeOverview.income"
               description="Income intro"
-              defaultMessage="On questions about income, all amounts should be {adult}’s &nbsp;{tooltip}&nbsp;,"
+              defaultMessage="On questions about income, all amounts should be {adult}’s &nbsp;{tooltip}&nbsp;,{grossIncome}."
               values={{
               adult: name,
               tooltip: <Tooltipcomp text={tooltiptext.currentAdult}>
@@ -59,16 +59,16 @@ class AdultIncomeOverview extends Component {
                             description="Intro Paragraph"
                             defaultMessage="current"
                         />
-                       </Tooltipcomp>
+                       </Tooltipcomp>,
+              grossIncome: <strong>
+                      <FormattedMessage
+                            id="app.slides.adultIncomeOverview.grossIncome"
+                            description="gross income"
+                            defaultMessage="gross income"
+                        />
+                      </strong>
               }}
           />
-        <strong>
-          <FormattedMessage
-              id="app.slides.adultIncomeOverview.grossIncome"
-              description="Gross income"
-              defaultMessage="gross income"
-          />
-        </strong>.
         </p>
 
         <p>
