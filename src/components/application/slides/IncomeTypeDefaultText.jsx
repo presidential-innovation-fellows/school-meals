@@ -16,12 +16,17 @@ class IncomeTypeDefaultText extends Component {
           <FormattedMessage
               id="app.slides.IncomeTypeDefaultText.intro"
               description="Introductory paragraph."
-              defaultMessage="Does {person} have income from the following sources "
+              defaultMessage="Does {person} have income from the following sources {militaryCaveat}?"
               values={{
-                person: <strong>{informalName(person)}</strong>
+                person: <strong>{informalName(person)}</strong>,
+                militaryCaveat: !!showMilitaryCaveat && 
+                            <FormattedMessage
+                              id="app.slides.IncomeTypeDefaultText.notIncludingEarnings"
+                              description="not including earnings"
+                              defaultMessage=", not including earnings from the military that were already reported"
+                            />
               }}
           />
-          {!!showMilitaryCaveat && ', not including earnings from the military that were already reported'}?
         </p>
 
         <p>
