@@ -5,6 +5,7 @@ import Checkbox from '../Checkbox'
 import Checkboxes from '../Checkboxes'
 import { observer } from 'mobx-react'
 import { informalName } from '../../../helpers'
+import FormattedMessage from '../FormattedMessage'
 
 @observer
 class Demographics extends Component {
@@ -16,33 +17,71 @@ class Demographics extends Component {
         <Form large>
           <div className="well">
             <h2>{informalName(student)}</h2>
-            <label>Ethnicity</label>
+            <label>
+            <FormattedMessage
+                id="app.slides.demographicsForm.ethnicity"
+                description="Ethnicity"
+                defaultMessage="Ethnicity"
+            />
+            </label>
             <BooleanRadio name="isHispanicLatino"
                           object={student.demographics}
                           trueLabel="Hispanic or Latino"
                           falseLabel="Non Hispanic or Latino" />
 
-            <label>Race</label>
+            <label>
+            <FormattedMessage
+                id="app.slides.demographicsForm.race"
+                description="Race"
+                defaultMessage="Race"
+            />
+            </label>
             <Checkboxes legend="Races">
               <Checkbox object={student.demographics} name="isNativeAmerican">
-                American Indian or Alaskan Native
+                <FormattedMessage
+                    id="app.slides.demographicsForm.americanIndianOrAlaskanNative"
+                    description="American Indian or Alaskan Native"
+                    defaultMessage="American Indian or Alaskan Native"
+                />
               </Checkbox>
               <Checkbox object={student.demographics} name="isAsian">
-                Asian
+                <FormattedMessage
+                    id="app.slides.demographicsForm.asian"
+                    description="Asian"
+                    defaultMessage="Asian"
+                />
               </Checkbox>
               <Checkbox object={student.demographics} name="isBlack">
-                Black or African American
+                <FormattedMessage
+                    id="app.slides.demographicsForm.africanAmerican"
+                    description="Black or African American"
+                    defaultMessage="Black or African American"
+                />
               </Checkbox>
               <Checkbox object={student.demographics} name="isPacificIslander">
-                Native Hawaiian or Other Pacific Islander
+                <FormattedMessage
+                    id="app.slides.demographicsForm.pacificIslander"
+                    description="Native Hawaiian or Other Pacific Islander"
+                    defaultMessage="Native Hawaiian or Other Pacific Islander"
+                />
               </Checkbox>
               <Checkbox object={student.demographics} name="isWhite">
-                White
+                <FormattedMessage
+                    id="app.slides.demographicsForm.white"
+                    description="White"
+                    defaultMessage="White"
+                />
               </Checkbox>
             </Checkboxes>
 
             <div>
-              <button className="usa-button-gray" type="reset">Clear</button>
+              <button className="usa-button-gray" type="reset">
+              <FormattedMessage
+                    id="app.slides.demographicsForm.clear"
+                    description="Clear"
+                    defaultMessage="Clear"
+                />
+              </button>
             </div>
           </div>
         </Form>
