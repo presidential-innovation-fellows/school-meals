@@ -3,6 +3,7 @@ import { observer } from 'mobx-react'
 import { informalName } from '../../../helpers'
 import { tooltiptext } from '../../Tooltiptext'
 import Tooltipcomp from '../Tooltip'
+import FormattedMessage from '../FormattedMessage'
 
 @observer
 class IncomeTypeDefaultText extends Component {
@@ -12,15 +13,41 @@ class IncomeTypeDefaultText extends Component {
     return(
       <div>
         <p className="usa-font-lead">
-          Does <strong>{informalName(person)}</strong> have income from the following sources{!!showMilitaryCaveat && ', not including earnings from the military that were already reported'}?
+          <FormattedMessage
+              id="app.slides.IncomeTypeDefaultText.intro"
+              description="Introductory paragraph."
+              defaultMessage="Does {person} have income from the following sources "
+              values={{
+                person: <strong>{informalName(person)}</strong>
+              }}
+          />
+          {!!showMilitaryCaveat && ', not including earnings from the military that were already reported'}?
         </p>
 
         <p>
-          NOTE: Remember to report &nbsp;
-          <Tooltipcomp id="currentAdult" text={tooltiptext.currentAdult} target="current" />
-          &nbsp;, &nbsp;
-          <Tooltipcomp id="gross" text={tooltiptext.gross} target="gross" />
-          &nbsp; income.
+        <FormattedMessage
+              id="app.slides.IncomeTypeDefaultText.note"
+              description="note: remember to report..."
+              defaultMessage="NOTE: Remember to report &nbsp;{tooltip}&nbsp;, &nbsp;{tooltip2}&nbsp; income."
+              values={{
+                tooltip:
+                        <Tooltipcomp text={tooltiptext.currentAdult}>
+                          <FormattedMessage
+                              id="app.slides.IncomeTypeDefaultText.currentAdult"
+                              description="current"
+                              defaultMessage="current"
+                          />
+                        </Tooltipcomp>,
+                tooltip2:
+                        <Tooltipcomp text={tooltiptext.gross}>
+                          <FormattedMessage
+                              id="app.slides.IncomeTypeDefaultText.gross"
+                              description="gross"
+                              defaultMessage="gross"
+                          />
+                        </Tooltipcomp>
+              }}
+          />
         </p>
       </div>
     )
