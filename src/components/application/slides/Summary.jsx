@@ -114,17 +114,7 @@ class Summary extends Component {
 
         <Checkboxes legend="Certification">
           <Checkbox name="certifiedCorrect" object={applicationData}>
-            { assistancePrograms.length ?
-              <strong>
-                I certify* that my household participates in
-                {' '}
-                {toSentenceSerialArray(assistancePrograms.map(program => {
-                   return (<span className="usa-label-big" key={program.id}>
-                             {program.accronym}
-                           </span>)
-                 }))}
-              </strong>
-              :
+            { applicationData.showHousehold ?
               <strong>
                 I certify* that
                 {' '}
@@ -139,6 +129,24 @@ class Summary extends Component {
                   per month
                 </span>
               </strong>
+              : (assistancePrograms.length ?
+                 <strong>
+                   I certify* that my household participates in
+                   {' '}
+                   {toSentenceSerialArray(assistancePrograms.map(program => {
+                      return (
+                        <span className="usa-label-big" key={program.id}>
+                          {program.accronym}
+                        </span>
+                      )
+                    }))}
+                 </strong>
+                 :
+                 <strong>
+                   I certify* that the information on this page is correct to
+                   the best of my knowledge.
+                 </strong>
+              )
             }
           </Checkbox>
         </Checkboxes>
