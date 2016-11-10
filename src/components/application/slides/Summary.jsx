@@ -8,6 +8,9 @@ import { observer } from 'mobx-react'
 import { numberFormat } from 'underscore.string'
 import { assistanceProgramsVarArray, organization } from '../../../config'
 import { fullName, toSentenceSerialArray } from '../../../helpers'
+import { tooltiptext } from '../../Tooltiptext'
+import Tooltipcomp from '../Tooltip'
+import FormattedMessage from '../FormattedMessage'
 
 @observer
 class Summary extends Component {
@@ -23,6 +26,9 @@ class Summary extends Component {
             students } = applicationData
     const assistancePrograms = applicationData.assistancePrograms.applicable
 
+    // don't show link to Adults slide if we're not collecting household income
+    const adultsId = applicationData.showHousehold && 'adults'
+
     return (
       <Slide header="Summary"
              nextText="Submit"
@@ -31,86 +37,92 @@ class Summary extends Component {
         <p className="usa-font-lead">Awesome, you finished!</p>
         <p>Here is a summary of the information you provided in the application. We encourage you to save or print this screen for your records. If everything looks good, click the "Submit" button at the bottom of the page.</p>
 
-        <SummaryPersonCollection collection={students} id="students">
-          Students attending {organization.name}
-        </SummaryPersonCollection>
+        <div className="well">
+          <SummaryPersonCollection collection={students} id="students">
+            Students attending {organization.name}
+          </SummaryPersonCollection>
 
-        <SummaryPersonCollection collection={otherChildren} id="other-children">
-          Other children
-        </SummaryPersonCollection>
+          <SummaryPersonCollection collection={otherChildren} id="other-children">
+            Other children
+          </SummaryPersonCollection>
 
-        <SummaryPersonCollection collection={adults} id="adults">
-          Adults
-        </SummaryPersonCollection>
+          <SummaryPersonCollection collection={adults} id={adultsId}>
+            Adults
+          </SummaryPersonCollection>
 
-        <div>
-          <SummaryLabel id="assistance-programs">
-            Assistance program case numbers
-          </SummaryLabel>
+          <div>
+            <SummaryLabel id="assistance-programs">
+              Assistance program case numbers
+            </SummaryLabel>
 
-          <ul>
-            {
-              assistancePrograms.length ?
-              assistancePrograms.map(program =>
-                <li key={program.id}>
-                  {program.name} — <strong>{program.caseNumber}</strong>
-                </li>
-              )
-              :
-              <li>(none)</li>
+            <ul>
+              {
+                assistancePrograms.length ?
+                assistancePrograms.map(program =>
+                  <li key={program.id}>
+                    {program.name} — <strong>{program.caseNumber}</strong>
+                  </li>
+                )
+                :
+                <li>(none)</li>
+              }
+            </ul>
+          </div>
+
+          {applicationData.showHousehold &&
+           <div>
+             <SummaryLabel>Total household income</SummaryLabel>
+             <Tooltipcomp text={tooltiptext.totalHouseholdIncome}>
+               ${
+                 numberFormat(
+                   parseFloat(applicationData.totalMonthlyHouseholdIncome, 10),
+                   2
+                 )
+                }
+               {' '}
+               per month
+             </Tooltipcomp>
+           </div>
+          }
+
+          <SummaryLabel id="contact">Contact information</SummaryLabel>
+          <p>
+            { fullName(applicationData.attestor) }
+            {!!contact.address1 &&
+             <span>
+               <br />
+               { contact.address1 }
+             </span>
             }
-          </ul>
+            {!!contact.address2 &&
+             <span>
+               <br />
+               { contact.address2 }
+             </span>
+            }
+            {!!contact.city &&
+             <span>
+               <br />
+               { contact.city },{' '}
+             </span>
+            }
+            { contact.state }
+            {' '}
+            { contact.zip }
+            {!!contact.phone &&
+             <span>
+               <br />
+               { contact.phone }
+             </span>
+            }
+            {!!contact.email &&
+             <span>
+               <br />
+               { contact.email }
+             </span>
+            }
+          </p>
         </div>
-
-        {applicationData.showHousehold &&
-         <div>
-           <SummaryLabel>Total household income</SummaryLabel>
-           ${
-             numberFormat(
-               parseFloat(applicationData.totalMonthlyHouseholdIncome, 10),
-               2
-             )
-            }
-           {' '}
-           per month
-         </div>
-        }
-
-        <SummaryLabel id="contact">Contact information</SummaryLabel>
-        { fullName(applicationData.attestor) }
-        {!!contact.address1 &&
-         <span>
-           <br />
-           { contact.address1 }
-         </span>
-        }
-        {!!contact.address2 &&
-         <span>
-           <br />
-           { contact.address2 }
-         </span>
-        }
-        {!!contact.city &&
-         <span>
-           <br />
-           { contact.city },{' '}
-         </span>
-        }
-        { contact.state }
-        {' '}
-        { contact.zip }
-        {!!contact.phone &&
-         <span>
-           <br />
-           { contact.phone }
-         </span>
-        }
-        {!!contact.email &&
-         <span>
-           <br />
-           { contact.email }
-         </span>
-        }
 
         <Checkboxes legend="Certification">
           <Checkbox name="certifiedCorrect" object={applicationData}>

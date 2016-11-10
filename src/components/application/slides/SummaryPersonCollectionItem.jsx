@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-import Link from '../Link'
+import SummaryEditLink from './SummaryEditLink'
 import { observer } from 'mobx-react'
 import { applicableIncomeSources, fullName } from '../../../helpers'
 
@@ -12,15 +12,24 @@ class SummaryPersonCollectionItem extends Component {
       <li>
         {fullName(person)}
         <ul>
-          {person.isFoster && <li>Foster child</li>}
-          {person.isMigrant && <li>Migrant child</li>}
-          {person.isHomeless && <li>Homeless child</li>}
-          {person.isRunaway && <li>Runaway child</li>}
+          {person.isFoster &&
+           <li>Foster child <SummaryEditLink id="foster" /></li>}
+
+          {person.isMigrant &&
+           <li>Migrant child <SummaryEditLink id="other-programs" /></li>}
+
+          {person.isHomeless &&
+           <li>Homeless child <SummaryEditLink id="other-programs" /></li>}
+
+          {person.isRunaway &&
+           <li>Runaway child <SummaryEditLink id="other-programs" /></li>}
+
           {applicableIncomeSources(person).map(income =>
             <SummaryPersonCollectionItemIncome
                 key={person.id + income.type + income.source + income.num}
                 income={income} />
            )}
+
         </ul>
       </li>
     )
