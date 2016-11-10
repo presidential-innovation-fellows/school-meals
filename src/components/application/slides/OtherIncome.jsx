@@ -26,7 +26,7 @@ class OtherIncome extends Component {
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="rentalIncome">
-          <Tooltipcomp id="rentalIncome" text={tooltiptext.rentalIncome} target="Rental income" />
+          <Tooltipcomp id="rentalIncome" text={tooltiptext.rental} target="Rental income" />
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="earnedInterest">
@@ -39,7 +39,6 @@ class OtherIncome extends Component {
 
         <IncomeSource incomeSources={incomeSources} name="annuity">
           <Tooltipcomp id="annuity" text={tooltiptext.annuity} target="Annuity" />
-          Annuity
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="other">

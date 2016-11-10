@@ -1,11 +1,13 @@
+
+
 export const organization = {
   name: 'Applewood School District',
+  shortname: 'ASD',
   logoUrl: 'img/Applewood_logo.png',
   contact: {
     address: '100 Main Street, Anytown, USA 12345',
     phone: '555-123-4567',
-    email: 'sfa@state.us',
-    shortname: 'ASD'
+    email: 'sfa@state.us'
   },
   paperApplication: {
     url: 'http://www.fns.usda.gov/sites/default/files/cn/SP34-2016a2.pdf',
@@ -21,20 +23,57 @@ export const assistancePrograms = [
   'Food Distribution Program on Indian Reservations (FDPIR)'
 ]
 
-export const localPrograms = {
-  homelessness: {
-    contact: 'Cersei Lannister (888-555-1212)'
-  },
+export const assistanceProgramsVar = {
   snap: {
-    name: 'CalFresh',
-    localContact: 'Jon Snow (888-555-1212)',
-    stateHotline: '888-555-1212'
+    fullName: 'Supplemental Nutrition Assistance Program',
+    accronym: 'SNAP',
   },
   tanf: {
-    name: 'TANF'
+    fullName: 'Temporary Assistance for Needy Families',
+    accronym: 'TANF',
+  },
+  fdpir: {
+    fullName: 'Food Distribution Program on Indian Reservations',
+    accronym: 'FDPIR',
   }
 }
 
 export const thankYou = [
   'You will hear from us soon with your certification decision!'
+]
+
+export const hmrPrograms = {
+  mep: {
+    fullName: 'Migrant Education Program',
+    accronym: 'MEP',
+  },
+  mckinney: {
+    shortName: 'McKinney-Vento Homeless Assistance Act',
+    fullName: 'McKinney-Vento Education of Homeless Chilren and Youth Assistance Act',
+  },
+  runaway: 'Runaway and Homeless Youth Act',
+}
+
+// To support an additional language:
+//     1. add an import statment for it:
+import es from 'react-intl/locale-data/es';
+import en from 'react-intl/locale-data/en';
+
+//     2. add its language code to the following array:
+import { addLocaleData } from 'react-intl'
+addLocaleData([...es, ...en])
+
+//     3. create a JSON file in /translations/ with the name of the locale code
+//     4. add locale to the following array (NOTE: keep English as first item)
+export const locales = [
+  {
+    code: 'en',
+    language: 'English',
+    iSpeak: 'I speak English'
+  },
+  {
+    code: 'es',
+    language: 'Español',
+    iSpeak: 'Yo hablo español'
+  },
 ]

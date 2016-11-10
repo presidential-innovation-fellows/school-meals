@@ -1,38 +1,42 @@
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
+import Checkbox from './Checkbox'
+import Checkboxes from './Checkboxes'
 import InputField from './InputField'
 
 @observer
 class PersonAttributeInput extends Component {
   render() {
-    const {
-      person,
-      name,
-      label,
-      required,
-    } = this.props
+    const { field, person } = this.props
 
-    return(
-      <InputField
-          name={name}
-          label={label}
-          placeholder={label}
-          object={person}
-          required={required}
-      />
-    )
+    switch(field.dataType) {
+      case PropTypes.bool:
+        return <div>
+          <br />
+          <Checkboxes>
+            <Checkbox
+                name={field.name}
+                object={person}
+            >
+              <strong>{field.label}</strong>
+            </Checkbox>
+          </Checkboxes>
+        </div>
+      default:
+        return <InputField
+                   label={field.label}
+                   name={field.name}
+                   object={person}
+                   placeholder={field.placeholder}
+                   required={!!field.required}
+               />
+    }
   }
 }
 
 PersonAttributeInput.propTypes = {
   person: PropTypes.object.isRequired,
-  name: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
-  required: PropTypes.bool
-}
-
-PersonAttributeInput.defaultProps = {
-  required: false
+  field: PropTypes.object.isRequired
 }
 
 export default PersonAttributeInput

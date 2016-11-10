@@ -1,3 +1,4 @@
+import { PropTypes } from 'react'
 import shortid from 'shortid'
 import { action, computed, observable } from 'mobx'
 import { assistancePrograms as assistanceProgramNames } from '../config'
@@ -11,7 +12,7 @@ const DEBUG = false;
 export default class ApplicationData {
   students = new StudentCollection()
   assistancePrograms = new AssistancePrograms()
-  otherChildren = new ChildCollection()
+  otherChildren = new OtherChildrenCollection()
   adults = new AdultCollection()
 
   @observable certifiedCorrect = false
@@ -186,7 +187,7 @@ class PersonCollection {
       { name: 'firstName', label: 'First name', required: true },
       { name: 'middleName', label: 'Middle name' },
       { name: 'lastName', label: 'Last name', required: true },
-      { name: 'suffix', label: 'Suffix' }
+      { name: 'suffix', label: 'Suffix (e.g. Jr., Sr., I, II, III)', placeholder: 'Suffix' }
     ]
   }
 
@@ -357,9 +358,21 @@ class AdultCollection extends PersonCollection {
           isApplicable: null,
           isDeployed: null,
           sources: {
-            'basic':     { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
-            'cashBonus': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
-            'allowance': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' }
+            'basic':     { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '',
+                            hasMore: null,
+                            more: [],
+                            add: this.addIncomeSource,
+                            remove: this.removeIncomeSource},
+            'cashBonus': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '',
+                            hasMore: null,
+                            more: [],
+                            add: this.addIncomeSource,
+                            remove: this.removeIncomeSource},
+            'allowance': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '',
+                            hasMore: null,
+                            more: [],
+                            add: this.addIncomeSource,
+                            remove: this.removeIncomeSource},
           }
         },
         employment: {
@@ -395,43 +408,111 @@ class AdultCollection extends PersonCollection {
         publicAssistance: {
           isApplicable: null,
           sources: {
-            'ssi':        { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
-            'stateLocal': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' }
+            'ssi':        { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '',
+                            hasMore: null,
+                            more: [],
+                            add: this.addIncomeSource,
+                            remove: this.removeIncomeSource},
+            'stateLocal': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '',
+                            hasMore: null,
+                            more: [],
+                            add: this.addIncomeSource,
+                            remove: this.removeIncomeSource},
           }
         },
         spousal: {
           isApplicable: null,
           sources: {
-            'alimony':      { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
-            'childSupport': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' }
+            'alimony':      { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '',
+                            hasMore: null,
+                            more: [],
+                            add: this.addIncomeSource,
+                            remove: this.removeIncomeSource},
+            'childSupport': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '',
+                            hasMore: null,
+                            more: [],
+                            add: this.addIncomeSource,
+                            remove: this.removeIncomeSource},
           }
         },
         unemployment: {
           isApplicable: null,
           sources: {
-            'unemployment': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
-            'workersComp':  { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
-            'strike':       { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
-            'ssdi':         { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
-            'veteran':      { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' }
+            'unemployment': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '',
+                            hasMore: null,
+                            more: [],
+                            add: this.addIncomeSource,
+                            remove: this.removeIncomeSource},
+            'workersComp':  { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '',
+                            hasMore: null,
+                            more: [],
+                            add: this.addIncomeSource,
+                            remove: this.removeIncomeSource},
+            'strike':       { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '',
+                            hasMore: null,
+                            more: [],
+                            add: this.addIncomeSource,
+                            remove: this.removeIncomeSource},
+            'ssdi':         { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '',
+                            hasMore: null,
+                            more: [],
+                            add: this.addIncomeSource,
+                            remove: this.removeIncomeSource},
+            'veteran':      { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '',
+                            hasMore: null,
+                            more: [],
+                            add: this.addIncomeSource,
+                            remove: this.removeIncomeSource},
           }
         },
         retirement: {
           isApplicable: null,
           sources: {
-            'socialSecurity': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
-            'privatePension': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' }
+            'socialSecurity': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '',
+                            hasMore: null,
+                            more: [],
+                            add: this.addIncomeSource,
+                            remove: this.removeIncomeSource},
+            'privatePension': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '',
+                            hasMore: null,
+                            more: [],
+                            add: this.addIncomeSource,
+                            remove: this.removeIncomeSource},
           }
         },
         other: {
           isApplicable: null,
           sources: {
-            'regularCashPayments': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
-            'rentalIncome':        { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
-            'earnedInterest':      { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
-            'investmentIncome':    { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
-            'annuity':             { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
-            'other':               { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' }
+            'regularCashPayments': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '',
+                            hasMore: null,
+                            more: [],
+                            add: this.addIncomeSource,
+                            remove: this.removeIncomeSource},
+            'rentalIncome':        { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '',
+                            hasMore: null,
+                            more: [],
+                            add: this.addIncomeSource,
+                            remove: this.removeIncomeSource},
+            'earnedInterest':      { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '',
+                            hasMore: null,
+                            more: [],
+                            add: this.addIncomeSource,
+                            remove: this.removeIncomeSource},
+            'investmentIncome':    { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '',
+                            hasMore: null,
+                            more: [],
+                            add: this.addIncomeSource,
+                            remove: this.removeIncomeSource},
+            'annuity':             { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '',
+                            hasMore: null,
+                            more: [],
+                            add: this.addIncomeSource,
+                            remove: this.removeIncomeSource},
+            'other':               { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '',
+                            hasMore: null,
+                            more: [],
+                            add: this.addIncomeSource,
+                            remove: this.removeIncomeSource},
           }
         }
       }
@@ -444,7 +525,7 @@ class AdultCollection extends PersonCollection {
 
   @action addIncomeSource(source) {
 
-    source.more.push({amount: '', frequency: '', hourlyHours: '0', hourlyPeriod: '0'})
+    source.more.push({amount: '', frequency: '', hourlyHours: '', hourlyPeriod: ''})
     source.hasMore = true
 
   }
@@ -468,15 +549,63 @@ class ChildCollection extends PersonCollection {
         child: {
           isApplicable: null,
           sources: {
-            'job':                 { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
-            'socialSecurity':      { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
-            'friendsFamily':       { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
-            'pensionAnnuityTrust': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' },
-            'other':               { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' }
+            'job':                 { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '',
+                                                  hasMore: null,
+                                                  more: [],
+                                                  add: this.addIncomeSource,
+                                                  remove: this.removeIncomeSource},
+            'socialSecurity':      { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '',
+                            hasMore: null,
+                            more: [],
+                            add: this.addIncomeSource,
+                            remove: this.removeIncomeSource},
+            'friendsFamily':       { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '',
+                            hasMore: null,
+                            more: [],
+                            add: this.addIncomeSource,
+                            remove: this.removeIncomeSource},
+            'pensionAnnuityTrust': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '',
+                            hasMore: null,
+                            more: [],
+                            add: this.addIncomeSource,
+                            remove: this.removeIncomeSource},
+            'other':               { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '',
+                            hasMore: null,
+                            more: [],
+                            add: this.addIncomeSource,
+                            remove: this.removeIncomeSource},
           }
         }
       }
     })
+  }
+
+  @action addIncomeSource(source) {
+
+    source.more.push({amount: '', frequency: '', hourlyHours: '', hourlyPeriod: ''})
+    source.hasMore = true
+
+  }
+
+  @action removeIncomeSource(source, i) {
+    if (i < source.more.length) {
+      source.more.splice(i,1)
+
+      if (source.more.length == 0){
+        source.hasMore = false
+      }
+    }
+  }
+
+}
+
+class OtherChildrenCollection extends ChildCollection {
+  get fields() {
+    return super.fields.concat([
+      { name: 'isFoster',
+        label: 'Foster child',
+        dataType: PropTypes.bool }
+    ])
   }
 }
 
@@ -518,6 +647,3 @@ class StudentCollection extends ChildCollection {
     return this.items.length >= 1 && super.isValid
   }
 }
-
-
-

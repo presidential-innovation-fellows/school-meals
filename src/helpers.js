@@ -1,4 +1,9 @@
-﻿import { toSentenceSerial } from 'underscore.string'
+﻿import React from 'react'
+import { toSentenceSerial } from 'underscore.string'
+import { hmrPrograms } from './config'
+import { tooltiptext } from './components/Tooltiptext'
+import Tooltipcomp from './components/application/Tooltip'
+import { Glyphicon, OverlayTrigger, Tooltip } from 'react-bootstrap'
 
 export function schoolYear(startYear = new Date().getFullYear()) {
   return `${startYear}–${startYear + 1}`
@@ -202,27 +207,52 @@ export function allStudentsAreFHMR(students) {
     .reduce((a, b) => a && b, true)
 }
 
-// Added a new function to calculate if all students are Foster
 export function allStudentsAreFoster(students) {
-  const qualifyingAttribute = "isFoster";
-
   if (!students.length) {
     return false
   }
 
   return students
     .map(student => student.isFoster)
-    .reduce ( (acc, item) => acc && item, true);
+    .reduce((a, b) => a && b, true)
 }
 
+// "key" attributes required to play nice with toSentenceSerialArray()
+// This is inelegant but works.
 export function programDescription(slug) {
   return {
     isFoster: 'live with you under a formal (court-ordered) foster care arrangement',
-    isHomeless: 'receive assistance under the McKinney-Vento Homeless Assistance Act',
-    isMigrant: 'participate in the Migrant Education Program (MEP)',
-    isRunaway: 'participate in a program under the Runaway and Homeless Youth Act'
+    isHomeless: <span key="mckinney">receive assistance under the <Tooltipcomp id="mckinney" text={tooltiptext.mckinney} target={hmrPrograms.mckinney.shortName} /></span>,
+    isMigrant: <span key="mep">participate in the {hmrPrograms.mep.fullName} (<Tooltipcomp id="migrant" text={tooltiptext.mep} target={hmrPrograms.mep.accronym} />)</span>,
+    isRunaway: <span key="runaway">participate in a program under the <Tooltipcomp id="runaway" text={tooltiptext.runaway} target={hmrPrograms.runaway} /></span>,
   }[slug]
 }
 
+// Like the underscore.string version but handles any React node (not just strings).
+// Returns an array of the inputs with appropriate delimiters interspersed.
+export function toSentenceSerialArray(array = [], delimiter = ', ', lastDelimiter = ' and ') {
+  switch (array.length) {
+    case 0:
+      return null
+    case 1:
+      return array[0]
+    default:
+      let result = []
 
+      for (let i = 0; i < array.length; i++) {
+        result.push(array[i])
 
+        switch (array.length - i) {
+          case 1:
+            break
+          case 2:
+            result.push(<span key={i + 'last'}>{lastDelimiter}</span>)
+            break
+          default:
+            result.push(<span key={i}>{delimiter}</span>)
+        }
+      }
+
+      return result
+  }
+}

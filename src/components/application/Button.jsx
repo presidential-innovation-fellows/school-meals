@@ -16,7 +16,7 @@ class Button extends Component {
 
     if (slideId) {
       onClick = function() {
-        window.location.hash = '#/' + slideId
+        window.location.replace('#/' + slideId)
       }
     }
 

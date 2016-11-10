@@ -45,9 +45,12 @@ export default class NavigationData {
         lastURL = document.URL
       })
     }())
-  
+
     this.handleHashChange = this.handleHashChange.bind(this)
     window.onhashchange = this.handleHashChange
+
+    this.handlebeforeunload = this.handlebeforeunload.bind(this)
+    window.onbeforeunload = this.handlebeforeunload
   }
 
   get slides() {
@@ -81,7 +84,7 @@ export default class NavigationData {
     return slides[0]
   }
 
-  get lastSlide() {
+  get prevSlide() {
     const slides = this.slides
 
     for (let i = 0; i < slides.length; i++) {
@@ -90,8 +93,8 @@ export default class NavigationData {
         let className = slides[i].classList[j]
 
         if (className === this.CURRENT_CLASS_NAME) {
-          if (i === slides.length - 1) {
-            // final slide -- no next
+          if (i === 0) {
+            // first slide -- no prev
             return null
           } else {
             return slides[i - 1]
@@ -100,7 +103,7 @@ export default class NavigationData {
       }
     }
 
-    // nothing is current -- the first slide should be next
+    // nothing is current -- the first slide should be prev
     return slides[0]
   }
 
@@ -175,22 +178,31 @@ export default class NavigationData {
     this.goToSlide(newId)
   }
 
+  handlebeforeunload(event) {
+    // let the browser's default behavior handle i18n
+    return 'Changes you made may not be saved.'
+  }
+
   @action init() {
     if (window.location.hash === '#/')
-      window.location.hash = '#'
+      window.location.replace('#')
     else
-      window.location.hash = '#/'
+      window.location.replace('#/')
   }
 
   @action back() {
-    window.location.hash = '#/' + this.lastSlide.id
+    window.location.replace('#/' + this.prevSlide.id)
   }
 
   @action next() {
-    window.location.hash = '#/' + this.nextSlide.id
+    window.location.replace('#/' + this.nextSlide.id)
   }
 
   @action jump() {
-    window.location.hash = '#/' + this.jumpSlide.id
+    window.location.replace('#/' + this.jumpSlide.id)
+  }
+
+  @action jumpTo(id) {
+    window.location.replace(`#/${id}`)
   }
 }

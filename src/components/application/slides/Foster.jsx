@@ -4,6 +4,7 @@ import OtherProgramsProgram from './OtherProgramsProgram'
 import { observable } from 'mobx'
 import { observer } from 'mobx-react'
 import { organization } from '../../../config'
+import FormattedMessage from '../FormattedMessage'
 
 @observer
 class Foster extends Component {
@@ -50,7 +51,12 @@ class Foster extends Component {
     return (
       <Slide nextDisabled={!this.isValid} id="foster">
         <p className="usa-font-lead">
-          No problem! There are other ways to qualify.
+          <FormattedMessage
+              id="app.slides.foster.confirm"
+              description="No problem."
+              defaultMessage="No problem! There are other ways to qualify."
+          />
+          
         </p>
 
         <OtherProgramsProgram attribute="isFoster" {...props} />

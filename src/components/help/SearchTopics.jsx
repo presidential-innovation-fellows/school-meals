@@ -1,67 +1,82 @@
 import jQuery from 'jquery'
-import uswds from 'uswds'
 import React, { Component, PropTypes } from 'react'
-
-const NUM_TOPICS_SEARCH_THRESHOLD = 0;
+import FormattedMessage from '../application/FormattedMessage'
+import All from './articles/All'
 
 class SearchTopics extends Component {
-
   constructor() {
     super()
 
     this.state = {
-      searchVal: "",
-      shouldShowSearch: false
+      searchVal: ''
     }
-  }
 
-  handleChange(event) {
-    var searchVal = event.target.value
-    this.setState({searchVal: searchVal})
-
-    jQuery("ul.usa-accordion li").each(function () {
-      if (jQuery(this).text().search(new RegExp(searchVal, "i")) < 0) {
-        jQuery(this).fadeOut()
-      } else {
-        jQuery(this).show()
-      }
-    })
+    this.setSearchVal = this.setSearchVal.bind(this)
   }
 
   componentDidMount() {
-    // only show the search if we have too many items
-    let searchTopics = jQuery("ul.usa-accordion li")
-    let shouldShowSearch = searchTopics ? searchTopics.length > NUM_TOPICS_SEARCH_THRESHOLD : false
-    this.setState({
-      shouldShowSearch: shouldShowSearch
-    })
+    this.setSearchVal('')
   }
 
-  render() {
-    if (this.state.shouldShowSearch) {
-      return (
-        <div >
-          <div>
-            <form style={{width: "100%"}}>
-              <div role="search">
-                <input
-                 id="search-field-small"
-                 type="search"
-                 name="search"
-                 placeholder="Search Term"
-                 value={this.state.searchVal}
-                 onChange={this.handleChange.bind(this)}
-                />
-              </div>
-            </form>
-          </div>
-        </div>
-      )
+  handleChange(event) {
+    this.setSearchVal(event.target.value)
+  }
+
+  setSearchVal(searchVal) {
+    let $container = jQuery('.searchable-help-topics')
+
+    this.setState({ searchVal: searchVal })
+
+    if (this.props.onChange) {
+      this.props.onChange(searchVal)
+    }
+
+    if (!!searchVal) {
+      $container.show()
+
+      jQuery('ul.usa-accordion li', $container).each(function () {
+        if (jQuery(this).text().search(new RegExp(searchVal, 'i')) < 0) {
+          jQuery(this).hide()
+        } else {
+          jQuery(this).show()
+        }
+      })
     } else {
-      return null
+      $container.hide()
     }
   }
 
+  render() {
+    return (
+      <div>
+        <div role="search">
+          <input
+              id="search-field-small"
+              type="search"
+              name="search"
+              placeholder="Search term"
+              value={this.state.searchVal}
+              onChange={this.handleChange.bind(this)}
+          />
+        </div>
+
+        <div className="searchable-help-topics">
+          <bodyLabels>
+            <FormattedMessage
+                id="help.searchResults"
+                description="Search results help section title."
+                defaultMessage="Search Results"
+            />
+          </bodyLabels>
+          { this.state.searchVal && <All showLabels={false} /> }
+        </div>
+      </div>
+    )
+  }
+}
+
+SearchTopics.propTypes = {
+  onChange: PropTypes.func.isRequired
 }
 
 export default SearchTopics
