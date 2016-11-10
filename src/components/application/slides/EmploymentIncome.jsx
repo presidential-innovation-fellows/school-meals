@@ -4,6 +4,7 @@ import IncomeType from './IncomeType'
 import { observer } from 'mobx-react'
 import { tooltiptext } from '../../Tooltiptext'
 import Tooltipcomp from '../Tooltip'
+import FormattedMessage from '../FormattedMessage'
 
 @observer
 class EmploymentIncome extends Component {
@@ -22,24 +23,62 @@ class EmploymentIncome extends Component {
       <IncomeType {...incomeTypeProps}>
         <IncomeSource incomeSources={incomeSources} name="salaryWages"
                       showHourly={true} showAnnual={true}>
-          Salary / Wages
+          <FormattedMessage
+              id="app.slides.employmentIncome.salaryWages"
+              description="Salary / Wages"
+              defaultMessage="Salary / Wages"
+          />
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="tips">
-          Tips
+          <FormattedMessage
+              id="app.slides.employmentIncome.tips"
+              description="Tips"
+              defaultMessage="Tips"
+          />
         </IncomeSource>
 
-        <IncomeSource incomeSources={incomeSources} name="commission">
-          Commission
+        <IncomeSource incomeSources={incomeSources} name="Commission">
+          <FormattedMessage
+              id="app.slides.employmentIncome.Commission"
+              description="Commission"
+              defaultMessage="Commission"
+          />
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} showAnnual={true} name="cashBonus">
+          <FormattedMessage
+              id="app.slides.employmentIncome.cashBonus"
+              description="Cash bonus"
+              defaultMessage="{tooltip}"
+              values={{
+                tooltip: <Tooltipcomp text={tooltiptext.cashBonus}>
+                          <FormattedMessage
+                              id="app.slides.employmentIncome.tooltipCashBonus"
+                              description="Cash bonus tooltip"
+                              defaultMessage="Cash bonus"
+                          />
+                        </Tooltipcomp>
+              }}
+          />
           <Tooltipcomp id="cashBonus" text={tooltiptext.cashBonus} target="Cash bonus" />
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} showHourly={true} showAnnual={true} name="selfEmployment">
-          Net income from &nbsp;
-          <Tooltipcomp id="selfEmployment" text={tooltiptext.selfEmployment} target="self-employment" />
+          <FormattedMessage
+              id="app.slides.employmentIncome.selfEmployment"
+              description="Cash bonus"
+              defaultMessage="Net income from &nbsp;{tooltip}"
+              values={{
+                tooltip: <Tooltipcomp text={tooltiptext.selfEmployment}>
+                          <FormattedMessage
+                              id="app.slides.employmentIncome.tooltipSelf"
+                              description="self-employment"
+                              defaultMessage="self-employment"
+                          />
+                        </Tooltipcomp>
+              }}
+          />
         </IncomeSource>
       </IncomeType>
     )
