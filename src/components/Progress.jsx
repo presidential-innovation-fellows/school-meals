@@ -3,7 +3,6 @@ import Steps, { Step } from 'rc-steps'
 import FormattedMessage from './application/FormattedMessage'
 import { observer } from 'mobx-react'
 import { ProgressBar } from 'react-bootstrap'
-import { allStudentsAreFHMR, allStudentsAreFoster } from '../helpers'
 
 @observer
 class Progress extends Component {
@@ -29,19 +28,6 @@ class Progress extends Component {
         }
       }
     }, false)
-  }
-
-  get skipHousehold() {
-    return this.props.applicationData.assistancePrograms.hasAny ||
-           allStudentsAreFoster(this.props.applicationData.students) ||
-           (
-             allStudentsAreFHMR(this.props.applicationData.students) &&
-             this.props.applicationData.electToProvideIncome === false
-           )
-  }
-
-  get showHousehold() {
-    return !this.skipHousehold
   }
 
   get steps() {
@@ -71,7 +57,7 @@ class Progress extends Component {
                    defaultMessage="Programs" />
     })
 
-    if (this.showHousehold) {
+    if (this.props.applicationData.showHousehold) {
       result.push({
         'data-hash': 'other-children',
         'title': <FormattedMessage
@@ -140,8 +126,7 @@ Progress.propTypes = {
     code: PropTypes.string
   }).isRequired,
   applicationData: PropTypes.shape({
-    assistancePrograms: PropTypes.object.isRequired,
-    students: PropTypes.object.isRequired
+    showHousehold: PropTypes.func.isRequired
   }).isRequired
 };
 

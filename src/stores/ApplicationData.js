@@ -1,8 +1,13 @@
 import { PropTypes } from 'react'
 import shortid from 'shortid'
 import { action, computed, observable } from 'mobx'
-import { assistancePrograms as assistanceProgramNames } from '../config'
-import { formatDate, informalList } from '../helpers'
+import { assistancePrograms as assistanceProgramNames,
+         assistanceProgramsVarArray } from '../config'
+import { allStudentsAreFHMR,
+         allStudentsAreFoster,
+         applicableIncomeSources,
+         formatDate,
+         informalList } from '../helpers'
 import { testData } from '../debug'
 
 // set DEBUG to true to pull in test data into the AppllicationData object from debug.js
@@ -45,6 +50,78 @@ export default class ApplicationData {
     return [this.students,
             this.otherChildren,
             this.adults]
+  }
+
+  @computed get totalHouseholdMembers() {
+    return this.allPeopleCollections
+               .map(collection => collection.length)
+               .reduce((a, b) => a + b, 0)
+  }
+
+  @computed get allIncomes() {
+    return this.allPeopleCollections
+               .map(collection =>
+                 collection.items
+                           .map(person => applicableIncomeSources(person))
+                           .reduce((a, b) => a.concat(b), [])
+               )
+               .reduce((a, b) => a.concat(b), [])
+  }
+
+  @computed get totalAnnualHouseholdIncome() {
+    function toAnnual(income) {
+      let amount = parseFloat(income.amount, 10)
+
+      switch (income.frequency) {
+        case 'yearly':
+        case 'annually':
+          return amount * 1.0
+        case 'monthly':
+          return amount * 12.0
+        case 'twicePerMonth':
+          return amount * 24.0
+        case 'everyTwoWeeks':
+          return amount * 26.0
+        case 'weekly':
+          return amount * 52.0
+        case 'hourly':
+          let hours = parseFloat(income.hourlyHours, 10)
+
+          switch (income.hourlyPeriod) {
+            case 'day':
+              return amount * hours * 365.0
+            case 'week':
+              return amount * hours * 52.0
+            case 'month':
+              return amount * hours * 12.0
+            default:
+              return 0.0
+          }
+        default:
+          return 0.0
+      }
+    }
+
+    return this.allIncomes
+               .map(income => toAnnual(income))
+               .reduce((a, b) => a + b, 0)
+  }
+
+  @computed get totalMonthlyHouseholdIncome() {
+    return this.totalAnnualHouseholdIncome / 12.0
+  }
+
+  @computed get skipHousehold() {
+    return this.assistancePrograms.hasAny ||
+           allStudentsAreFoster(this.students) ||
+           (
+             allStudentsAreFHMR(this.students) &&
+             this.electToProvideIncome === false
+           )
+  }
+
+  @computed get showHousehold() {
+    return !this.skipHousehold
   }
 
   constructor(){
@@ -135,11 +212,12 @@ export class AssistancePrograms {
     if (items) {
       this.items = items
     } else {
-      this.items = assistanceProgramNames.map(function(programName) {
+      this.items = assistanceProgramNames.map((programName, i) => {
         return {
           isApplicable: null,
           id: shortid.generate(),
           name: programName,
+          accronym: assistanceProgramsVarArray[i].accronym,
           caseNumber: ''
         }
       })
@@ -209,8 +287,6 @@ class PersonCollection {
     return item
   }
 
-
-
   toJSON() {
     return this.items.toJSON()
   }
@@ -238,76 +314,6 @@ class PersonCollection {
     }
 
     return false
-  }
-
-  @computed get allApplicableIncomeSources() {
-    let result = []
-
-    for (let i = 0; i < this.items.length; i++) {
-      let person = this.items[i]
-
-      for (let type in person.incomeTypes) {
-        let sources = person.incomeTypes[type].sources
-
-        if (!person.incomeTypes[type].isApplicable) {
-          continue
-        }
-
-        for (let sourceKey in sources) {
-          let source = sources[sourceKey]
-
-
-          if (source.has) {
-
-            result.push({
-              person: person,
-              source: sourceKey,
-              type: type,
-              num: 0,
-              amount: source.amount,
-              frequency: source.frequency,
-              hourlyHours: source.hourlyHours,
-              hourlyPeriod: source.hourlyPeriod
-            });
-
-            // New code to add additional income sources to the total
-            // User can add additional income for each sourceKey in UI
-            // Example: User has 2 Salary/Wage jobs -- Uber and Waiter
-            // This code looks to see if user "hasMore" if so loops through "more" array
-            // for the particular income source
-
-            if (("hasMore" in source) && source.hasMore){
-
-
-              for (let moreKey=0,len=source.more.length; moreKey<len; moreKey++){
-
-
-                let moreIncome = source.more[moreKey];
-
-
-
-                result.push({
-                  person: person,
-                  source: sourceKey,
-                  type: type,
-                  num: moreKey + 1, // needed for printing summary later
-                  amount: moreIncome.amount,
-                  frequency: moreIncome.frequency,
-                  hourlyHours: moreIncome.hourlyHours,
-                  hourlyPeriod: moreIncome.hourlyPeriod
-                });
-
-              } // end of for loop
-
-            }
-
-          }
-
-        }
-      }
-    }
-
-    return result
   }
 
   @computed get first() {
