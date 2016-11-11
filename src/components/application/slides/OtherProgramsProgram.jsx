@@ -4,6 +4,7 @@ import Checkbox from '../Checkbox'
 import Checkboxes from '../Checkboxes'
 import { observer } from 'mobx-react'
 import { informalList, informalName, programDescription } from '../../../helpers'
+import FormattedMessage from '../FormattedMessage'
 
 @observer
 class OtherProgramsProgram extends Component {
@@ -28,8 +29,32 @@ class OtherProgramsProgram extends Component {
     const { allPeopleCollections, students } = this.props
 
     return <span>
-        {students.length === 1 ? 'Does ' : 'Do '}
-      <strong>{informalList(students, allPeopleCollections, ' or ')}</strong>
+      <FormattedMessage
+              id="app.slides.otherProgramsProgram.doDoes"
+              description="does or Do"
+              defaultMessage="{studentLength}{students}"
+              values={{
+                studentLength: students.length === 1 ?
+                      <FormattedMessage
+                          id="app.slides.otherProgramsProgram.does"
+                          description="Does"
+                          defaultMessage="Does "
+                      />
+                      :
+                      <FormattedMessage
+                          id="app.slides.otherProgramsProgram.do"
+                          description="Do"
+                          defaultMessage="Do "
+                      />,
+                students: <strong>{informalList(students, allPeopleCollections,
+                       <FormattedMessage
+                          id="app.slides.otherProgramsProgram.or"
+                          description="or"
+                          defaultMessage=" or "
+                      />
+                      )}</strong>
+              }}
+      />
     </span>
   }
 
@@ -56,7 +81,13 @@ class OtherProgramsProgram extends Component {
                          onChange={this.onIsApplicableChange} />
            {applicability[attribute] &&
             <Checkboxes legend="Students">
-              <label>Which students?</label>
+              <label>
+              <FormattedMessage
+                          id="app.slides.otherProgramsProgram.whichStudents"
+                          description="Which students?"
+                          defaultMessage="Which students?"
+              />
+              </label>
               {
                 students.map(student =>
                   <Checkbox object={student} name={attribute} key={student.id}>

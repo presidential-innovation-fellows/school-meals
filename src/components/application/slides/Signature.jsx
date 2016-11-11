@@ -6,6 +6,7 @@ import Checkboxes from '../Checkboxes'
 import InputField from '../InputField'
 import { observer } from 'mobx-react'
 import { fullName } from '../../../helpers'
+import FormattedMessage from '../FormattedMessage'
 
 @observer
 class Signature extends Component {
@@ -38,8 +39,24 @@ class Signature extends Component {
 
     return (
       <Slide id="ssn" nextDisabled={!this.isValid}>
-        <p className="usa-font-lead">Great, you are almost done!</p>
-        <p>Please provide the last four digits of the Social Security number for the person that signed at the beginning of the application <strong>({fullName(attestor)})</strong>. If that person does not have a Social Security number, please check the box below labeled "No <abbr title="Social Security number">SSN</abbr>".</p>
+        <p className="usa-font-lead">
+        <FormattedMessage
+          id="app.slides.signature.almostDone"
+          description="Almost Done"
+          defaultMessage="Great, you are almost done!"
+        />
+        </p>
+        <p>
+        <FormattedMessage
+              id="app.slides.signature.pleaseProvide"
+              description="Please Provide..."
+              defaultMessage="Please provide the last four digits of the Social Security number for the person that signed at the beginning of the application {adult}. If that person does not have a Social Security number, please check the box below labeled 'No {ssn}'."
+              values={{
+                adult: <strong>({fullName(attestor)})</strong>,
+                ssn: <abbr title="Social Security number">SSN</abbr>
+              }}
+          />
+        </p>
 
         <Form>
           <InputField type="tel"
@@ -54,14 +71,23 @@ class Signature extends Component {
 
           <Checkboxes legend="No <abbr title='Social Security number'>SSN</abbr>">
             <Checkbox object={signature} name="hasSsn" invert>
-              No SSN
+              <FormattedMessage
+                id="app.slides.signature.noSSN"
+                description="No SSN"
+                defaultMessage="No SSN"
+              />
+              
             </Checkbox>
           </Checkboxes>
         </Form>
 
         <p>
           <small>
-            Note: United States citizenship or immigration status is not a condition of eligibility for free and reduced price benefits. The non-cash benefits received through the school meal programs are not subject to public charge consideration. In other words, you will not be deported, denied entry to the country, or denied permanent status because you apply for or receive school meal benefits.
+          <FormattedMessage
+                id="app.slides.signature.note"
+                description="Note: on eligibility"
+                defaultMessage=" Note: United States citizenship or immigration status is not a condition of eligibility for free and reduced price benefits. The non-cash benefits received through the school meal programs are not subject to public charge consideration. In other words, you will not be deported, denied entry to the country, or denied permanent status because you apply for or receive school meal benefits."
+              />
           </small>
         </p>
 
