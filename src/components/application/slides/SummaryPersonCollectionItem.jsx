@@ -16,13 +16,13 @@ class SummaryPersonCollectionItem extends Component {
            <li>Foster child <SummaryEditLink id="foster" /></li>}
 
           {person.isMigrant &&
-           <li>Migrant child <SummaryEditLink id="other-programs" /></li>}
+           <li>Migrant youth <SummaryEditLink id="other-programs" /></li>}
 
           {person.isHomeless &&
-           <li>Homeless child <SummaryEditLink id="other-programs" /></li>}
+           <li>Homeless youth <SummaryEditLink id="other-programs" /></li>}
 
           {person.isRunaway &&
-           <li>Runaway child <SummaryEditLink id="other-programs" /></li>}
+           <li>Runaway youth <SummaryEditLink id="other-programs" /></li>}
 
           {applicableIncomeSources(person).map(income =>
             <SummaryPersonCollectionItemIncome
