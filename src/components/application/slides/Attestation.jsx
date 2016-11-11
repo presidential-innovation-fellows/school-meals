@@ -17,8 +17,15 @@ class Attestation extends Component {
   render() {
     const { attestation, attestor } = this.props
 
+    const headerText = 
+      <FormattedMessage
+          id="app.slides.attestation.header"
+          description="Text for the header of the slide."
+          defaultMessage="I certify (promise)..."
+      />
+
     return (
-      <Slide header="I certify (promise)..." id="attestation" nextDisabled={!this.isValid}>
+      <Slide header={headerText} id="attestation" nextDisabled={!this.isValid}>
         <p className="usa-font-lead">
         <FormattedMessage
               id="app.slides.attestation.intro"
