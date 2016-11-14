@@ -4,9 +4,9 @@ import { observer } from 'mobx-react'
 import { humanize, numberFormat } from 'underscore.string'
 
 @observer
-class SummaryPersonCollectionItemIncome extends Component {
+class SummaryPersonIncome extends Component {
   render() {
-    const { income } = this.props
+    const { person, income } = this.props
 
     return (
       <li>
@@ -24,8 +24,8 @@ class SummaryPersonCollectionItemIncome extends Component {
   }
 }
 
-SummaryPersonCollectionItemIncome.propTypes = {
+SummaryPersonIncome.propTypes = {
   income: PropTypes.object.isRequired
 }
 
-export default SummaryPersonCollectionItemIncome
+export default SummaryPersonIncome

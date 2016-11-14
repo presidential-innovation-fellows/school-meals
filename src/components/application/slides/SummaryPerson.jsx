@@ -1,10 +1,11 @@
 import React, { Component, PropTypes } from 'react'
 import SummaryEditLink from './SummaryEditLink'
+import SummaryPersonIncome from './SummaryPersonIncome'
 import { observer } from 'mobx-react'
 import { applicableIncomeSources, fullName } from '../../../helpers'
 
 @observer
-class SummaryPersonCollectionItem extends Component {
+class SummaryPerson extends Component {
   render() {
     const { person } = this.props
 
@@ -25,8 +26,9 @@ class SummaryPersonCollectionItem extends Component {
            <li>Runaway youth <SummaryEditLink id="other-programs" /></li>}
 
           {applicableIncomeSources(person).map(income =>
-            <SummaryPersonCollectionItemIncome
+            <SummaryPersonIncome
                 key={person.id + income.type + income.source + income.num}
+                person={person}
                 income={income} />
            )}
 
@@ -36,8 +38,8 @@ class SummaryPersonCollectionItem extends Component {
   }
 }
 
-SummaryPersonCollectionItem.propTypes = {
+SummaryPerson.propTypes = {
   person: PropTypes.object.isRequired
 }
 
-export default SummaryPersonCollectionItem
+export default SummaryPerson
