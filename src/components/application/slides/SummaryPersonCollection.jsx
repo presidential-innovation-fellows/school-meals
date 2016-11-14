@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import SummaryLabel from './SummaryLabel'
-import SummaryPersonCollectionItem from './SummaryPersonCollectionItem'
+import SummaryPerson from './SummaryPerson'
 import { observer } from 'mobx-react'
 
 @observer
@@ -13,10 +13,9 @@ class SummaryPersonCollection extends Component {
         <div>
           <SummaryLabel id={id}>{children}</SummaryLabel>
           <ul>
-          {
+            {
               collection.map(person => {
-                return <SummaryPersonCollectionItem person={person}
-                                                    key={person.id} />
+                return <SummaryPerson person={person} key={person.id} />
               })
             }
           </ul>
