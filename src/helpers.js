@@ -142,8 +142,22 @@ export function hoursExceedPeriodCapacity(incomeSource) {
   }
 }
 
+function incomeSourceIsValid(incomeSource) {
+  return incomeSource.has === false ||
+         !!(
+             incomeSource.has &&
+             incomeSource.amount &&
+             incomeSource.frequency &&
+             (
+               incomeSource.frequency !== 'hourly' ||
+               (incomeSource.hourlyHours && incomeSource.hourlyPeriod &&
+                !hoursExceedPeriodCapacity(incomeSource))
+             )
+         )
+}
+
 export function incomeTypeIsValid(incomeType, mustNotBeNull = []) {
-  switch(incomeType.isApplicable) {
+  switch (incomeType.isApplicable) {
     case true:
       // Invalid if any of the non-nullable incomeType fields are null.
       if (mustNotBeNull.map(name => incomeType[name] == null)
@@ -163,19 +177,7 @@ export function incomeTypeIsValid(incomeType, mustNotBeNull = []) {
       }
 
       return incomeSources
-        .map(incomeSource => { return(
-          incomeSource.has === false ||
-          !!(
-            incomeSource.has &&
-            incomeSource.amount &&
-            incomeSource.frequency &&
-            (
-              incomeSource.frequency !== 'hourly' ||
-              (incomeSource.hourlyHours && incomeSource.hourlyPeriod &&
-               !hoursExceedPeriodCapacity(incomeSource))
-            )
-          )
-        )})
+        .map(incomeSource => incomeSourceIsValid(incomeSource))
         .reduce((a, b) => a && b, true)
       break
     case false:
