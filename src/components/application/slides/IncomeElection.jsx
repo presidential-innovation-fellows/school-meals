@@ -8,6 +8,10 @@ import FormattedMessage from '../FormattedMessage'
 
 @observer
 class IncomeElection extends Component {
+  get isValid() {
+    return applicationData.electToProvideIncome != null
+  }
+
   render() {
     const { applicationData } = this.props
     const { allPeopleCollections, students } = applicationData
@@ -25,7 +29,7 @@ class IncomeElection extends Component {
     }).map(slug => programDescription(slug)), ', ', singular ? ' and ' : ' or ')
 
     return (
-      <Slide id="income-election">
+      <Slide nextDisabled={!this.isValid} id="income-election">
 
         <p className="usa-font-lead">
           You have indicated that&nbsp;
