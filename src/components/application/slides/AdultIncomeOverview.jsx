@@ -144,8 +144,8 @@ class AdultIncomeOverview extends Component {
 
         <IncomeTypeFormGroup person={person} incomeTypeName="publicAssistance">
         <FormattedMessage
-              id="app.slides.adultIncomeOverview.publicAssistanceQuestion"
-              description="Is adult receiving public assistance"
+              id="app.slides.adultIncomeOverview.publicAssistanceIncome"
+              description="Is adult receiving public assistance income?"
               defaultMessage="Does {adult} have income from public assistance including Supplemental Security Income &nbsp;{tooltip}&nbsp;, or&nbsp;{tooltip2}&nbsp; or housing subsidies from state or local government?"
               values={{
               adult:<strong>{name}</strong>,
@@ -169,8 +169,8 @@ class AdultIncomeOverview extends Component {
 
         <IncomeTypeFormGroup person={person} incomeTypeName="spousal">
         <FormattedMessage
-              id="app.slides.adultIncomeOverview.publicAssistanceQuestion"
-              description="Is adult receiving public assistance"
+              id="app.slides.adultIncomeOverview.spousalIncome"
+              description="Is adult receiving spousal income?"
               defaultMessage="Does {adult} have income from &nbsp;{tooltip}&nbsp; or &nbsp;{tooltip2}&nbsp; ?"
               values={{
               adult:<strong>{name}</strong>,
@@ -194,8 +194,8 @@ class AdultIncomeOverview extends Component {
 
         <IncomeTypeFormGroup person={person} incomeTypeName="unemployment">
         <FormattedMessage
-              id="app.slides.adultIncomeOverview.publicAssistanceQuestion"
-              description="Is adult receiving public assistance"
+              id="app.slides.adultIncomeOverview.unemploymentIncome"
+              description="Is adult receiving unemployment income?"
               defaultMessage="Does {adult} have income from &nbsp;{tooltip}&nbsp;, &nbsp;{tooltip2}&nbsp;, &nbsp;{tooltip3}&nbsp;, &nbsp;{tooltip4}&nbsp;, or Social Security Disability Insurance &nbsp;{tooltip5}&nbsp;?"
               values={{
               adult:<strong>{name}</strong>,
@@ -240,8 +240,8 @@ class AdultIncomeOverview extends Component {
 
         <IncomeTypeFormGroup person={person} incomeTypeName="retirement">
         <FormattedMessage
-              id="app.slides.adultIncomeOverview.publicAssistanceQuestion"
-              description="Is adult receiving public assistance"
+              id="app.slides.adultIncomeOverview.retirementIncome"
+              description="Is adult receiving retirement income?"
               defaultMessage="Does {adult} have retirement income from Social Security (including survivor benefits, &nbsp;{tooltip}&nbsp; and &nbsp;{tooltip2}&nbsp; ) or &nbsp;{tooltip3}&nbsp;?"
               values={{
               adult:<strong>{name}</strong>,
@@ -272,8 +272,8 @@ class AdultIncomeOverview extends Component {
 
         <IncomeTypeFormGroup person={person} incomeTypeName="other">
         <FormattedMessage
-              id="app.slides.adultIncomeOverview.publicAssistanceQuestion"
-              description="Is adult receiving public assistance"
+              id="app.slides.adultIncomeOverview.otherIncome"
+              description="Is adult receiving otherincome?"
               defaultMessage="Does {adult} have other sources of income including &nbsp;{tooltip}&nbsp; from outside the household, &nbsp;{tooltip2}&nbsp;,&nbsp;{tooltip3}&nbsp;, investment income and &nbsp;{tooltip4}&nbsp; , or any other source of income available to pay for children’s school meals?"
               values={{
               adult:<strong>{name}</strong>,

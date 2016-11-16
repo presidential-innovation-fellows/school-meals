@@ -22,7 +22,7 @@ export default class QualifyMigrant extends Component {
         </p>
         <p>
           <FormattedMessage
-            id="help.topic.QualifyMigrant.answer1"
+            id="help.topic.QualifyMigrant.answer2"
             description="Answer for the students qualifying as migrant help topic."
             defaultMessage="If you believe children in your household meet one or more of these descriptions and you haven’t been told your children will get free meals, please contact {organizationName}."
             values={{

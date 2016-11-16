@@ -30,7 +30,7 @@ class OtherIncome extends Component {
                 tooltip:
                         <Tooltipcomp text={tooltiptext.regularCashPayments}>
                           <FormattedMessage
-                            id="app.slides.otherIncome.regularCashPayments"
+                            id="app.slides.otherIncome.regularCashPaymentsTooltip"
                             description="Regular cash payments"
                             defaultMessage="Regular cash payments"
                           />
@@ -56,7 +56,7 @@ class OtherIncome extends Component {
                 description="Earned interest"
                 defaultMessage="Earned interest"
               />
-        </Tooltipcomp> 
+        </Tooltipcomp>
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="investmentIncome">
