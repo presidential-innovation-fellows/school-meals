@@ -3,6 +3,7 @@ import SummaryEditLink from './SummaryEditLink'
 import SummaryPersonIncome from './SummaryPersonIncome'
 import { observer } from 'mobx-react'
 import { applicableIncomeSources, fullName } from '../../../helpers'
+import FormattedMessage from '../FormattedMessage'
 
 @observer
 class SummaryPerson extends Component {
@@ -14,16 +15,40 @@ class SummaryPerson extends Component {
         {fullName(person)}
         <ul>
           {person.isFoster &&
-           <li>Foster child <SummaryEditLink id="foster" /></li>}
+           <li>
+           <FormattedMessage
+              id="app.slides.summaryPerson.foster"
+              description="Foster child "
+              defaultMessage="Foster child "
+           />
+           <SummaryEditLink id="foster" /></li>}
 
           {person.isMigrant &&
-           <li>Migrant youth <SummaryEditLink id="other-programs" /></li>}
+           <li>
+           <FormattedMessage
+              id="app.slides.summaryPerson.migrant"
+              description="Migrant youth "
+              defaultMessage="Migrant youth "
+           />
+           <SummaryEditLink id="other-programs" /></li>}
 
           {person.isHomeless &&
-           <li>Homeless youth <SummaryEditLink id="other-programs" /></li>}
+           <li>
+           <FormattedMessage
+              id="app.slides.summaryPerson.homeless"
+              description="Homeless youth "
+              defaultMessage="Homeless youth "
+           />
+           <SummaryEditLink id="other-programs" /></li>}
 
           {person.isRunaway &&
-           <li>Runaway youth <SummaryEditLink id="other-programs" /></li>}
+           <li>
+           <FormattedMessage
+              id="app.slides.summaryPerson.runaway"
+              description="Runaway youth "
+              defaultMessage="Runaway youth "
+           />
+           <SummaryEditLink id="other-programs" /></li>}
 
           {applicableIncomeSources(person).map(income =>
             <SummaryPersonIncome
