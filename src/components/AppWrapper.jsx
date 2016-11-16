@@ -12,7 +12,8 @@ window.localeData = localeData
 class AppWrapper extends Component {
   render() {
     return (
-      <App localeData={localeData} />
+      // We pass `locale` as a literal for comparison by App.componentDidUpdate
+      <App localeData={localeData} locale={localeData.code} />
     )
   }
 }

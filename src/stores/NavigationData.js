@@ -178,6 +178,15 @@ export default class NavigationData {
     this.goToSlide(newId)
   }
 
+  // re-navigate to current slide
+  refreshSlide() {
+    const syntheticEvent = {
+      newURL: window.location.href
+    }
+
+    this.handleHashChange(syntheticEvent)
+  }
+
   handlebeforeunload(event) {
     // let the browser's default behavior handle i18n
     return 'Changes you made may not be saved.'
