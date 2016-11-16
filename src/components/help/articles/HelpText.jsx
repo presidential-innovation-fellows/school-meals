@@ -19,8 +19,8 @@ export const help = {
   applyLaterTitle: 'If I don’t qualify now, may I apply later?',
   applyLaterBody: 'Yes, you may apply at any time during the school year.  For example, children with a parent or guardian who becomes unemployed may become eligible for free or reduced price meals if the household income drops below the income limit.',
 //F6
-  localProgramTitle: 'My household participates in ' + assistanceProgramsVar.snap.fullname + ' and/or ' + assistanceProgramsVar.tanf.fullname + '. Are my children eligible for free meals?',
-  localProgramBody: 'All children in households are eligible for free meals when at least one household member is receiving benefits from ' + assistanceProgramsVar.snap.fullname + ' , the Food Distribution Program on Indian Reservations (FDPIR), or ' + assistanceProgramsVar.tanf.fullname + '. If you participate in other assistance programs, contact ' + organization.name +  ' (' + organization.contact.phone + ' / ' + organization.contact.email + ' / ' + organization.contact.address + ') to see if they qualify for you for school meal benefits. You may qualify for free meals!',
+  localProgramTitle: 'My household participates in ' + assistanceProgramsVar.snap.fullName + ' and/or ' + assistanceProgramsVar.tanf.fullName + '. Are my children eligible for free meals?',
+  localProgramBody: 'All children in households are eligible for free meals when at least one household member is receiving benefits from ' + assistanceProgramsVar.snap.fullName + ', the Food Distribution Program on Indian Reservations (FDPIR), or ' + assistanceProgramsVar.tanf.fullName + '. If you participate in other assistance programs, contact ' + organization.name + ' to see if you qualify for school meal benefits. You may qualify for free meals!',
 //F7
   fosterQualifyTitle: 'What if my household does not qualify for free or reduced price meal benefits based on income, but I have a foster child?',
   fosterQualifyBody: 'Foster children who are formally placed by the State welfare agency or court in a caretaker household are eligible for benefits regardless of household income.',
