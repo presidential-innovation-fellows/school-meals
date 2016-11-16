@@ -16,51 +16,33 @@ import shortid from 'shortid'
 
 @observer
 class AdditionalIncome extends Component {
-
-  constructor (props) {
-    super(props)
+  constructor (props, context) {
+    super(props, context)
 
     this.onAddIncomeClick = this.onAddIncomeClick.bind(this)
     this.onDeleteIncomeClick = this.onDeleteIncomeClick.bind(this)
-
   }
 
-
   get error() {
-
     return null
   }
 
-
-
-  /*
-        Handle the event when user clicks the Add Income Source Button
-  */
+  // Handle the event when user clicks the Add Income Source Button
   onAddIncomeClick(){
-
     let incomeSource = this.props.incomeSource
 
     if (typeof(incomeSource.more) != "undefined") {
-
-      incomeSource.add(incomeSource)
-
+      this.context.applicationData.addIncomeSource(incomeSource)
     }
-
   }
 
-  /*
-        Handle the event when user clicks the Delete Income Source Button
-  */
+  // Handle the event when user clicks the Delete Income Source Button
   onDeleteIncomeClick(event){
-
     let incomeSource = this.props.incomeSource
-
     let i = event.target.id
 
-    incomeSource.remove(incomeSource, i)
+    this.context.applicationData.removeIncomeSource(incomeSource, i)
   }
-
-
 
   render() {
     const { name, showHourly, showAnnual } = this.props
@@ -110,6 +92,8 @@ class AdditionalIncome extends Component {
   }
 }
 
-
+AdditionalIncome.contextTypes = {
+  applicationData: PropTypes.object.isRequired
+}
 
 export default AdditionalIncome
