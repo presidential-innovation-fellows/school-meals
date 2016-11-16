@@ -531,7 +531,7 @@ class AdultCollection extends PersonCollection {
 
   @action addIncomeSource(source) {
 
-    source.more.push({amount: '', frequency: '', hourlyHours: '', hourlyPeriod: ''})
+    source.more.push({ has: true, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' })
     source.hasMore = true
 
   }
@@ -588,7 +588,7 @@ class ChildCollection extends PersonCollection {
 
   @action addIncomeSource(source) {
 
-    source.more.push({amount: '', frequency: '', hourlyHours: '', hourlyPeriod: ''})
+    source.more.push({ has: true, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' })
     source.hasMore = true
 
   }

@@ -152,6 +152,12 @@ function incomeSourceIsValid(incomeSource) {
                incomeSource.frequency !== 'hourly' ||
                (incomeSource.hourlyHours && incomeSource.hourlyPeriod &&
                 !hoursExceedPeriodCapacity(incomeSource))
+             ) &&
+             (
+               !incomeSource.more ||
+               incomeSource.more
+                           .map(moreSource => incomeSourceIsValid(moreSource))
+                           .reduce((a, b) => a && b, true)
              )
          )
 }
