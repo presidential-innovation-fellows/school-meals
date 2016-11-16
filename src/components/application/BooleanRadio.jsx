@@ -1,4 +1,3 @@
-
 import shortid from 'shortid'
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
@@ -7,8 +6,8 @@ import Fieldset from './Fieldset'
 @observer
 class BooleanRadio extends Component {
   name = shortid.generate()
-  trueId = name = '-true'
-  falseId = name = '-false'
+  trueId = this.name + '-true'
+  falseId = this.name + '-false'
 
   constructor (props) {
     super(props)
