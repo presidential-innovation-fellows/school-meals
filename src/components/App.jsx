@@ -25,7 +25,7 @@ window.localeData = localeData
 @observer
 class App extends Component {
   getChildContext() {
-    return { helpData, localeData, navigationData }
+    return { applicationData, helpData, localeData, navigationData }
   }
 
   componentDidMount() {
@@ -60,6 +60,7 @@ class App extends Component {
 }
 
 App.childContextTypes = {
+  applicationData: PropTypes.object.isRequired,
   helpData: PropTypes.shape({
     article: PropTypes.string.isRequired,
     isVisible: PropTypes.bool.isRequired

@@ -34,7 +34,7 @@ class SearchTopics extends Component {
     if (!!searchVal) {
       $container.show()
 
-      jQuery('ul.usa-accordion li', $container).each(function () {
+      jQuery('ul.usa-accordion > li', $container).each(function () {
         if (jQuery(this).text().search(new RegExp(searchVal, 'i')) < 0) {
           jQuery(this).hide()
         } else {
