@@ -153,7 +153,7 @@ export default class NavigationData {
     this.currentSlideIndex = slidesSeen
   }
 
-  @action goToSlide(id) {
+  goToSlide(id) {
     const slides = this.slides
     const re = new RegExp(this.CURRENT_CLASS_NAME, 'g') // TODO: imperfect
 
