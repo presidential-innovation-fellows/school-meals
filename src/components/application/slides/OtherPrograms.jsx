@@ -5,7 +5,7 @@ import { observable } from 'mobx'
 import { observer } from 'mobx-react'
 import { organization } from '../../../config'
 import { informalName } from '../../../helpers'
-import FormattedMessage from '../FormattedMessage'
+import {FormattedMessage} from 'react-intl'
 
 @observer
 class OtherPrograms extends Component {

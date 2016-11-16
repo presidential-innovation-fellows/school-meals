@@ -153,7 +153,7 @@ export default class NavigationData {
     this.currentSlideIndex = slidesSeen
   }
 
-  @action goToSlide(id) {
+  goToSlide(id) {
     const slides = this.slides
     const re = new RegExp(this.CURRENT_CLASS_NAME, 'g') // TODO: imperfect
 
@@ -176,6 +176,15 @@ export default class NavigationData {
     newId = newId || this.slides[0].id // root (no hash)
 
     this.goToSlide(newId)
+  }
+
+  // re-navigate to current slide
+  refreshSlide() {
+    const syntheticEvent = {
+      newURL: window.location.href
+    }
+
+    this.handleHashChange(syntheticEvent)
   }
 
   handlebeforeunload(event) {

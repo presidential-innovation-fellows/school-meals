@@ -1,6 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import Topic from '../Topic'
-import FormattedMessage from '../../application/FormattedMessage'
+import {FormattedMessage} from 'react-intl'
 import { organization } from '../../../config'
 
 //F1

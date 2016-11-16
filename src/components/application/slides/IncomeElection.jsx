@@ -4,7 +4,7 @@ import Slide from '../Slide'
 import { organization } from '../../../config'
 import { programDescription, toSentenceSerialArray } from '../../../helpers'
 import { observer } from 'mobx-react'
-import FormattedMessage from '../FormattedMessage'
+import {FormattedMessage} from 'react-intl'
 
 @observer
 class IncomeElection extends Component {

@@ -8,7 +8,7 @@ import { AssistancePrograms as Store } from '../../../stores/ApplicationData'
 import { Glyphicon, OverlayTrigger, Tooltip } from 'react-bootstrap'
 import { tooltiptext } from '../../Tooltiptext'
 import Tooltipcomp from '../Tooltip'
-import FormattedMessage from '../FormattedMessage'
+import {FormattedMessage} from 'react-intl'
 
 @observer
 class AssistancePrograms extends Component {

@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
 import Link from '../Link'
-import FormattedMessage from '../FormattedMessage'
+import {FormattedMessage} from 'react-intl'
 
 @observer
 class SummaryEditLink extends Component {

@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-import FormattedMessage from './application/FormattedMessage'
+import { FormattedMessage } from 'react-intl'
 import { observer } from 'mobx-react'
 import { organization } from '../config'
 

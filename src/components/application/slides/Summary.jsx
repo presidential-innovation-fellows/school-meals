@@ -10,7 +10,7 @@ import { assistanceProgramsVarArray, organization } from '../../../config'
 import { fullName, toSentenceSerialArray } from '../../../helpers'
 import { tooltiptext } from '../../Tooltiptext'
 import Tooltipcomp from '../Tooltip'
-import FormattedMessage from '../FormattedMessage'
+import {FormattedMessage} from 'react-intl'
 
 @observer
 class Summary extends Component {
