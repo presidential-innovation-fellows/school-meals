@@ -3,7 +3,6 @@ import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
 import Application from './application/Application'
 import ApplicationData from '../stores/ApplicationData'
-import LocaleData from '../stores/LocaleData'
 import NavigationData from '../stores/NavigationData'
 import HelpData from '../stores/HelpData'
 import Navigation from './Navigation'
@@ -12,7 +11,6 @@ import Footer from './Footer'
 import Help from './help/Help'
 
 const applicationData = new ApplicationData()
-const localeData = new LocaleData()
 const navigationData = new NavigationData()
 const helpData = new HelpData()
 
@@ -20,12 +18,11 @@ const helpData = new HelpData()
 window.applicationData = applicationData
 window.helpData = helpData
 window.navigationData = navigationData
-window.localeData = localeData
 
 @observer
 class App extends Component {
   getChildContext() {
-    return { applicationData, helpData, localeData, navigationData }
+    return { applicationData, helpData, navigationData, localeData: this.props.localeData }
   }
 
   componentDidMount() {
@@ -33,6 +30,7 @@ class App extends Component {
   }
 
   render() {
+    const { localeData } = this.props
     const className = classnames({
       'show-progress': navigationData.currentSlideIndex >= 2
     })
@@ -57,6 +55,13 @@ class App extends Component {
       </div>
     )
   }
+}
+
+App.propTypes = {
+  localeData: PropTypes.shape({
+    code: PropTypes.string.isRequired,
+    translations: PropTypes.object.isRequired
+  }).isRequired
 }
 
 App.childContextTypes = {
