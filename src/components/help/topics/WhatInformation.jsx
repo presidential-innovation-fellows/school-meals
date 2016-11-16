@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import Topic from '../Topic'
 import { assistanceProgramsVar } from '../../../config'
-import FormattedMessage from '../../application/FormattedMessage'
+import {FormattedMessage} from 'react-intl'
 
 //F14
 export default class WhatInformation extends Component {

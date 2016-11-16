@@ -3,7 +3,7 @@ import Slide from '../Slide'
 import PersonCollection from '../PersonCollection'
 import { organization } from '../../../config'
 import { observer } from 'mobx-react'
-import FormattedMessage from '../FormattedMessage'
+import {FormattedMessage} from 'react-intl'
 
 @observer
 class Students extends Component {

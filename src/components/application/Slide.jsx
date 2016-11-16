@@ -2,7 +2,7 @@ import classNames from 'classnames'
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
 import Button from './Button'
-import FormattedMessage from './FormattedMessage'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class Slide extends Component {

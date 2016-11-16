@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import Topic from '../Topic'
 import { organization } from '../../../config'
-import FormattedMessage from '../../application/FormattedMessage'
+import {FormattedMessage} from 'react-intl'
 
 //F28
 export default class NotTheSame extends Component {

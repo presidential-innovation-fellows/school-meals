@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import Topic from '../Topic'
 import { organization } from '../../../config'
-import FormattedMessage from '../../application/FormattedMessage'
+import {FormattedMessage} from 'react-intl'
 
 //F22
 export default class QualifyHomeless extends Component {

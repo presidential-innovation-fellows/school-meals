@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Slide from '../Slide'
 import { observer } from 'mobx-react'
 import { thankYou } from '../../../config'
-import FormattedMessage from '../FormattedMessage'
+import {FormattedMessage} from 'react-intl'
 
 @observer
 class ThankYou extends Component {

@@ -1,5 +1,5 @@
 import React from 'react'
-import FormattedMessage from './application/FormattedMessage'
+import { FormattedMessage } from 'react-intl'
 import { organization } from '../config'
 
 export const tooltiptext = {
