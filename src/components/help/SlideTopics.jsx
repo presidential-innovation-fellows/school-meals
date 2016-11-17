@@ -1,6 +1,6 @@
 import uswds from 'uswds'
 import React, { Component, PropTypes } from 'react'
-import FormattedMessage from '../application/FormattedMessage'
+import {FormattedMessage} from 'react-intl'
 
 import Welcome from './articles/Welcome'
 import BeforeYouBegin from './articles/BeforeYouBegin'

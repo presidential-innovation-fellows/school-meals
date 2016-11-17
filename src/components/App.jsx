@@ -1,9 +1,9 @@
 import classnames from 'classnames';
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
+import {IntlProvider} from 'react-intl'
 import Application from './application/Application'
 import ApplicationData from '../stores/ApplicationData'
-import LocaleData from '../stores/LocaleData'
 import NavigationData from '../stores/NavigationData'
 import HelpData from '../stores/HelpData'
 import Navigation from './Navigation'
@@ -12,7 +12,6 @@ import Footer from './Footer'
 import Help from './help/Help'
 
 const applicationData = new ApplicationData()
-const localeData = new LocaleData()
 const navigationData = new NavigationData()
 const helpData = new HelpData()
 
@@ -20,43 +19,70 @@ const helpData = new HelpData()
 window.applicationData = applicationData
 window.helpData = helpData
 window.navigationData = navigationData
-window.localeData = localeData
 
 @observer
 class App extends Component {
   getChildContext() {
-    return { applicationData, helpData, localeData, navigationData }
+    return { applicationData, helpData, navigationData, localeData: this.props.localeData }
   }
 
   componentDidMount() {
     navigationData.init()
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    // We do this because the IntlProvider component gets completely
+    // re-rendered when we change locales due to the explicit key property
+    // that we set on it.
+    if (prevProps.locale !== this.props.locale) {
+      navigationData.refreshSlide()
+    }
+  }
+
   render() {
+    const { localeData } = this.props
     const className = classnames({
       'show-progress': navigationData.currentSlideIndex >= 2
     })
 
     return (
-      <div className={className}>
-        <Navigation navigationData={navigationData}
+      // We explicitly set the key property on IntoProvider to force a full
+      // re-render upon changing locales. There doesn't seem to be an elegant
+      // way to do this. We used to wrap each FormattedMessage in its own
+      // IntoProvider, which gave us finer control and therefore didn't
+      // require a full application re-render (only individual messages),
+      // however that prevented babel-plugin-react-intl from picking up
+      // message definitions and being able to generate our language files.
+      <IntlProvider key={localeData.code}
+                    locale={localeData.code}
+                    messages={localeData.translations}>
+        <div className={className}>
+          <Navigation navigationData={navigationData}
+                      localeData={localeData}
+                      helpData={helpData} />
+          <Progress navigationData={navigationData}
                     localeData={localeData}
-                    helpData={helpData} />
-        <Progress navigationData={navigationData}
-                  localeData={localeData}
-                  applicationData={applicationData} />
-        <main>
-          <div className="usa-grid">
-            <div className="usa-width-one-whole">
-              <Application applicationData={applicationData} />
+                    applicationData={applicationData} />
+          <main>
+            <div className="usa-grid">
+              <div className="usa-width-one-whole">
+                <Application applicationData={applicationData} />
+              </div>
             </div>
-          </div>
-        </main>
-        <Help helpData={helpData} />
-        <Footer />
-      </div>
+          </main>
+          <Help helpData={helpData} />
+          <Footer />
+        </div>
+      </IntlProvider>
     )
   }
+}
+
+App.propTypes = {
+  localeData: PropTypes.shape({
+    code: PropTypes.string.isRequired,
+    translations: PropTypes.object.isRequired
+  }).isRequired
 }
 
 App.childContextTypes = {

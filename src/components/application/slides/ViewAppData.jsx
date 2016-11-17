@@ -3,7 +3,7 @@ import { observer } from 'mobx-react'
 import Slide from '../Slide'
 import { organization } from '../../../config'
 import { jsonMarkup } from '../../../helpers'
-import FormattedMessage from '../FormattedMessage'
+import {FormattedMessage} from 'react-intl'
 
 @observer
 class ViewAppData extends React.Component {

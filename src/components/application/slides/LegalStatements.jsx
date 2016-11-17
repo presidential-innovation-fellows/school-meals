@@ -1,6 +1,6 @@
 import React from 'react'
 import Slide from '../Slide'
-import FormattedMessage from '../FormattedMessage'
+import {FormattedMessage} from 'react-intl'
 
 const LegalStatements = () => {
   return (

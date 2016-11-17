@@ -4,7 +4,7 @@ import OtherProgramsProgram from './OtherProgramsProgram'
 import { observable } from 'mobx'
 import { observer } from 'mobx-react'
 import { organization } from '../../../config'
-import FormattedMessage from '../FormattedMessage'
+import {FormattedMessage} from 'react-intl'
 
 @observer
 class Foster extends Component {

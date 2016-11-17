@@ -5,7 +5,7 @@ import { organization } from '../../config'
 import classNames from 'classnames'
 import SearchTopics from './SearchTopics'
 import SlideTopics from './SlideTopics'
-import FormattedMessage from '../application/FormattedMessage'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class Help extends Component {

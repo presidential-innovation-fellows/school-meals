@@ -8,7 +8,7 @@ import { informalList } from '../../../helpers'
 import { Glyphicon, OverlayTrigger, Tooltip } from 'react-bootstrap'
 import { tooltiptext } from '../../Tooltiptext'
 import Tooltipcomp from '../Tooltip'
-import FormattedMessage from '../FormattedMessage'
+import {FormattedMessage} from 'react-intl'
 
 @observer
 class OtherChildren extends Component {
@@ -31,14 +31,14 @@ class OtherChildren extends Component {
               values={{
                 tooltip: <Tooltipcomp text={tooltiptext.householdreminder} >
                           <FormattedMessage
-                              id="app.slides.otherChildren.intro"
-                              description="Introductory paragraph."
+                              id="app.slides.otherChildren.introTooltip"
+                              description="household"
                               defaultMessage="household"
                           />
                          </Tooltipcomp>
               }}
           />
-          
+
         </p>
 
         <p>
@@ -65,14 +65,14 @@ class OtherChildren extends Component {
           </li>
           <li>
           <FormattedMessage
-                id="app.slides.beforeYouBegin.eligibility1"
+                id="app.slides.beforeYouBegin.eligibility2"
                 description="Eligibility List item"
                 defaultMessage="children that attend day care or pre-school, or are not of school age, including infants"
             />
           </li>
           <li>
           <FormattedMessage
-                id="app.slides.beforeYouBegin.eligibility1"
+                id="app.slides.beforeYouBegin.eligibility3"
                 description="Eligibility List item"
                 defaultMessage="anyone 18 years of age or younger living in your household that does not currently attend school"
             />

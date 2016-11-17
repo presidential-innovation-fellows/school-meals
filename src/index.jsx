@@ -2,9 +2,9 @@ import 'babel-polyfill'
 import 'uswds'
 import React from 'react'
 import { render } from 'react-dom'
-import App from './components/App'
+import AppWrapper from './components/AppWrapper'
 
 render(
-  <App />,
+  <AppWrapper />,
   document.getElementById('root')
 )

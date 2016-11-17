@@ -4,7 +4,7 @@ import IncomeType from './IncomeType'
 import { observer } from 'mobx-react'
 import { tooltiptext } from '../../Tooltiptext'
 import Tooltipcomp from '../Tooltip'
-import FormattedMessage from '../FormattedMessage'
+import {FormattedMessage} from 'react-intl'
 
 @observer
 class OtherIncome extends Component {
@@ -30,7 +30,7 @@ class OtherIncome extends Component {
                 tooltip:
                         <Tooltipcomp text={tooltiptext.regularCashPayments}>
                           <FormattedMessage
-                            id="app.slides.otherIncome.regularCashPayments"
+                            id="app.slides.otherIncome.regularCashPaymentsTooltip"
                             description="Regular cash payments"
                             defaultMessage="Regular cash payments"
                           />
@@ -56,7 +56,7 @@ class OtherIncome extends Component {
                 description="Earned interest"
                 defaultMessage="Earned interest"
               />
-        </Tooltipcomp> 
+        </Tooltipcomp>
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="investmentIncome">

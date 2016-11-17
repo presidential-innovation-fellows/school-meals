@@ -1,7 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import Topic from '../Topic'
 import { assistanceProgramsVar } from '../../../config'
-import FormattedMessage from '../../application/FormattedMessage'
+import {FormattedMessage} from 'react-intl'
 
 //F14
 export default class WhatInformation extends Component {
@@ -34,28 +34,28 @@ export default class WhatInformation extends Component {
             </li>
             <li>
           <FormattedMessage
-            id="help.topic.WhatInformation.answer2"
+            id="help.topic.WhatInformation.answer3"
             description="Answer for the necessary information help topic."
             defaultMessage="If you do not participate in any of the above assistance program, you will need to report your total household income. In that case…"
           />
               <ul>
                 <li>
                   <FormattedMessage
-                    id="help.topic.WhatInformation.answer3"
+                    id="help.topic.WhatInformation.answer3a"
                     description="Answer for the necessary information help topic."
                     defaultMessage="If anyone in your house has a job, you may need to reference the earnings statements or pay stubs to report your gross income, which is different than the amount in your paycheck."
                   />
                 </li>
                 <li>
                   <FormattedMessage
-                    id="help.topic.WhatInformation.answer4"
+                    id="help.topic.WhatInformation.answer3b"
                     description="Answer for the necessary information help topic."
                     defaultMessage="If anyone receives Social Security or retirement benefits, you may need to gather the benefit statements to report the amount and frequency of the payments."
                   />
                 </li>
                 <li>
                   <FormattedMessage
-                    id="help.topic.WhatInformation.answer4"
+                    id="help.topic.WhatInformation.answer3c"
                     description="Answer for the necessary information help topic."
                     defaultMessage="You may also need to reference other financial documents for additional sources of income."
                   />
