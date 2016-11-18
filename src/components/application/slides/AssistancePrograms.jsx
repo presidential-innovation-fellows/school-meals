@@ -29,7 +29,7 @@ class AssistancePrograms extends Component {
         <FormattedMessage
                    id="app.slides.assistancePrograms.intro"
                    description="Intro paragraph"
-                   defaultMessage="If anyone in your household participates in &nbsp;{snap}, &nbsp;{tanf} , or &nbsp;{fdpir}&nbsp; then {studentList} {studentsize} eligible for free school meals"
+                   defaultMessage="If anyone in your household participates in &nbsp;{snap}, &nbsp;{tanf} , or &nbsp;{fdpir}&nbsp; then {studentList} {studentsize} eligible for free school meals."
                    values={{
                      snap: <Tooltipcomp text={tooltiptext.snap} target={assistanceProgramsVar.snap.accronym} />,
                      tanf: <Tooltipcomp text={tooltiptext.tanf} target={assistanceProgramsVar.tanf.accronym} />,
