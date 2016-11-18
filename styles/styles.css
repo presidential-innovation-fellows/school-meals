@@ -159,6 +159,10 @@ footer .not-real-disclaimer {
   margin-bottom: 1em;
 }
 
+.slide-content footer .required-text {
+  color: #cb232d;
+}
+
 .remove-person {
   margin-top: .5em;
 }
@@ -378,4 +382,8 @@ button.usa-button-secondary.add-income {
 
 button.usa-button-secondary.add-income:hover {
   background-color: #046b99;
+}
+
+.usa-input-error label {
+  width: calc(100% + 1.9rem);
 }
