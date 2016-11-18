@@ -17,12 +17,7 @@ class Signature extends Component {
 
   handleSsnChange(name, value) {
     // only allow numbers
-    if (value && parseInt(value).toString() !== value) {
-      return
-    }
-
-    // only allow 4 digits
-    if (value.length > 4) {
+    if (!value.match(/^\d{0,4}$/)) {
       return
     }
 
@@ -76,7 +71,7 @@ class Signature extends Component {
                 description="No SSN"
                 defaultMessage="No SSN"
               />
-              
+
             </Checkbox>
           </Checkboxes>
         </Form>
