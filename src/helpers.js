@@ -311,6 +311,6 @@ export function applicableIncomeSources(person) {
       }
     }
   }
-console.debug(`applicableIncomeSources(${person.id}):`, result)
+
   return result
 }
