@@ -109,7 +109,7 @@ class Summary extends Component {
                 defaultMessage="Total household income"
               />
               </SummaryLabel>
-             <Tooltipcomp text={tooltiptext.totalHouseholdIncome}>
+             <Tooltipcomp text={tooltiptext.monthlyIncomeSum}>
                ${
                  numberFormat(
                    parseFloat(applicationData.totalMonthlyHouseholdIncome, 10),
