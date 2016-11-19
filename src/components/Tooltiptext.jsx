@@ -61,7 +61,7 @@ export const tooltiptext = {
     description="Tooltip text explaining child income."
     defaultMessage="Income earned or received by all household members, incuding children, is included when determining eligibility for benefits."
   />,
-  socialsecurity: <FormattedMessage
+  socialSecurity: <FormattedMessage
     id="tooltip.socialSecurity"
     description="Tooltip text explaining social security."
     defaultMessage="Monthly payments to people (or spouses, or dependent children of people) who are retired or disabled, but have worked and paid taxes into the Social Security system. Payments are based on your reported earnings. Also, upon death, survivors can collect benefits."
