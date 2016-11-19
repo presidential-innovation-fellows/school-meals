@@ -20,6 +20,7 @@ export default class IEG extends Component {
         		defaultMessage="Children may receive free or reduced price meals if your household’s income is within the limits on the Federal Income Eligibility Guidelines. Your children may qualify for free or reduced price meals if your household income falls at or below the limits on this chart."
         	/>
         </p>
+        <img className="logo" src="img/IEG.jpg" alt="Image of Income Eligibility Guidelines placeholder with reminder to update annually." />
         </Topic>
     )
   }
