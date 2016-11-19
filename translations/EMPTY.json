@@ -20,10 +20,6 @@
   // English: "{organizationShortName} Application for School Meals"
   "nav.shortTitle": "",
 
-  // Text for the Data navigation item.
-  // English: "Data"
-  "nav.data": "",
-
   // Text for the Help navigation item.
   // English: "Help"
   "nav.help": "",
@@ -275,6 +271,10 @@
   // English: "Continue"
   "app.slide.nextButton": "",
 
+  // Default text to tell user that the current slide is incomplete.
+  // English: "Please enter all required information above."
+  "app.slide.requiredText": "",
+
 
   /***
    *** src/components/application/slides/AdultIncomeOverview.jsx
@@ -451,7 +451,7 @@
    ***/
 
   // Intro paragraph
-  // English: "If anyone in your household participates in  {snap},  {tanf} , or  {fdpir}  then {studentList} {studentsize} eligible for free school meals"
+  // English: "If anyone in your household participates in  {snap},  {tanf} , or  {fdpir}  then {studentList} {studentsize} eligible for free school meals."
   "app.slides.assistancePrograms.intro": "",
 
   // Household definition
@@ -1048,19 +1048,11 @@
   // English: "Which students?"
   "app.slides.otherProgramsProgram.whichStudents": "",
 
-  // does or Do
-  // English: "{studentLength}{students}"
-  "app.slides.otherProgramsProgram.doDoes": "",
+  // List of students to ask about being enrolled in other programs.
+  // English: "{studentLength, plural, one {Does} other {Do}} {students}"
+  "app.slides.otherProgramsProgram.labelPrefix": "",
 
-  // Does
-  // English: "Does"
-  "app.slides.otherProgramsProgram.does": "",
-
-  // Do
-  // English: "Do"
-  "app.slides.otherProgramsProgram.do": "",
-
-  // or
+  // The word 'or' surrounded by spaces.
   // English: "or"
   "app.slides.otherProgramsProgram.or": "",
 
@@ -1253,9 +1245,17 @@
   // English: "Your application has been submitted."
   "app.slides.thankYou.submitted": "",
 
+  // Indication of what happens next.
+  // English: "You will hear from us soon with your certification decision!"
+  "app.slides.thankYou.nextSteps": "",
+
   // Warning message
-  // English: "[CAUTION! NO DATA HAS BEEN SAVED. THIS IS NOT A REAL APPLICATION FOR SCHOOL MEAL BENEFITS. THIS IS A MODEL APPLICATION DEVELOPED BY USDA TO DEMONSTRATE THE POTENTIAL FUNCTIONALITY OF A SCHOOL DISTRICT'S APPLICATION. CONTACT YOUR CHILD'S SCHOOL TO FIND OUT WHERE YOU CAN ACCESS THEIR APPLICATION FOR SCHOOL MEAL BENEFITS.]"
+  // English: "CAUTION! NO DATA HAS BEEN SAVED. THIS IS NOT A REAL APPLICATION FOR SCHOOL MEAL BENEFITS. THIS IS A MODEL APPLICATION DEVELOPED BY USDA TO DEMONSTRATE THE POTENTIAL FUNCTIONALITY OF A SCHOOL DISTRICT'S APPLICATION. CONTACT YOUR CHILD'S SCHOOL TO FIND OUT WHERE YOU CAN ACCESS THEIR APPLICATION FOR SCHOOL MEAL BENEFITS."
   "app.slides.thankYou.caution": "",
+
+  // Button to download data
+  // English: "Download Data"
+  "app.slides.thankYou.download": "",
 
 
   /***
@@ -1869,5 +1869,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479345042940."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479498757654."
 }

@@ -42,10 +42,6 @@ export const assistanceProgramsVar = {
   fdpir: assistanceProgramsVarArray[2]
 }
 
-export const thankYou = [
-  'You will hear from us soon with your certification decision!'
-]
-
 export const hmrPrograms = {
   mep: {
     fullName: 'Migrant Education Program',

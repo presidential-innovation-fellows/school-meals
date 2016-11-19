@@ -46,7 +46,7 @@ class Application extends Component {
         <Demographics students={students} />
         <LegalStatements />
         <Summary applicationData={this.props.applicationData} />
-        <ThankYou />
+        <ThankYou applicationData={this.props.applicationData} />
         <ViewAppData applicationData={appData}/>
       </div>
     )

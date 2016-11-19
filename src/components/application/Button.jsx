@@ -21,6 +21,7 @@ class Button extends Component {
     }
 
     className['usa-button-disabled'] = disabled
+    className['disabled'] = disabled
 
     const props = {
       className: classnames(className),
