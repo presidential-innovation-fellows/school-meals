@@ -83,7 +83,7 @@ class Summary extends Component {
               description="Assistance program case numbers"
               defaultMessage="Assistance program case numbers"
             />
-              
+
             </SummaryLabel>
 
             <ul>
@@ -181,7 +181,7 @@ class Summary extends Component {
                 defaultMessage="I certify* that {totalHouseholdMembers} are in my household and that our household income is about {totalHouseholdIncome}"
                 values={{
                 totalHouseholdMembers: <span className="usa-label-big">
-                  {applicationData.totalHouseholdMembers} 
+                  {applicationData.totalHouseholdMembers}&nbsp;
                   <FormattedMessage
                     id="app.slides.summary.people"
                     description="people"

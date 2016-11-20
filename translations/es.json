@@ -290,7 +290,7 @@
   "app.slides.summary.totalIncome": "Ingreso total del hogar",
   "app.slides.summary.perMonth": "por mes",
   "app.slides.summary.contactInfo": "Información de contacto",
-  "app.slides.summary.certification": "Certifico* que viven {totalHouseholdMembers} personas en mi hogar y que nuestros ingresos actuales son de aproximadamente {totalHouseholdIncome} por mes",
+  "app.slides.summary.certification": "Certifico* que viven {totalHouseholdMembers} en mi hogar y que nuestros ingresos actuales son de aproximadamente {totalHouseholdIncome}",
   "app.slides.summary.people": "personas",
   "app.slides.summary.certificationPrograms": "Certifico* que mi familia participa en {program}",
   "app.slides.summary.infoCorrect": "",
