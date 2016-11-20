@@ -185,10 +185,8 @@ export function incomeTypeIsValid(incomeType, mustNotBeNull = []) {
       return incomeSources
         .map(incomeSource => incomeSourceIsValid(incomeSource))
         .reduce((a, b) => a && b, true)
-      break
     case false:
       return true
-      break
     default:
       return false
   }
