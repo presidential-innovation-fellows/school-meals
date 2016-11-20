@@ -2,7 +2,7 @@
   "footer.notRealDisclaimer": "ESTA NO ES UNA SOLICITUD REAL PARA OBTENER BENEFICIOS DE COMIDAS ESCOLARES",
 
   "nav.title": "{organizationName} Solicitud para obtener comidas escolares gratis y a precio reducido",
-  "nav.shortTitle": "{organizationName} Solicitud para obtener comidas escolares",
+  "nav.shortTitle": "{organizationShortName} Solicitud para obtener comidas escolares",
   "nav.help": "Ayuda",
 
   "progress.begin": "Empezar",
