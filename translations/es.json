@@ -236,9 +236,9 @@
   "app.slides.otherChildren.intro": "Bueno, parece que necesitaremos más información sobre su {tooltip} y sus ingresos para determinar si es elegible para recibir beneficios.",
   "app.slides.otherChildren.introTooltip": "hogar",
   "app.slides.otherChildren.namedChildren": "Ahora hablemos de los otros niños del hogar y luego pasaremos a los adultos. Además de {namedChildren}, ¿viven otros niños en su hogar? No olvide incluir lo siguiente",
-  "app.slides.beforeYouBegin.eligibility1": "estudiantes que estén en 12.º grado o menos que asisten a la escuela en otro distrito escolar que no sea {organizationName}",
-  "app.slides.beforeYouBegin.eligibility2": "niños que asisten a la guardería o a preescolar o que no tengan edad escolar, incluidos los bebés pequeños",
-  "app.slides.beforeYouBegin.eligibility3": "cualquier persona de 18&nbsp;años de edad o menos que viva en su hogar y que no asista a la escuela actualmente",
+  "app.slides.otherChildren.childType1": "estudiantes que estén en 12.º grado o menos que asisten a la escuela en otro distrito escolar que no sea {organizationName}",
+  "app.slides.otherChildren.childType2": "niños que asisten a la guardería o a preescolar o que no tengan edad escolar, incluidos los bebés pequeños",
+  "app.slides.otherChildren.childType3": "cualquier persona de 18&nbsp;años de edad o menos que viva en su hogar y que no asista a la escuela actualmente",
 
   "app.slides.otherIncome.regularCashPayments": "{tooltip} proporcionadas por alguien que no viva en el hogar",
   "app.slides.otherIncome.regularCashPaymentsTooltip": "Pagos regulares en efectivo",
