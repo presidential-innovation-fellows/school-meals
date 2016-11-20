@@ -74,6 +74,11 @@ select.usa-input-success {
   color: black;
 }
 
+.usa-label,
+.usa-label-big {
+  white-space: nowrap;
+}
+
 .lowercase {
   text-transform: lowercase;
 }
