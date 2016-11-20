@@ -75,7 +75,7 @@
   "app.slides.adultIncomeOverview.military": "ejército",
   "app.slides.adultIncomeOverview.deployedQuestion": "¿{adult} ha sido &nbsp;{tooltip}&nbsp;?",
   "app.slides.adultIncomeOverview.deployed": "desplegado actualmente",
-  "app.slides.adultIncomeOverview.employmentQuestion": "¿{adult} cuenta con ingresos profesionales incluidos los salarios, sueldos, propinas, comisiones, &nbsp;{tooltip}&nbsp; o ingresos netos como &nbsp;{tooltip2}}&nbsp;?",
+  "app.slides.adultIncomeOverview.employmentQuestion": "¿{adult} cuenta con ingresos profesionales incluidos los salarios, sueldos, propinas, comisiones, &nbsp;{tooltip}&nbsp; o ingresos netos como &nbsp;{tooltip2}&nbsp;?",
   "app.slides.adultIncomeOverview.cashBonus": "bonos en efectivo",
   "app.slides.adultIncomeOverview.selfEmployment": "autónomo",
   "app.slides.adultIncomeOverview.publicAssistanceIncome": "¿{adult} recibe ingresos de asistencia pública como ingresos de seguridad suplementarios &nbsp;{tooltip}&nbsp;, o &nbsp;{tooltip2}&nbsp; o subsidios de vivienda por parte del gobierno estatal o local?",
