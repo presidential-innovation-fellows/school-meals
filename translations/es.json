@@ -1,68 +1,1889 @@
 {
-  "app.slide.backButton": "Regresar",
-  "app.slide.nextButton": "Seguir",
+  /***
+   *** src/components/Footer.jsx
+   ***/
 
-  "app.slides.beforeYouBegin.caseNumber": "Si usted participa en {snap}, {tanf} o {fdpir} necesitará saber su número de caso (no su tarjeta o número de cuenta).",
-  "app.slides.beforeYouBegin.eligibility": "La elegibilidad",
-  "app.slides.beforeYouBegin.eligibility1": "el ingreso total de su hogar y su tamaño en el mes en que se llena la solicitud, o el mes anterior, o",
-  "app.slides.beforeYouBegin.eligibility2": "el estado individual de su hijo como adoptivo, sin hogar, migrante o fugitivo, o",
-  "app.slides.beforeYouBegin.eligibility3": "participación en un programa de asistencia por cualquier miembro de su hogar",
-  "app.slides.beforeYouBegin.header": "Antes de que empiece…",
-  "app.slides.beforeYouBegin.householdPrograms": "Si recibió una {tooltip} de la escuela diciendo que sus hijos fueron automáticamente aprobados (certificados directamente) para comidas gratis para el año escolar {schoolYear} porque alguien en su hogar participa en {assistanceProgramList} entonces no es necesario presentar una solicitud.",
-  "app.slides.beforeYouBegin.informationHandy": "Si tiene esta información a mano, hará que el proceso de solicitud sea rápido y fácil.",
-  "app.slides.beforeYouBegin.letter": "carta",
-  "app.slides.beforeYouBegin.mealEligibilityDescription": "para los beneficios de comidas escolares gratuitas oa precio reducido se basa en cualquiera de",
-  "app.slides.beforeYouBegin.notSure": "¿Todavía no está seguro si tiene todo lo que necesita? ¡No te preocupes! La sección de ingresos de la aplicación contiene instrucciones detalladas y explicaciones sobre las fuentes de ingresos que debe incluir, y puede recopilar información adicional.",
-  "app.slides.beforeYouBegin.oneApplication": "Solo necesitamos una solicitud para todos los niños de su hogar que asisten a {organizationName}",
-  "app.slides.beforeYouBegin.questions": "Si tiene preguntas en cualquier momento durante la aplicación, haga clic en el icono del signo de interrogación para obtener ayuda con la sección actual.",
-  "app.slides.beforeYouBegin.status": "Su {tooltip} no afecta su elegibilidad para recibir beneficios gratuitos oa precio reducido.",
-  "app.slides.beforeYouBegin.subheading": "hay algunas cosas que usted debe saber.",
-  "app.slides.beforeYouBegin.thingsNeeded": "Cosas que necesitarás",
-  "app.slides.beforeYouBegin.thingsNeededMore": "Por último, hemos compilado una lista de la información que podría necesitar para completar la aplicación.",
-  "app.slides.beforeYouBegin.thingsNeededMoreLinkText": "¡Echale un vistazo!",
-  "app.slides.beforeYouBegin.threeThings": "estas tres cosas:",
-  "app.slides.beforeYouBegin.usStatus": "estado de ciudadanía o inmigración estadounidense",
-  "app.slides.beforeYouBegin.whenReportHouseholdIncome": "Si no participa en ninguno de los programas de asistencia anteriores, deberá informar sobre los ingresos totales de su hogar. En ese caso…",
-  "app.slides.beforeYouBegin.whenReportHouseholdIncome1": "si alguien en su casa tiene un trabajo, es posible que tenga que hacer referencia a las declaraciones de ingresos o talones de pago para informar de sus ingresos brutos, que es diferente de la cantidad que realmente recibe en su cheque de pago.",
-  "app.slides.beforeYouBegin.whenReportHouseholdIncome2": "si alguien recibe beneficios del Seguro Social o de jubilación, puede que necesite reunir los estados de beneficios para informar la cantidad y frecuencia de los pagos.",
-  "app.slides.beforeYouBegin.whenReportHouseholdIncome3": "es posible que también tenga que hacer referencia a otros documentos financieros para obtener fuentes adicionales de ingresos.",
+  // Disclaimer that this it not a real application.
+  // English: "This is not a real application for school meal benefits"
+  "footer.notRealDisclaimer": "ESTA NO ES UNA SOLICITUD REAL PARA OBTENER BENEFICIOS DE COMIDAS ESCOLARES",
 
-  "app.slides.welcome.header": "¡Bienvenido!",
-  "app.slides.welcome.intro": "Esta es la aplicación electrónica de {organizationName} de forma gratuita y comidas a precio reducido para los Programas Nacionales de {usda} para Desayuno y Almuerzo en Escuela.",
-  "app.slides.welcome.nextButton": "Comenzar",
-  "app.slides.welcome.onlineInstructions": "Esta aplicación interactiva le guiará a través del proceso de solicitud. Cuando esté listo para aplicar, haga clic en el botón «{buttonText}» a continuación para comenzar.",
-  "app.slides.welcome.paperApplication": "aplicación en papel",
-  "app.slides.welcome.paperInstructions": "Si desea solicitar el uso de la {link}, puede imprimir y completar y luego volver a nosotros en {address}.",
 
-  "footer.notRealDisclaimer": "Esto no es una solicitud real para beneficios de comida escolar",
+  /***
+   *** src/components/Navigation.jsx
+   ***/
 
-  "help.title": "Ayuda",
-  "help.close": "Cerrar",
-  "help.footer": "Si tiene alguna pregunta sobre el programa o cómo solicitarlo, comuníquese con {organizationName} ({organizaitonContactInfo}).",
-  "help.faq": "Preguntas Frecuentes",
-  "help.searchResults": "Resultados de la Búsqueda",
+  // Text for the page title.
+  // English: "{organizationName} Application for Free and Reduced Price School Meals"
+  "nav.title": "{organizationName} Solicitud para obtener comidas escolares gratis y a precio reducido",
 
-  "help.topic.paperApp.question": "¿Puedo aplicar usando una aplicación de papel?",
-  "help.topic.paperApp.answer": "Sí. Si desea aplicar con la aplicación en papel, puede imprimir la {paperApplicationLink} o ponerse en contacto con {organizationName} ({organizationContactInfo}) para solicitar una solicitud. A continuación, devuelva la solicitud completa a {organizationName}.",
-  "help.topic.paperApp.paperApplication": "aplicación en papel",
+  // Text for the page title on mobile devices.
+  // English: "{organizationShortName} Application for School Meals"
+  "nav.shortTitle": "{organizationName} Solicitud para obtener comidas escolares",
 
-  "nav.data": "Datos",
+  // Text for the Help navigation item.
+  // English: "Help"
   "nav.help": "Ayuda",
-  "nav.shortTitle": "Solicitud de Comidas Escolares para {organizationShortName}",
-  "nav.title": "Solicitud de Comidas Escolares Gratis oa Precio Reducido para {organizationName}",
 
-  "progress.adults": "Adultos",
-  "progress.assistancePrograms": "Programas",
+
+  /***
+   *** src/components/Progress.jsx
+   ***/
+
+  // Text for the Begin progress bar step.
+  // English: "Begin"
   "progress.begin": "Empezar",
-  "progress.otherKids": "Otros Niños",
+
+  // Text for the Students progress bar step.
+  // English: "Students"
   "progress.students": "Estudiantes",
+
+  // Text for the Programs progress bar step.
+  // English: "Programs"
+  "progress.assistancePrograms": "Programas",
+
+  // Text for the Other Kids progress bar step.
+  // English: "Other Kids"
+  "progress.otherKids": "Otros Niños",
+
+  // Text for the Adults progress bar step.
+  // English: "Adults"
+  "progress.adults": "Adultos",
+
+  // Text for the Summary progress bar step.
+  // English: "Summary"
   "progress.summary": "Resumen",
 
-  "tooltip.eligibility": "Vea Ayuda para las Directrices de Elegibilidad de Ingresos para beneficios de precio reducido.",
-  "tooltip.letter": "Compruebe que la carta incluya a todos los estudiantes en el hogar, porque son elegibles para comidas gratis. Si no es así, comuníquese con la escuela para corregir el error.",
-  "tooltip.threethings": "Si no está seguro si califica, llene una solicitud y los funcionarios de {organizationName} determinarán si usted es elegible.",
-  "tooltip.usStatus": "Los beneficios no monetarios recibidos a través de los programas de comidas escolares no están sujetos a consideración de cargo público. No se le deportará, se le denegará la entrada al país o se le negará el estatus permanente porque solicita o recibe beneficios de comidas escolares.",
-  "tooltip.snap": "El Programa de Asistencia de Nutrición Suplementaria (SNAP, por sus siglas en inglés) es un programa que ofrece asistencia nutricional a millones de individuos y familias elegibles y de bajos ingresos.",
-  "tooltip.tanf": "El programa de Asistencia Temporal para Familias Necesitadas (TANF, por sus siglas en inglés) está diseñado para ayudar a familias necesitadas a lograr la autosuficiencia proporcionando asistencia en efectivo, así como otros apoyos y servicios.",
-  "tooltip.fdpir": "El Programa de Distribución de Alimentos para Reservas Indígenas (FDPIR, por sus siglas en inglés) es un programa federal que provee alimentos del USDA a hogares de bajos índices, incluyendo ancianos que viven de reservas indias ya familias de nativos americanos residentes en áreas designadas cerca de reservas y en el Estado de Oklahoma."
+
+  /***
+   *** src/components/Tooltiptext.jsx
+   ***/
+
+  // Tooltip text explaining total household income calculation methodoloty.
+  // English: "We calculated this number by converting all the income you reported into a monthly amount."
+  "tooltip.totalHouseholdIncome": "Calculamos este número convirtiendo todos los ingresos que informó en una cantidad mensual.",
+
+  // Tooltip text about letter requiring that all strudents are named.
+  // English: "Check that the letter includes all the students in the household, because they are eligible for free meals.  If not, contact the school to correct the mistake."
+  "tooltip.letter": "Verifique que la carta incluya a todos los estudiantes del hogar porque todos son elegibles para recibir comidas gratis. Si no es así, comuníquese con la escuela para corregir el error.",
+
+  // Tooltip text encouraging user to apply for program.
+  // English: "If you are unsure if you qualify, fill out an application and officials at {organizationName} will determine if you are eligible."
+  "tooltip.threethings": "Si no está seguro de que califica, complete la solicitud y los funcionarios de {organizationName} determinarán si usted es elegible.",
+
+  // Tooltip text about this program not resulting in public charges.
+  // English: "The non-cash benefits received through the school meal programs are not subject to public charge consideration. You will not be deported, denied entry to the country, or denied permanent status because you apply for or receive school meal benefits."
+  "tooltip.usStatus": "los beneficios que no sean en efectivo recibidos mediante las programas de comidas escolares no están sujetos a consideraciones de cargos públicos. No será deportado, ni se le negará la entrada al país, ni se le negará el estado permanente porque solicite o reciba beneficios de comidas escolares.",
+
+  // Tooltip text explaining SNAP.
+  // English: "The Supplemental Nutrition Assistance Program (SNAP) is a program that offers nutrition assistance to millions of eligible, low-income individuals and families."
+  "tooltip.snap": "El Supplemental Nutrition Assistance Program (SNAP) es un programa que ofrece asistencia nutricional a millones de individuos y familias elegibles y de bajos ingresos.",
+
+  // Tooltip text explaining TANF.
+  // English: "The Temporary Assistance for Needy Families (TANF) program is designed to help needy familities achieve self-sufficiency by providing cash assistance, as well as other supports and services."
+  "tooltip.tanf": "El programa Temporary Assistance for Needy Families (TANF) está diseñado para ayudar a las familias necesitadas a lograr autosuficiencia al proporcionarles asistencia en efectivo y también otros tipo de apoyo y servicios.",
+
+  // Tooltip text explaining FDPIR.
+  // English: "The Food Distribution Program on Indian Reservations (FDPIR) is a Federal program that provides USDA foods to low-icome households, including the elderly, living on Indian reservations, and to Native American families residing in designated areas near reservations and in the State of Oklahoma."
+  "tooltip.fdpir": "Food Distribution Program on Indian Reservations (FDPIR) es un programa federal que brinda alimentos de USDA a hogares de bajos ingresos, incluidos los ancianos, que viven en reservas indígenas y a familias nativas estadounidenses que residen en áreas designadas cerca de las reservas y en el estado de Oklahoma.",
+
+  // Tooltip text explaining the household.
+  // English: "A household includes grandparents or other extended family members that are living with you.  It also includes people that are away on a temporary basis, like kids that are away at college. It includes people regardless of age or whether they earn or receive income."
+  "tooltip.household": "Un hogar incluye a los abuelos o a otros miembros de la familia extendida que viven con usted. También incluye a las personas que viven lejos de manera temporal, como hijos que se han ido a la universidad. Incluye a personas sin importar la edad o si ganan o reciben ingresos.",
+
+  // Tooltip text explaining foster.
+  // English: "Foster child(ren) are eligible for free school meal benefits.  This only applies to children who are formally placed by the State welfare agency or court in a caretaker household."
+  "tooltip.foster": "Los niños en régimen de acogida son elegibles para recibir beneficios de comida escolar gratis. Esto sólo se aplica a los niños que son formalmente colocados por la agencia estatal de asistencia social o el tribunal en un hogar provisional.",
+
+  // Tooltip text explaining household reminder.
+  // English: "Remember, for the purposes of applying for school meal benefits, a household is defined as a group of people, related or unrelated, that usually live together and share income and expenses."
+  "tooltip.householdReminder": "Recuerde, con los propósitos de solicitar beneficios de comidas escolares, un hogar se define como un grupo de personas, relacionadas o no relacionadas, que suelen vivir juntas y compartir ingresos y gastos.",
+
+  // Tooltip text explaining child income.
+  // English: "Income earned or received by all household members, incuding children, is included when determining eligibility for benefits."
+  "tooltip.childIncome": "Los ingresos ganados o recibidos por todos los miembros del hogar, incluidos los niños, se incluye al determinar la elegibilidad para recibir beneficios.",
+
+  // Tooltip text explaining social security.
+  // English: "Monthly payments to people (or spouses, or dependent children of people) who are retired or disabled, but have worked and paid taxes into the Social Security system. Payments are based on your reported earnings. Also, upon death, survivors can collect benefits."
+  "tooltip.socialSecurity": "Pagos mensuales a personas (o cónyuges o niños que dependen de otras personas) que están jubiladas o tienen discapacidad, pero que han trabajado y pagado impuestos en el sistema de Seguro Social. Los pagos se basan en sus ganancias declaradas. Además, cuando fallezca, los sobrevivientes pueden recibir los beneficios.",
+
+  // Tooltip text explaining pension.
+  // English: "A series of payments made to you after you retire from work.  Pension payments are made regularly and are based on such factors as years of service and prior compensation."
+  "tooltip.pension": "Una serie de pagos realizados en su nombre cuando se jubile del trabajo. Pagos regulares por pensión que se basan en factores como años de servicio y compensación previa.",
+
+  // Tooltip text explaining annuity.
+  // English: "A series of payments under a contractmade at regular intervals over a period of more than one full year.  They can be either fixed (under which you receive a definite amount) or variable (not fixed). Annuities can be purchased by individuals alone, or with the help of an employer."
+  "tooltip.annuity": "Una serie de pagos por contrato que se realizan en intervalos regulares por un período de más de un año. Pueden ser fijos (por los que recibe una cantidad fija) o variables (no fijos). Los individuos pueden adquirir la anualidad por su cuenta o con la ayuda de un empleador.",
+
+  // Tooltip text explaining trust.
+  // English: "In general, a relationship in which one person holds title to property, subject to an obligation to keep or use the property for the benefit of another."
+  "tooltip.trust": "En general, una relación en la que una persona es titular de una propiedad, sujeta a una obligación de mantener o hacer uso de la propiedad para beneficio de otra persona.",
+
+  // Tooltip text explaining current adult income.
+  // English: "Income earned or received in the current month, or in the month before the completion of this application. If your household’s current income is higher or lower than usual and does not fairly or accurately represent your household’s actual circumstances, see Help for more information."
+  "tooltip.currentAdult": "Income earned or received in the current month, or in the month before the completion of this application. If your household's current income is higher or lower than usual and does not fairly or accurately represent your household's actual circumstances, see HELP for additional information.",
+
+  // Tooltip text explaining current child income.
+  // English: "Income earned or received in the current month, or in the month before the completion of this application. If your child’s income is higher or lower than usual, see the FAQ “What if my income is not always the same?” in Help."
+  "tooltip.currentChild": "Los ingresos ganados o recibidos el mes actual o el mes anterior a esta solicitud. Si los ingresos actuales de su hijo son mayores o menores al habitual, consulte la FAQ “¿qué ocurre si mis ingresos varían?” en la sección AYUDA.",
+
+  // Tooltip text explaining net income.
+  // English: "Net income is total (or gross) income, minus taxes and deductions, as is commonly referred to as “take home pay”.  See Help for more information."
+  "tooltip.netIncome": "Los ingresos netos son los ingresos totales (o brutos), menos los impuestos y las deducciones, y comúnmente se lo llama “salario de bolsillo”. Consulte la sección de Ayuda para obtener más información.",
+
+  // Tooltip text explaining basic pay.
+  // English: "The base salary for a Military service member on active duty."
+  "tooltip.basicPay": "El salario básico para un miembro del servicio militar en deber activo.",
+
+  // Tooltip text explaining cash bonuses.
+  // English: "A lump sum of money awarded to an employee, either occasionally or periodically."
+  "tooltip.cashBonus": "Un bono en efectivo es una suma global de dinero que se le otorga a un empleado, ya sea de manera ocasional o periódica.",
+
+  // Tooltip text explaining allowances.
+  // English: "Allowances for off-base housing, such as the Basic Allowance for Housing (BAH), is to help service members cover the cost of housing in the private sector."
+  "tooltip.allowances": "Las asignaciones para vivienda fuera de la base, como la Asignación básica para vivienda (BAH), tiene el objetivo de ayudar a los miembros del servicio a cubrir el costo de vivienda en el sector privado.",
+
+  // Tooltip text explaining income made available to the household.
+  // English: "Include only the portion of the deployed service member’s income that is made available to the household."
+  "tooltip.availableToHousehold": "Solo incluye la parte del ingreso de un miembro del servicio al que han desplegado que está disponible para el hogar como ingresos.",
+
+  // Tooltip text explaining social security insurance.
+  // English: "Provices cash to meet basic needs for food, clothing, and shelter to aged, blind, and disabled people who have little or no income."
+  "tooltip.socialSecurityInsurance": "Proporciona dinero en efectivo para que las personas ancianas que tengan ingresos mínimos o que no cuenten con ingresos puedan satisfacer las necesidades básicas de alimentos, vestimenta y refugio.",
+
+  // Tooltip text explaining cash assistance.
+  // English: "Cash benefits, including housing subsidies, from state or local government programs must be reported as household income.  If you have questions about whether to include benefits from a specific program, contact"
+  "tooltip.cashAssistance": "Los beneficios en efectivo, incluidos los subsidios para viviendas, por parte de programas gubernamentales estatales o locales deben declararse como ingresos del hogar. Si no sabe si debe incluir los beneficios de un programa específico, comuníquese con {organizationName} ({organizaitonContactInfo})",
+
+  // Tooltip text explaining SSDI.
+  // English: "Benefits paid to people who have worked long enough and paid Social Security taxes, but who can’t work because they have a medical condition that is expected to last at least one year or result in death."
+  "tooltip.ssdi": "Beneficios para personas que han trabajado lo suficiente y que han pagado impuestos del Seguro Social pero que no pueden trabajar porque tienen una afección médica que puede durar al menos un año o que tendrá como resultado la muerte.",
+
+  // Tooltip text explaining regular cash payments to the household.
+  // English: "For example, if parents or grandparents regularly help cover the cost of groceries, bills, or rent, that money is considered household income. See Help for more information."
+  "tooltip.regularCashPayments": "Dinero recibido regularmente por parte de familiares o amigos que no viven con usted. Por ejemplo, si los padres o abuelos ayudan regularmente a cubrir los gastos de alimentos, facturas o alquiler, ese dinero se considera ingresos del hogar. Consulte la sección de Ayuda para obtener más información.",
+
+  // Tooltip text explaining self employement.
+  // English: "If you are self-employed, report income from work as a net amount. This is calculated by subtracting the total operating expenses of your business from its gross receipts or revenue. For more information see the definition for “Net income from self-employment” in Help."
+  "tooltip.selfEmployment": "Si es un empleado autónomo, declare los ingresos del trabajo como montos netos. Esto se calcula al restarle los gastos operativos totales de su negocio a los recibos o ganancias brutas. Para obtener más información, consulte la definición de “Ingresos netos como autónomo” en la sección de Ayuda.",
+
+  // Tooltip text explaining SSI.
+  // English: "Provides cash to meet basic needs for food, clothing, and shelter to aged, blind, and disabled people who have little or no income."
+  "tooltip.ssi": "Proporciona dinero en efectivo para que las personas ancianas que tengan ingresos mínimos o que no cuenten con ingresos puedan satisfacer las necesidades básicas de alimentos, vestimenta y refugio.",
+
+  // Tooltip text explaining alimony.
+  // English: "Payments received from a spouse or former spouse from whom you are divorced or legally separated."
+  "tooltip.alimony": "Los pagos que recibe de parte de un cónyuge o excónyuge del cual se ha divorciado o está separado legalmente.",
+
+  // Tooltip text explaining child support.
+  // English: "Payments received by one parent from another to cover the cost of raising a child."
+  "tooltip.childSupport": "Los pagos que recibe un padre por parte del otro padre para cubrir los gastos de crianza de un hijo.",
+
+  // Tooltip text explaining unemployment.
+  // English: "Payments from the government or a labor union to a person who is unemployed."
+  "tooltip.unemployment": "Pagos por parte del gobierno o de algún sindicato para una persona desempleada.",
+
+  // Tooltip text explaining veteran benefits.
+  // English: "Benefits that are paid to veterans that have a service-connected disability and were not dishonorably discharged."
+  "tooltip.veteranBenefits": "Beneficios que se pagan a aquellos veteranos que tienen una discapacidad relacionada con el servicio y que no fueron despedidos con deshonor.",
+
+  // Tooltip text explaining workers compensation.
+  // English: "Payments to cover lost wages and medical expenses of an employee who is injured on the job."
+  "tooltip.workersComp": "Pagos destinados a cubrir sueldos perdidos y gastos médicos de un empleado que se lesionó en el trabajo.",
+
+  // Tooltip text explaining strike benefits.
+  // English: "Compensation paid by a union to workers on strike."
+  "tooltip.strikeBenefits": "Compensación que paga un sindicato a los trabajadores en huelga.",
+
+  // Tooltip text explaining black lung.
+  // English: "Payments and medical treatment for people that become disabled from Black Lung Disease from working in or around the nation’s coal mines."
+  "tooltip.blackLung": "Pagos y tratamiento médico para personas que sufrieron una discapacidad por enfermedad del pulmón negro al trabajar en las minas de carbón de la nación o en los alrededores.",
+
+  // Tooltip text explaining railroad.
+  // English: "Payments to qualified railroad employees that are retired or disabled."
+  "tooltip.railroad": "Pagos realizados a empleados ferroviarios calificados que están jubilados o que tienen una discapacidad.",
+
+  // Tooltip text explaining monthly income summation.
+  // English: "We calculated this number by converting all the income you reported into a monthly amount. Remember, this should be a gross amount, so it will be more than what you receive as take-home pay."
+  "tooltip.monthlyIncomeSum": "Calculamos este número convirtiendo todos los ingresos que informó en una cantidad mensual. Recuerde, esta debe ser una cantidad bruta, por lo que será más de lo que recibe como pago a domicilio (“salario de bolsillo”).",
+
+  // Tooltip text explaining earmed interest.
+  // English: "See the FAQ “How do I know if I have income from earned interest?” in Help."
+  "tooltip.earmedInterest": "Consulte la sección de preguntas frecuentes “¿Cómo SÉ SI TENGO INGRESOS POR INTERESES ACUMULADOS?” en Ayuda.",
+
+  // Tooltip text explaining rental.
+  // English: "See the FAQ “How should I report income from rented space or properties?” in Help."
+  "tooltip.rental": "Consulte la sección de preguntas frecuentes “¿CÓMO DEBO DECLARAR MIS INGRESOS DE UN ESPACIO O PROPIEDAD ALQUILADOS?” en Ayuda.",
+
+  // Tooltip text explaining military.
+  // English: "See Help for information about sources of income in military that are and are not included as household income."
+  "tooltip.military": "Consulte la sección Ayuda para obtener información sobre las fuentes de ingresos del ejército que están y que no están incluidas como ingresos del hogar.",
+
+  // Tooltip text explaining deployed.
+  // English: "We ask because we only count the portion of a deployed service member’s income that is made available to the household."
+  "tooltip.deployed": "Preguntamos porque solo contamos con la parte de ingresos de un miembro del servicio que han desplegado que está disponible para el hogar.",
+
+  // Tooltip text explaining gross.
+  // English: "All money earned or received before deductions, such as income taxes, Social Security taxes, and insurance premiums."
+  "tooltip.gross": "Todo el dinero ganado o recibido antes de las deducciones, como el impuesto a las ganancias, impuesto del Seguro Social o primas de seguros.",
+
+  // Tooltip text for getting help on program eligibility.
+  // English: "See Help for the Income Eligibility Guidelines for reduced price benefits."
+  "tooltip.eligibility": "Consulte la sección Ayuda para ver las Pautas de elegibilidad por Ingresos para obtener beneficios de precio reducido.",
+
+  // Tooltip text explaining SSI for children.
+  // English: "Supplemental Security Income (SSI) provides cash to meet basic needs for food, clothing, and shelter to children younger than age 18 who have a physical or mental condition, or combination of conditions, that meets Social Security’s definition of disability for children, and if his or her income and resources fall within the eligibility limits."
+  "tooltip.ssiChildren": "Los ingresos de seguridad suplementarios (SSI) proporcionan efectivo para satisfacer las necesidades básicas de alimentos, vestimenta y refugio para niños menores de 18 años que tengan una afección física o mental, o una combinación de afecciones, que cumplen con la definición de discapacidad en niños del Seguro Social, y si los ingresos y recursos de los niños cumplen con los límites de elegibilidad.",
+
+  // Tooltip text explaining social security survivor benefits.
+  // English: "Social Security survivor benefits are monthly payments to children of a deceased parent who was retired or disabled, but worked and paid taxes into the Social Security system."
+  "tooltip.ssSurvivor": "Los beneficios para sobrevivientes del Seguro Social son pagos mensuales para los hijos de un padre fallecido que se había jubilado o que estaba discapacitado, pero que trabajó y pagó impuestos en el sistema del Seguro Social.",
+
+  // Tooltip text explaining pension benefits for children.
+  // English: "A child may receive payments from the pension of a deceased parent."
+  "tooltip.pensionChildren": "Un niño puede recibir pagos de la pensión de un padre fallecido.",
+
+  // Tooltip text explaining annuities for children.
+  // English: "A child may be the recipient of payments from an annuity. See Help for the definition of an annuity."
+  "tooltip.annuityChildren": "Un niño puede recibir los pagos de una anualidad. Consulte la sección de Ayuda para ver la definición de anualidad.",
+
+  // Tooltip text explaining McKinney.
+  // English: "Provides Federal money for homeless shelter programs and facilitates public school access for homeless children and youth."
+  "tooltip.mckinney": "Le proporciona dinero federal a los programas de refugio para las personas sin vivienda y les facilita el acceso a escuelas públicas a los niños y jóvenes sin vivienda.",
+
+  // Tooltip text explaining MEP.
+  // English: "Provides services to children who have moved across school district lines, within the last three years, in order to accompany or join a parent or guardian who seeks or obtains temporary or seasonal work in argiculture or fishing."
+  "tooltip.mep": "Presta servicios a niños que se han mudado a otros distritos escolares en los últimos tres años, para acompañar o unirse a un padre o tutor legal que busca u obtiene trabajo temporal o por temporada en agricultura o pesca.",
+
+  // Tooltip text explaining Runaway and Homeless Youth Act.
+  // English: "Authorizes community-based runaway and homeless youth projects to provide temporary shelter and care to youth who are in need of temporary shelter, counseling, and aftercare services."
+  "tooltip.runaway": "Autoriza proyectos basados en la comunidad para jóvenes que se dan a la fuga o que no tienen hogar y les brindan refugio temporal y atención a los jóvenes que necesiten refugio temporal, asesoramiento y servicios posteriores.",
+
+
+  /***
+   *** src/components/application/Slide.jsx
+   ***/
+
+  // Default text for button to move back a slide.
+  // English: "Back"
+  "app.slide.backButton": "Volver",
+
+  // Default text for button to move forward a slide.
+  // English: "Continue"
+  "app.slide.nextButton": "Continuar",
+
+  // Default text to tell user that the current slide is incomplete.
+  // English: "Please enter all required information above."
+  "app.slide.requiredText": "Por favor ingrese toda la información requerida arriba",
+
+
+  /***
+   *** src/components/application/slides/AdultIncomeOverview.jsx
+   ***/
+
+  // Intro Paragraph
+  // English: "This page is all about {adult}."
+  "app.slides.adultIncomeOverview.adultsInto": "Esta página contiene información sobre {adult}.",
+
+  // Income intro
+  // English: "On questions about income, all amounts should be {adult}’s &nbsp;{tooltip}&nbsp;,{grossIncome}."
+  "app.slides.adultIncomeOverview.income": "En cuanto a las preguntas sobre ingresos, todos los montos deben referirse a los &nbsp;{tooltip}&nbsp;,{grossIncome} de {adult}.",
+
+  // Intro Paragraph
+  // English: "current"
+  "app.slides.adultIncomeOverview.current": "actuales",
+
+  // gross income
+  // English: "gross income"
+  "app.slides.adultIncomeOverview.grossIncome": "ingresos brutos",
+
+  // Is adult in military
+  // English: "Is {adult} in the &nbsp;{tooltip}&nbsp;?"
+  "app.slides.adultIncomeOverview.militaryQuestion": "¿{adult} está en el &nbsp;{tooltip}&nbsp;?",
+
+  // military
+  // English: "military"
+  "app.slides.adultIncomeOverview.military": "ejército",
+
+  // Is adult deployed
+  // English: "Is {adult} currently &nbsp;{tooltip}&nbsp;?"
+  "app.slides.adultIncomeOverview.deployedQuestion": "¿{adult} ha sido &nbsp;{tooltip}&nbsp;?",
+
+  // deployed
+  // English: "deployed"
+  "app.slides.adultIncomeOverview.deployed": "desplegado actualmente",
+
+  // Is adult employed
+  // English: "Does {adult} have earnings from work including salary, wages, tips, commissions, {tooltip}&nbsp; or net income from &nbsp;{tooltip2}"
+  "app.slides.adultIncomeOverview.employmentQuestion": "¿{adult} cuenta con ingresos profesionales incluidos los salarios, sueldos, propinas, comisiones, &nbsp;{tooltip}&nbsp; o ingresos netos como &nbsp;{tooltip2}}&nbsp;?",
+
+  // cash bonuses
+  // English: "cash bonuses"
+  "app.slides.adultIncomeOverview.cashBonus": "bonos en efectivo",
+
+  // self-employment
+  // English: "self-employment"
+  "app.slides.adultIncomeOverview.selfEmployment": "autónomo",
+
+  // Is adult receiving public assistance income?
+  // English: "Does {adult} have income from public assistance including Supplemental Security Income &nbsp;{tooltip}&nbsp;, or&nbsp;{tooltip2}&nbsp; or housing subsidies from state or local government?"
+  "app.slides.adultIncomeOverview.publicAssistanceIncome": "¿{adult} recibe ingresos de asistencia pública como ingresos de seguridad suplementarios &nbsp;{tooltip}&nbsp;, o &nbsp;{tooltip2}&nbsp; o subsidios de vivienda por parte del gobierno estatal o local?",
+
+  // SSI
+  // English: "(SSI - Supplemental Security Income)"
+  "app.slides.adultIncomeOverview.ssi": "(SSI)",
+
+  // cash assistance
+  // English: "cash assistance"
+  "app.slides.adultIncomeOverview.cashAssistance": "asistencia en efectivo",
+
+  // Is adult receiving spousal income?
+  // English: "Does {adult} have income from &nbsp;{tooltip}&nbsp; or &nbsp;{tooltip2}&nbsp; ?"
+  "app.slides.adultIncomeOverview.spousalIncome": "¿{adult} recibe &nbsp;{tooltip}&nbsp; o &nbsp;{tooltip2}&nbsp;?",
+
+  // alimony
+  // English: "alimony"
+  "app.slides.adultIncomeOverview.alimony": "pensión alimenticia",
+
+  // child support
+  // English: "child support"
+  "app.slides.adultIncomeOverview.childSupport": "manutención infantil",
+
+  // Is adult receiving unemployment income?
+  // English: "Does {adult} have income from &nbsp;{tooltip}&nbsp;, &nbsp;{tooltip2}&nbsp;, &nbsp;{tooltip3}&nbsp;, &nbsp;{tooltip4}&nbsp;, or Social Security Disability Insurance &nbsp;{tooltip5}&nbsp;?"
+  "app.slides.adultIncomeOverview.unemploymentIncome": "¿{adult} recibe ingresos de &nbsp;{tooltip}&nbsp;, &nbsp;{tooltip2}&nbsp;, &nbsp;{tooltip3}&nbsp;, &nbsp;{tooltip4}&nbsp;, o un Seguro por Discapacidad del Seguro Social &nbsp;{tooltip5}&nbsp;?",
+
+  // unemployment benefits
+  // English: "unemployment benefits"
+  "app.slides.adultIncomeOverview.unemployment": "prestaciones por desempleo",
+
+  // Veteran's benefits
+  // English: "Veteran's benefits"
+  "app.slides.adultIncomeOverview.veteranBenefits": "prestaciones para los veteranos",
+
+  // worker's compensation
+  // English: "worker's compensation"
+  "app.slides.adultIncomeOverview.workersComp": "indemnización laboral",
+
+  // strike benefits
+  // English: "strike benefits"
+  "app.slides.adultIncomeOverview.strikeBenefits": "prestaciones por huelga",
+
+  // SSDI
+  // English: "(SSDI)"
+  "app.slides.adultIncomeOverview.ssdi": "(SSDI)",
+
+  // Is adult receiving retirement income?
+  // English: "Does {adult} have retirement income from Social Security (including survivor benefits, &nbsp;{tooltip}&nbsp; and &nbsp;{tooltip2}&nbsp; ) or &nbsp;{tooltip3}&nbsp;?"
+  "app.slides.adultIncomeOverview.retirementIncome": "¿{adult} cuenta con ingresos de jubilación del Seguro Social (incluidos los beneficios para sobrevivientes, &nbsp;{tooltip}&nbsp; y &nbsp;{tooltip2}&nbsp; ) o &nbsp;{tooltip3}&nbsp;?",
+
+  // Black Lung Benefits
+  // English: "Black Lung Benefits"
+  "app.slides.adultIncomeOverview.blackLung": "Beneficios por enfermedad del pulmón negro",
+
+  // Railroad Retirement
+  // English: "Railroad Retirement"
+  "app.slides.adultIncomeOverview.railroad": "Jubilación para ferroviarios",
+
+  // pensions
+  // English: "pensions"
+  "app.slides.adultIncomeOverview.pension": "pensiones",
+
+  // Is adult receiving otherincome?
+  // English: "Does {adult} have other sources of income including &nbsp;{tooltip}&nbsp; from outside the household, &nbsp;{tooltip2}&nbsp;,&nbsp;{tooltip3}&nbsp;, investment income and &nbsp;{tooltip4}&nbsp; , or any other source of income available to pay for children’s school meals?"
+  "app.slides.adultIncomeOverview.otherIncome": "¿{adult} cuenta con otras fuentes de ingresos como &nbsp;{tooltip}&nbsp; proporcionadas por alguien que no viva en el hogar, &nbsp;{tooltip2}&nbsp;,&nbsp;{tooltip3}&nbsp;, ingresos por inversiones y &nbsp;{tooltip4}&nbsp; , o alguna otra fuente de ingreso disponible para pagar las comidas escolares de los niños?",
+
+  // regular cash payments
+  // English: "regular cash payments"
+  "app.slides.adultIncomeOverview.regularCashPayments": "pagos regulares en efectivo",
+
+  // rental income
+  // English: "rental income"
+  "app.slides.adultIncomeOverview.rental": "ingresos por alquileres",
+
+  // earned interest
+  // English: "earned interest"
+  "app.slides.adultIncomeOverview.earnedInterest": "interés acumulado",
+
+  // annuities
+  // English: "annuities"
+  "app.slides.adultIncomeOverview.annuity": "anualidades",
+
+
+  /***
+   *** src/components/application/slides/Adults.jsx
+   ***/
+
+  // Intro Paragraph
+  // English: "Okay, now let’s talk about the adults in your household."
+  "app.slides.adults.adultsInto": "Bueno, ahora hablemos de los adultos del hogar.",
+
+  // What other adults live in household
+  // English: "Not including {attestor}, what other adults live in the household?"
+  "app.slides.adults.notIncluding": "Sin incluir a {attestor}, ¿qué otros adultos viven en el hogar?",
+
+  // Remember Household definitions
+  // English: "Remember, for the purposes of applying for school meal benefits, a household is defined as a group of people, related or unrelated, that usually live together and share income and expenses. Don't forget about:"
+  "app.slides.adults.remember": "Recuerde, con los propósitos de solicitar beneficios de comidas escolares, un hogar se define como un grupo de personas, relacionadas o no relacionadas, que suelen vivir juntas y compartir ingresos y gastos. No se olvide de las siguientes personas:",
+
+  // Grandparents or extended family
+  // English: "grandparents or other extended family members that are living with you"
+  "app.slides.adults.grandparents": "los abuelos u otros miembros de la familia extendida que viven con usted",
+
+  // Also include people not living there right now
+  // English: "Also include people that are not currently living with you, but are only away on a temporary basis, like:"
+  "app.slides.adults.alsoInclude": "También debe incluir a las personas que no viven con usted actualmente, pero que viven lejos de manera temporal, como las siguientes personas:",
+
+  // college kids
+  // English: "kids that are away at college,"
+  "app.slides.adults.collegeKids": "hijos que se han ido a la universidad,",
+
+  // deployed military
+  // English: "members of your family that are in the military, and are deployed"
+  "app.slides.adults.military": "miembros de la familia que están en el ejército, que han sido desplegados",
+
+  // Include people regardless of age or income
+  // English: "Include people regardless of age or whether they earn or receive income."
+  "app.slides.adults.includeRegardless": "Incluya a las personas sin importar la edad o si ganan o reciben ingresos.",
+
+
+  /***
+   *** src/components/application/slides/AssistancePrograms.jsx
+   ***/
+
+  // Intro paragraph
+  // English: "If anyone in your household participates in &nbsp;{snap}, &nbsp;{tanf} , or &nbsp;{fdpir}&nbsp; then {studentList} {studentsize} eligible for free school meals"
+  "app.slides.assistancePrograms.intro": "Si alguien en su hogar participa en &nbsp;{snap}, &nbsp;{tanf}, o &nbsp;{fdpir}&nbsp;, {studentList} {studentsize} elegible para recibir comidas escolares gratis.",
+
+  // Household definition
+  // English: "A household is defined as a group of people, related or unrelated, that usually live together and share income and expenses."
+  "app.slides.assistancePrograms.household": "Un hogar se define como un grupo de personas, relacionadas o no relacionadas que suelen vivir juntas y que comparten ingresos y gastos.",
+
+  // Household definition includes
+  // English: "This includes grandparents or other extended family members that are living with you. It also includes people that are not currently living with you, but are only away on a temporary basis, like kids that are away at college. It includes people regardless of age or whether they earn or receive income."
+  "app.slides.assistancePrograms.householdIncludes": "Esto incluye a los abuelos o a otros miembros de la familia extendida que vivan con usted. También incluye a las personas que no viven con usted actualmente, pero que viven lejos de manera temporal, como hijos que se han ido a la universidad. Incluye a personas sin importar la edad o si ganan o reciben ingresos.",
+
+  // Household who to include
+  // English: "If you need more detailed information, see the ‘WHO SHOULD I INCLUDE IN MY HOUSEHOLD?’ question in Help."
+  "app.slides.assistancePrograms.whoToInclude": "Si necesita obtener información detallada, consulte la pregunta ‘¿A QUIÉN DEBO INCLUIR EN MI HOGAR?’ en la sección de ayuda.",
+
+  // Household people who participates in programs
+  // English: "If anyone in your household (including you) currently participates in any of the following programs, please select one or more of the checkboxes below. If not, press continue."
+  "app.slides.assistancePrograms.followingPrograms": "Si alguna persona de su hogar (usted incluido) participa actualmente en alguno de los siguientes programas, marque las casillas que se encuentran a continuación. Si no participa en ninguno, presione continuar.",
+
+
+  /***
+   *** src/components/application/slides/Attestation.jsx
+   ***/
+
+  // Text for the header of the slide.
+  // English: "I certify (promise)..."
+  "app.slides.attestation.header": "Certifico (prometo)...",
+
+  // Introductory paragraph.
+  // English: "that all information on this application is true and that all income is reported."
+  "app.slides.attestation.intro": "que toda la información que figura en esta solicitud es verdadera y que he declarado todos los ingresos.",
+
+  // Understand that the information give should be correct.
+  // English: "I understand that this information is given in connection with the receipt of Federal funds, and that school o&shy;fficials may verify (check) the information. I am aware that if I purposely* give false information, my children may lose meal benefits."
+  "app.slides.attestation.understand": "Entiendo que esta información se proporciona en relación con el recibo de fondos federales y que los funcionarios escolares pueden verificar (comprobar) la información. Entiendo que si proporciono información falsa a propósito*, mis hijos pueden perder los beneficios de comidas.",
+
+  // Starred message that lying on the form is fraud.
+  // English: "*Deliberate misrepresentation of information may subject applicants to prosecution under applicable State and Federal law."
+  "app.slides.attestation.misrepresentation": "*Si declara información falsa de manera intencional puede quedar sujeto a acusación bajo les leyes estatales y federales correspondientes.",
+
+
+  /***
+   *** src/components/application/slides/BeforeYouBegin.jsx
+   ***/
+
+  // Text for the header of the slide.
+  // English: "Before you begin…"
+  "app.slides.beforeYouBegin.header": "Antes de empezar",
+
+  // Introductory tagline.
+  // English: "there are a few things you should know."
+  "app.slides.beforeYouBegin.subheading": "debe saber algunas cosas",
+
+  // Hist that you can skip most of application with a household program.
+  // English: "If you received a {tooltip} from the school saying that your children were automatically approved (directly certified) for free meals for the {schoolYear} school year because someone in your household participates in {assistanceProgramList} then you do not need to submit an application."
+  "app.slides.beforeYouBegin.householdPrograms": "Si recibió una {tooltip}  de parte de la escuela en la que le informaron que sus hijos estaban aprobados automáticamente (directamente certificados) para obtener comidas gratis para el año escolar {schoolYear} porque algún miembro de su hogar participa en {assistanceProgramList}, entonces no necesita enviar la solicitud.",
+
+  // As in a letter from a school.
+  // English: "letter"
+  "app.slides.beforeYouBegin.letter": "carta",
+
+  // Only need one application for your household
+  // English: "We need only one application for all the children in your household that attend {organizationName}."
+  "app.slides.beforeYouBegin.oneApplication": "Necesitamos solo una solicitud para todos los niños de su hogar que asistan {organizationName}",
+
+  // As in the qulifications for this program.
+  // English: "Eligibility"
+  "app.slides.beforeYouBegin.eligibility": "La elegibilidad",
+
+  // Only need one application for your household
+  // English: "for free or reduced price school meal benefits is based on any one of these"
+  "app.slides.beforeYouBegin.mealEligibilityDescription": "para obtener beneficios de comidas escolares gratis o a precio reducido se basa en alguna de estas",
+
+  // As in the requirements for program qualification.
+  // English: "three things:"
+  "app.slides.beforeYouBegin.threeThings": "tres características:",
+
+  // Eligibility List item
+  // English: "your total household income and size in the month the application is filled out, or the month before, or"
+  "app.slides.beforeYouBegin.eligibility1": "el tamaño y los ingresos totales de su hogar en el mes en que se completa la solicitud o en el mes anterior, o",
+
+  // Eligibility List item
+  // English: "your child’s individual status as foster, homeless, migrant or runaway, or"
+  "app.slides.beforeYouBegin.eligibility2": "el estado individual de su hijo como adoptivo, sin hogar, migrante o en fuga, o",
+
+  // Eligibility List item
+  // English: "participation in an assistance program by any member of your household"
+  "app.slides.beforeYouBegin.eligibility3": "la participación de alguno de los miembros de su hogar en un programa de asistencia",
+
+  // citizenship or immigration doesn't affect status
+  // English: "Your &nbsp;{tooltip}&nbsp; does not affect your eligibility for free and reduced price benefits."
+  "app.slides.beforeYouBegin.status": "Su &nbsp;{tooltip}&nbsp; no afecta su elegibilidad para obtener beneficios de comidas gratis o a precio reducido",
+
+  // As in the status of the person/family applying for benefits.
+  // English: "US citizenship or immigration status"
+  "app.slides.beforeYouBegin.usStatus": "ciudadanía en los EE. UU. o estado de inmigración",
+
+  // Click the question mark icons
+  // English: "If you have questions at any point during the application, click the question mark icon to get help with the current section."
+  "app.slides.beforeYouBegin.questions": "Si tiene alguna pregunta cuando complete la solicitud, haga clic en el icono de signo de interrogación para obtener ayuda con esa sección.",
+
+  // Things you'll need section header.
+  // English: "Things you'll need"
+  "app.slides.beforeYouBegin.thingsNeeded": "Cosas que necesitará",
+
+  // Invitation to view full list of things needed to apply.
+  // English: "Lastly, we compiled a list of the information you might need to complete the application."
+  "app.slides.beforeYouBegin.thingsNeededMore": "Por último, hemos compilado una lista de la información que puede necesitar para completar la solicitud.",
+
+  // Text for the link to view all information needed to apply.
+  // English: "Check it out!"
+  "app.slides.beforeYouBegin.thingsNeededMoreLinkText": "Léala.",
+
+  // Handy Information Lead
+  // English: "If you have this information handy, it will make the application process fast and easy."
+  "app.slides.beforeYouBegin.informationHandy": "Si tiene esta información a mano, el proceso de solicitud será más rápido y fácil.",
+
+  // List of programs that will require a case number.
+  // English: "If you participate in {snap}, {tanf} , or {fdpir} you will need to know your case number (not your card or account number)."
+  "app.slides.beforeYouBegin.caseNumber": "Si participa en {snap}, {tanf}, o {fdpir} necesitará su número de caso (no su tarjeta ni número de cuenta).",
+
+  // Description of when household income reporting is required.
+  // English: "If you do not participate in any of the above assistance programs, you will need to report your total household income. In that case…"
+  "app.slides.beforeYouBegin.whenReportHouseholdIncome": "Si no participa en ninguno de los programas de asistencia mencionados anteriormente, tendrá que declarar los ingresos totales de su hogar. En ese caso...",
+
+  // Item required for household income reporting.
+  // English: "if anyone in your house has a job, you may need to reference the earnings statements or pay stubs to report your gross income, which is different from the amount you actually receive in your paycheck."
+  "app.slides.beforeYouBegin.whenReportHouseholdIncome1": "si alguien en su hogar tiene trabajo, es probable que usted deba hacer referencia a las declaraciones de ganancias o talones de pago para informar sus ingresos brutos, que son diferentes del monto que realmente recibe en el cheque de pago.",
+
+  // Item required for household income reporting.
+  // English: "if anyone receives Social Security or retirement benefits, you may need to gather the benefit statements to report the amount and frequency of the payments."
+  "app.slides.beforeYouBegin.whenReportHouseholdIncome2": "si alguien recibe beneficios del Seguro Social o de jubilación, es probable que usted deba recopilar las declaraciones de beneficios para informar el monto y la frecuencia de los pagos.",
+
+  // Item required for household income reporting.
+  // English: "you may also need to reference other financial documents for additional sources of income."
+  "app.slides.beforeYouBegin.whenReportHouseholdIncome3": "es probable que deba referirse a otros documentos financieros para obtener fuentes de ingresos adicionales.",
+
+  // Reassuring message about the application prompting for information as needed.
+  // English: "Still not sure if you have everything you need? Don’t worry! The income section of the application contains detailed instructions and explanations about the sources of income you must include, and you can gather additional information then."
+  "app.slides.beforeYouBegin.notSure": "¿Aún no está seguro de tener todo lo que necesita? No se preocupe. La sección de ingresos de la solicitud incluye instrucciones y explicaciones detalladas sobre las fuentes de ingresos que debe incluir y, allí podrá obtener información adicional.",
+
+
+  /***
+   *** src/components/application/slides/ChildIncomeOverview.jsx
+   ***/
+
+  // Possessive phrase for a single child's income.
+  // English: "child's income"
+  "app.slides.childIncomeOverview.singleChildIncome": "los ingresos del niño",
+
+  // Possessive phrase for multiple children's income.
+  // English: "children's income"
+  "app.slides.childIncomeOverview.multipleChildIncome": "los ingresos de los niños",
+
+  // Introductory paragraph.
+  // English: "The next few questions are about your {tooltip}."
+  "app.slides.childIncomeOverview.intro": "Las siguientes preguntas son sobre {tooltip}",
+
+  // income Source List beginning
+  // English: "Some common sources of income for children are:"
+  "app.slides.childIncomeOverview.sources": "Algunas fuentes comunes de ingresos de los niños son las siguientes:",
+
+  // Full-/part-time job
+  // English: "a full-time or part-time job,"
+  "app.slides.childIncomeOverview.fullOrPartJob": "un trabajo de tiempo completo o medio tiempo,",
+
+  // Social Security
+  // English: "{socialSecurity}  benefits, if the child is disabled, or is the  {beneficiary}  of another person’s Social Security benefits,"
+  "app.slides.childIncomeOverview.socialSecurity": "{socialSecurity}  , si el niño es ciego o discapacitado, o es  {beneficiary}  de los beneficios del Seguro Social de otra persona,",
+
+  // social
+  // English: "Social Security"
+  "app.slides.childIncomeOverview.social": "beneficios del Seguro Social",
+
+  // benefit
+  // English: "beneficiary"
+  "app.slides.childIncomeOverview.benefit": "beneficiario",
+
+  // money regularly received
+  // English: "money regularly received from extended family or friends outside the household, or"
+  "app.slides.childIncomeOverview.money": "dinero recibido regularmente proveniente de la familia extendida o de amigos que no viven en el hogar, o",
+
+  // money From pension, annuity, or trust
+  // English: "money from a  {pension} ,  {annuity} , or  {trust}"
+  "app.slides.childIncomeOverview.moneyFrom": "dinero que recibe por una  {pension} ,  {annuity} , o  {trust}",
+
+  // pension
+  // English: "pension"
+  "app.slides.childIncomeOverview.pension": "pensión",
+
+  // annuity
+  // English: "annuity"
+  "app.slides.childIncomeOverview.annuity": "anualidad",
+
+  // trust
+  // English: "trust"
+  "app.slides.childIncomeOverview.trust": "fideicomiso",
+
+
+  /***
+   *** src/components/application/slides/ChildIncomeSlide.jsx
+   ***/
+
+  // Introductory paragraph.
+  // English: "Does {child} have income from any of the following sources?"
+  "app.slides.childIncomeSlide.intro": "¿{child} obtiene ingresos de alguna de las siguientes fuentes?",
+
+  // Income reported should be child's.
+  // English: "Income reported here should be the child’s  {tooltip} , {gross}  income."
+  "app.slides.childIncomeSlide.incomeReported": "Los ingresos declarados aquí deben ser los ingresos {gross}  {tooltip}  del niño.",
+
+  // current
+  // English: "current"
+  "app.slides.childIncomeSlide.current": "actuales",
+
+  // gross
+  // English: "gross"
+  "app.slides.childIncomeSlide.gross": "brutos",
+
+  // Gross Income definition.
+  // English: "{grossIncome}  means all money earned or received before deductions, such as income taxes, social security taxes, and insurance premiums. You should not report net income, which is the amount of money received in a pay check. Net income is total (or gross) income, minus taxes and deductions, and is commonly referred to as “take home pay”."
+  "app.slides.childIncomeSlide.childGross": "{grossIncome}  se refiere a todo el dinero ganado o recibido antes de las deducciones, como el impuesto a las ganancias, impuesto del Seguro Social o primas de seguros. No debe declarar sus ingresos netos, que es el monto de dinero recibido en un cheque de pago. Los ingresos netos son los ingresos totales (o brutos), menos los impuestos y las deducciones, y comúnmente se lo llama “salario de bolsillo”.",
+
+  // Gross income
+  // English: "Gross income"
+  "app.slides.childIncomeSlide.grossIncome": "Ingresos brutos",
+
+  // Money earned from a full or part-time job
+  // English: "Money earned from a full or part-time job"
+  "app.slides.childIncomeSlide.moneyEarned": "Dinero ganado en un trabajo de tiempo completo o medio tiempo.",
+
+  // Supplemental income
+  // English: "Supplemental Security Insurance  {tooltip}  or Social Security  {tooltip2}"
+  "app.slides.childIncomeSlide.supplementalIncome": "Los Ingresos de seguridad suplementarios  {tooltip}  o  {tooltip2} del Seguro Social",
+
+  // SSI
+  // English: "(SSI)"
+  "app.slides.childIncomeSlide.ssiChildren": "(SSI)",
+
+  // survivor benefits
+  // English: "survivor benefits"
+  "app.slides.childIncomeSlide.ssSurvivor": "beneficios para sobrevivientes",
+
+  // Regular Cash Payments
+  // English: "{tooltip}  from extended family or friends outside the household"
+  "app.slides.childIncomeSlide.regularCash": "{tooltip}  de la familia extendida o de amigos que no viven en el hogar",
+
+  // Money regularly received
+  // English: "Money regularly received"
+  "app.slides.childIncomeSlide.regularCashPayments": "Dinero recibido regularmente",
+
+  // Pensions annuities & trusts
+  // English: "{tooltip} ,  {tooltip2} , or  {tooltip3}"
+  "app.slides.childIncomeSlide.pensionAnnuityTrust": "{tooltip} ,  {tooltip2} , o  {tooltip3}",
+
+  // Pension
+  // English: "Pension"
+  "app.slides.childIncomeSlide.pensionChildren": "Pensión",
+
+  // annuity
+  // English: "annuity"
+  "app.slides.childIncomeSlide.annuityChildren": "anualidad",
+
+  // trust
+  // English: "trust"
+  "app.slides.childIncomeSlide.trust": "fideicomiso",
+
+  // other income
+  // English: "Any other source of income"
+  "app.slides.childIncomeSlide.otherIncome": "Alguna otra fuente de ingresos",
+
+  // Missing Income Alert
+  // English: "On a previous page, you indicated that {child} receives income. Please enter this income above or correct your previous answer."
+  "app.slides.childIncomeSlide.missingIncome": "En una página anterior, usted indicó que {child}} recibía ingresos. Por favor ingrese este ingreso arriba o corrija su respuesta anterior.",
+
+  // Change Answer
+  // English: "Change previous answer"
+  "app.slides.childIncomeSlide.changeAnswer": "Cambiar respuesta anterior",
+
+
+  /***
+   *** src/components/application/slides/Contact.jsx
+   ***/
+
+  // Introductory paragraph.
+  // English: "Please enter your contact information so that we can reach you in case there are any issues with your application. This information is optional, but we strongly encourage you to provide it."
+  "app.slides.contact.intro": "Ingrese su información de contacto para que podamos comunicarnos con usted en caso de que ocurra algún problema con su solicitud. Esta información es opcional, pero le aconsejamos enfáticamente que la ingrese.",
+
+
+  /***
+   *** src/components/application/slides/Demographics.jsx
+   ***/
+
+  // Introductory paragraph.
+  // English: "This is an optional question for information we collect about students that attend school in {organizationName}."
+  "app.slides.demographics.intro": "Esta es una pregunta opcional para la información que recopilamos sobre los estudiantes que asisten a la escuela en {organizationName}",
+
+  // Required to ask...
+  // English: "We are required to ask for information about the race and ethnicity of the students that are applying for the program."
+  "app.slides.demographics.required": "Estamos obligados a solicitar información sobre la raza y el origen étnico de los estudiantes que solicitan el programa.",
+
+  // info is important because...
+  // English: "This information is important and helps to make sure we are fully serving our community. Responding to this section is optional and does not affect your children's eligibility for free or reduced price meals."
+  "app.slides.demographics.importantInfo": "Esta información es importante y nos ayuda a asegurarnos de que realmente le estamos brindando servicios a la comunidad. Responder esta sección es opcional y no afecta la elegibilidad de sus hijos para obtener comidas gratis o a precio reducido.",
+
+
+  /***
+   *** src/components/application/slides/DemographicsForm.jsx
+   ***/
+
+  // Ethnicity
+  // English: "Ethnicity"
+  "app.slides.demographicsForm.ethnicity": "Origen étnico",
+
+  // Race
+  // English: "Race"
+  "app.slides.demographicsForm.race": "Raza",
+
+  // American Indian or Alaskan Native
+  // English: "American Indian or Alaskan Native"
+  "app.slides.demographicsForm.americanIndianOrAlaskanNative": "Indígena Estadounidense o Nativo de Alaska",
+
+  // Asian
+  // English: "Asian"
+  "app.slides.demographicsForm.asian": "Asiática",
+
+  // Black or African American
+  // English: "Black or African American"
+  "app.slides.demographicsForm.africanAmerican": "Negra o Afroamericana",
+
+  // Native Hawaiian or Other Pacific Islander
+  // English: "Native Hawaiian or Other Pacific Islander"
+  "app.slides.demographicsForm.pacificIslander": "Nativo de Hawái o de otras islas del Pacífico",
+
+  // White
+  // English: "White"
+  "app.slides.demographicsForm.white": "Blanca",
+
+  // Clear
+  // English: "Clear"
+  "app.slides.demographicsForm.clear": "Clara",
+
+
+  /***
+   *** src/components/application/slides/EmploymentIncome.jsx
+   ***/
+
+  // Salary / Wages
+  // English: "Salary / Wages"
+  "app.slides.employmentIncome.salaryWages": "Salario / sueldo",
+
+  // Tips
+  // English: "Tips"
+  "app.slides.employmentIncome.tips": "Propinas",
+
+  // Commission
+  // English: "Commission"
+  "app.slides.employmentIncome.commission": "Comisiones",
+
+  // Cash bonus tooltip
+  // English: "Cash bonus"
+  "app.slides.employmentIncome.tooltipCashBonus": "Bono en efectivo",
+
+  // Cash bonus
+  // English: "Net income from  {tooltip}"
+  "app.slides.employmentIncome.selfEmployment": "Ingresos netos del  {tooltip}",
+
+  // self-employment
+  // English: "self-employment"
+  "app.slides.employmentIncome.tooltipSelf": "empleado autónomo",
+
+
+  /***
+   *** src/components/application/slides/Foster.jsx
+   ***/
+
+  // No problem.
+  // English: "No problem! There are other ways to qualify."
+  "app.slides.foster.confirm": "¡No hay problema! Existen otras maneras en las que puede calificar.",
+
+
+  /***
+   *** src/components/application/slides/IncomeElection.jsx
+   ***/
+
+  // Need to confirm with program staff
+  // English: "We just need to confirm that with program staff. If we are unable to do that, you will need to submit an application with income information to determine your benefit level."
+  "app.slides.incomeElection.confirmWithStaff": "Sólo necesitamos confirmar eso con el personal del programa. Si no podemos hacerlo, tendrá que presentar una solicitud con información de ingresos para determinar su nivel de beneficios.",
+
+  // Label for the following radio buttons
+  // English: "Please choose one of the following:"
+  "app.slides.incomeElection.chooseFollowing": "Elija una de las siguientes opciones:",
+
+
+  /***
+   *** src/components/application/slides/IncomeType.jsx
+   ***/
+
+  // Missing Income Alert
+  // English: "On a previous page, you indicated that {adult} receives income from one of the above sources. Please enter this income above or correct your previous answer."
+  "app.slides.incomeType.missingIncome": "En una página anterior, indicó que {adult}} recibe ingresos de una de las fuentes anteriores. Por favor ingrese este ingreso arriba o corrija su respuesta anterior.",
+
+  // Change previous answer
+  // English: "Change previous answer"
+  "app.slides.incomeType.changeAnswer": "Cambiar respuesta anterior",
+
+
+  /***
+   *** src/components/application/slides/IncomeTypeDefaultText.jsx
+   ***/
+
+  // Introductory paragraph.
+  // English: "Does {person} have income from the following sources {militaryCaveat}?"
+  "app.slides.IncomeTypeDefaultText.intro": "¿John cuenta con ingresos de las siguientes fuentes {militaryCaveat}?",
+
+  // not including earnings
+  // English: ", not including earnings from the military that were already reported"
+  "app.slides.IncomeTypeDefaultText.notIncludingEarnings": ", sin incluir las ganancias de los militares que ya se informó",
+
+  // note: remember to report...
+  // English: "NOTE: Remember to report  {tooltip} ,  {tooltip2}  income."
+  "app.slides.IncomeTypeDefaultText.note": "NOTA: recuerde declarar el ingreso  {tooltip2}   {tooltip} ",
+
+  // current
+  // English: "current"
+  "app.slides.IncomeTypeDefaultText.currentAdult": "actual",
+
+  // gross
+  // English: "gross"
+  "app.slides.IncomeTypeDefaultText.gross": "bruto",
+
+
+  /***
+   *** src/components/application/slides/LegalStatements.jsx
+   ***/
+
+  // Almost done
+  // English: "Almost done! Please read and acknowledge the following legal statements."
+  "app.slides.legalStatements.almostDone": "¡Ya casi termina! Lea y acepte las siguientes declaraciones legales.",
+
+  // {usda} Use of info statement
+  // English: "Use of Information Statement"
+  "app.slides.legalStatements.useOfStatement": "Uso de la declaración de información de USDA",
+
+  // National School Lunch Act
+  // English: "The Richard B. Russell National School Lunch Act requires the information on this application. You do not have to give the information, but if you do not submit all needed information, we cannot approve your child for free or reduced price meals. You must include the last four digits of the social security number of the adult household member who signs the application. The social security number is not required when you apply on behalf of a foster child or you list a Supplemental Nutrition Assistance Program (SNAP), Temporary Assistance for Needy Families (TANF) Program or Food Distribution Program on Indian Reservations (FDPIR) case number or other FDPIR identifier for your child or when you indicate that the adult household member signing the application does not have a social security number. We will use your information to determine if your child is eligible for free or reduced price meals, and for administration and enforcement of the lunch and breakfast programs."
+  "app.slides.legalStatements.nationalSchoolLunchAct": "La ley nacional de comidas escolares Richard B. Russell requiere esta información en esta solicitud. No está obligado a dar esta información, pero si no lo hace, no podemos autorizar que sus niños reciban comidas gratis o a precio reducido. Debe incluir los últimos cuatro dígitos del número de la Seguridad Social del miembro adulto de la vivienda que firma la solicitud. No son obligatorios los últimos cuatro dígitos del número de la Seguridad Social cuando realiza la solicitud en nombre de un niño en régimen de acogida o si proporciona un número de expediente de Supplemental Nutrition Assistance Program (SNAP - Programa de asistencia de nutrición complementaria), Temporary Assistance for Needy Families (TANF - Asistencia temporal para familias necesitadas) Program or Food Distribution Program on Indian Reservations (FDPIR - Programa de distribución de alimentos en reservas indias) u otro identificador FDPIR de su niño, o cuando indica que el miembro adulto de la vivienda que firma la solicitud no tiene un número de la Seguridad Social. Usaremos su información para determinar si su niño tiene derecho a recibir comidas gratis o a precio reducido, y la administración y ejecución de los programas de comida y desayuno.",
+
+  // tool may share info
+  // English: "We may share your eligibility information with education, health, and nutrition programs to help them evaluate, fund, or determine benefits for their programs, auditors for program reviews, and law enforcement officials to help them look into violations of program rules."
+  "app.slides.legalStatements.shareInfo": "PODEMOS compartir esta información con los programas de educación, salud y nutrición para ayudarlos a evaluar, financiar o determinar las prestaciones de sus programas, auditores para revisar los programas, y agentes del orden público para ayudarlos a investigar violaciones de las normas del programa.",
+
+  // Non-Discrimination Statement
+  // English: "{usda} Non-Discrimination Statement"
+  "app.slides.legalStatements.nondiscrimination": "Declaración de no discriminación de {usda}",
+
+  // Civil rights paragraph
+  // English: "In accordance with Federal civil rights law and U.S. Department of Agriculture {usda} civil rights regulations and policies, the {usda}, its Agencies, offices, and employees, and institutions participating in or administering {usda} programs are prohibited from discriminating based on race, color, national origin, religion, sex, gender identity (including gender expression), sexual orientation, disability, age, marital status, family/parental status, income derived from a public assistance program, political beliefs, or reprisal or retaliation for prior civil rights activity, in any program or activity conducted or funded by {usda}  (not all bases apply to all programs). Remedies and complaint filing deadlines vary by program or incident."
+  "app.slides.legalStatements.fedCivilRights": "De acuerdo con la ley federal de derechos civiles y los reglamentos y políticas de derechos civiles del Departamento de Agricultura de EE. UU. (USDA - U.S. Department of Agriculture), el USDA, sus organismos, oficinas y empleados, y las instituciones que participan o administran los programas del USDA tienen prohibido discriminar por motivos de raza, color, origen étnico, sexo, discapacidad, edad o tomar represalias o venganza por actividades anteriores a los derechos civiles en cualquier programa o actividad llevada a cabo o financiado por el USDA.",
+
+  // Persons with disabilities
+  // English: "Persons with disabilities who require alternative means of communication for program information (e.g., Braille, large print, audiotape, American Sign Language, etc.) should contact the responsible Agency or {usda}'s TARGET Center at (202) 720-2600 (voice and TTY) or contact {usda} through the Federal Relay Service at (800) 877-8339. Additionally, program information may be made available in languages other than English."
+  "app.slides.legalStatements.disabilities": "Las personas con discapacidad que requieran medios alternativos de comunicación para informarse del programa (por ejemplo, braille, letra grande, cinta de audio, lengua americana de signos, etc.) deben ponerse en contacto con el organismo (estatal o local) donde solicitaron sus prestaciones. Las personas sordas o con problemas de audición o deficiencias en el habla pueden ponerse en contacto con el USDA a través del Federal Relay Service (servicio federal de transmisiones) en el (800) 877-8339. Además, puede encontrar información del programa en otros idiomas además del inglés.",
+
+  // to file a complaint...
+  // English: "To file a program discrimination complaint, complete the {usda} Program Discrimination Complaint Form, AD-3027, found online at How to File a Program Discrimination Complaint and at any {usda} office or write a letter addressed to {usda} and provide in the letter all of the information requested in the form. To request a copy of the complaint form, call (866) 632-9992. Submit your completed form or letter to {usda} by: (1) mail: U.S. Department of Agriculture, Office of the Assistant Secretary for Civil Rights, 1400 Independence Avenue, SW, Washington, D.C. 20250-9410; (2) fax: (202) 690-7442; or (3) email: program.intake@usda.gov."
+  "app.slides.legalStatements.fileComplaint": "Para presentar una queja por discriminación contra el programa, rellene el formulario de quejas por discriminación contra el programa de USDA, (USDA Program Discrimination Complaint Form - AD-3027) disponible en línea en: http://www.ascr.usda.gov/complaint_filing_cust.html, y en cualquier oficina del USDA, o escriba una carta dirigida al USDA con toda la información solicitada en el formulario. Para solicitar una copia del formulario de queja, llame al (866) 632-9992. Envíe el formulario rellenado o carta al USDA por: (1) correo: U.S. Department of Agriculture, Office of the Assistant Secretary for Civil Rights, 1400 Independence Avenue, SW, Washington, D.C. 20250-9410, (2) fax: (202) 690-7442; o (3) correo electrónico: program.intake@usda.gov.",
+
+  // USDA is an equal opportunity...
+  // English: "{usda} is an equal opportunity provider, employer, and lender."
+  "app.slides.legalStatements.equalOpportunity": "Esta institución aplica el principio de igualdad de oportunidades.",
+
+
+  /***
+   *** src/components/application/slides/MilitaryIncome.jsx
+   ***/
+
+  // Military Pay info
+  // English: "Military basic pay, drill pay, and cash bonuses made available to the household, as well as allowances for off-base housing, food or clothing (including BAH) are includable income sources. Do not include combat pay, Family Subsistence Supplemental Allowance (FSSA), or Military Housing Privatization Initiative (MHPI)."
+  "app.slides.militaryIncome.basicPay": "Los pagos básicos para miembros del ejército, pago por entrenamiento y bonos en efectivo para el hogar, como también las prestaciones para viviendas fuera de la base, alimentos y vestimenta (incluido BAH) se incluyen como fuentes de ingresos que se pueden incluir. No debe incluir el pago por combate, la Asignación suplementaria de subsistencia familiar (FSSA) ni la Iniciativa de privatización de la vivienda militar (MHPI).",,
+
+  // I don't think this slightly different military pay definition appears anywhere in the application. (EH)
+  // Military Pay info more
+  // English: "Military basic pay, drill pay, cash bonuses and allowances for off-base housing, food, or clothing (including BAH) count as income for purposes of applying for school meal benefits. Do not include combat pay, Family Subsistence Supplemental Allowance (FSSA), or Military Housing Privatization Initiative (MHPI)."
+  "app.slides.militaryIncome.basicPayMore": ""Los pagos básicos para miembros del ejército, pago por entrenamiento y bonos en efectivo para el hogar, como también las prestaciones para viviendas fuera de la base, alimentos y vestimenta (incluido BAH) se incluyen como fuentes de ingresos que se pueden incluir. No debe incluir el pago por combate, la Asignación suplementaria de subsistencia familiar (FSSA) ni la Iniciativa de privatización de la vivienda militar (MHPI).",
+
+  // made available
+  // English: "(made available to the household)"
+  "app.slides.militaryIncome.madeAvailable": "(disponible para el hogar)",
+
+  // Military cash bonus
+  // English: "Military  {tooltip}"
+  "app.slides.militaryIncome.cashBonus": "{tooltip} para miembros del ejército",
+
+  // cash bonus
+  // English: "cash bonus"
+  "app.slides.militaryIncome.cashBonusTooltip": "Bonos en efectivo",
+
+  // Military allowance income
+  // English: "Military  {tooltip}  for off-base housing, food, clothing (other than FSSA and MHPI)"
+  "app.slides.militaryIncome.allowance": "{tooltip} militar para vivienda fuera de la base, alimentos, vestimenta  (que no sea FSSA ni MHPI)",
+
+  // allowance
+  // English: "allowance"
+  "app.slides.militaryIncome.allowanceTooltip": "Asignación",
+
+
+  /***
+   *** src/components/application/slides/OtherChildren.jsx
+   ***/
+
+  // Introductory paragraph.
+  // English: "Okay, it looks like we will need more information about your  {tooltip}   and income in order to determine if you are eligible for benefits."
+  "app.slides.otherChildren.intro": "Bueno, parece que necesitaremos más información sobre su {tooltip} y sus ingresos para determinar si es elegible para recibir beneficios.",
+
+  // household
+  // English: "household"
+  "app.slides.otherChildren.introTooltip": "hogar",
+
+  // nameChildren
+  // English: "Let's talk about the other kids in the house, and then we'll move on to the adults.  Other than {namedChildren}, are there any other children in your household? Don’t forget to include:"
+  "app.slides.otherChildren.namedChildren": "Ahora hablemos de los otros niños del hogar y luego pasaremos a los adultos. Además de {namedChildren}, ¿viven otros niños en su hogar? No olvide incluir lo siguiente",
+
+  // Eligibility List item
+  // English: "students that are in grade 12 or below and attend school in a school district other than {organizationName}"
+  "app.slides.beforeYouBegin.eligibility1": "estudiantes que estén en 12.º grado o menos que asisten a la escuela en otro distrito escolar que no sea {organizationName}",
+
+  // Eligibility List item
+  // English: "children that attend day care or pre-school, or are not of school age, including infants"
+  "app.slides.beforeYouBegin.eligibility2": "niños que asisten a la guardería o a preescolar o que no tengan edad escolar, incluidos los bebés pequeños",
+
+  // Eligibility List item
+  // English: "anyone 18 years of age or younger living in your household that does not currently attend school"
+  "app.slides.beforeYouBegin.eligibility3": "cualquier persona de 18&nbsp;años de edad o menos que viva en su hogar y que no asista a la escuela actualmente",
+
+
+  /***
+   *** src/components/application/slides/OtherIncome.jsx
+   ***/
+
+  // Regular Cash Payments
+  // English: "{tooltip}  from outside the household"
+  "app.slides.otherIncome.regularCashPayments": "{tooltip} proporcionadas por alguien que no viva en el hogar",
+
+  // Regular cash payments
+  // English: "Regular cash payments"
+  "app.slides.otherIncome.regularCashPaymentsTooltip": "Pagos regulares en efectivo",
+
+  // Rental income
+  // English: "Rental income"
+  "app.slides.otherIncome.rental": "Ingresos por alquileres",
+
+  // Earned interest
+  // English: "Earned interest"
+  "app.slides.otherIncome.earnedInterest": "Interés acumulado",
+
+  // Investment income
+  // English: "Investment income"
+  "app.slides.otherIncome.investmentIncome": "Ingresos por inversiones",
+
+  // Annuity
+  // English: "Annuity"
+  "app.slides.otherIncome.annuity": "Anualidades",
+
+  // other income
+  // English: "Any other income available to pay for children’s school meals"
+  "app.slides.otherIncome.otherIncome": "Cualquier otro tipo de ingresos disponibles para pagar las comidas escolares de los niños",
+
+
+  /***
+   *** src/components/application/slides/OtherPrograms.jsx
+   ***/
+
+  // Introductory paragraph.
+  // English: "Your children can also qualify for free meals if any of these apply."
+  "app.slides.otherPrograms.intro": "Su hijo también puede calificar para obtener comidas gratis si puede marcar alguna de estas opciones.",
+
+  //TODO OMITTED FROM JSON
+  // English: "Does {child} receive assistance under the McKinney-Vento Homeless Assistance Act?""
+  //¿{child} recibe asistencia de la Ley McKinney-Vento Homeless Assistance Act?
+
+  // Homeless organizations
+  // English: "If not, but your household lacks a permanent address, or stays together in a shelter, hotel, or other temporary housing arrangement, contact {organizationName} for help."
+  "app.slides.otherPrograms.isHomeless": "Si no la recibe, pero su hogar no tiene una dirección permanente, o si viven juntos en un refugio, hotel u otro arreglo de vivienda temporal, comuníquese con {organizationName} para obtener ayuda.",
+
+  //TODO OMITTED FROM JSON
+  //English: "Does {student} participate in the Migrant Education Program (MEP)?""
+  //¿{child} participa en Migrant Education Program (MEP)?
+
+  // Migrant Organizations
+  // English: "If not, but you moved your household into a different school district within the last three years to gain or look for temporary/seasonal work in agriculture or fishing, contact {organizationName} for help."
+  "app.slides.otherPrograms.isMigrant": "Si no participa, pero se ha mudado a otro distrito escolar en los últimos tres años para obtener o buscar trabajo temporal/por temporada en agricultura o pesca, comuníquese con {organizationName} para obtener ayuda.",
+
+  //TODO OMITTED FROM JSON
+  //Does {student} prticipate in a program under the Runaway and Homeless Youth Act?
+  //¿{child} participa en un programa de Runaway and Homeless Youth Act?
+
+  // Run Away Organizations
+  // English: "If not, but they chose to leave their prior family or household, contact {organizationName} for help."
+  "app.slides.otherPrograms.isRunAway": "Si no participan, pero decidieron alejarse de su familia u hogar anterior, comuníquese con {organizationName} para obtener ayuda.",
+
+
+  /***
+   *** src/components/application/slides/OtherProgramsProgram.jsx
+   ***/
+
+  // Which students?
+  // English: "Which students?"
+  "app.slides.otherProgramsProgram.whichStudents": "¿Qué estudiantes?",
+
+  // List of students to ask about being enrolled in other programs.
+  // English: "{studentLength, plural, one {Does} other {Do}} {students}"
+  "app.slides.otherProgramsProgram.labelPrefix": "{studentLength, plural, one {Does} other {Do}} {students}",
+
+  // The word 'or' surrounded by spaces.
+  // English: "or"
+  "app.slides.otherProgramsProgram.or": " o ",
+
+  /***
+   *** src/components/application/slides/PublicAssistanceIncome.jsx
+   ***/
+
+  // SSI
+  // English: "Supplemental Security Income  {tooltip}"
+  "app.slides.publicAssistanceIncome.ssi": "Ingresos de seguridad suplementarios {tooltip}",
+
+  // SSI tooltip
+  // English: "(SSI)"
+  "app.slides.publicAssistanceIncome.ssiToolTip": "(SSI)",
+
+  // SSI
+  // English: "{tooltip}  from state or local government (including housing subsidies)"
+  "app.slides.publicAssistanceIncome.cashAssistance": "{tooltip} por parte del gobierno estatal o local (incluidos los subsidios de viviendas)",
+
+  // Cash assistance
+  // English: "Cash assistance"
+  "app.slides.publicAssistanceIncome.cashAssistanceToolTip": "Asistencia  en efectivo",
+
+
+  /***
+   *** src/components/application/slides/RetirementIncome.jsx
+   ***/
+
+  // List of retirement income
+  // English: "{tooltip}  (including survivor benefits,  {tooltip2} , and  {tooltip3}  )"
+  "app.slides.retirementIncome.incomeList": "{tooltip} (incluidos {tooltip2}  y {tooltip3})",
+
+  // Social Security
+  // English: "Social Security"
+  "app.slides.retirementIncome.socialSecurity": "Seguro Social",
+
+  // Black Lung benefits
+  // English: "Black Lung benefits"
+  "app.slides.retirementIncome.blackLung": "los Beneficios por enfermedad del pulmón negro",
+
+  // Railroad Retirement
+  // English: "Railroad Retirement"
+  "app.slides.retirementIncome.railroad": "Jubilación  para ferroviarios",
+
+  // Pension
+  // English: "Pension"
+  "app.slides.retirementIncome.pension": "Pensión",
+
+
+  /***
+   *** src/components/application/slides/Signature.jsx
+   ***/
+
+  // Almost Done
+  // English: "Great, you are almost done!"
+  "app.slides.signature.almostDone": "Excelente, ya casi termina.",
+
+  // Please Provide...
+  // English: "Please provide the last four digits of the Social Security number for the person that signed at the beginning of the application {adult}. If that person does not have a Social Security number, please check the box below labeled 'No {ssn}'."
+  "app.slides.signature.pleaseProvide": "Proporcione los últimos cuatro dígitos del número de Seguro Social de la persona que firmó al comienzo de esta solicitud ({adult}). Si esa persona no tiene un número de Seguro Social, marque la casilla que figura a continuación llamada ‘{SSN}’.",
+
+  // No SSN
+  // English: "No SSN"
+  "app.slides.signature.noSSN": "Sin SSN",
+
+  // Note: on eligibility
+  // English: "Note: United States citizenship or immigration status is not a condition of eligibility for free and reduced price benefits. The non-cash benefits received through the school meal programs are not subject to public charge consideration. In other words, you will not be deported, denied entry to the country, or denied permanent status because you apply for or receive school meal benefits."
+  "app.slides.signature.note": "Nota: la ciudadanía de los Estados Unidos o el estado de inmigración no son condiciones de elegibilidad para obtener beneficios de comidas gratis o a precio reducido. Los beneficios que no sean en efectivo que reciba mediante programas de comidas escolares no están sujetos a consideraciones de cargo público. Es decir, no será deportado, no se le negará la entrada al país ni se le negará el estado permanente porque solicita o recibe beneficios de comidas escolares.",
+
+
+  /***
+   *** src/components/application/slides/SpousalIncome.jsx
+   ***/
+
+  // Alimony
+  // English: "Alimony"
+  "app.slides.spousalIncome.alimony": "Pensión alimenticia",
+
+  // Child support
+  // English: "Child support"
+  "app.slides.spousalIncome.childSupport": "Manutención infantil",
+
+
+  /***
+   *** src/components/application/slides/Students.jsx
+   ***/
+
+  // Introductory paragraph.
+  // English: "List the names of the students in your household that attend school in {organizationName} and are applying for school meal benefits."
+  "app.slides.students.intro": "Mencione los nombres de los estudiantes de su hogar que asisten a {organizationName} que estén solicitando los beneficios de comidas escolares.",
+
+
+  /***
+   *** src/components/application/slides/Summary.jsx
+   ***/
+
+  // Awesome, you're finished!
+  // English: "Awesome, you finished!"
+  "app.slides.summary.finished": "Fantástico, ¡ya terminó!",
+
+  // Summary Info is below
+  // English: "Here is a summary of the information you provided in the application. We encourage you to save or print this screen for your records. If everything looks good, click the 'Submit' button at the bottom of the page."
+  "app.slides.summary.summaryInfo": "A continuación, le presentamos un resumen de la información que proporcionó en la solicitud. Le aconsejamos que guarde o imprima esta pantalla para sus registros. Si todo parece estar bien, marque la declaración “Certifico” y haga clic en el botón “Enviar” que se encuentra al final de la página.",
+
+  // student info
+  // English: "Students attending {organizationName}"
+  "app.slides.summary.studentsAttending": "Estudiantes que asisten {organizationName}",
+
+  // Other children
+  // English: "Other children"
+  "app.slides.summary.otherChildren": "Otros niños",
+
+  // Adults
+  // English: "Adults"
+  "app.slides.summary.adults": "Adultos",
+
+  // Assistance program case numbers
+  // English: "Assistance program case numbers"
+  "app.slides.summary.caseNumbers": "Número de caso del programa de asistencia",
+
+  // Total household income
+  // English: "Total household income"
+  "app.slides.summary.totalIncome": "Ingreso total del hogar",
+
+  // per month
+  // English: "per month"
+  "app.slides.summary.perMonth": "por mes",
+
+  // Contact information
+  // English: "Contact information"
+  "app.slides.summary.contactInfo": "Información de contacto",
+
+  // Certification statement
+  // English: "I certify* that {totalHouseholdMembers} are in my household and that our household income is about {totalHouseholdIncome}"
+  "app.slides.summary.certification": "Certifico* que viven {totalHouseholdMembers} personas en mi hogar y que nuestros ingresos actuales son de aproximadamente {totalHouseholdIncome} por mes",
+
+  // people
+  // English: "people"
+  "app.slides.summary.people": "personas",
+
+  // Certification statement for programs
+  // English: "I certify* that my household participates in {program}"
+  "app.slides.summary.certificationPrograms": "Certifico* que mi familia participa en {program}",
+
+  // Is this in our application any more?  EH
+  // acknowledge info is correct
+  // English: "I certify* that the information on this page is correct to the best of my knowledge."
+  "app.slides.summary.infoCorrect": "",
+
+  // fine print, if info is wrong, it is fraud.
+  // English: "*I understand that this information is given in connection with the receipt of Federal funds, and that school officials may verify (check) the information. I am aware that if I purposely give false information, my children may lose meal benefits. Deliberate misrepresentation of information may subject applicants to prosecution under applicable State and Federal law."
+  "app.slides.summary.finePrint": "Entiendo que esta información se proporciona en relación con el recibo de fondos federales y que los funcionarios escolares pueden verificar (comprobar) la información. Entiendo que si proporciono información falsa a propósito*, mis hijos pueden perder los beneficios de comidas. Si declara información falsa de manera intencional puede quedar sujeto a acusación bajo les leyes estatales y federales correspondientes.",
+
+
+  /***
+   *** src/components/application/slides/SummaryEditLink.jsx
+   ***/
+
+  // edit
+  // English: "edit"
+  "app.slides.summaryEditLink.edit": "editar",
+
+
+  /***
+   *** src/components/application/slides/SummaryPerson.jsx
+   ***/
+
+  // Foster child
+  // English: "Foster child"
+  "app.slides.summaryPerson.foster": "",
+
+  // Migrant youth
+  // English: "Migrant youth"
+  "app.slides.summaryPerson.migrant": "Jóvenes sin hogar",
+
+  // Homeless youth
+  // English: "Homeless youth"
+  "app.slides.summaryPerson.homeless": "Jóvenes migrantes",
+
+  // Runaway youth
+  // English: "Runaway youth"
+  "app.slides.summaryPerson.runaway": "Jóvenes fugados",
+
+
+  /***
+   *** src/components/application/slides/ThankYou.jsx
+   ***/
+
+  // application has been submitted
+  // English: "Your application has been submitted."
+  "app.slides.thankYou.submitted": "Se ha enviado su solicitud.",
+
+  //TODO OMITTED STRING FROM CODE
+  // Indication of what happens next.
+  // English: "You will hear from us soon with your certification decision!"
+  "app.slides.thankYou.nextSteps": "Pronto le enviaremos una respuesta sobre la decisión de su certificación.",
+
+  // Warning message
+  // English: "CAUTION! NO DATA HAS BEEN SAVED. THIS IS NOT A REAL APPLICATION FOR SCHOOL MEAL BENEFITS. THIS IS A MODEL APPLICATION DEVELOPED BY USDA TO DEMONSTRATE THE POTENTIAL FUNCTIONALITY OF A SCHOOL DISTRICT'S APPLICATION. CONTACT YOUR CHILD'S SCHOOL TO FIND OUT WHERE YOU CAN ACCESS THEIR APPLICATION FOR SCHOOL MEAL BENEFITS."
+  "app.slides.thankYou.caution": "[¡ATENCIÓN! ESTA NO ES UNA SOLICITUD REAL PARA RECIBIR BENEFICIOS DE COMIDAS ESCOLARES. ESTE ES EL MODELO DE UNA SOLICITUD DESARROLLADO POR USDA PARA DEMOSTRAR LA FUNCIONALIDAD POTENCIAL DE UNA SOLICITUD DE UN DISTRITO ESCOLAR. COMUNÍQUESE CON LA ESCUELA DE SU HIJO PARA SABER DÓNDE PUEDE OBTENER LA SOLICITUD PARA RECIBIR BENEFICIOS DE COMIDAS ESCOLARES].",
+
+  //This will only be visible to the school district; no need to translate.
+  // Button to download data
+  // English: "Download Data"
+  "app.slides.thankYou.download": "Download Data",
+
+
+  /***
+   *** src/components/application/slides/UnemploymentIncome.jsx
+   ***/
+
+  // Unemployment benefits
+  // English: "Unemployment benefits"
+  "app.slides.unemploymentIncome.unemployment": "Beneficios por desempleo",
+
+  // Worker’s compensation
+  // English: "Worker’s compensation"
+  "app.slides.unemploymentIncome.workersComp": "Compensación para trabajadores",
+
+  // Strike benefits
+  // English: "Strike benefits"
+  "app.slides.unemploymentIncome.strikeBenefits": "Beneficios por huelga",
+
+  // Social Security Disability Insurance
+  // English: "Social Security Disability Insurance  {tooltip}"
+  "app.slides.unemploymentIncome.ssdi": "Seguro por Discapacidad del Seguro Social {tooltip}",
+
+  // (SSDI)
+  // English: "(SSDI)"
+  "app.slides.unemploymentIncome.ssdiToolTip": "(SSDI)",
+
+  // Veteran’s benefits
+  // English: "Veteran’s benefits"
+  "app.slides.unemploymentIncome.veteranBenefits": "Beneficios para veteranos",
+
+
+  /***
+   *** src/components/application/slides/ViewAppData.jsx
+   ***/
+
+  //No translation for ViewAppData needed
+  // Intro text
+  // English: "This is a special {appData} view for developers. As you fill out the application, you can come back to this page to see how the dataset has changed. If you want to pre-load applicationData with test values, just update /src/debug.js and set DEBUG = true in /src/stores/applicationData.jsx."
+  "app.slides.viewAppData.intro": "This is a special {appData} view for developers. As you fill out the application, you can come back to this page to see how the dataset has changed. If you want to pre-load applicationData with test values, just update /src/debug.js and set DEBUG = true in /src/stores/applicationData.jsx.",
+
+  // applicationData
+  // English: "applicationData"
+  "app.slides.viewAppData.applicationData": "applicationData",
+
+  // Application Data Set
+  // English: "Application Data Set:"
+  "app.slides.viewAppData.appDataSet": "Application Data Set:",
+
+
+  /***
+   *** src/components/application/slides/Welcome.jsx
+   ***/
+
+  // Text for the header of the slide.
+  // English: "Welcome!"
+  "app.slides.welcome.header": "¡Bienvenidos!",
+
+  // Text for button to advance to the next slide.
+  // English: "Get started"
+  "app.slides.welcome.nextButton": "Iniciar",
+
+  // Introductory paragraph.
+  // English: "This is the {organizationName} electronic application for free and reduced priced meals for the {usda}’s National School Lunch & School Breakfast Programs."
+  "app.slides.welcome.intro": "Esta es la solicitud electrónica del {organizationName} para obtener comidas gratis y a precio reducido mediante el Programa nacional de almuerzo escolar y el Programa de desayuno escolar del {usda} (United States Department of Agriculture, USDA).",
+
+  // Instructions on how to apply online.
+  // English: "This interactive application will guide you through the application process. When you are ready to apply, click the ‘{buttonText}’ button below to begin."
+  "app.slides.welcome.onlineInstructions": "Esta solicitud interactiva lo guiará durante el proceso de solicitud. Cuando esté listo para solicitar, haga clic en el botón “Iniciar” para empezar.",
+
+  // Instructions on how to apply with a paper application.
+  // English: "If you would like to apply using the {link}, you can print and complete it and then return it to us at {address}."
+  "app.slides.welcome.paperInstructions": "Si desea presentar la {link}, puede imprimirla y completarla y luego enviarla a {address}.",
+
+  // Phrase
+  // English: "paper application"
+  "app.slides.welcome.paperApplication": "solicitud en papel",
+
+
+  /***
+   *** src/components/help/Help.jsx
+   ***/
+
+  // Text for the title bar of the help area.
+  // English: "Help"
+  "help.title": "Ayuda",
+
+  // Text for the link to close the help area.
+  // English: "Close"
+  "help.close": "Cerca",
+
+  // Footer text for the help area.
+  // English: "If you have any questions about the program or how to apply, contact {organizationName} ({organizaitonContactInfo})."
+  "help.footer": "Si tiene alguna pregunta sobre el programa o cómo solicitarlo, comuníquese con {organizationName}",
+
+
+  /***
+   *** src/components/help/SearchTopics.jsx
+   ***/
+
+  // Search results help section title.
+  // English: "Search Results"
+  "help.searchResults": "Resultados de la búsqueda",
+
+
+  /***
+   *** src/components/help/SlideTopics.jsx
+   ***/
+
+  // FAQ help section title.
+  // English: "Frequently Asked Questions"
+  "help.faq": "Preguntas frecuentes",
+
+
+  /***
+   *** src/components/help/topics/Household.jsx
+   ***/
+
+  // Question for the household help topic.
+  // English: "Who should I include in my household?"
+  "help.topic.household.question": "¿A QUIÉN DEBO INCLUIR EN MI HOGAR?",
+
+  // Answer for the household help topic.
+  // English: "A household is defined as a group of people, related or unrelated, that usually live together and share income and expenses."
+  "help.topic.household.answer1": "Un hogar se define como un grupo de personas, relacionadas o no, que suelen vivir juntas y compartir ingresos y gastos.",
+
+  // Answer for the household help topic.
+  // English: "Don't forget to include people if you support them financially, regardless of whether they earn or receive income, including:"
+  "help.topic.household.answer2": "No olvide incluir a los que mantiene financieramente, sin importar si ellos reciben ingresos o no, incluidas las siguientes personas:",
+
+  // Answer for the household help topic.
+  // English: "foster children"
+  "help.topic.household.answer3": "niños en régimen de acogida",
+
+  // Answer for the household help topic.
+  // English: "children that are away at college or boarding school"
+  "help.topic.household.answer4": "hijos que se fueron a la universidad o internados",
+
+  // Answer for the household help topic.
+  // English: "grandparents"
+  "help.topic.household.answer5": "abuelos",
+
+  // Answer for the household help topic.
+  // English: "extended family members that are living with you"
+  "help.topic.household.answer6": "miembros de la familia extendida que viven con usted",
+
+  // Answer for the household help topic.
+  // English: "foreign exchange students that are living with you"
+  "help.topic.household.answer7": "estudiantes de intercambio que viven con usted",
+
+  // Answer for the household help topic.
+  // English: "people that are not currently living with you, but are only away on a temporary basis (like kids that are away at college)"
+  "help.topic.household.answer8": "personas que no viven con usted actualmente, pero que volverán (hijos que se fueron a la universidad, por ejemplo)",
+
+  // Answer for the household help topic.
+  // English: "family members of the armed services who are away from home because they are activated or deployed"
+  "help.topic.household.answer9": "miembros de la familia de las fuerzas armadas que están lejos porque están en servicio activo o los han desplegado",
+
+  // Answer for the household help topic.
+  // English: "people living away from home for an extended period of time (such as parents who live and work away from home)"
+  "help.topic.household.answer10": "personas que viven lejos del hogar durante un largo tiempo (padres que viven y trabajan lejos del hogar)",
+
+  // Answer for the household help topic.
+  // English: "other people who stay at your house and you provide with shelter, utilities, clothing, or food"
+  "help.topic.household.answe11": "otras personas que se quedan en su hogar a las que usted les brinda refugio, servicios, ropa o comida.",
+
+  // Answer for the household help topic.
+  // English: "You should NOT include:"
+  "help.topic.household.answer12": "NO debe incluir a las siguientes personas:",
+
+  // Answer for the household help topic.
+  // English: "renters"
+  "help.topic.household.answer13": "arrendatarios",
+
+  // Answer for the household help topic.
+  // English: "boarders"
+  "help.topic.household.answer14": "huéspedes",
+
+  // Answer for the household help topic.
+  // English: "children who do not live with you (such as children that live permanently with other relatives or friends)"
+  "help.topic.household.answer15": "hijos que ya no vivan con usted (niños que viven con otros familiares o amigos permanentemente)",
+
+  // Answer for the household help topic.
+  // English: "children for whom you do not have custody and therefore do not live with you (if you have joint custody, see the help question: WHAT IF I SHARE CUSTODY OF MY CHILD?"
+  "help.topic.household.answer16": "hijos de los que no tiene custodia y, por lo tanto, no viven con usted (si tiene custodia compartida, consulte la sección de Preguntas frecuentes: ¿QUÉ SUCEDE SI COMPARTO LA CUSTODIA DE MI HIJO?",
+
+
+  /***
+   *** src/components/help/topics/IEG.jsx
+   ***/
+
+  // Definition for the Income Eligibility Guidelines.
+  // English: "Federal Income Eligibility Guidelines"
+  "help.topic.IEG.term": "Pautas federales de elegibilidad de ingresos",
+
+  // Definition for the IEG help topic.
+  // English: "Children may receive free or reduced price meals if your household’s income is within the limits on the Federal Income Eligibility Guidelines. Your children may qualify for free or reduced price meals if your household income falls at or below the limits on this chart."
+  "help.topic.IEG.definition": "Los niños pueden recibir comidas gratis o a precio reducido si los ingresos de su hogar se encuentran dentro del límite de las Pautas federales de elegibilidad de ingresos. Sus hijos pueden calificar para obtener comidas gratis o a precio reducido si los ingresos de su hogar están por debajo de los límites de la siguiente tabla.",
+
+
+  /***
+   *** src/components/help/topics/NetSelfEmployment.jsx
+   ***/
+
+  // Definition for the term Net Self Employment.
+  // English: "Net income from self-employment"
+  "help.topic.netSelfEmployment.term": "Ingresos netos del empleado autónomo",
+
+  // Definition for the term net self employment.
+  // English: "Income from self-employment should be reported as your current net income, equal to gross revenue (income) minus business expenses. Gross revenue (income) includes the total income from goods sold or services rendered by the business, or the value of all products sold."
+  "help.topic.netSelfEmployment.definition1": "Los ingresos del empleado autónomo deben declararse como ingresos netos actuales, iguales a la ganancia bruta (ingresos) menos los gastos del negocio. La ganancia bruta (ingresos) incluye el total de los ingresos de los bienes vendidos o de los servicios prestados por el negocio, o el valor de los productos vendidos.",
+
+  // Definition for the term net self employment.
+  // English: "Deductible business expenses include the cost of goods purchased; rent; utilities; depreciation charges; wages and salaries paid; and business taxes;"
+  "help.topic.netSelfEmployment.definition2": "Los gastos del negocio deducibles incluyen el costo de los bienes adquiridos, alquiler, servicios, gastos de amortización, pago de sueldos y salarios, e impuestos del negocio.",
+
+  // Definition for the term net self employment.
+  // English: "Non-deductible business expenses include the value of salable merchandise used by the proprietors of retail businesses; and personal, Federal, State, or local income taxes;"
+  "help.topic.netSelfEmployment.definition3": "Los gastos del negocio no deducibles incluyen el valor de la mercadería vendible utilizada por los propietarios del negocio minorista, y los impuestos sobre la renta personales, federales, estatales o locales.",
+
+  // Definition for the term net self employment.
+  // English: "Net income for self-employed farmers is figured by subtracting the farmer’s operating expenses from the gross revenue (income). Gross income includes money received from the rental of farm land, buildings, or equipment to others; and incidental receipts from the sale of items such as wood, sand, or gravel. Operating expenses include cost of feed, fertilizer, seed, and other farming supplies; cash wages paid to farmhands; depreciation charges; cash rent; interest on farm mortgages; farm building repairs; and farm taxes;"
+  "help.topic.netSelfEmployment.definition4": "Los ingresos netos para los granjeros autónomos se calculan al restarle los gastos operativos del granjero a la ganancia bruta (ingresos). Los ingresos brutos incluyen el dinero recibido del alquiler de una granja, construcción o equipo a otras personas; las recepciones incidentales de la venta de artículos como madera, arena o grava. Los gastos operativos incluyen el costo de pienso, fertilizantes, semillas y otros suministros agrícolas; sueldos en efectivo de los trabajadores agrícolas; gastos de amortización; alquiler en efectivo; interés de la hipoteca de la granja; reparaciones en la construcción de la granja e impuestos de la granja.",
+
+  // Definition for the term net self employment.
+  // English: "If your current net income is not your usual income, you may use last year’s income as a basis to report net income, or refer to the question ‘WHAT IF MY INCOME IS NOT ALWAYS THE SAME?’ in the HELP."
+  "help.topic.netSelfEmployment.definitio5": "Si sus ingresos netos actuales no son sus ingresos habituales, puede utilizar los ingresos del año anterior como base para declarar los ingresos netos, o consulte la pregunta ”¿QUÉ SUCEDE SI MIS INGRESOS VARÍAN?” en AYUDA.",
+
+
+  /***
+   *** src/components/help/topics/NotTheSame.jsx
+   ***/
+
+  // Question for the Not the Same help topic.
+  // English: "What if my income is not always the same?"
+  "help.topic.NotTheSame.question": "¿QUÉ OCURRE SI MIS INGRESOS VARÍAN?",
+
+  // Answer for the Not the Same help topic.
+  // English: "If your income is different this month than a normal month because of overtime, holiday pay, missing a couple of shifts at work, or some other reason, put down what you would have made if those things hadn’t happened. For example, if you normally make $1000 each month, but you missed some work last month and only made $900, put down that you make $1000 per month. Similarly, if you normally make $500 per month, but you worked overtime and made $750, put down that you make $500 per month."
+  "help.topic.NotTheSame.answer1": "Si sus ingresos varían mes a mes debido al tiempo extra, pagos por vacaciones, porque se ausentó a algunos turnos o por alguna otra razón, ingrese el monto que hubiera ganado si eso no hubiera ocurrido. Por ejemplo, si suele ganar $1000 por mes pero faltó al trabajo el último mes y solo ganó $900, ingrese $1000 por mes. De manera similar, si normalmente gana $500 por mes pero realizó trabajo extra y ganó $750, ingrese que gana $500 por mes.",
+
+  // Answer for the Not the Same help topic.
+  // English: "If you work on a seasonal basis, like in agriculture or tourism, and earn more money in some months than in other months, you may add up all your earnings for the year and divide it by twelve in order to report a monthly amount. If you expect to earn the same amount as last year, you can use your earnings from last year as the basis of your projected monthly income."
+  "help.topic.NotTheSame.answer2": "Si trabaja por temporada, en agricultura o turismo, y algunos meses gana más dinero que otros, puede sumar todas las ganancias del año y dividirlas por doce para declarar un monto anual. Si espera ganar lo mismo que el año anterior, puede utilizar las ganancias anteriores como base para los ingresos mensuales previstos.",
+
+  // Answer for the Not the Same help topic.
+  // English: "If you receive a one-time payment, it should not be reported as current, monthly income since it is not received on a regular basis. However, if you receive a one-time payment, such as from an award, settlement, inheritance or prize winnings, and then regularly draw on that money for living expenses later on, the amount withdrawn should be reported in your application for school meal benefits."
+  "help.topic.NotTheSame.answer3": "Si recibe un único pago, no debe informarlo como ingreso mensual actual porque no lo recibe de forma regular. Sin embargo, si recibe un pago único, de recompensas, acuerdos, herencias o premios, y más adelante utiliza ese dinero regularmente para gastos de vivienda, debe informar el monto utilizado en su solicitud de beneficios de comidas.",
+
+  // Answer for the Not the Same help topic.
+  // English: "If you need additional help or information about how to report your income, contact {organizationName} at {organizationContactInfo}, and they will help you figure out your household’s annual rate of income based on USDA guidelines."
+  "help.topic.NotTheSame.answer4": "Si necesita ayuda o información adicional sobre cómo informar su ingreso, comuníquese con {organizationName} al {organizationContactInfo} y lo ayudarán a calcular su índice anual de ingresos de acuerdo con las pautas del Departamento de Agricultura de los Estados Unidos (United States Department of Agriculture, USDA).",
+
+
+  /***
+   *** src/components/help/topics/PaperApp.jsx
+   ***/
+
+  // Question for the paper application help topic.
+  // English: "Can I apply using a paper application?"
+  "help.topic.paperApp.question": "¿PUEDO UTILIZAR UNA SOLICITUD EN PAPEL?",
+
+  // Answer for the paper application help topic.
+  // English: "Yes. If you would like to apply using the paper application, you can print the {paperApplicationLink} or contact {organizationName} ({organizationContactInfo}) to request an application. Then return the completed application to {organizationName}."
+  "help.topic.paperApp.answer": "Sí. Si desea presentar la solicitud en papel, puede imprimirla aquí {paperApplicationLink} o comunicarse con {organizationName} ({organizationContactInfo)} para pedir una solicitud. Luego, devuelva la solicitud completa a: {organizationName}.",
+
+  // Phrase
+  // English: "paper application"
+  "help.topic.paperApp.paperApplication": "solicitud en papel",
+
+
+  /***
+   *** src/components/help/topics/QualifyHomeless.jsx
+   ***/
+
+  // Question for the qualification of homeless students topic.
+  // English: "How do I know if my children qualify as homeless?"
+  "help.topic.QualifyHomeless.question": "¿CÓMO SÉ SI MIS HIJOS CALIFICAN COMO PERSONAS SIN HOGAR?",
+
+  // Answer for the qualification of homeless students topic.
+  // English: "Your children may qualify as homeless if they…"
+  "help.topic.QualifyHomeless.answer1": "Sus hijos pueden calificar como personas sin hogar si:",
+
+  // Answer for the qualification of homeless students topic.
+  // English: "are sharing the housing of other persons due to loss of housing, economic hardship, or a similar reason, or are living in motels, hotels, trailer parks, or camping grounds due to the lack of alternative adequate accommodations;"
+  "help.topic.QualifyHomeless.answer2": "comparten el hogar con otras personas debido a la pérdida del hogar, problemas económicos o por una razón similar y viven en moteles, hoteles, parques de remolques o campamentos debido a la falta de un alojamiento alternativo adecuado;",
+
+  // Answer for the qualification of homeless students topic.
+  // English: "are living in emergency or transitional shelters, are abandoned in hospitals, or are awaiting foster care placement;"
+  "help.topic.QualifyHomeless.answer3": "viven en refugios transitorios de emergencia, los abandonaron en hospitales o esperan que los ubiquen en un hogar de acogida;",
+
+  // Answer for the qualification of homeless students topic.
+  // English: "have a primary nighttime residence that is a public or private place not designed for or ordinarily used as a regular sleeping accommodation for human beings; or"
+  "help.topic.QualifyHomeless.answer4": "tienen una residencia nocturna primaria que es un lugar público o privado no diseñado para o habitualmente utilizado como un alojamiento para dormir normal para los seres humanos; o",
+
+  // Answer for the qualification of homeless students topic.
+  // English: "are living in cars, parks, public spaces, abandoned buildings, substandard housing, bus or train stations, or similar settings."
+  "help.topic.QualifyHomeless.answer5": "viven en automóviles, parques, espacios públicos, edificios abandonados, viviendas precarias, estaciones de autobuses o trenes, o en entornos similares.",
+
+  // Answer for the qualification of homeless students topic.
+  // English: "If you believe children in your household meet one or more of these descriptions and you haven’t been told your children will get free meals, please contact {organizationName}."
+  "help.topic.QualifyHomeless.answer6": "Si cree que sus hijos cumplen con una o más de estas descripciones y no le han informado si recibirán comidas gratis, comuníquese con {organizationName}.",
+
+
+  /***
+   *** src/components/help/topics/QualifyMigrant.jsx
+   ***/
+
+  // Question for the students qualifying as migrant help topic.
+  // English: "How do I know if my children qualify as migrant?"
+  "help.topic.QualifyMigrant.question": "¿CÓMO SÉ SI MI HIJO CALIFICA COMO MIGRANTE?",
+
+  // Answer for the students qualifying as migrant help topic.
+  // English: "Your children may qualify as a migrant if you have moved your household into a different school district within the last three years to gain or look for temporary/seasonal work in agriculture or fishing."
+  "help.topic.QualifyMigrant.answer1": "Su hijo puede calificar como migrante si se han mudado a un hogar en otro distrito escolar en los últimos tres años para buscar trabajo temporal/por temporada en agricultura o pesca.",
+
+  // Answer for the students qualifying as migrant help topic.
+  // English: "If you believe children in your household meet one or more of these descriptions and you haven’t been told your children will get free meals, please contact {organizationName}."
+  "help.topic.QualifyMigrant.answer2": "Si cree que los niños de su hogar cumplen con una o más de estas descripciones y no le han informado si sus hijos recibirán comidas gratis, comuníquese con {organizationName}.",
+
+
+  /***
+   *** src/components/help/topics/RegularCash.jsx
+   ***/
+
+  // Term for regular cash received by household help topic.
+  // English: "Regular cash payments from outside the household"
+  "help.topic.RegularCash.term": "Pagos regulares en efectivo por parte de personas que no viven en el hogar",
+
+  // Definition for regular cash received by household help topic.
+  // English: "Regular cash payments from outside the household is money regularly received from extended family or friends that do not live with you.  For example, if parents or grandparents regularly help cover the cost of groceries, bills, or rent, that money is considered household income and should be reported in your application for school meal benefits."
+  "help.topic.RegularCash.definition1": "Los pagos regulares en efectivo por parte de personas que no viven en el hogar es dinero que reciben regularmente por parte de familiares o amigos que no viven con usted. Por ejemplo, si sus padres o abuelos lo ayudan regularmente a cubrir los gastos de alimentos, facturas, o alquiler, el dinero se considera ingresos del hogar y debe declararlo en su solicitud para beneficios de comidas escolares.",
+
+  // Definition for regular cash received by household help topic.
+  // English: "One-time payments should not be reported as current, monthly income since they are not received on a regular basis. However, if you receive a one-time payment, such as from an award, settlement, inheritance or prize winnings, and then regularly draw on that money for living expenses later on, the amount withdrawn should be reported in your application for school meal benefits in the space for ‘Any other income available to pay for children’s school meals’."
+  "help.topic.RegularCash.definition2": "Los pagos únicos no deben declararse como actuales o como ingresos mensuales ya que no los recibe de manera regular. Sin embargo, si recibe un pago único como recompensas, arreglos, herencias o premios y luego utiliza ese dinero para cubrir gastos de vivienda más adelante, el monto realizado debe declararse en la solicitud para obtener beneficios de comidas escolares en el lugar de “Otros ingresos disponibles para pagar las comidas escolares de los niños”.",
+
+
+  /***
+   *** src/components/help/topics/ReportCombat.jsx
+   ***/
+
+  // Question for the reporting combat pay help topic.
+  // English: "Do I need to report my combat pay as income on my application?"
+  "help.topic.ReportCombat.question": "¿TENGO QUE DECLARAR MI PAGO POR COMBATE COMO INGRESOS EN LA SOLICITUD?",
+
+  // Answer for the reporting combat pay help topic.
+  // English: "No, as long as the following conditions are met:"
+  "help.topic.ReportCombat.answer1": "No, siempre que cumpla con las siguientes condiciones:",
+
+  // Answer for the reporting combat pay help topic.
+  // English: "It was received in addition to basic pay;"
+  "help.topic.ReportCombat.answer2": "Lo recibió además del pago básico;",
+
+  // Answer for the reporting combat pay help topic.
+  // English: "It was received for the deployment to or service in an area designated as a combat zone; and"
+  "help.topic.ReportCombat.answer3": "Lo recibió por el despliegue o por un servicio en un área designada como zona de combate, y",
+
+  // Answer for the reporting combat pay help topic.
+  // English: "It was not received prior to deployment to or service in the designated combat zone."
+  "help.topic.ReportCombat.answer4": "No lo recibió antes del despliegue o servicio en la zona de combate designada.",
+
+  // Answer for the reporting combat pay help topic.
+  // English: "If any of these conditions are not met, you should report the amount as military basic pay."
+  "help.topic.ReportCombat.answer5": "Si no cumple con alguna de estas condiciones, debe declarar el monto del pago militar básico.",
+
+
+  /***
+   *** src/components/help/topics/WhatIncome.jsx
+   ***/
+
+  // Question for the applicable income help topic.
+  // English: "What income sources do I have to report in my application?"
+  "help.topic.WhatIncome.question": "¿QUÉ FUENTES DE INGRESOS TENGO QUE INFORMAR EN LA SOLICITUD?",
+
+  // Answer for the applicable income help topic.
+  // English: "The income section of this application will ask about the money received on a regular basis from the following sources:"
+  "help.topic.WhatIncome.answer1": "En la sección de ingresos de esta solicitud se le preguntará sobre el dinero que recibe regularmente de las siguientes fuentes:",
+
+  // Answer for the applicable income help topic.
+  // English: "Military basic pay and drill pay"
+  "help.topic.WhatIncome.answer2": "Pago básico para militares/pago por entrenamiento",
+
+  // Answer for the applicable income help topic.
+  // English: "Military cash bonuses"
+  "help.topic.WhatIncome.answer3": "Bonos en efectivo para militares",
+
+  // Answer for the applicable income help topic.
+  // English: "Military allowance for off-base housing, food, clothing (BAH)"
+  "help.topic.WhatIncome.answer4": "Asignaciones militares para viviendas fuera de la base, alimentos, vestimenta (BAH)",
+
+  // Answer for the applicable income help topic.
+  // English: "Military benefits"
+  "help.topic.WhatIncome.answer5": "Beneficios para militares",
+
+  // Answer for the applicable income help topic.
+  // English: "Salary"
+  "help.topic.WhatIncome.answer6": "Salarios",
+
+  // Answer for the applicable income help topic.
+  // English: "Wages"
+  "help.topic.WhatIncome.answer7": "Sueldos",
+
+  // Answer for the applicable income help topic.
+  // English: "Tips"
+  "help.topic.WhatIncome.answer8": "Propinas",
+
+  // Answer for the applicable income help topic.
+  // English: "Commissions"
+  "help.topic.WhatIncome.answer9": "Comisiones",
+
+  // Answer for the applicable income help topic.
+  // English: "Cash bonuses"
+  "help.topic.WhatIncome.answer10": "Bonos en efectivo",
+
+  // Answer for the applicable income help topic.
+  // English: "Income for the Self-Employed"
+  "help.topic.WhatIncome.answer11": "Ingresos de empleados autónomos",
+
+  // Answer for the applicable income help topic.
+  // English: "Income from Wages and Self-Employment"
+  "help.topic.WhatIncome.answer12": "Ingresos de salarios y de empleados autónomos",
+
+  // Answer for the applicable income help topic.
+  // English: "Strike benefits"
+  "help.topic.WhatIncome.answer13": "Prestaciones por huelga",
+
+  // Answer for the applicable income help topic.
+  // English: "Projected Income for Seasonal Workers"
+  "help.topic.WhatIncome.answer14": "Ingresos previstos para trabajadores de temporada",
+
+  // Answer for the applicable income help topic.
+  // English: "Supplemental Security Income (SSI)"
+  "help.topic.WhatIncome.answer15": "Ingresos de seguridad suplementarios (SSI)",
+
+  // Answer for the applicable income help topic.
+  // English: "Veteran’s benefits"
+  "help.topic.WhatIncome.answer16": "Beneficios para veteranos",
+
+  // Answer for the applicable income help topic.
+  // English: "Cash assistance from State or local government"
+  "help.topic.WhatIncome.answer17": "Asistencia de dinero en efectivo del estado o del gobierno local",
+
+  // Answer for the applicable income help topic.
+  // English: "Housing subsidies (not including those from federal housing programs)"
+  "help.topic.WhatIncome.answer18": "Subsidios para viviendas (no incluye aquellos de los programas federales de viviendas)",
+
+  // Answer for the applicable income help topic.
+  // English: "Alimony received"
+  "help.topic.WhatIncome.answer19": "Pensión alimenticia recibida",
+
+  // Answer for the applicable income help topic.
+  // English: "Child support received"
+  "help.topic.WhatIncome.answer20": "Manutención infantil recibida",
+
+  // Answer for the applicable income help topic.
+  // English: "Adoption assistance"
+  "help.topic.WhatIncome.answer21": "Asistencia por adopción",
+
+  // Answer for the applicable income help topic.
+  // English: "Unemployment benefits"
+  "help.topic.WhatIncome.answer22": "Prestaciones por desempleo",
+
+  // Answer for the applicable income help topic.
+  // English: "Worker’s compensation"
+  "help.topic.WhatIncome.answer23": "Compensación para trabajadores",
+
+  // Answer for the applicable income help topic.
+  // English: "Social Security Disability Insurance (SSDI)"
+  "help.topic.WhatIncome.answer24": "Seguro por Discapacidad de Seguridad Social (SSDI)",
+
+  // Answer for the applicable income help topic.
+  // English: "Social Security"
+  "help.topic.WhatIncome.answer25": "Seguridad Social",
+
+  // Answer for the applicable income help topic.
+  // English: "Black Lung benefits"
+  "help.topic.WhatIncome.answer26": "Beneficios médicos por enfermedad de “pulmón negro”",
+
+  // Answer for the applicable income help topic.
+  // English: "Railroad retirement"
+  "help.topic.WhatIncome.answer27": "Jubilación de ferroviarios",
+
+  // Answer for the applicable income help topic.
+  // English: "Pensions"
+  "help.topic.WhatIncome.answer28": "Pensiones",
+
+  // Answer for the applicable income help topic.
+  // English: "College financial aid for room and board (living expenses), not  including Pell Grants, Supplemental Education Opportunity Grants, State Student Incentive Grants, National Direct Student Loans, PLUS, College Work Study, or Byrd Honor Scholarship Programs"
+  "help.topic.WhatIncome.answer29": "Asistencia financiera universitaria para pensión completa (gastos de vivienda), no incluye becas Pell grants, Supplemental Education Opportunity Grants (Beca suplementaria para oportunidades educativas), State Student Incentive Grants (Becas estatales para incentivo de estudiantes), préstamos nacionales directos para estudiantes (National Direct Student Loans), PLUS, College Work Study, o Programas Byrd Honor Scholarship",
+
+  // Answer for the applicable income help topic.
+  // English: "Regular cash payments from outside the household (for example, money regularly received from extended family or friends that do not live in the household)"
+  "help.topic.WhatIncome.answer30": "Pagos regulares en efectivo por parte de una persona que no vive en el hogar (p.&nbsp;ej., dinero que recibe regularmente de familia o amigos que no viven en el hogar)",
+
+  // Answer for the applicable income help topic.
+  // English: "Regular payments or withdrawals from sources such as an award, settlement, inheritance or prize winnings"
+  "help.topic.WhatIncome.answer31": "Pagos o extracciones regulares de fuentes como recompensas, arreglos, herencias o premios",
+
+  // Answer for the applicable income help topic.
+  // English: "Net income from rental properties"
+  "help.topic.WhatIncome.answer32": "Ingresos netos de propiedades alquiladas",
+
+  // Answer for the applicable income help topic.
+  // English: "Earned interest"
+  "help.topic.WhatIncome.answer33": "Intereses acumulados",
+
+  // Answer for the applicable income help topic.
+  // English: "Annuities"
+  "help.topic.WhatIncome.answer34": "Anualidades",
+
+  // Answer for the applicable income help topic.
+  // English: "Other investment income"
+  "help.topic.WhatIncome.answer35": "Otros ingresos por inversión",
+
+  // Answer for the applicable income help topic.
+  // English: "Any other money that may be available to pay for children’s meals"
+  "help.topic.WhatIncome.answer36": "Otro dinero disponible para pagar los alimentos de los niños",
+
+  // Answer for the applicable income help topic.
+  // English: "We do not take into account income from:"
+  "help.topic.WhatIncome.answer37": "No tenemos en cuenta ingresos provenientes de:",
+
+  // Answer for the applicable income help topic.
+  // English: "Irregular overtime pay"
+  "help.topic.WhatIncome.answer38": "Pagos irregulares por horas extra",
+
+  // Answer for the applicable income help topic.
+  // English: "Military Family Substance Supplemental Allowance (FSSA)"
+  "help.topic.WhatIncome.answer39": "Asignación suplementaria de subsistencia familiar (FSSA) para militares",
+
+  // Answer for the applicable income help topic.
+  // English: "Military Housing Privatization Initiative"
+  "help.topic.WhatIncome.answer40": "Iniciativa de privatización de la vivienda militar",
+
+  // Answer for the applicable income help topic.
+  // English: "Combat Pay when it is:"
+  "help.topic.WhatIncome.answer41": "Pago por combate cuando:",
+
+  // Answer for the applicable income help topic.
+  // English: "Received in addition to the service member’s basic pay;"
+  "help.topic.WhatIncome.answer42": "Se recibe además del pago básico del miembro del servicio.",
+
+  // Answer for the applicable income help topic.
+  // English: "Received as a result of deployment to or service in an area that has been designated as a combat zone; and"
+  "help.topic.WhatIncome.answer43": "Se recibe como resultado del despliegue o servicio en un área que ha sido designada como zona de combate.",
+
+  // Answer for the applicable income help topic.
+  // English: "Not received by the service member prior to deployment to or service in the designated combat zone"
+  "help.topic.WhatIncome.answer44": "El miembro del servicio no lo recibe antes del despliegue o servicio en la zona de combate designada.",
+
+  // Answer for the applicable income help topic.
+  // English: "Cash  value of benefits from SNAP or FDPIR"
+  "help.topic.WhatIncome.answer45": "Valor en efectivo de los beneficios SNAP o FDPIR",
+
+  // Answer for the applicable income help topic.
+  // English: "Payments received from a foster care agency or court for the care of foster children"
+  "help.topic.WhatIncome.answer46": "Pagos recibidos de una agencia de acogida o un tribunal para el cuidado de niños adoptivos",
+
+  // Answer for the applicable income help topic.
+  // English: "Student financial assistance provided for the costs of attendance at an educational institution, such as grants and scholarships awarded to meet educational expenses and not available to pay for meals"
+  "help.topic.WhatIncome.answer47": "Ayuda financiera estudiantil para cubrir los gastos de asistencia en una institución educativa, como becas otorgadas para cumplir con los gastos y no para cubrir alimentos",
+
+  // Answer for the applicable income help topic.
+  // English: "Loans, such as bank loans, since these funds are only temporarily available and must be repaid"
+  "help.topic.WhatIncome.answer48": "Préstamos, como préstamos bancarios, ya que solo son temporales y deben pagarse",
+
+  // Answer for the applicable income help topic.
+  // English: "Earnings received on an irregular basis, such as payment for occasional baby-sitting or mowing lawns"
+  "help.topic.WhatIncome.answer49": "Ganancias recibidas de manera irregular, como pagos por cuidar niños o cortar el césped de vez en cuando",
+
+  // Answer for the applicable income help topic.
+  // English: "Housing subsidies from federal housing programs"
+  "help.topic.WhatIncome.answer50": "Subsidios de vivienda provenientes de programas federales de vivienda",
+
+
+  /***
+   *** src/components/help/topics/WhatInformation.jsx
+   ***/
+
+  // Question for the necessary information help topic.
+  // English: "What information will I need to fill out the application?"
+  "help.topic.WhatInformation.question": "¿QUÉ INFORMACIÓN NECESITARÉ PARA COMPLETAR LA SOLICITUD?",
+
+  // Answer for the necessary information help topic.
+  // English: "If you have it handy, it will make the application process fast and easy."
+  "help.topic.WhatInformation.answer1": "Si tiene esta información a mano, el proceso de solicitud será más rápido y fácil.",
+
+  // Answer for the necessary information help topic.
+  // English: "If you participate in {assistanceProgramsShort} you will need to know your case number (not your card or account number)."
+  "help.topic.WhatInformation.answer2": "Si participa en {assistanceProgramsShort} tendrá que saber cuál es su número de caso (no el número de su cuenta ni de su tarjeta).",
+
+  // Answer for the necessary information help topic.
+  // English: "If you do not participate in any of the above assistance program, you will need to report your total household income. In that case…"
+  "help.topic.WhatInformation.answer3": "Si no participa en ningún programa de asistencia, tendrá que informar los ingresos totales de su hogar. En ese caso:",
+
+  // Answer for the necessary information help topic.
+  // English: "If anyone in your house has a job, you may need to reference the earnings statements or pay stubs to report your gross income, which is different than the amount in your paycheck."
+  "help.topic.WhatInformation.answer3a": "Si algún miembro de su hogar trabaja, usted deberá referirse a los estados de ganancias o talones de pago para declarar sus ingresos brutos, que son diferentes del monto de su cheque.",
+
+  // Answer for the necessary information help topic.
+  // English: "If anyone receives Social Security or retirement benefits, you may need to gather the benefit statements to report the amount and frequency of the payments."
+  "help.topic.WhatInformation.answer3b": "Si alguien recibe beneficios de jubilación o Seguro Social, es posible que deba reunir las declaraciones de beneficios para informar el monto y la frecuencia de los pagos.",
+
+  // Answer for the necessary information help topic.
+  // English: "You may also need to reference other financial documents for additional sources of income."
+  "help.topic.WhatInformation.answer3c": "También es posible que deba hacer referencia a otros documentos financieros para verificar fuentes de ingresos adicionales.",
+
+  // Answer for the necessary information help topic.
+  // English: "Still not sure if you have everything you need? Don’t worry. The income section of the application contains detailed instructions and explanations about the sources of income you must include, and you can gather additional information then."
+  "help.topic.WhatInformation.answer4": "¿No está seguro de contar con todo lo que necesita? No se preocupe. La sección de ingresos de la solicitud contiene instrucciones y explicaciones detalladas sobre las fuentes de ingresos que debe incluir, y puede recopilar la información adicional en ese momento.",
+
+
+  /***/
+
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479498757654."
 }
