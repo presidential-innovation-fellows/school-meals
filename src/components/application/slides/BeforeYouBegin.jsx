@@ -129,7 +129,7 @@ class BeforeYouBegin extends React.Component {
           <FormattedMessage
               id="app.slides.beforeYouBegin.status"
               description="citizenship or immigration doesn't affect status"
-              defaultMessage="Your &nbsp;{tooltip}&nbsp; does not affect your eligibility for free and reduced price benefits."
+              defaultMessage="Your {tooltip} does not affect your eligibility for free and reduced price benefits."
               values={{
                 tooltip:
                         <Tooltipcomp text={tooltiptext.usStatus}>

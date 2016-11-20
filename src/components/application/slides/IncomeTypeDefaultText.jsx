@@ -33,7 +33,7 @@ class IncomeTypeDefaultText extends Component {
         <FormattedMessage
               id="app.slides.IncomeTypeDefaultText.note"
               description="note: remember to report..."
-              defaultMessage="NOTE: Remember to report &nbsp;{tooltip}&nbsp;, &nbsp;{tooltip2}&nbsp; income."
+              defaultMessage="NOTE: Remember to report {tooltip}, {tooltip2} income."
               values={{
                 tooltip:
                         <Tooltipcomp text={tooltiptext.currentAdult}>

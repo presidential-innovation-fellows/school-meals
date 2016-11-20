@@ -53,7 +53,7 @@ class ChildIncomeSlide extends Component {
         <FormattedMessage
               id="app.slides.childIncomeSlide.incomeReported"
               description="Income reported should be child's."
-              defaultMessage="Income reported here should be the child’s &nbsp;{tooltip}&nbsp;, {gross}  income."
+              defaultMessage="Income reported here should be the child’s {tooltip}, {gross}  income."
               values={{
                 tooltip: <Tooltipcomp text={tooltiptext.currentChild} >
                   <FormattedMessage
@@ -103,7 +103,7 @@ class ChildIncomeSlide extends Component {
           <FormattedMessage
               id="app.slides.childIncomeSlide.supplementalIncome"
               description="Supplemental income"
-              defaultMessage="Supplemental Security Insurance &nbsp;{tooltip}&nbsp; or Social Security &nbsp;{tooltip2}"
+              defaultMessage="Supplemental Security Insurance {tooltip} or Social Security {tooltip2}"
               values={{
                 tooltip: <Tooltipcomp text={tooltiptext.ssiChildren} >
                   <FormattedMessage
@@ -127,7 +127,7 @@ class ChildIncomeSlide extends Component {
         <FormattedMessage
               id="app.slides.childIncomeSlide.regularCash"
               description="Regular Cash Payments"
-              defaultMessage="{tooltip}&nbsp; from extended family or friends outside the household"
+              defaultMessage="{tooltip} from extended family or friends outside the household"
               values={{
                 tooltip: <Tooltipcomp text={tooltiptext.regularCashPayments} >
                   <FormattedMessage
@@ -144,7 +144,7 @@ class ChildIncomeSlide extends Component {
         <FormattedMessage
               id="app.slides.childIncomeSlide.pensionAnnuityTrust"
               description="Pensions annuities & trusts"
-              defaultMessage="{tooltip}&nbsp;, &nbsp;{tooltip2}&nbsp;, or &nbsp;{tooltip3}"
+              defaultMessage="{tooltip}, {tooltip2}, or {tooltip3}"
               values={{
                 tooltip: <Tooltipcomp text={tooltiptext.pensionChildren} >
                   <FormattedMessage

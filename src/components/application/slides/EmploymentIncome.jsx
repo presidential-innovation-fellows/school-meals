@@ -60,7 +60,7 @@ class EmploymentIncome extends Component {
           <FormattedMessage
               id="app.slides.employmentIncome.selfEmployment"
               description="Cash bonus"
-              defaultMessage="Net income from &nbsp;{tooltip}"
+              defaultMessage="Net income from {tooltip}"
               values={{
                 tooltip: <Tooltipcomp text={tooltiptext.selfEmployment}>
                           <FormattedMessage

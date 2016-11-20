@@ -65,7 +65,7 @@ class MilitaryIncome extends Component {
            <FormattedMessage
               id="app.slides.militaryIncome.cashBonus"
               description="Military cash bonus"
-              defaultMessage="Military &nbsp;{tooltip}"
+              defaultMessage="Military {tooltip}"
               values={{
                 tooltip:
                         <Tooltipcomp text={tooltiptext.cashBonus}>
@@ -83,7 +83,7 @@ class MilitaryIncome extends Component {
            <FormattedMessage
               id="app.slides.militaryIncome.allowance"
               description="Military allowance income"
-              defaultMessage="Military &nbsp;{tooltip}&nbsp; for off-base housing, food, clothing (other than FSSA and MHPI)"
+              defaultMessage="Military {tooltip} for off-base housing, food, clothing (other than FSSA and MHPI)"
               values={{
                 tooltip:
                         <Tooltipcomp text={tooltiptext.allowances}>

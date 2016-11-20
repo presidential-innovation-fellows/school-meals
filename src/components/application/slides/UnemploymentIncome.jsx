@@ -55,7 +55,7 @@ class UnemploymentIncome extends Component {
         <FormattedMessage
               id="app.slides.unemploymentIncome.ssdi"
               description="Social Security Disability Insurance"
-              defaultMessage="Social Security Disability Insurance &nbsp;{tooltip}"
+              defaultMessage="Social Security Disability Insurance {tooltip}"
               values={{
                 tooltip:
                         <Tooltipcomp text={tooltiptext.SSDI}>

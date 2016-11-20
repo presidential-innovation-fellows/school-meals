@@ -25,7 +25,7 @@ class RetirementIncome extends Component {
         <FormattedMessage
               id="app.slides.retirementIncome.incomeList"
               description="List of retirement income"
-              defaultMessage="{tooltip}&nbsp; (including survivor benefits, &nbsp;{tooltip2}&nbsp;, and &nbsp;{tooltip3}&nbsp; )"
+              defaultMessage="{tooltip} (including survivor benefits, {tooltip2}, and {tooltip3})"
               values={{
                 tooltip:
                         <Tooltipcomp text={tooltiptext.socialSecurity}>

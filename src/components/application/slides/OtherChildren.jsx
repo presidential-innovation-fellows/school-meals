@@ -27,7 +27,7 @@ class OtherChildren extends Component {
         <FormattedMessage
               id="app.slides.otherChildren.intro"
               description="Introductory paragraph."
-              defaultMessage="Okay, it looks like we will need more information about your &nbsp;{tooltip}&nbsp;  and income in order to determine if you are eligible for benefits."
+              defaultMessage="Okay, it looks like we will need more information about your {tooltip} and income in order to determine if you are eligible for benefits."
               values={{
                 tooltip: <Tooltipcomp text={tooltiptext.householdreminder} >
                           <FormattedMessage
