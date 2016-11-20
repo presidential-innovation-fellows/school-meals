@@ -451,7 +451,7 @@
    ***/
 
   // Intro paragraph
-  // English: "If anyone in your household participates in {snap}, {tanf}, or {fdpir} then {studentList} {studentsize} eligible for free school meals."
+  // English: "If anyone in your household participates in {snap}, {tanf}, or {fdpir} then {studentList} {studentCount, plural, one {is eligible} other {are eligible}} for free school meals."
   "app.slides.assistancePrograms.intro": "",
 
   // Household definition
@@ -1877,5 +1877,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479711344431."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479711459113."
 }

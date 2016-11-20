@@ -29,13 +29,13 @@ class AssistancePrograms extends Component {
         <FormattedMessage
                    id="app.slides.assistancePrograms.intro"
                    description="Intro paragraph"
-                   defaultMessage="If anyone in your household participates in {snap}, {tanf}, or {fdpir} then {studentList} {studentsize} eligible for free school meals."
+                   defaultMessage="If anyone in your household participates in {snap}, {tanf}, or {fdpir} then {studentList} {studentCount, plural, one {is eligible} other {are eligible}} for free school meals."
                    values={{
                      snap: <Tooltip text={tooltiptext.snap} target={assistanceProgramsVar.snap.accronym} />,
                      tanf: <Tooltip text={tooltiptext.tanf} target={assistanceProgramsVar.tanf.accronym} />,
                      fdpir: <Tooltip text={tooltiptext.fdpir} target={assistanceProgramsVar.fdpir.accronym} />,
                      studentList: students.informalList(allPeopleCollections),
-                     studentsize: students.length === 1 ? 'is' : 'are'
+                     studentCount: students.length
                    }}
                />
         </p>
@@ -47,8 +47,8 @@ class AssistancePrograms extends Component {
               description="Household definition"
               defaultMessage="A household is defined as a group of people, related or unrelated, that usually live together and share income and expenses."
           />
-        </p>            
-            
+        </p>
+
           <p>
           <FormattedMessage
               id="app.slides.assistancePrograms.householdIncludes"
