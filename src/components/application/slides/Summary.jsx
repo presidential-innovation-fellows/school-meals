@@ -9,7 +9,7 @@ import { numberFormat } from 'underscore.string'
 import { assistanceProgramsVarArray, organization } from '../../../config'
 import { fullName, toSentenceSerialArray } from '../../../helpers'
 import { tooltiptext } from '../../Tooltiptext'
-import Tooltipcomp from '../Tooltip'
+import Tooltip from '../Tooltip'
 import {FormattedMessage} from 'react-intl'
 
 @observer
@@ -109,7 +109,7 @@ class Summary extends Component {
                 defaultMessage="Total household income"
               />
               </SummaryLabel>
-             <Tooltipcomp text={tooltiptext.monthlyIncomeSum}>
+             <Tooltip text={tooltiptext.monthlyIncomeSum}>
                ${
                  numberFormat(
                    parseFloat(applicationData.totalMonthlyHouseholdIncome, 10),
@@ -122,7 +122,7 @@ class Summary extends Component {
                 description=" per month"
                 defaultMessage=" per month"
               />
-             </Tooltipcomp>
+             </Tooltip>
            </div>
           }
 

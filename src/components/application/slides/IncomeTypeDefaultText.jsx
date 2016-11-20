@@ -2,7 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
 import { informalName } from '../../../helpers'
 import { tooltiptext } from '../../Tooltiptext'
-import Tooltipcomp from '../Tooltip'
+import Tooltip from '../Tooltip'
 import {FormattedMessage} from 'react-intl'
 
 @observer
@@ -36,21 +36,21 @@ class IncomeTypeDefaultText extends Component {
               defaultMessage="NOTE: Remember to report {tooltip}, {tooltip2} income."
               values={{
                 tooltip:
-                        <Tooltipcomp text={tooltiptext.currentAdult}>
+                        <Tooltip text={tooltiptext.currentAdult}>
                           <FormattedMessage
                               id="app.slides.IncomeTypeDefaultText.currentAdult"
                               description="current"
                               defaultMessage="current"
                           />
-                        </Tooltipcomp>,
+                        </Tooltip>,
                 tooltip2:
-                        <Tooltipcomp text={tooltiptext.gross}>
+                        <Tooltip text={tooltiptext.gross}>
                           <FormattedMessage
                               id="app.slides.IncomeTypeDefaultText.gross"
                               description="gross"
                               defaultMessage="gross"
                           />
-                        </Tooltipcomp>
+                        </Tooltip>
               }}
           />
         </p>

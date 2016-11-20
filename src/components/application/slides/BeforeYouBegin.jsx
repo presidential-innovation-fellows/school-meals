@@ -7,7 +7,7 @@ import { observable } from 'mobx'
 import { observer } from 'mobx-react'
 import { Glyphicon, OverlayTrigger } from 'react-bootstrap'
 import { tooltiptext } from '../../Tooltiptext'
-import Tooltipcomp from '../Tooltip'
+import Tooltip from '../Tooltip'
 import {FormattedMessage} from 'react-intl'
 
 @observer
@@ -51,13 +51,13 @@ class BeforeYouBegin extends React.Component {
               defaultMessage="If you received a {tooltip} from the school saying that your children were automatically approved (directly certified) for free meals for the {schoolYear} school year because someone in your household participates in {assistanceProgramList} then you do not need to submit an application."
               values={{
                 tooltip:
-                        <Tooltipcomp text={tooltiptext.letter}>
+                        <Tooltip text={tooltiptext.letter}>
                           <FormattedMessage
                             id="app.slides.beforeYouBegin.letter"
                             description="As in a letter from a school."
                             defaultMessage="letter"
                           />
-                        </Tooltipcomp>,
+                        </Tooltip>,
                 schoolYear: <SchoolYear />,
                 assistanceProgramList: assistanceProgramList
               }}
@@ -77,25 +77,25 @@ class BeforeYouBegin extends React.Component {
 
         <p>
           <strong>
-            <Tooltipcomp text={tooltiptext.eligibility}>
+            <Tooltip text={tooltiptext.eligibility}>
               <FormattedMessage
                   id="app.slides.beforeYouBegin.eligibility"
                   description="As in the qulifications for this program."
                   defaultMessage="Eligibility"
               />
-            </Tooltipcomp>&nbsp;
+            </Tooltip>&nbsp;
             <FormattedMessage
                 id="app.slides.beforeYouBegin.mealEligibilityDescription"
                 description="Only need one application for your household"
                 defaultMessage="for free or reduced price school meal benefits is based on any one of these"
             />&nbsp;
-            <Tooltipcomp text={tooltiptext.threethings}>
+            <Tooltip text={tooltiptext.threethings}>
               <FormattedMessage
                   id="app.slides.beforeYouBegin.threeThings"
                   description="As in the requirements for program qualification."
                   defaultMessage="three things:"
               />
-            </Tooltipcomp>
+            </Tooltip>
           </strong>
         </p>
 
@@ -132,13 +132,13 @@ class BeforeYouBegin extends React.Component {
               defaultMessage="Your {tooltip} does not affect your eligibility for free and reduced price benefits."
               values={{
                 tooltip:
-                        <Tooltipcomp text={tooltiptext.usStatus}>
+                        <Tooltip text={tooltiptext.usStatus}>
                           <FormattedMessage
                               id="app.slides.beforeYouBegin.usStatus"
                               description="As in the status of the person/family applying for benefits."
                               defaultMessage="US citizenship or immigration status"
                           />
-                        </Tooltipcomp>
+                        </Tooltip>
               }}
           />
         </p>
@@ -192,9 +192,9 @@ class BeforeYouBegin extends React.Component {
                    description="List of programs that will require a case number."
                    defaultMessage="If you participate in {snap}, {tanf} , or {fdpir} you will need to know your case number (not your card or account number)."
                    values={{
-                     snap: <Tooltipcomp text={tooltiptext.snap} target={assistanceProgramsVar.snap.accronym} />,
-                     tanf: <Tooltipcomp text={tooltiptext.tanf} target={assistanceProgramsVar.tanf.accronym} />,
-                     fdpir: <Tooltipcomp text={tooltiptext.fdpir} target={assistanceProgramsVar.fdpir.accronym} />
+                     snap: <Tooltip text={tooltiptext.snap} target={assistanceProgramsVar.snap.accronym} />,
+                     tanf: <Tooltip text={tooltiptext.tanf} target={assistanceProgramsVar.tanf.accronym} />,
+                     fdpir: <Tooltip text={tooltiptext.fdpir} target={assistanceProgramsVar.fdpir.accronym} />
                    }}
                />
              </li>

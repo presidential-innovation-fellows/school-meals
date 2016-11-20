@@ -5,9 +5,9 @@ import { observer } from 'mobx-react'
 import { toSentenceSerial } from 'underscore.string'
 import { assistancePrograms as programNames, assistanceProgramsVar } from '../../../config'
 import { AssistancePrograms as Store } from '../../../stores/ApplicationData'
-import { Glyphicon, OverlayTrigger, Tooltip } from 'react-bootstrap'
+import { Glyphicon, OverlayTrigger } from 'react-bootstrap'
 import { tooltiptext } from '../../Tooltiptext'
-import Tooltipcomp from '../Tooltip'
+import Tooltip from '../Tooltip'
 import {FormattedMessage} from 'react-intl'
 
 @observer
@@ -31,9 +31,9 @@ class AssistancePrograms extends Component {
                    description="Intro paragraph"
                    defaultMessage="If anyone in your household participates in {snap}, {tanf}, or {fdpir} then {studentList} {studentsize} eligible for free school meals."
                    values={{
-                     snap: <Tooltipcomp text={tooltiptext.snap} target={assistanceProgramsVar.snap.accronym} />,
-                     tanf: <Tooltipcomp text={tooltiptext.tanf} target={assistanceProgramsVar.tanf.accronym} />,
-                     fdpir: <Tooltipcomp text={tooltiptext.fdpir} target={assistanceProgramsVar.fdpir.accronym} />,
+                     snap: <Tooltip text={tooltiptext.snap} target={assistanceProgramsVar.snap.accronym} />,
+                     tanf: <Tooltip text={tooltiptext.tanf} target={assistanceProgramsVar.tanf.accronym} />,
+                     fdpir: <Tooltip text={tooltiptext.fdpir} target={assistanceProgramsVar.fdpir.accronym} />,
                      studentList: students.informalList(allPeopleCollections),
                      studentsize: students.length === 1 ? 'is' : 'are'
                    }}

@@ -3,7 +3,7 @@ import IncomeSource from '../IncomeSource'
 import IncomeType from './IncomeType'
 import { observer } from 'mobx-react'
 import { tooltiptext } from '../../Tooltiptext'
-import Tooltipcomp from '../Tooltip'
+import Tooltip from '../Tooltip'
 import {FormattedMessage} from 'react-intl'
 
 @observer
@@ -28,41 +28,41 @@ class RetirementIncome extends Component {
               defaultMessage="{tooltip} (including survivor benefits, {tooltip2}, and {tooltip3})"
               values={{
                 tooltip:
-                        <Tooltipcomp text={tooltiptext.socialSecurity}>
+                        <Tooltip text={tooltiptext.socialSecurity}>
                           <FormattedMessage
                             id="app.slides.retirementIncome.socialSecurity"
                             description="Social Security"
                             defaultMessage="Social Security"
                           />
-                        </Tooltipcomp>,
+                        </Tooltip>,
                 tooltip2:
-                        <Tooltipcomp text={tooltiptext.blackLung}>
+                        <Tooltip text={tooltiptext.blackLung}>
                           <FormattedMessage
                             id="app.slides.retirementIncome.blackLung"
                             description="Black Lung benefits"
                             defaultMessage="Black Lung benefits"
                           />
-                        </Tooltipcomp>,
+                        </Tooltip>,
                 tooltip3:
-                        <Tooltipcomp text={tooltiptext.railroad}>
+                        <Tooltip text={tooltiptext.railroad}>
                           <FormattedMessage
                             id="app.slides.retirementIncome.railroad"
                             description="Railroad Retirement"
                             defaultMessage="Railroad Retirement"
                           />
-                        </Tooltipcomp>
+                        </Tooltip>
               }}
           />
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="privatePension">
-        <Tooltipcomp text={tooltiptext.pension}>
+        <Tooltip text={tooltiptext.pension}>
            <FormattedMessage
               id="app.slides.retirementIncome.pension"
               description="Pension"
               defaultMessage="Pension"
            />
-        </Tooltipcomp>
+        </Tooltip>
         </IncomeSource>
       </IncomeType>
     )

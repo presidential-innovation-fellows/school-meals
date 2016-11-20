@@ -2,8 +2,8 @@
 import { toSentenceSerial } from 'underscore.string'
 import { hmrPrograms } from './config'
 import { tooltiptext } from './components/Tooltiptext'
-import Tooltipcomp from './components/application/Tooltip'
-import { Glyphicon, OverlayTrigger, Tooltip } from 'react-bootstrap'
+import Tooltip from './components/application/Tooltip'
+import { Glyphicon, OverlayTrigger } from 'react-bootstrap'
 
 export function schoolYear(startYear = new Date().getFullYear()) {
   return `${startYear}–${startYear + 1}`
@@ -228,9 +228,9 @@ export function allStudentsAreFoster(students) {
 export function programDescription(slug) {
   return {
     isFoster: 'live with you under a formal (court-ordered) foster care arrangement',
-    isHomeless: <span key="mckinney">receive assistance under the <Tooltipcomp id="mckinney" text={tooltiptext.mckinney} target={hmrPrograms.mckinney.shortName} /></span>,
-    isMigrant: <span key="mep">participate in the {hmrPrograms.mep.fullName} (<Tooltipcomp id="migrant" text={tooltiptext.mep} target={hmrPrograms.mep.accronym} />)</span>,
-    isRunaway: <span key="runaway">participate in a program under the <Tooltipcomp id="runaway" text={tooltiptext.runaway} target={hmrPrograms.runaway} /></span>,
+    isHomeless: <span key="mckinney">receive assistance under the <Tooltip id="mckinney" text={tooltiptext.mckinney} target={hmrPrograms.mckinney.shortName} /></span>,
+    isMigrant: <span key="mep">participate in the {hmrPrograms.mep.fullName} (<Tooltip id="migrant" text={tooltiptext.mep} target={hmrPrograms.mep.accronym} />)</span>,
+    isRunaway: <span key="runaway">participate in a program under the <Tooltip id="runaway" text={tooltiptext.runaway} target={hmrPrograms.runaway} /></span>,
   }[slug]
 }
 

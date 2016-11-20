@@ -1,15 +1,15 @@
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
-import { Glyphicon, OverlayTrigger, Tooltip } from 'react-bootstrap'
+import { Glyphicon, OverlayTrigger, Tooltip as BootstrapTooltip } from 'react-bootstrap'
 
 @observer
-class Tooltipcomp extends Component {
+class Tooltip extends Component {
   render() {
     const { id, text, target, children } = this.props
 
     return (
       <OverlayTrigger placement="top" overlay={
-        <Tooltip>{text}</Tooltip> }>
+        <BootstrapTooltip>{text}</BootstrapTooltip> }>
         <strong className="info-target">
           {children || target}
           <Glyphicon glyph="question-sign" />
@@ -19,10 +19,10 @@ class Tooltipcomp extends Component {
   }
 }
 
-Tooltipcomp.propTypes = {
+Tooltip.propTypes = {
   text: PropTypes.string.isRequired,
   target: PropTypes.node,
   children: PropTypes.node,
 }
 
-export default Tooltipcomp
+export default Tooltip
