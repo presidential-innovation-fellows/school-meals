@@ -272,7 +272,7 @@
   "app.slides.retirementIncome.pension": "Pensión",
 
   "app.slides.signature.almostDone": "Excelente, ya casi termina.",
-  "app.slides.signature.pleaseProvide": "Proporcione los últimos cuatro dígitos del número de Seguro Social de la persona que firmó al comienzo de esta solicitud ({adult}). Si esa persona no tiene un número de Seguro Social, marque la casilla que figura a continuación llamada ‘{ssn}’.",
+  "app.slides.signature.pleaseProvide": "Proporcione los últimos cuatro dígitos del número de Seguro Social de la persona que firmó al comienzo de esta solicitud {adult}. Si esa persona no tiene un número de Seguro Social, marque la casilla que figura a continuación llamada ‘{ssn}’.",
   "app.slides.signature.noSSN": "Sin SSN",
   "app.slides.signature.note": "Nota: la ciudadanía de los Estados Unidos o el estado de inmigración no son condiciones de elegibilidad para obtener beneficios de comidas gratis o a precio reducido. Los beneficios que no sean en efectivo que reciba mediante programas de comidas escolares no están sujetos a consideraciones de cargo público. Es decir, no será deportado, no se le negará la entrada al país ni se le negará el estado permanente porque solicita o recibe beneficios de comidas escolares.",
 
