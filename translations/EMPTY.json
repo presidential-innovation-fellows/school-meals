@@ -973,17 +973,17 @@
   // English: "Let's talk about the other kids in the house, and then we'll move on to the adults.  Other than {namedChildren}, are there any other children in your household? Don’t forget to include:"
   "app.slides.otherChildren.namedChildren": "",
 
-  // Eligibility List item
+  // Type of child to include in income reporting.
   // English: "students that are in grade 12 or below and attend school in a school district other than {organizationName}"
-  "app.slides.beforeYouBegin.eligibility1": "",
+  "app.slides.otherChildren.childType1": "",
 
-  // Eligibility List item
+  // Type of child to include in income reporting.
   // English: "children that attend day care or pre-school, or are not of school age, including infants"
-  "app.slides.beforeYouBegin.eligibility2": "",
+  "app.slides.otherChildren.childType2": "",
 
-  // Eligibility List item
+  // Type of child to include in income reporting.
   // English: "anyone 18 years of age or younger living in your household that does not currently attend school"
-  "app.slides.beforeYouBegin.eligibility3": "",
+  "app.slides.otherChildren.childType3": "",
 
 
   /***
