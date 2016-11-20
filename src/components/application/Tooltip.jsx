@@ -20,7 +20,7 @@ class Tooltip extends Component {
 }
 
 Tooltip.propTypes = {
-  text: PropTypes.string.isRequired,
+  text: PropTypes.node.isRequired,
   target: PropTypes.node,
   children: PropTypes.node,
 }

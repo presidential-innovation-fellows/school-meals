@@ -26,7 +26,7 @@ class SummaryPersonCollection extends Component {
 }
 
 SummaryPersonCollection.propTypes = {
-  collection: PropTypes.array.isRequired,
+  collection: PropTypes.object.isRequired,
   id: PropTypes.string
 }
 
