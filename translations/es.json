@@ -369,7 +369,7 @@
   "help.topic.NotTheSame.answer4": "Si necesita ayuda o información adicional sobre cómo informar su ingreso, comuníquese con {organizationName} al {organizationContactInfo} y lo ayudarán a calcular su índice anual de ingresos de acuerdo con las pautas del Departamento de Agricultura de los Estados Unidos (United States Department of Agriculture, USDA).",
 
   "help.topic.paperApp.question": "¿PUEDO UTILIZAR UNA SOLICITUD EN PAPEL?",
-  "help.topic.paperApp.answer": "Sí. Si desea presentar la solicitud en papel, puede imprimirla aquí {paperApplicationLink} o comunicarse con {organizationName} ({organizationContactInfo)} para pedir una solicitud. Luego, devuelva la solicitud completa a: {organizationName}.",
+  "help.topic.paperApp.answer": "Sí. Si desea presentar la solicitud en papel, puede imprimirla aquí {paperApplicationLink} o comunicarse con {organizationName} ({organizationContactInfo}) para pedir una solicitud. Luego, devuelva la solicitud completa a: {organizationName}.",
   "help.topic.paperApp.paperApplication": "solicitud en papel",
 
   "help.topic.QualifyHomeless.question": "¿CÓMO SÉ SI MIS HIJOS CALIFICAN COMO PERSONAS SIN HOGAR?",
