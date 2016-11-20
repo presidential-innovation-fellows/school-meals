@@ -1048,11 +1048,19 @@
   // English: "Which students?"
   "app.slides.otherProgramsProgram.whichStudents": "",
 
-  // List of students to ask about being enrolled in other programs.
-  // English: "{studentLength, plural, one {Does} other {Do}} {students}"
-  "app.slides.otherProgramsProgram.labelPrefix": "",
+  // does or Do
+  // English: "{studentLength}{students}"
+  "app.slides.otherProgramsProgram.doDoes": "",
 
-  // The word 'or' surrounded by spaces.
+  // Does
+  // English: "Does"
+  "app.slides.otherProgramsProgram.does": "",
+
+  // Do
+  // English: "Do"
+  "app.slides.otherProgramsProgram.do": "",
+
+  // or
   // English: "or"
   "app.slides.otherProgramsProgram.or": "",
 
@@ -1869,5 +1877,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479498757654."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479625233998."
 }
