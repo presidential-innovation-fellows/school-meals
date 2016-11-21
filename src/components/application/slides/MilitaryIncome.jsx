@@ -45,7 +45,13 @@ class MilitaryIncome extends Component {
            <IncomeTypeDefaultText person={person} />
 
            <IncomeSource incomeSources={incomeSources} name="basic">
-             <Tooltip id="militaryBasicPay" text={tooltiptext.basicPay} target="Military basic pay" />
+             <Tooltip id="militaryBasicPay" text={tooltiptext.basicPay}>
+               <FormattedMessage
+                   id="app.slides.militaryIncome.basicPayTooltip"
+                   description="Military basic pay"
+                   defaultMessage="Military basic pay"
+               />
+             </Tooltip>
              &nbsp;
               {incomeType.isDeployed ?
                 <span>

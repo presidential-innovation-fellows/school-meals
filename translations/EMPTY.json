@@ -1028,6 +1028,10 @@
   // English: "Military basic pay, drill pay, cash bonuses and allowances for off-base housing, food, or clothing (including BAH) count as income for purposes of applying for school meal benefits. Do not include combat pay, Family Subsistence Supplemental Allowance (FSSA), or Military Housing Privatization Initiative (MHPI)."
   "app.slides.militaryIncome.basicPayMore": "",
 
+  // Military basic pay
+  // English: "Military basic pay"
+  "app.slides.militaryIncome.basicPayTooltip": "",
+
   // made available
   // English: "(made available to the household)"
   "app.slides.militaryIncome.madeAvailable": "",
@@ -1981,5 +1985,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479747434754."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479748148842."
 }
