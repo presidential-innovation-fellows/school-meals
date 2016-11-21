@@ -29,6 +29,13 @@ class Summary extends Component {
     // don't show link to Adults slide if we're not collecting household income
     const adultsId = applicationData.showHousehold && 'adults'
 
+    const headerText =
+      <FormattedMessage
+          id="app.slides.summary.header"
+          description="Text for the header of the slide."
+          defaultMessage="Summary"
+      />
+
     const nextText =
       <FormattedMessage
           id="app.slides.summary.nextText"
@@ -37,7 +44,7 @@ class Summary extends Component {
       />
 
     return (
-      <Slide header="Summary"
+      <Slide header={headerText}
              nextText={nextText}
              nextDisabled={!this.isValid}
              id="summary">

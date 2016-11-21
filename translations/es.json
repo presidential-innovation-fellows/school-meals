@@ -284,6 +284,7 @@
 
   "app.slides.students.intro": "Mencione los nombres de los estudiantes de su hogar que asisten a {organizationName} que estén solicitando los beneficios de comidas escolares.",
 
+  "app.slides.summary.header": "Resumen",
   "app.slides.summary.nextText": "Enviar",
   "app.slides.summary.finished": "Fantástico, ¡ya terminó!",
   "app.slides.summary.summaryInfo": "A continuación, le presentamos un resumen de la información que proporcionó en la solicitud. Le aconsejamos que guarde o imprima esta pantalla para sus registros. Si todo parece estar bien, marque la declaración “Certifico” y haga clic en el botón “Enviar” que se encuentra al final de la página.",
