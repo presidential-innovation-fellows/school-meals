@@ -24,9 +24,14 @@ class Students extends Component {
         </p>
 
         <PersonCollection
-            label="Student"
-            labelPlural="students"
             collection={students}
+            label={
+              <FormattedMessage
+                  id="app.slides.students.label"
+                  description="Label used for title, add/remove buttons."
+                  defaultMessage="Student"
+              />
+            }
         />
       </Slide>
     )

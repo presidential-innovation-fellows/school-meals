@@ -1,5 +1,6 @@
-import { PropTypes } from 'react'
+import React, { PropTypes } from 'react'
 import shortid from 'shortid'
+import { FormattedMessage } from 'react-intl'
 import { action, computed, observable } from 'mobx'
 import { assistancePrograms as assistanceProgramNames,
          assistanceProgramsVarArray } from '../config'
@@ -272,10 +273,38 @@ class PersonCollection {
 
   get fields() {
     return [
-      { name: 'firstName', label: 'First name', required: true },
-      { name: 'middleName', label: 'Middle name' },
-      { name: 'lastName', label: 'Last name', required: true },
-      { name: 'suffix', label: 'Suffix (e.g. Jr., Sr., I, II, III)', placeholder: 'Suffix' }
+      { name: 'firstName',
+        label:
+              <FormattedMessage
+                  id="applicationData.person.firstName.label"
+                  description="The label used for form fields."
+                  defaultMessage="First name"
+              />,
+        required: true },
+      { name: 'middleName',
+        label:
+              <FormattedMessage
+                  id="applicationData.person.middleName.label"
+                  description="The label used for form fields."
+                  defaultMessage="Middle name"
+              />
+      },
+      { name: 'lastName',
+        label:
+              <FormattedMessage
+                  id="applicationData.person.lastName.label"
+                  description="The label used for form fields."
+                  defaultMessage="Last name"
+              />,
+        required: true },
+      { name: 'suffix',
+        label:
+              <FormattedMessage
+                  id="applicationData.person.suffix.label"
+                  description="The label used for form fields."
+                  defaultMessage="Suffix (e.g. Jr., Sr., I, II, III)"
+              />
+      }
     ]
   }
 
@@ -464,7 +493,12 @@ class OtherChildrenCollection extends ChildCollection {
   get fields() {
     return super.fields.concat([
       { name: 'isFoster',
-        label: 'Foster child',
+        label:
+              <FormattedMessage
+                  id="applicationData.otherChild.isFoster.label"
+                  description="The label used for form fields."
+                  defaultMessage="Foster child"
+              />,
         dataType: PropTypes.bool }
     ])
   }
@@ -481,8 +515,22 @@ class StudentCollection extends ChildCollection {
 
   get fields() {
     return super.fields.concat([
-      { name: 'school', label: 'School' },
-      { name: 'grade', label: 'Grade' }
+      { name: 'school',
+        label:
+              <FormattedMessage
+                  id="applicationData.student.school.label"
+                  description="The label used for form fields."
+                  defaultMessage="School"
+              />
+      },
+      { name: 'grade',
+        label:
+              <FormattedMessage
+                  id="applicationData.student.grade.label"
+                  description="The label used for form fields."
+                  defaultMessage="Grade"
+              />
+      }
     ])
   }
 

@@ -304,6 +304,24 @@
 
 
   /***
+   *** src/components/application/PersonCollection.jsx
+   ***/
+
+  // Button to add person to collection.
+  // English: "+ Add another {personType}"
+  "app.personCollection.addButton": "",
+
+
+  /***
+   *** src/components/application/PersonForm.jsx
+   ***/
+
+  // Button to remove person from collection.
+  // English: "Remove {name}"
+  "app.personForm.removeButton": "",
+
+
+  /***
    *** src/components/application/Slide.jsx
    ***/
 
@@ -339,6 +357,14 @@
   // gross income
   // English: "gross income"
   "app.slides.adultIncomeOverview.grossIncome": "",
+
+  // Definition of gross income.
+  // English: "Gross income means all money earned or received before deductions such as income taxes, social security taxes, and insurance premiums. You should not report {netIncome}, which is the amount of money received in a pay check."
+  "app.slides.adultIncomeOverview.grossIncomeDefinition": "",
+
+  // Phrase: net income
+  // English: "net income"
+  "app.slides.adultIncomeOverview.netIncome": "",
 
   // Is adult in military
   // English: "Is {adult} in the {tooltip}?"
@@ -488,6 +514,10 @@
   // Include people regardless of age or income
   // English: "Include people regardless of age or whether they earn or receive income."
   "app.slides.adults.includeRegardless": "",
+
+  // Label used for title, add/remove buttons.
+  // English: "Adult"
+  "app.slides.adults.label": "",
 
 
   /***
@@ -713,6 +743,14 @@
   // English: "trust"
   "app.slides.childIncomeOverview.trust": "",
 
+  // Message about which types of child income to exclude from reporting.
+  // English: "Do not include infrequent earnings, such as income from occasional baby-sitting or mowing lawns."
+  "app.slides.childIncomeOverview.exclusions": "",
+
+  // Question asking if child has income sources.
+  // English: "Does {child} have income from any of these, or any other, sources?"
+  "app.slides.childIncomeOverview.label": "",
+
 
   /***
    *** src/components/application/slides/ChildIncomeSlide.jsx
@@ -810,6 +848,34 @@
   // Introductory paragraph.
   // English: "Please enter your contact information so that we can reach you in case there are any issues with your application. This information is optional, but we strongly encourage you to provide it."
   "app.slides.contact.intro": "",
+
+  // Field label.
+  // English: "Phone number"
+  "app.slides.contact.phone.label": "",
+
+  // Field label.
+  // English: "Email"
+  "app.slides.contact.email.label": "",
+
+  // Field label.
+  // English: "Street address 1"
+  "app.slides.contact.address1.label": "",
+
+  // Field label.
+  // English: "Street address 2"
+  "app.slides.contact.address2.label": "",
+
+  // Field label.
+  // English: "City"
+  "app.slides.contact.city.label": "",
+
+  // Field label.
+  // English: "State"
+  "app.slides.contact.state.label": "",
+
+  // Field label.
+  // English: "ZIP"
+  "app.slides.contact.zip.label": "",
 
 
   /***
@@ -1081,6 +1147,10 @@
   // English: "anyone 18 years of age or younger living in your household that does not currently attend school"
   "app.slides.otherChildren.childType3": "",
 
+  // Label used for title, add/remove buttons.
+  // English: "Child"
+  "app.slides.otherChildren.label": "",
+
 
   /***
    *** src/components/application/slides/OtherIncome.jsx
@@ -1244,6 +1314,10 @@
   // Introductory paragraph.
   // English: "List the names of the students in your household that attend school in {organizationName} and are applying for school meal benefits."
   "app.slides.students.intro": "",
+
+  // Label used for title, add/remove buttons.
+  // English: "Student"
+  "app.slides.students.label": "",
 
 
   /***
@@ -1983,7 +2057,40 @@
   "help.topic.WhatInformation.answer4": "",
 
 
+  /***
+   *** src/stores/ApplicationData.jsx
+   ***/
+
+  // The label used for form fields.
+  // English: "First name"
+  "applicationData.person.firstName.label": "",
+
+  // The label used for form fields.
+  // English: "Middle name"
+  "applicationData.person.middleName.label": "",
+
+  // The label used for form fields.
+  // English: "Last name"
+  "applicationData.person.lastName.label": "",
+
+  // The label used for form fields.
+  // English: "Suffix (e.g. Jr., Sr., I, II, III)"
+  "applicationData.person.suffix.label": "",
+
+  // The label used for form fields.
+  // English: "Foster child"
+  "applicationData.otherChild.isFoster.label": "",
+
+  // The label used for form fields.
+  // English: "School"
+  "applicationData.student.school.label": "",
+
+  // The label used for form fields.
+  // English: "Grade"
+  "applicationData.student.grade.label": "",
+
+
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479748148842."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479765937770."
 }
