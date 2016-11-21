@@ -891,6 +891,10 @@
    *** src/components/application/slides/LegalStatements.jsx
    ***/
 
+  // Text for the header of the slide.
+  // English: "Legal Statements"
+  "app.slides.legalStatements.header": "",
+
   // Almost done
   // English: "Almost done! Please read and acknowledge the following legal statements."
   "app.slides.legalStatements.almostDone": "",
@@ -1893,5 +1897,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479716942559."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479717073252."
 }

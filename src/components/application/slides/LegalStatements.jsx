@@ -3,8 +3,15 @@ import Slide from '../Slide'
 import {FormattedMessage} from 'react-intl'
 
 const LegalStatements = () => {
+  const headerText =
+    <FormattedMessage
+        id="app.slides.legalStatements.header"
+        description="Text for the header of the slide."
+        defaultMessage="Legal Statements"
+    />
+
   return (
-    <Slide header="Legal Statements" id="legal-statements">
+    <Slide header={headerText} id="legal-statements">
       <p className="usa-font-lead">
       <FormattedMessage
           id="app.slides.legalStatements.almostDone"
