@@ -102,9 +102,9 @@ class InputField extends Component {
 
     return (
       <div className={containerClassName}>
-        {(input.label || input.required || input.additional) &&
+        {(input.label || this.props.children || input.required || input.additional) &&
          <label htmlFor={this.controlId}>
-           {input.label}
+           {input.label || this.props.children}
            {additional &&
             <span className="usa-additional_text">{additional}</span>
            }
