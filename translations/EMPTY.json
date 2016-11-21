@@ -358,6 +358,14 @@
   // English: "gross income"
   "app.slides.adultIncomeOverview.grossIncome": "",
 
+  // Definition of gross income.
+  // English: "Gross income means all money earned or received before deductions such as income taxes, social security taxes, and insurance premiums. You should not report {netIncome}, which is the amount of money received in a pay check."
+  "app.slides.adultIncomeOverview.grossIncomeDefinition": "",
+
+  // Phrase: net income
+  // English: "net income"
+  "app.slides.adultIncomeOverview.netIncome": "",
+
   // Is adult in military
   // English: "Is {adult} in the {tooltip}?"
   "app.slides.adultIncomeOverview.militaryQuestion": "",
@@ -2056,5 +2064,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479764916130."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479765283713."
 }

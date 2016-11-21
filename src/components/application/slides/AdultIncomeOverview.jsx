@@ -72,10 +72,23 @@ class AdultIncomeOverview extends Component {
         </p>
 
         <p>
-          <dfn>Gross income</dfn> means <strong>all money earned or received <em>before</em> deductions</strong> such as income taxes, social security taxes, and insurance premiums. You should not report &nbsp;
-          <Tooltip id="net-income" text={tooltiptext.netIncome} target="net income" />
-          &nbsp;, which is the amount of money received in a pay check.
-          </p>
+          <FormattedMessage
+              id="app.slides.adultIncomeOverview.grossIncomeDefinition"
+              description="Definition of gross income."
+              defaultMessage="Gross income means all money earned or received before deductions such as income taxes, social security taxes, and insurance premiums. You should not report {netIncome}, which is the amount of money received in a pay check."
+              values={{
+                netIncome: <Tooltip id="net-income" text={tooltiptext.netIncome}>
+                             <FormattedMessage
+                                 id="app.slides.adultIncomeOverview.netIncome"
+                                 description="Phrase: net income"
+                                 defaultMessage="net income"
+                             />
+                           </Tooltip>
+              }}
+          />
+
+
+        </p>
 
         <IncomeTypeFormGroup person={person} incomeTypeName="military">
           <FormattedMessage

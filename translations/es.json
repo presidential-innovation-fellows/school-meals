@@ -84,6 +84,8 @@
   "app.slides.adultIncomeOverview.income": "En cuanto a las preguntas sobre ingresos, todos los montos deben referirse a los {tooltip}, {grossIncome} de {adult}.",
   "app.slides.adultIncomeOverview.current": "actuales",
   "app.slides.adultIncomeOverview.grossIncome": "ingresos brutos",
+  "app.slides.adultIncomeOverview.grossIncomeDefinition": "Ingreso bruto significa todo el dinero ganado o recibido antes de deducciones tales como impuestos sobre la renta, impuestos de seguridad social y primas de seguro. No debe informar {netIncome}, que es la cantidad de dinero recibida en un cheque de pago.",
+  "app.slides.adultIncomeOverview.netIncome": "ingresos netos",
   "app.slides.adultIncomeOverview.militaryQuestion": "¿{adult} está en el {tooltip}?",
   "app.slides.adultIncomeOverview.military": "ejército",
   "app.slides.adultIncomeOverview.deployedQuestion": "¿{adult} ha sido {tooltip}?",
