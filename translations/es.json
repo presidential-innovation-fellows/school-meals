@@ -124,6 +124,7 @@
   "app.slides.adults.military": "miembros de la familia que están en el ejército, que han sido desplegados",
   "app.slides.adults.includeRegardless": "Incluya a las personas sin importar la edad o si ganan o reciben ingresos.",
   "app.slides.adults.label": "Adulto",
+  "app.slides.adults.nextText": "No hay otros adultos",
 
   "app.slides.assistancePrograms.intro": "Si alguien en su hogar participa en {snap}, {tanf}, o {fdpir}, {studentList} {studentCount, plural, one {es elegible} other {son elegibles}} para recibir comidas escolares gratis.",
   "app.slides.assistancePrograms.household": "Un hogar se define como un grupo de personas, relacionadas o no relacionadas que suelen vivir juntas y que comparten ingresos y gastos.",

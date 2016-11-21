@@ -519,6 +519,10 @@
   // English: "Adult"
   "app.slides.adults.label": "",
 
+  // Text to show on next slide button if no other adults are added.
+  // English: "No other adults"
+  "app.slides.adults.nextText": "",
+
 
   /***
    *** src/components/application/slides/AssistancePrograms.jsx
@@ -2104,5 +2108,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479768038955."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479768149950."
 }
