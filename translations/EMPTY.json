@@ -1158,6 +1158,10 @@
    *** src/components/application/slides/Summary.jsx
    ***/
 
+  // Text on the button to submit final applicaiton.
+  // English: "Submit"
+  "app.slides.summary.nextText": "",
+
   // Awesome, you're finished!
   // English: "Awesome, you finished!"
   "app.slides.summary.finished": "",
@@ -1885,5 +1889,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479715978350."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479716370940."
 }

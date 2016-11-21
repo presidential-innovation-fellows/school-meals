@@ -29,9 +29,16 @@ class Summary extends Component {
     // don't show link to Adults slide if we're not collecting household income
     const adultsId = applicationData.showHousehold && 'adults'
 
+    const nextText =
+      <FormattedMessage
+          id="app.slides.summary.nextText"
+          description="Text on the button to submit final applicaiton."
+          defaultMessage="Submit"
+      />
+
     return (
       <Slide header="Summary"
-             nextText="Submit"
+             nextText={nextText}
              nextDisabled={!this.isValid}
              id="summary">
         <p className="usa-font-lead">
