@@ -89,7 +89,7 @@ class InputField extends Component {
       name: input.name,
       type: input.type,
       value: input.value == null ? value : input.value,
-      placeholder: input.placeholder || input.label,
+      placeholder: input.placeholder,
       disabled: input.disabled,
       onChange: this.handleChange,
       required: input.required,
