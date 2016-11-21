@@ -1182,6 +1182,10 @@
   // English: "Assistance program case numbers"
   "app.slides.summary.caseNumbers": "",
 
+  // Placeholder indicating that no assistance programs have been selected.
+  // English: "(none)"
+  "app.slides.summary.noAssistancePrograms": "",
+
   // Total household income
   // English: "Total household income"
   "app.slides.summary.totalIncome": "",
@@ -1881,5 +1885,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479715666598."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479715978350."
 }

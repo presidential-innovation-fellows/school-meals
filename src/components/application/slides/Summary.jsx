@@ -95,7 +95,13 @@ class Summary extends Component {
                   </li>
                 )
                 :
-                <li>(none)</li>
+                <li>
+                  <FormattedMessage
+                      id="app.slides.summary.noAssistancePrograms"
+                      description="Placeholder indicating that no assistance programs have been selected."
+                      defaultMessage="(none)"
+                  />
+                </li>
               }
             </ul>
           </div>

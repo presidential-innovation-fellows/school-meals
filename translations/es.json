@@ -290,6 +290,7 @@
   "app.slides.summary.otherChildren": "Otros niños",
   "app.slides.summary.adults": "Adultos",
   "app.slides.summary.caseNumbers": "Número de caso del programa de asistencia",
+  "app.slides.summary.noAssistancePrograms": "(no hay)",
   "app.slides.summary.totalIncome": "Ingreso total del hogar",
   "app.slides.summary.perMonth": "por mes",
   "app.slides.summary.contactInfo": "Información de contacto",
