@@ -125,7 +125,7 @@ InputField.propTypes = {
   name: PropTypes.string.isRequired,
   object: PropTypes.object.isRequired,
   className: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
-  label: PropTypes.string,
+  label: PropTypes.node,
   error: PropTypes.string,
   onChange: PropTypes.func,
   sanitize: PropTypes.func,

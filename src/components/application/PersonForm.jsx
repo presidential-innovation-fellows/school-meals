@@ -55,11 +55,11 @@ class PersonForm extends Component {
 
 PersonForm.propTypes = {
   onRemove: PropTypes.func.isRequired,
-  label: PropTypes.string.isRequired,
+  label: PropTypes.node.isRequired,
   person: PropTypes.object.isRequired,
   fields: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired,
+    label: PropTypes.node.isRequired,
     required: PropTypes.bool
   })).isRequired
 }
