@@ -63,8 +63,15 @@
   "tooltip.mep": "Presta servicios a niños que se han mudado a otros distritos escolares en los últimos tres años, para acompañar o unirse a un padre o tutor legal que busca u obtiene trabajo temporal o por temporada en agricultura o pesca.",
   "tooltip.runaway": "Autoriza proyectos basados en la comunidad para jóvenes que se dan a la fuga o que no tienen hogar y les brindan refugio temporal y atención a los jóvenes que necesiten refugio temporal, asesoramiento y servicios posteriores.",
 
+  "app.booleanRadio.trueLabel": "Sí",
+  "app.booleanRadio.falseLabel": "No",
+
+  "app.incomeSourceAdditional.addButton": "Añadir fuente de ingresos",
+
   "app.slides.incomeTypeFormGroup.missingIncomeTitle": "Falta de Ingresos",
   "app.slides.incomeTypeFormGroup.missingIncome": "",
+
+  "app.inputField.required": "Obligatorio",
 
   "app.slide.backButton": "Volver",
   "app.slide.nextButton": "Continuar",
@@ -121,6 +128,11 @@
   "app.slides.attestation.header": "Certifico (prometo)...",
   "app.slides.attestation.intro": "que toda la información que figura en esta solicitud es verdadera y que he declarado todos los ingresos.",
   "app.slides.attestation.understand": "Entiendo que esta información se proporciona en relación con el recibo de fondos federales y que los funcionarios escolares pueden verificar (comprobar) la información. Entiendo que si proporciono información falsa a propósito*, mis hijos pueden perder los beneficios de comidas.",
+  "app.slides.attestation.firstName.label": "Nombre de pila",
+  "app.slides.attestation.middleName.label": "Segundo nombre",
+  "app.slides.attestation.lastName.label": "Apellido",
+  "app.slides.attestation.suffix.label": "Sufijo (por ejemplo, Jr., Sr., I, II, III)",
+  "app.slides.attestation.date.label": "Fecha",
   "app.slides.attestation.misrepresentation": "*Si declara información falsa de manera intencional puede quedar sujeto a acusación bajo les leyes estatales y federales correspondientes.",
 
   "app.slides.beforeYouBegin.header": "Antes de empezar",
@@ -237,6 +249,7 @@
 
   "app.slides.militaryIncome.basicPay": "Los pagos básicos para miembros del ejército, pago por entrenamiento y bonos en efectivo para el hogar, como también las prestaciones para viviendas fuera de la base, alimentos y vestimenta (incluido BAH) se incluyen como fuentes de ingresos que se pueden incluir. No debe incluir el pago por combate, la Asignación suplementaria de subsistencia familiar (FSSA) ni la Iniciativa de privatización de la vivienda militar (MHPI).",
   "app.slides.militaryIncome.basicPayMore": "Los pagos básicos para miembros del ejército, pago por entrenamiento y bonos en efectivo para el hogar, como también las prestaciones para viviendas fuera de la base, alimentos y vestimenta (incluido BAH) se incluyen como fuentes de ingresos que se pueden incluir. No debe incluir el pago por combate, la Asignación suplementaria de subsistencia familiar (FSSA) ni la Iniciativa de privatización de la vivienda militar (MHPI).",
+  "app.slides.militaryIncome.basicPayTooltip": "Los pagos básicos para miembros del ejército",
   "app.slides.militaryIncome.madeAvailable": "(disponible para el hogar)",
   "app.slides.militaryIncome.cashBonus": "{tooltip} para miembros del ejército",
   "app.slides.militaryIncome.cashBonusTooltip": "Bonos en efectivo",

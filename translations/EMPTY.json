@@ -260,6 +260,28 @@
 
 
   /***
+   *** src/components/application/BooleanRadio.jsx
+   ***/
+
+  // The label for the true selection of a true/false radio button pair.
+  // English: "Yes"
+  "app.booleanRadio.trueLabel": "",
+
+  // The label for the false selection of a true/false radio button pair.
+  // English: "No"
+  "app.booleanRadio.falseLabel": "",
+
+
+  /***
+   *** src/components/application/IncomeSourceAdditional.jsx
+   ***/
+
+  // Button text to add an income source
+  // English: "Add Income Source"
+  "app.incomeSourceAdditional.addButton": "",
+
+
+  /***
    *** src/components/application/IncomeTypeFormGroup.jsx
    ***/
 
@@ -270,6 +292,15 @@
   // Missing Income alert
   // English: "You indicated that {person} receives {incomeDescription}, but you selected “No” for each related income source on a following page. Please correct this answer or provide details on the following pages."
   "app.slides.incomeTypeFormGroup.missingIncome": "",
+
+
+  /***
+   *** src/components/application/InputField.jsx
+   ***/
+
+  // Text that indicates a field is required.
+  // English: "Required"
+  "app.inputField.required": "",
 
 
   /***
@@ -499,6 +530,26 @@
   // Understand that the information give should be correct.
   // English: "I understand that this information is given in connection with the receipt of Federal funds, and that school o­fficials may verify (check) the information. I am aware that if I purposely* give false information, my children may lose meal benefits."
   "app.slides.attestation.understand": "",
+
+  // Field label.
+  // English: "First name"
+  "app.slides.attestation.firstName.label": "",
+
+  // Field label.
+  // English: "Middle name"
+  "app.slides.attestation.middleName.label": "",
+
+  // Field label.
+  // English: "Last name"
+  "app.slides.attestation.lastName.label": "",
+
+  // Field label.
+  // English: "Suffix (e.g. Jr., Sr., I, II, III)"
+  "app.slides.attestation.suffix.label": "",
+
+  // Field label.
+  // English: "Today's date"
+  "app.slides.attestation.date.label": "",
 
   // Starred message that lying on the form is fraud.
   // English: "*Deliberate misrepresentation of information may subject applicants to prosecution under applicable State and Federal law."
@@ -976,6 +1027,10 @@
   // Military Pay info more
   // English: "Military basic pay, drill pay, cash bonuses and allowances for off-base housing, food, or clothing (including BAH) count as income for purposes of applying for school meal benefits. Do not include combat pay, Family Subsistence Supplemental Allowance (FSSA), or Military Housing Privatization Initiative (MHPI)."
   "app.slides.militaryIncome.basicPayMore": "",
+
+  // Military basic pay
+  // English: "Military basic pay"
+  "app.slides.militaryIncome.basicPayTooltip": "",
 
   // made available
   // English: "(made available to the household)"
@@ -1930,5 +1985,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479718990917."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479748148842."
 }

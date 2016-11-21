@@ -313,6 +313,7 @@ footer .not-real-disclaimer {
 
 nav .glyphicon {
   top: 2px;
+  color: #e31c3d;
 }
 
 nav li::before,
