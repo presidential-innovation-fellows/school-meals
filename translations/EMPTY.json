@@ -273,7 +273,7 @@
 
   // Default text to tell user that the current slide is incomplete.
   // English: "Please enter all required information above."
-  "app.slide.requiredText": "",
+  "app.slide.helpText": "",
 
 
   /***
@@ -1881,5 +1881,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479715519666."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479715666598."
 }

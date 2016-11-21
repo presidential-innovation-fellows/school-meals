@@ -65,7 +65,7 @@
 
   "app.slide.backButton": "Volver",
   "app.slide.nextButton": "Continuar",
-  "app.slide.requiredText": "Por favor ingrese toda la información requerida arriba",
+  "app.slide.helpText": "Por favor ingrese toda la información requerida arriba.",
 
   "app.slides.adultIncomeOverview.adultsInto": "Esta página contiene información sobre {adult}.",
   "app.slides.adultIncomeOverview.income": "En cuanto a las preguntas sobre ingresos, todos los montos deben referirse a los {tooltip}, {grossIncome} de {adult}.",
