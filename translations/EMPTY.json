@@ -827,6 +827,10 @@
    *** src/components/application/slides/Foster.jsx
    ***/
 
+  // Question asking if student in foster care.
+  // English: "{studentCount, plural, one {Does} other {Do}} {studentNames} live with you under a formal (court-ordered) foster care arrangement?"
+  "app.slides.foster.label": "",
+
   // No problem.
   // English: "No problem! There are other ways to qualify."
   "app.slides.foster.confirm": "",
@@ -1023,21 +1027,33 @@
    *** src/components/application/slides/OtherPrograms.jsx
    ***/
 
-  // Introductory paragraph.
-  // English: "Your children can also qualify for free meals if any of these apply."
-  "app.slides.otherPrograms.intro": "",
+  // Question asking if student is a homeless child.
+  // English: "{studentCount, plural, one {Does} other {Do}} {studentNames} receive assistance under the {programName}?"
+  "app.slides.otherPrograms.isHomeless.label": "",
 
   // Homeless organizations
   // English: "If not, but your household lacks a permanent address, or stays together in a shelter, hotel, or other temporary housing arrangement, contact {organizationName} for help."
   "app.slides.otherPrograms.isHomeless": "",
 
+  // Question asking if student is a migrant child.
+  // English: "{studentCount, plural, one {Does} other {Do}} {studentNames} participate in the {programName}?"
+  "app.slides.otherPrograms.isMigrant.label": "",
+
   // Migrant Organizations
   // English: "If not, but you moved your household into a different school district within the last three years to gain or look for temporary/seasonal work in agriculture or fishing, contact {organizationName} for help."
   "app.slides.otherPrograms.isMigrant": "",
 
+  // Question asking if student is a runaway child.
+  // English: "{studentCount, plural, one {Does} other {Do}} {studentNames} participate in a program under the {programName}?"
+  "app.slides.otherPrograms.isRunaway.label": "",
+
   // Run Away Organizations
-  // English: "If not, but they chose to leave their prior family or household, contact {organizationName} for help."
-  "app.slides.otherPrograms.isRunAway": "",
+  // English: "If not, but {studentCount, plural, one {he/she} other {they}} chose to leave {studentCount, plural, one {his/her} other {their}} prior family or household, contact {organizationName} for help."
+  "app.slides.otherPrograms.isRunaway": "",
+
+  // Introductory paragraph.
+  // English: "Your children can also qualify for free meals if any of these apply."
+  "app.slides.otherPrograms.intro": "",
 
 
   /***
@@ -1047,22 +1063,6 @@
   // Which students?
   // English: "Which students?"
   "app.slides.otherProgramsProgram.whichStudents": "",
-
-  // does or Do
-  // English: "{studentLength}{students}"
-  "app.slides.otherProgramsProgram.doDoes": "",
-
-  // Does
-  // English: "Does"
-  "app.slides.otherProgramsProgram.does": "",
-
-  // Do
-  // English: "Do"
-  "app.slides.otherProgramsProgram.do": "",
-
-  // or
-  // English: "or"
-  "app.slides.otherProgramsProgram.or": "",
 
 
   /***
@@ -1877,5 +1877,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479711459113."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479713435705."
 }

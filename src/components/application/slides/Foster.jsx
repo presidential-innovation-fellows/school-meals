@@ -4,7 +4,8 @@ import OtherProgramsProgram from './OtherProgramsProgram'
 import { observable } from 'mobx'
 import { observer } from 'mobx-react'
 import { organization } from '../../../config'
-import {FormattedMessage} from 'react-intl'
+import { informalList } from '../../../helpers'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class Foster extends Component {
@@ -47,6 +48,20 @@ class Foster extends Component {
       allPeopleCollections,
       applicability: this.applicability
     }
+    const studentCount = students.length
+    const studentNames = informalList(students, allPeopleCollections, ' or ')
+    const program = {
+      attribute: 'isFoster',
+      label: <FormattedMessage
+                 id="app.slides.foster.label"
+                 description="Question asking if student in foster care."
+                 defaultMessage="{studentCount, plural, one {Does} other {Do}} {studentNames} live with you under a formal (court-ordered) foster care arrangement?"
+                 values={{
+                   studentCount,
+                   studentNames
+                 }}
+             />
+    }
 
     return (
       <Slide nextDisabled={!this.isValid} id="foster">
@@ -56,10 +71,10 @@ class Foster extends Component {
               description="No problem."
               defaultMessage="No problem! There are other ways to qualify."
           />
-          
+
         </p>
 
-        <OtherProgramsProgram attribute="isFoster" {...props} />
+        <OtherProgramsProgram {...program} {...props} />
       </Slide>
     )
   }
