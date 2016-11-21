@@ -280,6 +280,7 @@
   "app.slides.otherChildren.childType1": "estudiantes que estén en 12.º grado o menos que asisten a la escuela en otro distrito escolar que no sea {organizationName}",
   "app.slides.otherChildren.childType2": "niños que asisten a la guardería o a preescolar o que no tengan edad escolar, incluidos los bebés pequeños",
   "app.slides.otherChildren.childType3": "cualquier persona de 18 años de edad o menos que viva en su hogar y que no asista a la escuela actualmente",
+  "app.slides.otherChildren.nextText": "No hay otros niños",
   "app.slides.otherChildren.label": "Niño",
 
   "app.slides.otherIncome.regularCashPayments": "{tooltip} proporcionadas por alguien que no viva en el hogar",

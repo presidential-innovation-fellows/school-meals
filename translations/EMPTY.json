@@ -1159,6 +1159,10 @@
   // English: "Child"
   "app.slides.otherChildren.label": "",
 
+  // Text to show on next slide button if no other children are added.
+  // English: "No other children"
+  "app.slides.otherChildren.nextText": "",
+
 
   /***
    *** src/components/application/slides/OtherIncome.jsx
@@ -2100,5 +2104,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479767804382."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479768038955."
 }
