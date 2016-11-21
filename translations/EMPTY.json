@@ -295,6 +295,15 @@
 
 
   /***
+   *** src/components/application/InputField.jsx
+   ***/
+
+  // Text that indicates a field is required.
+  // English: "Required"
+  "app.inputField.required": "",
+
+
+  /***
    *** src/components/application/Slide.jsx
    ***/
 
@@ -1952,5 +1961,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479746292373."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479746784416."
 }

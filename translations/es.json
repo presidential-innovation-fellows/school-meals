@@ -71,6 +71,8 @@
   "app.slides.incomeTypeFormGroup.missingIncomeTitle": "Falta de Ingresos",
   "app.slides.incomeTypeFormGroup.missingIncome": "",
 
+  "app.inputField.required": "Obligatorio",
+
   "app.slide.backButton": "Volver",
   "app.slide.nextButton": "Continuar",
   "app.slide.helpText": "Por favor ingrese toda la información requerida arriba.",
