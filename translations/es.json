@@ -177,7 +177,7 @@
   "app.slides.childIncomeSlide.annuityChildren": "anualidad",
   "app.slides.childIncomeSlide.trust": "fideicomiso",
   "app.slides.childIncomeSlide.otherIncome": "Alguna otra fuente de ingresos",
-  "app.slides.childIncomeSlide.missingIncome": "En una página anterior, usted indicó que {child}} recibía ingresos. Por favor ingrese este ingreso arriba o corrija su respuesta anterior.",
+  "app.slides.childIncomeSlide.missingIncome": "En una página anterior, usted indicó que {child} recibía ingresos. Por favor ingrese este ingreso arriba o corrija su respuesta anterior.",
   "app.slides.childIncomeSlide.changeAnswer": "Cambiar respuesta anterior",
 
   "app.slides.contact.header": "Datos de Contacto",
@@ -212,7 +212,7 @@
   "app.slides.incomeElection.chooseFollowing": "Elija una de las siguientes opciones:",
 
   "app.slides.incomeType.missingIncomeTitle": "Falta de Ingresos",
-  "app.slides.incomeType.missingIncome": "En una página anterior, indicó que {adult}} recibe ingresos de una de las fuentes anteriores. Por favor ingrese este ingreso arriba o corrija su respuesta anterior.",
+  "app.slides.incomeType.missingIncome": "En una página anterior, indicó que {adult} recibe ingresos de una de las fuentes anteriores. Por favor ingrese este ingreso arriba o corrija su respuesta anterior.",
   "app.slides.incomeType.changeAnswer": "Cambiar respuesta anterior",
 
   "app.slides.IncomeTypeDefaultText.intro": "¿John cuenta con ingresos de las siguientes fuentes {militaryCaveat}?",
