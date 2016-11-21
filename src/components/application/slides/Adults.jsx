@@ -89,7 +89,6 @@ class Adults extends Component {
 
         <PersonCollection collection={adults}
                           label="Adult"
-                          labelPlural="adults"
                           filter={person => !person.isAttestor} />
       </Slide>
     )

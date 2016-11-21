@@ -25,7 +25,6 @@ class Students extends Component {
 
         <PersonCollection
             label="Student"
-            labelPlural="students"
             collection={students}
         />
       </Slide>

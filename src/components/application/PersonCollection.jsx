@@ -24,8 +24,7 @@ class PersonCollection extends Component {
     const {
       collection,
       filter,
-      label,
-      labelPlural
+      label
     } = this.props
 
     return(
@@ -52,8 +51,7 @@ class PersonCollection extends Component {
 
 PersonCollection.defaultProps = {
   filter: person => true,
-  label: 'person',
-  labelPlural: 'people'
+  label: 'person'
 }
 
 export default PersonCollection

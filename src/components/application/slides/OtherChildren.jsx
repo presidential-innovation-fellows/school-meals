@@ -81,7 +81,6 @@ class OtherChildren extends Component {
 
         <PersonCollection
             label="Child"
-            labelPlural="other children"
             collection={otherChildren}
         />
       </Slide>
