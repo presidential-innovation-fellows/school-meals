@@ -67,7 +67,7 @@ class Slide extends Component {
               this.props.showNext && this.props.nextDisabled &&
               <span className="required-text hidden">
                 <strong>
-                  Please enter all required information above.
+                  {this.props.helpText}
                 </strong>
               </span>
             }
@@ -131,7 +131,7 @@ Slide.defaultProps = {
     />,
   helpText:
     <FormattedMessage
-        id="app.slide.requiredText"
+        id="app.slide.helpText"
         description="Default text to tell user that the current slide is incomplete."
         defaultMessage="Please enter all required information above."
     />

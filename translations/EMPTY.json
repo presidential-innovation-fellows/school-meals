@@ -260,6 +260,19 @@
 
 
   /***
+   *** src/components/application/IncomeTypeFormGroup.jsx
+   ***/
+
+  // Missing Income alert title
+  // English: "Missing Income"
+  "app.slides.incomeTypeFormGroup.missingIncomeTitle": "",
+
+  // Missing Income alert
+  // English: "You indicated that {person} receives {incomeDescription}, but you selected “No” for each related income source on a following page. Please correct this answer or provide details on the following pages."
+  "app.slides.incomeTypeFormGroup.missingIncome": "",
+
+
+  /***
    *** src/components/application/Slide.jsx
    ***/
 
@@ -273,7 +286,7 @@
 
   // Default text to tell user that the current slide is incomplete.
   // English: "Please enter all required information above."
-  "app.slide.requiredText": "",
+  "app.slide.helpText": "",
 
 
   /***
@@ -654,6 +667,10 @@
    *** src/components/application/slides/ChildIncomeSlide.jsx
    ***/
 
+  // Missing Income alert title
+  // English: "Missing Income"
+  "app.slides.childIncomeSlide.missingIncomeTitle": "",
+
   // Introductory paragraph.
   // English: "Does {child} have income from any of the following sources?"
   "app.slides.childIncomeSlide.intro": "",
@@ -735,6 +752,10 @@
    *** src/components/application/slides/Contact.jsx
    ***/
 
+  // Text for the header of the slide.
+  // English: "Contact Info"
+  "app.slides.contact.header": "",
+
   // Introductory paragraph.
   // English: "Please enter your contact information so that we can reach you in case there are any issues with your application. This information is optional, but we strongly encourage you to provide it."
   "app.slides.contact.intro": "",
@@ -760,6 +781,14 @@
   /***
    *** src/components/application/slides/DemographicsForm.jsx
    ***/
+
+  // Label for choice if student is hispanic/latino.
+  // English: "Hispanic or Latino"
+  "app.slides.demographics.radioTrue": "",
+
+  // Label for choice if student is not hispanic/latino.
+  // English: "Non Hispanic or Latino"
+  "app.slides.demographics.radioFalse": "",
 
   // Ethnicity
   // English: "Ethnicity"
@@ -853,6 +882,10 @@
    *** src/components/application/slides/IncomeType.jsx
    ***/
 
+  // Missing Income alert title
+  // English: "Missing Income"
+  "app.slides.incomeType.missingIncomeTitle": "",
+
   // Missing Income Alert
   // English: "On a previous page, you indicated that {adult} receives income from one of the above sources. Please enter this income above or correct your previous answer."
   "app.slides.incomeType.missingIncome": "",
@@ -890,6 +923,10 @@
   /***
    *** src/components/application/slides/LegalStatements.jsx
    ***/
+
+  // Text for the header of the slide.
+  // English: "Legal Statements"
+  "app.slides.legalStatements.header": "",
 
   // Almost done
   // English: "Almost done! Please read and acknowledge the following legal statements."
@@ -1158,6 +1195,14 @@
    *** src/components/application/slides/Summary.jsx
    ***/
 
+  // Text for the header of the slide.
+  // English: "Summary"
+  "app.slides.summary.header": "",
+
+  // Text on the button to submit final applicaiton.
+  // English: "Submit"
+  "app.slides.summary.nextText": "",
+
   // Awesome, you're finished!
   // English: "Awesome, you finished!"
   "app.slides.summary.finished": "",
@@ -1181,6 +1226,10 @@
   // Assistance program case numbers
   // English: "Assistance program case numbers"
   "app.slides.summary.caseNumbers": "",
+
+  // Placeholder indicating that no assistance programs have been selected.
+  // English: "(none)"
+  "app.slides.summary.noAssistancePrograms": "",
 
   // Total household income
   // English: "Total household income"
@@ -1248,6 +1297,10 @@
   /***
    *** src/components/application/slides/ThankYou.jsx
    ***/
+
+  // Text for the header of the slide.
+  // English: "Thank you for applying for school meal benefits!"
+  "app.slides.thankYou.header": "",
 
   // application has been submitted
   // English: "Your application has been submitted."
@@ -1877,5 +1930,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479713435705."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479718990917."
 }
