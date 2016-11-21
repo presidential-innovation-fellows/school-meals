@@ -20,7 +20,7 @@ class Alert extends Component {
 }
 
 Alert.propTypes = {
-  heading: PropTypes.string,
+  heading: PropTypes.node,
   type: PropTypes.string
 }
 

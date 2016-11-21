@@ -3,6 +3,7 @@ import { computed } from 'mobx'
 import { observer } from 'mobx-react'
 import BooleanRadio from './BooleanRadio'
 import { informalName } from '../../helpers'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class IncomeTypeFormGroup extends Component {
@@ -41,13 +42,23 @@ class IncomeTypeFormGroup extends Component {
           this.isError &&
           <div className="usa-alert usa-alert-warning">
             <div className="usa-alert-body">
-              <h3 className="usa-alert-heading">Missing Income</h3>
+              <h3 className="usa-alert-heading">
+                <FormattedMessage
+                    id="app.slides.incomeTypeFormGroup.missingIncomeTitle"
+                    description="Missing Income alert title"
+                    defaultMessage="Missing Income"
+                />
+              </h3>
               <p className="usa-alert-text">
-                You indicated
-                that <strong>{informalName(person)}</strong> receives
-                {' ' + incomeDescription}, but you selected "No" for
-                each related income source on a following page. Please
-                correct this answer or provide details on the following pages.
+                <FormattedMessage
+                    id="app.slides.incomeTypeFormGroup.missingIncome"
+                    description="Missing Income alert"
+                    defaultMessage="You indicated that {person} receives {incomeDescription}, but you selected “No” for each related income source on a following page. Please correct this answer or provide details on the following pages."
+                    values={{
+                      incomeDescription,
+                      person: <strong>{informalName(person)}</strong>
+                    }}
+                />
               </p>
             </div>
           </div>
