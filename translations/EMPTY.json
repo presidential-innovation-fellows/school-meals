@@ -735,6 +735,10 @@
    *** src/components/application/slides/Contact.jsx
    ***/
 
+  // Text for the header of the slide.
+  // English: "Contact Info"
+  "app.slides.contact.header": "",
+
   // Introductory paragraph.
   // English: "Please enter your contact information so that we can reach you in case there are any issues with your application. This information is optional, but we strongly encourage you to provide it."
   "app.slides.contact.intro": "",
@@ -1905,5 +1909,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479717557361."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479717773733."
 }

@@ -179,6 +179,7 @@
   "app.slides.childIncomeSlide.missingIncome": "En una página anterior, usted indicó que {child}} recibía ingresos. Por favor ingrese este ingreso arriba o corrija su respuesta anterior.",
   "app.slides.childIncomeSlide.changeAnswer": "Cambiar respuesta anterior",
 
+  "app.slides.contact.header": "Datos de Contacto",
   "app.slides.contact.intro": "Ingrese su información de contacto para que podamos comunicarnos con usted en caso de que ocurra algún problema con su solicitud. Esta información es opcional, pero le aconsejamos enfáticamente que la ingrese.",
 
   "app.slides.demographics.intro": "Esta es una pregunta opcional para la información que recopilamos sobre los estudiantes que asisten a la escuela en {organizationName}",
