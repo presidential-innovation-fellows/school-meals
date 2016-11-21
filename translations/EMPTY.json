@@ -282,6 +282,89 @@
 
 
   /***
+   *** src/components/application/IncomeSourceFrequency.jsx
+   ***/
+
+  // Default text for income frequency select box.
+  // English: "Frequency…"
+  "app.incomeSourceFrequency.placeholder": "",
+
+  // Frequency of income received per year.
+  // English: "Annually"
+  "app.incomeSourceFrequency.annually": "",
+
+  // Frequency of income received per month.
+  // English: "Monthly"
+  "app.incomeSourceFrequency.monthly": "",
+
+  // Frequency of income received twice monthly.
+  // English: "Twice per month"
+  "app.incomeSourceFrequency.twicePerMonth": "",
+
+  // Frequency of income received per two weeks.
+  // English: "Every two weeks"
+  "app.incomeSourceFrequency.everyTwoWeeks": "",
+
+  // Frequency of income received per week.
+  // English: "Weekly"
+  "app.incomeSourceFrequency.weekly": "",
+
+  // Frequency of income received per hour.
+  // English: "Hourly"
+  "app.incomeSourceFrequency.hourly": "",
+
+
+  /***
+   *** src/components/application/IncomeSourceHourlyPeriod.jsx
+   ***/
+
+  // Default text for hourly period select box.
+  // English: "hours per…"
+  "app.incomeSourceHourlyPeriod.placeholder": "",
+
+  // Number of hours per week.
+  // English: "hours per week"
+  "app.incomeSourceHourlyPeriod.week": "",
+
+  // Number of hours per month.
+  // English: "hours per month"
+  "app.incomeSourceHourlyPeriod.month": "",
+
+
+  /***
+   *** src/components/application/IncomeSourceSummary.jsx
+   ***/
+
+  // Hourly income reported annually.
+  // English: "per year"
+  "app.incomeSourceSummary.annually": "",
+
+  // Hourly income reported monthly.
+  // English: "per month"
+  "app.incomeSourceSummary.monthly": "",
+
+  // Hourly income reported twice per month.
+  // English: "twice per month"
+  "app.incomeSourceSummary.twicePerMonth": "",
+
+  // Hourly income reported every two weeks.
+  // English: "every two weeks"
+  "app.incomeSourceSummary.everyTwoWeeks": "",
+
+  // Hourly income reported weekly.
+  // English: "per week"
+  "app.incomeSourceSummary.weekly": "",
+
+  // Hourly income reported weekly by week.
+  // English: "per week"
+  "app.incomeSourceSummary.hourly.week": "",
+
+  // Hourly income reported weekly by month.
+  // English: "per month"
+  "app.incomeSourceSummary.hourly.month": "",
+
+
+  /***
    *** src/components/application/IncomeTypeFormGroup.jsx
    ***/
 
@@ -518,6 +601,10 @@
   // Label used for title, add/remove buttons.
   // English: "Adult"
   "app.slides.adults.label": "",
+
+  // Text to show on next slide button if no other adults are added.
+  // English: "No other adults"
+  "app.slides.adults.nextText": "",
 
 
   /***
@@ -994,6 +1081,14 @@
   // English: "Please choose one of the following:"
   "app.slides.incomeElection.chooseFollowing": "",
 
+  // Option to provide household income now.
+  // English: "Provide income information now"
+  "app.slides.incomeElection.electToProvideIncome.trueLabel": "",
+
+  // Option to not provide household income now.
+  // English: "Submit my application without income information"
+  "app.slides.incomeElection.electToProvideIncome.falseLabel": "",
+
 
   /***
    *** src/components/application/slides/IncomeType.jsx
@@ -1150,6 +1245,10 @@
   // Label used for title, add/remove buttons.
   // English: "Child"
   "app.slides.otherChildren.label": "",
+
+  // Text to show on next slide button if no other children are added.
+  // English: "No other children"
+  "app.slides.otherChildren.nextText": "",
 
 
   /***
@@ -2092,5 +2191,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479765937770."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479770013420."
 }

@@ -69,6 +69,26 @@
   "app.incomeSourceAdditional.addButton": "Añadir fuente de ingresos",
   "app.personForm.removeButton": "Quitar {name}",
 
+  "app.incomeSourceFrequency.placeholder": "Frecuencia…",
+  "app.incomeSourceFrequency.annually": "Anualmente",
+  "app.incomeSourceFrequency.monthly": "Mensual",
+  "app.incomeSourceFrequency.twicePerMonth": "Dos veces al mes",
+  "app.incomeSourceFrequency.everyTwoWeeks": "Cada dos semanas",
+  "app.incomeSourceFrequency.weekly": "Semanal",
+  "app.incomeSourceFrequency.hourly": "Cada hora",
+
+  "app.incomeSourceHourlyPeriod.placeholder": "horas al…",
+  "app.incomeSourceHourlyPeriod.week": "horas a la semana",
+  "app.incomeSourceHourlyPeriod.month": "horas al mes",
+
+  "app.incomeSourceSummary.annually": "por año",
+  "app.incomeSourceSummary.monthly": "por mes",
+  "app.incomeSourceSummary.twicePerMonth": "dos veces al mes",
+  "app.incomeSourceSummary.everyTwoWeeks": "cada dos semanas",
+  "app.incomeSourceSummary.weekly": "por semana",
+  "app.incomeSourceSummary.hourly.week": "por semana",
+  "app.incomeSourceSummary.hourly.month": "por mes",
+
   "app.slides.incomeTypeFormGroup.missingIncomeTitle": "Falta de Ingresos",
   "app.slides.incomeTypeFormGroup.missingIncome": "",
 
@@ -124,6 +144,7 @@
   "app.slides.adults.military": "miembros de la familia que están en el ejército, que han sido desplegados",
   "app.slides.adults.includeRegardless": "Incluya a las personas sin importar la edad o si ganan o reciben ingresos.",
   "app.slides.adults.label": "Adulto",
+  "app.slides.adults.nextText": "No hay otros adultos",
 
   "app.slides.assistancePrograms.intro": "Si alguien en su hogar participa en {snap}, {tanf}, o {fdpir}, {studentList} {studentCount, plural, one {es elegible} other {son elegibles}} para recibir comidas escolares gratis.",
   "app.slides.assistancePrograms.household": "Un hogar se define como un grupo de personas, relacionadas o no relacionadas que suelen vivir juntas y que comparten ingresos y gastos.",
@@ -241,6 +262,8 @@
 
   "app.slides.incomeElection.confirmWithStaff": "Sólo necesitamos confirmar eso con el personal del programa. Si no podemos hacerlo, tendrá que presentar una solicitud con información de ingresos para determinar su nivel de beneficios.",
   "app.slides.incomeElection.chooseFollowing": "Elija una de las siguientes opciones:",
+  "app.slides.incomeElection.electToProvideIncome.trueLabel": "Proporcionar información de ingresos ahora",
+  "app.slides.incomeElection.electToProvideIncome.falseLabel": "Presentar mi solicitud sin información de ingresos",
 
   "app.slides.incomeType.missingIncomeTitle": "Falta de Ingresos",
   "app.slides.incomeType.missingIncome": "En una página anterior, indicó que {adult} recibe ingresos de una de las fuentes anteriores. Por favor ingrese este ingreso arriba o corrija su respuesta anterior.",
@@ -278,6 +301,7 @@
   "app.slides.otherChildren.childType1": "estudiantes que estén en 12.º grado o menos que asisten a la escuela en otro distrito escolar que no sea {organizationName}",
   "app.slides.otherChildren.childType2": "niños que asisten a la guardería o a preescolar o que no tengan edad escolar, incluidos los bebés pequeños",
   "app.slides.otherChildren.childType3": "cualquier persona de 18 años de edad o menos que viva en su hogar y que no asista a la escuela actualmente",
+  "app.slides.otherChildren.nextText": "No hay otros niños",
   "app.slides.otherChildren.label": "Niño",
 
   "app.slides.otherIncome.regularCashPayments": "{tooltip} proporcionadas por alguien que no viva en el hogar",

@@ -61,7 +61,7 @@ IncomeSourceAmount.propTypes = {
 IncomeSourceAmount.defaultProps = {
   fieldName: 'amount',
   type: 'tel',
-  placeholder: 'Amount',
+  placeholder: '$',
   prepend: '$'
 }
 
