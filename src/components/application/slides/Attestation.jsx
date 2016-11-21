@@ -17,7 +17,7 @@ class Attestation extends Component {
   render() {
     const { attestation, attestor } = this.props
 
-    const headerText = 
+    const headerText =
       <FormattedMessage
           id="app.slides.attestation.header"
           description="Text for the header of the slide."
@@ -45,37 +45,61 @@ class Attestation extends Component {
           <Fieldset legend="Attestation">
             <InputField
                 name="firstName"
-                label="First name"
                 object={attestor}
                 required
-            />
+            >
+              <FormattedMessage
+                  id="app.slides.attestation.firstName.label"
+                  description="Field label."
+                  defaultMessage="First name"
+              />
+            </InputField>
 
             <InputField
                 name="middleName"
-                label="Middle name"
                 object={attestor}
-            />
+            >
+              <FormattedMessage
+                  id="app.slides.attestation.middleName.label"
+                  description="Field label."
+                  defaultMessage="Middle name"
+              />
+            </InputField>
 
             <InputField
                 name="lastName"
-                label="Last name"
                 object={attestor}
                 required
-            />
+            >
+              <FormattedMessage
+                  id="app.slides.attestation.lastName.label"
+                  description="Field label."
+                  defaultMessage="Last name"
+              />
+            </InputField>
 
             <InputField
                 name="suffix"
-                label="Suffix (e.g. Jr., Sr., I, II, III)"
-                placeholder="Suffix"
                 object={attestor}
-            />
+            >
+              <FormattedMessage
+                  id="app.slides.attestation.suffix.label"
+                  description="Field label."
+                  defaultMessage="Suffix (e.g. Jr., Sr., I, II, III)"
+              />
+            </InputField>
 
             <InputField
                 name="date"
-                label="Today's date"
                 object={attestation}
                 disabled
-            />
+            >
+              <FormattedMessage
+                  id="app.slides.attestation.date.label"
+                  description="Field label."
+                  defaultMessage="Today's date"
+              />
+            </InputField>
           </Fieldset>
         </Form>
         <p><em>

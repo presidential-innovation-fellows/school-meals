@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import { observer, observable} from 'mobx-react'
 import { hoursExceedPeriodCapacity } from '../../helpers'
+import { FormattedMessage } from 'react-intl'
 import BooleanRadio from './BooleanRadio'
 import Checkbox from './Checkbox'
 import Form from './Form'
@@ -9,9 +10,7 @@ import IncomeSourceFrequency from './IncomeSourceFrequency'
 import IncomeSourceHourlyPeriod from './IncomeSourceHourlyPeriod'
 import IncomeSourceSummary from './IncomeSourceSummary'
 import IncomeSource from './IncomeSource'
-
 import IncomeSourceSingle from './IncomeSourceSingle'
-
 import shortid from 'shortid'
 
 @observer
@@ -84,7 +83,13 @@ class AdditionalIncome extends Component {
                 //return (<div key={shortid.generate()}> <IncomeSourceSingle incomeSource={source} {...incomeSourceProps}/>  <button id={i} {...deleteButtonProps}>Remove {i+2}</button> </div>)
               }, this)
             }
-            <button {...addButtonProps} >+ Add Income Source</button>
+            <button {...addButtonProps} >
+              + <FormattedMessage
+                    id="app.incomeSourceAdditional.addButton"
+                    description="Button text to add an income source"
+                    defaultMessage="Add Income Source"
+                />
+            </button>
           </div>
         }
       </div>
