@@ -66,6 +66,8 @@
   "app.booleanRadio.trueLabel": "Sí",
   "app.booleanRadio.falseLabel": "No",
 
+  "app.incomeSourceAdditional.addButton": "Añadir fuente de ingresos",
+
   "app.slides.incomeTypeFormGroup.missingIncomeTitle": "Falta de Ingresos",
   "app.slides.incomeTypeFormGroup.missingIncome": "",
 
