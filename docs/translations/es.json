@@ -67,11 +67,14 @@
   "app.booleanRadio.falseLabel": "No",
 
   "app.incomeSourceAdditional.addButton": "Añadir fuente de ingresos",
+  "app.personForm.removeButton": "Quitar {name}",
 
   "app.slides.incomeTypeFormGroup.missingIncomeTitle": "Falta de Ingresos",
   "app.slides.incomeTypeFormGroup.missingIncome": "",
 
   "app.inputField.required": "Obligatorio",
+
+  "app.personCollection.addButton": "+ Añadir otro {personType}",
 
   "app.slide.backButton": "Volver",
   "app.slide.nextButton": "Continuar",
@@ -81,6 +84,8 @@
   "app.slides.adultIncomeOverview.income": "En cuanto a las preguntas sobre ingresos, todos los montos deben referirse a los {tooltip}, {grossIncome} de {adult}.",
   "app.slides.adultIncomeOverview.current": "actuales",
   "app.slides.adultIncomeOverview.grossIncome": "ingresos brutos",
+  "app.slides.adultIncomeOverview.grossIncomeDefinition": "Ingreso bruto significa todo el dinero ganado o recibido antes de deducciones tales como impuestos sobre la renta, impuestos de seguridad social y primas de seguro. No debe informar {netIncome}, que es la cantidad de dinero recibida en un cheque de pago.",
+  "app.slides.adultIncomeOverview.netIncome": "ingresos netos",
   "app.slides.adultIncomeOverview.militaryQuestion": "¿{adult} está en el {tooltip}?",
   "app.slides.adultIncomeOverview.military": "ejército",
   "app.slides.adultIncomeOverview.deployedQuestion": "¿{adult} ha sido {tooltip}?",
@@ -118,6 +123,7 @@
   "app.slides.adults.collegeKids": "hijos que se han ido a la universidad,",
   "app.slides.adults.military": "miembros de la familia que están en el ejército, que han sido desplegados",
   "app.slides.adults.includeRegardless": "Incluya a las personas sin importar la edad o si ganan o reciben ingresos.",
+  "app.slides.adults.label": "Adulto",
 
   "app.slides.assistancePrograms.intro": "Si alguien en su hogar participa en {snap}, {tanf}, o {fdpir}, {studentList} {studentCount, plural, one {es elegible} other {son elegibles}} para recibir comidas escolares gratis.",
   "app.slides.assistancePrograms.household": "Un hogar se define como un grupo de personas, relacionadas o no relacionadas que suelen vivir juntas y que comparten ingresos y gastos.",
@@ -173,6 +179,8 @@
   "app.slides.childIncomeOverview.pension": "pensión",
   "app.slides.childIncomeOverview.annuity": "anualidad",
   "app.slides.childIncomeOverview.trust": "fideicomiso",
+  "app.slides.childIncomeOverview.exclusions": "",
+  "app.slides.childIncomeOverview.label": "",
 
   "app.slides.childIncomeSlide.missingIncomeTitle": "Falta de Ingresos",
   "app.slides.childIncomeSlide.intro": "¿{child} obtiene ingresos de alguna de las siguientes fuentes?",
@@ -197,6 +205,14 @@
 
   "app.slides.contact.header": "Datos de Contacto",
   "app.slides.contact.intro": "Ingrese su información de contacto para que podamos comunicarnos con usted en caso de que ocurra algún problema con su solicitud. Esta información es opcional, pero le aconsejamos enfáticamente que la ingrese.",
+
+  "app.slides.contact.phone.label": "Número de teléfono",
+  "app.slides.contact.email.label": "Email",
+  "app.slides.contact.address1.label": "Dirección",
+  "app.slides.contact.address2.label": "Dirección 2",
+  "app.slides.contact.city.label": "Ciudad",
+  "app.slides.contact.state.label": "Estado",
+  "app.slides.contact.zip.label": "Código postal",
 
   "app.slides.demographics.intro": "Esta es una pregunta opcional para la información que recopilamos sobre los estudiantes que asisten a la escuela en {organizationName}",
   "app.slides.demographics.required": "Estamos obligados a solicitar información sobre la raza y el origen étnico de los estudiantes que solicitan el programa.",
@@ -262,6 +278,7 @@
   "app.slides.otherChildren.childType1": "estudiantes que estén en 12.º grado o menos que asisten a la escuela en otro distrito escolar que no sea {organizationName}",
   "app.slides.otherChildren.childType2": "niños que asisten a la guardería o a preescolar o que no tengan edad escolar, incluidos los bebés pequeños",
   "app.slides.otherChildren.childType3": "cualquier persona de 18 años de edad o menos que viva en su hogar y que no asista a la escuela actualmente",
+  "app.slides.otherChildren.label": "Niño",
 
   "app.slides.otherIncome.regularCashPayments": "{tooltip} proporcionadas por alguien que no viva en el hogar",
   "app.slides.otherIncome.regularCashPaymentsTooltip": "Pagos regulares en efectivo",
@@ -305,6 +322,7 @@
   "app.slides.spousalIncome.childSupport": "Manutención infantil",
 
   "app.slides.students.intro": "Mencione los nombres de los estudiantes de su hogar que asisten a {organizationName} que estén solicitando los beneficios de comidas escolares.",
+  "app.slides.students.label": "Estudiante",
 
   "app.slides.summary.header": "Resumen",
   "app.slides.summary.nextText": "Enviar",
@@ -484,6 +502,14 @@
   "help.topic.WhatInformation.answer3b": "Si alguien recibe beneficios de jubilación o Seguro Social, es posible que deba reunir las declaraciones de beneficios para informar el monto y la frecuencia de los pagos.",
   "help.topic.WhatInformation.answer3c": "También es posible que deba hacer referencia a otros documentos financieros para verificar fuentes de ingresos adicionales.",
   "help.topic.WhatInformation.answer4": "¿No está seguro de contar con todo lo que necesita? No se preocupe. La sección de ingresos de la solicitud contiene instrucciones y explicaciones detalladas sobre las fuentes de ingresos que debe incluir, y puede recopilar la información adicional en ese momento.",
+
+  "applicationData.person.firstName.label": "Nombre de pila",
+  "applicationData.person.middleName.label": "Segundo nombre",
+  "applicationData.person.lastName.label": "Apellido",
+  "applicationData.person.suffix.label": "Sufijo (por ejemplo, Jr., Sr., I, II, III)",
+  "applicationData.otherChild.isFoster.label": "En hogar de acogida con usted",
+  "applicationData.student.school.label": "Escuela",
+  "applicationData.student.grade.label": "Grado",
 
   "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479498757654."
 }
