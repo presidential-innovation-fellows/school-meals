@@ -21,8 +21,15 @@ class Contact extends Component {
   render() {
     const { contact } = this.props
 
+    const headerText =
+      <FormattedMessage
+          id="app.slides.contact.header"
+          description="Text for the header of the slide."
+          defaultMessage="Contact Info"
+      />
+
     return (
-      <Slide header="Contact Info" id="contact" beginsSection>
+      <Slide header={headerText} id="contact" beginsSection>
         <p className="usa-font-lead">
         <FormattedMessage
               id="app.slides.contact.intro"

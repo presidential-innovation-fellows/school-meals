@@ -31,6 +31,12 @@ class ChildIncomeSlide extends Component {
     const incomeType = person.incomeTypes.child
     const incomeSources = incomeType.sources
     const name = informalName(person)
+    const missingIncomeTitle =
+      <FormattedMessage
+          id="app.slides.childIncomeSlide.missingIncomeTitle"
+          description="Missing Income alert title"
+          defaultMessage="Missing Income"
+      />
 
     return(
       <Slide header={name}
@@ -180,23 +186,23 @@ class ChildIncomeSlide extends Component {
         </IncomeSource>
 
         { this.allSourcesFalse &&
-          <Alert heading="Missing Income">
-          <FormattedMessage
-            id="app.slides.childIncomeSlide.missingIncome"
-            description="Missing Income Alert"
-            defaultMessage="On a previous page, you indicated that {child} receives income. Please enter this income above or correct your previous answer."
-            values={{
-            child: <strong>{name}</strong>
-            }}
-          />
+          <Alert heading={missingIncomeTitle}>
+            <FormattedMessage
+                id="app.slides.childIncomeSlide.missingIncome"
+                description="Missing Income Alert"
+                defaultMessage="On a previous page, you indicated that {child} receives income. Please enter this income above or correct your previous answer."
+                values={{
+                  child: <strong>{name}</strong>
+                }}
+            />
             <br />
             <Button className="usa-button-gray"
                     slideId="child-income">
-                    <FormattedMessage
-                        id="app.slides.childIncomeSlide.changeAnswer"
-                        description="Change Answer"
-                        defaultMessage="Change previous answer"
-                    />
+              <FormattedMessage
+                  id="app.slides.childIncomeSlide.changeAnswer"
+                  description="Change Answer"
+                  defaultMessage="Change previous answer"
+              />
             </Button>
           </Alert>
         }

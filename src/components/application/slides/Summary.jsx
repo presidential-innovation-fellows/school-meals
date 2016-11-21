@@ -29,9 +29,23 @@ class Summary extends Component {
     // don't show link to Adults slide if we're not collecting household income
     const adultsId = applicationData.showHousehold && 'adults'
 
+    const headerText =
+      <FormattedMessage
+          id="app.slides.summary.header"
+          description="Text for the header of the slide."
+          defaultMessage="Summary"
+      />
+
+    const nextText =
+      <FormattedMessage
+          id="app.slides.summary.nextText"
+          description="Text on the button to submit final applicaiton."
+          defaultMessage="Submit"
+      />
+
     return (
-      <Slide header="Summary"
-             nextText="Submit"
+      <Slide header={headerText}
+             nextText={nextText}
              nextDisabled={!this.isValid}
              id="summary">
         <p className="usa-font-lead">
@@ -95,7 +109,13 @@ class Summary extends Component {
                   </li>
                 )
                 :
-                <li>(none)</li>
+                <li>
+                  <FormattedMessage
+                      id="app.slides.summary.noAssistancePrograms"
+                      description="Placeholder indicating that no assistance programs have been selected."
+                      defaultMessage="(none)"
+                  />
+                </li>
               }
             </ul>
           </div>
