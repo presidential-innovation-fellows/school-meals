@@ -14,15 +14,15 @@ export default class IncomeElection extends Component {
       <Article>
         <QualifyMigrant />
         <QualifyHomeless />
-        <Stopic title={help.qualifyRunawayTitle} body={help.qualifyRunawayBody} />
+        <Topic title={help.qualifyRunawayTitle} body={help.qualifyRunawayBody} />
         <WhatInformation />
         <WhatIncome />
-        <Stopic title={help.applyLaterTitle} body={help.applyLaterBody} />
-        <Stopic title={help.publicChargeTitle} body={help.publicChargeBody} />
+        <Topic title={help.applyLaterTitle} body={help.applyLaterBody} />
+        <Topic title={help.publicChargeTitle} body={help.publicChargeBody} />
         <bodyLabels>Definitions</bodyLabels>
-        <Stopic title={define.mckinneyTerm} body={define.mckinneyDef} />
-        <Stopic title={define.mepTerm} body={define.mepDef} />
-        <Stopic title={define.runawayHomelessActTerm} body={define.runawayHomelessActDef} />
+        <Topic title={define.mckinneyTerm} body={define.mckinneyDef} />
+        <Topic title={define.mepTerm} body={define.mepDef} />
+        <Topic title={define.runawayHomelessActTerm} body={define.runawayHomelessActDef} />
       </Article>
     )
   }
