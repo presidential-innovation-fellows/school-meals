@@ -3,7 +3,7 @@ import IncomeSource from '../IncomeSource'
 import IncomeType from './IncomeType'
 import { observer } from 'mobx-react'
 import { tooltiptext } from '../../Tooltiptext'
-import Tooltipcomp from '../Tooltip'
+import Tooltip from '../Tooltip'
 import {FormattedMessage} from 'react-intl'
 
 @observer
@@ -22,23 +22,23 @@ class SpousalIncome extends Component {
       <IncomeType {...incomeTypeProps}>
 
         <IncomeSource incomeSources={incomeSources} name="alimony">
-        <Tooltipcomp text={tooltiptext.alimony}>
+        <Tooltip text={tooltiptext.alimony}>
            <FormattedMessage
               id="app.slides.spousalIncome.alimony"
               description="Alimony"
               defaultMessage="Alimony"
            />
-        </Tooltipcomp>
+        </Tooltip>
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="childSupport">
-        <Tooltipcomp text={tooltiptext.childSupport}>
+        <Tooltip text={tooltiptext.childSupport}>
            <FormattedMessage
               id="app.slides.spousalIncome.childSupport"
               description="Child support"
               defaultMessage="Child support"
            />
-        </Tooltipcomp>
+        </Tooltip>
         </IncomeSource>
       </IncomeType>
     )

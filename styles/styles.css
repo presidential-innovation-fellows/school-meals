@@ -74,6 +74,11 @@ select.usa-input-success {
   color: black;
 }
 
+.usa-label,
+.usa-label-big {
+  white-space: nowrap;
+}
+
 .lowercase {
   text-transform: lowercase;
 }
@@ -103,13 +108,14 @@ footer .not-real-disclaimer {
 .info-target {
   border-bottom: 1px dotted #337ab7;
   cursor: pointer;
+  white-space: nowrap;
 }
 
 .info-target .glyphicon {
   color: #337ab7;
   left: .2em;
   top: .1em;
-  padding-right: .1em;
+  padding-right: .2em;
 }
 
 .slide {

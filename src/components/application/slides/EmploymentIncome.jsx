@@ -3,7 +3,7 @@ import IncomeSource from '../IncomeSource'
 import IncomeType from './IncomeType'
 import { observer } from 'mobx-react'
 import { tooltiptext } from '../../Tooltiptext'
-import Tooltipcomp from '../Tooltip'
+import Tooltip from '../Tooltip'
 import {FormattedMessage} from 'react-intl'
 
 @observer
@@ -47,28 +47,28 @@ class EmploymentIncome extends Component {
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} showAnnual={true} name="cashBonus">
-                <Tooltipcomp text={tooltiptext.cashBonus}>
+                <Tooltip text={tooltiptext.cashBonus}>
                           <FormattedMessage
                               id="app.slides.employmentIncome.tooltipCashBonus"
                               description="Cash bonus tooltip"
                               defaultMessage="Cash bonus"
                           />
-                </Tooltipcomp>
+                </Tooltip>
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} showHourly={true} showAnnual={true} name="selfEmployment">
           <FormattedMessage
               id="app.slides.employmentIncome.selfEmployment"
               description="Cash bonus"
-              defaultMessage="Net income from &nbsp;{tooltip}"
+              defaultMessage="Net income from {tooltip}"
               values={{
-                tooltip: <Tooltipcomp text={tooltiptext.selfEmployment}>
+                tooltip: <Tooltip text={tooltiptext.selfEmployment}>
                           <FormattedMessage
                               id="app.slides.employmentIncome.tooltipSelf"
                               description="self-employment"
                               defaultMessage="self-employment"
                           />
-                        </Tooltipcomp>
+                        </Tooltip>
               }}
           />
         </IncomeSource>

@@ -9,7 +9,7 @@ import { computed } from 'mobx'
 import { observer } from 'mobx-react'
 import { incomeTypeIsValid, informalName } from '../../../helpers'
 import { tooltiptext } from '../../Tooltiptext'
-import Tooltipcomp from '../Tooltip'
+import Tooltip from '../Tooltip'
 import {FormattedMessage} from 'react-intl'
 
 @observer
@@ -53,15 +53,15 @@ class ChildIncomeSlide extends Component {
         <FormattedMessage
               id="app.slides.childIncomeSlide.incomeReported"
               description="Income reported should be child's."
-              defaultMessage="Income reported here should be the child’s &nbsp;{tooltip}&nbsp;, {gross}  income."
+              defaultMessage="Income reported here should be the child’s {tooltip}, {gross}  income."
               values={{
-                tooltip: <Tooltipcomp text={tooltiptext.currentChild} >
+                tooltip: <Tooltip text={tooltiptext.currentChild} >
                   <FormattedMessage
                     id="app.slides.childIncomeSlide.current"
                     description="current"
                     defaultMessage="current"
                   />
-                </Tooltipcomp>,
+                </Tooltip>,
                 gross:<em>
                 <FormattedMessage
                     id="app.slides.childIncomeSlide.gross"
@@ -103,22 +103,22 @@ class ChildIncomeSlide extends Component {
           <FormattedMessage
               id="app.slides.childIncomeSlide.supplementalIncome"
               description="Supplemental income"
-              defaultMessage="Supplemental Security Insurance &nbsp;{tooltip}&nbsp; or Social Security &nbsp;{tooltip2}"
+              defaultMessage="Supplemental Security Insurance {tooltip} or Social Security {tooltip2}"
               values={{
-                tooltip: <Tooltipcomp text={tooltiptext.ssiChildren} >
+                tooltip: <Tooltip text={tooltiptext.ssiChildren} >
                   <FormattedMessage
                     id="app.slides.childIncomeSlide.ssiChildren"
                     description="SSI"
                     defaultMessage="(SSI)"
                   />
-                </Tooltipcomp>,
-                tooltip2: <Tooltipcomp text={tooltiptext.ssSurvivor} >
+                </Tooltip>,
+                tooltip2: <Tooltip text={tooltiptext.ssSurvivor} >
                   <FormattedMessage
                     id="app.slides.childIncomeSlide.ssSurvivor"
                     description="survivor benefits"
                     defaultMessage="survivor benefits"
                   />
-                </Tooltipcomp>
+                </Tooltip>
               }}
           />
         </IncomeSource>
@@ -127,15 +127,15 @@ class ChildIncomeSlide extends Component {
         <FormattedMessage
               id="app.slides.childIncomeSlide.regularCash"
               description="Regular Cash Payments"
-              defaultMessage="{tooltip}&nbsp; from extended family or friends outside the household"
+              defaultMessage="{tooltip} from extended family or friends outside the household"
               values={{
-                tooltip: <Tooltipcomp text={tooltiptext.regularCashPayments} >
+                tooltip: <Tooltip text={tooltiptext.regularCashPayments} >
                   <FormattedMessage
                     id="app.slides.childIncomeSlide.regularCashPayments"
                     description="Money regularly received"
                     defaultMessage="Money regularly received"
                   />
-                </Tooltipcomp>
+                </Tooltip>
               }}
           />
         </IncomeSource>
@@ -144,29 +144,29 @@ class ChildIncomeSlide extends Component {
         <FormattedMessage
               id="app.slides.childIncomeSlide.pensionAnnuityTrust"
               description="Pensions annuities & trusts"
-              defaultMessage="{tooltip}&nbsp;, &nbsp;{tooltip2}&nbsp;, or &nbsp;{tooltip3}"
+              defaultMessage="{tooltip}, {tooltip2}, or {tooltip3}"
               values={{
-                tooltip: <Tooltipcomp text={tooltiptext.pensionChildren} >
+                tooltip: <Tooltip text={tooltiptext.pensionChildren} >
                   <FormattedMessage
                     id="app.slides.childIncomeSlide.pensionChildren"
                     description="Pension"
                     defaultMessage="Pension"
                   />
-                </Tooltipcomp>,
-                tooltip2: <Tooltipcomp text={tooltiptext.annuityChildren} >
+                </Tooltip>,
+                tooltip2: <Tooltip text={tooltiptext.annuityChildren} >
                   <FormattedMessage
                     id="app.slides.childIncomeSlide.annuityChildren"
                     description="annuity"
                     defaultMessage="annuity"
                   />
-                </Tooltipcomp>,
-                tooltip3: <Tooltipcomp text={tooltiptext.trust} >
+                </Tooltip>,
+                tooltip3: <Tooltip text={tooltiptext.trust} >
                   <FormattedMessage
                     id="app.slides.childIncomeSlide.trust"
                     description="trust"
                     defaultMessage="trust"
                   />
-                </Tooltipcomp>
+                </Tooltip>
               }}
           />
         </IncomeSource>

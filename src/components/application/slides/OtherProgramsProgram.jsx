@@ -3,7 +3,7 @@ import BooleanRadio from '../BooleanRadio'
 import Checkbox from '../Checkbox'
 import Checkboxes from '../Checkboxes'
 import { observer } from 'mobx-react'
-import { informalList, informalName, programDescription } from '../../../helpers'
+import { informalName } from '../../../helpers'
 import {FormattedMessage} from 'react-intl'
 
 @observer
@@ -25,52 +25,14 @@ class OtherProgramsProgram extends Component {
     }
   }
 
-  get labelPrefix() {
-    const { allPeopleCollections, students } = this.props
-
-    return <span>
-      <FormattedMessage
-              id="app.slides.otherProgramsProgram.doDoes"
-              description="does or Do"
-              defaultMessage="{studentLength}{students}"
-              values={{
-                studentLength: students.length === 1 ?
-                      <FormattedMessage
-                          id="app.slides.otherProgramsProgram.does"
-                          description="Does"
-                          defaultMessage="Does "
-                      />
-                      :
-                      <FormattedMessage
-                          id="app.slides.otherProgramsProgram.do"
-                          description="Do"
-                          defaultMessage="Do "
-                      />,
-                students: <strong>{informalList(students, allPeopleCollections,
-                       <FormattedMessage
-                          id="app.slides.otherProgramsProgram.or"
-                          description="or"
-                          defaultMessage=" or "
-                      />
-                      )}</strong>
-              }}
-      />
-    </span>
-  }
-
   render() {
-    const { applicability, attribute, students } = this.props
+    const { applicability, attribute, label, note, students } = this.props
 
     return (
       <div>
         <label>
-          {this.labelPrefix} {programDescription(attribute)}?
-          {this.props.children &&
-           <small>
-             <br />
-             {this.props.children}
-           </small>
-          }
+          {label}
+          {note && <small><br />{note}</small>}
         </label>
 
         {students.length === 1 ?
@@ -108,6 +70,8 @@ OtherProgramsProgram.propTypes = {
   allPeopleCollections: PropTypes.array.isRequired,
   applicability: PropTypes.object.isRequired,
   attribute: PropTypes.string.isRequired,
+  label: PropTypes.node.isRequired,
+  note: PropTypes.node,
   students: PropTypes.oneOfType([
     PropTypes.object,
     PropTypes.arrayOf(PropTypes.object)

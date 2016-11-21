@@ -6,7 +6,7 @@ import BooleanRadio from '../BooleanRadio'
 import { observer } from 'mobx-react'
 import { organization } from '../../../config'
 import { tooltiptext } from '../../Tooltiptext'
-import Tooltipcomp from '../Tooltip'
+import Tooltip from '../Tooltip'
 import {FormattedMessage} from 'react-intl'
 
 @observer
@@ -45,7 +45,7 @@ class MilitaryIncome extends Component {
            <IncomeTypeDefaultText person={person} />
 
            <IncomeSource incomeSources={incomeSources} name="basic">
-             <Tooltipcomp id="militaryBasicPay" text={tooltiptext.basicPay} target="Military basic pay" />
+             <Tooltip id="militaryBasicPay" text={tooltiptext.basicPay} target="Military basic pay" />
              &nbsp;
               {incomeType.isDeployed ?
                 <span>
@@ -65,16 +65,16 @@ class MilitaryIncome extends Component {
            <FormattedMessage
               id="app.slides.militaryIncome.cashBonus"
               description="Military cash bonus"
-              defaultMessage="Military &nbsp;{tooltip}"
+              defaultMessage="Military {tooltip}"
               values={{
                 tooltip:
-                        <Tooltipcomp text={tooltiptext.cashBonus}>
+                        <Tooltip text={tooltiptext.cashBonus}>
                           <FormattedMessage
                             id="app.slides.militaryIncome.cashBonusTooltip"
                             description="cash bonus"
                             defaultMessage="cash bonus"
                           />
-                        </Tooltipcomp>
+                        </Tooltip>
               }}
           />
            </IncomeSource>
@@ -83,16 +83,16 @@ class MilitaryIncome extends Component {
            <FormattedMessage
               id="app.slides.militaryIncome.allowance"
               description="Military allowance income"
-              defaultMessage="Military &nbsp;{tooltip}&nbsp; for off-base housing, food, clothing (other than FSSA and MHPI)"
+              defaultMessage="Military {tooltip} for off-base housing, food, clothing (other than FSSA and MHPI)"
               values={{
                 tooltip:
-                        <Tooltipcomp text={tooltiptext.allowances}>
+                        <Tooltip text={tooltiptext.allowances}>
                           <FormattedMessage
                             id="app.slides.militaryIncome.allowanceTooltip"
                             description="allowance"
                             defaultMessage="allowance"
                           />
-                        </Tooltipcomp>
+                        </Tooltip>
               }}
           />
            </IncomeSource>

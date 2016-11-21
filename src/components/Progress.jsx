@@ -126,7 +126,7 @@ Progress.propTypes = {
     code: PropTypes.string
   }).isRequired,
   applicationData: PropTypes.shape({
-    showHousehold: PropTypes.func.isRequired
+    showHousehold: PropTypes.bool.isRequired
   }).isRequired
 };
 

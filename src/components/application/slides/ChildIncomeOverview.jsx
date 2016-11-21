@@ -3,9 +3,9 @@ import Slide from '../Slide'
 import IncomeTypeFormGroup from '../IncomeTypeFormGroup'
 import { observer } from 'mobx-react'
 import { informalName } from '../../../helpers'
-import { Glyphicon, OverlayTrigger, Tooltip } from 'react-bootstrap'
+import { Glyphicon, OverlayTrigger } from 'react-bootstrap'
 import { tooltiptext } from '../../Tooltiptext'
-import Tooltipcomp from '../Tooltip'
+import Tooltip from '../Tooltip'
 import {FormattedMessage} from 'react-intl'
 
 @observer
@@ -41,9 +41,9 @@ class ChildIncomeOverview extends Component {
               description="Introductory paragraph."
               defaultMessage="The next few questions are about your {tooltip}."
               values={{
-                tooltip: <Tooltipcomp text={tooltiptext.childincome}>
+                tooltip: <Tooltip text={tooltiptext.childincome}>
                            {pluralizedChildrenIncome}
-                         </Tooltipcomp>
+                         </Tooltip>
               }}
           />
         </p>
@@ -67,22 +67,22 @@ class ChildIncomeOverview extends Component {
           <FormattedMessage
               id="app.slides.childIncomeOverview.socialSecurity"
               description="Social Security"
-              defaultMessage="{socialSecurity}&nbsp; benefits, if the child is disabled, or is the &nbsp;{beneficiary}&nbsp; of another person’s Social Security benefits,"
+              defaultMessage="{socialSecurity} benefits, if the child is disabled, or is the {beneficiary} of another person’s Social Security benefits,"
               values={{
-              socialSecurity: <Tooltipcomp text={tooltiptext.ssiChildren}>
+              socialSecurity: <Tooltip text={tooltiptext.ssiChildren}>
                         <FormattedMessage
                           id="app.slides.childIncomeOverview.social"
                           description="social"
                           defaultMessage="Social Security"
                         />
-                        </Tooltipcomp>,
-              beneficiary: <Tooltipcomp text={tooltiptext.ssSurvivor}>
+                        </Tooltip>,
+              beneficiary: <Tooltip text={tooltiptext.ssSurvivor}>
                         <FormattedMessage
                           id="app.slides.childIncomeOverview.benefit"
                           description="benefit"
                           defaultMessage="beneficiary"
                         />
-                        </Tooltipcomp>
+                        </Tooltip>
               }}
           />
         </li>
@@ -98,29 +98,29 @@ class ChildIncomeOverview extends Component {
           <FormattedMessage
               id="app.slides.childIncomeOverview.moneyFrom"
               description="money From pension, annuity, or trust"
-              defaultMessage="money from a &nbsp;{pension}&nbsp;, &nbsp;{annuity}&nbsp;, or &nbsp;{trust}"
+              defaultMessage="money from a {pension}, {annuity}, or {trust}"
               values={{
-              pension: <Tooltipcomp text={tooltiptext.pensionChildren}>
+              pension: <Tooltip text={tooltiptext.pensionChildren}>
                         <FormattedMessage
                           id="app.slides.childIncomeOverview.pension"
                           description="pension"
                           defaultMessage="pension"
                         />
-                        </Tooltipcomp>,
-              annuity: <Tooltipcomp text={tooltiptext.annuityChildren}>
+                        </Tooltip>,
+              annuity: <Tooltip text={tooltiptext.annuityChildren}>
                         <FormattedMessage
                           id="app.slides.childIncomeOverview.annuity"
                           description="annuity"
                           defaultMessage="annuity"
                         />
-                        </Tooltipcomp>,
-              trust: <Tooltipcomp text={tooltiptext.trust}>
+                        </Tooltip>,
+              trust: <Tooltip text={tooltiptext.trust}>
                         <FormattedMessage
                           id="app.slides.childIncomeOverview.trust"
                           description="trust"
                           defaultMessage="trust"
                         />
-                        </Tooltipcomp>
+                        </Tooltip>
               }}
           />
         </li>

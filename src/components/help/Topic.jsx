@@ -24,7 +24,7 @@ class Topic extends Component {
 
 Topic.propTypes = {
   body: PropTypes.node,
-  title: PropTypes.string
+  title: PropTypes.node
 }
 
 export default Topic

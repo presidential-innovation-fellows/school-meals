@@ -3,7 +3,7 @@ import IncomeSource from '../IncomeSource'
 import IncomeType from './IncomeType'
 import { observer } from 'mobx-react'
 import { tooltiptext } from '../../Tooltiptext'
-import Tooltipcomp from '../Tooltip'
+import Tooltip from '../Tooltip'
 import {FormattedMessage} from 'react-intl'
 
 @observer
@@ -25,16 +25,16 @@ class PublicAssistanceIncome extends Component {
         <FormattedMessage
               id="app.slides.publicAssistanceIncome.ssi"
               description="SSI"
-              defaultMessage="Supplemental Security Income &nbsp;{tooltip}"
+              defaultMessage="Supplemental Security Income {tooltip}"
               values={{
                 tooltip:
-                        <Tooltipcomp text={tooltiptext.SSI}>
+                        <Tooltip text={tooltiptext.SSI}>
                           <FormattedMessage
                             id="app.slides.publicAssistanceIncome.ssiToolTip"
                             description="SSI tooltip"
                             defaultMessage="(SSI)"
                           />
-                        </Tooltipcomp>
+                        </Tooltip>
               }}
           />
         </IncomeSource>
@@ -43,16 +43,16 @@ class PublicAssistanceIncome extends Component {
         <FormattedMessage
               id="app.slides.publicAssistanceIncome.cashAssistance"
               description="SSI"
-              defaultMessage="{tooltip}&nbsp; from state or local government (including housing subsidies)"
+              defaultMessage="{tooltip} from state or local government (including housing subsidies)"
               values={{
                 tooltip:
-                        <Tooltipcomp text={tooltiptext.cashAssistance}>
+                        <Tooltip text={tooltiptext.cashAssistance}>
                           <FormattedMessage
                             id="app.slides.publicAssistanceIncome.cashAssistanceToolTip"
                             description="Cash assistance"
                             defaultMessage="Cash assistance"
                           />
-                        </Tooltipcomp>
+                        </Tooltip>
               }}
           />
         </IncomeSource>
