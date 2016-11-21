@@ -485,5 +485,13 @@
   "help.topic.WhatInformation.answer3c": "También es posible que deba hacer referencia a otros documentos financieros para verificar fuentes de ingresos adicionales.",
   "help.topic.WhatInformation.answer4": "¿No está seguro de contar con todo lo que necesita? No se preocupe. La sección de ingresos de la solicitud contiene instrucciones y explicaciones detalladas sobre las fuentes de ingresos que debe incluir, y puede recopilar la información adicional en ese momento.",
 
+  "applicationData.person.firstName.label": "Nombre de pila",
+  "applicationData.person.middleName.label": "Segundo nombre",
+  "applicationData.person.lastName.label": "Apellido",
+  "applicationData.person.suffix.label": "Sufijo (por ejemplo, Jr., Sr., I, II, III)",
+  "applicationData.otherChild.isFoster.label": "En hogar de acogida con usted",
+  "applicationData.student.school.label": "Escuela",
+  "applicationData.student.grade.label": "Grado",
+
   "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479498757654."
 }

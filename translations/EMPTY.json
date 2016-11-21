@@ -1983,7 +1983,40 @@
   "help.topic.WhatInformation.answer4": "",
 
 
+  /***
+   *** src/stores/ApplicationData.jsx
+   ***/
+
+  // The label used for form fields.
+  // English: "First name"
+  "applicationData.person.firstName.label": "",
+
+  // The label used for form fields.
+  // English: "Middle name"
+  "applicationData.person.middleName.label": "",
+
+  // The label used for form fields.
+  // English: "Last name"
+  "applicationData.person.lastName.label": "",
+
+  // The label used for form fields.
+  // English: "Suffix (e.g. Jr., Sr., I, II, III)"
+  "applicationData.person.suffix.label": "",
+
+  // The label used for form fields.
+  // English: "Foster child"
+  "applicationData.otherChild.isFoster.label": "",
+
+  // The label used for form fields.
+  // English: "School"
+  "applicationData.student.school.label": "",
+
+  // The label used for form fields.
+  // English: "Grade"
+  "applicationData.student.grade.label": "",
+
+
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479748148842."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479758271949."
 }
