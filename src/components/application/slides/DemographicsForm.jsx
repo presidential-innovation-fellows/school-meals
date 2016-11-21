@@ -11,6 +11,20 @@ import {FormattedMessage} from 'react-intl'
 class Demographics extends Component {
   render() {
     const { student } = this.props
+    const radioProps = {
+      name: 'isHispanicLatino',
+      object: student.demographics,
+      trueLabel: <FormattedMessage
+                     id="app.slides.demographics.radioTrue"
+                     description="Label for choice if student is hispanic/latino."
+                     defaultMessage="Hispanic or Latino"
+                 />,
+      falseLabel: <FormattedMessage
+                      id="app.slides.demographics.radioFalse"
+                      description="Label for choice if student is not hispanic/latino."
+                      defaultMessage="Non Hispanic or Latino"
+                  />
+    }
 
     return (
       <div className="demographics-container">
@@ -24,10 +38,7 @@ class Demographics extends Component {
                 defaultMessage="Ethnicity"
             />
             </label>
-            <BooleanRadio name="isHispanicLatino"
-                          object={student.demographics}
-                          trueLabel="Hispanic or Latino"
-                          falseLabel="Non Hispanic or Latino" />
+            <BooleanRadio {...radioProps} />
 
             <label>
             <FormattedMessage

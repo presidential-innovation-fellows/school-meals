@@ -761,6 +761,14 @@
    *** src/components/application/slides/DemographicsForm.jsx
    ***/
 
+  // Label for choice if student is hispanic/latino.
+  // English: "Hispanic or Latino"
+  "app.slides.demographics.radioTrue": "",
+
+  // Label for choice if student is not hispanic/latino.
+  // English: "Non Hispanic or Latino"
+  "app.slides.demographics.radioFalse": "",
+
   // Ethnicity
   // English: "Ethnicity"
   "app.slides.demographicsForm.ethnicity": "",
@@ -1897,5 +1905,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479717073252."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479717557361."
 }

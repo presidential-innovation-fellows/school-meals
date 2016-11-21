@@ -185,6 +185,8 @@
   "app.slides.demographics.required": "Estamos obligados a solicitar información sobre la raza y el origen étnico de los estudiantes que solicitan el programa.",
   "app.slides.demographics.importantInfo": "Esta información es importante y nos ayuda a asegurarnos de que realmente le estamos brindando servicios a la comunidad. Responder esta sección es opcional y no afecta la elegibilidad de sus hijos para obtener comidas gratis o a precio reducido.",
 
+  "app.slides.demographics.radioTrue": "Hispano o Latino",
+  "app.slides.demographics.radioFalse": "No Hispano o Latino",
   "app.slides.demographicsForm.ethnicity": "Origen étnico",
   "app.slides.demographicsForm.race": "Raza",
   "app.slides.demographicsForm.americanIndianOrAlaskanNative": "Indígena Estadounidense o Nativo de Alaska",

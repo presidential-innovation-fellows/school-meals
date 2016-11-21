@@ -77,8 +77,8 @@ BooleanRadio.propTypes = {
   name: PropTypes.string.isRequired,
   object: PropTypes.object.isRequired,
   legend: PropTypes.string,
-  trueLabel: PropTypes.string,
-  falseLabel: PropTypes.string,
+  trueLabel: PropTypes.node,
+  falseLabel: PropTypes.node,
   onChange: PropTypes.func
 }
 
