@@ -260,6 +260,19 @@
 
 
   /***
+   *** src/components/application/IncomeTypeFormGroup.jsx
+   ***/
+
+  // Missing Income alert title
+  // English: "Missing Income"
+  "app.slides.incomeTypeFormGroup.missingIncomeTitle": "",
+
+  // Missing Income alert
+  // English: "You indicated that {person} receives {incomeDescription}, but you selected “No” for each related income source on a following page. Please correct this answer or provide details on the following pages."
+  "app.slides.incomeTypeFormGroup.missingIncome": "",
+
+
+  /***
    *** src/components/application/Slide.jsx
    ***/
 
@@ -1917,5 +1930,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479718284070."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479718990917."
 }
