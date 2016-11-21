@@ -69,6 +69,26 @@
   "app.incomeSourceAdditional.addButton": "Añadir fuente de ingresos",
   "app.personForm.removeButton": "Quitar {name}",
 
+  "app.incomeSourceFrequency.placeholder": "Frecuencia…",
+  "app.incomeSourceFrequency.annually": "Anualmente",
+  "app.incomeSourceFrequency.monthly": "Mensual",
+  "app.incomeSourceFrequency.twicePerMonth": "Dos veces al mes",
+  "app.incomeSourceFrequency.everyTwoWeeks": "Cada dos semanas",
+  "app.incomeSourceFrequency.weekly": "Semanal",
+  "app.incomeSourceFrequency.hourly": "Cada hora",
+
+  "app.incomeSourceHourlyPeriod.placeholder": "horas al…",
+  "app.incomeSourceHourlyPeriod.week": "horas a la semana",
+  "app.incomeSourceHourlyPeriod.month": "horas al mes",
+
+  "app.incomeSourceSummary.annually": "por año",
+  "app.incomeSourceSummary.monthly": "por mes",
+  "app.incomeSourceSummary.twicePerMonth": "dos veces al mes",
+  "app.incomeSourceSummary.everyTwoWeeks": "cada dos semanas",
+  "app.incomeSourceSummary.weekly": "por semana",
+  "app.incomeSourceSummary.hourly.week": "por semana",
+  "app.incomeSourceSummary.hourly.month": "por mes",
+
   "app.slides.incomeTypeFormGroup.missingIncomeTitle": "Falta de Ingresos",
   "app.slides.incomeTypeFormGroup.missingIncome": "",
 
