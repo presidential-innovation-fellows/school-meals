@@ -80,8 +80,14 @@ class OtherChildren extends Component {
         </ul>
 
         <PersonCollection
-            label="Child"
             collection={otherChildren}
+            label={
+              <FormattedMessage
+                  id="app.slides.otherChildren.label"
+                  description="Label used for title, add/remove buttons."
+                  defaultMessage="Child"
+              />
+            }
         />
       </Slide>
     )

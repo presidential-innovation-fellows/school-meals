@@ -4,6 +4,7 @@ import Button from './Button'
 import Form from './Form'
 import Fieldset from './Fieldset'
 import PersonAttributeInput from './PersonAttributeInput'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class PersonForm extends Component {
@@ -42,7 +43,12 @@ class PersonForm extends Component {
               <div>
                 <Button onClick={this.onRemove}
                         className="usa-button-gray remove-person">
-                  Remove {name}
+                  <FormattedMessage
+                      id="app.personForm.removeButton"
+                      description="Button to remove person from collection."
+                      defaultMessage="Remove {name}"
+                      values={{ name }}
+                  />
                 </Button>
               </div>
             </div>

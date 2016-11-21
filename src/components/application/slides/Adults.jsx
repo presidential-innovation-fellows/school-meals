@@ -78,7 +78,7 @@ class Adults extends Component {
             </ul>
           </li>
         </ul>
-        
+
         <p><strong>
         <FormattedMessage
                 id="app.slides.adults.includeRegardless"
@@ -87,9 +87,17 @@ class Adults extends Component {
               />
         </strong></p>
 
-        <PersonCollection collection={adults}
-                          label="Adult"
-                          filter={person => !person.isAttestor} />
+        <PersonCollection
+            collection={adults}
+            filter={person => !person.isAttestor}
+            label={
+              <FormattedMessage
+                  id="app.slides.adults.label"
+                  description="Label used for title, add/remove buttons."
+                  defaultMessage="Adult"
+              />
+            }
+        />
       </Slide>
     )
   }

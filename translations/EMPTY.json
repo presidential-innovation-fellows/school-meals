@@ -304,6 +304,24 @@
 
 
   /***
+   *** src/components/application/PersonCollection.jsx
+   ***/
+
+  // Button to add person to collection.
+  // English: "+ Add another {personType}"
+  "app.personCollection.addButton": "",
+
+
+  /***
+   *** src/components/application/PersonForm.jsx
+   ***/
+
+  // Button to remove person from collection.
+  // English: "Remove {name}"
+  "app.personForm.removeButton": "",
+
+
+  /***
    *** src/components/application/Slide.jsx
    ***/
 
@@ -488,6 +506,10 @@
   // Include people regardless of age or income
   // English: "Include people regardless of age or whether they earn or receive income."
   "app.slides.adults.includeRegardless": "",
+
+  // Label used for title, add/remove buttons.
+  // English: "Adult"
+  "app.slides.adults.label": "",
 
 
   /***
@@ -1081,6 +1103,10 @@
   // English: "anyone 18 years of age or younger living in your household that does not currently attend school"
   "app.slides.otherChildren.childType3": "",
 
+  // Label used for title, add/remove buttons.
+  // English: "Child"
+  "app.slides.otherChildren.label": "",
+
 
   /***
    *** src/components/application/slides/OtherIncome.jsx
@@ -1244,6 +1270,10 @@
   // Introductory paragraph.
   // English: "List the names of the students in your household that attend school in {organizationName} and are applying for school meal benefits."
   "app.slides.students.intro": "",
+
+  // Label used for title, add/remove buttons.
+  // English: "Student"
+  "app.slides.students.label": "",
 
 
   /***
@@ -2018,5 +2048,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479758271949."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479764234373."
 }

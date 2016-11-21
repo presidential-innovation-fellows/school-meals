@@ -67,11 +67,14 @@
   "app.booleanRadio.falseLabel": "No",
 
   "app.incomeSourceAdditional.addButton": "Añadir fuente de ingresos",
+  "app.personForm.removeButton": "Quitar {name}",
 
   "app.slides.incomeTypeFormGroup.missingIncomeTitle": "Falta de Ingresos",
   "app.slides.incomeTypeFormGroup.missingIncome": "",
 
   "app.inputField.required": "Obligatorio",
+
+  "app.personCollection.addButton": "+ Añadir otro {personType}",
 
   "app.slide.backButton": "Volver",
   "app.slide.nextButton": "Continuar",
@@ -118,6 +121,7 @@
   "app.slides.adults.collegeKids": "hijos que se han ido a la universidad,",
   "app.slides.adults.military": "miembros de la familia que están en el ejército, que han sido desplegados",
   "app.slides.adults.includeRegardless": "Incluya a las personas sin importar la edad o si ganan o reciben ingresos.",
+  "app.slides.adults.label": "Adulto",
 
   "app.slides.assistancePrograms.intro": "Si alguien en su hogar participa en {snap}, {tanf}, o {fdpir}, {studentList} {studentCount, plural, one {es elegible} other {son elegibles}} para recibir comidas escolares gratis.",
   "app.slides.assistancePrograms.household": "Un hogar se define como un grupo de personas, relacionadas o no relacionadas que suelen vivir juntas y que comparten ingresos y gastos.",
@@ -262,6 +266,7 @@
   "app.slides.otherChildren.childType1": "estudiantes que estén en 12.º grado o menos que asisten a la escuela en otro distrito escolar que no sea {organizationName}",
   "app.slides.otherChildren.childType2": "niños que asisten a la guardería o a preescolar o que no tengan edad escolar, incluidos los bebés pequeños",
   "app.slides.otherChildren.childType3": "cualquier persona de 18 años de edad o menos que viva en su hogar y que no asista a la escuela actualmente",
+  "app.slides.otherChildren.label": "Niño",
 
   "app.slides.otherIncome.regularCashPayments": "{tooltip} proporcionadas por alguien que no viva en el hogar",
   "app.slides.otherIncome.regularCashPaymentsTooltip": "Pagos regulares en efectivo",
@@ -305,6 +310,7 @@
   "app.slides.spousalIncome.childSupport": "Manutención infantil",
 
   "app.slides.students.intro": "Mencione los nombres de los estudiantes de su hogar que asisten a {organizationName} que estén solicitando los beneficios de comidas escolares.",
+  "app.slides.students.label": "Estudiante",
 
   "app.slides.summary.header": "Resumen",
   "app.slides.summary.nextText": "Enviar",
