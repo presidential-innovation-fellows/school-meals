@@ -241,6 +241,8 @@
 
   "app.slides.incomeElection.confirmWithStaff": "Sólo necesitamos confirmar eso con el personal del programa. Si no podemos hacerlo, tendrá que presentar una solicitud con información de ingresos para determinar su nivel de beneficios.",
   "app.slides.incomeElection.chooseFollowing": "Elija una de las siguientes opciones:",
+  "app.slides.incomeElection.electToProvideIncome.trueLabel": "Proporcionar información de ingresos ahora",
+  "app.slides.incomeElection.electToProvideIncome.falseLabel": "Presentar mi solicitud sin información de ingresos",
 
   "app.slides.incomeType.missingIncomeTitle": "Falta de Ingresos",
   "app.slides.incomeType.missingIncome": "En una página anterior, indicó que {adult} recibe ingresos de una de las fuentes anteriores. Por favor ingrese este ingreso arriba o corrija su respuesta anterior.",
