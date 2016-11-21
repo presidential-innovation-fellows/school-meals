@@ -654,6 +654,10 @@
    *** src/components/application/slides/ChildIncomeSlide.jsx
    ***/
 
+  // Missing Income alert title
+  // English: "Missing Income"
+  "app.slides.childIncomeSlide.missingIncomeTitle": "",
+
   // Introductory paragraph.
   // English: "Does {child} have income from any of the following sources?"
   "app.slides.childIncomeSlide.intro": "",
@@ -864,6 +868,10 @@
   /***
    *** src/components/application/slides/IncomeType.jsx
    ***/
+
+  // Missing Income alert title
+  // English: "Missing Income"
+  "app.slides.incomeType.missingIncomeTitle": "",
 
   // Missing Income Alert
   // English: "On a previous page, you indicated that {adult} receives income from one of the above sources. Please enter this income above or correct your previous answer."
@@ -1909,5 +1917,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479717773733."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479718284070."
 }

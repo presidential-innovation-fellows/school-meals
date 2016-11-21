@@ -159,6 +159,7 @@
   "app.slides.childIncomeOverview.annuity": "anualidad",
   "app.slides.childIncomeOverview.trust": "fideicomiso",
 
+  "app.slides.childIncomeSlide.missingIncomeTitle": "Falta de Ingresos",
   "app.slides.childIncomeSlide.intro": "¿{child} obtiene ingresos de alguna de las siguientes fuentes?",
   "app.slides.childIncomeSlide.incomeReported": "Los ingresos declarados aquí deben ser los ingresos {gross} {tooltip} del niño.",
   "app.slides.childIncomeSlide.current": "actuales",
@@ -210,6 +211,7 @@
   "app.slides.incomeElection.confirmWithStaff": "Sólo necesitamos confirmar eso con el personal del programa. Si no podemos hacerlo, tendrá que presentar una solicitud con información de ingresos para determinar su nivel de beneficios.",
   "app.slides.incomeElection.chooseFollowing": "Elija una de las siguientes opciones:",
 
+  "app.slides.incomeType.missingIncomeTitle": "Falta de Ingresos",
   "app.slides.incomeType.missingIncome": "En una página anterior, indicó que {adult}} recibe ingresos de una de las fuentes anteriores. Por favor ingrese este ingreso arriba o corrija su respuesta anterior.",
   "app.slides.incomeType.changeAnswer": "Cambiar respuesta anterior",
 
