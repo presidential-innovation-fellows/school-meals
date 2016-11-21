@@ -206,6 +206,14 @@
   "app.slides.contact.header": "Datos de Contacto",
   "app.slides.contact.intro": "Ingrese su información de contacto para que podamos comunicarnos con usted en caso de que ocurra algún problema con su solicitud. Esta información es opcional, pero le aconsejamos enfáticamente que la ingrese.",
 
+  "app.slides.contact.phone.label": "Número de teléfono",
+  "app.slides.contact.email.label": "Email",
+  "app.slides.contact.address1.label": "Dirección",
+  "app.slides.contact.address2.label": "Dirección 2",
+  "app.slides.contact.city.label": "Ciudad",
+  "app.slides.contact.state.label": "Estado",
+  "app.slides.contact.zip.label": "Código postal",
+
   "app.slides.demographics.intro": "Esta es una pregunta opcional para la información que recopilamos sobre los estudiantes que asisten a la escuela en {organizationName}",
   "app.slides.demographics.required": "Estamos obligados a solicitar información sobre la raza y el origen étnico de los estudiantes que solicitan el programa.",
   "app.slides.demographics.importantInfo": "Esta información es importante y nos ayuda a asegurarnos de que realmente le estamos brindando servicios a la comunidad. Responder esta sección es opcional y no afecta la elegibilidad de sus hijos para obtener comidas gratis o a precio reducido.",

@@ -849,6 +849,34 @@
   // English: "Please enter your contact information so that we can reach you in case there are any issues with your application. This information is optional, but we strongly encourage you to provide it."
   "app.slides.contact.intro": "",
 
+  // Field label.
+  // English: "Phone number"
+  "app.slides.contact.phone.label": "",
+
+  // Field label.
+  // English: "Email"
+  "app.slides.contact.email.label": "",
+
+  // Field label.
+  // English: "Street address 1"
+  "app.slides.contact.address1.label": "",
+
+  // Field label.
+  // English: "Street address 2"
+  "app.slides.contact.address2.label": "",
+
+  // Field label.
+  // English: "City"
+  "app.slides.contact.city.label": "",
+
+  // Field label.
+  // English: "State"
+  "app.slides.contact.state.label": "",
+
+  // Field label.
+  // English: "ZIP"
+  "app.slides.contact.zip.label": "",
+
 
   /***
    *** src/components/application/slides/Demographics.jsx
@@ -2064,5 +2092,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479765283713."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479765937770."
 }

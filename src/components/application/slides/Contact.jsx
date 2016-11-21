@@ -41,44 +41,75 @@ class Contact extends Component {
         <Form large>
           <InputField
               name="phone"
-              label="Phone number"
               type="tel"
               pattern="( \d{3}- | \(\d{3}\) )?\d{3}-\d{4}"
               object={contact}
-          />
+          >
+            <FormattedMessage
+                id="app.slides.contact.phone.label"
+                description="Field label."
+                defaultMessage="Phone number"
+            />
+          </InputField>
 
           <InputField
               name="email"
-              label="Email"
               type="email"
               pattern="^\S+@\S+\.\S+$"
               object={contact}
-          />
+          >
+            <FormattedMessage
+                id="app.slides.contact.email.label"
+                description="Field label."
+                defaultMessage="Email"
+            />
+          </InputField>
 
           <Fieldset legend="Address">
             <InputField
                 name="address1"
-                label="Street address 1"
                 object={contact}
-            />
+            >
+              <FormattedMessage
+                  id="app.slides.contact.address1.label"
+                  description="Field label."
+                  defaultMessage="Street address 1"
+              />
+            </InputField>
 
             <InputField
                 name="address2"
-                label="Street address 2"
                 object={contact}
-            />
+            >
+              <FormattedMessage
+                  id="app.slides.contact.address2.label"
+                  description="Field label."
+                  defaultMessage="Street address 2"
+              />
+            </InputField>
 
             <div>
               <InputField
                   name="city"
-                  label="City"
                   size="medium"
                   object={contact}
                   grid
-              />
+              >
+                <FormattedMessage
+                    id="app.slides.contact.city.label"
+                    description="Field label."
+                    defaultMessage="City"
+                />
+              </InputField>
 
               <div className="usa-input-grid usa-input-grid-small">
-                <label htmlFor="state">State</label>
+                <label htmlFor="state">
+                  <FormattedMessage
+                      id="app.slides.contact.state.label"
+                      description="Field label."
+                      defaultMessage="State"
+                  />
+                </label>
                 <Select id="state" name="state" value={contact.state}
                         onChange={this.onUsStateChange}>
                   <option value=""></option>
@@ -139,10 +170,15 @@ class Contact extends Component {
 
             <InputField
                 name="zip"
-                label="ZIP"
                 size="medium"
                 object={contact}
-            />
+            >
+              <FormattedMessage
+                  id="app.slides.contact.zip.label"
+                  description="Field label."
+                  defaultMessage="ZIP"
+              />
+            </InputField>
           </Fieldset>
         </Form>
       </Slide>
