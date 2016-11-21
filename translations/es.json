@@ -63,6 +63,9 @@
   "tooltip.mep": "Presta servicios a niños que se han mudado a otros distritos escolares en los últimos tres años, para acompañar o unirse a un padre o tutor legal que busca u obtiene trabajo temporal o por temporada en agricultura o pesca.",
   "tooltip.runaway": "Autoriza proyectos basados en la comunidad para jóvenes que se dan a la fuga o que no tienen hogar y les brindan refugio temporal y atención a los jóvenes que necesiten refugio temporal, asesoramiento y servicios posteriores.",
 
+  "app.booleanRadio.trueLabel": "Sí",
+  "app.booleanRadio.falseLabel": "No",
+
   "app.slides.incomeTypeFormGroup.missingIncomeTitle": "Falta de Ingresos",
   "app.slides.incomeTypeFormGroup.missingIncome": "",
 

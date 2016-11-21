@@ -260,6 +260,19 @@
 
 
   /***
+   *** src/components/application/BooleanRadio.jsx
+   ***/
+
+  // The label for the true selection of a true/false radio button pair.
+  // English: "Yes"
+  "app.booleanRadio.trueLabel": "",
+
+  // The label for the false selection of a true/false radio button pair.
+  // English: "No"
+  "app.booleanRadio.falseLabel": "",
+
+
+  /***
    *** src/components/application/IncomeTypeFormGroup.jsx
    ***/
 
@@ -1930,5 +1943,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479718990917."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479745999641."
 }

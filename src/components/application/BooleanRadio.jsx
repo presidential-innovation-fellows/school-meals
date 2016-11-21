@@ -2,6 +2,7 @@ import shortid from 'shortid'
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
 import Fieldset from './Fieldset'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class BooleanRadio extends Component {
@@ -83,8 +84,18 @@ BooleanRadio.propTypes = {
 }
 
 BooleanRadio.defaultProps = {
-  trueLabel: 'Yes',
-  falseLabel: 'No'
+  trueLabel:
+    <FormattedMessage
+        id="app.booleanRadio.trueLabel"
+        description="The label for the true selection of a true/false radio button pair."
+        defaultMessage="Yes"
+    />,
+  falseLabel:
+    <FormattedMessage
+        id="app.booleanRadio.falseLabel"
+        description="The label for the false selection of a true/false radio button pair."
+        defaultMessage="No"
+    />
 }
 
 export default BooleanRadio
