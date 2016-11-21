@@ -1249,6 +1249,10 @@
    *** src/components/application/slides/ThankYou.jsx
    ***/
 
+  // Text for the header of the slide.
+  // English: "Thank you for applying for school meal benefits!"
+  "app.slides.thankYou.header": "",
+
   // application has been submitted
   // English: "Your application has been submitted."
   "app.slides.thankYou.submitted": "",
@@ -1877,5 +1881,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479713435705."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479715519666."
 }

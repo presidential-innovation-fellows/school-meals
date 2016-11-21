@@ -15,8 +15,15 @@ class ThankYou extends Component {
   }
 
   render() {
+    const headerText =
+      <FormattedMessage
+          id="app.slides.thankYou.header"
+          description="Text for the header of the slide."
+          defaultMessage="Thank you for applying for school meal benefits!"
+      />
+
     return (
-      <Slide header="Thank you for applying for school meal benefits!" id="thank-you"
+      <Slide header={headerText} id="thank-you"
              showBack={false} showNext={false} beginsSection>
         <p>
           <FormattedMessage
