@@ -531,6 +531,26 @@
   // English: "I understand that this information is given in connection with the receipt of Federal funds, and that school o­fficials may verify (check) the information. I am aware that if I purposely* give false information, my children may lose meal benefits."
   "app.slides.attestation.understand": "",
 
+  // Field label.
+  // English: "First name"
+  "app.slides.attestation.firstName.label": "",
+
+  // Field label.
+  // English: "Middle name"
+  "app.slides.attestation.middleName.label": "",
+
+  // Field label.
+  // English: "Last name"
+  "app.slides.attestation.lastName.label": "",
+
+  // Field label.
+  // English: "Suffix (e.g. Jr., Sr., I, II, III)"
+  "app.slides.attestation.suffix.label": "",
+
+  // Field label.
+  // English: "Today's date"
+  "app.slides.attestation.date.label": "",
+
   // Starred message that lying on the form is fraud.
   // English: "*Deliberate misrepresentation of information may subject applicants to prosecution under applicable State and Federal law."
   "app.slides.attestation.misrepresentation": "",
@@ -1961,5 +1981,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479746784416."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479747434754."
 }
