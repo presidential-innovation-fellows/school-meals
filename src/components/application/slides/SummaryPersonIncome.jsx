@@ -1,7 +1,8 @@
 import React, { Component, PropTypes } from 'react'
-import Link from '../Link'
+import SummaryEditLink from './SummaryEditLink'
 import { observer } from 'mobx-react'
 import { humanize, numberFormat } from 'underscore.string'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class SummaryPersonIncome extends Component {
@@ -18,7 +19,7 @@ class SummaryPersonIncome extends Component {
         {income.frequency === 'hourly' &&
          ` (${income.hourlyHours} hrs./${income.hourlyPeriod})`}
         {' '}
-        (<Link id={`income/${person.id}/${income.type}`}>edit</Link>)
+        <SummaryEditLink id={`income/${person.id}/${income.type}`} />
       </li>
     )
   }
