@@ -201,6 +201,7 @@
   "app.slides.employmentIncome.selfEmployment": "Ingresos netos del {tooltip}",
   "app.slides.employmentIncome.tooltipSelf": "empleado autónomo",
 
+  "app.slides.foster.label": "¿{studentNames} {studentCount, plural, one {vive} other {viven}} con usted por un arreglo formal de hogar de acogida (ordenado por un tribunal)?",
   "app.slides.foster.confirm": "¡No hay problema! Existen otras maneras en las que puede calificar.",
 
   "app.slides.incomeElection.confirmWithStaff": "Sólo necesitamos confirmar eso con el personal del programa. Si no podemos hacerlo, tendrá que presentar una solicitud con información de ingresos para determinar su nivel de beneficios.",
@@ -250,15 +251,17 @@
 
   "app.slides.otherPrograms.intro": "Su hijo también puede calificar para obtener comidas gratis si puede marcar alguna de estas opciones.",
 
-  "app.slides.otherPrograms.isHomeless": "Si no la recibe, pero su hogar no tiene una dirección permanente, o si viven juntos en un refugio, hotel u otro arreglo de vivienda temporal, comuníquese con {organizationName} para obtener ayuda.",
+  "app.slides.otherPrograms.isHomeless.label": "¿{studentNames} {studentCount, plural, one {recibe} other {reciben}} asistencia de la {programName}?",
+  "app.slides.otherPrograms.isHomeless": "Si no la {studentCount, plural, one {recibe} other {reciben}}, pero su hogar no tiene una dirección permanente, o si viven juntos en un refugio, hotel u otro arreglo de vivienda temporal, comuníquese con {organizationName} para obtener ayuda.",
 
-  "app.slides.otherPrograms.isMigrant": "Si no participa, pero se ha mudado a otro distrito escolar en los últimos tres años para obtener o buscar trabajo temporal/por temporada en agricultura o pesca, comuníquese con {organizationName} para obtener ayuda.",
+  "app.slides.otherPrograms.isMigrant.label": "¿{studentNames} {studentCount, plural, one {participa} other {participan}} en {programName}?",
+  "app.slides.otherPrograms.isMigrant": "Si no {studentCount, plural, one {participa} other {participan}}, pero se ha mudado a otro distrito escolar en los últimos tres años para obtener o buscar trabajo temporal/por temporada en agricultura o pesca, comuníquese con {organizationName} para obtener ayuda.",
 
-  "app.slides.otherPrograms.isRunAway": "Si no participan, pero decidieron alejarse de su familia u hogar anterior, comuníquese con {organizationName} para obtener ayuda.",
+  "app.slides.otherPrograms.isRunaway.label": "¿{studentNames} {studentCount, plural, one {participa} other {participan}} en un programa de {programName}?",
+  "app.slides.otherPrograms.isRunaway": "Si no {studentCount, plural, one {participa} other {participan}}, pero {studentCount, plural, one {decidió} other {decidieron}} alejarse de su familia o hogar anterior, comuníquese con {organizationName} para obtener ayuda.",
 
   "app.slides.otherProgramsProgram.whichStudents": "¿Qué estudiantes?",
   "app.slides.otherProgramsProgram.labelPrefix": "{studentLength, plural, one {Does} other {Do}} {students}",
-  "app.slides.otherProgramsProgram.or": " o ",
 
   "app.slides.publicAssistanceIncome.ssi": "Ingresos de seguridad suplementarios {tooltip}",
   "app.slides.publicAssistanceIncome.ssiToolTip": "(SSI)",
