@@ -285,7 +285,7 @@
   "app.slides.adultIncomeOverview.adultsInto": "",
 
   // Income intro
-  // English: "On questions about income, all amounts should be {adult}’s  {tooltip} ,{grossIncome}."
+  // English: "On questions about income, all amounts should be {adult}’s {tooltip}, {grossIncome}."
   "app.slides.adultIncomeOverview.income": "",
 
   // Intro Paragraph
@@ -297,7 +297,7 @@
   "app.slides.adultIncomeOverview.grossIncome": "",
 
   // Is adult in military
-  // English: "Is {adult} in the  {tooltip} ?"
+  // English: "Is {adult} in the {tooltip}?"
   "app.slides.adultIncomeOverview.militaryQuestion": "",
 
   // military
@@ -305,7 +305,7 @@
   "app.slides.adultIncomeOverview.military": "",
 
   // Is adult deployed
-  // English: "Is {adult} currently  {tooltip} ?"
+  // English: "Is {adult} currently {tooltip}?"
   "app.slides.adultIncomeOverview.deployedQuestion": "",
 
   // deployed
@@ -313,7 +313,7 @@
   "app.slides.adultIncomeOverview.deployed": "",
 
   // Is adult employed
-  // English: "Does {adult} have earnings from work including salary, wages, tips, commissions, {tooltip}  or net income from  {tooltip2}"
+  // English: "Does {adult} have earnings from work including salary, wages, tips, commissions, {tooltip} or net income from {tooltip2}"
   "app.slides.adultIncomeOverview.employmentQuestion": "",
 
   // cash bonuses
@@ -325,7 +325,7 @@
   "app.slides.adultIncomeOverview.selfEmployment": "",
 
   // Is adult receiving public assistance income?
-  // English: "Does {adult} have income from public assistance including Supplemental Security Income  {tooltip} , or {tooltip2}  or housing subsidies from state or local government?"
+  // English: "Does {adult} have income from public assistance including Supplemental Security Income {tooltip}, or {tooltip2} or housing subsidies from state or local government?"
   "app.slides.adultIncomeOverview.publicAssistanceIncome": "",
 
   // SSI
@@ -337,7 +337,7 @@
   "app.slides.adultIncomeOverview.cashAssistance": "",
 
   // Is adult receiving spousal income?
-  // English: "Does {adult} have income from  {tooltip}  or  {tooltip2}  ?"
+  // English: "Does {adult} have income from {tooltip} or {tooltip2}?"
   "app.slides.adultIncomeOverview.spousalIncome": "",
 
   // alimony
@@ -349,7 +349,7 @@
   "app.slides.adultIncomeOverview.childSupport": "",
 
   // Is adult receiving unemployment income?
-  // English: "Does {adult} have income from  {tooltip} ,  {tooltip2} ,  {tooltip3} ,  {tooltip4} , or Social Security Disability Insurance  {tooltip5} ?"
+  // English: "Does {adult} have income from {tooltip}, {tooltip2}, {tooltip3}, {tooltip4}, or Social Security Disability Insurance {tooltip5}?"
   "app.slides.adultIncomeOverview.unemploymentIncome": "",
 
   // unemployment benefits
@@ -373,7 +373,7 @@
   "app.slides.adultIncomeOverview.ssdi": "",
 
   // Is adult receiving retirement income?
-  // English: "Does {adult} have retirement income from Social Security (including survivor benefits,  {tooltip}  and  {tooltip2}  ) or  {tooltip3} ?"
+  // English: "Does {adult} have retirement income from Social Security (including survivor benefits, {tooltip} and {tooltip2}) or {tooltip3}?"
   "app.slides.adultIncomeOverview.retirementIncome": "",
 
   // Black Lung Benefits
@@ -389,7 +389,7 @@
   "app.slides.adultIncomeOverview.pension": "",
 
   // Is adult receiving otherincome?
-  // English: "Does {adult} have other sources of income including  {tooltip}  from outside the household,  {tooltip2} , {tooltip3} , investment income and  {tooltip4}  , or any other source of income available to pay for children’s school meals?"
+  // English: "Does {adult} have other sources of income including {tooltip} from outside the household, {tooltip2}, {tooltip3}, investment income and {tooltip4}, or any other source of income available to pay for children’s school meals?"
   "app.slides.adultIncomeOverview.otherIncome": "",
 
   // regular cash payments
@@ -451,7 +451,7 @@
    ***/
 
   // Intro paragraph
-  // English: "If anyone in your household participates in  {snap},  {tanf} , or  {fdpir}  then {studentList} {studentsize} eligible for free school meals."
+  // English: "If anyone in your household participates in {snap}, {tanf}, or {fdpir} then {studentList} {studentsize} eligible for free school meals."
   "app.slides.assistancePrograms.intro": "",
 
   // Household definition
@@ -541,7 +541,7 @@
   "app.slides.beforeYouBegin.eligibility3": "",
 
   // citizenship or immigration doesn't affect status
-  // English: "Your  {tooltip}  does not affect your eligibility for free and reduced price benefits."
+  // English: "Your {tooltip} does not affect your eligibility for free and reduced price benefits."
   "app.slides.beforeYouBegin.status": "",
 
   // As in the status of the person/family applying for benefits.
@@ -618,7 +618,7 @@
   "app.slides.childIncomeOverview.fullOrPartJob": "",
 
   // Social Security
-  // English: "{socialSecurity}  benefits, if the child is disabled, or is the  {beneficiary}  of another person’s Social Security benefits,"
+  // English: "{socialSecurity} benefits, if the child is disabled, or is the {beneficiary} of another person’s Social Security benefits,"
   "app.slides.childIncomeOverview.socialSecurity": "",
 
   // social
@@ -634,7 +634,7 @@
   "app.slides.childIncomeOverview.money": "",
 
   // money From pension, annuity, or trust
-  // English: "money from a  {pension} ,  {annuity} , or  {trust}"
+  // English: "money from a {pension}, {annuity}, or {trust}"
   "app.slides.childIncomeOverview.moneyFrom": "",
 
   // pension
@@ -659,7 +659,7 @@
   "app.slides.childIncomeSlide.intro": "",
 
   // Income reported should be child's.
-  // English: "Income reported here should be the child’s  {tooltip} , {gross}  income."
+  // English: "Income reported here should be the child’s {tooltip}, {gross}  income."
   "app.slides.childIncomeSlide.incomeReported": "",
 
   // current
@@ -683,7 +683,7 @@
   "app.slides.childIncomeSlide.moneyEarned": "",
 
   // Supplemental income
-  // English: "Supplemental Security Insurance  {tooltip}  or Social Security  {tooltip2}"
+  // English: "Supplemental Security Insurance {tooltip} or Social Security {tooltip2}"
   "app.slides.childIncomeSlide.supplementalIncome": "",
 
   // SSI
@@ -695,7 +695,7 @@
   "app.slides.childIncomeSlide.ssSurvivor": "",
 
   // Regular Cash Payments
-  // English: "{tooltip}  from extended family or friends outside the household"
+  // English: "{tooltip} from extended family or friends outside the household"
   "app.slides.childIncomeSlide.regularCash": "",
 
   // Money regularly received
@@ -703,7 +703,7 @@
   "app.slides.childIncomeSlide.regularCashPayments": "",
 
   // Pensions annuities & trusts
-  // English: "{tooltip} ,  {tooltip2} , or  {tooltip3}"
+  // English: "{tooltip}, {tooltip2}, or {tooltip3}"
   "app.slides.childIncomeSlide.pensionAnnuityTrust": "",
 
   // Pension
@@ -815,7 +815,7 @@
   "app.slides.employmentIncome.tooltipCashBonus": "",
 
   // Cash bonus
-  // English: "Net income from  {tooltip}"
+  // English: "Net income from {tooltip}"
   "app.slides.employmentIncome.selfEmployment": "",
 
   // self-employment
@@ -871,7 +871,7 @@
   "app.slides.IncomeTypeDefaultText.notIncludingEarnings": "",
 
   // note: remember to report...
-  // English: "NOTE: Remember to report  {tooltip} ,  {tooltip2}  income."
+  // English: "NOTE: Remember to report {tooltip}, {tooltip2} income."
   "app.slides.IncomeTypeDefaultText.note": "",
 
   // current
@@ -941,7 +941,7 @@
   "app.slides.militaryIncome.madeAvailable": "",
 
   // Military cash bonus
-  // English: "Military  {tooltip}"
+  // English: "Military {tooltip}"
   "app.slides.militaryIncome.cashBonus": "",
 
   // cash bonus
@@ -949,7 +949,7 @@
   "app.slides.militaryIncome.cashBonusTooltip": "",
 
   // Military allowance income
-  // English: "Military  {tooltip}  for off-base housing, food, clothing (other than FSSA and MHPI)"
+  // English: "Military {tooltip} for off-base housing, food, clothing (other than FSSA and MHPI)"
   "app.slides.militaryIncome.allowance": "",
 
   // allowance
@@ -962,7 +962,7 @@
    ***/
 
   // Introductory paragraph.
-  // English: "Okay, it looks like we will need more information about your  {tooltip}   and income in order to determine if you are eligible for benefits."
+  // English: "Okay, it looks like we will need more information about your {tooltip} and income in order to determine if you are eligible for benefits."
   "app.slides.otherChildren.intro": "",
 
   // household
@@ -991,7 +991,7 @@
    ***/
 
   // Regular Cash Payments
-  // English: "{tooltip}  from outside the household"
+  // English: "{tooltip} from outside the household"
   "app.slides.otherIncome.regularCashPayments": "",
 
   // Regular cash payments
@@ -1070,7 +1070,7 @@
    ***/
 
   // SSI
-  // English: "Supplemental Security Income  {tooltip}"
+  // English: "Supplemental Security Income {tooltip}"
   "app.slides.publicAssistanceIncome.ssi": "",
 
   // SSI tooltip
@@ -1078,7 +1078,7 @@
   "app.slides.publicAssistanceIncome.ssiToolTip": "",
 
   // SSI
-  // English: "{tooltip}  from state or local government (including housing subsidies)"
+  // English: "{tooltip} from state or local government (including housing subsidies)"
   "app.slides.publicAssistanceIncome.cashAssistance": "",
 
   // Cash assistance
@@ -1091,7 +1091,7 @@
    ***/
 
   // List of retirement income
-  // English: "{tooltip}  (including survivor benefits,  {tooltip2} , and  {tooltip3}  )"
+  // English: "{tooltip} (including survivor benefits, {tooltip2}, and {tooltip3})"
   "app.slides.retirementIncome.incomeList": "",
 
   // Social Security
@@ -1283,7 +1283,7 @@
   "app.slides.unemploymentIncome.strikeBenefits": "",
 
   // Social Security Disability Insurance
-  // English: "Social Security Disability Insurance  {tooltip}"
+  // English: "Social Security Disability Insurance {tooltip}"
   "app.slides.unemploymentIncome.ssdi": "",
 
   // (SSDI)
@@ -1877,5 +1877,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479625233998."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479711344431."
 }
