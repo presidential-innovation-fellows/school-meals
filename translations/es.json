@@ -177,6 +177,8 @@
   "app.slides.childIncomeOverview.pension": "pensión",
   "app.slides.childIncomeOverview.annuity": "anualidad",
   "app.slides.childIncomeOverview.trust": "fideicomiso",
+  "app.slides.childIncomeOverview.exclusions": "",
+  "app.slides.childIncomeOverview.label": "",
 
   "app.slides.childIncomeSlide.missingIncomeTitle": "Falta de Ingresos",
   "app.slides.childIncomeSlide.intro": "¿{child} obtiene ingresos de alguna de las siguientes fuentes?",

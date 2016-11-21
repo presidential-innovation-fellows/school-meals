@@ -735,6 +735,14 @@
   // English: "trust"
   "app.slides.childIncomeOverview.trust": "",
 
+  // Message about which types of child income to exclude from reporting.
+  // English: "Do not include infrequent earnings, such as income from occasional baby-sitting or mowing lawns."
+  "app.slides.childIncomeOverview.exclusions": "",
+
+  // Question asking if child has income sources.
+  // English: "Does {child} have income from any of these, or any other, sources?"
+  "app.slides.childIncomeOverview.label": "",
+
 
   /***
    *** src/components/application/slides/ChildIncomeSlide.jsx
@@ -2048,5 +2056,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479764234373."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479764916130."
 }

@@ -126,13 +126,25 @@ class ChildIncomeOverview extends Component {
         </li>
         </ul>
 
-        <p>Do not include infrequent earnings, such as income from occasional baby-sitting or mowing lawns.</p>
+        <p>
+          <FormattedMessage
+              id="app.slides.childIncomeOverview.exclusions"
+              description="Message about which types of child income to exclude from reporting."
+              defaultMessage="Do not include infrequent earnings, such as income from occasional baby-sitting or mowing lawns."
+          />
+        </p>
 
         {allChildren.map(child =>
           <IncomeTypeFormGroup person={child} incomeTypeName="child"
                                key={child.id} incomeDescription="income">
-            Does <strong>{informalName(child)}</strong> have
-            income from any of these, or any other, sources?
+            <FormattedMessage
+                id="app.slides.childIncomeOverview.label"
+                description="Question asking if child has income sources."
+                defaultMessage="Does {child} have income from any of these, or any other, sources?"
+                values={{
+                  child: <strong>{informalName(child)}</strong>
+                }}
+            />
           </IncomeTypeFormGroup>
         )}
       </Slide>
