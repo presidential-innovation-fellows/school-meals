@@ -63,7 +63,7 @@ class IncomeElection extends Component {
   render() {
     const { applicationData } = this.props
     const { allPeopleCollections, students } = applicationData
-    const names = students.informalList(allPeopleCollections, ' and ')
+    const names = students.informalList(allPeopleCollections)
     const programDescriptions = toSentenceSerialArray([
       'isFoster',
       'isHomeless',

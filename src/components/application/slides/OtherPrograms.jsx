@@ -54,7 +54,7 @@ class OtherPrograms extends Component {
     }
 
     const studentCount = students.length
-    const studentNames = informalList(students, allPeopleCollections, ' or ')
+    const studentNames = informalList(students, allPeopleCollections, true)
     const programs = [
       {
         attribute: 'isHomeless',

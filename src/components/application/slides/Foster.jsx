@@ -49,7 +49,7 @@ class Foster extends Component {
       applicability: this.applicability
     }
     const studentCount = students.length
-    const studentNames = informalList(students, allPeopleCollections, ' or ')
+    const studentNames = informalList(students, allPeopleCollections, true)
     const program = {
       attribute: 'isFoster',
       label: <FormattedMessage
