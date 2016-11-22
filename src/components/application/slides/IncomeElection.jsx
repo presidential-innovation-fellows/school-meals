@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import BooleanRadio from '../BooleanRadio'
 import Slide from '../Slide'
+import InformalNameList from '../InformalNameList'
 import { organization } from '../../../config'
 import { toSentenceSerialArray } from '../../../helpers'
 import { observer } from 'mobx-react'
@@ -63,7 +64,6 @@ class IncomeElection extends Component {
   render() {
     const { applicationData } = this.props
     const { allPeopleCollections, students } = applicationData
-    const names = students.informalList(allPeopleCollections)
     const programDescriptions = toSentenceSerialArray([
       'isFoster',
       'isHomeless',
@@ -83,7 +83,9 @@ class IncomeElection extends Component {
               id="app.slides.incomeElection.intro"
               description="Lead paragraph detailing the programs that have been selected."
               defaultMessage="You have indicated that {names}"
-              values={{ names }}
+              values={{
+                names: <InformalNameList people={students} />
+              }}
           />
           &nbsp;{programDescriptions.map((program, i) => <span key={i}>{program}</span>)}.
         </p>

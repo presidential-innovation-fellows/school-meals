@@ -1,10 +1,10 @@
 import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
+import InformalNameList from '../InformalNameList'
 import OtherProgramsProgram from './OtherProgramsProgram'
 import { observable } from 'mobx'
 import { observer } from 'mobx-react'
 import { organization } from '../../../config'
-import { informalList } from '../../../helpers'
 import { FormattedMessage } from 'react-intl'
 
 @observer
@@ -49,7 +49,6 @@ class Foster extends Component {
       applicability: this.applicability
     }
     const studentCount = students.length
-    const studentNames = informalList(students, allPeopleCollections, true)
     const program = {
       attribute: 'isFoster',
       label: <FormattedMessage
@@ -58,7 +57,7 @@ class Foster extends Component {
                  defaultMessage="{studentCount, plural, one {Does} other {Do}} {studentNames} live with you under a formal (court-ordered) foster care arrangement?"
                  values={{
                    studentCount,
-                   studentNames
+                   studentNames: <InformalNameList people={students} intersection={true} />,
                  }}
              />
     }

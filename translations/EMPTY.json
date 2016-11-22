@@ -405,6 +405,19 @@
 
 
   /***
+   *** src/components/application/SerialList.jsx
+   ***/
+
+  // Final delimiter for an intersecting list.
+  // English: "or"
+  "app.serialList.intersectionDelim": "",
+
+  // Final delimiter for a union list.
+  // English: "and"
+  "app.serialList.unionDelim": "",
+
+
+  /***
    *** src/components/application/Slide.jsx
    ***/
 
@@ -2211,5 +2224,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479799438425."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479831099307."
 }

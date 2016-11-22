@@ -1,12 +1,12 @@
 ﻿import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
+import InformalNameList from '../InformalNameList'
 import OtherProgramsProgram from './OtherProgramsProgram'
 import Tooltip from '../Tooltip'
 import { tooltiptext } from '../../Tooltiptext'
 import { observable } from 'mobx'
 import { observer } from 'mobx-react'
 import { organization } from '../../../config'
-import { informalList } from '../../../helpers'
 import { hmrPrograms } from '../../../config'
 import { FormattedMessage } from 'react-intl'
 
@@ -54,7 +54,7 @@ class OtherPrograms extends Component {
     }
 
     const studentCount = students.length
-    const studentNames = informalList(students, allPeopleCollections, true)
+    const studentNames = <InformalNameList people={students} intersection={true} />
     const programs = [
       {
         attribute: 'isHomeless',

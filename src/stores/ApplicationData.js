@@ -7,8 +7,7 @@ import { assistancePrograms as assistanceProgramNames,
 import { allStudentsAreFHMR,
          allStudentsAreFoster,
          applicableIncomeSources,
-         formatDate,
-         informalList } from '../helpers'
+         formatDate } from '../helpers'
 import { testData } from '../debug'
 
 // set DEBUG to true to pull in test data into the AppllicationData object from debug.js
@@ -332,11 +331,6 @@ class PersonCollection {
 
   map(func) {
     return this.items.map(func)
-  }
-
-  // returns e.g. "Jill, Joe, and Joe Jr."
-  informalList(allPeople, ...options) {
-    return informalList(this.items, allPeople, ...options)
   }
 
   @computed get hasAnyIncome() {

@@ -96,6 +96,9 @@
 
   "app.personCollection.addButton": "+ Añadir otro {personType}",
 
+  "app.serialList.intersectionDelim": "o",
+  "app.serialList.unionDelim": "y",
+
   "app.slide.backButton": "Volver",
   "app.slide.nextButton": "Continuar",
   "app.slide.helpText": "Por favor ingrese toda la información requerida arriba.",

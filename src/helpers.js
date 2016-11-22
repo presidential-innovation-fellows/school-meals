@@ -1,6 +1,4 @@
 ﻿import React from 'react'
-import { toSentenceSerial } from 'underscore.string'
-import { FormattedMessage } from 'react-intl'
 
 export function schoolYear(startYear = new Date().getFullYear()) {
   return `${startYear}–${startYear + 1}`
@@ -109,20 +107,6 @@ export function informalName(person,
   }
 
   return result
-}
-
-// given an array of people-like objects, return e.g. "Bob, Joe, and Joe Jr."
-export function informalList(people,
-                             allPeopleCollections,
-                             intersection = false,
-                             disambiguate = false,
-                             delimiter = ', ') {
-
-  const names = people.map(person => informalName(person,
-                                                  allPeopleCollections,
-                                                  disambiguate))
-  const lastDelimiter = intersection ? ' or ' : ' and '
-  return toSentenceSerial(names, delimiter, lastDelimiter)
 }
 
 export function hoursExceedPeriodCapacity(incomeSource) {

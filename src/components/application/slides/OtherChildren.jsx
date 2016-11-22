@@ -1,10 +1,10 @@
 ﻿import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
+import InformalNameList from '../InformalNameList'
 import PersonCollection from '../PersonCollection'
 import { computed } from 'mobx'
 import { observer } from 'mobx-react'
 import { organization } from '../../../config'
-import { informalList } from '../../../helpers'
 import { Glyphicon, OverlayTrigger } from 'react-bootstrap'
 import { tooltiptext } from '../../Tooltiptext'
 import Tooltip from '../Tooltip'
@@ -52,7 +52,7 @@ class OtherChildren extends Component {
               description="nameChildren"
               defaultMessage="Let's talk about the other kids in the house, and then we'll move on to the adults.  Other than {namedChildren}, are there any other children in your household? Don’t forget to include:"
               values={{
-                namedChildren: informalList(alreadyNamed)
+                namedChildren: <InformalNameList people={alreadyNamed} />
                 }}
          />
          </p>
