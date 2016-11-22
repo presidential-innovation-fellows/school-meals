@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
 import Select from './Select'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class IncomeSourceFrequency extends Component {
@@ -28,13 +29,55 @@ class IncomeSourceFrequency extends Component {
       <div className="usa-input-grid usa-input-grid-medium">
         <Select value={value}
                 onChange={this.handleChange}>
-          <option value="" disabled>Frequency…</option>
-          {showAnnual && <option value="annually">Annually</option>}
-          <option value="monthly">Monthly</option>
-          <option value="twicePerMonth">Twice per month</option>
-          <option value="everyTwoWeeks">Every two weeks</option>
-          <option value="weekly">Weekly</option>
-          {showHourly && <option value="hourly">Hourly</option>}
+          <option value="" disabled>
+            <FormattedMessage
+                id="app.incomeSourceFrequency.placeholder"
+                description="Default text for income frequency select box."
+                defaultMessage="Frequency…"
+            />
+          </option>
+          {showAnnual && <option value="annually">
+            <FormattedMessage
+                id="app.incomeSourceFrequency.annually"
+                description="Frequency of income received per year."
+                defaultMessage="Annually"
+            />
+          </option>}
+          <option value="monthly">
+            <FormattedMessage
+                id="app.incomeSourceFrequency.monthly"
+                description="Frequency of income received per month."
+                defaultMessage="Monthly"
+            />
+          </option>
+          <option value="twicePerMonth">
+            <FormattedMessage
+                id="app.incomeSourceFrequency.twicePerMonth"
+                description="Frequency of income received twice monthly."
+                defaultMessage="Twice per month"
+            />
+          </option>
+          <option value="everyTwoWeeks">
+            <FormattedMessage
+                id="app.incomeSourceFrequency.everyTwoWeeks"
+                description="Frequency of income received per two weeks."
+                defaultMessage="Every two weeks"
+            />
+          </option>
+          <option value="weekly">
+            <FormattedMessage
+                id="app.incomeSourceFrequency.weekly"
+                description="Frequency of income received per week."
+                defaultMessage="Weekly"
+            />
+          </option>
+          {showHourly && <option value="hourly">
+            <FormattedMessage
+                id="app.incomeSourceFrequency.hourly"
+                description="Frequency of income received per hour."
+                defaultMessage="Hourly"
+            />
+          </option>}
         </Select>
       </div>
     )

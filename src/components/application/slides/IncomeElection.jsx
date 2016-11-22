@@ -57,8 +57,19 @@ class IncomeElection extends Component {
         <BooleanRadio object={applicationData}
                       name="electToProvideIncome"
                       legend="Application options"
-                      trueLabel="Provide income information now"
-                      falseLabel="Submit my application without income information" />
+                      trueLabel={
+                        <FormattedMessage
+                            id="app.slides.incomeElection.electToProvideIncome.trueLabel"
+                            description="Option to provide household income now."
+                            defaultMessage="Provide income information now"
+                        />}
+                      falseLabel={
+                        <FormattedMessage
+                            id="app.slides.incomeElection.electToProvideIncome.falseLabel"
+                            description="Option to not provide household income now."
+                            defaultMessage="Submit my application without income information"
+                        />}
+        />
       </Slide>
     )
   }

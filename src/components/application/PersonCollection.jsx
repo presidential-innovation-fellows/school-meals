@@ -3,6 +3,7 @@ import { observer } from 'mobx-react'
 import Button from './Button'
 import Form from './Form'
 import PersonForm from './PersonForm'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class PersonCollection extends Component {
@@ -24,8 +25,7 @@ class PersonCollection extends Component {
     const {
       collection,
       filter,
-      label,
-      labelPlural
+      label
     } = this.props
 
     return(
@@ -42,8 +42,15 @@ class PersonCollection extends Component {
 
         <Button onClick={this.onAdd}
                 className="usa-button-secondary add-person">
-          + Add {collection.length ? 'another ' : 'a '}
-          <span className="lowercase">{label}</span>
+          <FormattedMessage
+              id="app.personCollection.addButton"
+              description="Button to add person to collection."
+              defaultMessage="+ Add another {personType}"
+              values={{
+                personCount: collection.length,
+                personType: <span className="lowercase">{label}</span>
+              }}
+          />
         </Button>
       </div>
     )
@@ -52,8 +59,7 @@ class PersonCollection extends Component {
 
 PersonCollection.defaultProps = {
   filter: person => true,
-  label: 'person',
-  labelPlural: 'people'
+  label: 'person'
 }
 
 export default PersonCollection

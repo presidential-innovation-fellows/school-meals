@@ -13,7 +13,12 @@ import {FormattedMessage} from 'react-intl'
 @observer
 class OtherChildren extends Component {
   @computed get nextText() {
-    return this.props.otherChildren.length ? 'Continue' : 'No other children'
+    return this.props.otherChildren.length ? undefined :
+           <FormattedMessage
+               id="app.slides.otherChildren.nextText"
+               description="Text to show on next slide button if no other children are added."
+               defaultMessage="No other children"
+           />
   }
 
   render() {
@@ -80,9 +85,14 @@ class OtherChildren extends Component {
         </ul>
 
         <PersonCollection
-            label="Child"
-            labelPlural="other children"
             collection={otherChildren}
+            label={
+              <FormattedMessage
+                  id="app.slides.otherChildren.label"
+                  description="Label used for title, add/remove buttons."
+                  defaultMessage="Child"
+              />
+            }
         />
       </Slide>
     )

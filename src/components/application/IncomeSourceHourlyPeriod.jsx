@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
 import Select from './Select'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class IncomeSourceHourlyPeriod extends Component {
@@ -29,9 +30,27 @@ class IncomeSourceHourlyPeriod extends Component {
       <div className="usa-input-grid usa-input-grid-medium">
         <Select value={incomeSource[fieldName]}
                 onChange={this.handleChange}>
-          <option value="" disabled>hours per…</option>
-          <option value="week">hours per week</option>
-          <option value="month">hours per month</option>
+          <option value="" disabled>
+            <FormattedMessage
+                id="app.incomeSourceHourlyPeriod.placeholder"
+                description="Default text for hourly period select box."
+                defaultMessage="hours per…"
+            />
+          </option>
+          <option value="week">
+            <FormattedMessage
+                id="app.incomeSourceHourlyPeriod.week"
+                description="Number of hours per week."
+                defaultMessage="hours per week"
+            />
+          </option>
+          <option value="month">
+            <FormattedMessage
+                id="app.incomeSourceHourlyPeriod.month"
+                description="Number of hours per month."
+                defaultMessage="hours per month"
+            />
+          </option>
         </Select>
       </div>
     )

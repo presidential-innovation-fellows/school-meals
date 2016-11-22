@@ -19,7 +19,7 @@ export default class MilitaryIncome extends Component {
         <NotTheSame />
 	<Topic title={help.grossTitle} body={help.grossBody} />
         <Topic title={help.netTitle} body={help.netBody} />
-        <Topich title={help.wagesSelfemploymentTitle} body={help.wagesSelfemploymentBody} />
+        <Topic title={help.wagesSelfemploymentTitle} body={help.wagesSelfemploymentBody} />
         <WhatIncome />
       </Article>
     )
