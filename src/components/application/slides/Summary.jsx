@@ -27,7 +27,7 @@ class Summary extends Component {
     const assistancePrograms = applicationData.assistancePrograms.applicable
 
     // don't show link to Adults slide if we're not collecting household income
-    const adultsId = applicationData.showHousehold && 'adults'
+    const adultsId = (applicationData.showHousehold || undefined) && 'adults'
 
     const headerText =
       <FormattedMessage
