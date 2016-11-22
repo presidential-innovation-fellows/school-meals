@@ -662,7 +662,7 @@
   "app.slides.attestation.understand": "",
 
   // Name of individual completing app
-  // Enter the name of the adult household member completing the application.
+  // English: "Enter the name of the adult household member completing the application."
   "app.slides.attestation.completingApp": "",
 
   // Field label.
@@ -747,7 +747,7 @@
   "app.slides.beforeYouBegin.usStatus": "",
 
   // Click the question mark icons
-  // English: "If you have questions at any point during the application, click the question mark icon to get help with the current section."
+  // English: "If you have questions at any point during the application, click the question mark icon {glyphIcon} to get help with the current section."
   "app.slides.beforeYouBegin.questions": "",
 
   // Things you'll need section header.
@@ -1695,6 +1695,19 @@
 
 
   /***
+   *** src/components/help/articles/HelpText.jsx
+   ***/
+
+  // Help text.
+  // English: "My child’s application was approved last year. Do I need to fill out a new one?"
+  "help.articles.helpText.newAppTitle": "",
+
+  // Help text.
+  // English: "Yes. Eligibility for free or reduced price meals only lasts for one school year. However, eligibility for the previous year carries over for the first few days of the new school year, or until the new eligibility determination is made. Please complete a new application unless you received a letter from the school saying that your child is eligible for the upcoming {schoolYear} school year."
+  "help.articles.helpText.newAppBody": "",
+
+
+  /***
    *** src/components/help/topics/Household.jsx
    ***/
 
@@ -2228,5 +2241,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479831099307."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479844587027."
 }
