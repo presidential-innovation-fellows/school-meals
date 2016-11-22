@@ -134,6 +134,10 @@ footer .not-real-disclaimer {
   border: 1px solid #d6d7d9;
 }
 
+.nav-reference-glyph {
+  color: #e31c3d;
+}
+
 .show-progress .slide-content {
   margin-top: 110px;
 }

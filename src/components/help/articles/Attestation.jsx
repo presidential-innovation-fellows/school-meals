@@ -9,7 +9,7 @@ export default class Attestation extends Component {
     return (
       <Article>
       	<Topic title={help.publicChargeTitle} body={help.publicChargeBody} />
-        <Topic title={help.disagreeTitle} body={help.disagreeBody} />
+        <Topic title={help.checkedTitle} body={help.checkedBody} />
         <WhatInformation />
       </Article>
     )

@@ -144,7 +144,13 @@ class BeforeYouBegin extends React.Component {
           <FormattedMessage
               id="app.slides.beforeYouBegin.questions"
               description="Click the question mark icons"
-              defaultMessage="If you have questions at any point during the application, click the question mark icon to get help with the current section."
+              defaultMessage="If you have questions at any point during the application, click the question mark icon {glyphIcon} to get help with the current section."
+              values={{
+                glyphIcon: 
+                          <span className="nav-reference-glyph">
+                          <Glyphicon glyph="question-sign" />
+                          </span>
+              }}
           />
         </p>
 
