@@ -223,19 +223,15 @@ class Summary extends Component {
               : (assistancePrograms.length ?
                  <strong>
                  <FormattedMessage
-                    id="app.slides.summary.certificationPrograms"
-                    description="Certification statement for programs"
-                    defaultMessage="I certify* that my household participates in {program}"
-                    values={{
-                    program: toSentenceSerialArray(assistancePrograms.map(program => {
-                      return (
-                        <span className="usa-label-big" key={program.id}>
-                          {program.accronym}
-                        </span>
-                      )
-                        }))
-                    }}
-                />
+                     id="app.slides.summary.certificationPrograms"
+                     description="Certification statement for programs"
+                     defaultMessage="I certify* that my household participates in"
+                 />&nbsp;
+                 {toSentenceSerialArray(assistancePrograms.map(program => {
+                    return (
+                      <span className="usa-label-big" key={program.id}>{program.accronym}</span>
+                    )
+                  }))}
                  </strong>
                  :
                  <strong>

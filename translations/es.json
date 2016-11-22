@@ -260,6 +260,12 @@
   "app.slides.foster.label": "¿{studentNames} {studentCount, plural, one {vive} other {viven}} con usted por un arreglo formal de hogar de acogida (ordenado por un tribunal)?",
   "app.slides.foster.confirm": "¡No hay problema! Existen otras maneras en las que puede calificar.",
 
+  "app.slides.incomeElection.isFoster": "{studentCount, plural, one {vive} other {viven}} con usted bajo un arreglo formal (ordenado por la corte)",
+  "app.slides.incomeElection.isHomeless": "{studentCount, plural, one {recibe} other {reciben}} asistencia bajo el {programName}",
+  "app.slides.incomeElection.isMigrant": "{studentCount, plural, one {participa} other {participan}} en el {programName} ({programShortName})",
+  "app.slides.incomeElection.isRunaway": "{studentCount, plural, one {participa} other {participan}} en un programa bajo la {programName}",
+  "app.slides.incomeElection.intro": "Usted ha indicado que {names}",
+
   "app.slides.incomeElection.confirmWithStaff": "Sólo necesitamos confirmar eso con el personal del programa. Si no podemos hacerlo, tendrá que presentar una solicitud con información de ingresos para determinar su nivel de beneficios.",
   "app.slides.incomeElection.chooseFollowing": "Elija una de las siguientes opciones:",
   "app.slides.incomeElection.electToProvideIncome.trueLabel": "Proporcionar información de ingresos ahora",
@@ -362,7 +368,7 @@
   "app.slides.summary.contactInfo": "Información de contacto",
   "app.slides.summary.certification": "Certifico* que viven {totalHouseholdMembers} en mi hogar y que nuestros ingresos actuales son de aproximadamente {totalHouseholdIncome}",
   "app.slides.summary.people": "personas",
-  "app.slides.summary.certificationPrograms": "Certifico* que mi familia participa en {program}",
+  "app.slides.summary.certificationPrograms": "Certifico* que mi familia participa en",
   "app.slides.summary.infoCorrect": "",
   "app.slides.summary.finePrint": "Entiendo que esta información se proporciona en relación con el recibo de fondos federales y que los funcionarios escolares pueden verificar (comprobar) la información. Entiendo que si proporciono información falsa a propósito*, mis hijos pueden perder los beneficios de comidas. Si declara información falsa de manera intencional puede quedar sujeto a acusación bajo les leyes estatales y federales correspondientes.",
 
