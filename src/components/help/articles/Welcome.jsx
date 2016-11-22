@@ -25,7 +25,6 @@ export default class Welcome extends Component {
         <Topic title={help.otherProgramsTitle} body={help.otherProgramsBody} />
         <Topic title={help.usCitizenTitle} body={help.usCitizenBody} />
         <Topic title={help.publicChargeTitle} body={help.publicChargeBody} />
-        <Topic title={help.newAppTitle} body={help.newAppBody} />
         <Topic title={help.disagreeTitle} body={help.disagreeBody} />
       </Article>
     )

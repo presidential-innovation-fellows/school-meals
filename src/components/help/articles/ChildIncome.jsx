@@ -21,6 +21,7 @@ export default class ChildIncome extends Component {
         <Topic title={define.ssSurvivorTerm} body={define.ssSurvivorDef} />
         <Topic title={define.currentTerm} body={define.currentDef} />
         <RegularCash />
+        <Topic title={define.pensionBeneficiaryTerm} body={define.pensionBeneficiaryDef} />
         <Topic title={define.annuityChildrenTerm} body={define.annuityChildrenDef} />
         <Topic title={define.trustTerm} body={define.trustDef} />
       </Article>
