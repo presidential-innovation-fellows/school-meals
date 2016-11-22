@@ -1,9 +1,9 @@
 import React, { Component, PropTypes } from 'react'
 import BooleanRadio from '../BooleanRadio'
+import SerialList from '../SerialList'
 import Slide from '../Slide'
 import InformalNameList from '../InformalNameList'
 import { organization } from '../../../config'
-import { toSentenceSerialArray } from '../../../helpers'
 import { observer } from 'mobx-react'
 import {FormattedMessage} from 'react-intl'
 import { hmrPrograms } from '../../../config'
@@ -12,6 +12,11 @@ import Tooltip from '../Tooltip'
 
 @observer
 class IncomeElection extends Component {
+  constructor (props, context) {
+    super(props, context)
+    this.programDescription = this.programDescription.bind(this)
+  }
+
   programDescription(slug) {
     const studentCount = this.props.applicationData.students.length
 
@@ -64,7 +69,7 @@ class IncomeElection extends Component {
   render() {
     const { applicationData } = this.props
     const { allPeopleCollections, students } = applicationData
-    const programDescriptions = toSentenceSerialArray([
+    const programSlugs = [
       'isFoster',
       'isHomeless',
       'isMigrant',
@@ -73,7 +78,7 @@ class IncomeElection extends Component {
         return students
           .map(student => student[slug])
           .reduce((a, b) => a || b, false)
-    }).map(slug => this.programDescription(slug)), ', ', students.length === 1 ? ' and ' : ' or ')
+    })
 
     return (
       <Slide nextDisabled={!this.isValid} id="income-election">
@@ -87,7 +92,8 @@ class IncomeElection extends Component {
                 names: <InformalNameList people={students} />
               }}
           />
-          &nbsp;{programDescriptions.map((program, i) => <span key={i}>{program}</span>)}.
+          &nbsp;
+          <SerialList items={programSlugs} intersection={students.length !== 1} mapFunc={this.programDescription} />
         </p>
 
         <p>

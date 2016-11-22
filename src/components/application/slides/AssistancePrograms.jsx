@@ -2,7 +2,6 @@
 import Slide from '../Slide'
 import AssistanceProgramList from './AssistanceProgramList'
 import { observer } from 'mobx-react'
-import { toSentenceSerial } from 'underscore.string'
 import { assistancePrograms as programNames, assistanceProgramsVar } from '../../../config'
 import { AssistancePrograms as Store } from '../../../stores/ApplicationData'
 import { Glyphicon, OverlayTrigger } from 'react-bootstrap'
@@ -19,9 +18,6 @@ class AssistancePrograms extends Component {
       assistancePrograms,
       allPeopleCollections
     } = this.props
-
-    const assistanceProgramList =
-          toSentenceSerial(programNames, ', ', ' or ')
 
     return(
       <Slide id="assistance-programs"

@@ -205,35 +205,6 @@ export function allStudentsAreFoster(students) {
     .reduce((a, b) => a && b, true)
 }
 
-// Like the underscore.string version but handles any React node (not just strings).
-// Returns an array of the inputs with appropriate delimiters interspersed.
-export function toSentenceSerialArray(array = [], delimiter = ', ', lastDelimiter = ' and ') {
-  switch (array.length) {
-    case 0:
-      return []
-    case 1:
-      return [array[0]]
-    default:
-      let result = []
-
-      for (let i = 0; i < array.length; i++) {
-        result.push(array[i])
-
-        switch (array.length - i) {
-          case 1:
-            break
-          case 2:
-            result.push(lastDelimiter)
-            break
-          default:
-            result.push(delimiter)
-        }
-      }
-
-      return result
-  }
-}
-
 export function applicableIncomeSources(person) {
   let result = []
 
