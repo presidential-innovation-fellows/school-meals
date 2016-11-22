@@ -134,7 +134,7 @@ footer .not-real-disclaimer {
   border: 1px solid #d6d7d9;
 }
 
-.nav-reference-glyph {
+.help-icon {
   color: #e31c3d;
 }
 
@@ -317,7 +317,6 @@ footer .not-real-disclaimer {
 
 nav .glyphicon {
   top: 2px;
-  color: #e31c3d;
 }
 
 nav li::before,
