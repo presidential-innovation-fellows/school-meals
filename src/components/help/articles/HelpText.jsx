@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { schoolYear } from '../../../helpers'
 import { organization, assistanceProgramsVar, hmrPrograms } from '../../../config'
-import { toSentenceSerial } from 'underscore.string'
 
 export const help = {
   //variables are paired by contentTitle and contentBody;

@@ -1,8 +1,8 @@
 ﻿import React from 'react'
 import Slide from '../Slide'
+import SerialList from '../SerialList'
 import SchoolYear from '../SchoolYear'
 import { assistancePrograms, organization, assistanceProgramsVar } from '../../../config'
-import { toSentenceSerial } from 'underscore.string'
 import { observable } from 'mobx'
 import { observer } from 'mobx-react'
 import { Glyphicon, OverlayTrigger } from 'react-bootstrap'
@@ -24,9 +24,6 @@ class BeforeYouBegin extends React.Component {
   }
 
   render() {
-    const assistanceProgramList =
-      toSentenceSerial(assistancePrograms, ', ', ' or ')
-
     const headerText =
       <FormattedMessage
           id="app.slides.beforeYouBegin.header"
@@ -59,7 +56,7 @@ class BeforeYouBegin extends React.Component {
                           />
                         </Tooltip>,
                 schoolYear: <SchoolYear />,
-                assistanceProgramList: assistanceProgramList
+                assistanceProgramList: <SerialList items={assistancePrograms} intersection={true} />
               }}
           />
         </p>

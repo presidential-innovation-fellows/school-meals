@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import Article from '../Article'
 import Topic from '../Topic'
-import { toSentenceSerial } from 'underscore.string'
 import { assistanceProgramsVar, organization } from '../../../config'
 import { help } from './HelpText'
 import PaperApp from '../topics/PaperApp'

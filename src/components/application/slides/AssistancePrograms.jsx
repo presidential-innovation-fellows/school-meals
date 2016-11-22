@@ -2,12 +2,12 @@
 import Slide from '../Slide'
 import AssistanceProgramList from './AssistanceProgramList'
 import { observer } from 'mobx-react'
-import { toSentenceSerial } from 'underscore.string'
 import { assistancePrograms as programNames, assistanceProgramsVar } from '../../../config'
 import { AssistancePrograms as Store } from '../../../stores/ApplicationData'
 import { Glyphicon, OverlayTrigger } from 'react-bootstrap'
 import { tooltiptext } from '../../Tooltiptext'
 import Tooltip from '../Tooltip'
+import InformalNameList from '../InformalNameList'
 import {FormattedMessage} from 'react-intl'
 
 @observer
@@ -18,9 +18,6 @@ class AssistancePrograms extends Component {
       assistancePrograms,
       allPeopleCollections
     } = this.props
-
-    const assistanceProgramList =
-          toSentenceSerial(programNames, ', ', ' or ')
 
     return(
       <Slide id="assistance-programs"
@@ -34,7 +31,7 @@ class AssistancePrograms extends Component {
                      snap: <Tooltip text={tooltiptext.snap} target={assistanceProgramsVar.snap.accronym} />,
                      tanf: <Tooltip text={tooltiptext.tanf} target={assistanceProgramsVar.tanf.accronym} />,
                      fdpir: <Tooltip text={tooltiptext.fdpir} target={assistanceProgramsVar.fdpir.accronym} />,
-                     studentList: students.informalList(allPeopleCollections),
+                     studentList: <InformalNameList people={students} />,
                      studentCount: students.length
                    }}
                />
