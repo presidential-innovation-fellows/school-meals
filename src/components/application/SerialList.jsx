@@ -5,7 +5,7 @@ import { FormattedMessage } from 'react-intl'
 @observer
 class SerialList extends Component {
   render() {
-    const { idProp, items, intersection, mapFunc } = this.props
+    const { className, idProp, items, intersection, mapFunc } = this.props
     const delim = ','
     const finalWord = intersection ?
                       <FormattedMessage
@@ -24,7 +24,7 @@ class SerialList extends Component {
         {items.map((item, i) => {
            return(
              <span key={idProp ? item[idProp] : i}>
-               {mapFunc(item)}
+               <span className={className}>{mapFunc(item)}</span>
                {(i < items.length - 1) && (items.length > 2) && delim}
                {(items.length > 1) && ' '}
                {(i === items.length - 2) && (items.length > 1) && finalWord }
@@ -44,7 +44,11 @@ SerialList.propTypes = {
     PropTypes.object
   ]).isRequired,
   intersection: PropTypes.bool,
-  mapFunc: PropTypes.func
+  mapFunc: PropTypes.func,
+  className: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.string
+  ])
 }
 
 SerialList.defaultProps = {
