@@ -18,7 +18,7 @@ export const help = {
       id="help.articles.helpText.newAppBody"
       description="Help text."
       defaultMessage="Yes. Eligibility for free or reduced price meals only lasts for one school year. However, eligibility for the previous year carries over for the first few days of the new school year, or until the new eligibility determination is made. Please complete a new application unless you received a letter from the school saying that your child is eligible for the upcoming {schoolYear} school year."
-      vlaues={{ schoolYear: schoolYear() }}
+      values={{ schoolYear: schoolYear() }}
   />,
 //F3
   childAppTitle: 'Do I need to fill out an application for each child?',
