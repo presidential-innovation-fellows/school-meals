@@ -405,6 +405,19 @@
 
 
   /***
+   *** src/components/application/SerialList.jsx
+   ***/
+
+  // Final delimiter for an intersecting list.
+  // English: "or"
+  "app.serialList.intersectionDelim": "",
+
+  // Final delimiter for a union list.
+  // English: "and"
+  "app.serialList.unionDelim": "",
+
+
+  /***
    *** src/components/application/Slide.jsx
    ***/
 
@@ -1077,6 +1090,26 @@
    *** src/components/application/slides/IncomeElection.jsx
    ***/
 
+  // Third-person verb describing applicability of program.
+  // English: "{studentCount, plural, one {lives} other {live}} with you under a formal (court-ordered) foster care arrangement"
+  "app.slides.incomeElection.isFoster": "",
+
+  // Third-person verb describing applicability of program.
+  // English: "{studentCount, plural, one {receives} other {receive}} assistance under the {programName}"
+  "app.slides.incomeElection.isHomeless": "",
+
+  // Third-person verb describing applicability of program.
+  // English: "{studentCount, plural, one {participates} other {participate}} in the {programName} ({programShortName})"
+  "app.slides.incomeElection.isMigrant": "",
+
+  // Third-person verb describing applicability of program.
+  // English: "{studentCount, plural, one {participates} other {participate}} in a program under the {programName}"
+  "app.slides.incomeElection.isRunaway": "",
+
+  // Lead paragraph detailing the programs that have been selected.
+  // English: "You have indicated that {names}"
+  "app.slides.incomeElection.intro": "",
+
   // Need to confirm with program staff
   // English: "We just need to confirm that with program staff. If we are unable to do that, you will need to submit an application with income information to determine your benefit level."
   "app.slides.incomeElection.confirmWithStaff": "",
@@ -1484,7 +1517,7 @@
   "app.slides.summary.people": "",
 
   // Certification statement for programs
-  // English: "I certify* that my household participates in {program}"
+  // English: "I certify* that my household participates in"
   "app.slides.summary.certificationPrograms": "",
 
   // acknowledge info is correct
@@ -2195,5 +2228,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479770013420."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479831099307."
 }

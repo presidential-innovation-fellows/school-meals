@@ -1,5 +1,6 @@
 ﻿import React, { Component, PropTypes, responsive, bordered } from 'react'
 import Slide from '../Slide'
+import SerialList from '../SerialList'
 import SummaryLabel from './SummaryLabel'
 import SummaryPersonCollection from './SummaryPersonCollection'
 import Checkbox from '../Checkbox'
@@ -7,7 +8,7 @@ import Checkboxes from '../Checkboxes'
 import { observer } from 'mobx-react'
 import { numberFormat } from 'underscore.string'
 import { assistanceProgramsVarArray, organization } from '../../../config'
-import { fullName, toSentenceSerialArray } from '../../../helpers'
+import { fullName } from '../../../helpers'
 import { tooltiptext } from '../../Tooltiptext'
 import Tooltip from '../Tooltip'
 import {FormattedMessage} from 'react-intl'
@@ -27,7 +28,7 @@ class Summary extends Component {
     const assistancePrograms = applicationData.assistancePrograms.applicable
 
     // don't show link to Adults slide if we're not collecting household income
-    const adultsId = applicationData.showHousehold && 'adults'
+    const adultsId = (applicationData.showHousehold || undefined) && 'adults'
 
     const headerText =
       <FormattedMessage
@@ -223,19 +224,11 @@ class Summary extends Component {
               : (assistancePrograms.length ?
                  <strong>
                  <FormattedMessage
-                    id="app.slides.summary.certificationPrograms"
-                    description="Certification statement for programs"
-                    defaultMessage="I certify* that my household participates in {program}"
-                    values={{
-                    program: toSentenceSerialArray(assistancePrograms.map(program => {
-                      return (
-                        <span className="usa-label-big" key={program.id}>
-                          {program.accronym}
-                        </span>
-                      )
-                        }))
-                    }}
-                />
+                     id="app.slides.summary.certificationPrograms"
+                     description="Certification statement for programs"
+                     defaultMessage="I certify* that my household participates in"
+                 />&nbsp;
+                 <SerialList className="usa-label-big" items={assistancePrograms} mapFunc={program => program.accronym} />
                  </strong>
                  :
                  <strong>
