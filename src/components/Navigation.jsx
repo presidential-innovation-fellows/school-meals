@@ -67,7 +67,7 @@ class Navigation extends Component {
             </NavItem>
             */}
             <NavItem eventKey={1} onClick={this.handleHelp}>
-              <Glyphicon glyph="question-sign" />&nbsp;
+              <Glyphicon glyph="question-sign" className="help-icon" />&nbsp;
               <FormattedMessage
                   id="nav.help"
                   description="Text for the Help navigation item."

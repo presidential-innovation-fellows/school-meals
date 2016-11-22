@@ -405,6 +405,19 @@
 
 
   /***
+   *** src/components/application/SerialList.jsx
+   ***/
+
+  // Final delimiter for an intersecting list.
+  // English: "or"
+  "app.serialList.intersectionDelim": "",
+
+  // Final delimiter for a union list.
+  // English: "and"
+  "app.serialList.unionDelim": "",
+
+
+  /***
    *** src/components/application/Slide.jsx
    ***/
 
@@ -648,6 +661,10 @@
   // English: "I understand that this information is given in connection with the receipt of Federal funds, and that school o­fficials may verify (check) the information. I am aware that if I purposely* give false information, my children may lose meal benefits."
   "app.slides.attestation.understand": "",
 
+  // Name of individual completing app
+  // English: "Enter the name of the adult household member completing the application."
+  "app.slides.attestation.completingApp": "",
+
   // Field label.
   // English: "First name"
   "app.slides.attestation.firstName.label": "",
@@ -730,7 +747,7 @@
   "app.slides.beforeYouBegin.usStatus": "",
 
   // Click the question mark icons
-  // English: "If you have questions at any point during the application, click the question mark icon to get help with the current section."
+  // English: "If you have questions at any point during the application, click the question mark icon {glyphIcon} to get help with the current section."
   "app.slides.beforeYouBegin.questions": "",
 
   // Things you'll need section header.
@@ -1072,6 +1089,26 @@
   /***
    *** src/components/application/slides/IncomeElection.jsx
    ***/
+
+  // Third-person verb describing applicability of program.
+  // English: "{studentCount, plural, one {lives} other {live}} with you under a formal (court-ordered) foster care arrangement"
+  "app.slides.incomeElection.isFoster": "",
+
+  // Third-person verb describing applicability of program.
+  // English: "{studentCount, plural, one {receives} other {receive}} assistance under the {programName}"
+  "app.slides.incomeElection.isHomeless": "",
+
+  // Third-person verb describing applicability of program.
+  // English: "{studentCount, plural, one {participates} other {participate}} in the {programName} ({programShortName})"
+  "app.slides.incomeElection.isMigrant": "",
+
+  // Third-person verb describing applicability of program.
+  // English: "{studentCount, plural, one {participates} other {participate}} in a program under the {programName}"
+  "app.slides.incomeElection.isRunaway": "",
+
+  // Lead paragraph detailing the programs that have been selected.
+  // English: "You have indicated that {names}"
+  "app.slides.incomeElection.intro": "",
 
   // Need to confirm with program staff
   // English: "We just need to confirm that with program staff. If we are unable to do that, you will need to submit an application with income information to determine your benefit level."
@@ -1480,7 +1517,7 @@
   "app.slides.summary.people": "",
 
   // Certification statement for programs
-  // English: "I certify* that my household participates in {program}"
+  // English: "I certify* that my household participates in"
   "app.slides.summary.certificationPrograms": "",
 
   // acknowledge info is correct
@@ -1655,6 +1692,19 @@
   // FAQ help section title.
   // English: "Frequently Asked Questions"
   "help.faq": "",
+
+
+  /***
+   *** src/components/help/articles/HelpText.jsx
+   ***/
+
+  // Help text.
+  // English: "My child’s application was approved last year. Do I need to fill out a new one?"
+  "help.articles.helpText.newAppTitle": "",
+
+  // Help text.
+  // English: "Yes. Eligibility for free or reduced price meals only lasts for one school year. However, eligibility for the previous year carries over for the first few days of the new school year, or until the new eligibility determination is made. Please complete a new application unless you received a letter from the school saying that your child is eligible for the upcoming {schoolYear} school year."
+  "help.articles.helpText.newAppBody": "",
 
 
   /***
@@ -2191,5 +2241,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479770013420."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479844587027."
 }

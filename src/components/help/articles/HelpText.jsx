@@ -1,14 +1,25 @@
 import React, { Component, PropTypes } from 'react'
 import { schoolYear } from '../../../helpers'
 import { organization, assistanceProgramsVar, hmrPrograms } from '../../../config'
-import { toSentenceSerial } from 'underscore.string'
+import { FormattedMessage } from 'react-intl'
 
 export const help = {
   //variables are paired by contentTitle and contentBody;
 //F1 = PaperApp.jsx
 //F2
-  newAppTitle: 'My child’s application was approved last year. Do I need to fill out a new one?',
-  newAppBody: 'Yes. Eligibility for free or reduced price meals only lasts for one school year. However, eligibility for the previous year carries over for the first few days of the new school year, or until the new eligibility determination is made. Please complete a new application unless you received a letter from the school saying that your child is eligible for the upcoming ' + schoolYear() + ' school year.',
+  newAppTitle:
+  <FormattedMessage
+      id="help.articles.helpText.newAppTitle"
+      description="Help text."
+      defaultMessage="My child’s application was approved last year. Do I need to fill out a new one?"
+  />,
+  newAppBody:
+  <FormattedMessage
+      id="help.articles.helpText.newAppBody"
+      description="Help text."
+      defaultMessage="Yes. Eligibility for free or reduced price meals only lasts for one school year. However, eligibility for the previous year carries over for the first few days of the new school year, or until the new eligibility determination is made. Please complete a new application unless you received a letter from the school saying that your child is eligible for the upcoming {schoolYear} school year."
+      values={{ schoolYear: schoolYear() }}
+  />,
 //F3
   childAppTitle: 'Do I need to fill out an application for each child?',
   childAppBody: 'No. Use one Free and Reduced Price School Meals Application for all students that attend ' + organization.name + ' in your household.',

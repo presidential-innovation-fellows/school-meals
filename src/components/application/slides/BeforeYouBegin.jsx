@@ -1,8 +1,8 @@
 ﻿import React from 'react'
 import Slide from '../Slide'
+import SerialList from '../SerialList'
 import SchoolYear from '../SchoolYear'
 import { assistancePrograms, organization, assistanceProgramsVar } from '../../../config'
-import { toSentenceSerial } from 'underscore.string'
 import { observable } from 'mobx'
 import { observer } from 'mobx-react'
 import { Glyphicon, OverlayTrigger } from 'react-bootstrap'
@@ -24,9 +24,6 @@ class BeforeYouBegin extends React.Component {
   }
 
   render() {
-    const assistanceProgramList =
-      toSentenceSerial(assistancePrograms, ', ', ' or ')
-
     const headerText =
       <FormattedMessage
           id="app.slides.beforeYouBegin.header"
@@ -59,7 +56,7 @@ class BeforeYouBegin extends React.Component {
                           />
                         </Tooltip>,
                 schoolYear: <SchoolYear />,
-                assistanceProgramList: assistanceProgramList
+                assistanceProgramList: <SerialList items={assistancePrograms} intersection={true} />
               }}
           />
         </p>
@@ -147,7 +144,10 @@ class BeforeYouBegin extends React.Component {
           <FormattedMessage
               id="app.slides.beforeYouBegin.questions"
               description="Click the question mark icons"
-              defaultMessage="If you have questions at any point during the application, click the question mark icon to get help with the current section."
+              defaultMessage="If you have questions at any point during the application, click the question mark icon {glyphIcon} to get help with the current section."
+              values={{
+                glyphIcon: <Glyphicon glyph="question-sign" className="help-icon" />
+              }}
           />
         </p>
 

@@ -1,13 +1,67 @@
 import React, { Component, PropTypes } from 'react'
 import BooleanRadio from '../BooleanRadio'
+import SerialList from '../SerialList'
 import Slide from '../Slide'
+import InformalNameList from '../InformalNameList'
 import { organization } from '../../../config'
-import { programDescription, toSentenceSerialArray } from '../../../helpers'
 import { observer } from 'mobx-react'
 import {FormattedMessage} from 'react-intl'
+import { hmrPrograms } from '../../../config'
+import { tooltiptext } from '../../Tooltiptext'
+import Tooltip from '../Tooltip'
 
 @observer
 class IncomeElection extends Component {
+  constructor (props, context) {
+    super(props, context)
+    this.programDescription = this.programDescription.bind(this)
+  }
+
+  programDescription(slug) {
+    const studentCount = this.props.applicationData.students.length
+
+    switch (slug) {
+      case 'isFoster':
+        return <FormattedMessage
+                   id="app.slides.incomeElection.isFoster"
+                   description="Third-person verb describing applicability of program."
+                   defaultMessage="{studentCount, plural, one {lives} other {live}} with you under a formal (court-ordered) foster care arrangement"
+                   values={{ studentCount }}
+        />
+      case 'isHomeless':
+        return  <FormattedMessage
+                   id="app.slides.incomeElection.isHomeless"
+                   description="Third-person verb describing applicability of program."
+                   defaultMessage="{studentCount, plural, one {receives} other {receive}} assistance under the {programName}"
+                   values={{
+                     studentCount,
+                     programName: <Tooltip id="mckinney" text={tooltiptext.mckinney} target={hmrPrograms.mckinney.shortName} />
+                   }}
+        />
+      case 'isMigrant':
+        return  <FormattedMessage
+                   id="app.slides.incomeElection.isMigrant"
+                   description="Third-person verb describing applicability of program."
+                   defaultMessage="{studentCount, plural, one {participates} other {participate}} in the {programName} ({programShortName})"
+                   values={{
+                     studentCount,
+                     programName: hmrPrograms.mep.fullName,
+                     programShortName: <Tooltip id="migrant" text={tooltiptext.mep} target={hmrPrograms.mep.accronym} />
+                   }}
+        />
+      case 'isRunaway':
+        return  <FormattedMessage
+                   id="app.slides.incomeElection.isRunaway"
+                   description="Third-person verb describing applicability of program."
+                   defaultMessage="{studentCount, plural, one {participates} other {participate}} in a program under the {programName}"
+                   values={{
+                     studentCount,
+                     programName: <Tooltip id="runaway" text={tooltiptext.runaway} target={hmrPrograms.runaway} />
+                   }}
+        />
+    }
+  }
+
   get isValid() {
     return applicationData.electToProvideIncome != null
   }
@@ -15,9 +69,7 @@ class IncomeElection extends Component {
   render() {
     const { applicationData } = this.props
     const { allPeopleCollections, students } = applicationData
-    const names = students.informalList(allPeopleCollections, ' and ')
-    const singular = students.length === 1
-    const programDescriptions = toSentenceSerialArray([
+    const programSlugs = [
       'isFoster',
       'isHomeless',
       'isMigrant',
@@ -26,16 +78,22 @@ class IncomeElection extends Component {
         return students
           .map(student => student[slug])
           .reduce((a, b) => a || b, false)
-    }).map(slug => programDescription(slug)), ', ', singular ? ' and ' : ' or ')
+    })
 
     return (
       <Slide nextDisabled={!this.isValid} id="income-election">
 
         <p className="usa-font-lead">
-          You have indicated that&nbsp;
-          {names}
-          {singular ? ' does ' : ' '}
-          {programDescriptions}.
+          <FormattedMessage
+              id="app.slides.incomeElection.intro"
+              description="Lead paragraph detailing the programs that have been selected."
+              defaultMessage="You have indicated that {names}"
+              values={{
+                names: <InformalNameList people={students} />
+              }}
+          />
+          &nbsp;
+          <SerialList items={programSlugs} intersection={students.length !== 1} mapFunc={this.programDescription} />
         </p>
 
         <p>
