@@ -648,6 +648,10 @@
   // English: "I understand that this information is given in connection with the receipt of Federal funds, and that school o­fficials may verify (check) the information. I am aware that if I purposely* give false information, my children may lose meal benefits."
   "app.slides.attestation.understand": "",
 
+  // Name of individual completing app
+  // Enter the name of the adult household member completing the application.
+  "app.slides.attestation.completingApp": "",
+
   // Field label.
   // English: "First name"
   "app.slides.attestation.firstName.label": "",

@@ -155,6 +155,7 @@
   "app.slides.attestation.header": "Certifico (prometo)...",
   "app.slides.attestation.intro": "que toda la información que figura en esta solicitud es verdadera y que he declarado todos los ingresos.",
   "app.slides.attestation.understand": "Entiendo que esta información se proporciona en relación con el recibo de fondos federales y que los funcionarios escolares pueden verificar (comprobar) la información. Entiendo que si proporciono información falsa a propósito*, mis hijos pueden perder los beneficios de comidas.",
+  "app.slides.attestation.completingApp": "",
   "app.slides.attestation.firstName.label": "Nombre de pila",
   "app.slides.attestation.middleName.label": "Segundo nombre",
   "app.slides.attestation.lastName.label": "Apellido",

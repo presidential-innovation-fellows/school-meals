@@ -40,6 +40,13 @@ class Attestation extends Component {
               defaultMessage="I understand that this information is given in connection with the receipt of Federal funds, and that school o­fficials may verify (check) the information. I am aware that if I purposely* give false information, my children may lose meal benefits."
         />
         </p>
+        <p><strong>
+        <FormattedMessage
+              id="app.slides.attestation.completingApp"
+              description="Name of individual completing app"
+              defaultMessage="Enter the name of the adult household member completing the application."
+        />
+        </strong></p>
 
         <Form>
           <Fieldset legend="Attestation">
