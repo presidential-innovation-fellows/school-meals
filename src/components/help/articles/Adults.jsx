@@ -13,9 +13,9 @@ export default class Adults extends Component {
     return (
       <Article>
         <ArticleFaqSection>
-        <Household />
-        <Topic title={help.noIncomeTitle} body={help.noIncomeBody} />
-        <Topic title={help.deployedTitle} body={help.deployedBody} />
+          <Household />
+          <Topic title={help.noIncomeTitle} body={help.noIncomeBody} />
+          <Topic title={help.deployedTitle} body={help.deployedBody} />
         </ArticleFaqSection>
       </Article>
     )

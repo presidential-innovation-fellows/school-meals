@@ -12,11 +12,11 @@ export default class All extends Component {
     return (
       <Article>
         <ArticleFaqSection>
-        <Topic title={help.applyLaterTitle} body={help.applyLaterBody} />
-        <Topic title={help.otherProgramsTitle} body={help.otherProgramsBody} />
-        <Topic title={help.publicChargeTitle} body={help.publicChargeBody} />
-        <Topic title={help.checkedTitle} body={help.checkedBody} />
-        <Topic title={help.disagreeTitle} body={help.disagreeBody} />
+          <Topic title={help.applyLaterTitle} body={help.applyLaterBody} />
+          <Topic title={help.otherProgramsTitle} body={help.otherProgramsBody} />
+          <Topic title={help.publicChargeTitle} body={help.publicChargeBody} />
+          <Topic title={help.checkedTitle} body={help.checkedBody} />
+          <Topic title={help.disagreeTitle} body={help.disagreeBody} />
         </ArticleFaqSection>
       </Article>
     )

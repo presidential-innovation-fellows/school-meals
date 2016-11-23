@@ -11,10 +11,10 @@ export default class Students extends Component {
     return (
       <Article>
         <ArticleFaqSection>
-        <Topic title={help.childAppTitle} body={help.childAppBody} />
-        <Topic title={help.headStartTitle} body={help.headStartBody} />
-        <Household />
-        <Topic title={help.sharedCustodyTitle} body={help.sharedCustodyBody} />
+          <Topic title={help.childAppTitle} body={help.childAppBody} />
+          <Topic title={help.headStartTitle} body={help.headStartBody} />
+          <Household />
+          <Topic title={help.sharedCustodyTitle} body={help.sharedCustodyBody} />
         </ArticleFaqSection>
       </Article>
     )

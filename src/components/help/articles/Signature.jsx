@@ -12,10 +12,10 @@ export default class Signature extends Component {
     return (
       <Article>
         <ArticleFaqSection>
-        <Topic title={help.ssnTitle} body={help.ssnBody} />
-        <Topic title={help.usCitizenTitle} body={help.usCitizenBody} />
-        <Topic title={help.publicChargeTitle} body={help.publicChargeBody} />
-        <Topic title={help.checkedTitle} body={help.checkedBody} />
+          <Topic title={help.ssnTitle} body={help.ssnBody} />
+          <Topic title={help.usCitizenTitle} body={help.usCitizenBody} />
+          <Topic title={help.publicChargeTitle} body={help.publicChargeBody} />
+          <Topic title={help.checkedTitle} body={help.checkedBody} />
         </ArticleFaqSection>
       </Article>
     )

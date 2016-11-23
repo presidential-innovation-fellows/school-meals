@@ -9,9 +9,9 @@ import PaperApp from '../topics/PaperApp'
 
 export default class Welcome extends Component {
   render() {
-//    const assistanceProgramList = assistanceProgramsVar.snap.fullname +' (' assistanceProgramsVar.snap.accronym + ') ' + assistanceProgramsVar.tanf.fullname + ' (' + assistanceProgramsVar.tanf.accronym + ') ' + assistanceProgramsVar.fdpir.fullname + ' (' + assistanceProgramsVar.fdpir.accronym +') '
+    //    const assistanceProgramList = assistanceProgramsVar.snap.fullname +' (' assistanceProgramsVar.snap.accronym + ') ' + assistanceProgramsVar.tanf.fullname + ' (' + assistanceProgramsVar.tanf.accronym + ') ' + assistanceProgramsVar.fdpir.fullname + ' (' + assistanceProgramsVar.fdpir.accronym +') '
 
-//F1-F12, F43
+    //F1-F12, F43
     return (
       <Article>
         <ArticleFaqSection>

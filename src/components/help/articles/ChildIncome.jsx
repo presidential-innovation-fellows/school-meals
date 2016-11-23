@@ -13,21 +13,21 @@ export default class ChildIncome extends Component {
     return (
       <Article>
         <ArticleFaqSection>
-    	<Topic title={help.childIncomeTitle} body={help.childIncomeBody} />
-    	<Topic title={help.grossTitle} body={help.grossBody} />
-    	<Topic title={help.netTitle} body={help.netBody} />
-        <WhatIncome />
-    	<Household />
-    	<Topic title={help.sharedCustodyTitle} body={help.sharedCustodyBody} />
-    	</ArticleFaqSection>
+          <Topic title={help.childIncomeTitle} body={help.childIncomeBody} />
+          <Topic title={help.grossTitle} body={help.grossBody} />
+          <Topic title={help.netTitle} body={help.netBody} />
+          <WhatIncome />
+          <Household />
+          <Topic title={help.sharedCustodyTitle} body={help.sharedCustodyBody} />
+        </ArticleFaqSection>
         <ArticleDefinitionSection>
-        <Topic title={define.ssiChildrenTerm} body={define.ssiChildrenDef} />
-        <Topic title={define.ssSurvivorTerm} body={define.ssSurvivorDef} />
-        <Topic title={define.currentTerm} body={define.currentDef} />
-        <RegularCash />
-        <Topic title={define.pensionBeneficiaryTerm} body={define.pensionBeneficiaryDef} />
-        <Topic title={define.annuityChildrenTerm} body={define.annuityChildrenDef} />
-        <Topic title={define.trustTerm} body={define.trustDef} />
+          <Topic title={define.ssiChildrenTerm} body={define.ssiChildrenDef} />
+          <Topic title={define.ssSurvivorTerm} body={define.ssSurvivorDef} />
+          <Topic title={define.currentTerm} body={define.currentDef} />
+          <RegularCash />
+          <Topic title={define.pensionBeneficiaryTerm} body={define.pensionBeneficiaryDef} />
+          <Topic title={define.annuityChildrenTerm} body={define.annuityChildrenDef} />
+          <Topic title={define.trustTerm} body={define.trustDef} />
         </ArticleDefinitionSection>
       </Article>
     )

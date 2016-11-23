@@ -12,7 +12,7 @@ export default class All extends Component {
     return (
       <Article>
         <ArticleFaqSection>
-        <Topic title={help.contactTitle} body={help.contactBody} />
+          <Topic title={help.contactTitle} body={help.contactBody} />
         </ArticleFaqSection>
       </Article>
     )

@@ -15,16 +15,16 @@ export default class SpousalIncome extends Component {
     return (
       <Article>
         <ArticleFaqSection>
-        <NotTheSame />
-        <Topic title={help.grossTitle} body={help.grossBody} />
-        <Topic title={help.netTitle} body={help.netBody} />
-        <WhatIncome />
-        <Topic title={help.sharedCustodyTitle} body={help.sharedCustodyBody} />
+          <NotTheSame />
+          <Topic title={help.grossTitle} body={help.grossBody} />
+          <Topic title={help.netTitle} body={help.netBody} />
+          <WhatIncome />
+          <Topic title={help.sharedCustodyTitle} body={help.sharedCustodyBody} />
         </ArticleFaqSection>
         <ArticleDefinitionSection>
-        <Topic title={define.alimonyTerm} body={define.alimonyDef} />
-        <Topic title={define.childSupportTerm} body={define.childSupportDef} />
-       	<Topic title={define.currentTerm} body={define.currentDef} />
+          <Topic title={define.alimonyTerm} body={define.alimonyDef} />
+          <Topic title={define.childSupportTerm} body={define.childSupportDef} />
+          <Topic title={define.currentTerm} body={define.currentDef} />
         </ArticleDefinitionSection>
       </Article>
     )

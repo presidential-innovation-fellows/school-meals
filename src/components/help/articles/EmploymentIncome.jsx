@@ -15,19 +15,19 @@ export default class EmploymentIncome extends Component {
     return (
       <Article>
         <ArticleFaqSection>
-        <NotTheSame />
-	<Topic title={help.earningsDifferencesTitle} body={help.earningsDifferencesBody} />
-        <Topic title={help.selfEmployedTitle} body={help.selfEmployedBody} />
-        <Topic title={help.wagesSelfemploymentTitle} body={help.wagesSelfemploymentBody} />
-        <Topic title={help.seasonalTitle} body={help.seasonalBody} />
-	<Topic title={help.grossTitle} body={help.grossBody} />
-        <Topic title={help.netTitle} body={help.netBody} />
-        <WhatIncome />
+          <NotTheSame />
+          <Topic title={help.earningsDifferencesTitle} body={help.earningsDifferencesBody} />
+          <Topic title={help.selfEmployedTitle} body={help.selfEmployedBody} />
+          <Topic title={help.wagesSelfemploymentTitle} body={help.wagesSelfemploymentBody} />
+          <Topic title={help.seasonalTitle} body={help.seasonalBody} />
+          <Topic title={help.grossTitle} body={help.grossBody} />
+          <Topic title={help.netTitle} body={help.netBody} />
+          <WhatIncome />
         </ArticleFaqSection>
         <ArticleDefinitionSection>
-        <Topic title={define.currentTerm} body={define.currentDef} />
-        <Topic title={define.cashBonusTerm} body={define.cashBonusDef} />
-        <NetSelfEmployment />
+          <Topic title={define.currentTerm} body={define.currentDef} />
+          <Topic title={define.cashBonusTerm} body={define.cashBonusDef} />
+          <NetSelfEmployment />
         </ArticleDefinitionSection>
       </Article>
     )

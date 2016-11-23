@@ -11,11 +11,11 @@ export default class AssistancePrograms extends Component {
     return (
       <Article>
         <ArticleFaqSection>
-        <Topic title={help.letterTitle} body={help.letterBody} />
-        <Topic title={help.localProgramTitle} body={help.localProgramBody} />
-        <Topic title={help.wicTitle} body={help.wicBody} />
-        <Topic title={help.otherProgramsTitle} body={help.otherProgramsBody} />
-        <Household />
+          <Topic title={help.letterTitle} body={help.letterBody} />
+          <Topic title={help.localProgramTitle} body={help.localProgramBody} />
+          <Topic title={help.wicTitle} body={help.wicBody} />
+          <Topic title={help.otherProgramsTitle} body={help.otherProgramsBody} />
+          <Household />
         </ArticleFaqSection>
       </Article>
     )

@@ -11,9 +11,9 @@ export default class OtherChildren extends Component {
     return (
       <Article>
         <ArticleFaqSection>
-     	<Household />
-	<Topic title={help.sharedCustodyTitle} body={help.sharedCustodyBody} />
-	<Topic title={help.noIncomeTitle} body={help.noIncomeBody} />
+          <Household />
+          <Topic title={help.sharedCustodyTitle} body={help.sharedCustodyBody} />
+          <Topic title={help.noIncomeTitle} body={help.noIncomeBody} />
         </ArticleFaqSection>
       </Article>
     )

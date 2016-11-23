@@ -15,18 +15,18 @@ export default class IncomeElection extends Component {
     return (
       <Article>
         <ArticleFaqSection>
-        <QualifyMigrant />
-        <QualifyHomeless />
-        <Topic title={help.qualifyRunawayTitle} body={help.qualifyRunawayBody} />
-        <WhatInformation />
-        <WhatIncome />
-        <Topic title={help.applyLaterTitle} body={help.applyLaterBody} />
-        <Topic title={help.publicChargeTitle} body={help.publicChargeBody} />
+          <QualifyMigrant />
+          <QualifyHomeless />
+          <Topic title={help.qualifyRunawayTitle} body={help.qualifyRunawayBody} />
+          <WhatInformation />
+          <WhatIncome />
+          <Topic title={help.applyLaterTitle} body={help.applyLaterBody} />
+          <Topic title={help.publicChargeTitle} body={help.publicChargeBody} />
         </ArticleFaqSection>
         <ArticleDefinitionSection>
-        <Topic title={define.mckinneyTerm} body={define.mckinneyDef} />
-        <Topic title={define.mepTerm} body={define.mepDef} />
-        <Topic title={define.runawayHomelessActTerm} body={define.runawayHomelessActDef} />
+          <Topic title={define.mckinneyTerm} body={define.mckinneyDef} />
+          <Topic title={define.mepTerm} body={define.mepDef} />
+          <Topic title={define.runawayHomelessActTerm} body={define.runawayHomelessActDef} />
         </ArticleDefinitionSection>
       </Article>
     )

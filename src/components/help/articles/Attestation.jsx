@@ -11,9 +11,9 @@ export default class Attestation extends Component {
     return (
       <Article>
         <ArticleFaqSection>
-      	<Topic title={help.publicChargeTitle} body={help.publicChargeBody} />
-        <Topic title={help.checkedTitle} body={help.checkedBody} />
-        <WhatInformation />
+          <Topic title={help.publicChargeTitle} body={help.publicChargeBody} />
+          <Topic title={help.checkedTitle} body={help.checkedBody} />
+          <WhatInformation />
         </ArticleFaqSection>
       </Article>
     )

@@ -11,12 +11,12 @@ export default class Foster extends Component {
     return (
       <Article>
         <ArticleFaqSection>
-        <Topic title={help.permanentTitle} body={help.permanentBody} />
-        <Topic title={help.fosterQualifyTitle} body={help.fosterQualifyBody} />
-        <Topic title={help.fosterTitle} body={help.fosterBody} />
-        <Household />
-        <Topic title={help.sharedCustodyTitle} body={help.sharedCustodyBody} />
-        <Topic title={help.childAppTitle} body={help.childAppBody} />
+          <Topic title={help.permanentTitle} body={help.permanentBody} />
+          <Topic title={help.fosterQualifyTitle} body={help.fosterQualifyBody} />
+          <Topic title={help.fosterTitle} body={help.fosterBody} />
+          <Household />
+          <Topic title={help.sharedCustodyTitle} body={help.sharedCustodyBody} />
+          <Topic title={help.childAppTitle} body={help.childAppBody} />
         </ArticleFaqSection>
       </Article>
     )
