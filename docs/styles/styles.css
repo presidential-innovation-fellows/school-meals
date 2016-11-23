@@ -258,6 +258,10 @@ footer .not-real-disclaimer {
     margin-bottom: 0;
   }
 
+  .slide-content footer .required-text {
+    display: inline;
+  }
+
   .remove-person {
     margin-top: 2em;
   }
