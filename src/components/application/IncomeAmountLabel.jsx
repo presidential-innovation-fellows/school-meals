@@ -8,7 +8,6 @@ class IncomeAmountLabel extends Component {
     const { frequency } = this.props
 
     switch (frequency) {
-      case 'yearly':
       case 'annually':
         return <FormattedMessage
                    id="app.incomeAmountLabel.annually"
@@ -56,8 +55,7 @@ class IncomeAmountLabel extends Component {
 }
 
 IncomeAmountLabel.propTypes = {
-  frequency: PropTypes.oneOf(['yearly',
-                              'annually',
+  frequency: PropTypes.oneOf(['annually',
                               'monthly',
                               'twicePerMonth',
                               'everyTwoWeeks',

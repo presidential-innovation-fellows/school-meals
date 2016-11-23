@@ -9,10 +9,9 @@ class FrequencyLabel extends Component {
     let props
 
     switch (frequency) {
-      case 'yearly':
       case 'annually':
         props = {
-          id: 'app.frequencyLabel.yearly',
+          id: 'app.frequencyLabel.annually',
           description: 'Once per year.',
           defaultMessage: 'yearly'
         }
@@ -60,8 +59,7 @@ class FrequencyLabel extends Component {
 
 FrequencyLabel.propTypes = {
   children: PropTypes.func,
-  frequency: PropTypes.oneOf(['yearly',
-                              'annually',
+  frequency: PropTypes.oneOf(['annually',
                               'monthly',
                               'twicePerMonth',
                               'everyTwoWeeks',

@@ -278,7 +278,7 @@
 
   // Once per year.
   // English: "yearly"
-  "app.frequencyLabel.yearly": "",
+  "app.frequencyLabel.annually": "",
 
   // Once per month.
   // English: "monthly"
@@ -2376,5 +2376,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479881643047."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479883145799."
 }
