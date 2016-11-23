@@ -25,7 +25,7 @@ export const help = {
   <FormattedMessage
     id="help.articles.helpText.childAppTitle"
     description="Help text."
-    defaultMessage="Do I need to fill out an application for each child?",
+    defaultMessage="Do I need to fill out an application for each child?"
   />,
   childAppBody: 
   <FormattedMessage
@@ -48,9 +48,9 @@ export const help = {
     description="Help text."
     defaultMessage="No, but please read the letter carefully. If any children in your household were missing from your eligibility notification letter, they are also eligible for free meals, so you should contact {organizationName} ({organizationPhone} / {organizationEmail} / {organizationAddress} ) immediately."
     values={{
-      organizationName: organization.name
-      organizationPhone: organization.contact.phone
-      organizationEmail: organization.contact.email
+      organizationName: organization.name,
+      organizationPhone: organization.contact.phone,
+      organizationEmail: organization.contact.email,
       organizationAddress: organization.contact.address
     }}
   />,
@@ -74,7 +74,7 @@ export const help = {
     description="Help text."
     defaultMessage="My household participates in {snapFullname} and/or {tanfFullname}. Are my children eligible for free meals?"
     values={{
-      snapFullname: assistanceProgramsVar.snap.fullName
+      snapFullname: assistanceProgramsVar.snap.fullName,
       tanfFullname: assistanceProgramsVar.tanf.fullName
     }}
   />,
@@ -84,8 +84,8 @@ export const help = {
     description="Help text."
     defaultMessage="All children in households are eligible for free meals when at least one household member is receiving benefits from {snapFullname}, the Food Distribution Program on Indian Reservations (FDPIR), or {tanfFullName}. If you participate in other assistance programs, contact {organizationName} to see if you qualify for school meal benefits. You may qualify for free meals!"
     values={{
-      snapFullname: assistanceProgramsVar.snap.fullName
-      tanfFullName: assistanceProgramsVar.tanf.fullName
+      snapFullname: assistanceProgramsVar.snap.fullName,
+      tanfFullName: assistanceProgramsVar.tanf.fullName,
       organizationName: organization.name
     }}
   />,
@@ -140,7 +140,10 @@ export const help = {
     id="help.articles.helpText.otherProgramsBody"
     description="Help text."
     defaultMessage="To find out how to apply for {snapFullname} or other assistance benefits, contact your {organizationName}."
-    values={{ snapFullname: assistanceProgramsVar.snap.fullname }}
+    values={{
+      organizationName: organization.name,
+      snapFullname: assistanceProgramsVar.snap.fullname
+    }}
   />,
 //F11
   usCitizenTitle: 
@@ -385,9 +388,9 @@ export const help = {
     description="Help text."
     defaultMessage="If you have questions about whether to include benefits from a specific program, contact {organizationName} ({organizationPhone} / {organizationEmail} / {organizationAddress})."
     values={{
-      organizationName: organizaiton.name
-      organizationPhone: organization.contact.phone
-      organizationEmail: organization.contact.email
+      organizationName: organization.name,
+      organizationPhone: organization.contact.phone,
+      organizationEmail: organization.contact.email,
       organizationAddress: organization.contact.address
     }}
   />,
@@ -404,9 +407,9 @@ export const help = {
     description="Help text."
     defaultMessage="If you receive income from a room or property that you rent out, you should report the net amount of income. In other words, take the total amount you receive in rent for one month (the gross income), and subtract the monthly cost of maintaining the property. If you have questions or need help figuring out how to estimate maintenance costs, contact {organizationName} ({organizationPhone} / {organizationEmail} / {organizationAddress})."
     values={{
-      organizationName: organizaiton.name
-      organizationPhone: organization.contact.phone
-      organizationEmail: organization.contact.email
+      organizationName: organization.name,
+      organizationPhone: organization.contact.phone,
+      organizationEmail: organization.contact.email,
       organizationAddress: organization.contact.address
     }}
   />,
@@ -436,9 +439,9 @@ export const help = {
     description="Help text."
     defaultMessage="If you work on a seasonal basis and your household’s current, gross income is higher or lower than usual and does not fairly or accurately represent your household’s actual circumstances, see the ‘WHAT IF MY INCOME IS NOT ALWAYS THE SAME?’ question in the HELP. If you have additional questions, contact {organizationName} ({organizationPhone} / {organizationEmail} / {organizationAddress}), and they will help you figure out your household’s annual rate of income based on USDA guidelines."
     values={{
-      organizationName: organizaiton.name
-      organizationPhone: organization.contact.phone
-      organizationEmail: organization.contact.email
+      organizationName: organization.name,
+      organizationPhone: organization.contact.phone,
+      organizationEmail: organization.contact.email,
       organizationAddress: organization.contact.address
     }}
   />,
@@ -494,9 +497,9 @@ export const help = {
     description="Help text."
     defaultMessage="You should talk to school officials. You also may ask for a hearing by calling or writing to {organizationName} ({organizationPhone} / {organizationEmail} / {organizationAddress})."
     values={{
-      organizationName: organizaiton.name
-      organizationPhone: organization.contact.phone
-      organizationEmail: organization.contact.email
+      organizationName: organization.name,
+      organizationPhone: organization.contact.phone,
+      organizationEmail: organization.contact.email,
       organizationAddress: organization.contact.address
     }}
   />,
@@ -529,7 +532,7 @@ export const define = {
     description="Help text."
     defaultMessage=" {mepFullName} ({mepAccronym})"
     values={{ 
-      mepFullName: hmrPrograms.mep.fullName
+      mepFullName: hmrPrograms.mep.fullName,
       mepAccronym: hmrPrograms.mep.accronym }}
     />,
   mepDef: 
@@ -607,9 +610,9 @@ export const define = {
     description="Help text."
     defaultMessage="Income in the form of cash benefits, including housing assistance, from state or local government programs should be reported as household income. If you have questions about whether to include benefits from a specific program, contact {organizationName} ({organizationPhone} / {organizationEmail} / {organizationAddress})."
     values={{
-      organizationName: organizaiton.name
-      organizationPhone: organization.contact.phone
-      organizationEmail: organization.contact.email
+      organizationName: organization.name,
+      organizationPhone: organization.contact.phone,
+      organizationEmail: organization.contact.email,
       organizationAddress: organization.contact.address
     }}
   />,
@@ -784,9 +787,9 @@ export const define = {
     defaultMessage="A trust is, in general, a relationship in which one person holds title to property, subject to an obligation to keep or use the property for the benefit of another."
   />,
 //D24
-  trustDef: 
+  ssiChildrenTerm:
   <FormattedMessage
-    id="help.articles.helpText.trustDef"
+    id="help.articles.helpText.ssiChildrenTerm"
     description="Help text."
     defaultMessage="Supplemental Security Income (SSI) for children"
   />,
