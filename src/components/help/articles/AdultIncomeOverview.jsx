@@ -1,5 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import Article from '../Article'
+import ArticleFaqSection from '../ArticleFaqSection'
+import ArticleDefinitionSection from '../ArticleDefinitionSection'
 import Topic from '../Topic'
 import { help, define } from './HelpText'
 import NotTheSame from '../topics/NotTheSame'
@@ -15,6 +17,7 @@ export default class AdultIncomeOverview extends Component {
   render() {
     return (
       <Article>
+        <ArticleFaqSection>
         <WhatIncome />
         <Topic title={help.grossTitle} body={help.grossBody} />
         <Topic title={help.netTitle} body={help.netBody} />
@@ -33,7 +36,8 @@ export default class AdultIncomeOverview extends Component {
         <Topic title={help.noIncomeTitle} body={help.noIncomeBody} />
         <Topic title={help.checkedTitle} body={help.checkedBody} />
         <Household />
-        <bodyLabels>Definitions</bodyLabels>
+        </ArticleFaqSection>
+        <ArticleDefinitionSection>
         <Topic title={define.currentTerm} body={define.currentDef} />
         <Topic title={define.cashBonusTerm} body={define.cashBonusDef} />
         <NetSelfEmployment />
@@ -57,6 +61,7 @@ export default class AdultIncomeOverview extends Component {
         <Topic title={define.ssSurvivorTerm} body={define.ssSurvivorDef} />
         <Topic title={define.pensionBeneficiaryTerm} body={define.pensionBeneficiaryDef} />
         <Topic title={define.annuityChildrenTerm} body={define.annuityChildrenDef} />
+        </ArticleDefinitionSection>
       </Article>
     )
   }

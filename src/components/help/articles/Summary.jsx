@@ -1,5 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import Article from '../Article'
+import ArticleFaqSection from '../ArticleFaqSection'
+import ArticleDefinitionSection from '../ArticleDefinitionSection'
 import Topic from '../Topic'
 import { help, define } from './HelpText'
 import Household from '../topics/Household'
@@ -18,6 +20,7 @@ export default class Summary extends Component {
   render() {
     return (
       <Article>
+        <ArticleFaqSection>
         <Household />
         <WhatIncome />
         <Topic title={help.noIncomeTitle} body={help.noIncomeBody} />
@@ -47,7 +50,8 @@ export default class Summary extends Component {
         <Topic title={help.contactTitle} body={help.contactBody} />
         <Topic title={help.otherProgramsTitle} body={help.otherProgramsBody} />
         <Topic title={help.disagreeTitle} body={help.disagreeBody} />
-        <bodyLabels>Definitions</bodyLabels>
+        </ArticleFaqSection>
+        <ArticleDefinitionSection>
         <IEG />
         <Topic title={define.mckinneyTerm} body={define.mckinneyDef} />
         <Topic title={define.mepTerm} body={define.mepDef} />
@@ -71,6 +75,7 @@ export default class Summary extends Component {
         <Topic title={define.pensionTerm} body={define.pensionDef} />
         <Topic title={define.annuityTerm} body={define.annuityDef} />
         <Topic title={define.trustTerm} body={define.trustDef} />
+        </ArticleDefinitionSection>
       </Article>
     )
   }

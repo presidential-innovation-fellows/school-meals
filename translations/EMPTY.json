@@ -1807,6 +1807,24 @@
 
 
   /***
+   *** src/components/help/ArticleDefinitionSection.jsx
+   ***/
+
+  // Definition help section title.
+  // English: "Definitions"
+  "help.articleDefinitionSection.header": "",
+
+
+  /***
+   *** src/components/help/ArticleFaqSection.jsx
+   ***/
+
+  // FAQ help section title.
+  // English: "Frequently Asked Questions"
+  "help.articleFaqSection.header": "",
+
+
+  /***
    *** src/components/help/Help.jsx
    ***/
 
@@ -1830,15 +1848,6 @@
   // Search results help section title.
   // English: "Search Results"
   "help.searchResults": "",
-
-
-  /***
-   *** src/components/help/SlideTopics.jsx
-   ***/
-
-  // FAQ help section title.
-  // English: "Frequently Asked Questions"
-  "help.faq": "",
 
 
   /***
@@ -2844,5 +2853,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479939023869."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479941453590."
 }

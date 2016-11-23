@@ -1,5 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import Article from '../Article'
+import ArticleFaqSection from '../ArticleFaqSection'
+import ArticleDefinitionSection from '../ArticleDefinitionSection'
 import Topic from '../Topic'
 import { help, define } from './HelpText'
 import WhatInformation from '../topics/WhatInformation'
@@ -20,6 +22,7 @@ export default class All extends Component {
   render() {
     return (
       <Article>
+        <ArticleFaqSection>
         <PaperApp />
         <Topic title={help.newAppTitle} body={help.newAppBody} />
         <Topic title={help.childAppTitle} body={help.childAppBody} />
@@ -62,7 +65,8 @@ export default class All extends Component {
         <Topic title={help.ssnTitle} body={help.ssnBody} />
         <Topic title={help.contactTitle} body={help.contactBody} />
         <Topic title={help.disagreeTitle} body={help.disagreeBody} />
-        <bodyLabels>Definitions</bodyLabels>
+        </ArticleFaqSection>
+        <ArticleDefinitionSection>
         <IEG />
         <Topic title={define.mckinneyTerm} body={define.mckinneyDef} />
         <Topic title={define.mepTerm} body={define.mepDef} />
@@ -90,6 +94,7 @@ export default class All extends Component {
         <Topic title={define.ssSurvivorTerm} body={define.ssSurvivorDef} />
         <Topic title={define.pensionBeneficiaryTerm} body={define.pensionBeneficiaryDef} />
         <Topic title={define.annuityChildrenTerm} body={define.annuityChildrenDef} />
+        </ArticleDefinitionSection>
       </Article>
     )
   }

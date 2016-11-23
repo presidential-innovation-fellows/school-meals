@@ -1,5 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import Article from '../Article'
+import ArticleFaqSection from '../ArticleFaqSection'
+import ArticleDefinitionSection from '../ArticleDefinitionSection'
 import Topic from '../Topic'
 import { help, define } from './HelpText'
 import NotTheSame from '../topics/NotTheSame'
@@ -12,15 +14,18 @@ export default class RetirementIncome extends Component {
   render() {
     return (
       <Article>
+        <ArticleFaqSection>
         <NotTheSame />
         <Topic title={help.grossTitle} body={help.grossBody} />
         <Topic title={help.netTitle} body={help.netBody} />
         <WhatIncome />
-        <bodyLabels>Definitions</bodyLabels>
+        </ArticleFaqSection>
+        <ArticleDefinitionSection>
         <Topic title={define.socialSecurityTerm} body={define.socialSecurityDef} />
         <Topic title={define.blackLungTerm} body={define.blackLungDef} />
         <Topic title={define.railroadRetirementTerm} body={define.railroadRetirementDef} />
         <Topic title={define.currentTerm} body={define.currentDef} />
+        </ArticleDefinitionSection>
       </Article>
     )
   }

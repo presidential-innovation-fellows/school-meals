@@ -448,7 +448,8 @@
 
   "help.searchResults": "Resultados de la búsqueda",
 
-  "help.faq": "Preguntas frecuentes",
+  "help.articleDefinitionSection.header": "Definiciones",
+  "help.articleFaqSection.header": "Preguntas frecuentes",
 
   "help.articles.helpText.newAppTitle": "La solicitud de mi hijo fue aprobada el año pasado. ¿Debo completar una nueva?",
   "help.articles.helpText.newAppBody": "Sí. La elegibilidad para recibir comidas gratis o a precio reducido solo dura un año escolar. Sin embargo, la elegibilidad del año anterior continúa durante los primeros días del nuevo año escolar o hasta que se determine la nueva elegibilidad. Complete una nueva solicitud, a menos que haya recibido una carta de la escuela que diga que su hijo es elegible para el siguiente {schoolYear} año escolar.",

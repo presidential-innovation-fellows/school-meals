@@ -1,5 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import Article from '../Article'
+import ArticleFaqSection from '../ArticleFaqSection'
+import ArticleDefinitionSection from '../ArticleDefinitionSection'
 import Topic from '../Topic'
 import { help, define } from './HelpText'
 import WhatInformation from '../topics/WhatInformation'
@@ -19,6 +21,7 @@ class All extends Component {
   render() {
     return (
       <Article>
+        <ArticleFaqSection showLabel={this.props.showLabels}>
         <PaperApp />
         <Topic title={help.newAppTitle} body={help.newAppBody} />
         <Topic title={help.childAppTitle} body={help.childAppBody} />
@@ -62,7 +65,8 @@ class All extends Component {
         <Topic title={help.contactTitle} body={help.contactBody} />
         <Topic title={help.disagreeTitle} body={help.disagreeBody} />
 
-        { this.props.showLabels && <bodyLabels>Definitions</bodyLabels> }
+        </ArticleFaqSection>
+        <ArticleDefinitionSection showLabel={this.props.showLabels}> }
 
         <IEG />
         <Topic title={define.mckinneyTerm} body={define.mckinneyDef} />
@@ -91,6 +95,7 @@ class All extends Component {
         <Topic title={define.ssSurvivorTerm} body={define.ssSurvivorDef} />
         <Topic title={define.pensionBeneficiaryTerm} body={define.pensionBeneficiaryDef} />
         <Topic title={define.annuityChildrenTerm} body={define.annuityChildrenDef} />
+        </ArticleDefinitionSection>
       </Article>
     )
   }
