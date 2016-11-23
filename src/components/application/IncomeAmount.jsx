@@ -7,11 +7,11 @@ import { FormattedMessage } from 'react-intl'
 @observer
 class IncomeAmount extends Component {
   render() {
-    const { amount, frequency } = this.props
+    const { amount, decimals, frequency } = this.props
 
     return(
       <span>
-        ${numberFormat(amount)}
+        ${numberFormat(amount, decimals)}
         {' '}
         <IncomeAmountLabel frequency={frequency} />
       </span>
@@ -21,7 +21,12 @@ class IncomeAmount extends Component {
 
 IncomeAmount.propTypes = {
   amount: PropTypes.number.isRequired,
-  frequency: PropTypes.string.isRequired
+  decimals: PropTypes.number,
+  frequency: PropTypes.string.isRequired,
+}
+
+IncomeAmount.defaultProps = {
+  decimals: 0
 }
 
 export default IncomeAmount

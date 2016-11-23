@@ -1514,10 +1514,6 @@
   // English: "Total household income"
   "app.slides.summary.totalIncome": "",
 
-  // per month
-  // English: "per month"
-  "app.slides.summary.perMonth": "",
-
   // Contact information
   // English: "Contact information"
   "app.slides.summary.contactInfo": "",
@@ -2255,5 +2251,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479869993703."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479874808127."
 }
