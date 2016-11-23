@@ -71,11 +71,11 @@ class Slide extends Component {
             }
             {
               this.props.showNext && this.props.nextDisabled &&
-              <span className="required-text hidden">
+              <p className="required-text hidden">
                 <strong>
                   {this.props.helpText}
                 </strong>
-              </span>
+              </p>
             }
             {
               navigationData.canJump &&
