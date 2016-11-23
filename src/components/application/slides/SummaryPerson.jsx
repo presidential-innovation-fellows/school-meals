@@ -8,11 +8,12 @@ import {FormattedMessage} from 'react-intl'
 @observer
 class SummaryPerson extends Component {
   render() {
-    const { person } = this.props
+    const { person, showDetails } = this.props
 
     return (
       <li>
         {fullName(person)}
+        {showDetails &&
         <ul>
           {person.isFoster &&
            <li>
@@ -66,13 +67,15 @@ class SummaryPerson extends Component {
            )}
 
         </ul>
+        }
       </li>
     )
   }
 }
 
 SummaryPerson.propTypes = {
-  person: PropTypes.object.isRequired
+  person: PropTypes.object.isRequired,
+  showDetails: PropTypes.bool,
 }
 
 export default SummaryPerson

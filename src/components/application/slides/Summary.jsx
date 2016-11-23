@@ -64,7 +64,8 @@ class Summary extends Component {
           />
         </p>
 
-        <SummaryPersonCollection collection={students} id="students">
+        <SummaryPersonCollection collection={students} id="students"
+                                 showDetails={applicationData.showHousehold}>
           <FormattedMessage
               id="app.slides.summary.studentsAttending"
               description="student info"
@@ -75,7 +76,8 @@ class Summary extends Component {
           />
         </SummaryPersonCollection>
 
-        <SummaryPersonCollection collection={otherChildren} id="other-children">
+        <SummaryPersonCollection collection={otherChildren} id="other-children"
+                                 showDetails={applicationData.showHousehold}>
           <FormattedMessage
               id="app.slides.summary.otherChildren"
               description="Other children"
@@ -83,7 +85,8 @@ class Summary extends Component {
           />
         </SummaryPersonCollection>
 
-        <SummaryPersonCollection collection={adults} id={adultsId}>
+        <SummaryPersonCollection collection={adults} id={adultsId}
+                                 showDetails={applicationData.showHousehold}>
           <FormattedMessage
               id="app.slides.summary.adults"
               description="Adults"
