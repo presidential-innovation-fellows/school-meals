@@ -30,31 +30,40 @@ class IncomeSourceFrequency extends Component {
       <div className="usa-input-grid usa-input-grid-medium">
         <Select value={value}
                 onChange={this.handleChange}>
-          <option value="" disabled>
-            <FormattedMessage
-                id="app.incomeSourceFrequency.placeholder"
-                description="Default text for income frequency select box."
-                defaultMessage="frequency…"
-            />
-          </option>
-          {showAnnual && <option value="annually">
-            <FrequencyLabel frequency="annually" />
-          </option>}
-          <option value="monthly">
-            <FrequencyLabel frequency="monthly" />
-          </option>
-          <option value="twicePerMonth">
-            <FrequencyLabel frequency="twicePerMonth" />
-          </option>
-          <option value="everyTwoWeeks">
-            <FrequencyLabel frequency="everyTwoWeeks" />
-          </option>
-          <option value="weekly">
-            <FrequencyLabel frequency="weekly" />
-          </option>
-          {showHourly && <option value="hourly">
-            <FrequencyLabel frequency="hourly" />
-          </option>}
+          <FormattedMessage
+              id="app.incomeSourceFrequency.placeholder"
+              description="Default text for income frequency select box."
+              defaultMessage="frequency…">
+            {message => <option value="" disabled>{message}</option>}
+          </FormattedMessage>
+
+          {showAnnual &&
+           <FrequencyLabel frequency="annually">
+             {message => <option value="annually">{message}</option>}
+           </FrequencyLabel>
+          }
+
+          <FrequencyLabel frequency="monthly">
+            {message => <option value="monthly">{message}</option>}
+          </FrequencyLabel>
+
+          <FrequencyLabel frequency="twicePerMonth">
+            {message => <option value="twicePerMonth">{message}</option>}
+          </FrequencyLabel>
+
+          <FrequencyLabel frequency="everyTwoWeeks">
+            {message => <option value="everyTwoWeeks">{message}</option>}
+          </FrequencyLabel>
+
+          <FrequencyLabel frequency="weekly">
+            {message => <option value="weekly">{message}</option>}
+          </FrequencyLabel>
+
+          {showHourly &&
+           <FrequencyLabel frequency="hourly">
+             {message => <option value="hourly">{message}</option>}
+           </FrequencyLabel>
+          }
         </Select>
       </div>
     )

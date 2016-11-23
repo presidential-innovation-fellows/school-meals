@@ -5,32 +5,39 @@ import { FormattedMessage } from 'react-intl'
 @observer
 class HourlyPeriodLabel extends Component {
   render() {
-    const { period } = this.props
+    const { children, period } = this.props
+    let props
 
     switch (period) {
       case 'day':
-        return <FormattedMessage
-                   id="app.hourlyPeriodLabel.day"
-                   description="Number of hours per day."
-                   defaultMessage="hours per day"
-               />
+        props = {
+          id: 'app.hourlyPeriodLabel.day',
+          description: 'Number of hours per day.',
+          defaultMessage: 'hours per day'
+        }
+        break
       case 'month':
-        return <FormattedMessage
-                   id="app.hourlyPeriodLabel.month"
-                   description="Number of hours per month."
-                   defaultMessage="hours per month"
-               />
+        props = {
+          id: 'app.hourlyPeriodLabel.month',
+          description: 'Number of hours per month.',
+          defaultMessage: 'hours per month'
+        }
+        break
       case 'week':
-        return <FormattedMessage
-                   id="app.hourlyPeriodLabel.week"
-                   description="Number of hours per week."
-                   defaultMessage="hours per week"
-               />
+        props = {
+          id: 'app.hourlyPeriodLabel.week',
+          description: 'Number of hours per week.',
+          defaultMessage: 'hours per week'
+        }
+        break
     }
+
+    return <FormattedMessage {...props}>{children}</FormattedMessage>
   }
 }
 
 HourlyPeriodLabel.propTypes = {
+  children: PropTypes.func,
   period: PropTypes.oneOf(['day', 'month', 'week']).isRequired
 }
 

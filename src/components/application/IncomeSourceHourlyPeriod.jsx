@@ -31,19 +31,21 @@ class IncomeSourceHourlyPeriod extends Component {
       <div className="usa-input-grid usa-input-grid-medium">
         <Select value={incomeSource[fieldName]}
                 onChange={this.handleChange}>
-          <option value="" disabled>
-            <FormattedMessage
-                id="app.incomeSourceHourlyPeriod.placeholder"
-                description="Default text for hourly period select box."
-                defaultMessage="hours per…"
-            />
-          </option>
-          <option value="week">
-            <HourlyPeriodLabel period="week" />
-          </option>
-          <option value="month">
-            <HourlyPeriodLabel period="month" />
-          </option>
+
+          <FormattedMessage
+              id="app.incomeSourceHourlyPeriod.placeholder"
+              description="Default text for hourly period select box."
+              defaultMessage="hours per…">
+            {message => <option value="" disabled>{message}</option>}
+          </FormattedMessage>
+
+          <HourlyPeriodLabel period="week">
+            {message => <option value="week">{message}</option>}
+          </HourlyPeriodLabel>
+
+          <HourlyPeriodLabel period="month">
+            {message => <option value="month">{message}</option>}
+          </HourlyPeriodLabel>
         </Select>
       </div>
     )
