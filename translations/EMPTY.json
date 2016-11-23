@@ -1879,7 +1879,7 @@
 
   // Help text.
   // English: "My household participates in {snapFullname} and/or {tanfFullname}. Are my children eligible for free meals?"
-  "help.article.helpText.localProgramTitle": "",
+  "help.articles.helpText.localProgramTitle": "",
 
   // Help text.
   // English: "All children in households are eligible for free meals when at least one household member is receiving benefits from {snapFullname}, the Food Distribution Program on Indian Reservations (FDPIR), or {tanfFullName}. If you participate in other assistance programs, contact {organizationName} to see if you qualify for school meal benefits. You may qualify for free meals!"
@@ -1927,195 +1927,195 @@
 
   // Help text.
   // English: "Will my child or I be subject to public charge if I apply for or receive school meal benefits?"
-  "help.article.helpText.publicChargeTitle": "",
+  "help.articles.helpText.publicChargeTitle": "",
 
   // Help text.
   // English: "No, the non-cash benefits received through the National School Lunch Program and School Breakfast Programs are not subject to public charge consideration. In other words, you will not be deported, denied entry to the country, or denied permanent status because you apply for or receive school meal benefits."
-  "help.article.helpText.publicChargeBody": "",
+  "help.articles.helpText.publicChargeBody": "",
 
   // Help text.
   // English: "Will the information I give be checked?"
-  "help.article.helpText.checkedTitle": "",
+  "help.articles.helpText.checkedTitle": "",
 
   // Help text.
   // English: "Yes, each application is reviewed by the district to determine eligibility. We may also ask you to send proof of your household’s income."
-  "help.article.helpText.FormattedMessage": "",
+  "help.articles.helpText.FormattedMessage": "",
 
   // Help text.
   // English: "What if I share custody of my child?"
-  "help.article.helpText.sharedCustodyTitle": "",
+  "help.articles.helpText.sharedCustodyTitle": "",
 
   // Help text.
   // English: "If time is split between houses, both parents may apply for benefits. If the eligibility statuses are different, the highest level of benefits will apply. For example, if you qualify for free meals but your child’s other parent does not, no matter which house your child is staying at, he or she can still receive free meals. However, if either parent chooses not to have your child receive free meal benefits while residing with them then that parent may simply pay for the meals."
-  "help.article.helpText.sharedCustodyBody": "",
+  "help.articles.helpText.sharedCustodyBody": "",
 
   // Help text.
   // English: "Should I include a member of our household on the application if they are currently deployed?"
-  "help.article.helpText.deployedTitle": "",
+  "help.articles.helpText.deployedTitle": "",
 
   // Help text.
   // English: "Yes. Members of the armed services who are activated or deployed are counted as household members. Any money made available by them or on their behalf for the household is included as income to the household with the exception of combat pay."
-  "help.article.helpText.deployedBody": "",
+  "help.articles.helpText.deployedBody": "",
 
   // Help text.
   // English: "I am the permanent guardian of a child. Do they automatically qualify for free meals as a foster child?"
-  "help.article.helpText.permanentTitle": "",
+  "help.articles.helpText.permanentTitle": "",
 
   // Help text.
   // English: "No. The foster status only applies to children who are formally placed by the State welfare agency or court in a caretaker household. It does not apply to informal arrangements, such as caretaker arrangements or to permanent guardianship placements, which may exist outside of State or court based systems. The child may still be eligible based on your household income, so we encourage you to complete an application."
-  "help.article.helpText.permanentBody": "",
+  "help.articles.helpText.permanentBody": "",
 
   // Help text.
   // English: "I adopted a foster child. Are they still eligible for free meals?"
-  "help.article.helpText.fosterTitle": "",
+  "help.articles.helpText.fosterTitle": "",
 
   // Help text.
   // English: "Congratulations on the adoption! And the answer is maybe. If your child was approved for free meals before the adoption went through, then your child is eligible to receive free meals for the rest of the school year. But next year the child will no longer eligible for free meals based on foster status, though they may still qualify based on household income, so we encourage you to submit an application."
-  "help.article.helpText.fosterBody": "",
+  "help.articles.helpText.fosterBody": "",
 
   // Help text.
   // English: "How do I know if a child qualifies as a runaway?"
-  "help.article.helpText.qualifyRunawayTitle": "",
+  "help.articles.helpText.qualifyRunawayTitle": "",
 
   // Help text.
   // English: "Any children living with you who have chosen to leave their prior family or household may qualify for free meals. Please contact {organizationName}."
-  "help.article.helpText.qualifyRunawayBody": "",
+  "help.articles.helpText.qualifyRunawayBody": "",
 
   // Help text.
   // English: "What is child income?"
-  "help.article.helpText.childIncomeTitle": "",
+  "help.articles.helpText.childIncomeTitle": "",
 
   // Help text.
   // English: "Child income is money received from outside your household that is paid directly to your children. Many households do not have any child income."
-  "help.article.helpText.childIncomeBody": "",
+  "help.articles.helpText.childIncomeBody": "",
 
   // Help text.
   // English: "What is gross income?"
-  "help.article.helpText.grossTitle": "",
+  "help.articles.helpText.grossTitle": "",
 
   // Help text.
   // English: "Gross income is all money earned before deductions, such as income taxes, employee’s social security taxes, and insurance premiums. Gross income also includes money that is garnished from wages, or in the case of bankruptcy, income that is ordered to be paid to creditors."
-  "help.article.helpText.grossBody": "",
+  "help.articles.helpText.grossBody": "",
 
   // Help text.
   // English: "What is net income?"
-  "help.article.helpText.netTitle": "",
+  "help.articles.helpText.netTitle": "",
 
   // Help text.
   // English: "Commonly referred to as “take home pay,” net income is the amount of money you receive in your pay check. It is your total (or gross) income, minus taxes and deductions."
-  "help.article.helpText.netBody": "",
+  "help.articles.helpText.netBody": "",
 
   // Help text.
   // English: "We are in the military. Do we report our income differently?"
-  "help.article.helpText.militaryTitle": "",
+  "help.articles.helpText.militaryTitle": "",
 
   // Help text.
   // English: "Your basic pay and cash bonuses must be reported as income. If you get any cash value allowances for off-base housing, food, or clothing, (including BAH), it must also be included as income. However, if your housing is part of the Military Housing Privatization Initiative, do not include your housing allowance as income. Do not include payments from the Family Subsistence Supplemental Allowance (FSSA). Any additional combat pay resulting from deployment is also excluded from income. If the service member is deployed, include only the portion that is made available by them or on their behalf to the household as income."
-  "help.article.helpText.militaryBody": "",
+  "help.articles.helpText.militaryBody": "",
 
   // Help text.
   // English: "I get deployment extension incentive pay (DEIP). Should I report that as income in my application?"
-  "help.article.helpText.deipTitle": "",
+  "help.articles.helpText.deipTitle": "",
 
   // Help text.
   // English: "Maybe. If you are not deployed, then it is included in your household income, but if you are away from your home station, then you are exempt from including it as household income."
-  "help.article.helpText.deipBody": "",
+  "help.articles.helpText.deipBody": "",
 
   // Help text.
   // English: "What is the family subsistence supplemental allowance?"
-  "help.article.helpText.fssaTitle": "",
+  "help.articles.helpText.fssaTitle": "",
 
   // Help text.
   // English: "Family Subsistence Supplemental Allowance (FSSA) is available to service members living in overseas locations that make less than 130 percent of the federal poverty line, and benefits equal the total dollars required to bring household income to that level."
-  "help.article.helpText.fssaBody": "",
+  "help.articles.helpText.fssaBody": "",
 
   // Help text.
   // English: "What is the difference between earnings from a salary and earnings from wages?"
-  "help.article.helpText.earningsDifferencesTitle": "",
+  "help.articles.helpText.earningsDifferencesTitle": "",
 
   // Help text.
   // English: "A salary is an agreed-upon, fixed amount of money paid to an employee every year.  Employers pay salaries in different frequencies depending on the work, but often the frequency is monthly, twice a month, or every two weeks. Wages are also an agreed-upon payment for work. Employers usually pay wages at an hourly, daily or weekly frequency."
-  "help.article.helpText.earningsDifferencesBody": "",
+  "help.articles.helpText.earningsDifferencesBody": "",
 
   // Help text.
   // English: "What if I am self-employed?"
-  "help.article.helpText.selfEmployedTitle": "",
+  "help.articles.helpText.selfEmployedTitle": "",
 
   // Help text.
   // English: "If you are self-employed, report income from work as a net amount. This is calculated by subtracting the total operating expenses of your business from its gross receipts or revenue. For more information see the definition for ‘Net income from self-employment"
-  "help.article.helpText.selfEmployedBody": "",
+  "help.articles.helpText.selfEmployedBody": "",
 
   // Help text.
   // English: "What if I have income from both wages and self-employment?"
-  "help.article.helpText.wagesSelfemploymentTitle": "",
+  "help.articles.helpText.wagesSelfemploymentTitle": "",
 
   // Help text.
   // English: "For a household with income from wages and self-employment, each amount must be listed separately. When there is a business loss, income from wages must not be reduced by the amount of the business loss. If income from self-employment is negative, you should report it as $0 (zero) on your application."
-  "help.article.helpText.wagesSelfemploymentBody": "",
+  "help.articles.helpText.wagesSelfemploymentBody": "",
 
   // Help text.
   // English: "What government program benefits should I include in my household income?"
-  "help.article.helpText.govProgramTitle": "",
+  "help.articles.helpText.govProgramTitle": "",
 
   // Help text.
   // English: "If you have questions about whether to include benefits from a specific program, contact {organizationName} ({organizationPhone} / {organizationEmail} / {organizationAddress})."
-  "help.article.helpText.govProgramBody": "",
+  "help.articles.helpText.govProgramBody": "",
 
   // Help text.
   // English: "How should I report income from rented space or properties?"
-  "help.article.helpText.rentalTitle": "",
+  "help.articles.helpText.rentalTitle": "",
 
   // Help text.
   // English: "If you receive income from a room or property that you rent out, you should report the net amount of income. In other words, take the total amount you receive in rent for one month (the gross income), and subtract the monthly cost of maintaining the property. If you have questions or need help figuring out how to estimate maintenance costs, contact {organizationName} ({organizationPhone} / {organizationEmail} / {organizationAddress})."
-  "help.article.helpText.rentalBody": "",
+  "help.articles.helpText.rentalBody": "",
 
   // Help text.
   // English: "How do I know if I have income from earned interest?"
-  "help.article.helpText.interestTitle": "",
+  "help.articles.helpText.interestTitle": "",
 
   // Help text.
   // English: "If you have money in a savings or investment account, you should have income from earned interest. Interest payments are usually paid out on a quarterly basis, or four times per year. You should see any earned interest on your savings or investment account statement."
-  "help.article.helpText.interestBody": "",
+  "help.articles.helpText.interestBody": "",
 
   // Help text.
   // English: "How should I report my income if I work on a seasonal basis?"
-  "help.article.helpText.seasonalTitle": "",
+  "help.articles.helpText.seasonalTitle": "",
 
   // Help text.
   // English: "If you work on a seasonal basis and your household’s current, gross income is higher or lower than usual and does not fairly or accurately represent your household’s actual circumstances, see the ‘WHAT IF MY INCOME IS NOT ALWAYS THE SAME?’ question in the HELP. If you have additional questions, contact {organizationName} ({organizationPhone} / {organizationEmail} / {organizationAddress}), and they will help you figure out your household’s annual rate of income based on USDA guidelines."
-  "help.article.helpText.seasonalBody": "",
+  "help.articles.helpText.seasonalBody": "",
 
   // Help text.
   // English: "What if some household members have no income to report?"
-  "help.article.helpText.noIncomeTitle": "",
+  "help.articles.helpText.noIncomeTitle": "",
 
   // Help text.
   // English: "You should still list these household members on your application.  Household members may not earn or receive some of the types of income we ask you to report, or they may not receive income at all. Remember your eligibility determination is based on both household income and household size. For more information on who to include in your application, see the FAQ “WHO SHOULD I INCLUDE IN MY HOUSEHOLD?”"
-  "help.article.helpText.noIncomeBody": "",
+  "help.articles.helpText.noIncomeBody": "",
 
   // Help text.
   // English: "What if I do not have a Social Security number?"
-  "help.article.helpText.ssnTitle": "",
+  "help.articles.helpText.ssnTitle": "",
 
   // Help text.
   // English: "Don’t worry, you don’t need to have a Social Security number to receive free or reduced price benefits."
-  "help.article.helpText.ssnBody": "",
+  "help.articles.helpText.ssnBody": "",
 
   // Help text.
   // English: "Do I have to provide my contact information?"
-  "help.article.helpText.contactTitle": "",
+  "help.articles.helpText.contactTitle": "",
 
   // Help text.
   // English: "No, but it is very helpful to have your contact information in case we need to get in touch with you about your application. Also, if your contact information changes in the future, please let us know so that we can maintain up-to-date information for your household throughout the year."
-  "help.article.helpText.contactBody": "",
+  "help.articles.helpText.contactBody": "",
 
   // Help text.
   // English: "What if I disagree with the school’s decision about my application?"
-  "help.article.helpText.disagreeTitle": "",
+  "help.articles.helpText.disagreeTitle": "",
 
   // Help text.
   // English: "You should talk to school officials. You also may ask for a hearing by calling or writing to {organizationName} ({organizationPhone} / {organizationEmail} / {organizationAddress})."
-  "help.article.helpText.disagreeBody": "",
+  "help.articles.helpText.disagreeBody": "",
 
   // Help text.
   // English: "{mckinneyShortName}"
@@ -2844,5 +2844,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479937353986."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479939023869."
 }

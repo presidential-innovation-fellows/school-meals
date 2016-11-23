@@ -70,7 +70,7 @@ export const help = {
 //F6
   localProgramTitle:
   <FormattedMessage
-    id="help.article.helpText.localProgramTitle"
+    id="help.articles.helpText.localProgramTitle"
     description="Help text."
     defaultMessage="My household participates in {snapFullname} and/or {tanfFullname}. Are my children eligible for free meals?"
     values={{
@@ -161,26 +161,26 @@ export const help = {
 //F12
   publicChargeTitle:
   <FormattedMessage
-    id="help.article.helpText.publicChargeTitle"
+    id="help.articles.helpText.publicChargeTitle"
     description="Help text."
     defaultMessage="Will my child or I be subject to public charge if I apply for or receive school meal benefits?"
   />,
   publicChargeBody:
   <FormattedMessage
-    id="help.article.helpText.publicChargeBody"
+    id="help.articles.helpText.publicChargeBody"
     description="Help text."
     defaultMessage="No, the non-cash benefits received through the National School Lunch Program and School Breakfast Programs are not subject to public charge consideration. In other words, you will not be deported, denied entry to the country, or denied permanent status because you apply for or receive school meal benefits."
   />,
 //F13
   checkedTitle:
   <FormattedMessage
-    id="help.article.helpText.checkedTitle"
+    id="help.articles.helpText.checkedTitle"
     description="Help text."
     defaultMessage="Will the information I give be checked?"
   />,
   checkedBody:
   <FormattedMessage
-    id="help.article.helpText.FormattedMessage"
+    id="help.articles.helpText.FormattedMessage"
     description="Help text."
     defaultMessage="Yes, each application is reviewed by the district to determine eligibility. We may also ask you to send proof of your household’s income."
   />,
@@ -189,52 +189,52 @@ export const help = {
 //F16
   sharedCustodyTitle:
   <FormattedMessage
-    id="help.article.helpText.sharedCustodyTitle"
+    id="help.articles.helpText.sharedCustodyTitle"
     description="Help text."
     defaultMessage="What if I share custody of my child?"
   />,
   sharedCustodyBody:
   <FormattedMessage
-    id="help.article.helpText.sharedCustodyBody"
+    id="help.articles.helpText.sharedCustodyBody"
     description="Help text."
     defaultMessage="If time is split between houses, both parents may apply for benefits. If the eligibility statuses are different, the highest level of benefits will apply. For example, if you qualify for free meals but your child’s other parent does not, no matter which house your child is staying at, he or she can still receive free meals. However, if either parent chooses not to have your child receive free meal benefits while residing with them then that parent may simply pay for the meals."
   />,
 //F17
   deployedTitle:
   <FormattedMessage
-    id="help.article.helpText.deployedTitle"
+    id="help.articles.helpText.deployedTitle"
     description="Help text."
     defaultMessage="Should I include a member of our household on the application if they are currently deployed?"
   />,
   deployedBody:
   <FormattedMessage
-    id="help.article.helpText.deployedBody"
+    id="help.articles.helpText.deployedBody"
     description="Help text."
     defaultMessage="Yes. Members of the armed services who are activated or deployed are counted as household members. Any money made available by them or on their behalf for the household is included as income to the household with the exception of combat pay."
   />,
 //F18
   permanentTitle:
   <FormattedMessage
-    id="help.article.helpText.permanentTitle"
+    id="help.articles.helpText.permanentTitle"
     description="Help text."
     defaultMessage="I am the permanent guardian of a child. Do they automatically qualify for free meals as a foster child?"
   />,
   permanentBody:
   <FormattedMessage
-    id="help.article.helpText.permanentBody"
+    id="help.articles.helpText.permanentBody"
     description="Help text."
     defaultMessage="No. The foster status only applies to children who are formally placed by the State welfare agency or court in a caretaker household. It does not apply to informal arrangements, such as caretaker arrangements or to permanent guardianship placements, which may exist outside of State or court based systems. The child may still be eligible based on your household income, so we encourage you to complete an application."
   />,
 //F19
   fosterTitle:
   <FormattedMessage
-    id="help.article.helpText.fosterTitle"
+    id="help.articles.helpText.fosterTitle"
     description="Help text."
     defaultMessage="I adopted a foster child. Are they still eligible for free meals?"
   />,
   fosterBody:
   <FormattedMessage
-    id="help.article.helpText.fosterBody"
+    id="help.articles.helpText.fosterBody"
     description="Help text."
     defaultMessage="Congratulations on the adoption! And the answer is maybe. If your child was approved for free meals before the adoption went through, then your child is eligible to receive free meals for the rest of the school year. But next year the child will no longer eligible for free meals based on foster status, though they may still qualify based on household income, so we encourage you to submit an application."
   />,
@@ -244,13 +244,13 @@ export const help = {
 //F23
   qualifyRunawayTitle:
   <FormattedMessage
-    id="help.article.helpText.qualifyRunawayTitle"
+    id="help.articles.helpText.qualifyRunawayTitle"
     description="Help text."
     defaultMessage="How do I know if a child qualifies as a runaway?"
   />,
   qualifyRunawayBody:
   <FormattedMessage
-    id="help.article.helpText.qualifyRunawayBody"
+    id="help.articles.helpText.qualifyRunawayBody"
     description="Help text."
     defaultMessage="Any children living with you who have chosen to leave their prior family or household may qualify for free meals. Please contact {organizationName}."
     values={{ organizationName: organization.name }}
@@ -259,39 +259,39 @@ export const help = {
 //F25
   childIncomeTitle:
   <FormattedMessage
-    id="help.article.helpText.childIncomeTitle"
+    id="help.articles.helpText.childIncomeTitle"
     description="Help text."
     defaultMessage="What is child income?"
   />,
   childIncomeBody:
   <FormattedMessage
-    id="help.article.helpText.childIncomeBody"
+    id="help.articles.helpText.childIncomeBody"
     description="Help text."
     defaultMessage="Child income is money received from outside your household that is paid directly to your children. Many households do not have any child income."
   />,
 //F26
   grossTitle:
   <FormattedMessage
-    id="help.article.helpText.grossTitle"
+    id="help.articles.helpText.grossTitle"
     description="Help text."
     defaultMessage="What is gross income?"
   />,
   grossBody:
   <FormattedMessage
-    id="help.article.helpText.grossBody"
+    id="help.articles.helpText.grossBody"
     description="Help text."
     defaultMessage="Gross income is all money earned before deductions, such as income taxes, employee’s social security taxes, and insurance premiums. Gross income also includes money that is garnished from wages, or in the case of bankruptcy, income that is ordered to be paid to creditors."
   />,
 //F27
   netTitle:
   <FormattedMessage
-    id="help.article.helpText.netTitle"
+    id="help.articles.helpText.netTitle"
     description="Help text."
     defaultMessage="What is net income?"
   />,
   netBody:
   <FormattedMessage
-    id="help.article.helpText.netBody"
+    id="help.articles.helpText.netBody"
     description="Help text."
     defaultMessage="Commonly referred to as “take home pay,” net income is the amount of money you receive in your pay check. It is your total (or gross) income, minus taxes and deductions."
   />,
@@ -299,13 +299,13 @@ export const help = {
 //F29
   militaryTitle:
   <FormattedMessage
-    id="help.article.helpText.militaryTitle"
+    id="help.articles.helpText.militaryTitle"
     description="Help text."
     defaultMessage="We are in the military. Do we report our income differently?"
   />,
   militaryBody:
   <FormattedMessage
-    id="help.article.helpText.militaryBody"
+    id="help.articles.helpText.militaryBody"
     description="Help text."
     defaultMessage="Your basic pay and cash bonuses must be reported as income. If you get any cash value allowances for off-base housing, food, or clothing, (including BAH), it must also be included as income. However, if your housing is part of the Military Housing Privatization Initiative, do not include your housing allowance as income. Do not include payments from the Family Subsistence Supplemental Allowance (FSSA). Any additional combat pay resulting from deployment is also excluded from income. If the service member is deployed, include only the portion that is made available by them or on their behalf to the household as income."
   />,
@@ -313,78 +313,78 @@ export const help = {
 //F31
   deipTitle:
   <FormattedMessage
-    id="help.article.helpText.deipTitle"
+    id="help.articles.helpText.deipTitle"
     description="Help text."
     defaultMessage="I get deployment extension incentive pay (DEIP). Should I report that as income in my application?"
   />,
   deipBody:
   <FormattedMessage
-    id="help.article.helpText.deipBody"
+    id="help.articles.helpText.deipBody"
     description="Help text."
     defaultMessage="Maybe. If you are not deployed, then it is included in your household income, but if you are away from your home station, then you are exempt from including it as household income."
   />,
 //F32
   fssaTitle:
   <FormattedMessage
-    id="help.article.helpText.fssaTitle"
+    id="help.articles.helpText.fssaTitle"
     description="Help text."
     defaultMessage="What is the family subsistence supplemental allowance?"
   />,
   fssaBody:
   <FormattedMessage
-    id="help.article.helpText.fssaBody"
+    id="help.articles.helpText.fssaBody"
     description="Help text."
     defaultMessage="Family Subsistence Supplemental Allowance (FSSA) is available to service members living in overseas locations that make less than 130 percent of the federal poverty line, and benefits equal the total dollars required to bring household income to that level."
   />,
 //F33
   earningsDifferencesTitle:
   <FormattedMessage
-    id="help.article.helpText.earningsDifferencesTitle"
+    id="help.articles.helpText.earningsDifferencesTitle"
     description="Help text."
     defaultMessage="What is the difference between earnings from a salary and earnings from wages?"
   />,
   earningsDifferencesBody:
   <FormattedMessage
-    id="help.article.helpText.earningsDifferencesBody"
+    id="help.articles.helpText.earningsDifferencesBody"
     description="Help text."
     defaultMessage="A salary is an agreed-upon, fixed amount of money paid to an employee every year.  Employers pay salaries in different frequencies depending on the work, but often the frequency is monthly, twice a month, or every two weeks. Wages are also an agreed-upon payment for work. Employers usually pay wages at an hourly, daily or weekly frequency."
   />,
 //F34
   selfEmployedTitle:
   <FormattedMessage
-    id="help.article.helpText.selfEmployedTitle"
+    id="help.articles.helpText.selfEmployedTitle"
     description="Help text."
     defaultMessage="What if I am self-employed?"
   />,
   selfEmployedBody:
   <FormattedMessage
-    id="help.article.helpText.selfEmployedBody"
+    id="help.articles.helpText.selfEmployedBody"
     description="Help text."
     defaultMessage="If you are self-employed, report income from work as a net amount. This is calculated by subtracting the total operating expenses of your business from its gross receipts or revenue. For more information see the definition for ‘Net income from self-employment"
   />,
 //F35
   wagesSelfemploymentTitle:
   <FormattedMessage
-    id="help.article.helpText.wagesSelfemploymentTitle"
+    id="help.articles.helpText.wagesSelfemploymentTitle"
     description="Help text."
     defaultMessage="What if I have income from both wages and self-employment?"
   />,
   wagesSelfemploymentBody:
   <FormattedMessage
-    id="help.article.helpText.wagesSelfemploymentBody"
+    id="help.articles.helpText.wagesSelfemploymentBody"
     description="Help text."
     defaultMessage="For a household with income from wages and self-employment, each amount must be listed separately. When there is a business loss, income from wages must not be reduced by the amount of the business loss. If income from self-employment is negative, you should report it as $0 (zero) on your application."
   />,
 //F36
   govProgramTitle:
   <FormattedMessage
-    id="help.article.helpText.govProgramTitle"
+    id="help.articles.helpText.govProgramTitle"
     description="Help text."
     defaultMessage="What government program benefits should I include in my household income?"
   />,
   govProgramBody:
   <FormattedMessage
-    id="help.article.helpText.govProgramBody"
+    id="help.articles.helpText.govProgramBody"
     description="Help text."
     defaultMessage="If you have questions about whether to include benefits from a specific program, contact {organizationName} ({organizationPhone} / {organizationEmail} / {organizationAddress})."
     values={{
@@ -397,13 +397,13 @@ export const help = {
 //F37
   rentalTitle:
   <FormattedMessage
-    id="help.article.helpText.rentalTitle"
+    id="help.articles.helpText.rentalTitle"
     description="Help text."
     defaultMessage="How should I report income from rented space or properties?"
   />,
   rentalBody:
   <FormattedMessage
-    id="help.article.helpText.rentalBody"
+    id="help.articles.helpText.rentalBody"
     description="Help text."
     defaultMessage="If you receive income from a room or property that you rent out, you should report the net amount of income. In other words, take the total amount you receive in rent for one month (the gross income), and subtract the monthly cost of maintaining the property. If you have questions or need help figuring out how to estimate maintenance costs, contact {organizationName} ({organizationPhone} / {organizationEmail} / {organizationAddress})."
     values={{
@@ -416,26 +416,26 @@ export const help = {
 //F38
   interestTitle:
   <FormattedMessage
-    id="help.article.helpText.interestTitle"
+    id="help.articles.helpText.interestTitle"
     description="Help text."
     defaultMessage="How do I know if I have income from earned interest?"
   />,
   interestBody:
   <FormattedMessage
-    id="help.article.helpText.interestBody"
+    id="help.articles.helpText.interestBody"
     description="Help text."
     defaultMessage="If you have money in a savings or investment account, you should have income from earned interest. Interest payments are usually paid out on a quarterly basis, or four times per year. You should see any earned interest on your savings or investment account statement."
   />,
 //F39
   seasonalTitle:
   <FormattedMessage
-    id="help.article.helpText.seasonalTitle"
+    id="help.articles.helpText.seasonalTitle"
     description="Help text."
     defaultMessage="How should I report my income if I work on a seasonal basis?"
   />,
   seasonalBody:
   <FormattedMessage
-    id="help.article.helpText.seasonalBody"
+    id="help.articles.helpText.seasonalBody"
     description="Help text."
     defaultMessage="If you work on a seasonal basis and your household’s current, gross income is higher or lower than usual and does not fairly or accurately represent your household’s actual circumstances, see the ‘WHAT IF MY INCOME IS NOT ALWAYS THE SAME?’ question in the HELP. If you have additional questions, contact {organizationName} ({organizationPhone} / {organizationEmail} / {organizationAddress}), and they will help you figure out your household’s annual rate of income based on USDA guidelines."
     values={{
@@ -448,52 +448,52 @@ export const help = {
 //F40
   noIncomeTitle:
   <FormattedMessage
-    id="help.article.helpText.noIncomeTitle"
+    id="help.articles.helpText.noIncomeTitle"
     description="Help text."
     defaultMessage="What if some household members have no income to report?"
   />,
   noIncomeBody:
   <FormattedMessage
-    id="help.article.helpText.noIncomeBody"
+    id="help.articles.helpText.noIncomeBody"
     description="Help text."
     defaultMessage="You should still list these household members on your application.  Household members may not earn or receive some of the types of income we ask you to report, or they may not receive income at all. Remember your eligibility determination is based on both household income and household size. For more information on who to include in your application, see the FAQ “WHO SHOULD I INCLUDE IN MY HOUSEHOLD?”"
   />,
 //F41
   ssnTitle:
   <FormattedMessage
-    id="help.article.helpText.ssnTitle"
+    id="help.articles.helpText.ssnTitle"
     description="Help text."
     defaultMessage="What if I do not have a Social Security number?"
   />,
   ssnBody:
   <FormattedMessage
-    id="help.article.helpText.ssnBody"
+    id="help.articles.helpText.ssnBody"
     description="Help text."
     defaultMessage="Don’t worry, you don’t need to have a Social Security number to receive free or reduced price benefits."
   />,
 //F42
   contactTitle:
   <FormattedMessage
-    id="help.article.helpText.contactTitle"
+    id="help.articles.helpText.contactTitle"
     description="Help text."
     defaultMessage="Do I have to provide my contact information?"
   />,
   contactBody:
   <FormattedMessage
-    id="help.article.helpText.contactBody"
+    id="help.articles.helpText.contactBody"
     description="Help text."
     defaultMessage="No, but it is very helpful to have your contact information in case we need to get in touch with you about your application. Also, if your contact information changes in the future, please let us know so that we can maintain up-to-date information for your household throughout the year."
   />,
 //F43
   disagreeTitle:
   <FormattedMessage
-    id="help.article.helpText.disagreeTitle"
+    id="help.articles.helpText.disagreeTitle"
     description="Help text."
     defaultMessage="What if I disagree with the school’s decision about my application?"
   />,
   disagreeBody:
   <FormattedMessage
-    id="help.article.helpText.disagreeBody"
+    id="help.articles.helpText.disagreeBody"
     description="Help text."
     defaultMessage="You should talk to school officials. You also may ask for a hearing by calling or writing to {organizationName} ({organizationPhone} / {organizationEmail} / {organizationAddress})."
     values={{
