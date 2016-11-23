@@ -12,7 +12,6 @@ import Contact from './slides/Contact'
 import Demographics from './slides/Demographics'
 import Summary from './slides/Summary'
 import ThankYou from './slides/ThankYou'
-import ViewAppData from './slides/ViewAppData'
 
 @observer
 class Application extends Component {
@@ -47,7 +46,6 @@ class Application extends Component {
         <LegalStatements />
         <Summary applicationData={this.props.applicationData} />
         <ThankYou applicationData={this.props.applicationData} />
-        <ViewAppData applicationData={appData}/>
       </div>
     )
   }
