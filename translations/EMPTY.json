@@ -1574,15 +1574,6 @@
 
 
   /***
-   *** src/components/application/slides/SummaryEditLink.jsx
-   ***/
-
-  // edit
-  // English: "edit"
-  "app.slides.summaryEditLink.edit": "",
-
-
-  /***
    *** src/components/application/slides/SummaryPerson.jsx
    ***/
 
@@ -1744,6 +1735,10 @@
   // English: "Caution"
   "app.slides.thankYou.cautionHeading": "",
 
+  // Button to download data
+  // English: "Download Data"
+  "app.slides.thankYou.download": "",
+
   // Indication of what happens next.
   // English: "You will hear from us soon with your certification decision!"
   "app.slides.thankYou.nextSteps": "",
@@ -1751,10 +1746,6 @@
   // Warning message
   // English: "NO DATA HAS BEEN SAVED. THIS IS NOT A REAL APPLICATION FOR SCHOOL MEAL BENEFITS. THIS IS A MODEL APPLICATION DEVELOPED BY USDA TO DEMONSTRATE THE POTENTIAL FUNCTIONALITY OF A SCHOOL DISTRICT'S APPLICATION. CONTACT YOUR CHILD'S SCHOOL TO FIND OUT WHERE YOU CAN ACCESS THEIR APPLICATION FOR SCHOOL MEAL BENEFITS."
   "app.slides.thankYou.caution": "",
-
-  // Button to download data
-  // English: "Download Data"
-  "app.slides.thankYou.download": "",
 
 
   /***
@@ -1784,23 +1775,6 @@
   // Veteran’s benefits
   // English: "Veteran’s benefits"
   "app.slides.unemploymentIncome.veteranBenefits": "",
-
-
-  /***
-   *** src/components/application/slides/ViewAppData.jsx
-   ***/
-
-  // Intro text
-  // English: "This is a special {appData} view for developers. As you fill out the application, you can come back to this page to see how the dataset has changed. If you want to pre-load applicationData with test values, just update /src/debug.js and set DEBUG = true in /src/stores/applicationData.jsx."
-  "app.slides.viewAppData.intro": "",
-
-  // applicationData
-  // English: "applicationData"
-  "app.slides.viewAppData.applicationData": "",
-
-  // Application Data Set
-  // English: "Application Data Set:"
-  "app.slides.viewAppData.appDataSet": "",
 
 
   /***
@@ -2870,5 +2844,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479935598677."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479937353986."
 }

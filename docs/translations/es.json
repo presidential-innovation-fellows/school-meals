@@ -385,8 +385,6 @@
   "app.slides.summary.infoCorrect": "",
   "app.slides.summary.finePrint": "Entiendo que esta información se proporciona en relación con el recibo de fondos federales y que los funcionarios escolares pueden verificar (comprobar) la información. Entiendo que si proporciono información falsa a propósito*, mis hijos pueden perder los beneficios de comidas. Si declara información falsa de manera intencional puede quedar sujeto a acusación bajo les leyes estatales y federales correspondientes.",
 
-  "app.slides.summaryEditLink.edit": "editar",
-
   "app.slides.summaryPerson.foster": "",
   "app.slides.summaryPerson.migrant": "Jóvenes sin hogar",
   "app.slides.summaryPerson.homeless": "Jóvenes migrantes",
@@ -436,10 +434,6 @@
   "app.slides.unemploymentIncome.ssdi": "Seguro por Discapacidad del Seguro Social {tooltip}",
   "app.slides.unemploymentIncome.ssdiToolTip": "(SSDI)",
   "app.slides.unemploymentIncome.veteranBenefits": "Beneficios para veteranos",
-
-  "app.slides.viewAppData.intro": "This is a special {appData} view for developers. As you fill out the application, you can come back to this page to see how the dataset has changed. If you want to pre-load applicationData with test values, just update /src/debug.js and set DEBUG = true in /src/stores/applicationData.jsx.",
-  "app.slides.viewAppData.applicationData": "applicationData",
-  "app.slides.viewAppData.appDataSet": "Application Data Set:",
 
   "app.slides.welcome.header": "¡Bienvenidos!",
   "app.slides.welcome.nextButton": "Iniciar",
