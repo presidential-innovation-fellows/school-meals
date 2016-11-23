@@ -52,7 +52,7 @@ class IncomeSourceSingle extends Component {
               <div>
                 <IncomeSourceAmount incomeSource={incomeSource}
                                     fieldName="hourlyHours"
-                                    placeholder="40"
+                                    placeholder=""
                                     prepend=""
                                     error={!!error} />
                 <IncomeSourceHourlyPeriod incomeSource={incomeSource} />
