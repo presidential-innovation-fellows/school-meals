@@ -66,6 +66,10 @@
   "app.booleanRadio.trueLabel": "Sí",
   "app.booleanRadio.falseLabel": "No",
 
+  "app.hourlyPeriodLabel.day": "horas al día",
+  "app.hourlyPeriodLabel.week": "horas a la semana",
+  "app.hourlyPeriodLabel.month": "horas al mes",
+
   "app.incomeSourceAdditional.addButton": "Añadir fuente de ingresos",
   "app.personForm.removeButton": "Quitar {name}",
 
@@ -78,8 +82,6 @@
   "app.incomeSourceFrequency.hourly": "Cada hora",
 
   "app.incomeSourceHourlyPeriod.placeholder": "horas al…",
-  "app.incomeSourceHourlyPeriod.week": "horas a la semana",
-  "app.incomeSourceHourlyPeriod.month": "horas al mes",
 
   "app.incomeSourceSummary.annually": "por año",
   "app.incomeSourceSummary.monthly": "por mes",

@@ -273,6 +273,23 @@
 
 
   /***
+   *** src/components/application/HourlyPeriodLabel.jsx
+   ***/
+
+  // Number of hours per day.
+  // English: "hours per day"
+  "app.hourlyPeriodLabel.day": "",
+
+  // Number of hours per month.
+  // English: "hours per month"
+  "app.hourlyPeriodLabel.month": "",
+
+  // Number of hours per week.
+  // English: "hours per week"
+  "app.hourlyPeriodLabel.week": "",
+
+
+  /***
    *** src/components/application/IncomeSourceAdditional.jsx
    ***/
 
@@ -321,14 +338,6 @@
   // Default text for hourly period select box.
   // English: "hours per…"
   "app.incomeSourceHourlyPeriod.placeholder": "",
-
-  // Number of hours per week.
-  // English: "hours per week"
-  "app.incomeSourceHourlyPeriod.week": "",
-
-  // Number of hours per month.
-  // English: "hours per month"
-  "app.incomeSourceHourlyPeriod.month": "",
 
 
   /***
@@ -2241,5 +2250,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479844587027."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479865933399."
 }

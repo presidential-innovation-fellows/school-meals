@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
 import Select from './Select'
+import HourlyPeriodLabel from './HourlyPeriodLabel'
 import { FormattedMessage } from 'react-intl'
 
 @observer
@@ -38,18 +39,10 @@ class IncomeSourceHourlyPeriod extends Component {
             />
           </option>
           <option value="week">
-            <FormattedMessage
-                id="app.incomeSourceHourlyPeriod.week"
-                description="Number of hours per week."
-                defaultMessage="hours per week"
-            />
+            <HourlyPeriodLabel period="week" />
           </option>
           <option value="month">
-            <FormattedMessage
-                id="app.incomeSourceHourlyPeriod.month"
-                description="Number of hours per month."
-                defaultMessage="hours per month"
-            />
+            <HourlyPeriodLabel period="month" />
           </option>
         </Select>
       </div>
