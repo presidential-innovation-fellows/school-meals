@@ -94,7 +94,7 @@
   "app.slides.incomeTypeFormGroup.missingIncomeTitle": "Falta de Ingresos",
   "app.slides.incomeTypeFormGroup.missingIncome": "",
 
-  "app.inputField.required": "Obligatorio",
+  "app.inputField.required": "obligatorio",
 
   "app.personCollection.addButton": "+ Añadir otro {personType}",
 

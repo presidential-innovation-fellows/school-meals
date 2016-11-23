@@ -396,7 +396,7 @@
    ***/
 
   // Text that indicates a field is required.
-  // English: "Required"
+  // English: "required"
   "app.inputField.required": "",
 
 
@@ -2376,5 +2376,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479884664564."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479888839600."
 }

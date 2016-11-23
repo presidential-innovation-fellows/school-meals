@@ -52,7 +52,7 @@ class InputField extends Component {
     const additional = input.additional || input.required && <FormattedMessage
       id="app.inputField.required"
       description="Text that indicates a field is required."
-      defaultMessage="Required"
+      defaultMessage="required"
     />
     const value = input.object[input.name]
 
