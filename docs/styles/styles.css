@@ -36,6 +36,10 @@ main {
   text-decoration: none;
 }
 
+#summary h4 a:hover {
+  text-decoration: underline;
+}
+
 #summary a:visited {
   color: #0071bc;
 }
