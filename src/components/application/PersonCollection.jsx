@@ -41,7 +41,7 @@ class PersonCollection extends Component {
         </div>
 
         <Button onClick={this.onAdd}
-                className="usa-button-secondary add-person">
+                className="usa-button-primary-alt">
           <FormattedMessage
               id="app.personCollection.addButton"
               description="Button to add person to collection."

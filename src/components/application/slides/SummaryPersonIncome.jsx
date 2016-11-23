@@ -2,8 +2,8 @@ import React, { Component, PropTypes } from 'react'
 import SummaryEditLink from './SummaryEditLink'
 import FrequencyLabel from '../FrequencyLabel'
 import HourlyPeriodLabel from '../HourlyPeriodLabel'
+import IncomeAmount from '../IncomeAmount'
 import { observer } from 'mobx-react'
-import { numberFormat } from 'underscore.string'
 import { defineMessages, FormattedMessage } from 'react-intl'
 
 @observer
@@ -182,15 +182,17 @@ class SummaryPersonIncome extends Component {
 
   render() {
     const { person, income } = this.props
-    const { type, source } = income
+    const { amount, frequency, source, type } = income
 
     return (
       <li>
         <FormattedMessage {...this.messages[type][source]} />
-        {' '}
-        ${numberFormat(parseFloat(income.amount, 10), 2)}
-        {' '}
-        {income.frequency && <FrequencyLabel frequency={income.frequency} />}
+        {' — '}
+        {amount && frequency &&
+         <IncomeAmount amount={parseFloat(amount, 10)}
+                       decimals={2}
+                       frequency={frequency} />
+        }
         {' '}
         {income.frequency === 'hourly' && income.hourlyPeriod &&
          <span>

@@ -1,20 +1,17 @@
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
+import { FormattedMessage } from 'react-intl'
+import { Glyphicon } from 'react-bootstrap'
 import Link from '../Link'
-import {FormattedMessage} from 'react-intl'
 
 @observer
 class SummaryEditLink extends Component {
   render() {
     return (
       <span>
-        (<Link id={this.props.id}>
-                <FormattedMessage
-                    id="app.slides.summaryEditLink.edit"
-                    description="edit"
-                    defaultMessage="edit"
-                 />
-        </Link>)
+        <Link id={this.props.id}>
+          <Glyphicon glyph="edit" />
+        </Link>
       </span>
     )
   }

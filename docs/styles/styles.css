@@ -32,12 +32,16 @@ main {
   padding-top: 20px;
 }
 
-#summary h4 {
-  margin-top: 1em;
+#summary h4 a {
+  text-decoration: none;
 }
 
-#summary table {
-  margin-bottom: .5em;
+#summary a:visited {
+  color: #0071bc;
+}
+
+#summary fieldset {
+  margin-top: 2.5em;
 }
 
 abbr[title] {
@@ -376,22 +380,6 @@ button.navbar-toggle:focus {
 
 .navbar-nav a {
   box-shadow: none;
-}
-
-button.usa-button-secondary.add-person {
-  background-color: #00a6d2;
-}
-
-button.usa-button-secondary.add-person:hover {
-  background-color: #046b99;
-}
-
-button.usa-button-secondary.add-income {
-  background-color: #00a6d2;
-}
-
-button.usa-button-secondary.add-income:hover {
-  background-color: #046b99;
 }
 
 .usa-input-error label {

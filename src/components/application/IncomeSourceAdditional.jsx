@@ -49,7 +49,7 @@ class AdditionalIncome extends Component {
       key: shortid.generate(),
       name: "addIncomeButton",
       type: "button",
-      className: "usa-button-secondary add-income",
+      className: "usa-button-primary-alt",
       onClick: this.onAddIncomeClick
     }
 

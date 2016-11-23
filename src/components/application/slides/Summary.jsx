@@ -6,13 +6,12 @@ import SummaryPersonCollection from './SummaryPersonCollection'
 import Checkbox from '../Checkbox'
 import Checkboxes from '../Checkboxes'
 import IncomeAmount from '../IncomeAmount'
+import Tooltip from '../Tooltip'
 import { observer } from 'mobx-react'
-import { numberFormat } from 'underscore.string'
 import { assistanceProgramsVarArray, organization } from '../../../config'
 import { fullName } from '../../../helpers'
 import { tooltiptext } from '../../Tooltiptext'
-import Tooltip from '../Tooltip'
-import {FormattedMessage} from 'react-intl'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class Summary extends Component {
@@ -51,140 +50,138 @@ class Summary extends Component {
              nextDisabled={!this.isValid}
              id="summary">
         <p className="usa-font-lead">
-        <FormattedMessage
-          id="app.slides.summary.finished"
-          description="Awesome, you're finished!"
-          defaultMessage="Awesome, you finished!"
-        />
+          <FormattedMessage
+              id="app.slides.summary.finished"
+              description="Awesome, you're finished!"
+              defaultMessage="Awesome, you finished!"
+          />
         </p>
         <p>
-        <FormattedMessage
-          id="app.slides.summary.summaryInfo"
-          description="Summary Info is below"
-          defaultMessage="Here is a summary of the information you provided in the application. We encourage you to save or print this screen for your records. If everything looks good, click the 'Submit' button at the bottom of the page."
-        />
+          <FormattedMessage
+              id="app.slides.summary.summaryInfo"
+              description="Summary Info is below"
+              defaultMessage="Here is a summary of the information you provided in the application. We encourage you to save or print this screen for your records. If everything looks good, click the 'Submit' button at the bottom of the page."
+          />
         </p>
-        <div className="well">
-          <SummaryPersonCollection collection={students} id="students">
-          <FormattedMessage
-            id="app.slides.summary.studentsAttending"
-            description="student info"
-            defaultMessage="Students attending {organizationName}"
-            values={{
-              organizationName: organization.name
-            }}
-          />
-          </SummaryPersonCollection>
 
-          <SummaryPersonCollection collection={otherChildren} id="other-children">
+        <SummaryPersonCollection collection={students} id="students">
           <FormattedMessage
-            id="app.slides.summary.otherChildren"
-            description="Other children"
-            defaultMessage="Other children"
+              id="app.slides.summary.studentsAttending"
+              description="student info"
+              defaultMessage="Students attending {organizationName}"
+              values={{
+                organizationName: organization.name
+              }}
           />
-          </SummaryPersonCollection>
+        </SummaryPersonCollection>
 
-          <SummaryPersonCollection collection={adults} id={adultsId}>
+        <SummaryPersonCollection collection={otherChildren} id="other-children">
           <FormattedMessage
-            id="app.slides.summary.adults"
-            description="Adults"
-            defaultMessage="Adults"
+              id="app.slides.summary.otherChildren"
+              description="Other children"
+              defaultMessage="Other children"
           />
-          </SummaryPersonCollection>
+        </SummaryPersonCollection>
 
-          <div>
-            <SummaryLabel id="assistance-programs">
+        <SummaryPersonCollection collection={adults} id={adultsId}>
+          <FormattedMessage
+              id="app.slides.summary.adults"
+              description="Adults"
+              defaultMessage="Adults"
+          />
+        </SummaryPersonCollection>
+
+        <div>
+          <SummaryLabel id="assistance-programs">
             <FormattedMessage
-              id="app.slides.summary.caseNumbers"
-              description="Assistance program case numbers"
-              defaultMessage="Assistance program case numbers"
+                id="app.slides.summary.caseNumbers"
+                description="Assistance program case numbers"
+                defaultMessage="Assistance program case numbers"
             />
+          </SummaryLabel>
 
-            </SummaryLabel>
-
-            <ul>
-              {
-                assistancePrograms.length ?
-                assistancePrograms.map(program =>
-                  <li key={program.id}>
-                    {program.name} — <strong>{program.caseNumber}</strong>
-                  </li>
-                )
-                :
-                <li>
-                  <FormattedMessage
-                      id="app.slides.summary.noAssistancePrograms"
-                      description="Placeholder indicating that no assistance programs have been selected."
-                      defaultMessage="(none)"
-                  />
+          <ul>
+            {
+              assistancePrograms.length ?
+              assistancePrograms.map(program =>
+                <li key={program.id}>
+                  {program.name} — <strong>{program.caseNumber}</strong>
                 </li>
-              }
-            </ul>
-          </div>
-
-          {applicationData.showHousehold &&
-           <div>
-             <SummaryLabel>
-             <FormattedMessage
-                id="app.slides.summary.totalIncome"
-                description="Total household income"
-                defaultMessage="Total household income"
-              />
-              </SummaryLabel>
-             <Tooltip text={tooltiptext.monthlyIncomeSum}>
-               <IncomeAmount
-                   frequency="monthly"
-                   decimals={2}
-                   amount={parseFloat(applicationData.totalMonthlyHouseholdIncome, 10)}
-               />
-             </Tooltip>
-           </div>
-          }
-
-          <SummaryLabel id="contact">
-          <FormattedMessage
-                id="app.slides.summary.contactInfo"
-                description="Contact information"
-                defaultMessage="Contact information"
-          />
-              </SummaryLabel>
-          <p>
-            { fullName(applicationData.attestor) }
-            {!!contact.address1 &&
-             <span>
-               <br />
-               { contact.address1 }
-             </span>
+              )
+              :
+              <li>
+                <FormattedMessage
+                    id="app.slides.summary.noAssistancePrograms"
+                    description="Placeholder indicating that no assistance programs have been selected."
+                    defaultMessage="(none)"
+                />
+              </li>
             }
-            {!!contact.address2 &&
-             <span>
-               <br />
-               { contact.address2 }
-             </span>
-            }
-            {!!contact.city &&
-             <span>
-               <br />
-               { contact.city },{' '}
-             </span>
-            }
-            { contact.state }
-            {' '}
-            { contact.zip }
-            {!!contact.phone &&
-             <span>
-               <br />
-               { contact.phone }
-             </span>
-            }
-            {!!contact.email &&
-             <span>
-               <br />
-               { contact.email }
-             </span>
-            }
-          </p>
+          </ul>
         </div>
+
+        <SummaryLabel id="contact">
+          <FormattedMessage
+              id="app.slides.summary.contactInfo"
+              description="Contact information"
+              defaultMessage="Contact information"
+          />
+        </SummaryLabel>
+        <p>
+          { fullName(applicationData.attestor) }
+          {!!contact.address1 &&
+           <span>
+             <br />
+             { contact.address1 }
+           </span>
+          }
+          {!!contact.address2 &&
+           <span>
+             <br />
+             { contact.address2 }
+           </span>
+          }
+          {!!contact.city &&
+           <span>
+             <br />
+             { contact.city },{' '}
+           </span>
+          }
+          { contact.state }
+          {' '}
+          { contact.zip }
+          {!!contact.phone &&
+           <span>
+             <br />
+             { contact.phone }
+           </span>
+          }
+          {!!contact.email &&
+           <span>
+             <br />
+             { contact.email }
+           </span>
+          }
+        </p>
+
+        {applicationData.showHousehold &&
+         <div>
+           <SummaryLabel>
+             <FormattedMessage
+                 id="app.slides.summary.totalIncome"
+                 description="Total household income"
+                 defaultMessage="Total household income"
+             />
+           </SummaryLabel>
+           <Tooltip text={tooltiptext.monthlyIncomeSum}>
+             <IncomeAmount
+                 frequency="monthly"
+                 decimals={2}
+                 amount={parseFloat(applicationData.totalMonthlyHouseholdIncome, 10)}
+             />
+           </Tooltip>
+         </div>
+        }
 
         <Checkboxes legend="Certification">
           <Checkbox name="certifiedCorrect" object={applicationData}>

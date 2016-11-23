@@ -396,7 +396,7 @@
    ***/
 
   // Text that indicates a field is required.
-  // English: "Required"
+  // English: "required"
   "app.inputField.required": "",
 
 
@@ -1510,13 +1510,13 @@
   // English: "(none)"
   "app.slides.summary.noAssistancePrograms": "",
 
-  // Total household income
-  // English: "Total household income"
-  "app.slides.summary.totalIncome": "",
-
   // Contact information
   // English: "Contact information"
   "app.slides.summary.contactInfo": "",
+
+  // Total household income
+  // English: "Total household income"
+  "app.slides.summary.totalIncome": "",
 
   // Certification statement
   // English: "I certify* that {totalHouseholdMembers} are in my household and that our household income is about {totalHouseholdIncome}"
@@ -1706,12 +1706,16 @@
   // English: "Your application has been submitted."
   "app.slides.thankYou.submitted": "",
 
+  // Warning message heading
+  // English: "Caution"
+  "app.slides.thankYou.cautionHeading": "",
+
   // Indication of what happens next.
   // English: "You will hear from us soon with your certification decision!"
   "app.slides.thankYou.nextSteps": "",
 
   // Warning message
-  // English: "CAUTION! NO DATA HAS BEEN SAVED. THIS IS NOT A REAL APPLICATION FOR SCHOOL MEAL BENEFITS. THIS IS A MODEL APPLICATION DEVELOPED BY USDA TO DEMONSTRATE THE POTENTIAL FUNCTIONALITY OF A SCHOOL DISTRICT'S APPLICATION. CONTACT YOUR CHILD'S SCHOOL TO FIND OUT WHERE YOU CAN ACCESS THEIR APPLICATION FOR SCHOOL MEAL BENEFITS."
+  // English: "NO DATA HAS BEEN SAVED. THIS IS NOT A REAL APPLICATION FOR SCHOOL MEAL BENEFITS. THIS IS A MODEL APPLICATION DEVELOPED BY USDA TO DEMONSTRATE THE POTENTIAL FUNCTIONALITY OF A SCHOOL DISTRICT'S APPLICATION. CONTACT YOUR CHILD'S SCHOOL TO FIND OUT WHERE YOU CAN ACCESS THEIR APPLICATION FOR SCHOOL MEAL BENEFITS."
   "app.slides.thankYou.caution": "",
 
   // Button to download data
@@ -1840,6 +1844,462 @@
   // Help text.
   // English: "Yes. Eligibility for free or reduced price meals only lasts for one school year. However, eligibility for the previous year carries over for the first few days of the new school year, or until the new eligibility determination is made. Please complete a new application unless you received a letter from the school saying that your child is eligible for the upcoming {schoolYear} school year."
   "help.articles.helpText.newAppBody": "",
+
+  // Help text.
+  // English: "Do I need to fill out an application for each child?"
+  "help.articles.helpText.childAppTitle": "",
+
+  // Help text.
+  // English: "'No. Use one Free and Reduced Price School Meals Application for all students that attend {organizationName} in your household."
+  "help.articles.helpText.childAppBody": "",
+
+  // Help text.
+  // English: "I received a letter from the school saying that my children were automatically approved for free meals for the upcoming {schoolYear} school year. Do I still need to complete an application?"
+  "help.articles.helpText.letterTitle": "",
+
+  // Help text.
+  // English: "No, but please read the letter carefully. If any children in your household were missing from your eligibility notification letter, they are also eligible for free meals, so you should contact {organizationName} ({organizationPhone} / {organizationEmail} / {organizationAddress} ) immediately."
+  "help.articles.helpText.letterBody": "",
+
+  // Help text.
+  // English: "If I don’t qualify now, may I apply later?"
+  "help.articles.helpText.applyLaterTitle": "",
+
+  // Help text.
+  // English: "Yes, you may apply at any time during the school year.  For example, children with a parent or guardian who becomes unemployed may become eligible for free or reduced price meals if the household income drops below the income limit."
+  "help.articles.helpText.applyLaterBody": "",
+
+  // Help text.
+  // English: "My household participates in {snapFullname} and/or {tanfFullname}. Are my children eligible for free meals?"
+  "help.article.helpText.localProgramTitle": "",
+
+  // Help text.
+  // English: "All children in households are eligible for free meals when at least one household member is receiving benefits from {snapFullname}, the Food Distribution Program on Indian Reservations (FDPIR), or {tanfFullName}. If you participate in other assistance programs, contact {organizationName} to see if you qualify for school meal benefits. You may qualify for free meals!"
+  "help.articles.helpText.localProgramBody": "",
+
+  // Help text.
+  // English: "What if my household does not qualify for free or reduced price meal benefits based on income, but I have a foster child?"
+  "help.articles.helpText.fosterQualifyTitle": "",
+
+  // Help text.
+  // English: "Foster children who are formally placed by the State welfare agency or court in a caretaker household are eligible for benefits regardless of household income."
+  "help.articles.helpText.fosterQualifyBody": "",
+
+  // Help text.
+  // English: "I get WIC. Can my children get free meals?"
+  "help.articles.helpText.wicTitle": "",
+
+  // Help text.
+  // English: "Participation in the Special Supplemental Nutrition Program for Women, Infants and Children, or WIC program, does not automatically qualify your children for free or reduced price school meals. You will need to qualify based on your household income by completing this application."
+  "help.articles.helpText.wicBody": "",
+
+  // Help text.
+  // English: "My child attends head start. Is he/she eligible for free school meals and do I need to fill out an application?"
+  "help.articles.helpText.headStartTitle": "",
+
+  // Help text.
+  // English: "Yes. Children enrolled in Head Start are automatically eligible for free meals. You do not need to submit an application for school meal benefits unless you are requesting benefits for other school age children in your household."
+  "help.articles.helpText.headStartBody": "",
+
+  // Help text.
+  // English: "My family needs more help. Are there other programs we might apply for?"
+  "help.articles.helpText.otherProgramsTitle": "",
+
+  // Help text.
+  // English: "To find out how to apply for {snapFullname} or other assistance benefits, contact your {organizationName}."
+  "help.articles.helpText.otherProgramsBody": "",
+
+  // Help text.
+  // English: "May I apply if someone in my household is not a U.S. citizen?"
+  "help.articles.helpText.usCitizenTitle": "",
+
+  // Help text.
+  // English: "Yes. You, your children, or other household members do not have to be U.S. citizens to apply for free or reduced price meals."
+  "help.articles.helpText.usCitizenBody": "",
+
+  // Help text.
+  // English: "Will my child or I be subject to public charge if I apply for or receive school meal benefits?"
+  "help.article.helpText.publicChargeTitle": "",
+
+  // Help text.
+  // English: "No, the non-cash benefits received through the National School Lunch Program and School Breakfast Programs are not subject to public charge consideration. In other words, you will not be deported, denied entry to the country, or denied permanent status because you apply for or receive school meal benefits."
+  "help.article.helpText.publicChargeBody": "",
+
+  // Help text.
+  // English: "Will the information I give be checked?"
+  "help.article.helpText.checkedTitle": "",
+
+  // Help text.
+  // English: "Yes, each application is reviewed by the district to determine eligibility. We may also ask you to send proof of your household’s income."
+  "help.article.helpText.FormattedMessage": "",
+
+  // Help text.
+  // English: "What if I share custody of my child?"
+  "help.article.helpText.sharedCustodyTitle": "",
+
+  // Help text.
+  // English: "If time is split between houses, both parents may apply for benefits. If the eligibility statuses are different, the highest level of benefits will apply. For example, if you qualify for free meals but your child’s other parent does not, no matter which house your child is staying at, he or she can still receive free meals. However, if either parent chooses not to have your child receive free meal benefits while residing with them then that parent may simply pay for the meals."
+  "help.article.helpText.sharedCustodyBody": "",
+
+  // Help text.
+  // English: "Should I include a member of our household on the application if they are currently deployed?"
+  "help.article.helpText.deployedTitle": "",
+
+  // Help text.
+  // English: "Yes. Members of the armed services who are activated or deployed are counted as household members. Any money made available by them or on their behalf for the household is included as income to the household with the exception of combat pay."
+  "help.article.helpText.deployedBody": "",
+
+  // Help text.
+  // English: "I am the permanent guardian of a child. Do they automatically qualify for free meals as a foster child?"
+  "help.article.helpText.permanentTitle": "",
+
+  // Help text.
+  // English: "No. The foster status only applies to children who are formally placed by the State welfare agency or court in a caretaker household. It does not apply to informal arrangements, such as caretaker arrangements or to permanent guardianship placements, which may exist outside of State or court based systems. The child may still be eligible based on your household income, so we encourage you to complete an application."
+  "help.article.helpText.permanentBody": "",
+
+  // Help text.
+  // English: "I adopted a foster child. Are they still eligible for free meals?"
+  "help.article.helpText.fosterTitle": "",
+
+  // Help text.
+  // English: "Congratulations on the adoption! And the answer is maybe. If your child was approved for free meals before the adoption went through, then your child is eligible to receive free meals for the rest of the school year. But next year the child will no longer eligible for free meals based on foster status, though they may still qualify based on household income, so we encourage you to submit an application."
+  "help.article.helpText.fosterBody": "",
+
+  // Help text.
+  // English: "How do I know if a child qualifies as a runaway?"
+  "help.article.helpText.qualifyRunawayTitle": "",
+
+  // Help text.
+  // English: "Any children living with you who have chosen to leave their prior family or household may qualify for free meals. Please contact {organizationName}."
+  "help.article.helpText.qualifyRunawayBody": "",
+
+  // Help text.
+  // English: "What is child income?"
+  "help.article.helpText.childIncomeTitle": "",
+
+  // Help text.
+  // English: "Child income is money received from outside your household that is paid directly to your children. Many households do not have any child income."
+  "help.article.helpText.childIncomeBody": "",
+
+  // Help text.
+  // English: "What is gross income?"
+  "help.article.helpText.grossTitle": "",
+
+  // Help text.
+  // English: "Gross income is all money earned before deductions, such as income taxes, employee’s social security taxes, and insurance premiums. Gross income also includes money that is garnished from wages, or in the case of bankruptcy, income that is ordered to be paid to creditors."
+  "help.article.helpText.grossBody": "",
+
+  // Help text.
+  // English: "What is net income?"
+  "help.article.helpText.netTitle": "",
+
+  // Help text.
+  // English: "Commonly referred to as “take home pay,” net income is the amount of money you receive in your pay check. It is your total (or gross) income, minus taxes and deductions."
+  "help.article.helpText.netBody": "",
+
+  // Help text.
+  // English: "We are in the military. Do we report our income differently?"
+  "help.article.helpText.militaryTitle": "",
+
+  // Help text.
+  // English: "Your basic pay and cash bonuses must be reported as income. If you get any cash value allowances for off-base housing, food, or clothing, (including BAH), it must also be included as income. However, if your housing is part of the Military Housing Privatization Initiative, do not include your housing allowance as income. Do not include payments from the Family Subsistence Supplemental Allowance (FSSA). Any additional combat pay resulting from deployment is also excluded from income. If the service member is deployed, include only the portion that is made available by them or on their behalf to the household as income."
+  "help.article.helpText.militaryBody": "",
+
+  // Help text.
+  // English: "I get deployment extension incentive pay (DEIP). Should I report that as income in my application?"
+  "help.article.helpText.deipTitle": "",
+
+  // Help text.
+  // English: "Maybe. If you are not deployed, then it is included in your household income, but if you are away from your home station, then you are exempt from including it as household income."
+  "help.article.helpText.deipBody": "",
+
+  // Help text.
+  // English: "What is the family subsistence supplemental allowance?"
+  "help.article.helpText.fssaTitle": "",
+
+  // Help text.
+  // English: "Family Subsistence Supplemental Allowance (FSSA) is available to service members living in overseas locations that make less than 130 percent of the federal poverty line, and benefits equal the total dollars required to bring household income to that level."
+  "help.article.helpText.fssaBody": "",
+
+  // Help text.
+  // English: "What is the difference between earnings from a salary and earnings from wages?"
+  "help.article.helpText.earningsDifferencesTitle": "",
+
+  // Help text.
+  // English: "A salary is an agreed-upon, fixed amount of money paid to an employee every year.  Employers pay salaries in different frequencies depending on the work, but often the frequency is monthly, twice a month, or every two weeks. Wages are also an agreed-upon payment for work. Employers usually pay wages at an hourly, daily or weekly frequency."
+  "help.article.helpText.earningsDifferencesBody": "",
+
+  // Help text.
+  // English: "What if I am self-employed?"
+  "help.article.helpText.selfEmployedTitle": "",
+
+  // Help text.
+  // English: "If you are self-employed, report income from work as a net amount. This is calculated by subtracting the total operating expenses of your business from its gross receipts or revenue. For more information see the definition for ‘Net income from self-employment"
+  "help.article.helpText.selfEmployedBody": "",
+
+  // Help text.
+  // English: "What if I have income from both wages and self-employment?"
+  "help.article.helpText.wagesSelfemploymentTitle": "",
+
+  // Help text.
+  // English: "For a household with income from wages and self-employment, each amount must be listed separately. When there is a business loss, income from wages must not be reduced by the amount of the business loss. If income from self-employment is negative, you should report it as $0 (zero) on your application."
+  "help.article.helpText.wagesSelfemploymentBody": "",
+
+  // Help text.
+  // English: "What government program benefits should I include in my household income?"
+  "help.article.helpText.govProgramTitle": "",
+
+  // Help text.
+  // English: "If you have questions about whether to include benefits from a specific program, contact {organizationName} ({organizationPhone} / {organizationEmail} / {organizationAddress})."
+  "help.article.helpText.govProgramBody": "",
+
+  // Help text.
+  // English: "How should I report income from rented space or properties?"
+  "help.article.helpText.rentalTitle": "",
+
+  // Help text.
+  // English: "If you receive income from a room or property that you rent out, you should report the net amount of income. In other words, take the total amount you receive in rent for one month (the gross income), and subtract the monthly cost of maintaining the property. If you have questions or need help figuring out how to estimate maintenance costs, contact {organizationName} ({organizationPhone} / {organizationEmail} / {organizationAddress})."
+  "help.article.helpText.rentalBody": "",
+
+  // Help text.
+  // English: "How do I know if I have income from earned interest?"
+  "help.article.helpText.interestTitle": "",
+
+  // Help text.
+  // English: "If you have money in a savings or investment account, you should have income from earned interest. Interest payments are usually paid out on a quarterly basis, or four times per year. You should see any earned interest on your savings or investment account statement."
+  "help.article.helpText.interestBody": "",
+
+  // Help text.
+  // English: "How should I report my income if I work on a seasonal basis?"
+  "help.article.helpText.seasonalTitle": "",
+
+  // Help text.
+  // English: "If you work on a seasonal basis and your household’s current, gross income is higher or lower than usual and does not fairly or accurately represent your household’s actual circumstances, see the ‘WHAT IF MY INCOME IS NOT ALWAYS THE SAME?’ question in the HELP. If you have additional questions, contact {organizationName} ({organizationPhone} / {organizationEmail} / {organizationAddress}), and they will help you figure out your household’s annual rate of income based on USDA guidelines."
+  "help.article.helpText.seasonalBody": "",
+
+  // Help text.
+  // English: "What if some household members have no income to report?"
+  "help.article.helpText.noIncomeTitle": "",
+
+  // Help text.
+  // English: "You should still list these household members on your application.  Household members may not earn or receive some of the types of income we ask you to report, or they may not receive income at all. Remember your eligibility determination is based on both household income and household size. For more information on who to include in your application, see the FAQ “WHO SHOULD I INCLUDE IN MY HOUSEHOLD?”"
+  "help.article.helpText.noIncomeBody": "",
+
+  // Help text.
+  // English: "What if I do not have a Social Security number?"
+  "help.article.helpText.ssnTitle": "",
+
+  // Help text.
+  // English: "Don’t worry, you don’t need to have a Social Security number to receive free or reduced price benefits."
+  "help.article.helpText.ssnBody": "",
+
+  // Help text.
+  // English: "Do I have to provide my contact information?"
+  "help.article.helpText.contactTitle": "",
+
+  // Help text.
+  // English: "No, but it is very helpful to have your contact information in case we need to get in touch with you about your application. Also, if your contact information changes in the future, please let us know so that we can maintain up-to-date information for your household throughout the year."
+  "help.article.helpText.contactBody": "",
+
+  // Help text.
+  // English: "What if I disagree with the school’s decision about my application?"
+  "help.article.helpText.disagreeTitle": "",
+
+  // Help text.
+  // English: "You should talk to school officials. You also may ask for a hearing by calling or writing to {organizationName} ({organizationPhone} / {organizationEmail} / {organizationAddress})."
+  "help.article.helpText.disagreeBody": "",
+
+  // Help text.
+  // English: "{mckinneyShortName}"
+  "help.articles.helpText.mckinneyTerm": "",
+
+  // Help text.
+  // English: "{mckinneyFullName} provides Federal money for homeless shelter programs and facilitates public school access for homeless children and youth."
+  "help.articles.helpText.mckinneyDef": "",
+
+  // Help text.
+  // English: "{mepFullName} ({mepAccronym})"
+  "help.articles.helpText.mepTerm": "",
+
+  // Help text.
+  // English: "{mepAccronym} provides services to children who have moved across school district lines, within the last three years, in order to accompany or join a parent or guardian who seeks or obtains temporary or seasonal work in agriculture or fishing."
+  "help.articles.helpText.mepDef": "",
+
+  // Help text.
+  // English: "{programRunaway}"
+  "help.articles.helpText.runawayHomelessActTerm": "",
+
+  // Help text.
+  // English: "{programRunaway} authorizes community-based runaway and homeless youth projects to provide temporary shelter and care to runaway or otherwise homeless youth who are in need of temporary shelter, counseling, and aftercare services."
+  "help.articles.helpText.runawayHomelessActDef": "",
+
+  // Help text.
+  // English: "Current income"
+  "help.articles.helpText.currentTerm": "",
+
+  // Help text.
+  // English: "Current income is income earned or received in the current month, or in the month before the completion of this application."
+  "help.articles.helpText.currentDef": "",
+
+  // Help text.
+  // English: "Cash Bonus"
+  "help.articles.helpText.cashBonusTerm": "",
+
+  // Help text.
+  // English: "A cash bonus is a lump sum of money awarded to an employee, either occasionally or periodically."
+  "help.articles.helpText.cashBonusDef": "",
+
+  // Help text.
+  // English: "Supplemental Security Income (SSI)"
+  "help.articles.helpText.ssiTerm": "",
+
+  // Help text.
+  // English: "Supplemental Security Income (SSI) provides cash to meet basic needs for food, clothing, and shelter to aged, blind, and disabled people who have little or no income."
+  "help.articles.helpText.ssiDef": "",
+
+  // Help text.
+  // English: "Cash assistance from state or local government"
+  "help.articles.helpText.cashAssistanceTerm": "",
+
+  // Help text.
+  // English: "Income in the form of cash benefits, including housing assistance, from state or local government programs should be reported as household income. If you have questions about whether to include benefits from a specific program, contact {organizationName} ({organizationPhone} / {organizationEmail} / {organizationAddress})."
+  "help.articles.helpText.cashAssistanceDef": "",
+
+  // Help text.
+  // English: "Alimony"
+  "help.articles.helpText.alimonyTerm": "",
+
+  // Help text.
+  // English: "Alimony is income from payments paid by a spouse or former spouse from whom you are divorced or legally separated."
+  "help.articles.helpText.alimonyDef": "",
+
+  // Help text.
+  // English: "Child support"
+  "help.articles.helpText.childSupportTerm": "",
+
+  // Help text.
+  // English: "Child support payments are payments received by one parent from another to cover the cost of raising a child."
+  "help.articles.helpText.childSupportDef": "",
+
+  // Help text.
+  // English: "Unemployment benefits"
+  "help.articles.helpText.unemploymentTerm": "",
+
+  // Help text.
+  // English: "Unemployment benefits are payments from the government or a labor union to a person who is unemployed."
+  "help.articles.helpText.unemploymentDef": "",
+
+  // Help text.
+  // English: "Worker’s compensation"
+  "help.articles.helpText.workersCompTerm": "",
+
+  // Help text.
+  // English: "Worker’s compensation benefits are payments to cover lost wages and medical expenses of an employee who is injured on the job."
+  "help.articles.helpText.workersCompDef": "",
+
+  // Help text.
+  // English: "Strike benefits"
+  "help.articles.helpText.strikeBenefitsTerm": "",
+
+  // Help text.
+  // English: "Strike benefits are compensation paid by a union to workers on strike."
+  "help.articles.helpText.strikeBenefitsDef": "",
+
+  // Help text.
+  // English: "Social Security Disability Insurance (SSDI)"
+  "help.articles.helpText.ssdiTerm": "",
+
+  // Help text.
+  // English: "Social Security Disability Insurance (SSDI) are benefits paid to people who have worked long enough and paid Social Security taxes but who can’t work because they have a medical condition that is expected to last at least one year or result in death."
+  "help.articles.helpText.ssdiDef": "",
+
+  // Help text.
+  // English: "Verteran’s benefits"
+  "help.articles.helpText.veteransBenefitsTerm": "",
+
+  // Help text.
+  // English: "Benefits that are paid to veterans that have a service-connected disability and were not dishonorably discharged."
+  "help.articles.helpText.veteransBenefitsDef": "",
+
+  // Help text.
+  // English: "Social Security benefits"
+  "help.articles.helpText.socialSecurityTerm": "",
+
+  // Help text.
+  // English: "Social Security retirement benefits are monthly payments to people (or spouses, or dependent children of people) who are retired or disabled, but have worked and paid taxes into the Social Security system. Payments are based on your reported earnings. Also, upon death, survivors can collect benefits."
+  "help.articles.helpText.socialSecurityDef": "",
+
+  // Help text.
+  // English: "Black Lung benefits"
+  "help.articles.helpText.blackLungTerm": "",
+
+  // Help text.
+  // English: "Black Lung benefits provide monthly payments and medical treatment for people that became disabled from black lung disease from working in or around the nation’s coal mines."
+  "help.articles.helpText.blackLungDef": "",
+
+  // Help text.
+  // English: "Railroad Retirement benefits"
+  "help.articles.helpText.railroadRetirementTerm": "",
+
+  // Help text.
+  // English: "Railroad retirement benefits provide retirement and disability annuities for qualified railroad employees, spouse annuities for their wives or husbands, and survivor benefits for the families of deceased employees who were insured under the Railroad Retirement Act."
+  "help.articles.helpText.railroadRetirementDef": "",
+
+  // Help text.
+  // English: "Pension"
+  "help.articles.helpText.pensionTerm": "",
+
+  // Help text.
+  // English: "A pension is generally a series of payments made to you after you retire from work. Pension payments are made regularly and are based on such factors as years of service and prior compensation."
+  "help.articles.helpText.pensionDef": "",
+
+  // Help text.
+  // English: "Annuity"
+  "help.articles.helpText.annuityTerm": "",
+
+  // Help text.
+  // English: "An annuity is a series of payments under a contract made at regular intervals over a period of more than one full year. They can be either fixed (under which you receive a definite amount) or variable (not fixed). Annuities can be purchased by individuals alone, or with the help of an employer."
+  "help.articles.helpText.annuityDef": "",
+
+  // Help text.
+  // English: "Trust"
+  "help.articles.helpText.trustTerm": "",
+
+  // Help text.
+  // English: "A trust is, in general, a relationship in which one person holds title to property, subject to an obligation to keep or use the property for the benefit of another."
+  "help.articles.helpText.trustDef": "",
+
+  // Help text.
+  // English: "Supplemental Security Income (SSI) for children"
+  "help.articles.helpText.ssiChildrenTerm": "",
+
+  // Help text.
+  // English: "Supplemental Security Income (SSI) provides cash to meet basic needs for food, clothing, and shelter to children younger than age 18 who have a physical or mental condition, or combination of conditions, that meets Social Security’s definition of disability for children, and if his or her income and resources fall within the eleigibility limits."
+  "help.articles.helpText.ssiChildrenDef": "",
+
+  // Help text.
+  // English: "Social Security survivor benefits"
+  "help.articles.helpText.ssSurvivorTerm": "",
+
+  // Help text.
+  // English: "Social Security survivor benefits are monthly payments to children of a deceased parent who was retired or disabled, but worked and paid taxes into the Social Security system."
+  "help.articles.helpText.ssSurvivorDef": "",
+
+  // Help text.
+  // English: "Pension beneficiary or survivor"
+  "help.articles.helpText.pensionBeneficiaryTerm": "",
+
+  // Help text.
+  // English: "A child may receive payments from a pension of a deceased parent."
+  "help.articles.helpText.pensionBeneficiaryDef": "",
+
+  // Help text.
+  // English: "Annuity for a child"
+  "help.articles.helpText.annuityChildrenTerm": "",
+
+  // Help text.
+  // English: "A child may be the recipient of payments from an annuity.  See Help for the definition of an annuity."
+  "help.articles.helpText.annuityChildrenDef": "",
 
 
   /***
@@ -2376,5 +2836,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479884664564."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479896857414."
 }

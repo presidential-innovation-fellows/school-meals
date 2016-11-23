@@ -14,14 +14,20 @@ class Slide extends Component {
   }
 
   handleBack() {
+    this.props.handleBack ?
+    this.props.handleBack() :
     this.context.navigationData.back()
   }
 
   handleNext() {
+    this.props.handleNext ?
+    this.props.handleNext() :
     this.context.navigationData.next()
   }
 
   handleJump() {
+    this.props.handleJump ?
+    this.props.handleJump() :
     this.context.navigationData.jump()
   }
 
@@ -109,7 +115,10 @@ Slide.propTypes = {
   nextDisabled: PropTypes.bool,
   backText: PropTypes.node,
   nextText: PropTypes.node,
-  beginsSection: PropTypes.bool
+  beginsSection: PropTypes.bool,
+  handleBack: PropTypes.func,
+  handleNext: PropTypes.func,
+  handleJump: PropTypes.func,
 }
 
 Slide.defaultProps = {
