@@ -66,20 +66,20 @@
   "app.booleanRadio.trueLabel": "Sí",
   "app.booleanRadio.falseLabel": "No",
 
+  "app.frequencyLabel.placeholder": "frecuencia…",
+  "app.frequencyLabel.annually": "anualmente",
+  "app.frequencyLabel.monthly": "mensual",
+  "app.frequencyLabel.twicePerMonth": "dos veces al mes",
+  "app.frequencyLabel.everyTwoWeeks": "cada dos semanas",
+  "app.frequencyLabel.weekly": "semanal",
+  "app.frequencyLabel.hourly": "cada hora",
+
   "app.hourlyPeriodLabel.day": "horas al día",
   "app.hourlyPeriodLabel.week": "horas a la semana",
   "app.hourlyPeriodLabel.month": "horas al mes",
 
   "app.incomeSourceAdditional.addButton": "Añadir fuente de ingresos",
   "app.personForm.removeButton": "Quitar {name}",
-
-  "app.incomeSourceFrequency.placeholder": "Frecuencia…",
-  "app.incomeSourceFrequency.annually": "Anualmente",
-  "app.incomeSourceFrequency.monthly": "Mensual",
-  "app.incomeSourceFrequency.twicePerMonth": "Dos veces al mes",
-  "app.incomeSourceFrequency.everyTwoWeeks": "Cada dos semanas",
-  "app.incomeSourceFrequency.weekly": "Semanal",
-  "app.incomeSourceFrequency.hourly": "Cada hora",
 
   "app.incomeSourceHourlyPeriod.placeholder": "horas al…",
 
