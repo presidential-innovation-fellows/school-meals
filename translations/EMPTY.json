@@ -1570,6 +1570,131 @@
 
 
   /***
+   *** src/components/application/slides/SummaryPersonIncome.jsx
+   ***/
+
+  // Short income source description used on Summary page.
+  // English: "Full or part-time job"
+  "app.slides.summaryPersonIncome.description.child.job": "",
+
+  // Short income source description used on Summary page.
+  // English: "SSI or Social Security"
+  "app.slides.summaryPersonIncome.description.child.socialSecurity": "",
+
+  // Short income source description used on Summary page.
+  // English: "Friends or family"
+  "app.slides.summaryPersonIncome.description.child.friendsFamily": "",
+
+  // Short income source description used on Summary page.
+  // English: "Pension, annuity, or trust"
+  "app.slides.summaryPersonIncome.description.child.pensionAnnuityTrust": "",
+
+  // Short income source description used on Summary page.
+  // English: "Other income source"
+  "app.slides.summaryPersonIncome.description.child.other": "",
+
+  // Short income source description used on Summary page.
+  // English: "Military basic pay"
+  "app.slides.summaryPersonIncome.description.military.basic": "",
+
+  // Short income source description used on Summary page.
+  // English: "Military cash bonus"
+  "app.slides.summaryPersonIncome.description.military.cashBonus": "",
+
+  // Short income source description used on Summary page.
+  // English: "Military allowance"
+  "app.slides.summaryPersonIncome.description.military.allowance": "",
+
+  // Short income source description used on Summary page.
+  // English: "Salary / Wages"
+  "app.slides.summaryPersonIncome.description.employment.salaryWages": "",
+
+  // Short income source description used on Summary page.
+  // English: "Tips"
+  "app.slides.summaryPersonIncome.description.employment.tips": "",
+
+  // Short income source description used on Summary page.
+  // English: "Commission"
+  "app.slides.summaryPersonIncome.description.employment.commission": "",
+
+  // Short income source description used on Summary page.
+  // English: "Cash bonus"
+  "app.slides.summaryPersonIncome.description.employment.cashBonus": "",
+
+  // Short income source description used on Summary page.
+  // English: "Net income from self-employment"
+  "app.slides.summaryPersonIncome.description.employment.selfEmployment": "",
+
+  // Short income source description used on Summary page.
+  // English: "Supplemental Security Income (SSI)"
+  "app.slides.summaryPersonIncome.description.publicAssistance.ssi": "",
+
+  // Short income source description used on Summary page.
+  // English: "Cash assistance program"
+  "app.slides.summaryPersonIncome.description.publicAssistance.stateLocal": "",
+
+  // Short income source description used on Summary page.
+  // English: "Alimony"
+  "app.slides.summaryPersonIncome.description.spousal.alimony": "",
+
+  // Short income source description used on Summary page.
+  // English: "Child support"
+  "app.slides.summaryPersonIncome.description.spousal.childSupport": "",
+
+  // Short income source description used on Summary page.
+  // English: "Unemployment benefits"
+  "app.slides.summaryPersonIncome.description.unemployment.unemployment": "",
+
+  // Short income source description used on Summary page.
+  // English: "Worker’s compensation"
+  "app.slides.summaryPersonIncome.description.unemployment.workersComp": "",
+
+  // Short income source description used on Summary page.
+  // English: "Strike benefits"
+  "app.slides.summaryPersonIncome.description.unemployment.strike": "",
+
+  // Short income source description used on Summary page.
+  // English: "Social Security Disability Insurance (SSDI)"
+  "app.slides.summaryPersonIncome.description.unemployment.ssdi": "",
+
+  // Short income source description used on Summary page.
+  // English: "Veteran’s benefits"
+  "app.slides.summaryPersonIncome.description.unemployment.veteran": "",
+
+  // Short income source description used on Summary page.
+  // English: "Social Security"
+  "app.slides.summaryPersonIncome.description.retirement.socialSecurity": "",
+
+  // Short income source description used on Summary page.
+  // English: "Pension"
+  "app.slides.summaryPersonIncome.description.retirement.privatePension": "",
+
+  // Short income source description used on Summary page.
+  // English: "Regular cash payments"
+  "app.slides.summaryPersonIncome.description.other.regularCashPayments": "",
+
+  // Short income source description used on Summary page.
+  // English: "Rental income"
+  "app.slides.summaryPersonIncome.description.other.rentalIncome": "",
+
+  // Short income source description used on Summary page.
+  // English: "Earned interest"
+  "app.slides.summaryPersonIncome.description.other.earnedInterest": "",
+
+  // Short income source description used on Summary page.
+  // English: "Investment income"
+  "app.slides.summaryPersonIncome.description.other.investmentIncome": "",
+
+  // Short income source description used on Summary page.
+  // English: "Annuity"
+  "app.slides.summaryPersonIncome.description.other.annuity": "",
+
+  // Short income source description used on Summary page.
+  // English: "Other income source"
+  "app.slides.summaryPersonIncome.description.other.other": "",
+
+
+  /***
    *** src/components/application/slides/ThankYou.jsx
    ***/
 
@@ -2251,5 +2376,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479874808127."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479881643047."
 }
