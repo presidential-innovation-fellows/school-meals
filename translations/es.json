@@ -86,8 +86,8 @@
   "app.incomeAmountLabel.daily": "por día",
   "app.incomeAmountLabel.hourly": "por hora",
 
-  "app.incomeSourceAdditional.addButton": "Añadir fuente de ingresos",
-  "app.personForm.removeButton": "Quitar {name}",
+  "app.incomeSourceAdditional.addButton": "Agregar fuente de ingresos",
+  "app.personForm.removeButton": "Eliminar {name}",
 
   "app.incomeSourceHourlyPeriod.placeholder": "horas al…",
 
@@ -96,7 +96,7 @@
 
   "app.inputField.required": "obligatorio",
 
-  "app.personCollection.addButton": "+ Añadir otro {personType}",
+  "app.personCollection.addButton": "+ Agregar otro {personType}",
 
   "app.serialList.intersectionDelim": "o",
   "app.serialList.unionDelim": "y",
@@ -161,11 +161,11 @@
   "app.slides.attestation.intro": "que toda la información que figura en esta solicitud es verdadera y que he declarado todos los ingresos.",
   "app.slides.attestation.understand": "Entiendo que esta información se proporciona en relación con el recibo de fondos federales y que los funcionarios escolares pueden verificar (comprobar) la información. Entiendo que si proporciono información falsa a propósito*, mis hijos pueden perder los beneficios de comidas.",
   "app.slides.attestation.completingApp": "",
-  "app.slides.attestation.firstName.label": "Nombre de pila",
+  "app.slides.attestation.firstName.label": "Nombre",
   "app.slides.attestation.middleName.label": "Segundo nombre",
   "app.slides.attestation.lastName.label": "Apellido",
   "app.slides.attestation.suffix.label": "Sufijo (por ejemplo, Jr., Sr., I, II, III)",
-  "app.slides.attestation.date.label": "Fecha",
+  "app.slides.attestation.date.label": "Fecha de hoy",
   "app.slides.attestation.misrepresentation": "*Si declara información falsa de manera intencional puede quedar sujeto a acusación bajo les leyes estatales y federales correspondientes.",
 
   "app.slides.beforeYouBegin.header": "Antes de empezar",
@@ -230,11 +230,11 @@
   "app.slides.childIncomeSlide.missingIncome": "En una página anterior, usted indicó que {child} recibía ingresos. Por favor ingrese este ingreso arriba o corrija su respuesta anterior.",
   "app.slides.childIncomeSlide.changeAnswer": "Cambiar respuesta anterior",
 
-  "app.slides.contact.header": "Datos de Contacto",
+  "app.slides.contact.header": "Información de contacto",
   "app.slides.contact.intro": "Ingrese su información de contacto para que podamos comunicarnos con usted en caso de que ocurra algún problema con su solicitud. Esta información es opcional, pero le aconsejamos enfáticamente que la ingrese.",
 
   "app.slides.contact.phone.label": "Número de teléfono",
-  "app.slides.contact.email.label": "Email",
+  "app.slides.contact.email.label": "Correo electrónico",
   "app.slides.contact.address1.label": "Dirección",
   "app.slides.contact.address2.label": "Dirección 2",
   "app.slides.contact.city.label": "Ciudad",
@@ -246,7 +246,7 @@
   "app.slides.demographics.importantInfo": "Esta información es importante y nos ayuda a asegurarnos de que realmente le estamos brindando servicios a la comunidad. Responder esta sección es opcional y no afecta la elegibilidad de sus hijos para obtener comidas gratis o a precio reducido.",
 
   "app.slides.demographics.radioTrue": "Hispano o Latino",
-  "app.slides.demographics.radioFalse": "No Hispano o Latino",
+  "app.slides.demographics.radioFalse": "Ni Hispano ni Latino",
   "app.slides.demographicsForm.ethnicity": "Origen étnico",
   "app.slides.demographicsForm.race": "Raza",
   "app.slides.demographicsForm.americanIndianOrAlaskanNative": "Indígena Estadounidense o Nativo de Alaska",
@@ -507,7 +507,7 @@
   "help.article.helpText.interestTitle": "¿Cómo se si tengo ingresos por intereses acumulados?",
   "help.article.helpText.interestBody": "Si tiene dinero en una cuenta de ahorros o de inversión, debe obtener ingresos por intereses acumulados. Los pagos de intereses se pagan cada tres meses o cuatro veces al año. Puede ver cualquier interés acumulado en el estado de su cuenta de ahorro o de inversión.",
   "help.article.helpText.seasonalTitle": "¿Cómo debo declarar mis ingresos si trabajo por temporada?",
-  "help.article.helpText.seasonalBody": "Si trabaja por temporada y los ingresos brutos actuales de su hogar son mayores o menores a los habituales y no representan de manera justa o precisa las circunstancias actuales de su hogar, consulte la pregunta “¿QUÉ SUCEDE SI MIS INGRESOS VARÍAN?” en AYUDA. Si tiene preguntas adicionales, comuníquese con [insert contact info, e.g. school/district/person’s name at address, phone number, email] y lo ayudarán a calcular la tasa anual de ingresos de su hogar según las pautas de USDA.",
+  "help.article.helpText.seasonalBody": "Si trabaja por temporada y los ingresos brutos actuales de su hogar son mayores o menores a los habituales y no representan de manera justa o precisa las circunstancias actuales de su hogar, consulte la pregunta “¿QUÉ SUCEDE SI MIS INGRESOS VARÍAN?” en AYUDA. Si tiene preguntas adicionales, comuníquese con {organizationName} ({organizationPhone} / {organizationEmail} / {organizationAddress}) y lo ayudarán a calcular la tasa anual de ingresos de su hogar según las pautas de USDA.",
   "help.article.helpText.noIncomeTitle": "¿Qué sucede si algún miembro del hogar no tiene una declaración de ingresos?",
   "help.article.helpText.noIncomeBody": "Debe mencionar a estos miembros de su hogar en la solicitud de todas maneras. Los miembros del hogar pueden no ganar o recibir algún tipo de ingresos que le pedimos que declare, o pueden no tener ningún tipo de ingresos. Recuerde que la determinación de su elegibilidad se basa en los ingresos del hogar y en el tamaño del hogar. Para obtener más información sobre a quién incluir en la solicitud, vea “¿A QUIÉN DEBO INCLUIR COMO MIEMBRO DE MI HOGAR?” en la sección de Preguntas frecuentes.",
   "help.article.helpText.ssnTitle": "¿Qué sucede si no tengo número de seguridad social?",
@@ -687,7 +687,7 @@
   "help.topic.WhatInformation.answer3c": "También es posible que deba hacer referencia a otros documentos financieros para verificar fuentes de ingresos adicionales.",
   "help.topic.WhatInformation.answer4": "¿No está seguro de contar con todo lo que necesita? No se preocupe. La sección de ingresos de la solicitud contiene instrucciones y explicaciones detalladas sobre las fuentes de ingresos que debe incluir, y puede recopilar la información adicional en ese momento.",
 
-  "applicationData.person.firstName.label": "Nombre de pila",
+  "applicationData.person.firstName.label": "Nombre",
   "applicationData.person.middleName.label": "Segundo nombre",
   "applicationData.person.lastName.label": "Apellido",
   "applicationData.person.suffix.label": "Sufijo (por ejemplo, Jr., Sr., I, II, III)",
