@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import SummaryEditLink from './SummaryEditLink'
+import HourlyPeriodLabel from '../HourlyPeriodLabel'
 import { observer } from 'mobx-react'
 import { humanize, numberFormat } from 'underscore.string'
 import { FormattedMessage } from 'react-intl'
@@ -16,8 +17,13 @@ class SummaryPersonIncome extends Component {
         ${numberFormat(parseFloat(income.amount, 10), 2)}
         {' '}
         {humanize(income.frequency)}
-        {income.frequency === 'hourly' &&
-         ` (${income.hourlyHours} hrs./${income.hourlyPeriod})`}
+        {' '}
+        {income.frequency === 'hourly' && income.hourlyPeriod &&
+         <span>
+           ({income.hourlyHours}{' '}
+           <HourlyPeriodLabel period={income.hourlyPeriod} />)
+         </span>
+        }
         {' '}
         <SummaryEditLink id={`income/${person.id}/${income.type}`} />
       </li>
