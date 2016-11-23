@@ -94,6 +94,7 @@ class IncomeElection extends Component {
           />
           &nbsp;
           <SerialList items={programSlugs} intersection={students.length !== 1} mapFunc={this.programDescription} />
+          .
         </p>
 
         <p>
