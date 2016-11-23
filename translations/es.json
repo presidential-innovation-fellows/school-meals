@@ -78,18 +78,18 @@
   "app.hourlyPeriodLabel.week": "horas a la semana",
   "app.hourlyPeriodLabel.month": "horas al mes",
 
+  "app.incomeAmountLabel.annually": "por año",
+  "app.incomeAmountLabel.monthly": "por mes",
+  "app.incomeAmountLabel.twicePerMonth": "dos veces al mes",
+  "app.incomeAmountLabel.everyTwoWeeks": "cada dos semanas",
+  "app.incomeAmountLabel.weekly": "por semana",
+  "app.incomeAmountLabel.daily": "por día",
+  "app.incomeAmountLabel.hourly": "por hora",
+
   "app.incomeSourceAdditional.addButton": "Añadir fuente de ingresos",
   "app.personForm.removeButton": "Quitar {name}",
 
   "app.incomeSourceHourlyPeriod.placeholder": "horas al…",
-
-  "app.incomeSourceSummary.annually": "por año",
-  "app.incomeSourceSummary.monthly": "por mes",
-  "app.incomeSourceSummary.twicePerMonth": "dos veces al mes",
-  "app.incomeSourceSummary.everyTwoWeeks": "cada dos semanas",
-  "app.incomeSourceSummary.weekly": "por semana",
-  "app.incomeSourceSummary.hourly.week": "por semana",
-  "app.incomeSourceSummary.hourly.month": "por mes",
 
   "app.slides.incomeTypeFormGroup.missingIncomeTitle": "Falta de Ingresos",
   "app.slides.incomeTypeFormGroup.missingIncome": "",

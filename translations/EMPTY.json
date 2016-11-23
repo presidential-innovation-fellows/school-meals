@@ -319,6 +319,39 @@
 
 
   /***
+   *** src/components/application/IncomeAmountLabel.jsx
+   ***/
+
+  // Income earned annually.
+  // English: "per year"
+  "app.incomeAmountLabel.annually": "",
+
+  // Income earned monthly.
+  // English: "per month"
+  "app.incomeAmountLabel.monthly": "",
+
+  // Income earned twice per month.
+  // English: "twice per month"
+  "app.incomeAmountLabel.twicePerMonth": "",
+
+  // Income earned every two weeks.
+  // English: "every two weeks"
+  "app.incomeAmountLabel.everyTwoWeeks": "",
+
+  // Income earned weekly.
+  // English: "per week"
+  "app.incomeAmountLabel.weekly": "",
+
+  // Income earned daily.
+  // English: "per day"
+  "app.incomeAmountLabel.daily": "",
+
+  // Income earned hourly.
+  // English: "per hour"
+  "app.incomeAmountLabel.hourly": "",
+
+
+  /***
    *** src/components/application/IncomeSourceAdditional.jsx
    ***/
 
@@ -343,39 +376,6 @@
   // Default text for hourly period select box.
   // English: "hours per…"
   "app.incomeSourceHourlyPeriod.placeholder": "",
-
-
-  /***
-   *** src/components/application/IncomeSourceSummary.jsx
-   ***/
-
-  // Hourly income reported annually.
-  // English: "per year"
-  "app.incomeSourceSummary.annually": "",
-
-  // Hourly income reported monthly.
-  // English: "per month"
-  "app.incomeSourceSummary.monthly": "",
-
-  // Hourly income reported twice per month.
-  // English: "twice per month"
-  "app.incomeSourceSummary.twicePerMonth": "",
-
-  // Hourly income reported every two weeks.
-  // English: "every two weeks"
-  "app.incomeSourceSummary.everyTwoWeeks": "",
-
-  // Hourly income reported weekly.
-  // English: "per week"
-  "app.incomeSourceSummary.weekly": "",
-
-  // Hourly income reported weekly by week.
-  // English: "per week"
-  "app.incomeSourceSummary.hourly.week": "",
-
-  // Hourly income reported weekly by month.
-  // English: "per month"
-  "app.incomeSourceSummary.hourly.month": "",
 
 
   /***
@@ -2255,5 +2255,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479866366503."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479869993703."
 }
