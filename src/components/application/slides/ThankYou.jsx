@@ -66,6 +66,7 @@ class ThankYou extends Component {
             />
           </strong>
         </Alert>
+        <br />
       </Slide>
     )
   }
