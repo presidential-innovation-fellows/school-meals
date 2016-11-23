@@ -593,17 +593,17 @@
   "help.topic.netSelfEmployment.definition4": "Los ingresos netos para los granjeros autónomos se calculan al restarle los gastos operativos del granjero a la ganancia bruta (ingresos). Los ingresos brutos incluyen el dinero recibido del alquiler de una granja, construcción o equipo a otras personas; las recepciones incidentales de la venta de artículos como madera, arena o grava. Los gastos operativos incluyen el costo de pienso, fertilizantes, semillas y otros suministros agrícolas; sueldos en efectivo de los trabajadores agrícolas; gastos de amortización; alquiler en efectivo; interés de la hipoteca de la granja; reparaciones en la construcción de la granja e impuestos de la granja.",
   "help.topic.netSelfEmployment.definitio5": "Si sus ingresos netos actuales no son sus ingresos habituales, puede utilizar los ingresos del año anterior como base para declarar los ingresos netos, o consulte la pregunta ”¿QUÉ SUCEDE SI MIS INGRESOS VARÍAN?” en AYUDA.",
 
-  "help.topic.NotTheSame.question": "¿QUÉ OCURRE SI MIS INGRESOS VARÍAN?",
+  "help.topic.NotTheSame.question": "¿Qué ocurre si mis ingresos varían?",
   "help.topic.NotTheSame.answer1": "Si sus ingresos varían mes a mes debido al tiempo extra, pagos por vacaciones, porque se ausentó a algunos turnos o por alguna otra razón, ingrese el monto que hubiera ganado si eso no hubiera ocurrido. Por ejemplo, si suele ganar $1000 por mes pero faltó al trabajo el último mes y solo ganó $900, ingrese $1000 por mes. De manera similar, si normalmente gana $500 por mes pero realizó trabajo extra y ganó $750, ingrese que gana $500 por mes.",
   "help.topic.NotTheSame.answer2": "Si trabaja por temporada, en agricultura o turismo, y algunos meses gana más dinero que otros, puede sumar todas las ganancias del año y dividirlas por doce para declarar un monto anual. Si espera ganar lo mismo que el año anterior, puede utilizar las ganancias anteriores como base para los ingresos mensuales previstos.",
   "help.topic.NotTheSame.answer3": "Si recibe un único pago, no debe informarlo como ingreso mensual actual porque no lo recibe de forma regular. Sin embargo, si recibe un pago único, de recompensas, acuerdos, herencias o premios, y más adelante utiliza ese dinero regularmente para gastos de vivienda, debe informar el monto utilizado en su solicitud de beneficios de comidas.",
   "help.topic.NotTheSame.answer4": "Si necesita ayuda o información adicional sobre cómo informar su ingreso, comuníquese con {organizationName} al {organizationContactInfo} y lo ayudarán a calcular su índice anual de ingresos de acuerdo con las pautas del Departamento de Agricultura de los Estados Unidos (United States Department of Agriculture, USDA).",
 
-  "help.topic.paperApp.question": "¿PUEDO UTILIZAR UNA SOLICITUD EN PAPEL?",
+  "help.topic.paperApp.question": "¿Puedo utilizar una solicitud en papel?",
   "help.topic.paperApp.answer": "Sí. Si desea presentar la solicitud en papel, puede imprimirla aquí {paperApplicationLink} o comunicarse con {organizationName} ({organizationContactInfo}) para pedir una solicitud. Luego, devuelva la solicitud completa a: {organizationName}.",
   "help.topic.paperApp.paperApplication": "solicitud en papel",
 
-  "help.topic.QualifyHomeless.question": "¿CÓMO SÉ SI MIS HIJOS CALIFICAN COMO PERSONAS SIN HOGAR?",
+  "help.topic.QualifyHomeless.question": "¿Cómo sé si mis hijos califican como personas sin hogar?",
   "help.topic.QualifyHomeless.answer1": "Sus hijos pueden calificar como personas sin hogar si:",
   "help.topic.QualifyHomeless.answer2": "comparten el hogar con otras personas debido a la pérdida del hogar, problemas económicos o por una razón similar y viven en moteles, hoteles, parques de remolques o campamentos debido a la falta de un alojamiento alternativo adecuado;",
   "help.topic.QualifyHomeless.answer3": "viven en refugios transitorios de emergencia, los abandonaron en hospitales o esperan que los ubiquen en un hogar de acogida;",
@@ -611,7 +611,7 @@
   "help.topic.QualifyHomeless.answer5": "viven en automóviles, parques, espacios públicos, edificios abandonados, viviendas precarias, estaciones de autobuses o trenes, o en entornos similares.",
   "help.topic.QualifyHomeless.answer6": "Si cree que sus hijos cumplen con una o más de estas descripciones y no le han informado si recibirán comidas gratis, comuníquese con {organizationName}.",
 
-  "help.topic.QualifyMigrant.question": "¿CÓMO SÉ SI MI HIJO CALIFICA COMO MIGRANTE?",
+  "help.topic.QualifyMigrant.question": "¿Cómo sé si mi hijo califica como migrante?",
   "help.topic.QualifyMigrant.answer1": "Su hijo puede calificar como migrante si se han mudado a un hogar en otro distrito escolar en los últimos tres años para buscar trabajo temporal/por temporada en agricultura o pesca.",
   "help.topic.QualifyMigrant.answer2": "Si cree que los niños de su hogar cumplen con una o más de estas descripciones y no le han informado si sus hijos recibirán comidas gratis, comuníquese con {organizationName}.",
 
@@ -619,14 +619,14 @@
   "help.topic.RegularCash.definition1": "Los pagos regulares en efectivo por parte de personas que no viven en el hogar es dinero que reciben regularmente por parte de familiares o amigos que no viven con usted. Por ejemplo, si sus padres o abuelos lo ayudan regularmente a cubrir los gastos de alimentos, facturas, o alquiler, el dinero se considera ingresos del hogar y debe declararlo en su solicitud para beneficios de comidas escolares.",
   "help.topic.RegularCash.definition2": "Los pagos únicos no deben declararse como actuales o como ingresos mensuales ya que no los recibe de manera regular. Sin embargo, si recibe un pago único como recompensas, arreglos, herencias o premios y luego utiliza ese dinero para cubrir gastos de vivienda más adelante, el monto realizado debe declararse en la solicitud para obtener beneficios de comidas escolares en el lugar de “Otros ingresos disponibles para pagar las comidas escolares de los niños”.",
 
-  "help.topic.ReportCombat.question": "¿TENGO QUE DECLARAR MI PAGO POR COMBATE COMO INGRESOS EN LA SOLICITUD?",
+  "help.topic.ReportCombat.question": "¿Tengo que declarar mi pago por combate como ingresos en la solicitud?",
   "help.topic.ReportCombat.answer1": "No, siempre que cumpla con las siguientes condiciones:",
   "help.topic.ReportCombat.answer2": "Lo recibió además del pago básico;",
   "help.topic.ReportCombat.answer3": "Lo recibió por el despliegue o por un servicio en un área designada como zona de combate, y",
   "help.topic.ReportCombat.answer4": "No lo recibió antes del despliegue o servicio en la zona de combate designada.",
   "help.topic.ReportCombat.answer5": "Si no cumple con alguna de estas condiciones, debe declarar el monto del pago militar básico.",
 
-  "help.topic.WhatIncome.question": "¿QUÉ FUENTES DE INGRESOS TENGO QUE INFORMAR EN LA SOLICITUD?",
+  "help.topic.WhatIncome.question": "¿Qué fuentes de ingresos tengo que informar en la solicitud?",
   "help.topic.WhatIncome.answer1": "En la sección de ingresos de esta solicitud se le preguntará sobre el dinero que recibe regularmente de las siguientes fuentes:",
   "help.topic.WhatIncome.answer2": "Pago básico para militares/pago por entrenamiento",
   "help.topic.WhatIncome.answer3": "Bonos en efectivo para militares",
@@ -678,7 +678,7 @@
   "help.topic.WhatIncome.answer49": "Ganancias recibidas de manera irregular, como pagos por cuidar niños o cortar el césped de vez en cuando",
   "help.topic.WhatIncome.answer50": "Subsidios de vivienda provenientes de programas federales de vivienda",
 
-  "help.topic.WhatInformation.question": "¿QUÉ INFORMACIÓN NECESITARÉ PARA COMPLETAR LA SOLICITUD?",
+  "help.topic.WhatInformation.question": "¿Qué información necesitaré para completar la solicitud?",
   "help.topic.WhatInformation.answer1": "Si tiene esta información a mano, el proceso de solicitud será más rápido y fácil.",
   "help.topic.WhatInformation.answer2": "Si participa en {assistanceProgramsShort} tendrá que saber cuál es su número de caso (no el número de su cuenta ni de su tarjeta).",
   "help.topic.WhatInformation.answer3": "Si no participa en ningún programa de asistencia, tendrá que informar los ingresos totales de su hogar. En ese caso:",
