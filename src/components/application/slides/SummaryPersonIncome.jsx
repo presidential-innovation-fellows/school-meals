@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import SummaryEditLink from './SummaryEditLink'
+import FrequencyLabel from '../FrequencyLabel'
 import HourlyPeriodLabel from '../HourlyPeriodLabel'
 import { observer } from 'mobx-react'
 import { humanize, numberFormat } from 'underscore.string'
@@ -16,7 +17,7 @@ class SummaryPersonIncome extends Component {
         {' '}
         ${numberFormat(parseFloat(income.amount, 10), 2)}
         {' '}
-        {humanize(income.frequency)}
+        {income.frequency && <FrequencyLabel frequency={income.frequency} />}
         {' '}
         {income.frequency === 'hourly' && income.hourlyPeriod &&
          <span>
