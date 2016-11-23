@@ -5,6 +5,7 @@ import SummaryLabel from './SummaryLabel'
 import SummaryPersonCollection from './SummaryPersonCollection'
 import Checkbox from '../Checkbox'
 import Checkboxes from '../Checkboxes'
+import IncomeAmount from '../IncomeAmount'
 import { observer } from 'mobx-react'
 import { numberFormat } from 'underscore.string'
 import { assistanceProgramsVarArray, organization } from '../../../config'
@@ -131,18 +132,11 @@ class Summary extends Component {
               />
               </SummaryLabel>
              <Tooltip text={tooltiptext.monthlyIncomeSum}>
-               ${
-                 numberFormat(
-                   parseFloat(applicationData.totalMonthlyHouseholdIncome, 10),
-                   2
-                 )
-                }
-               {' '}
-               <FormattedMessage
-                id="app.slides.summary.perMonth"
-                description=" per month"
-                defaultMessage=" per month"
-              />
+               <IncomeAmount
+                   frequency="monthly"
+                   decimals={2}
+                   amount={parseFloat(applicationData.totalMonthlyHouseholdIncome, 10)}
+               />
              </Tooltip>
            </div>
           }
@@ -210,12 +204,9 @@ class Summary extends Component {
                   />
                 </span>,
                 totalHouseholdIncome: <span className="usa-label-big">
-                  ${numberFormat(applicationData.totalMonthlyHouseholdIncome)}
-                  {' '}
-                  <FormattedMessage
-                    id="app.slides.summary.perMonth"
-                    description="per month"
-                    defaultMessage=" per month"
+                  <IncomeAmount
+                      frequency="monthly"
+                      amount={applicationData.totalMonthlyHouseholdIncome}
                   />
                 </span>
                 }}

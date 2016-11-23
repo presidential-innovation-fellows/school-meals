@@ -1,81 +1,46 @@
 import classnames from 'classnames'
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
-import { numberFormat } from 'underscore.string'
-import { FormattedMessage } from 'react-intl'
+import IncomeAmount from './IncomeAmount'
 
 @observer
 class IncomeSourceSummary extends Component {
-  get value() {
-    const { amount, frequency, hourlyHours } = this.props.incomeSource
-    return (amount || 0) * (frequency === 'hourly' ? (hourlyHours || 0) : 1)
-  }
-
-  get period() {
+  get frequency() {
     const { frequency, hourlyPeriod } = this.props.incomeSource
 
-    switch (frequency) {
-      case 'yearly':
-      case 'annually':
-        return <FormattedMessage
-                   id="app.incomeSourceSummary.annually"
-                   description="Hourly income reported annually."
-                   defaultMessage="per year"
-               />
-      case 'monthly':
-        return <FormattedMessage
-                   id="app.incomeSourceSummary.monthly"
-                   description="Hourly income reported monthly."
-                   defaultMessage="per month"
-               />
-      case 'twicePerMonth':
-        return <FormattedMessage
-                   id="app.incomeSourceSummary.twicePerMonth"
-                   description="Hourly income reported twice per month."
-                   defaultMessage="twice per month"
-               />
-      case 'everyTwoWeeks':
-        return <FormattedMessage
-                   id="app.incomeSourceSummary.everyTwoWeeks"
-                   description="Hourly income reported every two weeks."
-                   defaultMessage="every two weeks"
-               />
-      case 'weekly':
-        return <FormattedMessage
-                   id="app.incomeSourceSummary.weekly"
-                   description="Hourly income reported weekly."
-                   defaultMessage="per week"
-               />
-      case 'hourly':
-        switch (hourlyPeriod) {
-          case 'week':
-            return <FormattedMessage
-                       id="app.incomeSourceSummary.hourly.week"
-                       description="Hourly income reported weekly by week."
-                       defaultMessage="per week"
-                   />
-          case 'month':
-            return <FormattedMessage
-                       id="app.incomeSourceSummary.hourly.month"
-                       description="Hourly income reported weekly by month."
-                       defaultMessage="per month"
-                   />
-        }
-      default:
-        return null
+    if (frequency === 'hourly') {
+      switch (hourlyPeriod) {
+        case 'day':
+          return 'daily'
+        case 'week':
+          return 'weekly'
+        case 'month':
+          return 'monthly'
+      }
+    } else {
+      return frequency
     }
+  }
+
+  get amount() {
+    const { amount, frequency, hourlyHours } = this.props.incomeSource
+    return (amount || 0) * (frequency === 'hourly' ? (hourlyHours || 0) : 1)
   }
 
   render() {
     const className = classnames({
       'usa-label-big': true,
       'income-source-summary': true,
-      'invisible': !(this.value && this.period)
+      'invisible': !(this.amount && this.frequency)
     })
 
     return (
       <span className={className}>
-        ✓ ${numberFormat(this.value)} {this.period}
+        ✓
+        {' '}
+        {this.amount && this.frequency &&
+         <IncomeAmount amount={this.amount} frequency={this.frequency} />
+        }
       </span>
     )
   }

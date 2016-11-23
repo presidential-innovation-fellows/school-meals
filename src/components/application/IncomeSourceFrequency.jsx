@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react'
-import { observer } from 'mobx-react'
 import Select from './Select'
+import FrequencyLabel from './FrequencyLabel'
+import { observer } from 'mobx-react'
 import { FormattedMessage } from 'react-intl'
 
 @observer
@@ -29,55 +30,40 @@ class IncomeSourceFrequency extends Component {
       <div className="usa-input-grid usa-input-grid-medium">
         <Select value={value}
                 onChange={this.handleChange}>
-          <option value="" disabled>
-            <FormattedMessage
-                id="app.incomeSourceFrequency.placeholder"
-                description="Default text for income frequency select box."
-                defaultMessage="Frequency…"
-            />
-          </option>
-          {showAnnual && <option value="annually">
-            <FormattedMessage
-                id="app.incomeSourceFrequency.annually"
-                description="Frequency of income received per year."
-                defaultMessage="Annually"
-            />
-          </option>}
-          <option value="monthly">
-            <FormattedMessage
-                id="app.incomeSourceFrequency.monthly"
-                description="Frequency of income received per month."
-                defaultMessage="Monthly"
-            />
-          </option>
-          <option value="twicePerMonth">
-            <FormattedMessage
-                id="app.incomeSourceFrequency.twicePerMonth"
-                description="Frequency of income received twice monthly."
-                defaultMessage="Twice per month"
-            />
-          </option>
-          <option value="everyTwoWeeks">
-            <FormattedMessage
-                id="app.incomeSourceFrequency.everyTwoWeeks"
-                description="Frequency of income received per two weeks."
-                defaultMessage="Every two weeks"
-            />
-          </option>
-          <option value="weekly">
-            <FormattedMessage
-                id="app.incomeSourceFrequency.weekly"
-                description="Frequency of income received per week."
-                defaultMessage="Weekly"
-            />
-          </option>
-          {showHourly && <option value="hourly">
-            <FormattedMessage
-                id="app.incomeSourceFrequency.hourly"
-                description="Frequency of income received per hour."
-                defaultMessage="Hourly"
-            />
-          </option>}
+          <FormattedMessage
+              id="app.incomeSourceFrequency.placeholder"
+              description="Default text for income frequency select box."
+              defaultMessage="frequency…">
+            {message => <option value="" disabled>{message}</option>}
+          </FormattedMessage>
+
+          {showAnnual &&
+           <FrequencyLabel frequency="annually">
+             {message => <option value="annually">{message}</option>}
+           </FrequencyLabel>
+          }
+
+          <FrequencyLabel frequency="monthly">
+            {message => <option value="monthly">{message}</option>}
+          </FrequencyLabel>
+
+          <FrequencyLabel frequency="twicePerMonth">
+            {message => <option value="twicePerMonth">{message}</option>}
+          </FrequencyLabel>
+
+          <FrequencyLabel frequency="everyTwoWeeks">
+            {message => <option value="everyTwoWeeks">{message}</option>}
+          </FrequencyLabel>
+
+          <FrequencyLabel frequency="weekly">
+            {message => <option value="weekly">{message}</option>}
+          </FrequencyLabel>
+
+          {showHourly &&
+           <FrequencyLabel frequency="hourly">
+             {message => <option value="hourly">{message}</option>}
+           </FrequencyLabel>
+          }
         </Select>
       </div>
     )
