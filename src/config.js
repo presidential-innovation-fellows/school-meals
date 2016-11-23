@@ -77,3 +77,4 @@ export const locales = [
     iSpeak: 'Yo hablo español'
   },
 ]
+//     5. add locale to the Intl polyfill in index.html (see polyfill.min.js)
