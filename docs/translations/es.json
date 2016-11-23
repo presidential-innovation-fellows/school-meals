@@ -519,7 +519,7 @@
   "help.articles.helpText.disagreeTitle": "¿Qué sucede si no estoy de acuerdo con la decisión de la escuela con respecto a mi solicitud?",
   "help.articles.helpText.disagreeBody": "Debe hablar con los funcionarios de la escuela. También podría solicitar una audiencia ya sea llamando o escribiendo a: {organizationName} ({organizationPhone} / {organizationEmail} / {organizationAddress}).",
   "help.articles.helpText.mckinneyTerm": "{mckinneyShortName}",
-  "help.articles.helpText.mckinneyDef": "{mckinneyShortName} brinda dinero a programas de refugio para personas sin vivienda y facilita el acceso a escuelas públicas para niños y jóvenes.",
+  "help.articles.helpText.mckinneyDef": "{mckinneyFullName} brinda dinero a programas de refugio para personas sin vivienda y facilita el acceso a escuelas públicas para niños y jóvenes.",
   "help.articles.helpText.mepTerm": "{mepFullName} ({mepAccronym})",
   "help.articles.helpText.mepDef": "{mepAccronym} brinda servicios a niños que se han mudado a otros distritos escolares en los últimos tres años para acompañar a un padre o tutor que busca obtener trabajo temporal o por temporada en agricultura o pesca.",
   "help.articles.helpText.runawayHomelessActTerm": "{programRunaway}",
