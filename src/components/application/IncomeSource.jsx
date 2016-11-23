@@ -5,6 +5,7 @@ import BooleanRadio from './BooleanRadio'
 import Form from './Form'
 import IncomeSourceSingle from './IncomeSourceSingle'
 import AdditionalIncome from './IncomeSourceAdditional'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class IncomeSource extends Component {
@@ -12,17 +13,37 @@ class IncomeSource extends Component {
     const { name } = this.props
     const incomeSource = this.props.incomeSources[name]
     const { hourlyPeriod } = incomeSource
-    const max = {
-      'day': 24,
-      'week': 168,
-      'month': 730
-    }
 
     if (hoursExceedPeriodCapacity(incomeSource)) {
-      return `There are only ${max[hourlyPeriod]} hours in a ${hourlyPeriod}.`
+      switch (hourlyPeriod) {
+        case 'day':
+          return(
+            <FormattedMessage
+                id="app.incomeSource.tooManyHours.day"
+                description="Message about too many hours being entered for the selected period."
+                defaultMessage="There are only 24 hours in a day."
+            />
+          )
+        case 'week':
+          return(
+            <FormattedMessage
+                id="app.incomeSource.tooManyHours.week"
+                description="Message about too many hours being entered for the selected period."
+                defaultMessage="There are only 168 hours in a week."
+            />
+          )
+        case 'month':
+          return(
+            <FormattedMessage
+                id="app.incomeSource.tooManyHours.month"
+                description="Message about too many hours being entered for the selected period."
+                defaultMessage="There are only 730 hours in a month."
+            />
+          )
+        default:
+          return null
+      }
     }
-
-    return null
   }
 
   render() {

@@ -352,6 +352,23 @@
 
 
   /***
+   *** src/components/application/IncomeSource.jsx
+   ***/
+
+  // Message about too many hours being entered for the selected period.
+  // English: "There are only 24 hours in a day."
+  "app.incomeSource.tooManyHours.day": "",
+
+  // Message about too many hours being entered for the selected period.
+  // English: "There are only 168 hours in a week."
+  "app.incomeSource.tooManyHours.week": "",
+
+  // Message about too many hours being entered for the selected period.
+  // English: "There are only 730 hours in a month."
+  "app.incomeSource.tooManyHours.month": "",
+
+
+  /***
    *** src/components/application/IncomeSourceAdditional.jsx
    ***/
 
@@ -376,6 +393,23 @@
   // Default text for hourly period select box.
   // English: "hours per…"
   "app.incomeSourceHourlyPeriod.placeholder": "",
+
+
+  /***
+   *** src/components/application/IncomeSourceSingle.jsx
+   ***/
+
+  // Message about too many hours being entered for the selected period.
+  // English: "There are only 24 hours in a day."
+  "app.incomeSourceSingle.tooManyHours.day": "",
+
+  // Message about too many hours being entered for the selected period.
+  // English: "There are only 168 hours in a week."
+  "app.incomeSourceSingle.tooManyHours.week": "",
+
+  // Message about too many hours being entered for the selected period.
+  // English: "There are only 730 hours in a month."
+  "app.incomeSourceSingle.tooManyHours.month": "",
 
 
   /***
@@ -2836,5 +2870,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479896857414."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479935598677."
 }

@@ -86,10 +86,18 @@
   "app.incomeAmountLabel.daily": "por día",
   "app.incomeAmountLabel.hourly": "por hora",
 
+  "app.incomeSource.tooManyHours.day": "Sólo hay 24 horas en un día.",
+  "app.incomeSource.tooManyHours.week": "Sólo hay 168 horas en una semana.",
+  "app.incomeSource.tooManyHours.month": "Sólo hay 730 horas en un mes.",
+
   "app.incomeSourceAdditional.addButton": "Añadir fuente de ingresos",
   "app.personForm.removeButton": "Quitar {name}",
 
   "app.incomeSourceHourlyPeriod.placeholder": "horas al…",
+
+  "app.incomeSourceSingle.tooManyHours.day": "Sólo hay 24 horas en un día.",
+  "app.incomeSourceSingle.tooManyHours.week": "Sólo hay 168 horas en una semana.",
+  "app.incomeSourceSingle.tooManyHours.month": "Sólo hay 730 horas en un mes.",
 
   "app.slides.incomeTypeFormGroup.missingIncomeTitle": "Falta de Ingresos",
   "app.slides.incomeTypeFormGroup.missingIncome": "",
