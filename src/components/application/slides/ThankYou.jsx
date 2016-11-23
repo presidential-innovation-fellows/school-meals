@@ -37,9 +37,17 @@ class ThankYou extends Component {
           defaultMessage="Caution"
       />
 
+    const nextText =
+      <FormattedMessage
+          id="app.slides.thankYou.download"
+          description="Button to download data"
+          defaultMessage="Download Data"
+      />
+
     return (
       <Slide header={headerText} id="thank-you"
-             showBack={false} showNext={false} beginsSection>
+             showBack={false} nextText={nextText} handleNext={this.downloadData}
+             beginsSection>
 
         <Alert heading={alertHeading} type="success">
           <FormattedMessage
@@ -58,16 +66,6 @@ class ThankYou extends Component {
             />
           </strong>
         </Alert>
-
-        <br />
-
-        <Button onClick={this.downloadData}>
-          <FormattedMessage
-              id="app.slides.thankYou.download"
-              description="Button to download data"
-              defaultMessage="Download Data"
-          />
-        </Button>
       </Slide>
     )
   }
