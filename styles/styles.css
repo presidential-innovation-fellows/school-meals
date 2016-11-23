@@ -32,12 +32,16 @@ main {
   padding-top: 20px;
 }
 
-#summary h4 {
-  margin-top: 1em;
+#summary h4 a {
+  text-decoration: none;
 }
 
-#summary table {
-  margin-bottom: .5em;
+#summary a:visited {
+  color: #0071bc;
+}
+
+#summary fieldset {
+  margin-top: 2.5em;
 }
 
 abbr[title] {

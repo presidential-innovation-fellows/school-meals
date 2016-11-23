@@ -16,39 +16,47 @@ class SummaryPerson extends Component {
         <ul>
           {person.isFoster &&
            <li>
-           <FormattedMessage
-              id="app.slides.summaryPerson.foster"
-              description="Foster child "
-              defaultMessage="Foster child "
-           />
-           <SummaryEditLink id="foster" /></li>}
+             <FormattedMessage
+                 id="app.slides.summaryPerson.foster"
+                 description="Foster child "
+                 defaultMessage="Foster child "
+             />
+             {' '}
+             <SummaryEditLink id="foster" />
+           </li>}
 
           {person.isMigrant &&
            <li>
-           <FormattedMessage
-              id="app.slides.summaryPerson.migrant"
-              description="Migrant youth "
-              defaultMessage="Migrant youth "
-           />
-           <SummaryEditLink id="other-programs" /></li>}
+             <FormattedMessage
+                 id="app.slides.summaryPerson.migrant"
+                 description="Migrant youth "
+                 defaultMessage="Migrant youth "
+             />
+             {' '}
+             <SummaryEditLink id="other-programs" />
+           </li>}
 
           {person.isHomeless &&
            <li>
-           <FormattedMessage
-              id="app.slides.summaryPerson.homeless"
-              description="Homeless youth "
-              defaultMessage="Homeless youth "
-           />
-           <SummaryEditLink id="other-programs" /></li>}
+             <FormattedMessage
+                 id="app.slides.summaryPerson.homeless"
+                 description="Homeless youth "
+                 defaultMessage="Homeless youth "
+             />
+             {' '}
+             <SummaryEditLink id="other-programs" />
+           </li>}
 
           {person.isRunaway &&
            <li>
-           <FormattedMessage
-              id="app.slides.summaryPerson.runaway"
-              description="Runaway youth "
-              defaultMessage="Runaway youth "
-           />
-           <SummaryEditLink id="other-programs" /></li>}
+             <FormattedMessage
+                 id="app.slides.summaryPerson.runaway"
+                 description="Runaway youth "
+                 defaultMessage="Runaway youth "
+             />
+             {' '}
+             <SummaryEditLink id="other-programs" />
+           </li>}
 
           {applicableIncomeSources(person).map(income =>
             <SummaryPersonIncome
