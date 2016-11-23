@@ -73,7 +73,6 @@ export default class ApplicationData {
       let amount = parseFloat(income.amount, 10)
 
       switch (income.frequency) {
-        case 'yearly':
         case 'annually':
           return amount * 1.0
         case 'monthly':

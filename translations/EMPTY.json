@@ -273,6 +273,85 @@
 
 
   /***
+   *** src/components/application/FrequencyLabel.jsx
+   ***/
+
+  // Once per year.
+  // English: "yearly"
+  "app.frequencyLabel.annually": "",
+
+  // Once per month.
+  // English: "monthly"
+  "app.frequencyLabel.monthly": "",
+
+  // Twice per month.
+  // English: "twice per month"
+  "app.frequencyLabel.twicePerMonth": "",
+
+  // Every two weeks.
+  // English: "every two weeks"
+  "app.frequencyLabel.everyTwoWeeks": "",
+
+  // Once per week.
+  // English: "weekly"
+  "app.frequencyLabel.weekly": "",
+
+  // Once per hour.
+  // English: "hourly"
+  "app.frequencyLabel.hourly": "",
+
+
+  /***
+   *** src/components/application/HourlyPeriodLabel.jsx
+   ***/
+
+  // Number of hours per day.
+  // English: "hours per day"
+  "app.hourlyPeriodLabel.day": "",
+
+  // Number of hours per month.
+  // English: "hours per month"
+  "app.hourlyPeriodLabel.month": "",
+
+  // Number of hours per week.
+  // English: "hours per week"
+  "app.hourlyPeriodLabel.week": "",
+
+
+  /***
+   *** src/components/application/IncomeAmountLabel.jsx
+   ***/
+
+  // Income earned annually.
+  // English: "per year"
+  "app.incomeAmountLabel.annually": "",
+
+  // Income earned monthly.
+  // English: "per month"
+  "app.incomeAmountLabel.monthly": "",
+
+  // Income earned twice per month.
+  // English: "twice per month"
+  "app.incomeAmountLabel.twicePerMonth": "",
+
+  // Income earned every two weeks.
+  // English: "every two weeks"
+  "app.incomeAmountLabel.everyTwoWeeks": "",
+
+  // Income earned weekly.
+  // English: "per week"
+  "app.incomeAmountLabel.weekly": "",
+
+  // Income earned daily.
+  // English: "per day"
+  "app.incomeAmountLabel.daily": "",
+
+  // Income earned hourly.
+  // English: "per hour"
+  "app.incomeAmountLabel.hourly": "",
+
+
+  /***
    *** src/components/application/IncomeSourceAdditional.jsx
    ***/
 
@@ -286,32 +365,8 @@
    ***/
 
   // Default text for income frequency select box.
-  // English: "Frequency…"
+  // English: "frequency…"
   "app.incomeSourceFrequency.placeholder": "",
-
-  // Frequency of income received per year.
-  // English: "Annually"
-  "app.incomeSourceFrequency.annually": "",
-
-  // Frequency of income received per month.
-  // English: "Monthly"
-  "app.incomeSourceFrequency.monthly": "",
-
-  // Frequency of income received twice monthly.
-  // English: "Twice per month"
-  "app.incomeSourceFrequency.twicePerMonth": "",
-
-  // Frequency of income received per two weeks.
-  // English: "Every two weeks"
-  "app.incomeSourceFrequency.everyTwoWeeks": "",
-
-  // Frequency of income received per week.
-  // English: "Weekly"
-  "app.incomeSourceFrequency.weekly": "",
-
-  // Frequency of income received per hour.
-  // English: "Hourly"
-  "app.incomeSourceFrequency.hourly": "",
 
 
   /***
@@ -321,47 +376,6 @@
   // Default text for hourly period select box.
   // English: "hours per…"
   "app.incomeSourceHourlyPeriod.placeholder": "",
-
-  // Number of hours per week.
-  // English: "hours per week"
-  "app.incomeSourceHourlyPeriod.week": "",
-
-  // Number of hours per month.
-  // English: "hours per month"
-  "app.incomeSourceHourlyPeriod.month": "",
-
-
-  /***
-   *** src/components/application/IncomeSourceSummary.jsx
-   ***/
-
-  // Hourly income reported annually.
-  // English: "per year"
-  "app.incomeSourceSummary.annually": "",
-
-  // Hourly income reported monthly.
-  // English: "per month"
-  "app.incomeSourceSummary.monthly": "",
-
-  // Hourly income reported twice per month.
-  // English: "twice per month"
-  "app.incomeSourceSummary.twicePerMonth": "",
-
-  // Hourly income reported every two weeks.
-  // English: "every two weeks"
-  "app.incomeSourceSummary.everyTwoWeeks": "",
-
-  // Hourly income reported weekly.
-  // English: "per week"
-  "app.incomeSourceSummary.weekly": "",
-
-  // Hourly income reported weekly by week.
-  // English: "per week"
-  "app.incomeSourceSummary.hourly.week": "",
-
-  // Hourly income reported weekly by month.
-  // English: "per month"
-  "app.incomeSourceSummary.hourly.month": "",
 
 
   /***
@@ -1500,10 +1514,6 @@
   // English: "Total household income"
   "app.slides.summary.totalIncome": "",
 
-  // per month
-  // English: "per month"
-  "app.slides.summary.perMonth": "",
-
   // Contact information
   // English: "Contact information"
   "app.slides.summary.contactInfo": "",
@@ -1557,6 +1567,131 @@
   // Runaway youth
   // English: "Runaway youth"
   "app.slides.summaryPerson.runaway": "",
+
+
+  /***
+   *** src/components/application/slides/SummaryPersonIncome.jsx
+   ***/
+
+  // Short income source description used on Summary page.
+  // English: "Full or part-time job"
+  "app.slides.summaryPersonIncome.description.child.job": "",
+
+  // Short income source description used on Summary page.
+  // English: "SSI or Social Security"
+  "app.slides.summaryPersonIncome.description.child.socialSecurity": "",
+
+  // Short income source description used on Summary page.
+  // English: "Friends or family"
+  "app.slides.summaryPersonIncome.description.child.friendsFamily": "",
+
+  // Short income source description used on Summary page.
+  // English: "Pension, annuity, or trust"
+  "app.slides.summaryPersonIncome.description.child.pensionAnnuityTrust": "",
+
+  // Short income source description used on Summary page.
+  // English: "Other income source"
+  "app.slides.summaryPersonIncome.description.child.other": "",
+
+  // Short income source description used on Summary page.
+  // English: "Military basic pay"
+  "app.slides.summaryPersonIncome.description.military.basic": "",
+
+  // Short income source description used on Summary page.
+  // English: "Military cash bonus"
+  "app.slides.summaryPersonIncome.description.military.cashBonus": "",
+
+  // Short income source description used on Summary page.
+  // English: "Military allowance"
+  "app.slides.summaryPersonIncome.description.military.allowance": "",
+
+  // Short income source description used on Summary page.
+  // English: "Salary / Wages"
+  "app.slides.summaryPersonIncome.description.employment.salaryWages": "",
+
+  // Short income source description used on Summary page.
+  // English: "Tips"
+  "app.slides.summaryPersonIncome.description.employment.tips": "",
+
+  // Short income source description used on Summary page.
+  // English: "Commission"
+  "app.slides.summaryPersonIncome.description.employment.commission": "",
+
+  // Short income source description used on Summary page.
+  // English: "Cash bonus"
+  "app.slides.summaryPersonIncome.description.employment.cashBonus": "",
+
+  // Short income source description used on Summary page.
+  // English: "Net income from self-employment"
+  "app.slides.summaryPersonIncome.description.employment.selfEmployment": "",
+
+  // Short income source description used on Summary page.
+  // English: "Supplemental Security Income (SSI)"
+  "app.slides.summaryPersonIncome.description.publicAssistance.ssi": "",
+
+  // Short income source description used on Summary page.
+  // English: "Cash assistance program"
+  "app.slides.summaryPersonIncome.description.publicAssistance.stateLocal": "",
+
+  // Short income source description used on Summary page.
+  // English: "Alimony"
+  "app.slides.summaryPersonIncome.description.spousal.alimony": "",
+
+  // Short income source description used on Summary page.
+  // English: "Child support"
+  "app.slides.summaryPersonIncome.description.spousal.childSupport": "",
+
+  // Short income source description used on Summary page.
+  // English: "Unemployment benefits"
+  "app.slides.summaryPersonIncome.description.unemployment.unemployment": "",
+
+  // Short income source description used on Summary page.
+  // English: "Worker’s compensation"
+  "app.slides.summaryPersonIncome.description.unemployment.workersComp": "",
+
+  // Short income source description used on Summary page.
+  // English: "Strike benefits"
+  "app.slides.summaryPersonIncome.description.unemployment.strike": "",
+
+  // Short income source description used on Summary page.
+  // English: "Social Security Disability Insurance (SSDI)"
+  "app.slides.summaryPersonIncome.description.unemployment.ssdi": "",
+
+  // Short income source description used on Summary page.
+  // English: "Veteran’s benefits"
+  "app.slides.summaryPersonIncome.description.unemployment.veteran": "",
+
+  // Short income source description used on Summary page.
+  // English: "Social Security"
+  "app.slides.summaryPersonIncome.description.retirement.socialSecurity": "",
+
+  // Short income source description used on Summary page.
+  // English: "Pension"
+  "app.slides.summaryPersonIncome.description.retirement.privatePension": "",
+
+  // Short income source description used on Summary page.
+  // English: "Regular cash payments"
+  "app.slides.summaryPersonIncome.description.other.regularCashPayments": "",
+
+  // Short income source description used on Summary page.
+  // English: "Rental income"
+  "app.slides.summaryPersonIncome.description.other.rentalIncome": "",
+
+  // Short income source description used on Summary page.
+  // English: "Earned interest"
+  "app.slides.summaryPersonIncome.description.other.earnedInterest": "",
+
+  // Short income source description used on Summary page.
+  // English: "Investment income"
+  "app.slides.summaryPersonIncome.description.other.investmentIncome": "",
+
+  // Short income source description used on Summary page.
+  // English: "Annuity"
+  "app.slides.summaryPersonIncome.description.other.annuity": "",
+
+  // Short income source description used on Summary page.
+  // English: "Other income source"
+  "app.slides.summaryPersonIncome.description.other.other": "",
 
 
   /***
@@ -2241,5 +2376,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479844587027."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479884664564."
 }
