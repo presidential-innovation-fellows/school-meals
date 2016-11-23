@@ -72,7 +72,7 @@
   "app.frequencyLabel.twicePerMonth": "dos veces al mes",
   "app.frequencyLabel.everyTwoWeeks": "cada dos semanas",
   "app.frequencyLabel.weekly": "semanal",
-  "app.frequencyLabel.hourly": "cada hora",
+  "app.frequencyLabel.hourly": "por hora",
 
   "app.hourlyPeriodLabel.day": "horas al día",
   "app.hourlyPeriodLabel.week": "horas a la semana",
