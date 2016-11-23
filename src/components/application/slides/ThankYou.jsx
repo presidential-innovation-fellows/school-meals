@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Slide from '../Slide'
+import Alert from '../Alert'
 import Button from '../Button'
 import download from 'downloadjs'
 import { observer } from 'mobx-react'
@@ -22,32 +23,44 @@ class ThankYou extends Component {
           defaultMessage="Thank you for applying for school meal benefits!"
       />
 
+    const alertHeading =
+      <FormattedMessage
+          id="app.slides.thankYou.submitted"
+          description="application has been submitted"
+          defaultMessage="Your application has been submitted."
+      />
+
+    const warningHeading =
+      <FormattedMessage
+          id="app.slides.thankYou.cautionHeading"
+          description="Warning message heading"
+          defaultMessage="Caution"
+      />
+
     return (
       <Slide header={headerText} id="thank-you"
              showBack={false} showNext={false} beginsSection>
-        <p>
-          <FormattedMessage
-              id="app.slides.thankYou.submitted"
-              description="application has been submitted"
-              defaultMessage="Your application has been submitted."
-          />
-        </p>
-        <p>
+
+        <Alert heading={alertHeading} type="success">
           <FormattedMessage
               id="app.slides.thankYou.nextSteps"
               description="Indication of what happens next."
               defaultMessage="You will hear from us soon with your certification decision!"
           />
-        </p>
-        <p>
+        </Alert>
+
+        <Alert heading={warningHeading} type="error">
           <strong>
             <FormattedMessage
                 id="app.slides.thankYou.caution"
                 description="Warning message"
-                defaultMessage="CAUTION! NO DATA HAS BEEN SAVED. THIS IS NOT A REAL APPLICATION FOR SCHOOL MEAL BENEFITS. THIS IS A MODEL APPLICATION DEVELOPED BY USDA TO DEMONSTRATE THE POTENTIAL FUNCTIONALITY OF A SCHOOL DISTRICT'S APPLICATION. CONTACT YOUR CHILD'S SCHOOL TO FIND OUT WHERE YOU CAN ACCESS THEIR APPLICATION FOR SCHOOL MEAL BENEFITS."
+                defaultMessage="NO DATA HAS BEEN SAVED. THIS IS NOT A REAL APPLICATION FOR SCHOOL MEAL BENEFITS. THIS IS A MODEL APPLICATION DEVELOPED BY USDA TO DEMONSTRATE THE POTENTIAL FUNCTIONALITY OF A SCHOOL DISTRICT'S APPLICATION. CONTACT YOUR CHILD'S SCHOOL TO FIND OUT WHERE YOU CAN ACCESS THEIR APPLICATION FOR SCHOOL MEAL BENEFITS."
             />
           </strong>
-        </p>
+        </Alert>
+
+        <br />
+
         <Button onClick={this.downloadData}>
           <FormattedMessage
               id="app.slides.thankYou.download"

@@ -1510,13 +1510,13 @@
   // English: "(none)"
   "app.slides.summary.noAssistancePrograms": "",
 
-  // Total household income
-  // English: "Total household income"
-  "app.slides.summary.totalIncome": "",
-
   // Contact information
   // English: "Contact information"
   "app.slides.summary.contactInfo": "",
+
+  // Total household income
+  // English: "Total household income"
+  "app.slides.summary.totalIncome": "",
 
   // Certification statement
   // English: "I certify* that {totalHouseholdMembers} are in my household and that our household income is about {totalHouseholdIncome}"
@@ -1706,12 +1706,16 @@
   // English: "Your application has been submitted."
   "app.slides.thankYou.submitted": "",
 
+  // Warning message heading
+  // English: "Caution"
+  "app.slides.thankYou.cautionHeading": "",
+
   // Indication of what happens next.
   // English: "You will hear from us soon with your certification decision!"
   "app.slides.thankYou.nextSteps": "",
 
   // Warning message
-  // English: "CAUTION! NO DATA HAS BEEN SAVED. THIS IS NOT A REAL APPLICATION FOR SCHOOL MEAL BENEFITS. THIS IS A MODEL APPLICATION DEVELOPED BY USDA TO DEMONSTRATE THE POTENTIAL FUNCTIONALITY OF A SCHOOL DISTRICT'S APPLICATION. CONTACT YOUR CHILD'S SCHOOL TO FIND OUT WHERE YOU CAN ACCESS THEIR APPLICATION FOR SCHOOL MEAL BENEFITS."
+  // English: "NO DATA HAS BEEN SAVED. THIS IS NOT A REAL APPLICATION FOR SCHOOL MEAL BENEFITS. THIS IS A MODEL APPLICATION DEVELOPED BY USDA TO DEMONSTRATE THE POTENTIAL FUNCTIONALITY OF A SCHOOL DISTRICT'S APPLICATION. CONTACT YOUR CHILD'S SCHOOL TO FIND OUT WHERE YOU CAN ACCESS THEIR APPLICATION FOR SCHOOL MEAL BENEFITS."
   "app.slides.thankYou.caution": "",
 
   // Button to download data
@@ -2376,5 +2380,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479888839600."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479894107107."
 }

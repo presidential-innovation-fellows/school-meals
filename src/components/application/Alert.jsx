@@ -21,7 +21,7 @@ class Alert extends Component {
 
 Alert.propTypes = {
   heading: PropTypes.node,
-  type: PropTypes.string
+  type: PropTypes.oneOf(['success', 'warning', 'error', 'info'])
 }
 
 Alert.defaultProps = {
