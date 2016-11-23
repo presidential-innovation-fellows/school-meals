@@ -31,47 +31,34 @@ import All from './articles/All'
 
 class SlideTopics extends Component {
   render() {
-    return(
-      <div>
-        <bodyLabels>
-          <FormattedMessage
-              id="help.faq"
-              description="FAQ help section title."
-              defaultMessage="Frequently Asked Questions"
-          />
-        </bodyLabels>
-        {(() => {
-          switch (this.props.article) {
-            case 'welcome':                 return <Welcome />
-            case 'before-you-begin':        return <BeforeYouBegin />
-            case 'attestation':             return <Attestation />
-            case 'students':                return <Students />
-            case 'assistance-programs':     return <AssistancePrograms />
-            case 'foster':                  return <Foster />
-            case 'other-programs':          return <OtherPrograms />
-            case 'income-election':         return <IncomeElection />
-            case 'other-children':          return <OtherChildren />
-            case 'child-income':            return <ChildIncome />
-            case 'child':                   return <ChildIncome />
-            case 'adults':                  return <Adults />
-            case 'adult-income-overview':   return <AdultIncomeOverview />
-            case 'military-income':         return <MilitaryIncome />
-            case 'employment-income':       return <EmploymentIncome />
-            case 'publicAssistance-income': return <PublicAssistanceIncome />
-            case 'spousal-income':          return <SpousalIncome />
-            case 'unemployment-income':     return <UnemploymentIncome />
-            case 'retirement-income':       return <RetirementIncome />
-            case 'other-income':            return <OtherIncome />
-            case 'ssn':                     return <Signature />
-            case 'contact':                 return <ContactInfo />
-            case 'legal-statements':        return <LegalStatements />
-            case 'summary':                 return <Summary />
-            case 'thank-you':               return <ThankYou />
-            default:                        return <All />;
-          }
-        })()}
-      </div>
-    )
+    switch (this.props.article) {
+      case 'welcome':                 return <Welcome />
+      case 'before-you-begin':        return <BeforeYouBegin />
+      case 'attestation':             return <Attestation />
+      case 'students':                return <Students />
+      case 'assistance-programs':     return <AssistancePrograms />
+      case 'foster':                  return <Foster />
+      case 'other-programs':          return <OtherPrograms />
+      case 'income-election':         return <IncomeElection />
+      case 'other-children':          return <OtherChildren />
+      case 'child-income':            return <ChildIncome />
+      case 'child':                   return <ChildIncome />
+      case 'adults':                  return <Adults />
+      case 'adult-income-overview':   return <AdultIncomeOverview />
+      case 'military-income':         return <MilitaryIncome />
+      case 'employment-income':       return <EmploymentIncome />
+      case 'publicAssistance-income': return <PublicAssistanceIncome />
+      case 'spousal-income':          return <SpousalIncome />
+      case 'unemployment-income':     return <UnemploymentIncome />
+      case 'retirement-income':       return <RetirementIncome />
+      case 'other-income':            return <OtherIncome />
+      case 'ssn':                     return <Signature />
+      case 'contact':                 return <ContactInfo />
+      case 'legal-statements':        return <LegalStatements />
+      case 'summary':                 return <Summary />
+      case 'thank-you':               return <ThankYou />
+      default:                        return <All />
+    }
   }
 }
 
