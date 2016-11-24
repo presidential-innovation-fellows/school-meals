@@ -112,7 +112,6 @@ footer .not-real-disclaimer {
 .info-target {
   border-bottom: 1px dotted #337ab7;
   cursor: pointer;
-  white-space: nowrap;
 }
 
 .info-target .glyphicon {
@@ -215,6 +214,10 @@ footer .not-real-disclaimer {
 
   main {
     padding-top: 50px;
+  }
+
+  .info-target {
+    white-space: nowrap;
   }
 
   .slide-content {
