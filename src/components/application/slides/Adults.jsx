@@ -1,6 +1,7 @@
 import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
 import PersonCollection from '../PersonCollection'
+import Link from '../Link'
 import { organization } from '../../../config'
 import { fullName } from '../../../helpers'
 import { computed } from 'mobx'
@@ -39,7 +40,7 @@ class Adults extends Component {
               description="What other adults live in household"
               defaultMessage="Not including {attestor}, what other adults live in the household?"
               values={{
-                attestor: informalName(attestors[0])
+                attestor: <Link id="attestation">{informalName(attestors[0])}</Link>
               }}
           />
         </p>
