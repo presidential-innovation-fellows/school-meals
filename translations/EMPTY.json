@@ -17,7 +17,7 @@
   "nav.title": "",
 
   // Text for the page title on mobile devices.
-  // English: "{organizationShortName} Application for School Meals"
+  // English: "Application for School Meals"
   "nav.shortTitle": "",
 
   // Text for the Help navigation item.
@@ -1532,10 +1532,6 @@
   // English: "Other children"
   "app.slides.summary.otherChildren": "",
 
-  // Adults
-  // English: "Adults"
-  "app.slides.summary.adults": "",
-
   // Assistance program case numbers
   // English: "Assistance program case numbers"
   "app.slides.summary.caseNumbers": "",
@@ -1571,6 +1567,15 @@
   // fine print, if info is wrong, it is fraud.
   // English: "*I understand that this information is given in connection with the receipt of Federal funds, and that school officials may verify (check) the information. I am aware that if I purposely give false information, my children may lose meal benefits. Deliberate misrepresentation of information may subject applicants to prosecution under applicable State and Federal law."
   "app.slides.summary.finePrint": "",
+
+
+  /***
+   *** src/components/application/slides/SummaryAdults.jsx
+   ***/
+
+  // Adults
+  // English: "Adults"
+  "app.slides.summary.adults": "",
 
 
   /***
@@ -2853,5 +2858,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479941453590."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479956851122."
 }
