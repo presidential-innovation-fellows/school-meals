@@ -11,7 +11,7 @@ class SummaryLabelContent extends Component {
       <span>
         {this.props.id
          ?
-         <span>
+         <span key={this.props.id}>
            <Link id={this.props.id}>{this.props.children}</Link>
            {' '}
            <Link id={this.props.id}>
@@ -19,7 +19,7 @@ class SummaryLabelContent extends Component {
            </Link>
          </span>
          :
-         this.props.children
+         <span>this.props.children</span>
         }
       </span>
     )

@@ -1,6 +1,7 @@
 ﻿import React, { Component, PropTypes, responsive, bordered } from 'react'
 import Slide from '../Slide'
 import SerialList from '../SerialList'
+import SummaryAdults from './SummaryAdults'
 import SummaryLabel from './SummaryLabel'
 import SummaryPersonCollection from './SummaryPersonCollection'
 import Checkbox from '../Checkbox'
@@ -21,14 +22,10 @@ class Summary extends Component {
 
   render() {
     const { applicationData } = this.props
-    const { adults,
-            contact,
+    const { contact,
             otherChildren,
             students } = applicationData
     const assistancePrograms = applicationData.assistancePrograms.applicable
-
-    // don't show link to Adults slide if we're not collecting household income
-    const adultsId = (applicationData.showHousehold || undefined) && 'adults'
 
     const headerText =
       <FormattedMessage
@@ -86,14 +83,7 @@ class Summary extends Component {
          </SummaryPersonCollection>
         }
 
-        <SummaryPersonCollection collection={adults} id={adultsId}
-                                 showDetails={applicationData.showHousehold}>
-          <FormattedMessage
-              id="app.slides.summary.adults"
-              description="Adults"
-              defaultMessage="Adults"
-          />
-        </SummaryPersonCollection>
+        <SummaryAdults applicationData={applicationData} />
 
         <div>
           <SummaryLabel id="assistance-programs">
