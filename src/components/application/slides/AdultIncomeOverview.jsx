@@ -1,5 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
+import EditLink from '../EditLink'
 import BooleanRadio from '../BooleanRadio'
 import IncomeTypeFormGroup from '../IncomeTypeFormGroup'
 import { observer } from 'mobx-react'
@@ -30,18 +31,19 @@ class AdultIncomeOverview extends Component {
   render() {
     const { person } = this.props
     const name = informalName(person)
+    const linkId = person.isAttestor ? 'attestation' : 'adults'
 
     return(
       <Slide header={name} id={`income/${person.id}`}
              helpArticle="adult-income-overview" nextDisabled={!this.isValid}>
 
         <p>
-        <FormattedMessage
+          <FormattedMessage
               id="app.slides.adultIncomeOverview.adultsInto"
               description="Intro Paragraph"
               defaultMessage="This page is all about {adult}."
               values={{
-              adult: name
+                adult: <EditLink id={linkId}>{name}</EditLink>
               }}
           />
         </p>
