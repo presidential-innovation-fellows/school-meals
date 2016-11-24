@@ -9,10 +9,14 @@ import {FormattedMessage} from 'react-intl'
 class SummaryPerson extends Component {
   render() {
     const { person, showDetails } = this.props
+    const editLinkId = showDetails && person.isAdult ?
+                       `income/${person.id}` :
+                       undefined
 
     return (
       <li>
         {fullName(person)}
+        {editLinkId && <SummaryEditLink id={editLinkId} />}
         {showDetails &&
         <ul>
           {person.isFoster &&
