@@ -45,7 +45,7 @@ class Navigation extends Component {
               <FormattedMessage
                   id="nav.shortTitle"
                   description="Text for the page title on mobile devices."
-                  defaultMessage="{organizationShortName} Application for School Meals"
+                  defaultMessage="Application for School Meals"
                   values={{
                     organizationShortName: organization.shortname
                   }}
