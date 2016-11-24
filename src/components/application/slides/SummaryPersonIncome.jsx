@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-import SummaryEditLink from './SummaryEditLink'
+import EditLink from '../EditLink'
 import FrequencyLabel from '../FrequencyLabel'
 import HourlyPeriodLabel from '../HourlyPeriodLabel'
 import IncomeAmount from '../IncomeAmount'
@@ -201,7 +201,7 @@ class SummaryPersonIncome extends Component {
          </span>
         }
         {' '}
-        <SummaryEditLink id={`income/${person.id}/${income.type}`} />
+        <EditLink id={`income/${person.id}/${income.type}`} />
       </li>
     )
   }

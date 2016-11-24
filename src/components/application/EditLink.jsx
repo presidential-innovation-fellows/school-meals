@@ -2,14 +2,17 @@ import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
 import { FormattedMessage } from 'react-intl'
 import { Glyphicon } from 'react-bootstrap'
-import Link from '../Link'
+import Link from './Link'
 
 @observer
-class SummaryEditLink extends Component {
+class EditLink extends Component {
   render() {
+    const { children, id } = this.props
     return (
       <span>
-        <Link id={this.props.id}>
+        {children && <Link id={id}>{children}</Link>}
+        {' '}
+        <Link id={id}>
           <Glyphicon glyph="edit" />
         </Link>
       </span>
@@ -17,8 +20,9 @@ class SummaryEditLink extends Component {
   }
 }
 
-SummaryEditLink.propTypes = {
-  id: PropTypes.string
+EditLink.propTypes = {
+  children: PropTypes.node,
+  id: PropTypes.string.required,
 }
 
-export default SummaryEditLink
+export default EditLink
