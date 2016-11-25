@@ -26,7 +26,8 @@ class OtherProgramsProgram extends Component {
   }
 
   render() {
-    const { applicability, attribute, label, note, students } = this.props
+    const { applicability, attribute, label, note, onChange, students } =
+      this.props
 
     return (
       <div>
@@ -36,7 +37,9 @@ class OtherProgramsProgram extends Component {
         </label>
 
         {students.length === 1 ?
-         <BooleanRadio object={students[0]} name={attribute} />
+         <BooleanRadio object={students[0]}
+                       name={attribute}
+                       onChange={onChange} />
          :
          <div>
            <BooleanRadio object={applicability} name={attribute}
@@ -52,7 +55,10 @@ class OtherProgramsProgram extends Component {
               </label>
               {
                 students.map(student =>
-                  <Checkbox object={student} name={attribute} key={student.id}>
+                  <Checkbox object={student}
+                            name={attribute}
+                            key={student.id}
+                            onChange={onChange}>
                     {informalName(student)}
                   </Checkbox>
                 )
@@ -72,6 +78,7 @@ OtherProgramsProgram.propTypes = {
   attribute: PropTypes.string.isRequired,
   label: PropTypes.node.isRequired,
   note: PropTypes.node,
+  onChange: PropTypes.func,
   students: PropTypes.oneOfType([
     PropTypes.object,
     PropTypes.arrayOf(PropTypes.object)
