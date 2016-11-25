@@ -11,12 +11,12 @@ class SerialList extends Component {
                       <FormattedMessage
                           id="app.serialList.intersectionDelim"
                           description="Final delimiter for an intersecting list."
-                          defaultMessage="or "
+                          defaultMessage="or"
                       /> :
                       <FormattedMessage
                           id="app.serialList.unionDelim"
                           description="Final delimiter for a union list."
-                          defaultMessage="and "
+                          defaultMessage="and"
                       />
 
     return(
@@ -26,9 +26,9 @@ class SerialList extends Component {
              <span key={idProp ? item[idProp] : i}>
                <span className={className}>{mapFunc(item)}</span>
                {(i < items.length - 1) && (items.length > 2) && delim}
-               {(items.length > 1) && ' '}
-               {(i === items.length - 2) && (items.length > 1) && finalWord }
-               {(i === items.length - 2) && (items.length > 1) && ' ' }
+               {(i < items.length - 1) && (items.length > 1) && ' '}
+               {(i === items.length - 2) && (items.length > 1) && finalWord}
+               {(i === items.length - 2) && (items.length > 1) && ' '}
              </span>
            )
          })}
