@@ -1,6 +1,6 @@
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
-import { organization, assistanceProgramsVarArray } from '../config'
+import { organization, assistanceProgramsVar } from '../config'
 
 export const tooltiptext = {
   totalHouseholdIncome: <FormattedMessage
@@ -31,8 +31,8 @@ export const tooltiptext = {
     description="Tooltip text explaining SNAP."
     defaultMessage="{snapFullName} ({snapAccronym}) is a program that offers nutrition assistance to millions of eligible, low-income individuals and families."
     values={{
-      snapFullName: assistanceProgramsVarArray.snap.fullName,
-      snapAccronym: assistanceProgramsVarArray.snap.accronym
+      snapFullName: assistanceProgramsVar.snap.fullName,
+      snapAccronym: assistanceProgramsVar.snap.accronym
     }}
   />,
   tanf: <FormattedMessage
@@ -40,8 +40,8 @@ export const tooltiptext = {
     description="Tooltip text explaining TANF."
     defaultMessage="{tanfFullName} ({tanfAccronym}) program is designed to help needy familities achieve self-sufficiency by providing cash assistance, as well as other supports and services."
     values={{
-      tanfFullName: assistanceProgramsVarArray.tanf.fullName,
-      tanfAccronym: assistanceProgramsVarArray.tanf.accronym
+      tanfFullName: assistanceProgramsVar.tanf.fullName,
+      tanfAccronym: assistanceProgramsVar.tanf.accronym
     }}
   />,
   fdpir: <FormattedMessage
@@ -49,8 +49,8 @@ export const tooltiptext = {
     description="Tooltip text explaining FDPIR."
     defaultMessage="{fdpirFullName} ({fdpirAccronym}) is a Federal program that provides USDA foods to low-icome households, including the elderly, living on Indian reservations, and to Native American families residing in designated areas near reservations and in the State of Oklahoma."
     values={{
-      fdpirFullName: assistanceProgramsVarArray.fdpir.fullName,
-      fdpirAccronym: assistanceProgramsVarArray.fdpir.accronym
+      fdpirFullName: assistanceProgramsVar.fdpir.fullName,
+      fdpirAccronym: assistanceProgramsVar.fdpir.accronym
     }}
   />,
   household: <FormattedMessage
