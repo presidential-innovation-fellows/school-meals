@@ -123,6 +123,10 @@ export default class ApplicationData {
     return !this.skipHousehold
   }
 
+  @computed get cleaned() {
+    return this
+  }
+
   @action addIncomeSource(source) {
     source.more.push({ has: true, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' })
   }

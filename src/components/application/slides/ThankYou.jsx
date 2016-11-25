@@ -10,7 +10,7 @@ import { FormattedMessage } from 'react-intl'
 @observer
 class ThankYou extends Component {
   downloadData() {
-    var stringData = JSON.stringify(applicationData, undefined, 2)
+    var stringData = JSON.stringify(applicationData.cleaned, undefined, 2)
 
     download(stringData, 'nslp-data.json', 'text/plain');
   }
