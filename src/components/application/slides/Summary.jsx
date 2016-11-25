@@ -74,7 +74,9 @@ class Summary extends Component {
         </SummaryPersonCollection>
 
         {applicationData.showHousehold &&
-         <SummaryPersonCollection collection={otherChildren} id="other-children">
+         <SummaryPersonCollection collection={otherChildren}
+                                  id="other-children"
+                                  showIncomes={true}>
            <FormattedMessage
                id="app.slides.summary.otherChildren"
                description="Other children"
