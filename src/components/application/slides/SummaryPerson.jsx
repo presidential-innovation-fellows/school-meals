@@ -8,8 +8,8 @@ import {FormattedMessage} from 'react-intl'
 @observer
 class SummaryPerson extends Component {
   render() {
-    const { person, showDetails } = this.props
-    const editLinkId = showDetails && person.isAdult ?
+    const { person, showIncomes } = this.props
+    const editLinkId = showIncomes && person.isAdult ?
                        `income/${person.id}` :
                        undefined
 
@@ -17,7 +17,7 @@ class SummaryPerson extends Component {
       <li>
         {fullName(person)}
         {editLinkId && <EditLink id={editLinkId} />}
-        {showDetails &&
+        {showIncomes &&
         <ul>
           {person.isFoster &&
            <li>
@@ -79,7 +79,7 @@ class SummaryPerson extends Component {
 
 SummaryPerson.propTypes = {
   person: PropTypes.object.isRequired,
-  showDetails: PropTypes.bool,
+  showIncomes: PropTypes.bool,
 }
 
 export default SummaryPerson

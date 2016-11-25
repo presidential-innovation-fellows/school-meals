@@ -6,7 +6,7 @@ import { observer } from 'mobx-react'
 @observer
 class SummaryPersonCollection extends Component {
   render() {
-    const { children, collection, id, showDetails } = this.props
+    const { children, collection, id, showIncomes } = this.props
 
     return (
       collection.length && (
@@ -17,7 +17,7 @@ class SummaryPersonCollection extends Component {
               collection.map(person => {
                 return <SummaryPerson person={person}
                                       key={person.id}
-                                      showDetails={showDetails} />
+                                      showIncomes={showIncomes} />
               })
             }
           </ul>
@@ -30,7 +30,7 @@ class SummaryPersonCollection extends Component {
 SummaryPersonCollection.propTypes = {
   collection: PropTypes.object.isRequired,
   id: PropTypes.string,
-  showDetails: PropTypes.bool,
+  showIncomes: PropTypes.bool,
 }
 
 export default SummaryPersonCollection

@@ -62,7 +62,7 @@ class Summary extends Component {
         </p>
 
         <SummaryPersonCollection collection={students} id="students"
-                                 showDetails={applicationData.showHousehold}>
+                                 showIncomes={applicationData.showHousehold}>
           <FormattedMessage
               id="app.slides.summary.studentsAttending"
               description="student info"

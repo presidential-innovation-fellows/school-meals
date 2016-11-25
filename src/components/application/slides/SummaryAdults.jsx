@@ -12,7 +12,7 @@ class SummaryAdults extends Component {
     return (
       <SummaryPersonCollection id={id}
                                collection={applicationData.adults}
-                               showDetails={applicationData.showHousehold}>
+                               showIncomes={applicationData.showHousehold}>
         <FormattedMessage
             id="app.slides.summary.adults"
             description="Adults"
