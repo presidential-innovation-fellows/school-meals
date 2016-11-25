@@ -70,7 +70,6 @@ class IncomeElection extends Component {
     const { applicationData } = this.props
     const { allPeopleCollections, students } = applicationData
     const programSlugs = [
-      'isFoster',
       'isHomeless',
       'isMigrant',
       'isRunaway'
