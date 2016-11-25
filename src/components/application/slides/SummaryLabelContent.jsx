@@ -15,7 +15,7 @@ class SummaryLabelContent extends Component {
            <EditLink id={this.props.id}>{this.props.children}</EditLink>
          </span>
          :
-         <span>this.props.children</span>
+         <span>{this.props.children}</span>
         }
       </span>
     )
