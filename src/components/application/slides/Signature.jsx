@@ -13,6 +13,7 @@ class Signature extends Component {
   constructor (props) {
     super(props)
     this.handleSsnChange = this.handleSsnChange.bind(this)
+    this.handleNoSsnChange = this.handleNoSsnChange.bind(this)
   }
 
   handleSsnChange(name, value) {
@@ -22,6 +23,14 @@ class Signature extends Component {
     }
 
     this.props.signature.ssnLastFour = value
+  }
+
+  handleNoSsnChange(fieldName, value, object) {
+    object[fieldName] = value
+
+    if (value) {
+      this.props.signature.ssnLastFour = ''
+    }
   }
 
   get isValid() {
@@ -65,7 +74,9 @@ class Signature extends Component {
                       onChange={this.handleSsnChange} />
 
           <Checkboxes legend="No <abbr title='Social Security number'>SSN</abbr>">
-            <Checkbox object={signature} name="noSsn">
+            <Checkbox object={signature}
+                      name="noSsn"
+                      onChange={this.handleNoSsnChange}>
               <FormattedMessage
                 id="app.slides.signature.noSSN"
                 description="No SSN"
