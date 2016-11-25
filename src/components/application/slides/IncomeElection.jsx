@@ -17,8 +17,17 @@ class IncomeElection extends Component {
     this.programDescription = this.programDescription.bind(this)
   }
 
+  // returns only H/M/R students
+  get students() {
+    return this.props.applicationData.students.items.filter(student => {
+      return student.isHomeless ||
+             student.isMigrant ||
+             student.isRunaway
+    })
+  }
+
   programDescription(slug) {
-    const studentCount = this.props.applicationData.students.length
+    const studentCount = this.students.length
 
     switch (slug) {
       case 'isFoster':
@@ -68,13 +77,14 @@ class IncomeElection extends Component {
 
   render() {
     const { applicationData } = this.props
-    const { allPeopleCollections, students } = applicationData
+    const { allPeopleCollections } = applicationData
+    const allStudents = applicationData.students
     const programSlugs = [
       'isHomeless',
       'isMigrant',
       'isRunaway'
     ].filter(slug => {
-        return students
+        return allStudents
           .map(student => student[slug])
           .reduce((a, b) => a || b, false)
     })
@@ -88,11 +98,11 @@ class IncomeElection extends Component {
               description="Lead paragraph detailing the programs that have been selected."
               defaultMessage="You have indicated that {names}"
               values={{
-                names: <InformalNameList people={students} />
+                names: <InformalNameList people={this.students} />
               }}
           />
           &nbsp;
-          <SerialList items={programSlugs} intersection={students.length !== 1} mapFunc={this.programDescription} />
+          <SerialList items={programSlugs} intersection={this.students.length !== 1} mapFunc={this.programDescription} />
           .
         </p>
 
