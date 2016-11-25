@@ -26,7 +26,7 @@ class Signature extends Component {
 
   get isValid() {
     const signature = this.props.signature
-    return !signature.hasSsn || signature.ssnLastFour.match(/^\d{4}$/)
+    return signature.noSsn || signature.ssnLastFour.match(/^\d{4}$/)
   }
 
   render() {
@@ -59,13 +59,13 @@ class Signature extends Component {
                       placeholder="xxxx"
                       className="usa-input-medium"
                       object={signature}
-                      value={signature.hasSsn && signature.ssnLastFour || ''}
-                      disabled={!signature.hasSsn}
+                      value={signature.noSsn ? '' : signature.ssnLastFour}
+                      disabled={signature.noSsn}
                       pattern="^\d{4}$"
                       onChange={this.handleSsnChange} />
 
           <Checkboxes legend="No <abbr title='Social Security number'>SSN</abbr>">
-            <Checkbox object={signature} name="hasSsn" invert>
+            <Checkbox object={signature} name="noSsn">
               <FormattedMessage
                 id="app.slides.signature.noSSN"
                 description="No SSN"

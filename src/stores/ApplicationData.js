@@ -42,7 +42,7 @@ export default class ApplicationData {
   }
 
   @observable signature = {
-    hasSsn: true,
+    noSsn: null,
     ssnLastFour: ''
   }
 
