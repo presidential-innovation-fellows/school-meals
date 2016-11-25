@@ -2,12 +2,12 @@ import React, { Component, PropTypes } from 'react'
 import Checkboxes from '../Checkboxes'
 import AssistanceProgram from './AssistanceProgram'
 import { observer } from 'mobx-react'
-import { AssistancePrograms as Store } from '../../../stores/ApplicationData'
+import { ApplicationData } from '../../../stores/ApplicationData'
 
 @observer
 class AssistanceProgramList extends Component {
   render() {
-    const { assistancePrograms } = this.props
+    const { assistancePrograms } = this.props.applicationData
 
     return(
       <Checkboxes legend="Assistance programs">
@@ -20,7 +20,7 @@ class AssistanceProgramList extends Component {
 }
 
 AssistanceProgramList.propTypes = {
-  assistancePrograms: PropTypes.instanceOf(Store).isRequired
+  aplicationData: PropTypes.instanceOf(ApplicationData).isRequired
 }
 
 export default AssistanceProgramList

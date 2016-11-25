@@ -3,7 +3,7 @@ import Slide from '../Slide'
 import AssistanceProgramList from './AssistanceProgramList'
 import { observer } from 'mobx-react'
 import { assistancePrograms as programNames, assistanceProgramsVar } from '../../../config'
-import { AssistancePrograms as Store } from '../../../stores/ApplicationData'
+import { ApplicationData } from '../../../stores/ApplicationData'
 import { Glyphicon, OverlayTrigger } from 'react-bootstrap'
 import { tooltiptext } from '../../Tooltiptext'
 import Tooltip from '../Tooltip'
@@ -17,7 +17,7 @@ class AssistancePrograms extends Component {
       students,
       assistancePrograms,
       allPeopleCollections
-    } = this.props
+    } = this.props.applicationData
 
     return(
       <Slide id="assistance-programs"
@@ -70,14 +70,14 @@ class AssistancePrograms extends Component {
         />
         </strong></p>
 
-        <AssistanceProgramList assistancePrograms={assistancePrograms} />
+        <AssistanceProgramList applicationData={applicationData} />
       </Slide>
     )
   }
 }
 
 AssistancePrograms.propTypes = {
-  assistancePrograms: PropTypes.instanceOf(Store).isRequired
+  aplicationData: PropTypes.instanceOf(ApplicationData).isRequired
 }
 
 export default AssistancePrograms

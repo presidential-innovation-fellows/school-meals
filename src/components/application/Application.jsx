@@ -33,9 +33,7 @@ class Application extends Component {
         <BeforeYouBegin />
         <Attestation attestation={attestation} attestor={adults.first} />
         <Students students={students} allPeopleCollections={allPeopleCollections} />
-        <AssistancePrograms assistancePrograms={assistancePrograms}
-                            students={students}
-                            allPeopleCollections={allPeopleCollections} />
+        <AssistancePrograms applicationData={applicationData} />
 
         {assistancePrograms.hasAny !== true &&
          <NoAssistancePrograms applicationData={this.props.applicationData} />
