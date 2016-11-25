@@ -15,12 +15,13 @@ class Checkbox extends Component {
   handleChange(event) {
     const handler = this.props.onChange || this.defaultOnChange
     handler(this.props.name,
-            this.props.invert ? !event.target.checked : !!event.target.checked)
+            this.props.invert ? !event.target.checked : !!event.target.checked,
+            this.props.object)
   }
 
   // side effect, but easier to handle once here than pass in every time
-  defaultOnChange(fieldName, value) {
-    this.props.object[fieldName] = value
+  defaultOnChange(fieldName, value, object) {
+    object[fieldName] = value
   }
 
   render() {
