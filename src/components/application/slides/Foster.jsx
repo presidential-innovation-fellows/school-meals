@@ -43,13 +43,11 @@ class Foster extends Component {
   render() {
     const { allPeopleCollections, students } = this.props
     const contact = `${organization.name} (${organization.contact.phone} / ${organization.contact.email} / ${organization.contact.address})`
+    const studentCount = students.length
     const props = {
       students: students.items,
       allPeopleCollections,
-      applicability: this.applicability
-    }
-    const studentCount = students.length
-    const program = {
+      applicability: this.applicability,
       attribute: 'isFoster',
       label: <FormattedMessage
                  id="app.slides.foster.label"
@@ -73,7 +71,7 @@ class Foster extends Component {
 
         </p>
 
-        <OtherProgramsProgram {...program} {...props} />
+        <OtherProgramsProgram {...props} />
       </Slide>
     )
   }
