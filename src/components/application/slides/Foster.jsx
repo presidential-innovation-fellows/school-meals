@@ -13,6 +13,21 @@ class Foster extends Component {
     isFoster: null
   }
 
+  constructor (props) {
+    super(props)
+    this.onChange = this.onChange.bind(this)
+  }
+
+  onChange(fieldName, value, student) {
+    student[fieldName] = value
+
+    if (value) {
+      student.isHomeless = null
+      student.isMigrant = null
+      student.isRunaway = null
+    }
+  }
+
   get isValid() {
     const students = this.props.students
 
@@ -49,6 +64,7 @@ class Foster extends Component {
       allPeopleCollections,
       applicability: this.applicability,
       attribute: 'isFoster',
+      onChange: this.onChange,
       label: <FormattedMessage
                  id="app.slides.foster.label"
                  description="Question asking if student in foster care."
