@@ -759,7 +759,7 @@
   "app.slides.beforeYouBegin.letter": "",
 
   // Only need one application for your household
-  // English: "We need only one application for all the children in your household that attend {organizationName}."
+  // English: "We need only one application for all the children in your household that attend school in {organizationName}."
   "app.slides.beforeYouBegin.oneApplication": "",
 
   // As in the qulifications for this program.
@@ -823,7 +823,7 @@
   "app.slides.beforeYouBegin.whenReportHouseholdIncome": "",
 
   // Item required for household income reporting.
-  // English: "if anyone in your house has a job, you may need to reference the earnings statements or pay stubs to report your gross income, which is different from the amount you actually receive in your paycheck."
+  // English: "if anyone in your household has a job, you may need to reference the earnings statements or pay stubs to report your gross income, which is different from the amount you actually receive in your paycheck."
   "app.slides.beforeYouBegin.whenReportHouseholdIncome1": "",
 
   // Item required for household income reporting.
@@ -1842,7 +1842,7 @@
   "help.close": "",
 
   // Footer text for the help area.
-  // English: "If you have any questions about the program or how to apply, contact {organizationName} ({organizaitonContactInfo})."
+  // English: "If you have any questions about the program or how to apply, contact {organizationName} ({organizationContactInfo})."
   "help.footer": "",
 
 
@@ -1872,7 +1872,7 @@
   "help.articles.helpText.childAppTitle": "",
 
   // Help text.
-  // English: "'No. Use one Free and Reduced Price School Meals Application for all students that attend {organizationName} in your household."
+  // English: "No. Use one Free and Reduced Price School Meal Application for all students that attend school in {organizationName} in your household."
   "help.articles.helpText.childAppBody": "",
 
   // Help text.
@@ -1916,7 +1916,7 @@
   "help.articles.helpText.wicBody": "",
 
   // Help text.
-  // English: "My child attends head start. Is he/she eligible for free school meals and do I need to fill out an application?"
+  // English: "My child attends Head Start. Is he/she eligible for free school meals and do I need to fill out an application?"
   "help.articles.helpText.headStartTitle": "",
 
   // Help text.
@@ -2795,7 +2795,7 @@
   "help.topic.WhatInformation.question": "",
 
   // Answer for the necessary information help topic.
-  // English: "If you have it handy, it will make the application process fast and easy."
+  // English: "If you have this information handy, it will make the application process fast and easy."
   "help.topic.WhatInformation.answer1": "",
 
   // Answer for the necessary information help topic.
@@ -2807,7 +2807,7 @@
   "help.topic.WhatInformation.answer3": "",
 
   // Answer for the necessary information help topic.
-  // English: "If anyone in your house has a job, you may need to reference the earnings statements or pay stubs to report your gross income, which is different than the amount in your paycheck."
+  // English: "If anyone in your household has a job, you may need to reference the earnings statements or pay stubs to report your gross income, which is different than the amount in your paycheck."
   "help.topic.WhatInformation.answer3a": "",
 
   // Answer for the necessary information help topic.
@@ -2858,5 +2858,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1480183989425."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1480195802088."
 }
