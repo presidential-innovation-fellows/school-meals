@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
 import InformalNameList from '../InformalNameList'
 import OtherProgramsProgram from './OtherProgramsProgram'
+import { allStudentsAreFoster } from '../../../helpers'
 import { observable } from 'mobx'
 import { observer } from 'mobx-react'
 import { organization } from '../../../config'
@@ -19,12 +20,30 @@ class Foster extends Component {
   }
 
   onChange(fieldName, value, student) {
+    const { students, adults, otherChildren, signature } = applicationData
+
     student[fieldName] = value
 
     if (value) {
       student.isHomeless = null
       student.isMigrant = null
       student.isRunaway = null
+    }
+
+    if (allStudentsAreFoster(students)) {
+      // clear adults other than attestor
+      adults.items.splice(1)
+
+      // clear other children
+      otherChildren.empty()
+
+      // clear attestor and student incomes
+      adults.clearAllIncomes()
+      students.clearAllIncomes()
+
+      // clear SSN
+      signature.noSsn = null
+      signature.ssnLastFour = ''
     }
   }
 
