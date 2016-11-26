@@ -12,20 +12,31 @@ class AssistanceProgramList extends Component {
   }
 
   onChange(fieldName, value, program) {
+    const { students, adults, otherChildren, signature } =
+      this.props.applicationData
+
     program[fieldName] = value
 
     if (value) {
       // clear FHMR status
-      // TODO
+      students.clearSpecialStatuses()
+
+      // clear income election
+      this.props.applicationData.electToProvideIncome = null
 
       // clear adults other than attestor
-      // TODO
+      adults.items.splice(1)
 
       // clear other children
-      // TODO
+      otherChildren.empty()
+
+      // clear attestor and student incomes
+      adults.clearAllIncomes()
+      students.clearAllIncomes()
 
       // clear SSN
-      // TODO
+      signature.noSsn = null
+      signature.ssnLastFour = ''
     }
   }
 
