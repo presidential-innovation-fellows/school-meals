@@ -9,6 +9,11 @@ import { FormattedMessage } from 'react-intl'
 
 @observer
 class IncomeSource extends Component {
+  constructor (props) {
+    super(props)
+    this.onChange = this.onChange.bind(this)
+  }
+
   get error() {
     const { name } = this.props
     const incomeSource = this.props.incomeSources[name]
@@ -46,6 +51,19 @@ class IncomeSource extends Component {
     }
   }
 
+  onChange(fieldName, value, incomeSource) {
+    console.debug('---', fieldName, value, incomeSource)
+    incomeSource[fieldName] = value
+
+    if (!value) {
+      incomeSource.amount = ''
+      incomeSource.frequency = ''
+      incomeSource.hourlyHours = ''
+      incomeSource.hourlyPeriod = ''
+      incomeSource.more = []
+    }
+  }
+
   render() {
     const { name, showHourly, showAnnual } = this.props
     const incomeSource = this.props.incomeSources[name]
@@ -60,7 +78,9 @@ class IncomeSource extends Component {
       <div>
         <Form>
           <label>{this.props.children}</label>
-          <BooleanRadio name="has" object={incomeSource} />
+          <BooleanRadio name="has"
+                        object={incomeSource}
+                        onChange={this.onChange} />
 
           {incomeSource.has &&
            <div className="income-source-details">

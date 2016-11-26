@@ -42,7 +42,7 @@ export default class ApplicationData {
   }
 
   @observable signature = {
-    hasSsn: true,
+    noSsn: null,
     ssnLastFour: ''
   }
 
@@ -380,6 +380,23 @@ class PersonCollection {
   @action empty() {
     this.items = []
   }
+
+  @action clearAllIncomes() {
+    for (let i = 0; i < this.items.length; i++) {
+      let person = this.items[i]
+
+      for (let typeKey in person.incomeTypes) {
+        let type = person.incomeTypes[typeKey]
+        let sources = type.sources
+
+        type.isApplicable = null
+
+        for (let sourceKey in sources) {
+          sources[sourceKey] = { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }
+        }
+      }
+    }
+  }
 }
 
 class AdultCollection extends PersonCollection {
@@ -551,5 +568,16 @@ class StudentCollection extends ChildCollection {
 
   get isValid() {
     return this.items.length >= 1 && super.isValid
+  }
+
+  @action clearSpecialStatuses() {
+    for (let i = 0; i < this.items.length; i++) {
+      let student = this.items[i]
+
+      student.isFoster = null
+      student.isHomeless = null
+      student.isMigrant = null
+      student.isRunaway = null
+    }
   }
 }

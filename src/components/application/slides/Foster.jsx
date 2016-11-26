@@ -2,6 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
 import InformalNameList from '../InformalNameList'
 import OtherProgramsProgram from './OtherProgramsProgram'
+import { allStudentsAreFoster } from '../../../helpers'
 import { observable } from 'mobx'
 import { observer } from 'mobx-react'
 import { organization } from '../../../config'
@@ -19,6 +20,9 @@ class Foster extends Component {
   }
 
   onChange(fieldName, value, student) {
+    const { students, adults, otherChildren, signature } =
+      this.props.applicationData
+
     student[fieldName] = value
 
     if (value) {
@@ -26,10 +30,26 @@ class Foster extends Component {
       student.isMigrant = null
       student.isRunaway = null
     }
+
+    if (allStudentsAreFoster(students)) {
+      // clear adults other than attestor
+      adults.items.splice(1)
+
+      // clear other children
+      otherChildren.empty()
+
+      // clear attestor and student incomes
+      adults.clearAllIncomes()
+      students.clearAllIncomes()
+
+      // clear SSN
+      signature.noSsn = null
+      signature.ssnLastFour = ''
+    }
   }
 
   get isValid() {
-    const students = this.props.students
+    const { students } = this.props.applicationData
 
     if (students.length === 1) {
       for (let key in this.applicability) {
@@ -56,7 +76,7 @@ class Foster extends Component {
   }
 
   render() {
-    const { allPeopleCollections, students } = this.props
+    const { allPeopleCollections, students } = this.props.applicationData
     const contact = `${organization.name} (${organization.contact.phone} / ${organization.contact.email} / ${organization.contact.address})`
     const studentCount = students.length
     const props = {
@@ -94,8 +114,7 @@ class Foster extends Component {
 }
 
 Foster.propTypes = {
-  allPeopleCollections: PropTypes.array.isRequired,
-  students: PropTypes.object.isRequired
+  applicationData: PropTypes.object.isRequired
 }
 
 export default Foster
