@@ -17,7 +17,6 @@ class SummaryPerson extends Component {
       <li>
         {fullName(person)}
         {editLinkId && <EditLink id={editLinkId} />}
-        {showIncomes &&
         <ul>
           {person.isFoster &&
            <li>
@@ -71,7 +70,6 @@ class SummaryPerson extends Component {
            )}
 
         </ul>
-        }
       </li>
     )
   }

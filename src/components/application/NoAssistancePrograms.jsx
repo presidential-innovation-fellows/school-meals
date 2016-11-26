@@ -21,9 +21,7 @@ class NoAssistancePrograms extends Component {
 
     return (
       <div>
-        <Foster students={students}
-                allPeopleCollections={allPeopleCollections} />
-
+        <Foster applicationData={applicationData} />
 
         {!!this.studentsExceptFoster.length &&
          <OtherPrograms students={this.studentsExceptFoster}
