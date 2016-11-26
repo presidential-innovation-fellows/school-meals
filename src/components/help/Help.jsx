@@ -76,10 +76,10 @@ class Help extends Component {
                 <FormattedMessage
                     id="help.footer"
                     description="Footer text for the help area."
-                    defaultMessage="If you have any questions about the program or how to apply, contact {organizationName} ({organizaitonContactInfo})."
+                    defaultMessage="If you have any questions about the program or how to apply, contact {organizationName} ({organizationContactInfo})."
                     values={{
                       organizationName: organization.name,
-                      organizaitonContactInfo: `${organization.contact.phone} / ${organization.contact.email} / ${organization.contact.address}`
+                      organizationContactInfo: `${organization.contact.phone} / ${organization.contact.email} / ${organization.contact.address}`
                     }}
                 />
               </p>

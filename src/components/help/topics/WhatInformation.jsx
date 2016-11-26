@@ -18,7 +18,7 @@ export default class WhatInformation extends Component {
           <FormattedMessage
             id="help.topic.WhatInformation.answer1"
             description="Answer for the necessary information help topic."
-            defaultMessage="If you have it handy, it will make the application process fast and easy."
+            defaultMessage="If you have this information handy, it will make the application process fast and easy."
           />
         </p>
           <ul>
@@ -43,7 +43,7 @@ export default class WhatInformation extends Component {
                   <FormattedMessage
                     id="help.topic.WhatInformation.answer3a"
                     description="Answer for the necessary information help topic."
-                    defaultMessage="If anyone in your house has a job, you may need to reference the earnings statements or pay stubs to report your gross income, which is different than the amount in your paycheck."
+                    defaultMessage="If anyone in your household has a job, you may need to reference the earnings statements or pay stubs to report your gross income, which is different than the amount in your paycheck."
                   />
                 </li>
                 <li>

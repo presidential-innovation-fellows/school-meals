@@ -65,7 +65,7 @@ class BeforeYouBegin extends React.Component {
           <FormattedMessage
               id="app.slides.beforeYouBegin.oneApplication"
               description="Only need one application for your household"
-              defaultMessage="We need only one application for all the children in your household that attend {organizationName}."
+              defaultMessage="We need only one application for all the children in your household that attend school in {organizationName}."
               values={{
                 organizationName: organization.name,
               }}
@@ -209,7 +209,7 @@ class BeforeYouBegin extends React.Component {
                    <FormattedMessage
                        id="app.slides.beforeYouBegin.whenReportHouseholdIncome1"
                        description="Item required for household income reporting."
-                       defaultMessage="if anyone in your house has a job, you may need to reference the earnings statements or pay stubs to report your gross income, which is different from the amount you actually receive in your paycheck."
+                       defaultMessage="if anyone in your household has a job, you may need to reference the earnings statements or pay stubs to report your gross income, which is different from the amount you actually receive in your paycheck."
                    />
                  </li>
                  <li>
