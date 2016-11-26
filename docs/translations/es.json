@@ -289,7 +289,7 @@
   "app.slides.incomeType.missingIncome": "En una página anterior, indicó que {adult} recibe ingresos de una de las fuentes anteriores. Por favor ingrese este ingreso arriba o corrija su respuesta anterior.",
   "app.slides.incomeType.changeAnswer": "Cambiar respuesta anterior",
 
-  "app.slides.IncomeTypeDefaultText.intro": "¿{person} cuenta con ingresos de las siguientes fuentes {militaryCaveat}?",
+  "app.slides.IncomeTypeDefaultText.intro": "¿{person} cuenta con ingresos de las siguientes fuentes{militaryCaveat}?",
   "app.slides.IncomeTypeDefaultText.notIncludingEarnings": ", sin incluir las ganancias de los militares que ya se informó",
   "app.slides.IncomeTypeDefaultText.note": "NOTA: recuerde declarar el ingreso {tooltip2} {tooltip}",
   "app.slides.IncomeTypeDefaultText.currentAdult": "actual",

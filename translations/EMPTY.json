@@ -1197,7 +1197,7 @@
    ***/
 
   // Introductory paragraph.
-  // English: "Does {person} have income from the following sources {militaryCaveat}?"
+  // English: "Does {person} have income from the following sources{militaryCaveat}?"
   "app.slides.IncomeTypeDefaultText.intro": "",
 
   // not including earnings
@@ -2858,5 +2858,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1480183849845."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1480183989425."
 }
