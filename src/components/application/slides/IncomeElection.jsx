@@ -15,6 +15,29 @@ class IncomeElection extends Component {
   constructor (props, context) {
     super(props, context)
     this.programDescription = this.programDescription.bind(this)
+    this.onChange = this.onChange.bind(this)
+  }
+
+  onChange(fieldName, value, applicationData) {
+    const { students, adults, otherChildren, signature } = applicationData
+
+    applicationData[fieldName] = value
+
+    if (value === false) {
+      // clear adults other than attestor
+      adults.items.splice(1)
+
+      // clear other children
+      otherChildren.empty()
+
+      // clear attestor and student incomes
+      adults.clearAllIncomes()
+      students.clearAllIncomes()
+
+      // clear SSN
+      signature.noSsn = null
+      signature.ssnLastFour = ''
+    }
   }
 
   // returns only H/M/R students
@@ -125,6 +148,7 @@ class IncomeElection extends Component {
         <BooleanRadio object={applicationData}
                       name="electToProvideIncome"
                       legend="Application options"
+                      onChange={this.onChange}
                       trueLabel={
                         <FormattedMessage
                             id="app.slides.incomeElection.electToProvideIncome.trueLabel"
