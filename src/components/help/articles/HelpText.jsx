@@ -31,7 +31,7 @@ export const help = {
   <FormattedMessage
     id="help.articles.helpText.childAppBody"
     description="Help text."
-    defaultMessage="'No. Use one Free and Reduced Price School Meals Application for all students that attend {organizationName} in your household."
+    defaultMessage="No. Use one Free and Reduced Price School Meal Application for all students that attend school in {organizationName} in your household."
     values={{ organizationName: organization.name }}
     />,
 //F4
@@ -120,7 +120,7 @@ export const help = {
   <FormattedMessage
     id="help.articles.helpText.headStartTitle"
     description="Help text."
-    defaultMessage="My child attends head start. Is he/she eligible for free school meals and do I need to fill out an application?"
+    defaultMessage="My child attends Head Start. Is he/she eligible for free school meals and do I need to fill out an application?"
   />,
   headStartBody:
   <FormattedMessage
