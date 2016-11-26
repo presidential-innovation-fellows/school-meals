@@ -75,15 +75,15 @@
   "tooltip.usStatus": "",
 
   // Tooltip text explaining SNAP.
-  // English: "The Supplemental Nutrition Assistance Program (SNAP) is a program that offers nutrition assistance to millions of eligible, low-income individuals and families."
+  // English: "{snapFullName} ({snapAccronym}) is a program that offers nutrition assistance to millions of eligible, low-income individuals and families."
   "tooltip.snap": "",
 
   // Tooltip text explaining TANF.
-  // English: "The Temporary Assistance for Needy Families (TANF) program is designed to help needy familities achieve self-sufficiency by providing cash assistance, as well as other supports and services."
+  // English: "{tanfFullName} ({tanfAccronym}) program is designed to help needy familities achieve self-sufficiency by providing cash assistance, as well as other supports and services."
   "tooltip.tanf": "",
 
   // Tooltip text explaining FDPIR.
-  // English: "The Food Distribution Program on Indian Reservations (FDPIR) is a Federal program that provides USDA foods to low-icome households, including the elderly, living on Indian reservations, and to Native American families residing in designated areas near reservations and in the State of Oklahoma."
+  // English: "{fdpirFullName} ({fdpirAccronym}) is a Federal program that provides USDA foods to low-icome households, including the elderly, living on Indian reservations, and to Native American families residing in designated areas near reservations and in the State of Oklahoma."
   "tooltip.fdpir": "",
 
   // Tooltip text explaining the household.
@@ -2858,5 +2858,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1479956851122."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1480183849845."
 }
