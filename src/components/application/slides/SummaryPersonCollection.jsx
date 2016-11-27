@@ -9,7 +9,7 @@ class SummaryPersonCollection extends Component {
     const { children, collection, id, showIncomes } = this.props
 
     return (
-      collection.length && (
+      (collection.length && (
         <div>
           <SummaryLabel id={id}>{children}</SummaryLabel>
           <ul>
@@ -22,7 +22,7 @@ class SummaryPersonCollection extends Component {
             }
           </ul>
         </div>
-      ) || null
+      )) || null
     )
   }
 }

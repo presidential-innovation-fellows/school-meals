@@ -49,11 +49,13 @@ class InputField extends Component {
 
   render() {
     const input = this.props
-    const additional = input.additional || input.required && <FormattedMessage
-      id="app.inputField.required"
-      description="Text that indicates a field is required."
-      defaultMessage="required"
-    />
+    const additional = input.additional || (
+      input.required && <FormattedMessage
+                            id="app.inputField.required"
+                            description="Text that indicates a field is required."
+                            defaultMessage="required"
+                        />
+    )
     const value = input.object[input.name]
 
     let className = input.className
