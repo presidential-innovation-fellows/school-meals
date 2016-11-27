@@ -15,7 +15,7 @@ class ChildIncomeSlide extends Component {
   @computed get allSourcesFalse() {
     const sources = this.props.person.incomeTypes.child.sources
 
-    for (let key in sources) {
+    for (const key in sources) {
       if (sources[key].has !== false) {
         return false
       }

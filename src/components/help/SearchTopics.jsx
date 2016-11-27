@@ -23,9 +23,9 @@ class SearchTopics extends Component {
   }
 
   setSearchVal(searchVal) {
-    let $container = jQuery('.searchable-help-topics')
+    const $container = jQuery('.searchable-help-topics')
 
-    this.setState({ searchVal: searchVal })
+    this.setState({ searchVal })
 
     if (this.props.onChange) {
       this.props.onChange(searchVal)

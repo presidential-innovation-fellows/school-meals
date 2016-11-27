@@ -18,7 +18,7 @@ class AdultIncomeOverview extends Component {
       return false
     }
 
-    for (let incomeType in incomeTypes) {
+    for (const incomeType in incomeTypes) {
       if (incomeTypes[incomeType].isApplicable == null) {
         return false
       }

@@ -13,8 +13,8 @@ class ThankYou extends Component {
   }
 
   downloadData() {
-    let { applicationData } = this.props
-    let stringData = JSON.stringify(applicationData.cleaned, null, 2)
+    const { applicationData } = this.props
+    const stringData = JSON.stringify(applicationData.cleaned, null, 2)
 
     download(stringData, 'nslp-data.json', 'text/plain');
   }

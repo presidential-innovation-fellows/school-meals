@@ -15,14 +15,14 @@ class HouseholdIncome extends Component {
   }
 
   @computed get allChildren() {
-    let result = this.allChildCollections
+    const result = this.allChildCollections
                      .map(collection => collection.items.slice())
                      .reduce((a, b) => a.concat(b), [])
     return result
   }
 
   @computed get anyChildIncome() {
-    let result = this.allChildCollections
+    const result = this.allChildCollections
                      .map(collection => collection.hasAnyIncome)
                      .reduce((a, b) => a || b, false)
     return result

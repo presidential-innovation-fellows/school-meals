@@ -14,7 +14,7 @@ class IncomeType extends Component {
     const { person, name } = this.props
     const sources = person.incomeTypes[name].sources
 
-    for (let key in sources) {
+    for (const key in sources) {
       if (sources[key].has !== false) {
         return false
       }

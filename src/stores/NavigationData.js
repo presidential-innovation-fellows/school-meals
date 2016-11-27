@@ -30,8 +30,8 @@ export default class NavigationData {
     // Workaround for event.newURL and event.oldURL:
     // https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onhashchange
     if (!window.HashChangeEvent) {(function() {
-      var lastURL=document.URL;
-      window.addEventListener('hashchange', function(event){
+      let lastURL=document.URL;
+      window.addEventListener('hashchange', (event) => {
         Object.defineProperty(event, 'oldURL', {
           enumerable: true,
           configurable: true,
@@ -67,7 +67,7 @@ export default class NavigationData {
     for (let i = 0; i < slides.length; i++) {
       // the current slide
       for (let j = 0; j < slides[i].classList.length; j++) {
-        let className = slides[i].classList[j]
+        const className = slides[i].classList[j]
 
         if (className === this.CURRENT_CLASS_NAME) {
           if (i === slides.length - 1) {
@@ -90,7 +90,7 @@ export default class NavigationData {
     for (let i = 0; i < slides.length; i++) {
       // the current slide
       for (let j = 0; j < slides[i].classList.length; j++) {
-        let className = slides[i].classList[j]
+        const className = slides[i].classList[j]
 
         if (className === this.CURRENT_CLASS_NAME) {
           if (i === 0) {
@@ -111,7 +111,7 @@ export default class NavigationData {
     const slides = this.slides
 
     for (let i = 0; i < slides.length; i++) {
-      let slide = slides[i]
+      const slide = slides[i]
 
       if (slide.hasAttribute('data-incomplete')) {
         return slide
@@ -147,10 +147,10 @@ export default class NavigationData {
     const re = new RegExp(this.CURRENT_CLASS_NAME, 'g') // imperfect
 
     for (let i = 0; i < slides.length; i++) {
-      let slide = slides[i]
+      const slide = slides[i]
 
       if (slide.id === id || id === 'debug') {
-        slide.className += ' ' + this.CURRENT_CLASS_NAME
+        slide.className += ` ${this.CURRENT_CLASS_NAME}`
         this.reflectProgress(slide)
       } else {
         slide.className = slide.className.replace(re, '')
@@ -177,7 +177,7 @@ export default class NavigationData {
   }
 
   handlebeforeunload(event) {
-    let dialogText = 'If you would like to go back to the previous page in the application, click "Stay," then click the "Back" button at the bottom of the screen.'
+    const dialogText = 'If you would like to go back to the previous page in the application, click "Stay," then click the "Back" button at the bottom of the screen.'
     event.returnValue = dialogText
     return dialogText
   }
@@ -190,11 +190,11 @@ export default class NavigationData {
   }
 
   @action back() {
-    window.location.replace('#/' + this.prevSlide.id)
+    window.location.replace(`#/${this.prevSlide.id}`)
   }
 
   @action next() {
-    window.location.replace('#/' + this.nextSlide.id)
+    window.location.replace(`#/${this.nextSlide.id}`)
   }
 
   @action jumpTo(id) {

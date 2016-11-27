@@ -12,11 +12,11 @@ window.localeData = localeData
 @observer
 class AppWrapper extends Component {
   componentDidMount() {
-    jQuery('#root').on('click', '.slide-content > footer', function(e) {
+    jQuery('#root').on('click', '.slide-content > footer', (e) => {
       // false if an enabled button is clicked, else true
       if (e.currentTarget === e.target) {
-        let $slide = jQuery(e.target).closest('.slide')
-        let $inputs = $slide.find('input:required').filter(function() {
+        const $slide = jQuery(e.target).closest('.slide')
+        const $inputs = $slide.find('input:required').filter(function() {
           return !jQuery(this).val()
         })
 

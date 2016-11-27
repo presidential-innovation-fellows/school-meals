@@ -28,7 +28,7 @@ class IncomeTypeFormGroup extends Component {
 
     // ensure that not all sources of this income type are false
     const sources = incomeType.sources
-    for (let key in sources) {
+    for (const key in sources) {
       if (sources[key].has !== false) {
         return false
       }
@@ -42,7 +42,7 @@ class IncomeTypeFormGroup extends Component {
 
     if (!value && fieldName !== 'isDeployed') {
       // clear each income source under this income type
-      for (let sourceKey in incomeType.sources) {
+      for (const sourceKey in incomeType.sources) {
         incomeType.sources[sourceKey] = {
           has: null,
           amount: '',

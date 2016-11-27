@@ -9,14 +9,14 @@ class Button extends Component {
     let { className, onClick } = this.props
 
     if (typeof className === 'string') {
-      let key = className
+      const key = className
       className = {}
       className[key] = true
     }
 
     if (slideId) {
       onClick = function() {
-        window.location.replace('#/' + slideId)
+        window.location.replace(`#/${slideId}`)
       }
     }
 

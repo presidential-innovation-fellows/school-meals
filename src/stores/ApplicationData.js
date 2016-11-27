@@ -65,7 +65,7 @@ export default class ApplicationData {
 
   @computed get totalAnnualHouseholdIncome() {
     function toAnnual(income) {
-      let amount = parseFloat(income.amount, 10)
+      const amount = parseFloat(income.amount, 10)
 
       switch (income.frequency) {
         case 'annually':
@@ -79,7 +79,7 @@ export default class ApplicationData {
         case 'weekly':
           return amount * 52.0
         case 'hourly': {
-          let hours = parseFloat(income.hourlyHours, 10)
+          const hours = parseFloat(income.hourlyHours, 10)
 
           switch (income.hourlyPeriod) {
             case 'day':
@@ -235,9 +235,9 @@ class PersonCollection {
   }
 
   get newItem() {
-    let item = this.propertiesOtherThanFields
+    const item = this.propertiesOtherThanFields
 
-    for (let field of this.fields) {
+    for (const field of this.fields) {
       item[field.name] = ''
     }
 
@@ -254,9 +254,9 @@ class PersonCollection {
 
   @computed get hasAnyIncome() {
     for (let i = 0; i < this.items.length; i++) {
-      let person = this.items[i]
+      const person = this.items[i]
 
-      for (let type in person.incomeTypes) {
+      for (const type in person.incomeTypes) {
         if (person.incomeTypes[type].isApplicable) {
           return true
         }
@@ -278,7 +278,7 @@ class PersonCollection {
     const requiredFieldNames =
       this.fields.filter(f => f.required).map(f => f.name)
 
-    return this.items.map(function(item) {
+    return this.items.map((item) => {
       return requiredFieldNames.map(fieldName => !!item[fieldName].length)
     }).reduce((a, b) => a.concat(b), []).reduce((a, b) => a && b, true)
   }
@@ -297,15 +297,15 @@ class PersonCollection {
 
   @action clearAllIncomes() {
     for (let i = 0; i < this.items.length; i++) {
-      let person = this.items[i]
+      const person = this.items[i]
 
-      for (let typeKey in person.incomeTypes) {
-        let type = person.incomeTypes[typeKey]
-        let sources = type.sources
+      for (const typeKey in person.incomeTypes) {
+        const type = person.incomeTypes[typeKey]
+        const sources = type.sources
 
         type.isApplicable = null
 
-        for (let sourceKey in sources) {
+        for (const sourceKey in sources) {
           sources[sourceKey] = { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }
         }
       }
@@ -486,7 +486,7 @@ class StudentCollection extends ChildCollection {
 
   @action clearSpecialStatuses() {
     for (let i = 0; i < this.items.length; i++) {
-      let student = this.items[i]
+      const student = this.items[i]
 
       student.isFoster = null
       student.isHomeless = null

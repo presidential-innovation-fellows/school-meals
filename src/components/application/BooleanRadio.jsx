@@ -7,8 +7,8 @@ import { FormattedMessage } from 'react-intl'
 @observer
 class BooleanRadio extends Component {
   name = shortid.generate()
-  trueId = this.name + '-true'
-  falseId = this.name + '-false'
+  trueId = `${this.name}-true`
+  falseId = `${this.name}-false`
 
   constructor (props) {
     super(props)

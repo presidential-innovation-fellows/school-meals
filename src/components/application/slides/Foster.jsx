@@ -51,13 +51,13 @@ class Foster extends Component {
     const { students } = this.props.applicationData
 
     if (students.length === 1) {
-      for (let key in this.applicability) {
+      for (const key in this.applicability) {
         if (students.first[key] == null) {
           return false
         }
       }
     } else {
-      for (let key in this.applicability) {
+      for (const key in this.applicability) {
         if (this.applicability[key] === null) {
           return false
         } else if (this.applicability[key] === true) {

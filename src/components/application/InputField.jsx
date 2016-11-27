@@ -58,7 +58,7 @@ class InputField extends Component {
 
     let className = input.className
     if (typeof className === 'string') {
-      let key = className
+      const key = className
       className = {}
       className[key] = true
     }

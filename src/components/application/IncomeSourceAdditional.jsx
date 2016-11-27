@@ -15,7 +15,7 @@ class AdditionalIncome extends Component {
 
   // Handle the event when user clicks the Add Income Source Button
   onAddIncomeClick(){
-    let incomeSource = this.props.incomeSource
+    const incomeSource = this.props.incomeSource
 
     if (typeof(incomeSource.more) !== 'undefined') {
       this.context.applicationData.addIncomeSource(incomeSource)
@@ -24,8 +24,8 @@ class AdditionalIncome extends Component {
 
   // Handle the event when user clicks the Delete Income Source Button
   onDeleteIncomeClick(event){
-    let incomeSource = this.props.incomeSource
-    let i = event.target.id
+    const incomeSource = this.props.incomeSource
+    const i = event.target.id
 
     this.context.applicationData.removeIncomeSource(incomeSource, i)
   }
@@ -34,8 +34,8 @@ class AdditionalIncome extends Component {
     const { showHourly, showAnnual } = this.props
     const incomeSource = this.props.incomeSource
     const incomeSourceProps = {
-      showHourly: showHourly,
-      showAnnual: showAnnual,
+      showHourly,
+      showAnnual,
       key: shortid.generate()
     }
     const addButtonProps = {
@@ -61,7 +61,7 @@ class AdditionalIncome extends Component {
           <div>
 
             {
-              incomeSource.more.map( function(source, i) {
+              incomeSource.more.map( (source, i) => {
 
                 return (
                   <div key={shortid.generate()}>
