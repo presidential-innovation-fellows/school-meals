@@ -22,6 +22,10 @@ export default class NavigationData {
   @observable stepsCompleted = null
   @observable currentSlideIndex = 0
 
+  get isOnFinalSlide() {
+    return this.currentSlideIndex === this.slides.length - 1
+  }
+
   constructor() {
     this.CURRENT_CLASS_NAME = 'current'
     this.history = []

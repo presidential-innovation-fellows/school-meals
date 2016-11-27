@@ -1,4 +1,4 @@
-import classnames from 'classnames';
+import classnames from 'classnames'
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
 import { IntlProvider } from 'react-intl'
@@ -105,6 +105,6 @@ App.childContextTypes = {
     back: PropTypes.func.isRequired,
     next: PropTypes.func.isRequired
   }).isRequired
-};
+}
 
 export default App
