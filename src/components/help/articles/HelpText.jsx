@@ -360,7 +360,7 @@ export const help = {
   <FormattedMessage
     id="help.articles.helpText.selfEmployedBody"
     description="Help text."
-    defaultMessage="If you are self-employed, report income from work as a net amount. This is calculated by subtracting the total operating expenses of your business from its gross receipts or revenue. For more information see the definition for ‘Net income from self-employment"
+    defaultMessage="If you are self-employed, report income from work as a net amount. This is calculated by subtracting the total operating expenses of your business from its gross receipts or revenue. For more information see the definition for ‘Net income from self-employment’."
   />,
 //F35
   wagesSelfemploymentTitle:
