@@ -3,7 +3,7 @@ import { observer } from 'mobx-react'
 import BooleanRadio from './BooleanRadio'
 import Form from './Form'
 import IncomeSourceSingle from './IncomeSourceSingle'
-import AdditionalIncome from './IncomeSourceAdditional'
+import IncomeSourceAdditional from './IncomeSourceAdditional'
 
 @observer
 class IncomeSource extends Component {
@@ -43,7 +43,7 @@ class IncomeSource extends Component {
 
             <IncomeSourceSingle incomeSource={incomeSource} showHourly={showHourly} showAnnual={showAnnual} />
 
-            <AdditionalIncome incomeSource={incomeSource} showHourly={showHourly} showAnnual={showAnnual} />
+            <IncomeSourceAdditional incomeSource={incomeSource} showHourly={showHourly} showAnnual={showAnnual} />
 
           </div>
           }

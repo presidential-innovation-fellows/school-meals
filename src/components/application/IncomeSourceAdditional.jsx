@@ -5,7 +5,7 @@ import IncomeSourceSingle from './IncomeSourceSingle'
 import shortid from 'shortid'
 
 @observer
-class AdditionalIncome extends Component {
+class IncomeSourceAdditional extends Component {
   constructor(props, context) {
     super(props, context)
 
@@ -87,8 +87,8 @@ class AdditionalIncome extends Component {
   }
 }
 
-AdditionalIncome.contextTypes = {
+IncomeSourceAdditional.contextTypes = {
   applicationData: PropTypes.object.isRequired
 }
 
-export default AdditionalIncome
+export default IncomeSourceAdditional
