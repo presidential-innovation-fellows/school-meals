@@ -1,6 +1,6 @@
 import React from 'react'
 import { FormattedMessage } from 'react-intl'
-import { organization, assistanceProgramsVar } from '../config'
+import { assistanceProgramsVar, organization } from '../config'
 
 export const tooltiptext = {
   totalHouseholdIncome: <FormattedMessage

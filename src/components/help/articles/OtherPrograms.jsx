@@ -6,7 +6,7 @@ import Topic from '../Topic'
 import QualifyMigrant from '../topics/QualifyMigrant'
 import QualifyHomeless from '../topics/QualifyHomeless'
 import Household from '../topics/Household'
-import { help, define } from './HelpText'
+import { define, help } from './HelpText'
 
 export default class OtherPrograms extends Component {
 	render() {

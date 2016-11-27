@@ -3,7 +3,7 @@ import EditLink from '../EditLink'
 import HourlyPeriodLabel from '../HourlyPeriodLabel'
 import IncomeAmount from '../IncomeAmount'
 import { observer } from 'mobx-react'
-import { defineMessages, FormattedMessage } from 'react-intl'
+import { FormattedMessage, defineMessages } from 'react-intl'
 
 @observer
 class SummaryPersonIncome extends Component {

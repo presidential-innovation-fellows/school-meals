@@ -1,6 +1,6 @@
 import React from 'react'
 import { schoolYear } from '../../../helpers'
-import { organization, assistanceProgramsVar, hmrPrograms } from '../../../config'
+import { assistanceProgramsVar, hmrPrograms, organization } from '../../../config'
 import { FormattedMessage } from 'react-intl'
 
 export const help = {

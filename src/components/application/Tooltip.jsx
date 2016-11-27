@@ -1,7 +1,7 @@
 import shortid from 'shortid'
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
-import { Glyphicon, OverlayTrigger, Tooltip as BootstrapTooltip } from 'react-bootstrap'
+import { Tooltip as BootstrapTooltip, Glyphicon, OverlayTrigger } from 'react-bootstrap'
 
 @observer
 class Tooltip extends Component {

@@ -2,7 +2,7 @@
 import Slide from '../Slide'
 import SerialList from '../SerialList'
 import SchoolYear from '../SchoolYear'
-import { assistancePrograms, organization, assistanceProgramsVar } from '../../../config'
+import { assistancePrograms, assistanceProgramsVar, organization } from '../../../config'
 import { observable } from 'mobx'
 import { observer } from 'mobx-react'
 import { Glyphicon } from 'react-bootstrap'

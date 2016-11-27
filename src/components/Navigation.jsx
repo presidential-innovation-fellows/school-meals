@@ -1,6 +1,6 @@
 ﻿import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
-import { Glyphicon, Navbar, Nav, NavItem } from 'react-bootstrap'
+import { Glyphicon, Nav, NavItem, Navbar } from 'react-bootstrap'
 import { locales, organization } from '../config'
 import { FormattedMessage } from 'react-intl'
 import LocalePicker from './LocalePicker'
