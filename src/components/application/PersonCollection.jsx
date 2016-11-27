@@ -8,15 +8,15 @@ import { FormattedMessage } from 'react-intl'
 class PersonCollection extends Component {
   constructor(props) {
     super(props);
-    this.onAdd = this.onAdd.bind(this);
-    this.onRemove = this.onRemove.bind(this);
+    this.handleAdd = this.handleAdd.bind(this);
+    this.handleRemove = this.handleRemove.bind(this);
   }
 
-  onAdd() {
+  handleAdd() {
     this.props.collection.add()
   }
 
-  onRemove(person) {
+  handleRemove(person) {
     this.props.collection.remove(person)
   }
 
@@ -31,17 +31,19 @@ class PersonCollection extends Component {
       <div>
         <div>
           {collection.items.filter(filter).map(person =>
-            <PersonForm person={person}
-                        fields={collection.fields}
-                        label={label}
-                        key={person.id}
-                        onRemove={this.onRemove}
+            <PersonForm
+                person={person}
+                fields={collection.fields}
+                label={label}
+                key={person.id}
+                onRemove={this.handleRemove}
             />
           )}
         </div>
 
-        <Button onClick={this.onAdd}
-                className="usa-button-primary-alt"
+        <Button
+            onClick={this.handleAdd}
+            className="usa-button-primary-alt"
         >
           <FormattedMessage
               id="app.personCollection.addButton"

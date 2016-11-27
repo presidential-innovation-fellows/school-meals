@@ -9,10 +9,10 @@ import AdditionalIncome from './IncomeSourceAdditional'
 class IncomeSource extends Component {
   constructor(props) {
     super(props)
-    this.onChange = this.onChange.bind(this)
+    this.handleChange = this.handleChange.bind(this)
   }
 
-  onChange(fieldName, value, incomeSource) {
+  handleChange(fieldName, value, incomeSource) {
     incomeSource[fieldName] = value
 
     if (!value) {
@@ -32,19 +32,20 @@ class IncomeSource extends Component {
       <div>
         <Form>
           <label>{this.props.children}</label>
-          <BooleanRadio name="has"
-                        object={incomeSource}
-                        onChange={this.onChange}
+          <BooleanRadio
+              name="has"
+              object={incomeSource}
+              onChange={this.handleChange}
           />
 
           {incomeSource.has &&
-           <div className="income-source-details">
+          <div className="income-source-details">
 
-              <IncomeSourceSingle incomeSource={incomeSource} showHourly={showHourly} showAnnual={showAnnual}/>
+            <IncomeSourceSingle incomeSource={incomeSource} showHourly={showHourly} showAnnual={showAnnual}/>
 
-              <AdditionalIncome incomeSource={incomeSource} showHourly={showHourly} showAnnual={showAnnual}/>
+            <AdditionalIncome incomeSource={incomeSource} showHourly={showHourly} showAnnual={showAnnual}/>
 
-           </div>
+          </div>
           }
         </Form>
       </div>

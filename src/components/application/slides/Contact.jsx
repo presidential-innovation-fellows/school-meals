@@ -11,10 +11,10 @@ import { FormattedMessage } from 'react-intl'
 class Contact extends Component {
   constructor(props) {
     super(props)
-    this.onUsStateChange = this.onUsStateChange.bind(this)
+    this.handleUsStateChange = this.handleUsStateChange.bind(this)
   }
 
-  onUsStateChange(event) {
+  handleUsStateChange(event) {
     this.props.contact.state = event.target.value
   }
 
@@ -31,11 +31,11 @@ class Contact extends Component {
     return (
       <Slide header={headerText} id="contact" beginsSection>
         <p className="usa-font-lead">
-        <FormattedMessage
+          <FormattedMessage
               id="app.slides.contact.intro"
               description="Introductory paragraph."
               defaultMessage="Please enter your contact information so that we can reach you in case there are any issues with your application. This information is optional, but we strongly encourage you to provide it."
-        />
+          />
         </p>
 
         <Form large>
@@ -110,8 +110,9 @@ class Contact extends Component {
                       defaultMessage="State"
                   />
                 </label>
-                <Select id="state" name="state" value={contact.state}
-                        onChange={this.onUsStateChange}
+                <Select
+                    id="state" name="state" value={contact.state}
+                    onChange={this.handleUsStateChange}
                 >
                   <option value="" />
                   <option value="AL">Alabama</option>

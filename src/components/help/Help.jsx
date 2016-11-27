@@ -22,14 +22,14 @@ class Help extends Component {
     switch (e.target.classList[0]) {
       case 'cd-panel':
       case 'cd-panel-close':
-        this.hideHelp()
+        this.handleHideHelp()
         break
       default:
         break
     }
   }
 
-  hideHelp() {
+  handleHideHelp() {
     // Wrap in conditional to mitigate strange bug.
     if (this) {
       this.props.helpData.isVisible = false
@@ -58,7 +58,7 @@ class Help extends Component {
                 defaultMessage="Help"
             />
           </h1>
-          <a className="cd-panel-close" onClick={this.hideHelp}>
+          <a className="cd-panel-close" onClick={this.handleHideHelp}>
             <FormattedMessage
                 id="help.close"
                 description="Text for the link to close the help area."

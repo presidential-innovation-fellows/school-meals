@@ -21,61 +21,61 @@ class UnemploymentIncome extends Component {
       <IncomeType {...incomeTypeProps}>
 
         <IncomeSource incomeSources={incomeSources} name="unemployment">
-           <Tooltip text={tooltiptext.unemployment}>
-              <FormattedMessage
-                  id="app.slides.unemploymentIncome.unemployment"
-                  description="Unemployment benefits"
-                  defaultMessage="Unemployment benefits"
-              />
-           </Tooltip>
+          <Tooltip text={tooltiptext.unemployment}>
+            <FormattedMessage
+                id="app.slides.unemploymentIncome.unemployment"
+                description="Unemployment benefits"
+                defaultMessage="Unemployment benefits"
+            />
+          </Tooltip>
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="workersComp">
           <Tooltip text={tooltiptext.workersComp}>
-              <FormattedMessage
-                  id="app.slides.unemploymentIncome.workersComp"
-                  description="Worker’s compensation"
-                  defaultMessage="Worker’s compensation"
-              />
-           </Tooltip>
+            <FormattedMessage
+                id="app.slides.unemploymentIncome.workersComp"
+                description="Worker’s compensation"
+                defaultMessage="Worker’s compensation"
+            />
+          </Tooltip>
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="strike">
           <Tooltip text={tooltiptext.strikeBenefits}>
-              <FormattedMessage
-                  id="app.slides.unemploymentIncome.strikeBenefits"
-                  description="Strike benefits"
-                  defaultMessage="Strike benefits"
-              />
-           </Tooltip>
+            <FormattedMessage
+                id="app.slides.unemploymentIncome.strikeBenefits"
+                description="Strike benefits"
+                defaultMessage="Strike benefits"
+            />
+          </Tooltip>
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="ssdi">
-        <FormattedMessage
+          <FormattedMessage
               id="app.slides.unemploymentIncome.ssdi"
               description="Social Security Disability Insurance"
               defaultMessage="Social Security Disability Insurance {tooltip}"
               values={{
                 tooltip:
-                        <Tooltip text={tooltiptext.SSDI}>
-                          <FormattedMessage
-                            id="app.slides.unemploymentIncome.ssdiToolTip"
-                            description="(SSDI)"
-                            defaultMessage="(SSDI)"
-                          />
-                        </Tooltip>
+                  <Tooltip text={tooltiptext.SSDI}>
+                    <FormattedMessage
+                        id="app.slides.unemploymentIncome.ssdiToolTip"
+                        description="(SSDI)"
+                        defaultMessage="(SSDI)"
+                    />
+                  </Tooltip>
               }}
-        />
+          />
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="veteran">
           <Tooltip text={tooltiptext.veteranBenefits}>
-              <FormattedMessage
-                  id="app.slides.unemploymentIncome.veteranBenefits"
-                  description="Veteran’s benefits"
-                  defaultMessage="Veteran’s benefits"
-              />
-           </Tooltip>
+            <FormattedMessage
+                id="app.slides.unemploymentIncome.veteranBenefits"
+                description="Veteran’s benefits"
+                defaultMessage="Veteran’s benefits"
+            />
+          </Tooltip>
         </IncomeSource>
       </IncomeType>
     )

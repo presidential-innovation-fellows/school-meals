@@ -15,10 +15,11 @@ class Article extends Component {
 
   render() {
     return (
-      <ul className="usa-accordion" ref={(ul) => {
-        this.ul = ul
-        return null
-      }}
+      <ul
+          className="usa-accordion" ref={(ul) => {
+            this.ul = ul
+            return null
+          }}
       >
         {this.props.children}
       </ul>

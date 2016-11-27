@@ -8,10 +8,10 @@ import { ApplicationData } from '../../../stores/ApplicationData'
 class AssistanceProgramList extends Component {
   constructor(props) {
     super(props)
-    this.onChange = this.onChange.bind(this)
+    this.handleChange = this.handleChange.bind(this)
   }
 
-  onChange(fieldName, value, program) {
+  handleChange(fieldName, value, program) {
     const { students, adults, otherChildren, signature } =
       this.props.applicationData
 
@@ -46,9 +46,10 @@ class AssistanceProgramList extends Component {
     return (
       <Checkboxes legend="Assistance programs">
         {assistancePrograms.map(program =>
-          <AssistanceProgram program={program}
-                             onChange={this.onChange}
-                             key={program.id}
+          <AssistanceProgram
+              program={program}
+              onChange={this.handleChange}
+              key={program.id}
           />
          )}
       </Checkboxes>

@@ -61,27 +61,29 @@ class IncomeSourceSingle extends Component {
     return (
       <div>
 
-             <div>
-               <IncomeSourceAmount incomeSource={incomeSource} />
-               <IncomeSourceFrequency {...frequencyProps} />
+        <div>
+          <IncomeSourceAmount incomeSource={incomeSource} />
+          <IncomeSourceFrequency {...frequencyProps} />
 
-             </div>
-             {incomeSource.frequency === 'hourly' &&
-              <div>
-                <IncomeSourceAmount incomeSource={incomeSource}
-                                    fieldName="hourlyHours"
-                                    placeholder=""
-                                    prepend=""
-                                    error={!!error}
-                />
-                <IncomeSourceHourlyPeriod incomeSource={incomeSource} />
-              </div>
+        </div>
+        {incomeSource.frequency === 'hourly' &&
+        <div>
+          <IncomeSourceAmount
+              incomeSource={incomeSource}
+              fieldName="hourlyHours"
+              placeholder=""
+              prepend=""
+              error={!!error}
+          />
+          <IncomeSourceHourlyPeriod incomeSource={incomeSource} />
+        </div>
              }
-             {error && <span className="usa-input-error-message"
-                             role="alert"
-                       >{error}</span>}
-             {!error && incomeSource.frequency === 'hourly' &&
-              <IncomeSourceSummary incomeSource={incomeSource} />}
+        {error && <span
+            className="usa-input-error-message"
+            role="alert"
+                  >{error}</span>}
+        {!error && incomeSource.frequency === 'hourly' &&
+        <IncomeSourceSummary incomeSource={incomeSource} />}
 
       </div>
     )

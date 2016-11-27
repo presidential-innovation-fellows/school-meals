@@ -21,39 +21,39 @@ class PublicAssistanceIncome extends Component {
       <IncomeType {...incomeTypeProps}>
 
         <IncomeSource incomeSources={incomeSources} name="ssi">
-        <FormattedMessage
+          <FormattedMessage
               id="app.slides.publicAssistanceIncome.ssi"
               description="SSI"
               defaultMessage="Supplemental Security Income {tooltip}"
               values={{
                 tooltip:
-                        <Tooltip text={tooltiptext.SSI}>
-                          <FormattedMessage
-                            id="app.slides.publicAssistanceIncome.ssiToolTip"
-                            description="SSI tooltip"
-                            defaultMessage="(SSI)"
-                          />
-                        </Tooltip>
+                  <Tooltip text={tooltiptext.SSI}>
+                    <FormattedMessage
+                        id="app.slides.publicAssistanceIncome.ssiToolTip"
+                        description="SSI tooltip"
+                        defaultMessage="(SSI)"
+                    />
+                  </Tooltip>
               }}
-        />
+          />
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="stateLocal">
-        <FormattedMessage
+          <FormattedMessage
               id="app.slides.publicAssistanceIncome.cashAssistance"
               description="SSI"
               defaultMessage="{tooltip} from state or local government (including housing subsidies)"
               values={{
                 tooltip:
-                        <Tooltip text={tooltiptext.cashAssistance}>
-                          <FormattedMessage
-                            id="app.slides.publicAssistanceIncome.cashAssistanceToolTip"
-                            description="Cash assistance"
-                            defaultMessage="Cash assistance"
-                          />
-                        </Tooltip>
+                  <Tooltip text={tooltiptext.cashAssistance}>
+                    <FormattedMessage
+                        id="app.slides.publicAssistanceIncome.cashAssistanceToolTip"
+                        description="Cash assistance"
+                        defaultMessage="Cash assistance"
+                    />
+                  </Tooltip>
               }}
-        />
+          />
         </IncomeSource>
       </IncomeType>
     )

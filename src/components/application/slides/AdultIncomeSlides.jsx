@@ -19,25 +19,25 @@ class AdultIncomeSlides extends Component {
         <AdultIncomeOverview person={person} />
 
         {person.incomeTypes.military.isApplicable &&
-         <MilitaryIncome person={person} />
+        <MilitaryIncome person={person} />
         }
         {person.incomeTypes.employment.isApplicable &&
-         <EmploymentIncome person={person} />
+        <EmploymentIncome person={person} />
         }
         {person.incomeTypes.publicAssistance.isApplicable &&
-         <PublicAssistanceIncome person={person} />
+        <PublicAssistanceIncome person={person} />
         }
         {person.incomeTypes.spousal.isApplicable &&
-         <SpousalIncome person={person} />
+        <SpousalIncome person={person} />
         }
         {person.incomeTypes.unemployment.isApplicable &&
-         <UnemploymentIncome person={person} />
+        <UnemploymentIncome person={person} />
         }
         {person.incomeTypes.retirement.isApplicable &&
-         <RetirementIncome person={person} />
+        <RetirementIncome person={person} />
         }
         {person.incomeTypes.other.isApplicable &&
-         <OtherIncome person={person} />
+        <OtherIncome person={person} />
         }
       </div>
     )

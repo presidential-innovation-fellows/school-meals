@@ -23,17 +23,18 @@ class NoAssistancePrograms extends Component {
         <Foster applicationData={applicationData} />
 
         {!!this.studentsExceptFoster.length &&
-         <OtherPrograms students={this.studentsExceptFoster}
-                        allPeopleCollections={allPeopleCollections}
-         />
+        <OtherPrograms
+            students={this.studentsExceptFoster}
+            allPeopleCollections={allPeopleCollections}
+        />
         }
 
         {!allStudentsAreFoster(students) && allStudentsAreFHMR(students) &&
-         <IncomeElection applicationData={applicationData} />
+        <IncomeElection applicationData={applicationData} />
         }
 
         {applicationData.showHousehold &&
-         <HouseholdIncome applicationData={applicationData} />
+        <HouseholdIncome applicationData={applicationData} />
         }
       </div>
     )

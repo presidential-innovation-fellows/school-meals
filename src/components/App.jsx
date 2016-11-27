@@ -53,18 +53,21 @@ class App extends Component {
       // require a full application re-render (only individual messages),
       // however that prevented babel-plugin-react-intl from picking up
       // message definitions and being able to generate our language files.
-      <IntlProvider key={localeData.code}
-                    locale={localeData.code}
-                    messages={localeData.translations}
+      <IntlProvider
+          key={localeData.code}
+          locale={localeData.code}
+          messages={localeData.translations}
       >
         <div className={className}>
-          <Navigation navigationData={navigationData}
-                      localeData={localeData}
-                      helpData={helpData}
+          <Navigation
+              navigationData={navigationData}
+              localeData={localeData}
+              helpData={helpData}
           />
-          <Progress navigationData={navigationData}
-                    localeData={localeData}
-                    applicationData={applicationData}
+          <Progress
+              navigationData={navigationData}
+              localeData={localeData}
+              applicationData={applicationData}
           />
           <main>
             <div className="usa-grid">

@@ -41,7 +41,7 @@ class IncomeSourceSummary extends Component {
         ✓
         {' '}
         {this.amount && this.frequency &&
-         <IncomeAmount amount={this.amount} frequency={this.frequency} />
+        <IncomeAmount amount={this.amount} frequency={this.frequency} />
         }
       </span>
     )

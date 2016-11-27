@@ -83,13 +83,13 @@ class Foster extends Component {
       attribute: 'isFoster',
       onChange: this.onChange,
       label: <FormattedMessage
-                 id="app.slides.foster.label"
-                 description="Question asking if student in foster care."
-                 defaultMessage="{studentCount, plural, one {Does} other {Do}} {studentNames} live with you under a formal (court-ordered) foster care arrangement?"
-                 values={{
-                   studentCount,
-                   studentNames: <InformalNameList people={students} intersection={true} />
-                 }}
+          id="app.slides.foster.label"
+          description="Question asking if student in foster care."
+          defaultMessage="{studentCount, plural, one {Does} other {Do}} {studentNames} live with you under a formal (court-ordered) foster care arrangement?"
+          values={{
+            studentCount,
+            studentNames: <InformalNameList people={students} intersection={true} />
+          }}
              />
     }
 

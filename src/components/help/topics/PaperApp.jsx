@@ -7,9 +7,9 @@ import { organization } from '../../../config'
 export default class PaperApp extends Component {
   render() {
     const title = <FormattedMessage
-                      id="help.topic.paperApp.question"
-                      description="Question for the paper application help topic."
-                      defaultMessage="Can I apply using a paper application?"
+        id="help.topic.paperApp.question"
+        description="Question for the paper application help topic."
+        defaultMessage="Can I apply using a paper application?"
                   />
 
     return (

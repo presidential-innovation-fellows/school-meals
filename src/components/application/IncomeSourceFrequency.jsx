@@ -28,8 +28,9 @@ class IncomeSourceFrequency extends Component {
 
     return (
       <div className="usa-input-grid usa-input-grid-medium">
-        <Select value={value}
-                onChange={this.handleChange}
+        <Select
+            value={value}
+            onChange={this.handleChange}
         >
           <FormattedMessage
               id="app.incomeSourceFrequency.placeholder"
@@ -40,9 +41,9 @@ class IncomeSourceFrequency extends Component {
           </FormattedMessage>
 
           {showAnnual &&
-           <FrequencyLabel frequency="annually">
-             {message => <option value="annually">{message}</option>}
-           </FrequencyLabel>
+          <FrequencyLabel frequency="annually">
+            {message => <option value="annually">{message}</option>}
+          </FrequencyLabel>
           }
 
           <FrequencyLabel frequency="monthly">
@@ -62,9 +63,9 @@ class IncomeSourceFrequency extends Component {
           </FrequencyLabel>
 
           {showHourly &&
-           <FrequencyLabel frequency="hourly">
-             {message => <option value="hourly">{message}</option>}
-           </FrequencyLabel>
+          <FrequencyLabel frequency="hourly">
+            {message => <option value="hourly">{message}</option>}
+          </FrequencyLabel>
           }
         </Select>
       </div>

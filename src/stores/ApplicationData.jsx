@@ -193,35 +193,35 @@ class PersonCollection {
     return [
       { name: 'firstName',
         label:
-              <FormattedMessage
-                  id="applicationData.person.firstName.label"
-                  description="The label used for form fields."
-                  defaultMessage="First name"
-              />,
+          <FormattedMessage
+              id="applicationData.person.firstName.label"
+              description="The label used for form fields."
+              defaultMessage="First name"
+          />,
         required: true },
       { name: 'middleName',
         label:
-              <FormattedMessage
-                  id="applicationData.person.middleName.label"
-                  description="The label used for form fields."
-                  defaultMessage="Middle name"
-              />
+          <FormattedMessage
+              id="applicationData.person.middleName.label"
+              description="The label used for form fields."
+              defaultMessage="Middle name"
+          />
       },
       { name: 'lastName',
         label:
-              <FormattedMessage
-                  id="applicationData.person.lastName.label"
-                  description="The label used for form fields."
-                  defaultMessage="Last name"
-              />,
+          <FormattedMessage
+              id="applicationData.person.lastName.label"
+              description="The label used for form fields."
+              defaultMessage="Last name"
+          />,
         required: true },
       { name: 'suffix',
         label:
-              <FormattedMessage
-                  id="applicationData.person.suffix.label"
-                  description="The label used for form fields."
-                  defaultMessage="Suffix (e.g. Jr., Sr., I, II, III)"
-              />
+          <FormattedMessage
+              id="applicationData.person.suffix.label"
+              description="The label used for form fields."
+              defaultMessage="Suffix (e.g. Jr., Sr., I, II, III)"
+          />
       }
     ]
   }
@@ -422,11 +422,11 @@ class OtherChildrenCollection extends ChildCollection {
     return super.fields.concat([
       { name: 'isFoster',
         label:
-              <FormattedMessage
-                  id="applicationData.otherChild.isFoster.label"
-                  description="The label used for form fields."
-                  defaultMessage="Foster child"
-              />,
+          <FormattedMessage
+              id="applicationData.otherChild.isFoster.label"
+              description="The label used for form fields."
+              defaultMessage="Foster child"
+          />,
         dataType: PropTypes.bool }
     ])
   }
@@ -445,19 +445,19 @@ class StudentCollection extends ChildCollection {
     return super.fields.concat([
       { name: 'school',
         label:
-              <FormattedMessage
-                  id="applicationData.student.school.label"
-                  description="The label used for form fields."
-                  defaultMessage="School"
-              />
+          <FormattedMessage
+              id="applicationData.student.school.label"
+              description="The label used for form fields."
+              defaultMessage="School"
+          />
       },
       { name: 'grade',
         label:
-              <FormattedMessage
-                  id="applicationData.student.grade.label"
-                  description="The label used for form fields."
-                  defaultMessage="Grade"
-              />
+          <FormattedMessage
+              id="applicationData.student.grade.label"
+              description="The label used for form fields."
+              defaultMessage="Grade"
+          />
       }
     ])
   }

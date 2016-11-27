@@ -75,9 +75,9 @@ class AdditionalIncome extends Component {
             }
             <button {...addButtonProps} >
               + <FormattedMessage
-                    id="app.incomeSourceAdditional.addButton"
-                    description="Button text to add an income source"
-                    defaultMessage="Add Income Source"
+                  id="app.incomeSourceAdditional.addButton"
+                  description="Button text to add an income source"
+                  defaultMessage="Add Income Source"
                 />
             </button>
           </div>

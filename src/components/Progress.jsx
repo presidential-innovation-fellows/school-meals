@@ -36,27 +36,27 @@ class Progress extends Component {
     result.push({
       'data-hash': 'welcome',
       'title': <FormattedMessage
-                   id="progress.begin"
-                   description="Text for the Begin progress bar step."
-                   defaultMessage="Begin"
+          id="progress.begin"
+          description="Text for the Begin progress bar step."
+          defaultMessage="Begin"
                />
     })
 
     result.push({
       'data-hash': 'students',
       'title': <FormattedMessage
-                   id="progress.students"
-                   description="Text for the Students progress bar step."
-                   defaultMessage="Students"
+          id="progress.students"
+          description="Text for the Students progress bar step."
+          defaultMessage="Students"
                />
     })
 
     result.push({
       'data-hash': 'assistance-programs',
       'title': <FormattedMessage
-                   id="progress.assistancePrograms"
-                   description="Text for the Programs progress bar step."
-                   defaultMessage="Programs"
+          id="progress.assistancePrograms"
+          description="Text for the Programs progress bar step."
+          defaultMessage="Programs"
                />
     })
 
@@ -64,18 +64,18 @@ class Progress extends Component {
       result.push({
         'data-hash': 'other-children',
         'title': <FormattedMessage
-                     id="progress.otherKids"
-                     description="Text for the Other Kids progress bar step."
-                     defaultMessage="Other Kids"
+            id="progress.otherKids"
+            description="Text for the Other Kids progress bar step."
+            defaultMessage="Other Kids"
                  />
       })
 
       result.push({
         'data-hash': 'adults',
         'title': <FormattedMessage
-                     id="progress.adults"
-                     description="Text for the Adults progress bar step."
-                     defaultMessage="Adults"
+            id="progress.adults"
+            description="Text for the Adults progress bar step."
+            defaultMessage="Adults"
                  />
       })
     }
@@ -83,9 +83,9 @@ class Progress extends Component {
     result.push({
       'data-hash': 'summary',
       'title': <FormattedMessage
-                   id="progress.summary"
-                   description="Text for the Summary progress bar step."
-                   defaultMessage="Summary"
+          id="progress.summary"
+          description="Text for the Summary progress bar step."
+          defaultMessage="Summary"
                />
     })
 
@@ -108,8 +108,9 @@ class Progress extends Component {
       <div className="progress-container">
         <div className="usa-grid">
           <div className="progress-mobile">
-            <ProgressBar now={this.percent}
-                         label={!!this.percent && `${this.percent}%`}
+            <ProgressBar
+                now={this.percent}
+                label={!!this.percent && `${this.percent}%`}
             />
           </div>
           <div className="progress-desktop">

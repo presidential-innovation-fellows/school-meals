@@ -34,7 +34,7 @@ class Application extends Component {
         <AssistancePrograms applicationData={applicationData} />
 
         {assistancePrograms.hasAny !== true &&
-         <NoAssistancePrograms applicationData={this.props.applicationData} />
+        <NoAssistancePrograms applicationData={this.props.applicationData} />
         }
 
         <Contact contact={contact} />

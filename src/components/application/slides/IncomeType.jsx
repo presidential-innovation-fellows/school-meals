@@ -36,10 +36,11 @@ class IncomeType extends Component {
       />
 
     return (
-      <Slide header={personName}
-             id={`income/${person.id}/${name}`}
-             helpArticle={`${name}-income`}
-             nextDisabled={!incomeTypeIsValid(incomeType)}
+      <Slide
+          header={personName}
+          id={`income/${person.id}/${name}`}
+          helpArticle={`${name}-income`}
+          nextDisabled={!incomeTypeIsValid(incomeType)}
       >
         {showDefaultText && <IncomeTypeDefaultText {...defaultTextProps} />}
         {this.props.children}
@@ -55,8 +56,9 @@ class IncomeType extends Component {
                 }}
             />
             <br />
-            <Button slideId={`income/${person.id}`}
-                    className="usa-button-gray"
+            <Button
+                slideId={`income/${person.id}`}
+                className="usa-button-gray"
             >
               <FormattedMessage
                   id="app.slides.incomeType.changeAnswer"

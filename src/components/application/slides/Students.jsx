@@ -13,14 +13,14 @@ class Students extends Component {
     return (
       <Slide id="students" nextDisabled={!students.isValid} beginsSection>
         <p className="usa-font-lead">
-        <FormattedMessage
+          <FormattedMessage
               id="app.slides.students.intro"
               description="Introductory paragraph."
               defaultMessage="List the names of the students in your household that attend school in {organizationName} and are applying for school meal benefits."
               values={{
                 organizationName: organization.name
               }}
-        />
+          />
         </p>
 
         <PersonCollection

@@ -15,14 +15,14 @@ class Demographics extends Component {
       name: 'isHispanicLatino',
       object: student.demographics,
       trueLabel: <FormattedMessage
-                     id="app.slides.demographics.radioTrue"
-                     description="Label for choice if student is hispanic/latino."
-                     defaultMessage="Hispanic or Latino"
+          id="app.slides.demographics.radioTrue"
+          description="Label for choice if student is hispanic/latino."
+          defaultMessage="Hispanic or Latino"
                  />,
       falseLabel: <FormattedMessage
-                      id="app.slides.demographics.radioFalse"
-                      description="Label for choice if student is not hispanic/latino."
-                      defaultMessage="Non Hispanic or Latino"
+          id="app.slides.demographics.radioFalse"
+          description="Label for choice if student is not hispanic/latino."
+          defaultMessage="Non Hispanic or Latino"
                   />
     }
 
@@ -32,20 +32,20 @@ class Demographics extends Component {
           <div className="well">
             <h2>{informalName(student)}</h2>
             <label>
-            <FormattedMessage
-                id="app.slides.demographicsForm.ethnicity"
-                description="Ethnicity"
-                defaultMessage="Ethnicity"
-            />
+              <FormattedMessage
+                  id="app.slides.demographicsForm.ethnicity"
+                  description="Ethnicity"
+                  defaultMessage="Ethnicity"
+              />
             </label>
             <BooleanRadio {...radioProps} />
 
             <label>
-            <FormattedMessage
-                id="app.slides.demographicsForm.race"
-                description="Race"
-                defaultMessage="Race"
-            />
+              <FormattedMessage
+                  id="app.slides.demographicsForm.race"
+                  description="Race"
+                  defaultMessage="Race"
+              />
             </label>
             <Checkboxes legend="Races">
               <Checkbox object={student.demographics} name="isNativeAmerican">
@@ -87,11 +87,11 @@ class Demographics extends Component {
 
             <div>
               <button className="usa-button-gray" type="reset">
-              <FormattedMessage
+                <FormattedMessage
                     id="app.slides.demographicsForm.clear"
                     description="Clear"
                     defaultMessage="Clear"
-              />
+                />
               </button>
             </div>
           </div>

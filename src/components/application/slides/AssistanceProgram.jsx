@@ -14,12 +14,12 @@ class AssistanceProgram extends Component {
           {program.name}
         </Checkbox>
         {program.isApplicable &&
-         <InputField
-             name="caseNumber"
-             placeholder="Case number"
-             label=""
-             object={program}
-         />
+        <InputField
+            name="caseNumber"
+            placeholder="Case number"
+            label=""
+            object={program}
+        />
         }
       </div>
     )

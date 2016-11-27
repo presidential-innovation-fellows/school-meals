@@ -51,9 +51,9 @@ class InputField extends Component {
     const input = this.props
     const additional = input.additional || (
       input.required && <FormattedMessage
-                            id="app.inputField.required"
-                            description="Text that indicates a field is required."
-                            defaultMessage="required"
+          id="app.inputField.required"
+          description="Text that indicates a field is required."
+          defaultMessage="required"
                         />
     )
     const value = input.object[input.name]
@@ -105,18 +105,19 @@ class InputField extends Component {
     return (
       <div className={containerClassName}>
         {(input.label || this.props.children || input.required || input.additional) &&
-         <label htmlFor={this.controlId}>
-           {input.label || this.props.children}
-           {additional &&
-            <span className="usa-additional_text">{additional}</span>
+        <label htmlFor={this.controlId}>
+          {input.label || this.props.children}
+          {additional &&
+          <span className="usa-additional_text">{additional}</span>
            }
-         </label>
+        </label>
         }
         {input.error &&
-         <span className="usa-input-error-message"
-               id={'input-error-message-#{this.controlId}'}
-               role="alert"
-         >{input.error}</span>
+        <span
+            className="usa-input-error-message"
+            id={'input-error-message-#{this.controlId}'}
+            role="alert"
+        >{input.error}</span>
         }
         <input {...inputProps} />
       </div>

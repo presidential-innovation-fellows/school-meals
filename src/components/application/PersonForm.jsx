@@ -10,10 +10,10 @@ import { FormattedMessage } from 'react-intl'
 class PersonForm extends Component {
   constructor(props) {
     super(props)
-    this.onRemove = this.onRemove.bind(this)
+    this.handleRemove = this.handleRemove.bind(this)
   }
 
-  onRemove() {
+  handleRemove() {
     this.props.onRemove(this.props.person)
   }
 
@@ -42,8 +42,9 @@ class PersonForm extends Component {
                  )}
               </div>
               <div>
-                <Button onClick={this.onRemove}
-                        className="usa-button-gray remove-person"
+                <Button
+                    onClick={this.handleRemove}
+                    className="usa-button-gray remove-person"
                 >
                   <FormattedMessage
                       id="app.personForm.removeButton"

@@ -27,25 +27,25 @@ class Attestation extends Component {
     return (
       <Slide header={headerText} id="attestation" nextDisabled={!this.isValid}>
         <p className="usa-font-lead">
-        <FormattedMessage
+          <FormattedMessage
               id="app.slides.attestation.intro"
               description="Introductory paragraph."
               defaultMessage="that all information on this application is true and that all income is reported."
-        />
+          />
         </p>
         <p>
-        <FormattedMessage
+          <FormattedMessage
               id="app.slides.attestation.understand"
               description="Understand that the information give should be correct."
               defaultMessage="I understand that this information is given in connection with the receipt of Federal funds, and that school o­fficials may verify (check) the information. I am aware that if I purposely* give false information, my children may lose meal benefits."
-        />
+          />
         </p>
         <p><strong>
-        <FormattedMessage
+          <FormattedMessage
               id="app.slides.attestation.completingApp"
               description="Name of individual completing app"
               defaultMessage="Enter the name of the adult household member completing the application."
-        />
+          />
         </strong></p>
 
         <Form>
@@ -110,11 +110,11 @@ class Attestation extends Component {
           </Fieldset>
         </Form>
         <p><em>
-        <FormattedMessage
+          <FormattedMessage
               id="app.slides.attestation.misrepresentation"
               description="Starred message that lying on the form is fraud."
               defaultMessage="*Deliberate misrepresentation of information may subject applicants to prosecution under applicable State and Federal law."
-        />
+          />
         </em></p>
       </Slide>
     )

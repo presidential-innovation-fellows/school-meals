@@ -15,8 +15,9 @@ class Locale extends Component {
 
   render() {
     return (
-      <MenuItem eventKey={this.props.eventKey}
-                onClick={this.handleLocaleClicked}
+      <MenuItem
+          eventKey={this.props.eventKey}
+          onClick={this.handleLocaleClicked}
       >{this.props.locale.iSpeak}</MenuItem>
     )
   }

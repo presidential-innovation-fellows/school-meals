@@ -9,11 +9,11 @@ class SummaryLabelContent extends Component {
       <span>
         {this.props.id
          ?
-         <span key={this.props.id}>
-           <EditLink id={this.props.id}>{this.props.children}</EditLink>
-         </span>
+           <span key={this.props.id}>
+             <EditLink id={this.props.id}>{this.props.children}</EditLink>
+           </span>
          :
-         <span>{this.props.children}</span>
+           <span>{this.props.children}</span>
         }
       </span>
     )

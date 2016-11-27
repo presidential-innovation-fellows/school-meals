@@ -188,16 +188,17 @@ class SummaryPersonIncome extends Component {
         <FormattedMessage {...this.messages[type][source]} />
         {' — '}
         {amount && frequency &&
-         <IncomeAmount amount={parseFloat(amount, 10)}
-                       decimals={2}
-                       frequency={frequency}
-         />
+        <IncomeAmount
+            amount={parseFloat(amount, 10)}
+            decimals={2}
+            frequency={frequency}
+        />
         }
         {' '}
         {income.frequency === 'hourly' && income.hourlyPeriod &&
-         <span>
+        <span>
            ({income.hourlyHours}{' '}
-           <HourlyPeriodLabel period={income.hourlyPeriod} />)
+          <HourlyPeriodLabel period={income.hourlyPeriod} />)
          </span>
         }
         {' '}

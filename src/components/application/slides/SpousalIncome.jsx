@@ -21,23 +21,23 @@ class SpousalIncome extends Component {
       <IncomeType {...incomeTypeProps}>
 
         <IncomeSource incomeSources={incomeSources} name="alimony">
-        <Tooltip text={tooltiptext.alimony}>
-           <FormattedMessage
-              id="app.slides.spousalIncome.alimony"
-              description="Alimony"
-              defaultMessage="Alimony"
-           />
-        </Tooltip>
+          <Tooltip text={tooltiptext.alimony}>
+            <FormattedMessage
+                id="app.slides.spousalIncome.alimony"
+                description="Alimony"
+                defaultMessage="Alimony"
+            />
+          </Tooltip>
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="childSupport">
-        <Tooltip text={tooltiptext.childSupport}>
-           <FormattedMessage
-              id="app.slides.spousalIncome.childSupport"
-              description="Child support"
-              defaultMessage="Child support"
-           />
-        </Tooltip>
+          <Tooltip text={tooltiptext.childSupport}>
+            <FormattedMessage
+                id="app.slides.spousalIncome.childSupport"
+                description="Child support"
+                defaultMessage="Child support"
+            />
+          </Tooltip>
         </IncomeSource>
       </IncomeType>
     )

@@ -33,15 +33,16 @@ class IncomeSourceAmount extends Component {
     const value = incomeSource[fieldName]
 
     return (
-      <InputField type={type}
-                  object={incomeSource}
-                  name={fieldName}
-                  grid={true}
-                  size="small"
-                  placeholder={placeholder}
-                  onChange={this.handleChange}
-                  pattern={this.props.error ? 'xxx' : '.+'}
-                  value={value ? `${prepend}${value}` : null}
+      <InputField
+          type={type}
+          object={incomeSource}
+          name={fieldName}
+          grid={true}
+          size="small"
+          placeholder={placeholder}
+          onChange={this.handleChange}
+          pattern={this.props.error ? 'xxx' : '.+'}
+          value={value ? `${prepend}${value}` : null}
       />
     )
   }

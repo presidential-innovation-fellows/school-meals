@@ -57,67 +57,67 @@ class OtherPrograms extends Component {
       {
         attribute: 'isHomeless',
         label: <FormattedMessage
-                   id="app.slides.otherPrograms.isHomeless.label"
-                   description="Question asking if student is a homeless child."
-                   defaultMessage="{studentCount, plural, one {Does} other {Do}} {studentNames} receive assistance under the {programName}?"
-                   values={{
-                     studentCount,
-                     studentNames,
-                     programName: <Tooltip id="mckinney" text={tooltiptext.mckinney} target={hmrPrograms.mckinney.shortName} />
-                   }}
+            id="app.slides.otherPrograms.isHomeless.label"
+            description="Question asking if student is a homeless child."
+            defaultMessage="{studentCount, plural, one {Does} other {Do}} {studentNames} receive assistance under the {programName}?"
+            values={{
+              studentCount,
+              studentNames,
+              programName: <Tooltip id="mckinney" text={tooltiptext.mckinney} target={hmrPrograms.mckinney.shortName} />
+            }}
                />,
         note: <FormattedMessage
-                  id="app.slides.otherPrograms.isHomeless"
-                  description="Homeless organizations"
-                  defaultMessage="If not, but your household lacks a permanent address, or stays together in a shelter, hotel, or other temporary housing arrangement, contact {organizationName} for help."
-                  values={{
-                    studentCount,
-                    organizationName: organization.name
-                  }}
+            id="app.slides.otherPrograms.isHomeless"
+            description="Homeless organizations"
+            defaultMessage="If not, but your household lacks a permanent address, or stays together in a shelter, hotel, or other temporary housing arrangement, contact {organizationName} for help."
+            values={{
+              studentCount,
+              organizationName: organization.name
+            }}
               />
       },
       {
         attribute: 'isMigrant',
         label: <FormattedMessage
-                   id="app.slides.otherPrograms.isMigrant.label"
-                   description="Question asking if student is a migrant child."
-                   defaultMessage="{studentCount, plural, one {Does} other {Do}} {studentNames} participate in the {programName}?"
-                   values={{
-                     studentCount,
-                     studentNames,
-                     programName: <span>{hmrPrograms.mep.fullName} (<Tooltip id="migrant" text={tooltiptext.mep} target={hmrPrograms.mep.accronym} />)</span>
-                   }}
+            id="app.slides.otherPrograms.isMigrant.label"
+            description="Question asking if student is a migrant child."
+            defaultMessage="{studentCount, plural, one {Does} other {Do}} {studentNames} participate in the {programName}?"
+            values={{
+              studentCount,
+              studentNames,
+              programName: <span>{hmrPrograms.mep.fullName} (<Tooltip id="migrant" text={tooltiptext.mep} target={hmrPrograms.mep.accronym} />)</span>
+            }}
                />,
         note: <FormattedMessage
-                  id="app.slides.otherPrograms.isMigrant"
-                  description="Migrant Organizations"
-                  defaultMessage="If not, but you moved your household into a different school district within the last three years to gain or look for temporary/seasonal work in agriculture or fishing, contact {organizationName} for help."
-                  values={{
-                    studentCount,
-                    organizationName: organization.name
-                  }}
+            id="app.slides.otherPrograms.isMigrant"
+            description="Migrant Organizations"
+            defaultMessage="If not, but you moved your household into a different school district within the last three years to gain or look for temporary/seasonal work in agriculture or fishing, contact {organizationName} for help."
+            values={{
+              studentCount,
+              organizationName: organization.name
+            }}
               />
       },
       {
         attribute: 'isRunaway',
         label: <FormattedMessage
-                   id="app.slides.otherPrograms.isRunaway.label"
-                   description="Question asking if student is a runaway child."
-                   defaultMessage="{studentCount, plural, one {Does} other {Do}} {studentNames} participate in a program under the {programName}?"
-                   values={{
-                     studentCount,
-                     studentNames,
-                     programName: <Tooltip id="runaway" text={tooltiptext.runaway} target={hmrPrograms.runaway} />
-                   }}
+            id="app.slides.otherPrograms.isRunaway.label"
+            description="Question asking if student is a runaway child."
+            defaultMessage="{studentCount, plural, one {Does} other {Do}} {studentNames} participate in a program under the {programName}?"
+            values={{
+              studentCount,
+              studentNames,
+              programName: <Tooltip id="runaway" text={tooltiptext.runaway} target={hmrPrograms.runaway} />
+            }}
                />,
         note: <FormattedMessage
-                  id="app.slides.otherPrograms.isRunaway"
-                  description="Run Away Organizations"
-                  defaultMessage="If not, but {studentCount, plural, one {he/she} other {they}} chose to leave {studentCount, plural, one {his/her} other {their}} prior family or household, contact {organizationName} for help."
-                  values={{
-                    studentCount,
-                    organizationName: organization.name
-                  }}
+            id="app.slides.otherPrograms.isRunaway"
+            description="Run Away Organizations"
+            defaultMessage="If not, but {studentCount, plural, one {he/she} other {they}} chose to leave {studentCount, plural, one {his/her} other {their}} prior family or household, contact {organizationName} for help."
+            values={{
+              studentCount,
+              organizationName: organization.name
+            }}
               />
       }
     ]
@@ -125,11 +125,11 @@ class OtherPrograms extends Component {
     return (
       <Slide nextDisabled={!this.isValid} id="other-programs">
         <p className="usa-font-lead">
-         <FormattedMessage
+          <FormattedMessage
               id="app.slides.otherPrograms.intro"
               description="Introductory paragraph."
               defaultMessage="Your children can also qualify for free meals if any of these apply."
-         />
+          />
         </p>
 
         {programs.map((program, i) =>

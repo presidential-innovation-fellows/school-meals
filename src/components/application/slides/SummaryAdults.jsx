@@ -10,9 +10,10 @@ class SummaryAdults extends Component {
     const id = applicationData.showHousehold ? 'adults' : 'attestation'
 
     return (
-      <SummaryPersonCollection id={id}
-                               collection={applicationData.adults}
-                               showIncomes={applicationData.showHousehold}
+      <SummaryPersonCollection
+          id={id}
+          collection={applicationData.adults}
+          showIncomes={applicationData.showHousehold}
       >
         <FormattedMessage
             id="app.slides.summary.adults"

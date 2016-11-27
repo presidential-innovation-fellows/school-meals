@@ -55,18 +55,20 @@ class BooleanRadio extends Component {
       <Fieldset legend={legend} type="radio">
         <ul className="usa-unstyled-list">
           <li>
-            <input {...props}
-                   id={this.trueId}
-                   value={true}
-                   checked={value === true}
+            <input
+                {...props}
+                id={this.trueId}
+                value={true}
+                checked={value === true}
             />
             <label htmlFor={this.trueId}>{trueLabel}</label>
           </li>
           <li>
-            <input {...props}
-                   id={this.falseId}
-                   value={false}
-                   checked={value === false}
+            <input
+                {...props}
+                id={this.falseId}
+                value={false}
+                checked={value === false}
             />
             <label htmlFor={this.falseId}>{falseLabel}</label>
           </li>

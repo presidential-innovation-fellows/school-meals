@@ -20,39 +20,39 @@ class IncomeTypeDefaultText extends Component {
               values={{
                 person: <strong>{informalName(person)}</strong>,
                 militaryCaveat: !!showMilitaryCaveat &&
-                            <FormattedMessage
-                              id="app.slides.IncomeTypeDefaultText.notIncludingEarnings"
-                              description="not including earnings"
-                              defaultMessage=", not including earnings from the military that were already reported"
-                            />
+                <FormattedMessage
+                    id="app.slides.IncomeTypeDefaultText.notIncludingEarnings"
+                    description="not including earnings"
+                    defaultMessage=", not including earnings from the military that were already reported"
+                />
               }}
           />
         </p>
 
         <p>
-        <FormattedMessage
+          <FormattedMessage
               id="app.slides.IncomeTypeDefaultText.note"
               description="note: remember to report..."
               defaultMessage="NOTE: Remember to report {tooltip}, {tooltip2} income."
               values={{
                 tooltip:
-                        <Tooltip text={tooltiptext.currentAdult}>
-                          <FormattedMessage
-                              id="app.slides.IncomeTypeDefaultText.currentAdult"
-                              description="current"
-                              defaultMessage="current"
-                          />
-                        </Tooltip>,
+                  <Tooltip text={tooltiptext.currentAdult}>
+                    <FormattedMessage
+                        id="app.slides.IncomeTypeDefaultText.currentAdult"
+                        description="current"
+                        defaultMessage="current"
+                    />
+                  </Tooltip>,
                 tooltip2:
-                        <Tooltip text={tooltiptext.gross}>
-                          <FormattedMessage
-                              id="app.slides.IncomeTypeDefaultText.gross"
-                              description="gross"
-                              defaultMessage="gross"
-                          />
-                        </Tooltip>
+                  <Tooltip text={tooltiptext.gross}>
+                    <FormattedMessage
+                        id="app.slides.IncomeTypeDefaultText.gross"
+                        description="gross"
+                        defaultMessage="gross"
+                    />
+                  </Tooltip>
               }}
-        />
+          />
         </p>
       </div>
     )

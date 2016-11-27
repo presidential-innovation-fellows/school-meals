@@ -24,11 +24,11 @@ class PersonAttributeInput extends Component {
         </div>
       default:
         return <InputField
-                   label={field.label}
-                   name={field.name}
-                   object={person}
-                   placeholder={field.placeholder}
-                   required={!!field.required}
+            label={field.label}
+            name={field.name}
+            object={person}
+            placeholder={field.placeholder}
+            required={!!field.required}
                />
     }
   }

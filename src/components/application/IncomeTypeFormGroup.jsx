@@ -9,7 +9,7 @@ import { FormattedMessage } from 'react-intl'
 class IncomeTypeFormGroup extends Component {
   constructor(props) {
     super(props)
-    this.onChange = this.onChange.bind(this)
+    this.handleChange = this.handleChange.bind(this)
   }
 
   @computed get isError() {
@@ -37,7 +37,7 @@ class IncomeTypeFormGroup extends Component {
     return true
   }
 
-  onChange(fieldName, value, incomeType) {
+  handleChange(fieldName, value, incomeType) {
     incomeType[fieldName] = value
 
     if (!value && fieldName !== 'isDeployed') {
@@ -92,9 +92,10 @@ class IncomeTypeFormGroup extends Component {
           </div>
         }
         <label>{this.props.children}</label>
-        <BooleanRadio name={boolAttribute}
-                      object={incomeType}
-                      onChange={this.onChange}
+        <BooleanRadio
+            name={boolAttribute}
+            object={incomeType}
+            onChange={this.handleChange}
         />
       </div>
     )

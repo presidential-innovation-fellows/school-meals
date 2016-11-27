@@ -55,13 +55,13 @@ class Welcome extends React.Component {
               values={{
                 address: organization.paperApplication.address,
                 link:
-                     <a href={organization.paperApplication.url} target="_blank">
-                       <FormattedMessage
-                         id="app.slides.welcome.paperApplication"
-                         description="Phrase"
-                         defaultMessage="paper application"
-                       />
-                     </a>
+                  <a href={organization.paperApplication.url} target="_blank">
+                    <FormattedMessage
+                        id="app.slides.welcome.paperApplication"
+                        description="Phrase"
+                        defaultMessage="paper application"
+                    />
+                  </a>
               }}
           />
         </p>

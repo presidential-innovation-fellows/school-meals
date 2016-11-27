@@ -38,8 +38,9 @@ class HouseholdIncome extends Component {
 
     return (
       <div>
-        <OtherChildren otherChildren={otherChildren}
-                       alreadyNamed={students}
+        <OtherChildren
+            otherChildren={otherChildren}
+            alreadyNamed={students}
         />
 
         <ChildIncome allChildren={this.allChildren} />
