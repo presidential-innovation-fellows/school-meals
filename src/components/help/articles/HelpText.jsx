@@ -1,5 +1,5 @@
 import React from 'react'
-import { schoolYear } from '../../../helpers'
+import SchoolYear from '../../application/SchoolYear'
 import { assistanceProgramsVar, hmrPrograms, organization } from '../../../config'
 import { FormattedMessage } from 'react-intl'
 
@@ -18,7 +18,7 @@ export const help = {
         id="help.articles.helpText.newAppBody"
         description="Help text."
         defaultMessage="Yes. Eligibility for free or reduced price meals only lasts for one school year. However, eligibility for the previous year carries over for the first few days of the new school year, or until the new eligibility determination is made. Please complete a new application unless you received a letter from the school saying that your child is eligible for the upcoming {schoolYear} school year."
-        values={{ schoolYear: schoolYear() }}
+        values={{ schoolYear: <SchoolYear /> }}
     />,
 // F3
   childAppTitle:
@@ -40,7 +40,7 @@ export const help = {
         id="help.articles.helpText.letterTitle"
         description="Help text."
         defaultMessage="I received a letter from the school saying that my children were automatically approved for free meals for the upcoming {schoolYear} school year. Do I still need to complete an application?"
-        values={{ schoolYear: schoolYear() }}
+        values={{ schoolYear: <SchoolYear /> }}
     />,
   letterBody:
     <FormattedMessage

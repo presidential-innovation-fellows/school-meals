@@ -1,3 +1,9 @@
+// Automatically updates to the current calendar year.
+// This can be overridden by setting the following variable (e.g. to 2016) --
+// NOTE that manually setting the school year will require the application
+// to be rebuilt every year to reflect a new school year.
+export const schoolYear = null
+
 export const organization = {
   name: 'Applewood School District',
   shortname: 'ASD',

@@ -1,7 +1,3 @@
-export function schoolYear(startYear = new Date().getFullYear()) {
-  return `${startYear}–${startYear + 1}`
-}
-
 // Retuns zero padded YYYY-MM-DD given a date object.
 export function formatDate(date) {
   let dd = date.getDate().toString()
