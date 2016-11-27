@@ -11,7 +11,7 @@ import Signature from './slides/Signature'
 class HouseholdIncome extends Component {
   get allChildCollections() {
     return [this.props.applicationData.students,
-            this.props.applicationData.otherChildren]
+      this.props.applicationData.otherChildren]
   }
 
   @computed get allChildren() {

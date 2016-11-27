@@ -55,7 +55,7 @@ class OtherChildren extends Component {
               defaultMessage="Let's talk about the other kids in the house, and then we'll move on to the adults.  Other than {namedChildren}, are there any other children in your household? Don’t forget to include:"
               values={{
                 namedChildren: <InformalNameList people={alreadyNamed} />
-                }}
+              }}
          />
          </p>
 
@@ -66,7 +66,7 @@ class OtherChildren extends Component {
                 description="Type of child to include in income reporting."
                 defaultMessage="students that are in grade 12 or below and attend school in a school district other than {organizationName}"
                 values={{
-                organizationName: organization.name
+                  organizationName: organization.name
                 }}
             />
           </li>

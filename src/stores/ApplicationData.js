@@ -43,24 +43,24 @@ export default class ApplicationData {
 
   @computed get allPeopleCollections() {
     return [this.students,
-            this.otherChildren,
-            this.adults]
+      this.otherChildren,
+      this.adults]
   }
 
   @computed get totalHouseholdMembers() {
     return this.allPeopleCollections
-               .map(collection => collection.length)
-               .reduce((a, b) => a + b, 0)
+      .map(collection => collection.length)
+      .reduce((a, b) => a + b, 0)
   }
 
   @computed get allIncomes() {
     return this.allPeopleCollections
-               .map(collection =>
+      .map(collection =>
                  collection.items
-                           .map(person => applicableIncomeSources(person))
-                           .reduce((a, b) => a.concat(b), [])
+                   .map(person => applicableIncomeSources(person))
+                   .reduce((a, b) => a.concat(b), [])
                )
-               .reduce((a, b) => a.concat(b), [])
+      .reduce((a, b) => a.concat(b), [])
   }
 
   @computed get totalAnnualHouseholdIncome() {
@@ -98,8 +98,8 @@ export default class ApplicationData {
     }
 
     return this.allIncomes
-               .map(income => toAnnual(income))
-               .reduce((a, b) => a + b, 0)
+      .map(income => toAnnual(income))
+      .reduce((a, b) => a + b, 0)
   }
 
   @computed get totalMonthlyHouseholdIncome() {
@@ -163,8 +163,8 @@ export class AssistancePrograms {
 
   @computed get hasAny() {
     return this.items
-               .map(item => item.isApplicable)
-               .reduce((a, b) => a || b, false)
+      .map(item => item.isApplicable)
+      .reduce((a, b) => a || b, false)
   }
 
   @computed get applicable() {
@@ -177,8 +177,8 @@ export class AssistancePrograms {
 
   @computed get isValid() {
     return this.applicable
-               .map(item => !!item.caseNumber)
-               .reduce((a, b) => a && b, true)
+      .map(item => !!item.caseNumber)
+      .reduce((a, b) => a && b, true)
   }
 }
 

@@ -188,7 +188,7 @@ class Summary extends Component {
                 description="Certification statement"
                 defaultMessage="I certify* that {totalHouseholdMembers} are in my household and that our household income is about {totalHouseholdIncome}"
                 values={{
-                totalHouseholdMembers: <span className="usa-label-big">
+                  totalHouseholdMembers: <span className="usa-label-big">
                   {applicationData.totalHouseholdMembers}&nbsp;
                   <FormattedMessage
                     id="app.slides.summary.people"
@@ -196,7 +196,7 @@ class Summary extends Component {
                     defaultMessage=" people"
                   />
                 </span>,
-                totalHouseholdIncome: <span className="usa-label-big">
+                  totalHouseholdIncome: <span className="usa-label-big">
                   <IncomeAmount
                       frequency="monthly"
                       amount={applicationData.totalMonthlyHouseholdIncome}

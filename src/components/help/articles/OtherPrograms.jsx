@@ -9,8 +9,8 @@ import Household from '../topics/Household'
 import { define, help } from './HelpText'
 
 export default class OtherPrograms extends Component {
-	render() {
-		return (
+  render() {
+    return (
 			<Article>
 				<ArticleFaqSection>
 					<QualifyMigrant />
@@ -29,6 +29,6 @@ export default class OtherPrograms extends Component {
 					<Topic title={define.runawayHomelessActTerm} body={define.runawayHomelessActDef} />
 				</ArticleDefinitionSection>
 			</Article>
-		)
-	}
+    )
+  }
 }

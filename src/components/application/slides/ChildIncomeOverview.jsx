@@ -11,8 +11,8 @@ import {FormattedMessage} from 'react-intl'
 class ChildIncomeOverview extends Component {
   get isValid() {
     return this.props.allChildren
-               .map(child => child.incomeTypes.child.isApplicable != null)
-               .reduce((a, b) => a && b, true)
+      .map(child => child.incomeTypes.child.isApplicable != null)
+      .reduce((a, b) => a && b, true)
   }
 
   render() {
@@ -68,14 +68,14 @@ class ChildIncomeOverview extends Component {
               description="Social Security"
               defaultMessage="{socialSecurity} benefits, if the child is disabled, or is the {beneficiary} of another person’s Social Security benefits,"
               values={{
-              socialSecurity: <Tooltip text={tooltiptext.ssiChildren}>
+                socialSecurity: <Tooltip text={tooltiptext.ssiChildren}>
                         <FormattedMessage
                           id="app.slides.childIncomeOverview.social"
                           description="social"
                           defaultMessage="Social Security"
                         />
                         </Tooltip>,
-              beneficiary: <Tooltip text={tooltiptext.ssSurvivor}>
+                beneficiary: <Tooltip text={tooltiptext.ssSurvivor}>
                         <FormattedMessage
                           id="app.slides.childIncomeOverview.benefit"
                           description="benefit"
@@ -99,21 +99,21 @@ class ChildIncomeOverview extends Component {
               description="money From pension, annuity, or trust"
               defaultMessage="money from a {pension}, {annuity}, or {trust}"
               values={{
-              pension: <Tooltip text={tooltiptext.pensionChildren}>
+                pension: <Tooltip text={tooltiptext.pensionChildren}>
                         <FormattedMessage
                           id="app.slides.childIncomeOverview.pension"
                           description="pension"
                           defaultMessage="pension"
                         />
                         </Tooltip>,
-              annuity: <Tooltip text={tooltiptext.annuityChildren}>
+                annuity: <Tooltip text={tooltiptext.annuityChildren}>
                         <FormattedMessage
                           id="app.slides.childIncomeOverview.annuity"
                           description="annuity"
                           defaultMessage="annuity"
                         />
                         </Tooltip>,
-              trust: <Tooltip text={tooltiptext.trust}>
+                trust: <Tooltip text={tooltiptext.trust}>
                         <FormattedMessage
                           id="app.slides.childIncomeOverview.trust"
                           description="trust"

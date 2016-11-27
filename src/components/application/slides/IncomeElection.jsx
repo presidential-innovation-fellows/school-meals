@@ -107,9 +107,9 @@ class IncomeElection extends Component {
       'isMigrant',
       'isRunaway'
     ].filter(slug => {
-        return allStudents
-          .map(student => student[slug])
-          .reduce((a, b) => a || b, false)
+      return allStudents
+        .map(student => student[slug])
+        .reduce((a, b) => a || b, false)
     })
 
     return (

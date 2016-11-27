@@ -22,7 +22,7 @@ class SerialList extends Component {
     return(
       <span>
         {items.map((item, i) => {
-           return(
+          return(
              <span key={idProp ? item[idProp] : i}>
                <span className={className}>{mapFunc(item)}</span>
                {(i < items.length - 1) && (items.length > 2) && delim}
@@ -30,8 +30,8 @@ class SerialList extends Component {
                {(i === items.length - 2) && (items.length > 1) && finalWord}
                {(i === items.length - 2) && (items.length > 1) && ' '}
              </span>
-           )
-         })}
+          )
+        })}
       </span>
     )
   }

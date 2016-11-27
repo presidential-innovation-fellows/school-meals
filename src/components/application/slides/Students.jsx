@@ -18,7 +18,7 @@ class Students extends Component {
               description="Introductory paragraph."
               defaultMessage="List the names of the students in your household that attend school in {organizationName} and are applying for school meal benefits."
               values={{
-              organizationName: organization.name
+                organizationName: organization.name
               }}
         />
         </p>

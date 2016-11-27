@@ -136,8 +136,8 @@ function incomeSourceIsValid(incomeSource) {
              (
                !incomeSource.more ||
                incomeSource.more
-                           .map(moreSource => incomeSourceIsValid(moreSource))
-                           .reduce((a, b) => a && b, true)
+                 .map(moreSource => incomeSourceIsValid(moreSource))
+                 .reduce((a, b) => a && b, true)
              )
          )
 }
@@ -147,7 +147,7 @@ export function incomeTypeIsValid(incomeType, mustNotBeNull = []) {
     case true: {
       // Invalid if any of the non-nullable incomeType fields are null.
       if (mustNotBeNull.map(name => incomeType[name] == null)
-                       .reduce((a, b) => a || b, false)) {
+        .reduce((a, b) => a || b, false)) {
         return false
       }
       const incomeSources = []

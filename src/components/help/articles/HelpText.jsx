@@ -564,7 +564,7 @@ export const define = {
     description="Help text."
     defaultMessage="Current income"
   />,
-	currentDef:
+  currentDef:
   <FormattedMessage
     id="help.articles.helpText.currentDef"
     description="Help text."
@@ -682,13 +682,13 @@ export const define = {
     defaultMessage="Strike benefits are compensation paid by a union to workers on strike."
   />,
 //D15
-	ssdiTerm:
+  ssdiTerm:
   <FormattedMessage
     id="help.articles.helpText.ssdiTerm"
     description="Help text."
     defaultMessage="Social Security Disability Insurance (SSDI)"
   />,
-	ssdiDef:
+  ssdiDef:
   <FormattedMessage
     id="help.articles.helpText.ssdiDef"
     description="Help text."
@@ -748,39 +748,39 @@ export const define = {
   />,
 //D20 = RegularCash.jsx
 //D21
-	pensionTerm:
+  pensionTerm:
   <FormattedMessage
     id="help.articles.helpText.pensionTerm"
     description="Help text."
     defaultMessage="Pension"
   />,
-	pensionDef:
+  pensionDef:
   <FormattedMessage
     id="help.articles.helpText.pensionDef"
     description="Help text."
     defaultMessage="A pension is generally a series of payments made to you after you retire from work. Pension payments are made regularly and are based on such factors as years of service and prior compensation."
   />,
 //D22
-	annuityTerm:
+  annuityTerm:
   <FormattedMessage
     id="help.articles.helpText.annuityTerm"
     description="Help text."
     defaultMessage="Annuity"
   />,
-	annuityDef:
+  annuityDef:
   <FormattedMessage
     id="help.articles.helpText.annuityDef"
     description="Help text."
     defaultMessage="An annuity is a series of payments under a contract made at regular intervals over a period of more than one full year. They can be either fixed (under which you receive a definite amount) or variable (not fixed). Annuities can be purchased by individuals alone, or with the help of an employer."
   />,
 //D23
-	trustTerm:
+  trustTerm:
   <FormattedMessage
     id="help.articles.helpText.trustTerm"
     description="Help text."
     defaultMessage="Trust"
   />,
-	trustDef:
+  trustDef:
   <FormattedMessage
     id="help.articles.helpText.trustDef"
     description="Help text."

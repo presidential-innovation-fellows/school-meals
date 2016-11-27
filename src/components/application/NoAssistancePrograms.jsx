@@ -11,7 +11,7 @@ import IncomeElection from './slides/IncomeElection'
 class NoAssistancePrograms extends Component {
   @computed get studentsExceptFoster() {
     return this.props.applicationData.students.items
-               .filter(student => student.isFoster !== true)
+      .filter(student => student.isFoster !== true)
   }
 
   render() {

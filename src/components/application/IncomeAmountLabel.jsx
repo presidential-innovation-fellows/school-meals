@@ -57,13 +57,15 @@ class IncomeAmountLabel extends Component {
 }
 
 IncomeAmountLabel.propTypes = {
-  frequency: PropTypes.oneOf(['annually',
-                              'monthly',
-                              'twicePerMonth',
-                              'everyTwoWeeks',
-                              'weekly',
-                              'daily',
-                              'hourly']).isRequired
+  frequency: PropTypes.oneOf([
+    'annually',
+    'monthly',
+    'twicePerMonth',
+    'everyTwoWeeks',
+    'weekly',
+    'daily',
+    'hourly'
+  ]).isRequired
 }
 
 export default IncomeAmountLabel

@@ -50,12 +50,14 @@ class FrequencyLabel extends Component {
 
 FrequencyLabel.propTypes = {
   children: PropTypes.func,
-  frequency: PropTypes.oneOf(['annually',
-                              'monthly',
-                              'twicePerMonth',
-                              'everyTwoWeeks',
-                              'weekly',
-                              'hourly']).isRequired
+  frequency: PropTypes.oneOf([
+    'annually',
+    'monthly',
+    'twicePerMonth',
+    'everyTwoWeeks',
+    'weekly',
+    'hourly'
+  ]).isRequired
 }
 
 export default FrequencyLabel
