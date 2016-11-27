@@ -52,7 +52,6 @@ export default class Summary extends Component {
           <Topic title={help.disagreeTitle} body={help.disagreeBody} />
         </ArticleFaqSection>
         <ArticleDefinitionSection>
-          <IEG />
           <Topic title={define.mckinneyTerm} body={define.mckinneyDef} />
           <Topic title={define.mepTerm} body={define.mepDef} />
           <Topic title={define.runawayHomelessActTerm} body={define.runawayHomelessActDef} />
