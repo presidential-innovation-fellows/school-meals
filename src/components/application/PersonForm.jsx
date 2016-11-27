@@ -21,7 +21,7 @@ class PersonForm extends Component {
     const {
       label,
       person,
-      fields,
+      fields
     } = this.props
 
     const name = person.firstName || label

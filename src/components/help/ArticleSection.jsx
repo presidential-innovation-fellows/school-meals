@@ -21,11 +21,11 @@ class ArticleSection extends Component {
 ArticleSection.propTypes = {
   children: PropTypes.node,
   header: PropTypes.node,
-  showLabel: PropTypes.bool,
+  showLabel: PropTypes.bool
 }
 
 ArticleSection.defaultProps = {
-  showLabel: true,
+  showLabel: true
 }
 
 export default ArticleSection

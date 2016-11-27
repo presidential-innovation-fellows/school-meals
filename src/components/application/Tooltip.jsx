@@ -24,7 +24,7 @@ class Tooltip extends Component {
 Tooltip.propTypes = {
   text: PropTypes.node.isRequired,
   target: PropTypes.node,
-  children: PropTypes.node,
+  children: PropTypes.node
 }
 
 export default Tooltip

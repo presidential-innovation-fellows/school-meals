@@ -34,10 +34,10 @@ class Slide extends Component {
   render() {
     const { navigationData } = this.context
     const props = {
-      className: "slide",
+      className: 'slide',
       id: this.props.id,
       'data-begins-section': this.props.beginsSection,
-      'data-help-article': this.props.helpArticle || this.props.id,
+      'data-help-article': this.props.helpArticle || this.props.id
     }
 
     if (this.props.nextDisabled) {
@@ -118,7 +118,7 @@ Slide.propTypes = {
   beginsSection: PropTypes.bool,
   handleBack: PropTypes.func,
   handleNext: PropTypes.func,
-  handleJump: PropTypes.func,
+  handleJump: PropTypes.func
 }
 
 Slide.defaultProps = {

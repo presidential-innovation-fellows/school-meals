@@ -22,7 +22,7 @@ class EditLink extends Component {
 
 EditLink.propTypes = {
   children: PropTypes.node,
-  id: PropTypes.string.required,
+  id: PropTypes.string.required
 }
 
 export default EditLink

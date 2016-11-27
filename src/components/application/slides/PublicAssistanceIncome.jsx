@@ -13,8 +13,8 @@ class PublicAssistanceIncome extends Component {
     const incomeType = person.incomeTypes.publicAssistance
     const incomeSources = incomeType.sources
     const incomeTypeProps = {
-      name: "publicAssistance",
-      label: "Public Assistance",
+      name: 'publicAssistance',
+      label: 'Public Assistance',
       person
     }
 

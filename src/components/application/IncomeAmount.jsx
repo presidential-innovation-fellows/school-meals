@@ -22,7 +22,7 @@ class IncomeAmount extends Component {
 IncomeAmount.propTypes = {
   amount: PropTypes.number.isRequired,
   decimals: PropTypes.number,
-  frequency: PropTypes.string.isRequired,
+  frequency: PropTypes.string.isRequired
 }
 
 IncomeAmount.defaultProps = {

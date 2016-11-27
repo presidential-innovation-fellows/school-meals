@@ -28,7 +28,7 @@ export default class WhatInformation extends Component {
             description="Answer for the necessary information help topic."
             defaultMessage="If you participate in {assistanceProgramsShort} you will need to know your case number (not your card or account number)."
             values={{
-              assistanceProgramsShort: `${assistanceProgramsVar.snap.accronym}, ${assistanceProgramsVar.tanf.accronym}, ${assistanceProgramsVar.fdpir.accronym}`,
+              assistanceProgramsShort: `${assistanceProgramsVar.snap.accronym}, ${assistanceProgramsVar.tanf.accronym}, ${assistanceProgramsVar.fdpir.accronym}`
             }}
           />
             </li>

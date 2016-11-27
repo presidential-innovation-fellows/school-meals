@@ -26,7 +26,7 @@ export default class QualifyMigrant extends Component {
             description="Answer for the students qualifying as migrant help topic."
             defaultMessage="If you believe children in your household meet one or more of these descriptions and you haven’t been told your children will get free meals, please contact {organizationName}."
             values={{
-              organizationName: organization.name,
+              organizationName: organization.name
             }}
         	/>
         </p>

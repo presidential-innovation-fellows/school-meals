@@ -269,5 +269,5 @@ export const tooltiptext = {
     defaultMessage="Authorizes community-based runaway and homeless youth projects to provide temporary shelter and care to youth who are in need of temporary shelter, counseling, and aftercare services."
   />,
   littleguy: '’',
-  quotationmarks: '“”',
+  quotationmarks: '“”'
 }

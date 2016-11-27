@@ -139,25 +139,25 @@ export default class ApplicationData {
 
   constructor(){
     if (DEBUG) {
-      console.log("Loading Default Test Data! \n");
+      console.log('Loading Default Test Data! \n');
 
       //Choose the test scenario to import
-      let scenario = "OneAdult_OneStudent";
+      let scenario = 'OneAdult_OneStudent';
 
-      console.log("Test Scenario: " + scenario + "\n");
+      console.log('Test Scenario: ' + scenario + '\n');
 
       //Set the values in ApplicationData using the debug test data
 
       // signature collection
       this.signature = JSON.parse(JSON.stringify(testData[scenario].signature));
 
-      console.log("Loading signature info...\n");
+      console.log('Loading signature info...\n');
       console.log(JSON.stringify(this.signature, undefined, 2));
 
       // contact info collection
       this.contact = JSON.parse(JSON.stringify(testData[scenario].contact));
 
-      console.log("Loading contact info...\n");
+      console.log('Loading contact info...\n');
       console.log(JSON.stringify(this.contact, undefined, 2));
 
       // adults collection
@@ -167,22 +167,22 @@ export default class ApplicationData {
 
       // Object.assign(this.adults.items[0].incomeTypes.employment.sources.salaryWages, {add: this.adults.addIncomeSource, remove: this.adults.removeIncomeSource})
 
-      console.log("Loading Adults... \n");
+      console.log('Loading Adults... \n');
       console.log(JSON.stringify(this.adults.items,undefined,2));
 
 
        //testing to see if I can re-attach the class methods for adding / removing
-      console.log("Re-attached class methods for adding/removing income sources...\n")
+      console.log('Re-attached class methods for adding/removing income sources...\n')
       for (let i=0 ; i < this.adults.items.length; i++){
-        console.log("Re-attaching for item: " + i + "\n")
+        console.log('Re-attaching for item: ' + i + '\n')
         let item = this.adults.items[i];
 
         Object.keys(item.incomeTypes.employment.sources).forEach(function(k,s){
 
-          console.log("Source: " + k + "\n")
+          console.log('Source: ' + k + '\n')
           let source = item.incomeTypes.employment.sources[k]
 
-          if (typeof(source.more) != "undefined") {
+          if (typeof(source.more) != 'undefined') {
 
             Object.assign(source, {add: this.adults.addIncomeSource, remove: this.adults.removeIncomeSource})
 
@@ -192,14 +192,14 @@ export default class ApplicationData {
 
       }
 
-      console.log("Loading Adults... \n");
+      console.log('Loading Adults... \n');
       console.log(JSON.stringify(this.adults.items,undefined,2));
 
       this.students.items = testData[scenario].students.items.map ( function(student){
                 return(JSON.parse(JSON.stringify(student)));
       });
 
-      console.log("Loading Students... \n");
+      console.log('Loading Students... \n');
       console.log(JSON.stringify(this.students.items,undefined,2));
 
 
@@ -207,12 +207,12 @@ export default class ApplicationData {
                 return(JSON.parse(JSON.stringify(child)));
       });
 
-      console.log("Loading Other Children... \n");
+      console.log('Loading Other Children... \n');
       console.log(JSON.stringify(this.otherChildren.items,undefined,2));
 
 
-      console.log("Finished loading...");
-      console.log("Test Scenario: " + scenario + " is fully loaded!\n");
+      console.log('Finished loading...');
+      console.log('Test Scenario: ' + scenario + ' is fully loaded!\n');
       console.log(this);
     }
   }
@@ -419,7 +419,7 @@ class AdultCollection extends PersonCollection {
           sources: {
             'basic':     { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] },
             'cashBonus': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] },
-            'allowance': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] },
+            'allowance': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }
           }
         },
         employment: {
@@ -436,14 +436,14 @@ class AdultCollection extends PersonCollection {
           isApplicable: null,
           sources: {
             'ssi':        { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] },
-            'stateLocal': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] },
+            'stateLocal': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }
           }
         },
         spousal: {
           isApplicable: null,
           sources: {
             'alimony':      { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] },
-            'childSupport': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] },
+            'childSupport': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }
           }
         },
         unemployment: {
@@ -453,14 +453,14 @@ class AdultCollection extends PersonCollection {
             'workersComp':  { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] },
             'strike':       { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] },
             'ssdi':         { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] },
-            'veteran':      { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] },
+            'veteran':      { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }
           }
         },
         retirement: {
           isApplicable: null,
           sources: {
             'socialSecurity': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] },
-            'privatePension': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] },
+            'privatePension': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }
           }
         },
         other: {
@@ -471,7 +471,7 @@ class AdultCollection extends PersonCollection {
             'earnedInterest':      { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] },
             'investmentIncome':    { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] },
             'annuity':             { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] },
-            'other':               { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] },
+            'other':               { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }
           }
         }
       }
@@ -495,7 +495,7 @@ class ChildCollection extends PersonCollection {
             'socialSecurity':      { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] },
             'friendsFamily':       { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] },
             'pensionAnnuityTrust': { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] },
-            'other':               { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] },
+            'other':               { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }
           }
         }
       }

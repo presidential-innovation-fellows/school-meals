@@ -67,7 +67,7 @@ class BeforeYouBegin extends React.Component {
               description="Only need one application for your household"
               defaultMessage="We need only one application for all the children in your household that attend school in {organizationName}."
               values={{
-                organizationName: organization.name,
+                organizationName: organization.name
               }}
           />
         </p>

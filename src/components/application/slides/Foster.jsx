@@ -91,7 +91,7 @@ class Foster extends Component {
                  defaultMessage="{studentCount, plural, one {Does} other {Do}} {studentNames} live with you under a formal (court-ordered) foster care arrangement?"
                  values={{
                    studentCount,
-                   studentNames: <InformalNameList people={students} intersection={true} />,
+                   studentNames: <InformalNameList people={students} intersection={true} />
                  }}
              />
     }

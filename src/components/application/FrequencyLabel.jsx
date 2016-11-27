@@ -34,7 +34,7 @@ class FrequencyLabel extends Component {
       id: 'app.frequencyLabel.hourly',
       description: 'Once per hour.',
       defaultMessage: 'hourly'
-    },
+    }
   })
 
   render() {

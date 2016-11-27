@@ -42,7 +42,7 @@ export default class NotTheSame extends Component {
                 defaultMessage="If you need additional help or information about how to report your income, contact {organizationName} at {organizationContactInfo}, and they will help you figure out your household’s annual rate of income based on USDA guidelines."
                 values={{
                   organizationName: organization.name,
-                  organizationContactInfo: `${organization.contact.phone} / ${organization.contact.email} / ${organization.contact.address}`,
+                  organizationContactInfo: `${organization.contact.phone} / ${organization.contact.email} / ${organization.contact.address}`
                 }}
               />
           	</li>

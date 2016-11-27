@@ -25,7 +25,7 @@ class Locale extends Component {
 Locale.propTypes = {
   eventKey: PropTypes.string.isRequired,
   locale: PropTypes.object.isRequired,
-  localeData: PropTypes.object.isRequired,
+  localeData: PropTypes.object.isRequired
 };
 
 export default Locale

@@ -22,11 +22,11 @@ class BooleanRadio extends Component {
 
     switch (event.target.value) {
       case true:
-      case "true":
+      case 'true':
         value = true
         break
       case false:
-      case "false":
+      case 'false':
         value = false
         break
       default:

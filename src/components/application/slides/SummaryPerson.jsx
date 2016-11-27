@@ -77,7 +77,7 @@ class SummaryPerson extends Component {
 
 SummaryPerson.propTypes = {
   person: PropTypes.object.isRequired,
-  showIncomes: PropTypes.bool,
+  showIncomes: PropTypes.bool
 }
 
 export default SummaryPerson

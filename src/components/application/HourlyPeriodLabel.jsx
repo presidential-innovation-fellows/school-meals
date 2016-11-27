@@ -19,7 +19,7 @@ class HourlyPeriodLabel extends Component {
       id: 'app.hourlyPeriodLabel.week',
       description: 'Number of hours per week.',
       defaultMessage: 'hours per week'
-    },
+    }
   })
 
   render() {

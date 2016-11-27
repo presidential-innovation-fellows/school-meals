@@ -26,8 +26,8 @@ class SummaryAdults extends Component {
 SummaryAdults.propTypes = {
   applicationData: PropTypes.shape({
     adults: PropTypes.object.isRequired,
-    showHousehold: PropTypes.bool.isRequired,
-  }).isRequired,
+    showHousehold: PropTypes.bool.isRequired
+  }).isRequired
 }
 
 export default SummaryAdults

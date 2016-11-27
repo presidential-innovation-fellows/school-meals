@@ -170,7 +170,7 @@ class IncomeElection extends Component {
 IncomeElection.propTypes = {
   applicationData: PropTypes.shape({
     electToProvideIncome: PropTypes.bool,
-    students: PropTypes.object.isRequired,
+    students: PropTypes.object.isRequired
   }).isRequired
 }
 

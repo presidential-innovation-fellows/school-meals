@@ -86,7 +86,7 @@ class Navigation extends Component {
 Navigation.propTypes = {
   helpData: PropTypes.object.isRequired,
   localeData: PropTypes.object.isRequired,
-  navigationData: PropTypes.object.isRequired,
+  navigationData: PropTypes.object.isRequired
 };
 
 export default Navigation

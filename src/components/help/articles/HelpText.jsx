@@ -502,7 +502,7 @@ export const help = {
       organizationEmail: organization.contact.email,
       organizationAddress: organization.contact.address
     }}
-  />,
+  />
 }
 
 export const define = {

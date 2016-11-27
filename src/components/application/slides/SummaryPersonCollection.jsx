@@ -30,7 +30,7 @@ class SummaryPersonCollection extends Component {
 SummaryPersonCollection.propTypes = {
   collection: PropTypes.object.isRequired,
   id: PropTypes.string,
-  showIncomes: PropTypes.bool,
+  showIncomes: PropTypes.bool
 }
 
 export default SummaryPersonCollection

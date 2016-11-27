@@ -24,15 +24,15 @@ export const assistancePrograms = [
 export const assistanceProgramsVarArray = [
   {
     fullName: 'Supplemental Nutrition Assistance Program',
-    accronym: 'SNAP',
+    accronym: 'SNAP'
   },
   {
     fullName: 'Temporary Assistance for Needy Families',
-    accronym: 'TANF',
+    accronym: 'TANF'
   },
   {
     fullName: 'Food Distribution Program on Indian Reservations',
-    accronym: 'FDPIR',
+    accronym: 'FDPIR'
   }
 ]
 
@@ -45,13 +45,13 @@ export const assistanceProgramsVar = {
 export const hmrPrograms = {
   mep: {
     fullName: 'Migrant Education Program',
-    accronym: 'MEP',
+    accronym: 'MEP'
   },
   mckinney: {
     shortName: 'McKinney-Vento Homeless Assistance Act',
-    fullName: 'McKinney-Vento Education of Homeless Chilren and Youth Assistance Act',
+    fullName: 'McKinney-Vento Education of Homeless Chilren and Youth Assistance Act'
   },
-  runaway: 'Runaway and Homeless Youth Act',
+  runaway: 'Runaway and Homeless Youth Act'
 }
 
 // To support an additional language:
@@ -75,6 +75,6 @@ export const locales = [
     code: 'es',
     language: 'Español',
     iSpeak: 'Yo hablo español'
-  },
+  }
 ]
 //     5. add locale to the Intl polyfill in index.html (see polyfill.min.js)

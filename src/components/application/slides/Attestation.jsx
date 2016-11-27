@@ -124,7 +124,7 @@ class Attestation extends Component {
 Attestation.propTypes = {
   attestor: PropTypes.object.isRequired,
   attestation: PropTypes.shape({
-    date: PropTypes.string.isRequired,
+    date: PropTypes.string.isRequired
   }).isRequired
 }
 

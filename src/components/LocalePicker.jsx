@@ -27,7 +27,7 @@ class LocalePicker extends Component {
 
 LocalePicker.propTypes = {
   locales: PropTypes.array.isRequired,
-  localeData: PropTypes.object.isRequired,
+  localeData: PropTypes.object.isRequired
 };
 
 export default LocalePicker

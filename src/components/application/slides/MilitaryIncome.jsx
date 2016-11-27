@@ -16,8 +16,8 @@ class MilitaryIncome extends Component {
     const incomeType = person.incomeTypes.military
     const incomeSources = incomeType.sources
     const incomeTypeProps = {
-      name: "military",
-      label: "Military Income",
+      name: 'military',
+      label: 'Military Income',
       person
     }
 
