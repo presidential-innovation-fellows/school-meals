@@ -10,7 +10,7 @@ class BooleanRadio extends Component {
   trueId = `${this.name}-true`
   falseId = `${this.name}-false`
 
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.defaultOnChange = this.defaultOnChange.bind(this)
     this.handleChange = this.handleChange.bind(this)

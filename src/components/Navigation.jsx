@@ -1,4 +1,4 @@
-﻿import React, { Component, PropTypes } from 'react'
+import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
 import { Glyphicon, Nav, NavItem, Navbar } from 'react-bootstrap'
 import { locales, organization } from '../config'
@@ -7,7 +7,7 @@ import LocalePicker from './LocalePicker'
 
 @observer
 class Navigation extends Component {
-  constructor (props, context) {
+  constructor(props, context) {
     super(props, context)
     this.handleData = this.handleData.bind(this)
     this.handleHelp = this.handleHelp.bind(this)

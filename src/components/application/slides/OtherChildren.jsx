@@ -1,4 +1,4 @@
-﻿import React, { Component } from 'react'
+import React, { Component } from 'react'
 import Slide from '../Slide'
 import InformalNameList from '../InformalNameList'
 import PersonCollection from '../PersonCollection'

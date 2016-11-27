@@ -13,7 +13,7 @@ class Foster extends Component {
     isFoster: null
   }
 
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.onChange = this.onChange.bind(this)
   }

@@ -3,7 +3,7 @@ import Topic from '../Topic'
 import { assistanceProgramsVar } from '../../../config'
 import { FormattedMessage } from 'react-intl'
 
-//F14
+// F14
 export default class WhatInformation extends Component {
   render() {
     const title = <FormattedMessage

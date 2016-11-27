@@ -6,7 +6,7 @@ import { observer } from 'mobx-react'
 class Checkbox extends Component {
   name = shortid.generate()
 
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.defaultOnChange = this.defaultOnChange.bind(this)
     this.handleChange = this.handleChange.bind(this)

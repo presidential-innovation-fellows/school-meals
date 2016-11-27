@@ -14,7 +14,7 @@ import RegularCash from '../topics/RegularCash'
 import ReportCombat from '../topics/ReportCombat'
 import WhatIncome from '../topics/WhatIncome'
 
-//F15, F24, F40, F26-39, F16, F20, F22-23, F5, F41, F11-13, F42, F10, F43, D1-23
+// F15, F24, F40, F26-39, F16, F20, F22-23, F5, F41, F11-13, F42, F10, F43, D1-23
 
 export default class Summary extends Component {
   render() {

@@ -4,7 +4,7 @@ import InputField from './InputField'
 
 @observer
 class IncomeSourceAmount extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.handleChange = this.handleChange.bind(this)
   }

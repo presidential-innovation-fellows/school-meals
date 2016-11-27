@@ -8,7 +8,7 @@ import NotTheSame from '../topics/NotTheSame'
 import WhatIncome from '../topics/WhatIncome'
 
 
-//F28, F26, F27, F24, D17-19, D5
+// F28, F26, F27, F24, D17-19, D5
 
 export default class RetirementIncome extends Component {
   render() {

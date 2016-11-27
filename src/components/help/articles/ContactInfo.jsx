@@ -4,7 +4,7 @@ import ArticleFaqSection from '../ArticleFaqSection'
 import Topic from '../Topic'
 import { help } from './HelpText'
 
-//F42
+// F42
 
 export default class All extends Component {
   render() {

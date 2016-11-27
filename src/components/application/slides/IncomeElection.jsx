@@ -11,7 +11,7 @@ import Tooltip from '../Tooltip'
 
 @observer
 class IncomeElection extends Component {
-  constructor (props, context) {
+  constructor(props, context) {
     super(props, context)
     this.programDescription = this.programDescription.bind(this)
     this.onChange = this.onChange.bind(this)

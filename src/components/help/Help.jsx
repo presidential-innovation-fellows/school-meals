@@ -11,7 +11,7 @@ import { FormattedMessage } from 'react-intl'
 class Help extends Component {
   @observable isSearching = false
 
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.handleClick = this.handleClick.bind(this)
     this.handleSearchChange = this.handleSearchChange.bind(this)

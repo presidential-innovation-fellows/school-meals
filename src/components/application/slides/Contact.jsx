@@ -9,7 +9,7 @@ import { FormattedMessage } from 'react-intl'
 
 @observer
 class Contact extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.onUsStateChange = this.onUsStateChange.bind(this)
   }

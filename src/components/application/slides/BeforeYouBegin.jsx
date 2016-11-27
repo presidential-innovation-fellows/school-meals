@@ -1,4 +1,4 @@
-﻿import React from 'react'
+import React from 'react'
 import Slide from '../Slide'
 import SerialList from '../SerialList'
 import SchoolYear from '../SchoolYear'
@@ -12,7 +12,7 @@ import { FormattedMessage } from 'react-intl'
 
 @observer
 class BeforeYouBegin extends React.Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.handleCheckItOut = this.handleCheckItOut.bind(this)
   }

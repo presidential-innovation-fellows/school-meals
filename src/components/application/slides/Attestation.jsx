@@ -1,4 +1,4 @@
-﻿import React, { Component, PropTypes } from 'react'
+import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
 import Form from '../Form'
 import Fieldset from '../Fieldset'

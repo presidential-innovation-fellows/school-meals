@@ -3,7 +3,7 @@ import Topic from '../Topic'
 import { organization } from '../../../config'
 import { FormattedMessage } from 'react-intl'
 
-//F22
+// F22
 export default class QualifyHomeless extends Component {
   render() {
     const title = <FormattedMessage

@@ -5,7 +5,7 @@ import { organization } from '../config'
 
 @observer
 class Footer extends Component {
-  render () {
+  render() {
     return (
       <footer className="page-footer">
         <div className="usa-grid">

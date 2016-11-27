@@ -3,7 +3,7 @@ import Topic from '../Topic'
 import { organization } from '../../../config'
 import { FormattedMessage } from 'react-intl'
 
-//F20
+// F20
 export default class QualifyMigrant extends Component {
   render() {
     const title = <FormattedMessage

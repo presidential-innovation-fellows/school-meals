@@ -4,7 +4,7 @@ import ArticleFaqSection from '../ArticleFaqSection'
 import Topic from '../Topic'
 import { help } from './HelpText'
 
-//F41, F11-13
+// F41, F11-13
 
 export default class Signature extends Component {
   render() {

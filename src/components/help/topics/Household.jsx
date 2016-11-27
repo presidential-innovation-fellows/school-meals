@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Topic from '../Topic'
 import { FormattedMessage } from 'react-intl'
 
-//F15
+// F15
 export default class Household extends Component {
   render() {
     const title = <FormattedMessage

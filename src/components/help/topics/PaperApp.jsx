@@ -3,7 +3,7 @@ import Topic from '../Topic'
 import { FormattedMessage } from 'react-intl'
 import { organization } from '../../../config'
 
-//F1
+// F1
 export default class PaperApp extends Component {
   render() {
     const title = <FormattedMessage

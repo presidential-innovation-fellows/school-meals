@@ -9,7 +9,7 @@ import { FormattedMessage } from 'react-intl'
 class InputField extends Component {
   controlId = shortid.generate()
 
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.defaultOnChange = this.defaultOnChange.bind(this)
     this.handleChange = this.handleChange.bind(this)

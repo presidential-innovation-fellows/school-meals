@@ -8,7 +8,7 @@ import { FormattedMessage } from 'react-intl'
 
 @observer
 class OtherProgramsProgram extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.onIsApplicableChange = this.onIsApplicableChange.bind(this)
   }

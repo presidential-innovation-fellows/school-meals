@@ -7,7 +7,7 @@ import { FormattedMessage } from 'react-intl'
 
 @observer
 class ThankYou extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.downloadData = this.downloadData.bind(this)
   }

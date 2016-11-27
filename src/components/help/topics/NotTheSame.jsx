@@ -3,10 +3,10 @@ import Topic from '../Topic'
 import { organization } from '../../../config'
 import { FormattedMessage } from 'react-intl'
 
-//F28
+// F28
 export default class NotTheSame extends Component {
   render() {
-    const title= <FormattedMessage
+    const title = <FormattedMessage
                      id="help.topic.NotTheSame.question"
                      description="Question for the Not the Same help topic."
                      defaultMessage="What if my income is not always the same?"

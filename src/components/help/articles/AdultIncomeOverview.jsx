@@ -11,7 +11,7 @@ import RegularCash from '../topics/RegularCash'
 import NetSelfEmployment from '../topics/NetSelfEmployment'
 import WhatIncome from '../topics/WhatIncome'
 
-//F24, F26-F40, F13, F15, D5-D23
+// F24, F26-F40, F13, F15, D5-D23
 
 export default class AdultIncomeOverview extends Component {
   render() {

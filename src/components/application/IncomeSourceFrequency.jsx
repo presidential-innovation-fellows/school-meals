@@ -6,7 +6,7 @@ import { FormattedMessage } from 'react-intl'
 
 @observer
 class IncomeSourceFrequency extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.defaultOnChange = this.defaultOnChange.bind(this)
     this.handleChange = this.handleChange.bind(this)

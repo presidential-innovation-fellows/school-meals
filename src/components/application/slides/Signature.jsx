@@ -10,7 +10,7 @@ import { FormattedMessage } from 'react-intl'
 
 @observer
 class Signature extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.handleSsnChange = this.handleSsnChange.bind(this)
     this.handleNoSsnChange = this.handleNoSsnChange.bind(this)

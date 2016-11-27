@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Topic from '../Topic'
 import { FormattedMessage } from 'react-intl'
 
-//D7
+// D7
 export default class NetSelfEmployment extends Component {
   render() {
     const title = <FormattedMessage

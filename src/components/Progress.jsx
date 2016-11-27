@@ -1,4 +1,4 @@
-﻿import React, { Component, PropTypes } from 'react'
+import React, { Component, PropTypes } from 'react'
 import Steps, { Step } from 'rc-steps'
 import { FormattedMessage } from 'react-intl'
 import { observer } from 'mobx-react'
@@ -6,7 +6,7 @@ import { ProgressBar } from 'react-bootstrap'
 
 @observer
 class Progress extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.oldPercent = 0
   }

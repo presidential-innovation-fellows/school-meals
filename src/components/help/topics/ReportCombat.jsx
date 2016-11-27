@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Topic from '../Topic'
 import { FormattedMessage } from 'react-intl'
 
-//F30
+// F30
 export default class ReportCombat extends Component {
   render() {
     const title = <FormattedMessage

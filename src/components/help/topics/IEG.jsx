@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Topic from '../Topic'
 import { FormattedMessage } from 'react-intl'
 
-//D1
+// D1
 export default class IEG extends Component {
   render() {
     const title = <FormattedMessage

@@ -8,7 +8,7 @@ import { FormattedMessage } from 'react-intl'
 
 @observer
 class PersonForm extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.onRemove = this.onRemove.bind(this)
   }

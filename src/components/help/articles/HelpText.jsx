@@ -507,8 +507,8 @@ export const help = {
 
 export const define = {
   // Variables are paired by contentTerm contentDef.
-//D1 = IEG.jsx
-//D2
+// D1 = IEG.jsx
+// D2
   mckinneyTerm:
   <FormattedMessage
     id="help.articles.helpText.mckinneyTerm"
@@ -525,7 +525,7 @@ export const define = {
       mckinneyFullName: hmrPrograms.mckinney.fullName
     }}
   />,
-//D3
+// D3
   mepTerm:
   <FormattedMessage
     id="help.articles.helpText.mepTerm"
@@ -542,7 +542,7 @@ export const define = {
     defaultMessage="{mepAccronym} provides services to children who have moved across school district lines, within the last three years, in order to accompany or join a parent or guardian who seeks or obtains temporary or seasonal work in agriculture or fishing."
     values={{ mepAccronym: hmrPrograms.mep.accronym }}
   />,
-//D4
+// D4
   runawayHomelessActTerm:
   <FormattedMessage
     id="help.articles.helpText.runawayHomelessActTerm"
@@ -557,7 +557,7 @@ export const define = {
     defaultMessage="{programRunaway} authorizes community-based runaway and homeless youth projects to provide temporary shelter and care to runaway or otherwise homeless youth who are in need of temporary shelter, counseling, and aftercare services."
     values={{ programRunaway: hmrPrograms.runaway }}
   />,
-//D5
+// D5
   currentTerm:
   <FormattedMessage
     id="help.articles.helpText.currentTerm"
@@ -570,7 +570,7 @@ export const define = {
     description="Help text."
     defaultMessage="Current income is income earned or received in the current month, or in the month before the completion of this application."
   />,
-//D6
+// D6
   cashBonusTerm:
   <FormattedMessage
     id="help.articles.helpText.cashBonusTerm"
@@ -583,8 +583,8 @@ export const define = {
     description="Help text."
     defaultMessage="A cash bonus is a lump sum of money awarded to an employee, either occasionally or periodically."
   />,
-//D7 = NetSelfEmployment.jsx
-//D8
+// D7 = NetSelfEmployment.jsx
+// D8
   ssiTerm:
   <FormattedMessage
     id="help.articles.helpText.ssiTerm"
@@ -597,7 +597,7 @@ export const define = {
     description="Help text."
     defaultMessage="Supplemental Security Income (SSI) provides cash to meet basic needs for food, clothing, and shelter to aged, blind, and disabled people who have little or no income."
   />,
-//D9
+// D9
   cashAssistanceTerm:
   <FormattedMessage
     id="help.articles.helpText.cashAssistanceTerm"
@@ -616,7 +616,7 @@ export const define = {
       organizationAddress: organization.contact.address
     }}
   />,
-//D10
+// D10
   alimonyTerm:
   <FormattedMessage
     id="help.articles.helpText.alimonyTerm"
@@ -629,7 +629,7 @@ export const define = {
     description="Help text."
     defaultMessage="Alimony is income from payments paid by a spouse or former spouse from whom you are divorced or legally separated."
   />,
-//D11
+// D11
   childSupportTerm:
   <FormattedMessage
     id="help.articles.helpText.childSupportTerm"
@@ -642,7 +642,7 @@ export const define = {
     description="Help text."
     defaultMessage="Child support payments are payments received by one parent from another to cover the cost of raising a child."
   />,
-//D12
+// D12
   unemploymentTerm:
   <FormattedMessage
     id="help.articles.helpText.unemploymentTerm"
@@ -655,7 +655,7 @@ export const define = {
     description="Help text."
     defaultMessage="Unemployment benefits are payments from the government or a labor union to a person who is unemployed."
   />,
-//D13
+// D13
   workersCompTerm:
   <FormattedMessage
     id="help.articles.helpText.workersCompTerm"
@@ -668,7 +668,7 @@ export const define = {
     description="Help text."
     defaultMessage="Worker’s compensation benefits are payments to cover lost wages and medical expenses of an employee who is injured on the job."
   />,
-//D14
+// D14
   strikeBenefitsTerm:
   <FormattedMessage
     id="help.articles.helpText.strikeBenefitsTerm"
@@ -681,7 +681,7 @@ export const define = {
     description="Help text."
     defaultMessage="Strike benefits are compensation paid by a union to workers on strike."
   />,
-//D15
+// D15
   ssdiTerm:
   <FormattedMessage
     id="help.articles.helpText.ssdiTerm"
@@ -694,7 +694,7 @@ export const define = {
     description="Help text."
     defaultMessage="Social Security Disability Insurance (SSDI) are benefits paid to people who have worked long enough and paid Social Security taxes but who can’t work because they have a medical condition that is expected to last at least one year or result in death."
   />,
-//D16
+// D16
   veteransBenefitsTerm:
   <FormattedMessage
     id="help.articles.helpText.veteransBenefitsTerm"
@@ -707,7 +707,7 @@ export const define = {
     description="Help text."
     defaultMessage="Benefits that are paid to veterans that have a service-connected disability and were not dishonorably discharged."
   />,
-//D17
+// D17
   socialSecurityTerm:
   <FormattedMessage
     id="help.articles.helpText.socialSecurityTerm"
@@ -720,7 +720,7 @@ export const define = {
     description="Help text."
     defaultMessage="Social Security retirement benefits are monthly payments to people (or spouses, or dependent children of people) who are retired or disabled, but have worked and paid taxes into the Social Security system. Payments are based on your reported earnings. Also, upon death, survivors can collect benefits."
   />,
-//D18
+// D18
   blackLungTerm:
   <FormattedMessage
     id="help.articles.helpText.blackLungTerm"
@@ -733,7 +733,7 @@ export const define = {
     description="Help text."
     defaultMessage="Black Lung benefits provide monthly payments and medical treatment for people that became disabled from black lung disease from working in or around the nation’s coal mines."
   />,
-//D19
+// D19
   railroadRetirementTerm:
   <FormattedMessage
     id="help.articles.helpText.railroadRetirementTerm"
@@ -746,8 +746,8 @@ export const define = {
     description="Help text."
     defaultMessage="Railroad retirement benefits provide retirement and disability annuities for qualified railroad employees, spouse annuities for their wives or husbands, and survivor benefits for the families of deceased employees who were insured under the Railroad Retirement Act."
   />,
-//D20 = RegularCash.jsx
-//D21
+// D20 = RegularCash.jsx
+// D21
   pensionTerm:
   <FormattedMessage
     id="help.articles.helpText.pensionTerm"
@@ -760,7 +760,7 @@ export const define = {
     description="Help text."
     defaultMessage="A pension is generally a series of payments made to you after you retire from work. Pension payments are made regularly and are based on such factors as years of service and prior compensation."
   />,
-//D22
+// D22
   annuityTerm:
   <FormattedMessage
     id="help.articles.helpText.annuityTerm"
@@ -773,7 +773,7 @@ export const define = {
     description="Help text."
     defaultMessage="An annuity is a series of payments under a contract made at regular intervals over a period of more than one full year. They can be either fixed (under which you receive a definite amount) or variable (not fixed). Annuities can be purchased by individuals alone, or with the help of an employer."
   />,
-//D23
+// D23
   trustTerm:
   <FormattedMessage
     id="help.articles.helpText.trustTerm"
@@ -786,7 +786,7 @@ export const define = {
     description="Help text."
     defaultMessage="A trust is, in general, a relationship in which one person holds title to property, subject to an obligation to keep or use the property for the benefit of another."
   />,
-//D24
+// D24
   ssiChildrenTerm:
   <FormattedMessage
     id="help.articles.helpText.ssiChildrenTerm"
@@ -799,7 +799,7 @@ export const define = {
     description="Help text."
     defaultMessage="Supplemental Security Income (SSI) provides cash to meet basic needs for food, clothing, and shelter to children younger than age 18 who have a physical or mental condition, or combination of conditions, that meets Social Security’s definition of disability for children, and if his or her income and resources fall within the eleigibility limits."
   />,
-//D25
+// D25
   ssSurvivorTerm:
   <FormattedMessage
     id="help.articles.helpText.ssSurvivorTerm"
@@ -812,7 +812,7 @@ export const define = {
     description="Help text."
     defaultMessage="Social Security survivor benefits are monthly payments to children of a deceased parent who was retired or disabled, but worked and paid taxes into the Social Security system."
   />,
-//D26
+// D26
   pensionBeneficiaryTerm:
   <FormattedMessage
     id="help.articles.helpText.pensionBeneficiaryTerm"
@@ -825,7 +825,7 @@ export const define = {
     description="Help text."
     defaultMessage="A child may receive payments from a pension of a deceased parent."
   />,
-//D27
+// D27
   annuityChildrenTerm:
   <FormattedMessage
     id="help.articles.helpText.annuityChildrenTerm"

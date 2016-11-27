@@ -8,7 +8,7 @@ import NotTheSame from '../topics/NotTheSame'
 import WhatIncome from '../topics/WhatIncome'
 import NetSelfEmployment from '../topics/NetSelfEmployment'
 
-//F28, F33-F35, F39, F26-27, F24, D5-D7
+// F28, F33-F35, F39, F26-27, F24, D5-D7
 
 export default class EmploymentIncome extends Component {
   render() {

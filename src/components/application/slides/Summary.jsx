@@ -1,4 +1,4 @@
-﻿import React, { Component, PropTypes } from 'react'
+import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
 import SerialList from '../SerialList'
 import SummaryAdults from './SummaryAdults'

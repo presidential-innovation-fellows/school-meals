@@ -7,7 +7,7 @@ import AdditionalIncome from './IncomeSourceAdditional'
 
 @observer
 class IncomeSource extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.onChange = this.onChange.bind(this)
   }

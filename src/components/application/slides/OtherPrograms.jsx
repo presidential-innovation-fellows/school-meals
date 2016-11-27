@@ -1,4 +1,4 @@
-﻿import React, { Component, PropTypes } from 'react'
+import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
 import InformalNameList from '../InformalNameList'
 import OtherProgramsProgram from './OtherProgramsProgram'

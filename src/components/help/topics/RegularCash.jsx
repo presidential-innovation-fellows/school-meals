@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Topic from '../Topic'
 import { FormattedMessage } from 'react-intl'
 
-//D20
+// D20
 export default class RegularCash extends Component {
   render() {
     const title = <FormattedMessage

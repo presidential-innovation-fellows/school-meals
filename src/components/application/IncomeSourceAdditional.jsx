@@ -6,7 +6,7 @@ import shortid from 'shortid'
 
 @observer
 class AdditionalIncome extends Component {
-  constructor (props, context) {
+  constructor(props, context) {
     super(props, context)
 
     this.onAddIncomeClick = this.onAddIncomeClick.bind(this)
@@ -17,7 +17,7 @@ class AdditionalIncome extends Component {
   onAddIncomeClick(){
     const incomeSource = this.props.incomeSource
 
-    if (typeof(incomeSource.more) !== 'undefined') {
+    if (typeof (incomeSource.more) !== 'undefined') {
       this.context.applicationData.addIncomeSource(incomeSource)
     }
   }
@@ -57,11 +57,11 @@ class AdditionalIncome extends Component {
 
     return (
       <div>
-        { typeof(incomeSource.more) !== 'undefined' &&
+        { typeof (incomeSource.more) !== 'undefined' &&
           <div>
 
             {
-              incomeSource.more.map( (source, i) => {
+              incomeSource.more.map((source, i) => {
 
                 return (
                   <div key={shortid.generate()}>

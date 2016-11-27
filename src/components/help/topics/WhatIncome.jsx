@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import Topic from '../Topic'
 import { FormattedMessage } from 'react-intl'
 
-//F24
+// F24
 export default class WhatIncome extends Component {
   render() {
     const title = <FormattedMessage

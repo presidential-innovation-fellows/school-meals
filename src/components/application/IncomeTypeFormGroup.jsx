@@ -7,7 +7,7 @@ import { FormattedMessage } from 'react-intl'
 
 @observer
 class IncomeTypeFormGroup extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.onChange = this.onChange.bind(this)
   }

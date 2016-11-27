@@ -6,7 +6,7 @@ import { ApplicationData } from '../../../stores/ApplicationData'
 
 @observer
 class AssistanceProgramList extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.onChange = this.onChange.bind(this)
   }

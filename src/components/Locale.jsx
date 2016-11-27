@@ -4,7 +4,7 @@ import { MenuItem } from 'react-bootstrap'
 
 @observer
 class Locale extends Component {
-  constructor (props, context) {
+  constructor(props, context) {
     super(props, context)
     this.handleLocaleClicked = this.handleLocaleClicked.bind(this)
   }

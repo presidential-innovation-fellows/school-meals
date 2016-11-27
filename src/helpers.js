@@ -1,4 +1,4 @@
-﻿export function schoolYear(startYear = new Date().getFullYear()) {
+export function schoolYear(startYear = new Date().getFullYear()) {
   return `${startYear}–${startYear + 1}`
 }
 

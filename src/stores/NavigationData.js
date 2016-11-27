@@ -31,7 +31,7 @@ export default class NavigationData {
     // https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onhashchange
     if (!window.HashChangeEvent) {
       (function() {
-        let lastURL=document.URL;
+        let lastURL = document.URL;
         window.addEventListener('hashchange', (event) => {
           Object.defineProperty(event, 'oldURL', {
             enumerable: true,
