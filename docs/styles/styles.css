@@ -185,7 +185,7 @@ footer .not-real-disclaimer {
   margin-bottom: 2em;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .progress-desktop {
     display: none;
   }
@@ -364,7 +364,7 @@ button.navbar-toggle:focus {
   display: block;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .navbar .usa-grid {
     padding-left: 0;
     padding-right: 0;
