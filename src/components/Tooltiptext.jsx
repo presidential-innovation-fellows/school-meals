@@ -141,7 +141,7 @@ export const tooltiptext = {
         organizationName: organization.name,
         organizationContactInfo: `${organization.contact.phone} / ${organization.contact.email} / ${organization.contact.address}`
       }}
-  />,
+                  />,
   SSDI: <FormattedMessage
       id="tooltip.ssdi"
       description="Tooltip text explaining SSDI."
