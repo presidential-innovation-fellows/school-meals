@@ -10,9 +10,7 @@ class Tooltip extends Component {
     const id = shortid.generate()
 
     return (
-      <OverlayTrigger placement="top" overlay={
-        <BootstrapTooltip id={id}>{text}</BootstrapTooltip> }
-      >
+      <OverlayTrigger placement="top" overlay={<BootstrapTooltip id={id}>{text}</BootstrapTooltip>}>
         <strong className="info-target">
           {children || target}
           <Glyphicon glyph="question-sign" />
