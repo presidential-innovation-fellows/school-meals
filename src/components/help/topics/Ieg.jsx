@@ -3,7 +3,7 @@ import Topic from '../Topic'
 import { FormattedMessage } from 'react-intl'
 
 // D1
-export default class IEG extends Component {
+export default class Ieg extends Component {
   render() {
     const title = <FormattedMessage
         id="help.topic.IEG.term"

@@ -5,7 +5,7 @@ import ArticleDefinitionSection from '../ArticleDefinitionSection'
 import Topic from '../Topic'
 import { define, help } from './HelpText'
 import Household from '../topics/Household'
-import IEG from '../topics/IEG'
+import Ieg from '../topics/Ieg'
 import NetSelfEmployment from '../topics/NetSelfEmployment'
 import NotTheSame from '../topics/NotTheSame'
 import QualifyHomeless from '../topics/QualifyHomeless'
@@ -52,7 +52,7 @@ export default class Summary extends Component {
           <Topic title={help.disagreeTitle} body={help.disagreeBody} />
         </ArticleFaqSection>
         <ArticleDefinitionSection>
-          <IEG />
+          <Ieg />
           <Topic title={define.mckinneyTerm} body={define.mckinneyDef} />
           <Topic title={define.mepTerm} body={define.mepDef} />
           <Topic title={define.runawayHomelessActTerm} body={define.runawayHomelessActDef} />

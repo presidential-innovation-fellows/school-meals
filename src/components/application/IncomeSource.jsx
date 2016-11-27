@@ -41,9 +41,9 @@ class IncomeSource extends Component {
           {incomeSource.has &&
           <div className="income-source-details">
 
-            <IncomeSourceSingle incomeSource={incomeSource} showHourly={showHourly} showAnnual={showAnnual}/>
+            <IncomeSourceSingle incomeSource={incomeSource} showHourly={showHourly} showAnnual={showAnnual} />
 
-            <AdditionalIncome incomeSource={incomeSource} showHourly={showHourly} showAnnual={showAnnual}/>
+            <AdditionalIncome incomeSource={incomeSource} showHourly={showHourly} showAnnual={showAnnual} />
 
           </div>
           }

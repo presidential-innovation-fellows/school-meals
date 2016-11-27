@@ -16,8 +16,17 @@ import { FormattedMessage } from 'react-intl'
 
 @observer
 class Summary extends Component {
+  constructor(props) {
+    super(props)
+    this.assistanceProgramAccronym = this.assistanceProgramAccronym.bind(this)
+  }
+
   get isValid() {
     return this.props.applicationData.certifiedCorrect
+  }
+
+  assistanceProgramAccronym(program) {
+    return program.accronym
   }
 
   render() {
@@ -218,7 +227,7 @@ class Summary extends Component {
                       description="Certification statement for programs"
                       defaultMessage="I certify* that my household participates in"
                   />&nbsp;
-                  <SerialList className="usa-label-big" items={assistancePrograms} mapFunc={program => program.accronym} />
+                  <SerialList className="usa-label-big" items={assistancePrograms} mapFunc={this.assistanceProgramAccronym} />
                 </strong>
                  :
                 <strong>

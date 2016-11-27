@@ -9,6 +9,15 @@ import { FormattedMessage } from 'react-intl'
 
 @observer
 class Adults extends Component {
+  constructor(props) {
+    super(props)
+    this.filterFunc = this.filterFunc.bind(this)
+  }
+
+  filterFunc(person) {
+    return !person.isAttestor
+  }
+
   @computed get nextText() {
     if (this.props.adults.length === 1) {
       return <FormattedMessage
@@ -98,7 +107,7 @@ class Adults extends Component {
 
         <PersonCollection
             collection={adults}
-            filter={person => !person.isAttestor}
+            filter={this.filterFunc}
             label={
               <FormattedMessage
                   id="app.slides.adults.label"
