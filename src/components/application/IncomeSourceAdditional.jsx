@@ -22,7 +22,7 @@ class AdditionalIncome extends Component {
   onAddIncomeClick(){
     let incomeSource = this.props.incomeSource
 
-    if (typeof(incomeSource.more) != 'undefined') {
+    if (typeof(incomeSource.more) !== 'undefined') {
       this.context.applicationData.addIncomeSource(incomeSource)
     }
   }
@@ -64,13 +64,13 @@ class AdditionalIncome extends Component {
 
     return (
       <div>
-        { typeof(incomeSource.more) != 'undefined' &&
+        { typeof(incomeSource.more) !== 'undefined' &&
           <div>
 
             {
               incomeSource.more.map( function(source, i) {
 
-                return (<div key={shortid.generate()}> <div style={{borderTop: '1px solid LightGray', marginTop: '10px', paddingTop: '10px'}}> <IncomeSourceSingle incomeSource={source} {...incomeSourceProps}/>  <button id={i} {...deleteButtonProps}>Remove</button> </div></div>)
+                return (<div key={shortid.generate()}> <div style={{borderTop: '1px solid LightGray', marginTop: '10px', paddingTop: '10px'}}> <IncomeSourceSingle incomeSource={source} {...incomeSourceProps}/>            <button id={i} {...deleteButtonProps}>Remove</button> </div></div>)
 
                 //return (<div key={shortid.generate()}> <IncomeSourceSingle incomeSource={source} {...incomeSourceProps}/>  <button id={i} {...deleteButtonProps}>Remove {i+2}</button> </div>)
               }, this)

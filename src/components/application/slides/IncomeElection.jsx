@@ -61,7 +61,7 @@ class IncomeElection extends Component {
                    values={{ studentCount }}
         />
       case 'isHomeless':
-        return  <FormattedMessage
+        return <FormattedMessage
                    id="app.slides.incomeElection.isHomeless"
                    description="Third-person verb describing applicability of program."
                    defaultMessage="{studentCount, plural, one {receives} other {receive}} assistance under the {programName}"
@@ -71,7 +71,7 @@ class IncomeElection extends Component {
                    }}
         />
       case 'isMigrant':
-        return  <FormattedMessage
+        return <FormattedMessage
                    id="app.slides.incomeElection.isMigrant"
                    description="Third-person verb describing applicability of program."
                    defaultMessage="{studentCount, plural, one {participates} other {participate}} in the {programName} ({programShortName})"
@@ -82,7 +82,7 @@ class IncomeElection extends Component {
                    }}
         />
       case 'isRunaway':
-        return  <FormattedMessage
+        return <FormattedMessage
                    id="app.slides.incomeElection.isRunaway"
                    description="Third-person verb describing applicability of program."
                    defaultMessage="{studentCount, plural, one {participates} other {participate}} in a program under the {programName}"

@@ -31,7 +31,7 @@ class SearchTopics extends Component {
       this.props.onChange(searchVal)
     }
 
-    if (!!searchVal) {
+    if (searchVal) {
       $container.show()
 
       jQuery('ul.usa-accordion > section > li', $container).each(function () {

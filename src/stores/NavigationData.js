@@ -1,4 +1,4 @@
-import { action, computed, observable } from 'mobx'
+import { action, observable } from 'mobx'
 
 // NOTE -- this is admittedly not very reacty. Navigation is basically just
 //         using CSS to show the appropriate section.slide at a given time.
@@ -29,7 +29,7 @@ export default class NavigationData {
 
     // Workaround for event.newURL and event.oldURL:
     // https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onhashchange
-    if (!window.HashChangeEvent) (function() {
+    if (!window.HashChangeEvent) {(function() {
       var lastURL=document.URL;
       window.addEventListener('hashchange', function(event){
         Object.defineProperty(event, 'oldURL', {
@@ -44,7 +44,7 @@ export default class NavigationData {
         })
         lastURL = document.URL
       })
-    }())
+    }())}
 
     this.handleHashChange = this.handleHashChange.bind(this)
     window.onhashchange = this.handleHashChange
@@ -194,9 +194,9 @@ export default class NavigationData {
 
   @action init() {
     if (window.location.hash === '#/')
-      window.location.replace('#')
+      {window.location.replace('#')}
     else
-      window.location.replace('#/')
+      {window.location.replace('#/')}
   }
 
   @action back() {
