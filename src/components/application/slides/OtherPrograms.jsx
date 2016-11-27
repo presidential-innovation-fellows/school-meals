@@ -6,8 +6,7 @@ import Tooltip from '../Tooltip'
 import { tooltiptext } from '../../Tooltiptext'
 import { observable } from 'mobx'
 import { observer } from 'mobx-react'
-import { organization } from '../../../config'
-import { hmrPrograms } from '../../../config'
+import { hmrPrograms, organization } from '../../../config'
 import { FormattedMessage } from 'react-intl'
 
 @observer
