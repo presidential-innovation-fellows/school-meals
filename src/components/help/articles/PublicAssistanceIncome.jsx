@@ -1,13 +1,13 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import Article from '../Article'
 import ArticleFaqSection from '../ArticleFaqSection'
 import ArticleDefinitionSection from '../ArticleDefinitionSection'
 import Topic from '../Topic'
-import { help, define } from './HelpText'
+import { define, help } from './HelpText'
 import NotTheSame from '../topics/NotTheSame'
 import WhatIncome from '../topics/WhatIncome'
 
-//F36, F28, F26-27, F24, D8-9, D5
+// F36, F28, F26-27, F24, D8-9, D5
 
 export default class PublicAssistanceIncome extends Component {
   render() {

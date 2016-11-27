@@ -10,7 +10,7 @@ class ChildIncomeSlides extends Component {
   }
 
   render() {
-    return(
+    return (
       <div>
         {this.childrenWithIncome.map(child =>
           <ChildIncomeSlide person={child} key={child.id} />)

@@ -6,35 +6,35 @@ import { ApplicationData } from '../../../stores/ApplicationData'
 
 @observer
 class AssistanceProgramList extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
-    this.onChange = this.onChange.bind(this)
+    this.handleChange = this.handleChange.bind(this)
   }
 
-  onChange(fieldName, value, program) {
+  handleChange(fieldName, value, program) {
     const { students, adults, otherChildren, signature } =
       this.props.applicationData
 
     program[fieldName] = value
 
     if (value) {
-      // clear FHMR status
+      // Clear FHMR status.
       students.clearSpecialStatuses()
 
-      // clear income election
+      // Clear income election.
       this.props.applicationData.electToProvideIncome = null
 
-      // clear adults other than attestor
+      // Clear adults other than attestor.
       adults.items.splice(1)
 
-      // clear other children
+      // Clear other children.
       otherChildren.empty()
 
-      // clear attestor and student incomes
+      // Clear attestor and student incomes.
       adults.clearAllIncomes()
       students.clearAllIncomes()
 
-      // clear SSN
+      // Clear SSN.
       signature.noSsn = null
       signature.ssnLastFour = ''
     }
@@ -43,12 +43,14 @@ class AssistanceProgramList extends Component {
   render() {
     const { assistancePrograms } = this.props.applicationData
 
-    return(
+    return (
       <Checkboxes legend="Assistance programs">
         {assistancePrograms.map(program =>
-          <AssistanceProgram program={program}
-                             onChange={this.onChange}
-                             key={program.id} />
+          <AssistanceProgram
+              program={program}
+              onChange={this.handleChange}
+              key={program.id}
+          />
          )}
       </Checkboxes>
     )

@@ -8,12 +8,12 @@ import { FormattedMessage } from 'react-intl'
 
 @observer
 class PersonForm extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
-    this.onRemove = this.onRemove.bind(this)
+    this.handleRemove = this.handleRemove.bind(this)
   }
 
-  onRemove() {
+  handleRemove() {
     this.props.onRemove(this.props.person)
   }
 
@@ -21,12 +21,12 @@ class PersonForm extends Component {
     const {
       label,
       person,
-      fields,
+      fields
     } = this.props
 
     const name = person.firstName || label
 
-    return(
+    return (
       <div className="person-form">
         <Form>
           <Fieldset legend="Name">
@@ -37,12 +37,15 @@ class PersonForm extends Component {
                   <PersonAttributeInput
                       person={person}
                       field={field}
-                      key={index} />
+                      key={index}
+                  />
                  )}
               </div>
               <div>
-                <Button onClick={this.onRemove}
-                        className="usa-button-gray remove-person">
+                <Button
+                    onClick={this.handleRemove}
+                    className="usa-button-gray remove-person"
+                >
                   <FormattedMessage
                       id="app.personForm.removeButton"
                       description="Button to remove person from collection."

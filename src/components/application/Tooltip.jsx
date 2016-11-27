@@ -1,7 +1,7 @@
 import shortid from 'shortid'
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
-import { Glyphicon, OverlayTrigger, Tooltip as BootstrapTooltip } from 'react-bootstrap'
+import { Tooltip as BootstrapTooltip, Glyphicon, OverlayTrigger } from 'react-bootstrap'
 
 @observer
 class Tooltip extends Component {
@@ -10,8 +10,7 @@ class Tooltip extends Component {
     const id = shortid.generate()
 
     return (
-      <OverlayTrigger placement="top" overlay={
-        <BootstrapTooltip id={id}>{text}</BootstrapTooltip> }>
+      <OverlayTrigger placement="top" overlay={<BootstrapTooltip id={id}>{text}</BootstrapTooltip>}>
         <strong className="info-target">
           {children || target}
           <Glyphicon glyph="question-sign" />
@@ -24,7 +23,7 @@ class Tooltip extends Component {
 Tooltip.propTypes = {
   text: PropTypes.node.isRequired,
   target: PropTypes.node,
-  children: PropTypes.node,
+  children: PropTypes.node
 }
 
 export default Tooltip

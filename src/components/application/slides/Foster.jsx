@@ -5,7 +5,6 @@ import OtherProgramsProgram from './OtherProgramsProgram'
 import { allStudentsAreFoster } from '../../../helpers'
 import { observable } from 'mobx'
 import { observer } from 'mobx-react'
-import { organization } from '../../../config'
 import { FormattedMessage } from 'react-intl'
 
 @observer
@@ -14,7 +13,7 @@ class Foster extends Component {
     isFoster: null
   }
 
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.onChange = this.onChange.bind(this)
   }
@@ -32,17 +31,17 @@ class Foster extends Component {
     }
 
     if (allStudentsAreFoster(students)) {
-      // clear adults other than attestor
+      // Clear adults other than attestor.
       adults.items.splice(1)
 
-      // clear other children
+      // Clear other children.
       otherChildren.empty()
 
-      // clear attestor and student incomes
+      // Clear attestor and student incomes.
       adults.clearAllIncomes()
       students.clearAllIncomes()
 
-      // clear SSN
+      // Clear SSN.
       signature.noSsn = null
       signature.ssnLastFour = ''
     }
@@ -52,22 +51,21 @@ class Foster extends Component {
     const { students } = this.props.applicationData
 
     if (students.length === 1) {
-      for (let key in this.applicability) {
+      for (const key in this.applicability) {
         if (students.first[key] == null) {
           return false
         }
       }
     } else {
-      for (let key in this.applicability) {
-        switch(this.applicability[key]) {
-          case null:
+      for (const key in this.applicability) {
+        if (this.applicability[key] === null) {
+          return false
+        } else if (this.applicability[key] === true) {
+          if (students
+            .map(student => student[key] !== true)
+            .reduce((a, b) => a && b, true)) {
             return false
-          case true:
-            if (students
-              .map(student => student[key] !== true)
-              .reduce((a, b) => a && b, true)) {
-              return false
-            }
+          }
         }
       }
     }
@@ -77,7 +75,6 @@ class Foster extends Component {
 
   render() {
     const { allPeopleCollections, students } = this.props.applicationData
-    const contact = `${organization.name} (${organization.contact.phone} / ${organization.contact.email} / ${organization.contact.address})`
     const studentCount = students.length
     const props = {
       students: students.items,
@@ -86,13 +83,13 @@ class Foster extends Component {
       attribute: 'isFoster',
       onChange: this.onChange,
       label: <FormattedMessage
-                 id="app.slides.foster.label"
-                 description="Question asking if student in foster care."
-                 defaultMessage="{studentCount, plural, one {Does} other {Do}} {studentNames} live with you under a formal (court-ordered) foster care arrangement?"
-                 values={{
-                   studentCount,
-                   studentNames: <InformalNameList people={students} intersection={true} />,
-                 }}
+          id="app.slides.foster.label"
+          description="Question asking if student in foster care."
+          defaultMessage="{studentCount, plural, one {Does} other {Do}} {studentNames} live with you under a formal (court-ordered) foster care arrangement?"
+          values={{
+            studentCount,
+            studentNames: <InformalNameList people={students} intersection={true} />
+          }}
              />
     }
 

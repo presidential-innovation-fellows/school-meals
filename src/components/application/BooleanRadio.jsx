@@ -7,10 +7,10 @@ import { FormattedMessage } from 'react-intl'
 @observer
 class BooleanRadio extends Component {
   name = shortid.generate()
-  trueId = this.name + '-true'
-  falseId = this.name + '-false'
+  trueId = `${this.name}-true`
+  falseId = `${this.name}-false`
 
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.defaultOnChange = this.defaultOnChange.bind(this)
     this.handleChange = this.handleChange.bind(this)
@@ -18,15 +18,15 @@ class BooleanRadio extends Component {
 
   handleChange(event) {
     const handler = this.props.onChange || this.defaultOnChange
-    let value
+    let value = null
 
     switch (event.target.value) {
       case true:
-      case "true":
+      case 'true':
         value = true
         break
       case false:
-      case "false":
+      case 'false':
         value = false
         break
       default:
@@ -36,7 +36,7 @@ class BooleanRadio extends Component {
     handler(this.props.name, value, this.props.object)
   }
 
-  // side effect, but easier to handle once here than pass in every time
+  // Side effect, but easier to handle once here than pass in every time.
   defaultOnChange(fieldName, value, object) {
     object[fieldName] = value
   }
@@ -55,17 +55,21 @@ class BooleanRadio extends Component {
       <Fieldset legend={legend} type="radio">
         <ul className="usa-unstyled-list">
           <li>
-            <input {...props}
-                   id={this.trueId}
-                   value={true}
-                   checked={value === true} />
+            <input
+                {...props}
+                id={this.trueId}
+                value={true}
+                checked={value === true}
+            />
             <label htmlFor={this.trueId}>{trueLabel}</label>
           </li>
           <li>
-            <input {...props}
-                   id={this.falseId}
-                   value={false}
-                   checked={value === false} />
+            <input
+                {...props}
+                id={this.falseId}
+                value={false}
+                checked={value === false}
+            />
             <label htmlFor={this.falseId}>{falseLabel}</label>
           </li>
         </ul>

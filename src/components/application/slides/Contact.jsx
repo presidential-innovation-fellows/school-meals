@@ -5,16 +5,16 @@ import Form from '../Form'
 import Fieldset from '../Fieldset'
 import InputField from '../InputField'
 import { observer } from 'mobx-react'
-import {FormattedMessage} from 'react-intl'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class Contact extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
-    this.onUsStateChange = this.onUsStateChange.bind(this)
+    this.handleUsStateChange = this.handleUsStateChange.bind(this)
   }
 
-  onUsStateChange(event) {
+  handleUsStateChange(event) {
     this.props.contact.state = event.target.value
   }
 
@@ -31,11 +31,11 @@ class Contact extends Component {
     return (
       <Slide header={headerText} id="contact" beginsSection>
         <p className="usa-font-lead">
-        <FormattedMessage
+          <FormattedMessage
               id="app.slides.contact.intro"
               description="Introductory paragraph."
               defaultMessage="Please enter your contact information so that we can reach you in case there are any issues with your application. This information is optional, but we strongly encourage you to provide it."
-        />
+          />
         </p>
 
         <Form large>
@@ -110,9 +110,11 @@ class Contact extends Component {
                       defaultMessage="State"
                   />
                 </label>
-                <Select id="state" name="state" value={contact.state}
-                        onChange={this.onUsStateChange}>
-                  <option value=""></option>
+                <Select
+                    id="state" name="state" value={contact.state}
+                    onChange={this.handleUsStateChange}
+                >
+                  <option value="" />
                   <option value="AL">Alabama</option>
                   <option value="AK">Alaska</option>
                   <option value="AZ">Arizona</option>

@@ -1,15 +1,15 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import Topic from '../Topic'
-import {FormattedMessage} from 'react-intl'
+import { FormattedMessage } from 'react-intl'
 import { organization } from '../../../config'
 
-//F1
+// F1
 export default class PaperApp extends Component {
   render() {
     const title = <FormattedMessage
-                      id="help.topic.paperApp.question"
-                      description="Question for the paper application help topic."
-                      defaultMessage="Can I apply using a paper application?"
+        id="help.topic.paperApp.question"
+        description="Question for the paper application help topic."
+        defaultMessage="Can I apply using a paper application?"
                   />
 
     return (
@@ -23,7 +23,7 @@ export default class PaperApp extends Component {
                 organizationName: organization.name,
                 organizationContactInfo: `${organization.contact.phone} / ${organization.contact.email} / ${organization.contact.address}`,
                 paperApplicationLink:
-                  <a href={organization.paperApplication.url} target="_blank">
+                  <a href={organization.paperApplication.url} target="_blank" rel="noopener noreferrer">
                     <FormattedMessage
                         id="help.topic.paperApp.paperApplication"
                         description="Phrase"

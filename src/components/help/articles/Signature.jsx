@@ -1,11 +1,10 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import Article from '../Article'
 import ArticleFaqSection from '../ArticleFaqSection'
-import ArticleDefinitionSection from '../ArticleDefinitionSection'
 import Topic from '../Topic'
-import { help, define } from './HelpText'
+import { help } from './HelpText'
 
-//F41, F11-13
+// F41, F11-13
 
 export default class Signature extends Component {
   render() {

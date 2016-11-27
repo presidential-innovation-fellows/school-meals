@@ -1,14 +1,13 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import Article from '../Article'
 import ArticleFaqSection from '../ArticleFaqSection'
-import ArticleDefinitionSection from '../ArticleDefinitionSection'
 import Topic from '../Topic'
-import { help, define } from './HelpText'
+import { help } from './HelpText'
 import ReportCombat from '../topics/ReportCombat'
 import WhatIncome from '../topics/WhatIncome'
 import NotTheSame from '../topics/NotTheSame'
 
-//F29-F32, F28, F26-F27, F35, F24
+// F29-F32, F28, F26-F27, F35, F24
 
 export default class MilitaryIncome extends Component {
   render() {

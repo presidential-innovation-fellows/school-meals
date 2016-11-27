@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import Article from '../Article'
 import ArticleFaqSection from '../ArticleFaqSection'
 import ArticleDefinitionSection from '../ArticleDefinitionSection'
@@ -6,7 +6,7 @@ import Topic from '../Topic'
 import Household from '../topics/Household'
 import RegularCash from '../topics/RegularCash'
 import WhatIncome from '../topics/WhatIncome'
-import { help, define } from './HelpText'
+import { define, help } from './HelpText'
 
 export default class ChildIncome extends Component {
   render() {

@@ -9,7 +9,7 @@ import { FormattedMessage } from 'react-intl'
 class InputField extends Component {
   controlId = shortid.generate()
 
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.defaultOnChange = this.defaultOnChange.bind(this)
     this.handleChange = this.handleChange.bind(this)
@@ -22,7 +22,7 @@ class InputField extends Component {
     handler(event.target.name, sanitizer(event.target.value))
   }
 
-  // side effect, but easier to handle once here than pass in every time
+  // Side effect, but easier to handle once here than pass in every time.
   defaultOnChange(fieldName, value) {
     this.props.object[fieldName] = value
   }
@@ -41,7 +41,7 @@ class InputField extends Component {
     const input = this.props
     const value = input.object[input.name]
 
-    // clear error if value has been input
+    // Clear error if value has been input.
     if (input.required && value) {
       this.$inputField.removeClass('usa-input-error')
     }
@@ -49,16 +49,18 @@ class InputField extends Component {
 
   render() {
     const input = this.props
-    const additional = input.additional || input.required && <FormattedMessage
-      id="app.inputField.required"
-      description="Text that indicates a field is required."
-      defaultMessage="required"
-    />
+    const additional = input.additional || (
+      input.required && <FormattedMessage
+          id="app.inputField.required"
+          description="Text that indicates a field is required."
+          defaultMessage="required"
+                        />
+    )
     const value = input.object[input.name]
 
     let className = input.className
     if (typeof className === 'string') {
-      let key = className
+      const key = className
       className = {}
       className[key] = true
     }
@@ -103,17 +105,19 @@ class InputField extends Component {
     return (
       <div className={containerClassName}>
         {(input.label || this.props.children || input.required || input.additional) &&
-         <label htmlFor={this.controlId}>
-           {input.label || this.props.children}
-           {additional &&
-            <span className="usa-additional_text">{additional}</span>
+        <label htmlFor={this.controlId}>
+          {input.label || this.props.children}
+          {additional &&
+          <span className="usa-additional_text">{additional}</span>
            }
-         </label>
+        </label>
         }
         {input.error &&
-         <span className="usa-input-error-message"
-               id={`input-error-message-#{this.controlId}`}
-               role="alert">{input.error}</span>
+        <span
+            className="usa-input-error-message"
+            id={'input-error-message-#{this.controlId}'}
+            role="alert"
+        >{input.error}</span>
         }
         <input {...inputProps} />
       </div>

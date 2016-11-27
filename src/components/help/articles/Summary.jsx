@@ -1,11 +1,10 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import Article from '../Article'
 import ArticleFaqSection from '../ArticleFaqSection'
 import ArticleDefinitionSection from '../ArticleDefinitionSection'
 import Topic from '../Topic'
-import { help, define } from './HelpText'
+import { define, help } from './HelpText'
 import Household from '../topics/Household'
-import IEG from '../topics/IEG'
 import NetSelfEmployment from '../topics/NetSelfEmployment'
 import NotTheSame from '../topics/NotTheSame'
 import QualifyHomeless from '../topics/QualifyHomeless'
@@ -14,7 +13,7 @@ import RegularCash from '../topics/RegularCash'
 import ReportCombat from '../topics/ReportCombat'
 import WhatIncome from '../topics/WhatIncome'
 
-//F15, F24, F40, F26-39, F16, F20, F22-23, F5, F41, F11-13, F42, F10, F43, D1-23
+// F15, F24, F40, F26-39, F16, F20, F22-23, F5, F41, F11-13, F42, F10, F43, D1-23
 
 export default class Summary extends Component {
   render() {
@@ -52,7 +51,6 @@ export default class Summary extends Component {
           <Topic title={help.disagreeTitle} body={help.disagreeBody} />
         </ArticleFaqSection>
         <ArticleDefinitionSection>
-          <IEG />
           <Topic title={define.mckinneyTerm} body={define.mckinneyDef} />
           <Topic title={define.mepTerm} body={define.mepDef} />
           <Topic title={define.runawayHomelessActTerm} body={define.runawayHomelessActDef} />

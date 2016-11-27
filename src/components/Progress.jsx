@@ -1,4 +1,4 @@
-﻿import React, { Component, PropTypes } from 'react'
+import React, { Component, PropTypes } from 'react'
 import Steps, { Step } from 'rc-steps'
 import { FormattedMessage } from 'react-intl'
 import { observer } from 'mobx-react'
@@ -6,21 +6,21 @@ import { ProgressBar } from 'react-bootstrap'
 
 @observer
 class Progress extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.oldPercent = 0
   }
 
   componentDidMount() {
-    // roll our own event delegation to capture step clicks
+    // Roll our own event delegation to capture step clicks.
     document.addEventListener('click', function(e) {
-      for (let target=e.target; target && target!=this; target=target.parentNode) {
-        // loop parent nodes from the target to the delegation node
+      for (let target = e.target; target && target !== this; target = target.parentNode) {
+        // Loop parent nodes from the target to the delegation node.
         if (target.hasAttribute('data-hash')) {
           for (let i = 0; i < target.classList.length; i++) {
             if (target.classList[i] === 'rc-steps-status-finish' ||
                 target.classList[i] === 'rc-steps-status-process') {
-              window.location.replace('#/' + target.getAttribute('data-hash'))
+              window.location.replace(`#/${target.getAttribute('data-hash')}`)
               break
             }
           }
@@ -31,62 +31,68 @@ class Progress extends Component {
   }
 
   get steps() {
-    let result = []
+    const result = []
 
     result.push({
       'data-hash': 'welcome',
       'title': <FormattedMessage
-                   id="progress.begin"
-                   description="Text for the Begin progress bar step."
-                   defaultMessage="Begin" />
+          id="progress.begin"
+          description="Text for the Begin progress bar step."
+          defaultMessage="Begin"
+               />
     })
 
     result.push({
       'data-hash': 'students',
       'title': <FormattedMessage
-                   id="progress.students"
-                   description="Text for the Students progress bar step."
-                   defaultMessage="Students" />
+          id="progress.students"
+          description="Text for the Students progress bar step."
+          defaultMessage="Students"
+               />
     })
 
     result.push({
       'data-hash': 'assistance-programs',
       'title': <FormattedMessage
-                   id="progress.assistancePrograms"
-                   description="Text for the Programs progress bar step."
-                   defaultMessage="Programs" />
+          id="progress.assistancePrograms"
+          description="Text for the Programs progress bar step."
+          defaultMessage="Programs"
+               />
     })
 
     if (this.props.applicationData.showHousehold) {
       result.push({
         'data-hash': 'other-children',
         'title': <FormattedMessage
-                     id="progress.otherKids"
-                     description="Text for the Other Kids progress bar step."
-                     defaultMessage="Other Kids" />
+            id="progress.otherKids"
+            description="Text for the Other Kids progress bar step."
+            defaultMessage="Other Kids"
+                 />
       })
 
       result.push({
         'data-hash': 'adults',
         'title': <FormattedMessage
-                     id="progress.adults"
-                     description="Text for the Adults progress bar step."
-                     defaultMessage="Adults" />
+            id="progress.adults"
+            description="Text for the Adults progress bar step."
+            defaultMessage="Adults"
+                 />
       })
     }
 
     result.push({
       'data-hash': 'summary',
       'title': <FormattedMessage
-                   id="progress.summary"
-                   description="Text for the Summary progress bar step."
-                   defaultMessage="Summary" />
+          id="progress.summary"
+          description="Text for the Summary progress bar step."
+          defaultMessage="Summary"
+               />
     })
 
     return result
   }
 
-  // never returns a value less than a value that's been previously returned
+  // Never returns a value less than a value that's been previously returned.
   get percent() {
     const { currentSlideIndex, slides } = this.props.navigationData
     const newPercent = Math.round(100 * currentSlideIndex / (slides.length - 1))
@@ -102,8 +108,10 @@ class Progress extends Component {
       <div className="progress-container">
         <div className="usa-grid">
           <div className="progress-mobile">
-            <ProgressBar now={this.percent}
-                         label={!!this.percent && `${this.percent}%`} />
+            <ProgressBar
+                now={this.percent}
+                label={!!this.percent && `${this.percent}%`}
+            />
           </div>
           <div className="progress-desktop">
             <Steps current={stepsCompleted}>

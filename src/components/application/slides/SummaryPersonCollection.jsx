@@ -9,20 +9,22 @@ class SummaryPersonCollection extends Component {
     const { children, collection, id, showIncomes } = this.props
 
     return (
-      collection.length && (
+      (collection.length && (
         <div>
           <SummaryLabel id={id}>{children}</SummaryLabel>
           <ul>
             {
               collection.map(person => {
-                return <SummaryPerson person={person}
-                                      key={person.id}
-                                      showIncomes={showIncomes} />
+                return <SummaryPerson
+                    person={person}
+                    key={person.id}
+                    showIncomes={showIncomes}
+                       />
               })
             }
           </ul>
         </div>
-      ) || null
+      )) || null
     )
   }
 }
@@ -30,7 +32,7 @@ class SummaryPersonCollection extends Component {
 SummaryPersonCollection.propTypes = {
   collection: PropTypes.object.isRequired,
   id: PropTypes.string,
-  showIncomes: PropTypes.bool,
+  showIncomes: PropTypes.bool
 }
 
 export default SummaryPersonCollection

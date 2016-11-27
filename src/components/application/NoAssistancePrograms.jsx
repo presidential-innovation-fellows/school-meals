@@ -11,29 +11,30 @@ import IncomeElection from './slides/IncomeElection'
 class NoAssistancePrograms extends Component {
   @computed get studentsExceptFoster() {
     return this.props.applicationData.students.items
-               .filter(student => student.isFoster !== true)
+      .filter(student => student.isFoster !== true)
   }
 
   render() {
     const { applicationData } = this.props
-    const { allPeopleCollections, electToProvideIncome, students } =
-      applicationData
+    const { allPeopleCollections, students } = applicationData
 
     return (
       <div>
         <Foster applicationData={applicationData} />
 
         {!!this.studentsExceptFoster.length &&
-         <OtherPrograms students={this.studentsExceptFoster}
-                        allPeopleCollections={allPeopleCollections} />
+        <OtherPrograms
+            students={this.studentsExceptFoster}
+            allPeopleCollections={allPeopleCollections}
+        />
         }
 
         {!allStudentsAreFoster(students) && allStudentsAreFHMR(students) &&
-         <IncomeElection applicationData={applicationData} />
+        <IncomeElection applicationData={applicationData} />
         }
 
         {applicationData.showHousehold &&
-         <HouseholdIncome applicationData={applicationData} />
+        <HouseholdIncome applicationData={applicationData} />
         }
       </div>
     )

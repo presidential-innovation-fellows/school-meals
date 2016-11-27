@@ -1,6 +1,6 @@
 import jQuery from 'jquery'
 import React, { Component, PropTypes } from 'react'
-import {FormattedMessage} from 'react-intl'
+import { FormattedMessage } from 'react-intl'
 import All from './articles/All'
 
 class SearchTopics extends Component {
@@ -12,6 +12,7 @@ class SearchTopics extends Component {
     }
 
     this.setSearchVal = this.setSearchVal.bind(this)
+    this.handleChange = this.handleChange.bind(this)
   }
 
   componentDidMount() {
@@ -23,18 +24,18 @@ class SearchTopics extends Component {
   }
 
   setSearchVal(searchVal) {
-    let $container = jQuery('.searchable-help-topics')
+    const $container = jQuery('.searchable-help-topics')
 
-    this.setState({ searchVal: searchVal })
+    this.setState({ searchVal })
 
     if (this.props.onChange) {
       this.props.onChange(searchVal)
     }
 
-    if (!!searchVal) {
+    if (searchVal) {
       $container.show()
 
-      jQuery('ul.usa-accordion > section > li', $container).each(function () {
+      jQuery('ul.usa-accordion > section > li', $container).each(function() {
         if (jQuery(this).text().search(new RegExp(searchVal, 'i')) < 0) {
           jQuery(this).hide()
         } else {
@@ -56,7 +57,7 @@ class SearchTopics extends Component {
               name="search"
               placeholder="Search term"
               value={this.state.searchVal}
-              onChange={this.handleChange.bind(this)}
+              onChange={this.handleChange}
           />
         </div>
 

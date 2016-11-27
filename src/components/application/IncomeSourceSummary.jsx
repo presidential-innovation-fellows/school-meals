@@ -16,6 +16,8 @@ class IncomeSourceSummary extends Component {
           return 'weekly'
         case 'month':
           return 'monthly'
+        default:
+          return null
       }
     } else {
       return frequency
@@ -39,7 +41,7 @@ class IncomeSourceSummary extends Component {
         ✓
         {' '}
         {this.amount && this.frequency &&
-         <IncomeAmount amount={this.amount} frequency={this.frequency} />
+        <IncomeAmount amount={this.amount} frequency={this.frequency} />
         }
       </span>
     )

@@ -1,9 +1,9 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import Article from '../Article'
 import ArticleFaqSection from '../ArticleFaqSection'
 import ArticleDefinitionSection from '../ArticleDefinitionSection'
 import Topic from '../Topic'
-import { help, define } from './HelpText'
+import { define, help } from './HelpText'
 import NotTheSame from '../topics/NotTheSame'
 import ReportCombat from '../topics/ReportCombat'
 import Household from '../topics/Household'
@@ -11,7 +11,7 @@ import RegularCash from '../topics/RegularCash'
 import NetSelfEmployment from '../topics/NetSelfEmployment'
 import WhatIncome from '../topics/WhatIncome'
 
-//F24, F26-F40, F13, F15, D5-D23
+// F24, F26-F40, F13, F15, D5-D23
 
 export default class AdultIncomeOverview extends Component {
   render() {

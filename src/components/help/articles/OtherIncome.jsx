@@ -1,14 +1,14 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import Article from '../Article'
 import ArticleFaqSection from '../ArticleFaqSection'
 import ArticleDefinitionSection from '../ArticleDefinitionSection'
 import Topic from '../Topic'
-import { help, define } from './HelpText'
+import { define, help } from './HelpText'
 import NotTheSame from '../topics/NotTheSame'
 import RegularCash from '../topics/RegularCash'
 import WhatIncome from '../topics/WhatIncome'
 
-//F37-38, F36, F39, F28, F26, F27, F24, D20-23, D5
+// F37-38, F36, F39, F28, F26, F27, F24, D20-23, D5
 
 export default class OtherIncome extends Component {
   render() {

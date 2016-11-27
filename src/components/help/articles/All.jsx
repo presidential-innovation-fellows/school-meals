@@ -3,10 +3,10 @@ import Article from '../Article'
 import ArticleFaqSection from '../ArticleFaqSection'
 import ArticleDefinitionSection from '../ArticleDefinitionSection'
 import Topic from '../Topic'
-import { help, define } from './HelpText'
+import { define, help } from './HelpText'
 import WhatInformation from '../topics/WhatInformation'
 import Household from '../topics/Household'
-import IEG from '../topics/IEG'
+import Ieg from '../topics/Ieg'
 import NetSelfEmployment from '../topics/NetSelfEmployment'
 import NotTheSame from '../topics/NotTheSame'
 import PaperApp from '../topics/PaperApp'
@@ -66,9 +66,9 @@ class All extends Component {
           <Topic title={help.disagreeTitle} body={help.disagreeBody} />
 
         </ArticleFaqSection>
-        <ArticleDefinitionSection showLabel={this.props.showLabels}> }
+        <ArticleDefinitionSection showLabel={this.props.showLabels}>
 
-        <IEG />
+          <Ieg />
           <Topic title={define.mckinneyTerm} body={define.mckinneyDef} />
           <Topic title={define.mepTerm} body={define.mepDef} />
           <Topic title={define.runawayHomelessActTerm} body={define.runawayHomelessActDef} />

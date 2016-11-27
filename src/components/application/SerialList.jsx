@@ -8,30 +8,30 @@ class SerialList extends Component {
     const { className, idProp, items, intersection, mapFunc } = this.props
     const delim = ','
     const finalWord = intersection ?
-                      <FormattedMessage
-                          id="app.serialList.intersectionDelim"
-                          description="Final delimiter for an intersecting list."
-                          defaultMessage="or"
-                      /> :
-                      <FormattedMessage
-                          id="app.serialList.unionDelim"
-                          description="Final delimiter for a union list."
-                          defaultMessage="and"
-                      />
+      <FormattedMessage
+          id="app.serialList.intersectionDelim"
+          description="Final delimiter for an intersecting list."
+          defaultMessage="or"
+      /> :
+          <FormattedMessage
+              id="app.serialList.unionDelim"
+              description="Final delimiter for a union list."
+              defaultMessage="and"
+          />
 
-    return(
+    return (
       <span>
         {items.map((item, i) => {
-           return(
-             <span key={idProp ? item[idProp] : i}>
-               <span className={className}>{mapFunc(item)}</span>
-               {(i < items.length - 1) && (items.length > 2) && delim}
-               {(i < items.length - 1) && (items.length > 1) && ' '}
-               {(i === items.length - 2) && (items.length > 1) && finalWord}
-               {(i === items.length - 2) && (items.length > 1) && ' '}
-             </span>
-           )
-         })}
+          return (
+            <span key={idProp ? item[idProp] : i}>
+              <span className={className}>{mapFunc(item)}</span>
+              {(i < items.length - 1) && (items.length > 2) && delim}
+              {(i < items.length - 1) && (items.length > 1) && ' '}
+              {(i === items.length - 2) && (items.length > 1) && finalWord}
+              {(i === items.length - 2) && (items.length > 1) && ' '}
+            </span>
+          )
+        })}
       </span>
     )
   }

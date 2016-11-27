@@ -2,14 +2,13 @@ import React, { Component, PropTypes } from 'react'
 import IncomeAmountLabel from './IncomeAmountLabel'
 import { numberFormat } from 'underscore.string'
 import { observer } from 'mobx-react'
-import { FormattedMessage } from 'react-intl'
 
 @observer
 class IncomeAmount extends Component {
   render() {
     const { amount, decimals, frequency } = this.props
 
-    return(
+    return (
       <span>
         ${numberFormat(amount, decimals)}
         {' '}
@@ -22,7 +21,7 @@ class IncomeAmount extends Component {
 IncomeAmount.propTypes = {
   amount: PropTypes.number.isRequired,
   decimals: PropTypes.number,
-  frequency: PropTypes.string.isRequired,
+  frequency: PropTypes.string.isRequired
 }
 
 IncomeAmount.defaultProps = {

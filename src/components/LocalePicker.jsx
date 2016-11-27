@@ -6,9 +6,9 @@ import Locale from './Locale'
 @observer
 class LocalePicker extends Component {
   render() {
-    const activeLocale = this.props.locales.find(locale =>
-      { return locale.code === this.props.localeData.code }
-    )
+    const activeLocale = this.props.locales.find(locale => {
+      return locale.code === this.props.localeData.code
+    })
 
     return (
       <NavDropdown eventKey="1" title={activeLocale.language} id="nav-dropdown">
@@ -16,7 +16,7 @@ class LocalePicker extends Component {
           <Locale
               locale={locale}
               localeData={this.props.localeData}
-              eventKey={`1.${i++}`}
+              eventKey={`1.${i}`}
               key={i}
           />
          )}
@@ -27,7 +27,7 @@ class LocalePicker extends Component {
 
 LocalePicker.propTypes = {
   locales: PropTypes.array.isRequired,
-  localeData: PropTypes.object.isRequired,
+  localeData: PropTypes.object.isRequired
 };
 
 export default LocalePicker

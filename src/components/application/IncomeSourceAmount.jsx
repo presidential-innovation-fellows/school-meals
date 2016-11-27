@@ -4,30 +4,28 @@ import InputField from './InputField'
 
 @observer
 class IncomeSourceAmount extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.handleChange = this.handleChange.bind(this)
   }
 
-  handleChange(fieldName, value) {
-    // allow only digits and decimal
+  handleChange(fieldName, newValue) {
+    let value = newValue
+
+    // Allow only digits and decimal.
     value = value.replace(/[^\d.]/g, '')
 
-    // limit to two decimal places
+    // Limit to two decimal places.
     value = value.replace(/\.(..).+/, '.$1')
 
-    // fix double decimal points
+    // Fix double decimal points.
     value = value.replace(/(\.\d)\./, '$1')
     value = value.replace(/\.\./, '.')
 
-    // cap at $999,999
+    // Cap at $999,999.
     value = value.replace(/(\d{6})[^.]+/, '$1')
 
-    /* console.log("Handling Change for IncomeSourceAmount\n")
-    console.log("fieldname = " + fieldName + " value = " + value)
-    console.log(this.props.incomeSource) */
     this.props.incomeSource[fieldName] = value
-    /* console.log(this.props.incomeSource) */
   }
 
   render() {
@@ -35,15 +33,17 @@ class IncomeSourceAmount extends Component {
     const value = incomeSource[fieldName]
 
     return (
-      <InputField type={type}
-                  object={incomeSource}
-                  name={fieldName}
-                  grid={true}
-                  size="small"
-                  placeholder={placeholder}
-                  onChange={this.handleChange}
-                  pattern={this.props.error ? 'xxx' : '.+'}
-                  value={value ? `${prepend}${value}` : null} />
+      <InputField
+          type={type}
+          object={incomeSource}
+          name={fieldName}
+          grid={true}
+          size="small"
+          placeholder={placeholder}
+          onChange={this.handleChange}
+          pattern={this.props.error ? 'xxx' : '.+'}
+          value={value ? `${prepend}${value}` : null}
+      />
     )
   }
 }
@@ -54,8 +54,7 @@ IncomeSourceAmount.propTypes = {
   type: PropTypes.string,
   placeholder: PropTypes.string,
   prepend: PropTypes.string,
-  error: PropTypes.bool,
-  onChange: PropTypes.func
+  error: PropTypes.bool
 }
 
 IncomeSourceAmount.defaultProps = {

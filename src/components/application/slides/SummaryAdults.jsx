@@ -10,9 +10,11 @@ class SummaryAdults extends Component {
     const id = applicationData.showHousehold ? 'adults' : 'attestation'
 
     return (
-      <SummaryPersonCollection id={id}
-                               collection={applicationData.adults}
-                               showIncomes={applicationData.showHousehold}>
+      <SummaryPersonCollection
+          id={id}
+          collection={applicationData.adults}
+          showIncomes={applicationData.showHousehold}
+      >
         <FormattedMessage
             id="app.slides.summary.adults"
             description="Adults"
@@ -26,8 +28,8 @@ class SummaryAdults extends Component {
 SummaryAdults.propTypes = {
   applicationData: PropTypes.shape({
     adults: PropTypes.object.isRequired,
-    showHousehold: PropTypes.bool.isRequired,
-  }).isRequired,
+    showHousehold: PropTypes.bool.isRequired
+  }).isRequired
 }
 
 export default SummaryAdults

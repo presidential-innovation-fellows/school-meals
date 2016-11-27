@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import Article from '../Article'
 import ArticleFaqSection from '../ArticleFaqSection'
 import ArticleDefinitionSection from '../ArticleDefinitionSection'
@@ -6,7 +6,7 @@ import Topic from '../Topic'
 import { help } from './HelpText'
 import WhatInformation from '../topics/WhatInformation'
 import Household from '../topics/Household'
-import IEG from '../topics/IEG'
+import Ieg from '../topics/Ieg'
 
 export default class BeforeYouBegin extends Component {
   render() {
@@ -30,7 +30,7 @@ export default class BeforeYouBegin extends Component {
           <Topic title={help.disagreeTitle} body={help.disagreeBody} />
         </ArticleFaqSection>
         <ArticleDefinitionSection>
-          <IEG />
+          <Ieg />
         </ArticleDefinitionSection>
       </Article>
     )

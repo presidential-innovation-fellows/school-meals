@@ -7,28 +7,28 @@ import { FormattedMessage } from 'react-intl'
 
 @observer
 class IncomeTypeFormGroup extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
-    this.onChange = this.onChange.bind(this)
+    this.handleChange = this.handleChange.bind(this)
   }
 
   @computed get isError() {
     const { incomeTypeName, person, validate } = this.props
     const incomeType = person.incomeTypes[incomeTypeName]
 
-    // no problem if we don't care about validating
+    // No problem if we don't care about validating.
     if (!validate) {
       return false
     }
 
-    // no problem if not applicable
+    // No problem if not applicable.
     if (!incomeType.isApplicable) {
       return false
     }
 
-    // ensure that not all sources of this income type are false
+    // Ensure that not all sources of this income type are false.
     const sources = incomeType.sources
-    for (let key in sources) {
+    for (const key in sources) {
       if (sources[key].has !== false) {
         return false
       }
@@ -37,12 +37,12 @@ class IncomeTypeFormGroup extends Component {
     return true
   }
 
-  onChange(fieldName, value, incomeType) {
+  handleChange(fieldName, value, incomeType) {
     incomeType[fieldName] = value
 
     if (!value && fieldName !== 'isDeployed') {
-      // clear each income source under this income type
-      for (let sourceKey in incomeType.sources) {
+      // Clear each income source under this income type.
+      for (const sourceKey in incomeType.sources) {
         incomeType.sources[sourceKey] = {
           has: null,
           amount: '',
@@ -53,7 +53,7 @@ class IncomeTypeFormGroup extends Component {
         }
       }
 
-      // special case for military
+      // Special case for military.
       if ('isDeployed' in incomeType) {
         incomeType.isDeployed = null
       }
@@ -92,9 +92,11 @@ class IncomeTypeFormGroup extends Component {
           </div>
         }
         <label>{this.props.children}</label>
-        <BooleanRadio name={boolAttribute}
-                      object={incomeType}
-                      onChange={this.onChange} />
+        <BooleanRadio
+            name={boolAttribute}
+            object={incomeType}
+            onChange={this.handleChange}
+        />
       </div>
     )
   }

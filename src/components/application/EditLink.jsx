@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
-import { FormattedMessage } from 'react-intl'
 import { Glyphicon } from 'react-bootstrap'
 import Link from './Link'
 
@@ -22,7 +21,7 @@ class EditLink extends Component {
 
 EditLink.propTypes = {
   children: PropTypes.node,
-  id: PropTypes.string.required,
+  id: PropTypes.string.required
 }
 
 export default EditLink

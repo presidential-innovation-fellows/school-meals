@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
-import {IntlProvider} from 'react-intl'
+import { IntlProvider } from 'react-intl'
 import Application from './application/Application'
 import ApplicationData from '../stores/ApplicationData'
 import NavigationData from '../stores/NavigationData'
@@ -15,7 +15,7 @@ const applicationData = new ApplicationData()
 const navigationData = new NavigationData()
 const helpData = new HelpData()
 
-// some things occasionally rely on these references (unfortunate shortcut)
+// Some things occasionally rely on these references (unfortunate shortcut).
 window.applicationData = applicationData
 window.helpData = helpData
 window.navigationData = navigationData
@@ -30,7 +30,7 @@ class App extends Component {
     navigationData.init()
   }
 
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(prevProps) {
     // We do this because the IntlProvider component gets completely
     // re-rendered when we change locales due to the explicit key property
     // that we set on it.
@@ -53,16 +53,22 @@ class App extends Component {
       // require a full application re-render (only individual messages),
       // however that prevented babel-plugin-react-intl from picking up
       // message definitions and being able to generate our language files.
-      <IntlProvider key={localeData.code}
-                    locale={localeData.code}
-                    messages={localeData.translations}>
+      <IntlProvider
+          key={localeData.code}
+          locale={localeData.code}
+          messages={localeData.translations}
+      >
         <div className={className}>
-          <Navigation navigationData={navigationData}
-                      localeData={localeData}
-                      helpData={helpData} />
-          <Progress navigationData={navigationData}
-                    localeData={localeData}
-                    applicationData={applicationData} />
+          <Navigation
+              navigationData={navigationData}
+              localeData={localeData}
+              helpData={helpData}
+          />
+          <Progress
+              navigationData={navigationData}
+              localeData={localeData}
+              applicationData={applicationData}
+          />
           <main>
             <div className="usa-grid">
               <div className="usa-width-one-whole">
@@ -97,9 +103,7 @@ App.childContextTypes = {
   }).isRequired,
   navigationData: PropTypes.shape({
     back: PropTypes.func.isRequired,
-    next: PropTypes.func.isRequired,
-    jump: PropTypes.func.isRequired,
-    canJump: PropTypes.bool.isRequired
+    next: PropTypes.func.isRequired
   }).isRequired
 };
 

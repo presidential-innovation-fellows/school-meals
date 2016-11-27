@@ -6,7 +6,7 @@ import { FormattedMessage } from 'react-intl'
 
 @observer
 class IncomeSourceHourlyPeriod extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.defaultOnChange = this.defaultOnChange.bind(this)
     this.handleChange = this.handleChange.bind(this)
@@ -17,25 +17,24 @@ class IncomeSourceHourlyPeriod extends Component {
     handler(this.props.fieldName, event.target.value)
   }
 
-  // side effect, but easier to handle once here than pass in every time
+  // Side effect, but easier to handle once here than pass in every time.
   defaultOnChange(fieldName, value) {
     this.props.incomeSource[fieldName] = value
   }
 
   render() {
     const { incomeSource, fieldName } = this.props
-    const hours = incomeSource.hourlyHours
     const value = incomeSource[fieldName]
 
     return (
       <div className="usa-input-grid usa-input-grid-medium">
-        <Select value={incomeSource[fieldName]}
-                onChange={this.handleChange}>
+        <Select value={value} onChange={this.handleChange}>
 
           <FormattedMessage
               id="app.incomeSourceHourlyPeriod.placeholder"
               description="Default text for hourly period select box."
-              defaultMessage="hours per…">
+              defaultMessage="hours per…"
+          >
             {message => <option value="" disabled>{message}</option>}
           </FormattedMessage>
 

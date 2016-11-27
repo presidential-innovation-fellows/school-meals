@@ -1,11 +1,10 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import Article from '../Article'
 import ArticleFaqSection from '../ArticleFaqSection'
-import ArticleDefinitionSection from '../ArticleDefinitionSection'
 import Topic from '../Topic'
-import { help, define } from './HelpText'
+import { help } from './HelpText'
 
-//F5, F10, F12-13, F43
+// F5, F10, F12-13, F43
 
 export default class All extends Component {
   render() {

@@ -19,7 +19,7 @@ class ArticleFaqSection extends Component {
 
 ArticleFaqSection.propTypes = {
   children: PropTypes.node,
-  showLabel: PropTypes.bool,
+  showLabel: PropTypes.bool
 }
 
 export default ArticleFaqSection

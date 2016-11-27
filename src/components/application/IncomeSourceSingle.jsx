@@ -1,27 +1,22 @@
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
 import { hoursExceedPeriodCapacity } from '../../helpers'
-import BooleanRadio from './BooleanRadio'
-import Checkbox from './Checkbox'
-import Form from './Form'
 import IncomeSourceAmount from './IncomeSourceAmount'
 import IncomeSourceFrequency from './IncomeSourceFrequency'
 import IncomeSourceHourlyPeriod from './IncomeSourceHourlyPeriod'
 import IncomeSourceSummary from './IncomeSourceSummary'
-import AdditionalIncome from './IncomeSourceAdditional'
 import { FormattedMessage } from 'react-intl'
 
 @observer
 class IncomeSourceSingle extends Component {
   get error() {
-    const { name } = this.props
     const incomeSource = this.props.incomeSource
     const { hourlyPeriod } = incomeSource
 
     if (hoursExceedPeriodCapacity(incomeSource)) {
       switch (hourlyPeriod) {
         case 'day':
-          return(
+          return (
             <FormattedMessage
                 id="app.incomeSourceSingle.tooManyHours.day"
                 description="Message about too many hours being entered for the selected period."
@@ -29,7 +24,7 @@ class IncomeSourceSingle extends Component {
             />
           )
         case 'week':
-          return(
+          return (
             <FormattedMessage
                 id="app.incomeSourceSingle.tooManyHours.week"
                 description="Message about too many hours being entered for the selected period."
@@ -37,7 +32,7 @@ class IncomeSourceSingle extends Component {
             />
           )
         case 'month':
-          return(
+          return (
             <FormattedMessage
                 id="app.incomeSourceSingle.tooManyHours.month"
                 description="Message about too many hours being entered for the selected period."
@@ -48,10 +43,12 @@ class IncomeSourceSingle extends Component {
           return null
       }
     }
+
+    return null
   }
 
   render() {
-    const { name, showHourly, showAnnual } = this.props
+    const { showHourly, showAnnual } = this.props
     const incomeSource = this.props.incomeSource
     const error = this.error
 
@@ -64,25 +61,29 @@ class IncomeSourceSingle extends Component {
     return (
       <div>
 
-             <div>
-               <IncomeSourceAmount incomeSource={incomeSource} />
-               <IncomeSourceFrequency {...frequencyProps} />
+        <div>
+          <IncomeSourceAmount incomeSource={incomeSource} />
+          <IncomeSourceFrequency {...frequencyProps} />
 
-             </div>
-             {incomeSource.frequency === 'hourly' &&
-              <div>
-                <IncomeSourceAmount incomeSource={incomeSource}
-                                    fieldName="hourlyHours"
-                                    placeholder=""
-                                    prepend=""
-                                    error={!!error} />
-                <IncomeSourceHourlyPeriod incomeSource={incomeSource} />
-              </div>
+        </div>
+        {incomeSource.frequency === 'hourly' &&
+        <div>
+          <IncomeSourceAmount
+              incomeSource={incomeSource}
+              fieldName="hourlyHours"
+              placeholder=""
+              prepend=""
+              error={!!error}
+          />
+          <IncomeSourceHourlyPeriod incomeSource={incomeSource} />
+        </div>
              }
-             {error && <span className="usa-input-error-message"
-                             role="alert">{error}</span>}
-             {!error && incomeSource.frequency === 'hourly' &&
-              <IncomeSourceSummary incomeSource={incomeSource} />}
+        {error && <span
+            className="usa-input-error-message"
+            role="alert"
+                  >{error}</span>}
+        {!error && incomeSource.frequency === 'hourly' &&
+        <IncomeSourceSummary incomeSource={incomeSource} />}
 
       </div>
     )
@@ -91,7 +92,6 @@ class IncomeSourceSingle extends Component {
 
 IncomeSourceSingle.propTypes = {
   incomeSource: PropTypes.object.isRequired,
-  name: PropTypes.string.isRequired,
   showHourly: PropTypes.bool,
   showAnnual: PropTypes.bool
 }

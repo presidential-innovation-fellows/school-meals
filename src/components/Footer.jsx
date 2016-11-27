@@ -1,15 +1,11 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import { FormattedMessage } from 'react-intl'
 import { observer } from 'mobx-react'
 import { organization } from '../config'
 
 @observer
 class Footer extends Component {
-  constructor (props) {
-    super(props)
-  }
-
-  render () {
+  render() {
     return (
       <footer className="page-footer">
         <div className="usa-grid">

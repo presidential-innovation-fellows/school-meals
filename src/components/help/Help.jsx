@@ -11,23 +11,26 @@ import { FormattedMessage } from 'react-intl'
 class Help extends Component {
   @observable isSearching = false
 
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.handleClick = this.handleClick.bind(this)
     this.handleSearchChange = this.handleSearchChange.bind(this)
   }
 
   handleClick(e) {
-    // home grown event delegation
+    // Home grown event delegation.
     switch (e.target.classList[0]) {
       case 'cd-panel':
       case 'cd-panel-close':
-        this.hideHelp()
+        this.handleHideHelp()
+        break
+      default:
+        break
     }
   }
 
-  hideHelp() {
-    // wrap in conditional to mitigate strange bug
+  handleHideHelp() {
+    // Wrap in conditional to mitigate strange bug.
     if (this) {
       this.props.helpData.isVisible = false
     }
@@ -55,7 +58,7 @@ class Help extends Component {
                 defaultMessage="Help"
             />
           </h1>
-          <a className="cd-panel-close" onClick={this.hideHelp}>
+          <a className="cd-panel-close" onClick={this.handleHideHelp}>
             <FormattedMessage
                 id="help.close"
                 description="Text for the link to close the help area."
@@ -76,10 +79,10 @@ class Help extends Component {
                 <FormattedMessage
                     id="help.footer"
                     description="Footer text for the help area."
-                    defaultMessage="If you have any questions about the program or how to apply, contact {organizationName} ({organizaitonContactInfo})."
+                    defaultMessage="If you have any questions about the program or how to apply, contact {organizationName} ({organizationContactInfo})."
                     values={{
                       organizationName: organization.name,
-                      organizaitonContactInfo: `${organization.contact.phone} / ${organization.contact.email} / ${organization.contact.address}`
+                      organizationContactInfo: `${organization.contact.phone} / ${organization.contact.email} / ${organization.contact.address}`
                     }}
                 />
               </p>

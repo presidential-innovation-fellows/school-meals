@@ -6,7 +6,7 @@ import { FormattedMessage } from 'react-intl'
 
 @observer
 class IncomeSourceFrequency extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.defaultOnChange = this.defaultOnChange.bind(this)
     this.handleChange = this.handleChange.bind(this)
@@ -17,7 +17,7 @@ class IncomeSourceFrequency extends Component {
     handler(this.props.fieldName, event.target.value)
   }
 
-  // side effect, but easier to handle once here than pass in every time
+  // Side effect, but easier to handle once here than pass in every time.
   defaultOnChange(fieldName, value) {
     this.props.incomeSource[fieldName] = value
   }
@@ -28,19 +28,22 @@ class IncomeSourceFrequency extends Component {
 
     return (
       <div className="usa-input-grid usa-input-grid-medium">
-        <Select value={value}
-                onChange={this.handleChange}>
+        <Select
+            value={value}
+            onChange={this.handleChange}
+        >
           <FormattedMessage
               id="app.incomeSourceFrequency.placeholder"
               description="Default text for income frequency select box."
-              defaultMessage="frequency…">
+              defaultMessage="frequency…"
+          >
             {message => <option value="" disabled>{message}</option>}
           </FormattedMessage>
 
           {showAnnual &&
-           <FrequencyLabel frequency="annually">
-             {message => <option value="annually">{message}</option>}
-           </FrequencyLabel>
+          <FrequencyLabel frequency="annually">
+            {message => <option value="annually">{message}</option>}
+          </FrequencyLabel>
           }
 
           <FrequencyLabel frequency="monthly">
@@ -60,9 +63,9 @@ class IncomeSourceFrequency extends Component {
           </FrequencyLabel>
 
           {showHourly &&
-           <FrequencyLabel frequency="hourly">
-             {message => <option value="hourly">{message}</option>}
-           </FrequencyLabel>
+          <FrequencyLabel frequency="hourly">
+            {message => <option value="hourly">{message}</option>}
+          </FrequencyLabel>
           }
         </Select>
       </div>

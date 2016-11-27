@@ -1,5 +1,5 @@
-﻿import React from 'react'
-import {FormattedMessage} from 'react-intl'
+import React from 'react'
+import { FormattedMessage } from 'react-intl'
 import Slide from '../Slide'
 import { organization } from '../../../config'
 import { observer } from 'mobx-react'
@@ -55,13 +55,13 @@ class Welcome extends React.Component {
               values={{
                 address: organization.paperApplication.address,
                 link:
-                     <a href={organization.paperApplication.url} target="_blank">
-                       <FormattedMessage
-                         id="app.slides.welcome.paperApplication"
-                         description="Phrase"
-                         defaultMessage="paper application"
-                       />
-                     </a>
+                  <a href={organization.paperApplication.url} target="_blank" rel="noopener noreferrer">
+                    <FormattedMessage
+                        id="app.slides.welcome.paperApplication"
+                        description="Phrase"
+                        defaultMessage="paper application"
+                    />
+                  </a>
               }}
           />
         </p>

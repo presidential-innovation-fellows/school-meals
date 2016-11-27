@@ -8,18 +8,18 @@ class AssistanceProgram extends Component {
   render() {
     const { program, onChange } = this.props
 
-    return(
+    return (
       <div key={program.id}>
         <Checkbox object={program} name="isApplicable" onChange={onChange}>
           {program.name}
         </Checkbox>
         {program.isApplicable &&
-         <InputField
-             name="caseNumber"
-             placeholder="Case number"
-             label=""
-             object={program}
-         />
+        <InputField
+            name="caseNumber"
+            placeholder="Case number"
+            label=""
+            object={program}
+        />
         }
       </div>
     )

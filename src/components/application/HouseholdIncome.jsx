@@ -11,18 +11,18 @@ import Signature from './slides/Signature'
 class HouseholdIncome extends Component {
   get allChildCollections() {
     return [this.props.applicationData.students,
-            this.props.applicationData.otherChildren]
+      this.props.applicationData.otherChildren]
   }
 
   @computed get allChildren() {
-    let result = this.allChildCollections
+    const result = this.allChildCollections
                      .map(collection => collection.items.slice())
                      .reduce((a, b) => a.concat(b), [])
     return result
   }
 
   @computed get anyChildIncome() {
-    let result = this.allChildCollections
+    const result = this.allChildCollections
                      .map(collection => collection.hasAnyIncome)
                      .reduce((a, b) => a || b, false)
     return result
@@ -33,15 +33,15 @@ class HouseholdIncome extends Component {
       students,
       otherChildren,
       adults,
-      signature,
-      allPeopleCollections
+      signature
     } = this.props.applicationData
 
     return (
       <div>
-        <OtherChildren otherChildren={otherChildren}
-                       alreadyNamed={students}
-                       allPeopleCollections={allPeopleCollections} />
+        <OtherChildren
+            otherChildren={otherChildren}
+            alreadyNamed={students}
+        />
 
         <ChildIncome allChildren={this.allChildren} />
         <Adults adults={adults} />

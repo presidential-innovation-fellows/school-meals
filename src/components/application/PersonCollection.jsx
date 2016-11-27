@@ -1,7 +1,6 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import { observer } from 'mobx-react'
 import Button from './Button'
-import Form from './Form'
 import PersonForm from './PersonForm'
 import { FormattedMessage } from 'react-intl'
 
@@ -9,15 +8,15 @@ import { FormattedMessage } from 'react-intl'
 class PersonCollection extends Component {
   constructor(props) {
     super(props);
-    this.onAdd = this.onAdd.bind(this);
-    this.onRemove = this.onRemove.bind(this);
+    this.handleAdd = this.handleAdd.bind(this);
+    this.handleRemove = this.handleRemove.bind(this);
   }
 
-  onAdd() {
+  handleAdd() {
     this.props.collection.add()
   }
 
-  onRemove(person) {
+  handleRemove(person) {
     this.props.collection.remove(person)
   }
 
@@ -28,20 +27,24 @@ class PersonCollection extends Component {
       label
     } = this.props
 
-    return(
+    return (
       <div>
         <div>
           {collection.items.filter(filter).map(person =>
-            <PersonForm person={person}
-                        fields={collection.fields}
-                        label={label}
-                        key={person.id}
-                        onRemove={this.onRemove} />
+            <PersonForm
+                person={person}
+                fields={collection.fields}
+                label={label}
+                key={person.id}
+                onRemove={this.handleRemove}
+            />
           )}
         </div>
 
-        <Button onClick={this.onAdd}
-                className="usa-button-primary-alt">
+        <Button
+            onClick={this.handleAdd}
+            className="usa-button-primary-alt"
+        >
           <FormattedMessage
               id="app.personCollection.addButton"
               description="Button to add person to collection."
@@ -58,7 +61,7 @@ class PersonCollection extends Component {
 }
 
 PersonCollection.defaultProps = {
-  filter: person => true,
+  filter: () => true,
   label: 'person'
 }
 

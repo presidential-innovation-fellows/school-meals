@@ -1,17 +1,13 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import Article from '../Article'
 import ArticleFaqSection from '../ArticleFaqSection'
-import ArticleDefinitionSection from '../ArticleDefinitionSection'
 import Topic from '../Topic'
-import { assistanceProgramsVar, organization } from '../../../config'
 import { help } from './HelpText'
 import PaperApp from '../topics/PaperApp'
 
 export default class Welcome extends Component {
   render() {
-    //    const assistanceProgramList = assistanceProgramsVar.snap.fullname +' (' assistanceProgramsVar.snap.accronym + ') ' + assistanceProgramsVar.tanf.fullname + ' (' + assistanceProgramsVar.tanf.accronym + ') ' + assistanceProgramsVar.fdpir.fullname + ' (' + assistanceProgramsVar.fdpir.accronym +') '
-
-    //F1-F12, F43
+    // F1-F12, F43
     return (
       <Article>
         <ArticleFaqSection>

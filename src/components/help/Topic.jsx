@@ -10,8 +10,10 @@ class Topic extends Component {
 
     return (
       <li>
-        <button className="usa-accordion-button"
-                aria-controls={`amendment-${id}`}>
+        <button
+            className="usa-accordion-button"
+            aria-controls={`amendment-${id}`}
+        >
           {title || '--- HELP ---'}
         </button>
         <div id={`amendment-${id}`} className="usa-accordion-content">
