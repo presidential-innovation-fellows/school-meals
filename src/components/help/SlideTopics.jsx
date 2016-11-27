@@ -24,6 +24,7 @@ import ContactInfo from './articles/ContactInfo'
 import ThankYou from './articles/ThankYou'
 import LegalStatements from './articles/LegalStatements'
 import IncomeElection from './articles/IncomeElection'
+import None from './articles/None'
 import All from './articles/All'
 
 class SlideTopics extends Component {
@@ -51,6 +52,7 @@ class SlideTopics extends Component {
       case 'other-income': return <OtherIncome />
       case 'ssn': return <Signature />
       case 'contact': return <ContactInfo />
+      case 'optional': return <None />
       case 'legal-statements': return <LegalStatements />
       case 'summary': return <Summary />
       case 'thank-you': return <ThankYou />
