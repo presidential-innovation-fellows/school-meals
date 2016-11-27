@@ -59,8 +59,7 @@ class MilitaryIncome extends Component {
                  />
                 </span>
                 :
-                <span>
-                </span>
+                <span />
               }
            </IncomeSource>
 

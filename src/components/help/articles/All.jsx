@@ -66,9 +66,9 @@ class All extends Component {
           <Topic title={help.disagreeTitle} body={help.disagreeBody} />
 
         </ArticleFaqSection>
-        <ArticleDefinitionSection showLabel={this.props.showLabels}> }
+        <ArticleDefinitionSection showLabel={this.props.showLabels}>
 
-        <IEG />
+          <IEG />
           <Topic title={define.mckinneyTerm} body={define.mckinneyDef} />
           <Topic title={define.mepTerm} body={define.mepDef} />
           <Topic title={define.runawayHomelessActTerm} body={define.runawayHomelessActDef} />

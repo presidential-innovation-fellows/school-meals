@@ -52,8 +52,7 @@ IncomeSourceAmount.propTypes = {
   type: PropTypes.string,
   placeholder: PropTypes.string,
   prepend: PropTypes.string,
-  error: PropTypes.bool,
-  onChange: PropTypes.func
+  error: PropTypes.bool
 }
 
 IncomeSourceAmount.defaultProps = {

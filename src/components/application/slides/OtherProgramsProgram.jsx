@@ -73,7 +73,6 @@ class OtherProgramsProgram extends Component {
 }
 
 OtherProgramsProgram.propTypes = {
-  allPeopleCollections: PropTypes.array.isRequired,
   applicability: PropTypes.object.isRequired,
   attribute: PropTypes.string.isRequired,
   label: PropTypes.node.isRequired,
