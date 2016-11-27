@@ -45,7 +45,8 @@ class Summary extends Component {
       <Slide header={headerText}
              nextText={nextText}
              nextDisabled={!this.isValid}
-             id="summary">
+             id="summary"
+      >
         <p className="usa-font-lead">
           <FormattedMessage
               id="app.slides.summary.finished"
@@ -62,7 +63,8 @@ class Summary extends Component {
         </p>
 
         <SummaryPersonCollection collection={students} id="students"
-                                 showIncomes={applicationData.showHousehold}>
+                                 showIncomes={applicationData.showHousehold}
+        >
           <FormattedMessage
               id="app.slides.summary.studentsAttending"
               description="student info"
@@ -76,7 +78,8 @@ class Summary extends Component {
         {applicationData.showHousehold &&
          <SummaryPersonCollection collection={otherChildren}
                                   id="other-children"
-                                  showIncomes={true}>
+                                  showIncomes={true}
+         >
            <FormattedMessage
                id="app.slides.summary.otherChildren"
                description="Other children"
@@ -203,7 +206,7 @@ class Summary extends Component {
                   />
                 </span>
                 }}
-                />
+              />
               </strong>
               : (assistancePrograms.length ?
                  <strong>

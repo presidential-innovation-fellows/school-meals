@@ -29,11 +29,13 @@ class IncomeSourceFrequency extends Component {
     return (
       <div className="usa-input-grid usa-input-grid-medium">
         <Select value={value}
-                onChange={this.handleChange}>
+                onChange={this.handleChange}
+        >
           <FormattedMessage
               id="app.incomeSourceFrequency.placeholder"
               description="Default text for income frequency select box."
-              defaultMessage="frequency…">
+              defaultMessage="frequency…"
+          >
             {message => <option value="" disabled>{message}</option>}
           </FormattedMessage>
 

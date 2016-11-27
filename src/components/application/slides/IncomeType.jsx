@@ -39,7 +39,8 @@ class IncomeType extends Component {
       <Slide header={personName}
              id={`income/${person.id}/${name}`}
              helpArticle={`${name}-income`}
-             nextDisabled={!incomeTypeIsValid(incomeType)}>
+             nextDisabled={!incomeTypeIsValid(incomeType)}
+      >
         {showDefaultText && <IncomeTypeDefaultText {...defaultTextProps} />}
         {this.props.children}
 
@@ -55,7 +56,8 @@ class IncomeType extends Component {
             />
             <br />
             <Button slideId={`income/${person.id}`}
-                    className="usa-button-gray">
+                    className="usa-button-gray"
+            >
               <FormattedMessage
                   id="app.slides.incomeType.changeAnswer"
                   description="Change previous answer"

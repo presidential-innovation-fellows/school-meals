@@ -20,7 +20,8 @@ class AssistancePrograms extends Component {
 
     return (
       <Slide id="assistance-programs"
-             nextDisabled={!assistancePrograms.isValid} beginsSection>
+             nextDisabled={!assistancePrograms.isValid} beginsSection
+      >
         <p className="usa-font-lead">
         <FormattedMessage
                    id="app.slides.assistancePrograms.intro"
@@ -33,7 +34,7 @@ class AssistancePrograms extends Component {
                      studentList: <InformalNameList people={students} />,
                      studentCount: students.length
                    }}
-               />
+        />
         </p>
 
         <div className="well">

@@ -52,7 +52,7 @@ class IncomeTypeDefaultText extends Component {
                           />
                         </Tooltip>
               }}
-          />
+        />
         </p>
       </div>
     )

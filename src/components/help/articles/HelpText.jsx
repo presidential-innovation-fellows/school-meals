@@ -33,7 +33,7 @@ export const help = {
     description="Help text."
     defaultMessage="No. Use one Free and Reduced Price School Meal Application for all students that attend school in {organizationName} in your household."
     values={{ organizationName: organization.name }}
-    />,
+  />,
 // F4
   letterTitle:
   <FormattedMessage
@@ -534,7 +534,7 @@ export const define = {
     values={{
       mepFullName: hmrPrograms.mep.fullName,
       mepAccronym: hmrPrograms.mep.accronym }}
-    />,
+  />,
   mepDef:
   <FormattedMessage
     id="help.articles.helpText.mepDef"

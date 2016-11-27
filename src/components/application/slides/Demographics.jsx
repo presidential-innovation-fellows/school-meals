@@ -20,7 +20,7 @@ class Demographics extends Component {
               values={{
                 organizationName: organization.name
               }}
-          />
+        />
         </p>
 
         <p>

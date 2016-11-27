@@ -41,7 +41,8 @@ class IncomeSourceAmount extends Component {
                   placeholder={placeholder}
                   onChange={this.handleChange}
                   pattern={this.props.error ? 'xxx' : '.+'}
-                  value={value ? `${prepend}${value}` : null} />
+                  value={value ? `${prepend}${value}` : null}
+      />
     )
   }
 }

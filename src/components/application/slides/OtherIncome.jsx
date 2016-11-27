@@ -35,7 +35,7 @@ class OtherIncome extends Component {
                           />
                         </Tooltip>
               }}
-          />
+        />
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="rentalIncome">

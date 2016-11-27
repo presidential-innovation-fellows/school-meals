@@ -52,7 +52,8 @@ class Slide extends Component {
               this.props.showBack &&
               <Button onClick={this.handleBack}
                       disabled={this.props.backDisabled}
-                      className="usa-button-outline">
+                      className="usa-button-outline"
+              >
                 {this.props.backText}
               </Button>
             }
@@ -60,7 +61,8 @@ class Slide extends Component {
             {
               this.props.showNext &&
               <Button onClick={this.handleNext}
-                      disabled={this.props.nextDisabled}>
+                      disabled={this.props.nextDisabled}
+              >
                 {this.props.nextText}
               </Button>
             }

@@ -58,7 +58,7 @@ class IncomeElection extends Component {
                    description="Third-person verb describing applicability of program."
                    defaultMessage="{studentCount, plural, one {lives} other {live}} with you under a formal (court-ordered) foster care arrangement"
                    values={{ studentCount }}
-        />
+               />
       case 'isHomeless':
         return <FormattedMessage
                    id="app.slides.incomeElection.isHomeless"
@@ -68,7 +68,7 @@ class IncomeElection extends Component {
                      studentCount,
                      programName: <Tooltip id="mckinney" text={tooltiptext.mckinney} target={hmrPrograms.mckinney.shortName} />
                    }}
-        />
+               />
       case 'isMigrant':
         return <FormattedMessage
                    id="app.slides.incomeElection.isMigrant"
@@ -79,7 +79,7 @@ class IncomeElection extends Component {
                      programName: hmrPrograms.mep.fullName,
                      programShortName: <Tooltip id="migrant" text={tooltiptext.mep} target={hmrPrograms.mep.accronym} />
                    }}
-        />
+               />
       case 'isRunaway':
         return <FormattedMessage
                    id="app.slides.incomeElection.isRunaway"

@@ -59,7 +59,7 @@ class Signature extends Component {
                 adult: <strong>({fullName(attestor)})</strong>,
                 ssn: <abbr title="Social Security number">SSN</abbr>
               }}
-          />
+        />
         </p>
 
         <Form>
@@ -71,12 +71,14 @@ class Signature extends Component {
                       value={signature.noSsn ? '' : signature.ssnLastFour}
                       disabled={signature.noSsn}
                       pattern="^\d{4}$"
-                      onChange={this.handleSsnChange} />
+                      onChange={this.handleSsnChange}
+          />
 
           <Checkboxes legend="No <abbr title='Social Security number'>SSN</abbr>">
             <Checkbox object={signature}
                       name="noSsn"
-                      onChange={this.handleNoSsnChange}>
+                      onChange={this.handleNoSsnChange}
+            >
               <FormattedMessage
                 id="app.slides.signature.noSSN"
                 description="No SSN"
@@ -93,7 +95,7 @@ class Signature extends Component {
                 id="app.slides.signature.note"
                 description="Note: on eligibility"
                 defaultMessage=" Note: United States citizenship or immigration status is not a condition of eligibility for free and reduced price benefits. The non-cash benefits received through the school meal programs are not subject to public charge consideration. In other words, you will not be deported, denied entry to the country, or denied permanent status because you apply for or receive school meal benefits."
-              />
+          />
           </small>
         </p>
 

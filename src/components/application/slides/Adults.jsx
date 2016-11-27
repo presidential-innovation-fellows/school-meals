@@ -27,13 +27,14 @@ class Adults extends Component {
 
     return (
       <Slide nextDisabled={!adults.isValid} nextText={this.nextText}
-             id="adults" beginsSection>
+             id="adults" beginsSection
+      >
         <p className="usa-font-lead">
         <FormattedMessage
               id="app.slides.adults.adultsInto"
               description="Intro Paragraph"
               defaultMessage="Okay, now let’s talk about the adults in your household."
-          />
+        />
         </p>
         <p>
         <FormattedMessage
@@ -43,7 +44,7 @@ class Adults extends Component {
               values={{
                 attestor: <Link id="attestation">{informalName(attestors[0])}</Link>
               }}
-          />
+        />
         </p>
 
         <p>
@@ -51,7 +52,7 @@ class Adults extends Component {
               id="app.slides.adults.remember"
               description="Remember Household definitions"
               defaultMessage="Remember, for the purposes of applying for school meal benefits, a household is defined as a group of people, related or unrelated, that usually live together and share income and expenses. Don't forget about:"
-          />
+        />
         </p>
         <ul className="usa-content-list">
           <li>
@@ -59,7 +60,7 @@ class Adults extends Component {
               id="app.slides.adults.grandparents"
               description="Grandparents or extended family"
               defaultMessage="grandparents or other extended family members that are living with you"
-            />
+           />
           </li>
           <li>
           <FormattedMessage
@@ -91,7 +92,7 @@ class Adults extends Component {
                 id="app.slides.adults.includeRegardless"
                 description="Include people regardless of age or income"
                 defaultMessage="Include people regardless of age or whether they earn or receive income."
-              />
+        />
         </strong></p>
 
         <PersonCollection

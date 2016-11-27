@@ -34,7 +34,8 @@ class AdultIncomeOverview extends Component {
 
     return (
       <Slide header={name} id={`income/${person.id}`}
-             helpArticle="adult-income-overview" nextDisabled={!this.isValid}>
+             helpArticle="adult-income-overview" nextDisabled={!this.isValid}
+      >
 
         <p>
           <FormattedMessage
@@ -66,7 +67,7 @@ class AdultIncomeOverview extends Component {
                             id="app.slides.adultIncomeOverview.grossIncome"
                             description="gross income"
                             defaultMessage="gross income"
-                        />
+                      />
                       </strong>
               }}
           />
@@ -111,7 +112,8 @@ class AdultIncomeOverview extends Component {
 
         { person.incomeTypes.military.isApplicable &&
           <IncomeTypeFormGroup person={person} incomeTypeName="military"
-                               boolAttribute="isDeployed" validate={false}>
+                               boolAttribute="isDeployed" validate={false}
+          >
             <FormattedMessage
               id="app.slides.adultIncomeOverview.deployedQuestion"
               description="Is adult deployed"
@@ -126,7 +128,7 @@ class AdultIncomeOverview extends Component {
                     />
                     </Tooltip>
               }}
-              />
+            />
           </IncomeTypeFormGroup>
         }
 

@@ -55,14 +55,17 @@ class App extends Component {
       // message definitions and being able to generate our language files.
       <IntlProvider key={localeData.code}
                     locale={localeData.code}
-                    messages={localeData.translations}>
+                    messages={localeData.translations}
+      >
         <div className={className}>
           <Navigation navigationData={navigationData}
                       localeData={localeData}
-                      helpData={helpData} />
+                      helpData={helpData}
+          />
           <Progress navigationData={navigationData}
                     localeData={localeData}
-                    applicationData={applicationData} />
+                    applicationData={applicationData}
+          />
           <main>
             <div className="usa-grid">
               <div className="usa-width-one-whole">

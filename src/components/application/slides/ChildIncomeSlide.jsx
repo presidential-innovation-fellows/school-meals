@@ -40,7 +40,8 @@ class ChildIncomeSlide extends Component {
       <Slide header={name}
              id={`income/${person.id}/child`}
              helpArticle="child-income"
-             nextDisabled={!incomeTypeIsValid(incomeType)}>
+             nextDisabled={!incomeTypeIsValid(incomeType)}
+      >
 
         <p className="usa-font-lead">
         <FormattedMessage
@@ -50,7 +51,7 @@ class ChildIncomeSlide extends Component {
               values={{
                 child: <strong>{name}</strong>
               }}
-          />
+        />
         </p>
 
         <p>
@@ -74,7 +75,7 @@ class ChildIncomeSlide extends Component {
                 />
                 </em>
               }}
-          />
+        />
         </p>
 
         <p className="well">
@@ -91,11 +92,12 @@ class ChildIncomeSlide extends Component {
                 />
                 </dfn>
               }}
-          />
+        />
         </p>
 
         <IncomeSource incomeSources={incomeSources} name="job"
-                      showHourly={true} showAnnual={false}>
+                      showHourly={true} showAnnual={false}
+        >
            <FormattedMessage
                     id="app.slides.childIncomeSlide.moneyEarned"
                     description="Money earned from a full or part-time job"
@@ -141,7 +143,7 @@ class ChildIncomeSlide extends Component {
                   />
                 </Tooltip>
               }}
-          />
+        />
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="pensionAnnuityTrust">
@@ -172,7 +174,7 @@ class ChildIncomeSlide extends Component {
                   />
                 </Tooltip>
               }}
-          />
+        />
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="other">
@@ -195,7 +197,8 @@ class ChildIncomeSlide extends Component {
             />
             <br />
             <Button className="usa-button-gray"
-                    slideId="child-income">
+                    slideId="child-income"
+            >
               <FormattedMessage
                   id="app.slides.childIncomeSlide.changeAnswer"
                   description="Change Answer"

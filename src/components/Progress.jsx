@@ -38,7 +38,8 @@ class Progress extends Component {
       'title': <FormattedMessage
                    id="progress.begin"
                    description="Text for the Begin progress bar step."
-                   defaultMessage="Begin" />
+                   defaultMessage="Begin"
+               />
     })
 
     result.push({
@@ -46,7 +47,8 @@ class Progress extends Component {
       'title': <FormattedMessage
                    id="progress.students"
                    description="Text for the Students progress bar step."
-                   defaultMessage="Students" />
+                   defaultMessage="Students"
+               />
     })
 
     result.push({
@@ -54,7 +56,8 @@ class Progress extends Component {
       'title': <FormattedMessage
                    id="progress.assistancePrograms"
                    description="Text for the Programs progress bar step."
-                   defaultMessage="Programs" />
+                   defaultMessage="Programs"
+               />
     })
 
     if (this.props.applicationData.showHousehold) {
@@ -63,7 +66,8 @@ class Progress extends Component {
         'title': <FormattedMessage
                      id="progress.otherKids"
                      description="Text for the Other Kids progress bar step."
-                     defaultMessage="Other Kids" />
+                     defaultMessage="Other Kids"
+                 />
       })
 
       result.push({
@@ -71,7 +75,8 @@ class Progress extends Component {
         'title': <FormattedMessage
                      id="progress.adults"
                      description="Text for the Adults progress bar step."
-                     defaultMessage="Adults" />
+                     defaultMessage="Adults"
+                 />
       })
     }
 
@@ -80,7 +85,8 @@ class Progress extends Component {
       'title': <FormattedMessage
                    id="progress.summary"
                    description="Text for the Summary progress bar step."
-                   defaultMessage="Summary" />
+                   defaultMessage="Summary"
+               />
     })
 
     return result
@@ -103,7 +109,8 @@ class Progress extends Component {
         <div className="usa-grid">
           <div className="progress-mobile">
             <ProgressBar now={this.percent}
-                         label={!!this.percent && `${this.percent}%`} />
+                         label={!!this.percent && `${this.percent}%`}
+            />
           </div>
           <div className="progress-desktop">
             <Steps current={stepsCompleted}>

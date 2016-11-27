@@ -35,12 +35,14 @@ class PersonCollection extends Component {
                         fields={collection.fields}
                         label={label}
                         key={person.id}
-                        onRemove={this.onRemove} />
+                        onRemove={this.onRemove}
+            />
           )}
         </div>
 
         <Button onClick={this.onAdd}
-                className="usa-button-primary-alt">
+                className="usa-button-primary-alt"
+        >
           <FormattedMessage
               id="app.personCollection.addButton"
               description="Button to add person to collection."

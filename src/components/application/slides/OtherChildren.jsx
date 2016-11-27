@@ -28,7 +28,8 @@ class OtherChildren extends Component {
 
     return (
       <Slide nextDisabled={!otherChildren.isValid} nextText={this.nextText}
-             id="other-children" beginsSection>
+             id="other-children" beginsSection
+      >
 
         <p className="usa-font-lead">
         <FormattedMessage
@@ -44,7 +45,7 @@ class OtherChildren extends Component {
                           />
                          </Tooltip>
               }}
-          />
+        />
 
         </p>
 
@@ -68,21 +69,21 @@ class OtherChildren extends Component {
                 values={{
                   organizationName: organization.name
                 }}
-            />
+          />
           </li>
           <li>
           <FormattedMessage
                 id="app.slides.otherChildren.childType2"
                 description="Type of child to include in income reporting."
                 defaultMessage="children that attend day care or pre-school, or are not of school age, including infants"
-            />
+          />
           </li>
           <li>
           <FormattedMessage
                 id="app.slides.otherChildren.childType3"
                 description="Type of child to include in income reporting."
                 defaultMessage="anyone 18 years of age or younger living in your household that does not currently attend school"
-            />
+          />
           </li>
         </ul>
 

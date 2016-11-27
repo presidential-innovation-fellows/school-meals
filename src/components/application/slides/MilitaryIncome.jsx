@@ -56,7 +56,7 @@ class MilitaryIncome extends Component {
                   id="app.slides.militaryIncome.madeAvailable"
                   description="made available"
                   defaultMessage="(made available to the household)"
-                 />
+                />
                 </span>
                 :
                 <span />
@@ -78,7 +78,7 @@ class MilitaryIncome extends Component {
                           />
                         </Tooltip>
               }}
-          />
+           />
            </IncomeSource>
 
            <IncomeSource incomeSources={incomeSources} name="allowance">
@@ -96,7 +96,7 @@ class MilitaryIncome extends Component {
                           />
                         </Tooltip>
               }}
-          />
+           />
            </IncomeSource>
         </div>
       </IncomeType>

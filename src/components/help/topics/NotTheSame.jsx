@@ -10,7 +10,7 @@ export default class NotTheSame extends Component {
                      id="help.topic.NotTheSame.question"
                      description="Question for the Not the Same help topic."
                      defaultMessage="What if my income is not always the same?"
-                 />
+                  />
     return (
     <Topic title={title}>
       <p>

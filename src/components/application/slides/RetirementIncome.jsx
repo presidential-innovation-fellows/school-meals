@@ -51,7 +51,7 @@ class RetirementIncome extends Component {
                           />
                         </Tooltip>
               }}
-          />
+        />
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="privatePension">

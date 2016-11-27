@@ -66,7 +66,8 @@ class SummaryPerson extends Component {
             <SummaryPersonIncome
                 key={person.id + income.type + income.source + income.num}
                 person={person}
-                income={income} />
+                income={income}
+            />
            )}
 
         </ul>

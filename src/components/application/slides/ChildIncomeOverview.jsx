@@ -44,7 +44,7 @@ class ChildIncomeOverview extends Component {
                            {pluralizedChildrenIncome}
                          </Tooltip>
               }}
-          />
+        />
         </p>
 
         <p>
@@ -135,7 +135,8 @@ class ChildIncomeOverview extends Component {
 
         {allChildren.map(child =>
           <IncomeTypeFormGroup person={child} incomeTypeName="child"
-                               key={child.id} incomeDescription="income">
+                               key={child.id} incomeDescription="income"
+          >
             <FormattedMessage
                 id="app.slides.childIncomeOverview.label"
                 description="Question asking if child has income sources."

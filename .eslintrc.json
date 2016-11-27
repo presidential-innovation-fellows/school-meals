@@ -163,6 +163,8 @@
     "react/self-closing-comp": 2,
     "react/sort-prop-types": 0, // TODO
 
+    "react/jsx-closing-bracket-location": 2,
+
     "react/jsx-uses-react": 2,
     "react/jsx-uses-vars": 2,
     "react/jsx-no-undef" : 2

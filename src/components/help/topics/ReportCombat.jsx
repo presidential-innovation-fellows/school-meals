@@ -25,14 +25,14 @@ export default class ReportCombat extends Component {
               id="help.topic.ReportCombat.answer2"
               description="Answer for the reporting combat pay help topic."
               defaultMessage="It was received in addition to basic pay;"
-            />
+              />
             </li>
             <li>
               <FormattedMessage
               id="help.topic.ReportCombat.answer3"
               description="Answer for the reporting combat pay help topic."
               defaultMessage="It was received for the deployment to or service in an area designated as a combat zone; and"
-            />
+              />
             </li>
             <li>
             <FormattedMessage

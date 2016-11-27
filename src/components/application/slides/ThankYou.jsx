@@ -51,7 +51,8 @@ class ThankYou extends Component {
     return (
       <Slide header={headerText} id="thank-you"
              showBack={false} nextText={nextText} handleNext={this.downloadData}
-             beginsSection>
+             beginsSection
+      >
 
         <Alert heading={alertHeading} type="success">
           <FormattedMessage

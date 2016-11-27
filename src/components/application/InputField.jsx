@@ -115,7 +115,8 @@ class InputField extends Component {
         {input.error &&
          <span className="usa-input-error-message"
                id={'input-error-message-#{this.controlId}'}
-               role="alert">{input.error}</span>
+               role="alert"
+         >{input.error}</span>
         }
         <input {...inputProps} />
       </div>

@@ -24,7 +24,8 @@ class NoAssistancePrograms extends Component {
 
         {!!this.studentsExceptFoster.length &&
          <OtherPrograms students={this.studentsExceptFoster}
-                        allPeopleCollections={allPeopleCollections} />
+                        allPeopleCollections={allPeopleCollections}
+         />
         }
 
         {!allStudentsAreFoster(students) && allStudentsAreFHMR(students) &&

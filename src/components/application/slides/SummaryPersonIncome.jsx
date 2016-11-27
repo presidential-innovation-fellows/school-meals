@@ -190,7 +190,8 @@ class SummaryPersonIncome extends Component {
         {amount && frequency &&
          <IncomeAmount amount={parseFloat(amount, 10)}
                        decimals={2}
-                       frequency={frequency} />
+                       frequency={frequency}
+         />
         }
         {' '}
         {income.frequency === 'hourly' && income.hourlyPeriod &&

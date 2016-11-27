@@ -94,7 +94,8 @@ class IncomeTypeFormGroup extends Component {
         <label>{this.props.children}</label>
         <BooleanRadio name={boolAttribute}
                       object={incomeType}
-                      onChange={this.onChange} />
+                      onChange={this.onChange}
+        />
       </div>
     )
   }

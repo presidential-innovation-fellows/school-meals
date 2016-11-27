@@ -17,7 +17,8 @@ class SummaryPersonCollection extends Component {
               collection.map(person => {
                 return <SummaryPerson person={person}
                                       key={person.id}
-                                      showIncomes={showIncomes} />
+                                      showIncomes={showIncomes}
+                       />
               })
             }
           </ul>

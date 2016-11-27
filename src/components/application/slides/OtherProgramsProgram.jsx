@@ -39,11 +39,13 @@ class OtherProgramsProgram extends Component {
         {students.length === 1 ?
          <BooleanRadio object={students[0]}
                        name={attribute}
-                       onChange={onChange} />
+                       onChange={onChange}
+         />
          :
          <div>
            <BooleanRadio object={applicability} name={attribute}
-                         onChange={this.onIsApplicableChange} />
+                         onChange={this.onIsApplicableChange}
+           />
            {applicability[attribute] &&
             <Checkboxes legend="Students">
               <label>
@@ -58,7 +60,8 @@ class OtherProgramsProgram extends Component {
                   <Checkbox object={student}
                             name={attribute}
                             key={student.id}
-                            onChange={onChange}>
+                            onChange={onChange}
+                  >
                     {informalName(student)}
                   </Checkbox>
                 )

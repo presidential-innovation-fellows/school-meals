@@ -35,7 +35,7 @@ class PublicAssistanceIncome extends Component {
                           />
                         </Tooltip>
               }}
-          />
+        />
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="stateLocal">
@@ -53,7 +53,7 @@ class PublicAssistanceIncome extends Component {
                           />
                         </Tooltip>
               }}
-          />
+        />
         </IncomeSource>
       </IncomeType>
     )

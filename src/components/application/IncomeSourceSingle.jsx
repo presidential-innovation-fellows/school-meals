@@ -72,12 +72,14 @@ class IncomeSourceSingle extends Component {
                                     fieldName="hourlyHours"
                                     placeholder=""
                                     prepend=""
-                                    error={!!error} />
+                                    error={!!error}
+                />
                 <IncomeSourceHourlyPeriod incomeSource={incomeSource} />
               </div>
              }
              {error && <span className="usa-input-error-message"
-                             role="alert">{error}</span>}
+                             role="alert"
+                       >{error}</span>}
              {!error && incomeSource.frequency === 'hourly' &&
               <IncomeSourceSummary incomeSource={incomeSource} />}
 

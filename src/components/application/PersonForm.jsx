@@ -37,12 +37,14 @@ class PersonForm extends Component {
                   <PersonAttributeInput
                       person={person}
                       field={field}
-                      key={index} />
+                      key={index}
+                  />
                  )}
               </div>
               <div>
                 <Button onClick={this.onRemove}
-                        className="usa-button-gray remove-person">
+                        className="usa-button-gray remove-person"
+                >
                   <FormattedMessage
                       id="app.personForm.removeButton"
                       description="Button to remove person from collection."

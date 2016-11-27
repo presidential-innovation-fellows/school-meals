@@ -18,7 +18,8 @@ class Article extends Component {
       <ul className="usa-accordion" ref={(ul) => {
         this.ul = ul
         return null
-      }}>
+      }}
+      >
         {this.props.children}
       </ul>
     )

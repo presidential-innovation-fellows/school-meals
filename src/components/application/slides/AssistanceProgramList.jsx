@@ -48,7 +48,8 @@ class AssistanceProgramList extends Component {
         {assistancePrograms.map(program =>
           <AssistanceProgram program={program}
                              onChange={this.onChange}
-                             key={program.id} />
+                             key={program.id}
+          />
          )}
       </Checkboxes>
     )

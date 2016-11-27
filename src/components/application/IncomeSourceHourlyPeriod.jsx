@@ -33,7 +33,8 @@ class IncomeSourceHourlyPeriod extends Component {
           <FormattedMessage
               id="app.incomeSourceHourlyPeriod.placeholder"
               description="Default text for hourly period select box."
-              defaultMessage="hours per…">
+              defaultMessage="hours per…"
+          >
             {message => <option value="" disabled>{message}</option>}
           </FormattedMessage>
 

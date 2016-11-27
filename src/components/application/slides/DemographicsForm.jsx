@@ -91,7 +91,7 @@ class Demographics extends Component {
                     id="app.slides.demographicsForm.clear"
                     description="Clear"
                     defaultMessage="Clear"
-                />
+              />
               </button>
             </div>
           </div>

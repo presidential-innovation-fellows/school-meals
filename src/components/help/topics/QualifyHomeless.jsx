@@ -58,7 +58,7 @@ export default class QualifyHomeless extends Component {
               values={{
                 organizationName: organization.name
               }}
-            />
+        />
         </p>
       </Topic>
     )

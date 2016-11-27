@@ -111,7 +111,8 @@ class Contact extends Component {
                   />
                 </label>
                 <Select id="state" name="state" value={contact.state}
-                        onChange={this.onUsStateChange}>
+                        onChange={this.onUsStateChange}
+                >
                   <option value="" />
                   <option value="AL">Alabama</option>
                   <option value="AK">Alaska</option>

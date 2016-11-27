@@ -21,7 +21,8 @@ class EmploymentIncome extends Component {
     return (
       <IncomeType {...incomeTypeProps}>
         <IncomeSource incomeSources={incomeSources} name="salaryWages"
-                      showHourly={true} showAnnual={false}>
+                      showHourly={true} showAnnual={false}
+        >
           <FormattedMessage
               id="app.slides.employmentIncome.salaryWages"
               description="Salary / Wages"

@@ -11,7 +11,8 @@ class Tooltip extends Component {
 
     return (
       <OverlayTrigger placement="top" overlay={
-        <BootstrapTooltip id={id}>{text}</BootstrapTooltip> }>
+        <BootstrapTooltip id={id}>{text}</BootstrapTooltip> }
+      >
         <strong className="info-target">
           {children || target}
           <Glyphicon glyph="question-sign" />
