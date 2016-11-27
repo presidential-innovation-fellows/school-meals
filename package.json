@@ -5,7 +5,7 @@
   "scripts": {
     "start": "node server.js",
     "build-language": "node build-language.js",
-    "lint": "eslint src"
+    "lint": "eslint --ext .js --ext .jsx src"
   },
   "repository": {
     "type": "git",
