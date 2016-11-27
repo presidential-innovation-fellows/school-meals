@@ -33,7 +33,7 @@ class HouseholdIncome extends Component {
       students,
       otherChildren,
       adults,
-      signature,
+      signature
     } = this.props.applicationData
 
     return (

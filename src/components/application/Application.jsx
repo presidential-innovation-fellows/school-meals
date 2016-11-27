@@ -22,7 +22,7 @@ class Application extends Component {
       students,
       contact,
       adults,
-      assistancePrograms,
+      assistancePrograms
     } = applicationData
 
     return (

@@ -86,7 +86,7 @@ Slide.contextTypes = {
   }).isRequired,
   navigationData: PropTypes.shape({
     back: PropTypes.func.isRequired,
-    next: PropTypes.func.isRequired,
+    next: PropTypes.func.isRequired
   }).isRequired
 }
 

@@ -15,7 +15,7 @@ class AssistancePrograms extends Component {
     const { applicationData } = this.props
     const {
       students,
-      assistancePrograms,
+      assistancePrograms
     } = applicationData
 
     return(
