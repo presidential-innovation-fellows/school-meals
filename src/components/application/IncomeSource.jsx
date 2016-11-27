@@ -52,7 +52,6 @@ class IncomeSource extends Component {
   }
 
   onChange(fieldName, value, incomeSource) {
-    console.debug('---', fieldName, value, incomeSource)
     incomeSource[fieldName] = value
 
     if (!value) {

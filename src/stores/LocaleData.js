@@ -7,7 +7,6 @@ export default class LocaleData {
 
   @action setLocale(code) {
     code = code.split('-')[0].toLowerCase()
-    console.debug('Setting new locale:', code)
 
     // English is the default -- there is no translation file
     if (code === 'en') {
@@ -18,11 +17,10 @@ export default class LocaleData {
 
     request.get(`./translations/${code}.json`, (err, res) => {
       if (err) {
-        console.error(err)
+        alert(err)
       } else {
         this.translations = res.body
         this.code = code
-        console.debug('Translation loaded for locale code:', code, this.translations)
       }
     })
   }

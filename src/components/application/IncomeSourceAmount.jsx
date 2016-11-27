@@ -23,11 +23,7 @@ class IncomeSourceAmount extends Component {
     // cap at $999,999
     value = value.replace(/(\d{6})[^.]+/, '$1')
 
-    /* console.log("Handling Change for IncomeSourceAmount\n")
-    console.log("fieldname = " + fieldName + " value = " + value)
-    console.log(this.props.incomeSource) */
     this.props.incomeSource[fieldName] = value
-    /* console.log(this.props.incomeSource) */
   }
 
   render() {

@@ -8,11 +8,6 @@ import { allStudentsAreFHMR,
          allStudentsAreFoster,
          applicableIncomeSources,
          formatDate } from '../helpers'
-import { testData } from '../debug'
-
-// set DEBUG to true to pull in test data into the AppllicationData object from debug.js
-// this will allow you automatically input all Adult and Student answers in advance
-const DEBUG = false;
 
 export default class ApplicationData {
   students = new StudentCollection()
@@ -134,86 +129,6 @@ export default class ApplicationData {
   @action removeIncomeSource(source, i) {
     if (i < source.more.length) {
       source.more.splice(i, 1)
-    }
-  }
-
-  constructor(){
-    if (DEBUG) {
-      console.log('Loading Default Test Data! \n');
-
-      //Choose the test scenario to import
-      let scenario = 'OneAdult_OneStudent';
-
-      console.log('Test Scenario: ' + scenario + '\n');
-
-      //Set the values in ApplicationData using the debug test data
-
-      // signature collection
-      this.signature = JSON.parse(JSON.stringify(testData[scenario].signature));
-
-      console.log('Loading signature info...\n');
-      console.log(JSON.stringify(this.signature, undefined, 2));
-
-      // contact info collection
-      this.contact = JSON.parse(JSON.stringify(testData[scenario].contact));
-
-      console.log('Loading contact info...\n');
-      console.log(JSON.stringify(this.contact, undefined, 2));
-
-      // adults collection
-      this.adults.items = testData[scenario].adults.items.map( function (adult){
-                return ( JSON.parse(JSON.stringify(adult)));
-      });
-
-      // Object.assign(this.adults.items[0].incomeTypes.employment.sources.salaryWages, {add: this.adults.addIncomeSource, remove: this.adults.removeIncomeSource})
-
-      console.log('Loading Adults... \n');
-      console.log(JSON.stringify(this.adults.items,undefined,2));
-
-
-       //testing to see if I can re-attach the class methods for adding / removing
-      console.log('Re-attached class methods for adding/removing income sources...\n')
-      for (let i=0 ; i < this.adults.items.length; i++){
-        console.log('Re-attaching for item: ' + i + '\n')
-        let item = this.adults.items[i];
-
-        Object.keys(item.incomeTypes.employment.sources).forEach(function(k,s){
-
-          console.log('Source: ' + k + '\n')
-          let source = item.incomeTypes.employment.sources[k]
-
-          if (typeof(source.more) != 'undefined') {
-
-            Object.assign(source, {add: this.adults.addIncomeSource, remove: this.adults.removeIncomeSource})
-
-          }
-
-        }, this)
-
-      }
-
-      console.log('Loading Adults... \n');
-      console.log(JSON.stringify(this.adults.items,undefined,2));
-
-      this.students.items = testData[scenario].students.items.map ( function(student){
-                return(JSON.parse(JSON.stringify(student)));
-      });
-
-      console.log('Loading Students... \n');
-      console.log(JSON.stringify(this.students.items,undefined,2));
-
-
-      this.otherChildren.items = testData[scenario].otherChildren.items.map ( function(child){
-                return(JSON.parse(JSON.stringify(child)));
-      });
-
-      console.log('Loading Other Children... \n');
-      console.log(JSON.stringify(this.otherChildren.items,undefined,2));
-
-
-      console.log('Finished loading...');
-      console.log('Test Scenario: ' + scenario + ' is fully loaded!\n');
-      console.log(this);
     }
   }
 }

@@ -15,7 +15,7 @@ class ViewAppData extends React.Component {
         <FormattedMessage
           id="app.slides.viewAppData.intro"
           description="Intro text"
-          defaultMessage="This is a special {appData} view for developers. As you fill out the application, you can come back to this page to see how the dataset has changed. If you want to pre-load applicationData with test values, just update /src/debug.js and set DEBUG = true in /src/stores/applicationData.jsx."
+          defaultMessage="This is a special {appData} view for developers. As you fill out the application, you can come back to this page to see how the dataset has changed."
           values={{
             appData: <strong>
                         <FormattedMessage
