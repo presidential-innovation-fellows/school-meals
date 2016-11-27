@@ -1508,7 +1508,7 @@
   "app.slides.summary.summaryInfo": "",
 
   // student info
-  // English: "Students attending {organizationName}"
+  // English: "Students attending school in {organizationName}"
   "app.slides.summary.studentsAttending": "",
 
   // Other children
@@ -2039,7 +2039,7 @@
   "help.articles.helpText.selfEmployedTitle": "",
 
   // Help text.
-  // English: "If you are self-employed, report income from work as a net amount. This is calculated by subtracting the total operating expenses of your business from its gross receipts or revenue. For more information see the definition for ‘Net income from self-employment"
+  // English: "If you are self-employed, report income from work as a net amount. This is calculated by subtracting the total operating expenses of your business from its gross receipts or revenue. For more information see the definition for ‘Net income from self-employment’."
   "help.articles.helpText.selfEmployedBody": "",
 
   // Help text.
@@ -2381,7 +2381,7 @@
 
 
   /***
-   *** src/components/help/topics/IEG.jsx
+   *** src/components/help/topics/Ieg.jsx
    ***/
 
   // Definition for the Income Eligibility Guidelines.
@@ -2713,7 +2713,7 @@
   "help.topic.WhatIncome.answer36": "",
 
   // Answer for the applicable income help topic.
-  // English: "We do not take into account income from:"
+  // English: "Cash value of benefits from {snapAccronym} or {fdpirAccronym}"
   "help.topic.WhatIncome.answer37": "",
 
   // Answer for the applicable income help topic.
@@ -2841,5 +2841,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1480241947120."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1480256928859."
 }
