@@ -11,7 +11,7 @@ class SummaryPerson extends Component {
     const { person, showIncomes } = this.props
     const editLinkId = showIncomes && person.isAdult ?
                        `income/${person.id}` :
-                       undefined
+                       null
 
     return (
       <li>

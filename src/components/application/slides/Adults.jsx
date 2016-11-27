@@ -10,12 +10,15 @@ import {FormattedMessage} from 'react-intl'
 @observer
 class Adults extends Component {
   @computed get nextText() {
-    return this.props.adults.length > 1 ? undefined :
-           <FormattedMessage
-               id="app.slides.adults.nextText"
-               description="Text to show on next slide button if no other adults are added."
-               defaultMessage="No other adults"
-           />
+    if (this.props.adults.length === 1) {
+      return <FormattedMessage
+                 id="app.slides.adults.nextText"
+                 description="Text to show on next slide button if no other adults are added."
+                 defaultMessage="No other adults"
+             />
+    }
+
+    return void 0
   }
 
   render() {

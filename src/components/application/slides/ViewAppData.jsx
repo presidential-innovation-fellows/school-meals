@@ -33,7 +33,7 @@ class ViewAppData extends React.Component {
         />
         </strong>
         <plaintext>
-          {JSON.stringify(this.props.applicationData, undefined, 2)}
+          {JSON.stringify(this.props.applicationData, null, 2)}
         </plaintext>
 
       </Slide>

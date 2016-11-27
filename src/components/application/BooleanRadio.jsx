@@ -18,7 +18,7 @@ class BooleanRadio extends Component {
 
   handleChange(event) {
     const handler = this.props.onChange || this.defaultOnChange
-    let value
+    let value = null
 
     switch (event.target.value) {
       case true:
