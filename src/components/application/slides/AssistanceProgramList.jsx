@@ -37,6 +37,9 @@ class AssistanceProgramList extends Component {
       // Clear SSN.
       signature.noSsn = null
       signature.ssnLastFour = ''
+    } else {
+      // Clear case number.
+      program.caseNumber = ''
     }
   }
 
