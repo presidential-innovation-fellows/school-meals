@@ -17,7 +17,7 @@ class OtherIncome extends Component {
       person
     }
 
-    return(
+    return (
       <IncomeType {...incomeTypeProps}>
 
         <IncomeSource incomeSources={incomeSources} name="regularCashPayments">

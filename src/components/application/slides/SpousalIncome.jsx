@@ -17,7 +17,7 @@ class SpousalIncome extends Component {
       person
     }
 
-    return(
+    return (
       <IncomeType {...incomeTypeProps}>
 
         <IncomeSource incomeSources={incomeSources} name="alimony">

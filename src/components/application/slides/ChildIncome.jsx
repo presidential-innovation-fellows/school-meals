@@ -8,7 +8,7 @@ class ChildIncome extends Component {
   render() {
     const { allChildren } = this.props
 
-    return(
+    return (
       <div>
         <ChildIncomeOverview allChildren={allChildren} />
         <ChildIncomeSlides allChildren={allChildren} />

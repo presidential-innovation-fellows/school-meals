@@ -27,7 +27,7 @@ class PersonCollection extends Component {
       label
     } = this.props
 
-    return(
+    return (
       <div>
         <div>
           {collection.items.filter(filter).map(person =>

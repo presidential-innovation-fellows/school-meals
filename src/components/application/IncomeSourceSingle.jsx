@@ -16,7 +16,7 @@ class IncomeSourceSingle extends Component {
     if (hoursExceedPeriodCapacity(incomeSource)) {
       switch (hourlyPeriod) {
         case 'day':
-          return(
+          return (
             <FormattedMessage
                 id="app.incomeSourceSingle.tooManyHours.day"
                 description="Message about too many hours being entered for the selected period."
@@ -24,7 +24,7 @@ class IncomeSourceSingle extends Component {
             />
           )
         case 'week':
-          return(
+          return (
             <FormattedMessage
                 id="app.incomeSourceSingle.tooManyHours.week"
                 description="Message about too many hours being entered for the selected period."
@@ -32,7 +32,7 @@ class IncomeSourceSingle extends Component {
             />
           )
         case 'month':
-          return(
+          return (
             <FormattedMessage
                 id="app.incomeSourceSingle.tooManyHours.month"
                 description="Message about too many hours being entered for the selected period."

@@ -14,7 +14,7 @@ class AdultIncomeSlides extends Component {
   render() {
     const { person } = this.props
 
-    return(
+    return (
       <div>
         <AdultIncomeOverview person={person} />
 

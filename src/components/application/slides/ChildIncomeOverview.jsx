@@ -31,7 +31,7 @@ class ChildIncomeOverview extends Component {
       />
     )
 
-    return(
+    return (
       <Slide nextDisabled={!this.isValid} id="child-income">
 
         <p className="usa-font-lead">

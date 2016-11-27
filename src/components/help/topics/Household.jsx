@@ -11,7 +11,7 @@ export default class Household extends Component {
                       defaultMessage="Who should I include in my household?"
                   />
 
-    return(
+    return (
     <Topic title={title}>
       <p>
         <FormattedMessage

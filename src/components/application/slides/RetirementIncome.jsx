@@ -17,7 +17,7 @@ class RetirementIncome extends Component {
       person
     }
 
-    return(
+    return (
       <IncomeType {...incomeTypeProps}>
 
         <IncomeSource incomeSources={incomeSources} name="socialSecurity">

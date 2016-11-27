@@ -19,10 +19,10 @@ class SerialList extends Component {
                           defaultMessage="and"
                       />
 
-    return(
+    return (
       <span>
         {items.map((item, i) => {
-          return(
+          return (
              <span key={idProp ? item[idProp] : i}>
                <span className={className}>{mapFunc(item)}</span>
                {(i < items.length - 1) && (items.length > 2) && delim}

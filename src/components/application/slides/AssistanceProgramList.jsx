@@ -43,7 +43,7 @@ class AssistanceProgramList extends Component {
   render() {
     const { assistancePrograms } = this.props.applicationData
 
-    return(
+    return (
       <Checkboxes legend="Assistance programs">
         {assistancePrograms.map(program =>
           <AssistanceProgram program={program}

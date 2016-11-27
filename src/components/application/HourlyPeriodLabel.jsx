@@ -25,7 +25,7 @@ class HourlyPeriodLabel extends Component {
   render() {
     const { children, period } = this.props
 
-    return(
+    return (
       <FormattedMessage {...this.messages[period]}>
         { children }
       </FormattedMessage>

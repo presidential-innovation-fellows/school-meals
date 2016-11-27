@@ -35,7 +35,7 @@ class IncomeType extends Component {
           defaultMessage="Missing Income"
       />
 
-    return(
+    return (
       <Slide header={personName}
              id={`income/${person.id}/${name}`}
              helpArticle={`${name}-income`}

@@ -10,7 +10,7 @@ class IncomeTypeDefaultText extends Component {
   render() {
     const { person, showMilitaryCaveat } = this.props
 
-    return(
+    return (
       <div>
         <p className="usa-font-lead">
           <FormattedMessage

@@ -11,7 +11,7 @@ export default class WhatIncome extends Component {
                       defaultMessage="What income sources do I have to report in my application?"
                   />
 
-    return(
+    return (
     <Topic title={title}>
       <p>
         <FormattedMessage

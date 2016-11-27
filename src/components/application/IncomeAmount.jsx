@@ -8,7 +8,7 @@ class IncomeAmount extends Component {
   render() {
     const { amount, decimals, frequency } = this.props
 
-    return(
+    return (
       <span>
         ${numberFormat(amount, decimals)}
         {' '}

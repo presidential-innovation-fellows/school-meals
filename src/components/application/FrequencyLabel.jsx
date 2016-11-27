@@ -40,7 +40,7 @@ class FrequencyLabel extends Component {
   render() {
     const { children, frequency } = this.props
 
-    return(
+    return (
       <FormattedMessage {...this.messages[frequency]}>
         { children }
       </FormattedMessage>

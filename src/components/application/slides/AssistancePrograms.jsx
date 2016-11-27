@@ -18,7 +18,7 @@ class AssistancePrograms extends Component {
       assistancePrograms
     } = applicationData
 
-    return(
+    return (
       <Slide id="assistance-programs"
              nextDisabled={!assistancePrograms.isValid} beginsSection>
         <p className="usa-font-lead">

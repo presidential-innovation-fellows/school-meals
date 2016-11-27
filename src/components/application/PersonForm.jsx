@@ -26,7 +26,7 @@ class PersonForm extends Component {
 
     const name = person.firstName || label
 
-    return(
+    return (
       <div className="person-form">
         <Form>
           <Fieldset legend="Name">

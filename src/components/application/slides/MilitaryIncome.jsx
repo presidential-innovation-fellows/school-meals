@@ -18,7 +18,7 @@ class MilitaryIncome extends Component {
       person
     }
 
-    return(
+    return (
       <IncomeType {...incomeTypeProps} showDefaultText={false}>
         <div>
           {incomeType.isDeployed ?

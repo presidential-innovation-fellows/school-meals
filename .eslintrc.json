@@ -91,6 +91,10 @@
     "func-call-spacing": 2,
     "func-name-matching": 2,
     "indent": [2, 2, { "SwitchCase": 1, "VariableDeclarator": { "var": 2, "let": 2, "const": 3 }, "outerIIFEBody": 1, "MemberExpression": 1, "FunctionDeclaration": {"parameters": "first", "body": 1}, "CallExpression": {"arguments": "first"} }],
+    "jsx-quotes": 2,
+    "key-spacing": 2,
+    "keyword-spacing": 2,
+    "linebreak-style": 2,
 
     "arrow-spacing": 2,
     "generator-star-spacing": 2,

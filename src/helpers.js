@@ -110,7 +110,7 @@ export function informalName(person,
 export function hoursExceedPeriodCapacity(incomeSource) {
   const hours = incomeSource.hourlyHours || 0
 
-  switch(incomeSource.hourlyPeriod) {
+  switch (incomeSource.hourlyPeriod) {
     case 'day':
       return hours > 24
     case 'week':

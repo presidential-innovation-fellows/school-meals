@@ -9,7 +9,7 @@ class PersonAttributeInput extends Component {
   render() {
     const { field, person } = this.props
 
-    switch(field.dataType) {
+    switch (field.dataType) {
       case PropTypes.bool:
         return <div>
           <br />

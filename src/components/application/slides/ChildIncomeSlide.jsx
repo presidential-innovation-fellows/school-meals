@@ -36,7 +36,7 @@ class ChildIncomeSlide extends Component {
           defaultMessage="Missing Income"
       />
 
-    return(
+    return (
       <Slide header={name}
              id={`income/${person.id}/child`}
              helpArticle="child-income"
@@ -66,7 +66,7 @@ class ChildIncomeSlide extends Component {
                     defaultMessage="current"
                   />
                 </Tooltip>,
-                gross:<em>
+                gross: <em>
                 <FormattedMessage
                     id="app.slides.childIncomeSlide.gross"
                     description="gross"
@@ -83,7 +83,7 @@ class ChildIncomeSlide extends Component {
               description="Gross Income definition."
               defaultMessage="{grossIncome}  means all money earned or received before deductions, such as income taxes, social security taxes, and insurance premiums. You should not report net income, which is the amount of money received in a pay check. Net income is total (or gross) income, minus taxes and deductions, and is commonly referred to as “take home pay”."
               values={{
-                grossIncome:<dfn>
+                grossIncome: <dfn>
                 <FormattedMessage
                     id="app.slides.childIncomeSlide.grossIncome"
                     description="Gross income"
