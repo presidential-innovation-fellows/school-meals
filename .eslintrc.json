@@ -111,8 +111,8 @@
     "no-unneeded-ternary": 2,
     "no-whitespace-before-property": 2,
     "object-curly-spacing": [2, "always"],
-    "object-property-newline": 2,
-
+    "object-property-newline": [2, { "allowMultiplePropertiesPerLine": true }],
+    "quote-props": [2, "consistent-as-needed"],
 
     "arrow-spacing": 2,
     "generator-star-spacing": 2,

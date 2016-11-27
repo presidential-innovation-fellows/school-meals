@@ -29,8 +29,8 @@ class Slide extends Component {
 
   render() {
     const props = {
-      className: 'slide',
-      id: this.props.id,
+      'className': 'slide',
+      'id': this.props.id,
       'data-begins-section': this.props.beginsSection,
       'data-help-article': this.props.helpArticle || this.props.id
     }
