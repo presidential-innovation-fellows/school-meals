@@ -151,7 +151,7 @@
   "tooltip.socialSecurityInsurance": "",
 
   // Tooltip text explaining cash assistance.
-  // English: "Cash benefits, including housing subsidies, from state or local government programs must be reported as household income.  If you have questions about whether to include benefits from a specific program, contact"
+  // English: "Cash benefits, including housing subsidies, from state or local government programs must be reported as household income.  If you have questions about whether to include benefits from a specific program, contact {organizationName} ({organizationContactInfo})"
   "tooltip.cashAssistance": "",
 
   // Tooltip text explaining SSDI.
@@ -2841,5 +2841,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1480256928859."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1480276396759."
 }

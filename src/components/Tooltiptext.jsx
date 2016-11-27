@@ -136,8 +136,12 @@ export const tooltiptext = {
   cashAssistance: <FormattedMessage
       id="tooltip.cashAssistance"
       description="Tooltip text explaining cash assistance."
-      defaultMessage="Cash benefits, including housing subsidies, from state or local government programs must be reported as household income.  If you have questions about whether to include benefits from a specific program, contact "
-                  />,
+      defaultMessage="Cash benefits, including housing subsidies, from state or local government programs must be reported as household income.  If you have questions about whether to include benefits from a specific program, contact {organizationName} ({organizationContactInfo})"
+      values={{
+        organizationName: organization.name,
+        organizationContactInfo: `${organization.contact.phone} / ${organization.contact.email} / ${organization.contact.address}`
+      }}
+  />,
   SSDI: <FormattedMessage
       id="tooltip.ssdi"
       description="Tooltip text explaining SSDI."
