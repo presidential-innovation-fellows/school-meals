@@ -185,7 +185,7 @@ footer .not-real-disclaimer {
   margin-bottom: 2em;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .progress-desktop {
     display: none;
   }
@@ -271,18 +271,18 @@ footer .not-real-disclaimer {
 }
 
 /* Hover */
-.rc-steps-status-finish:hover .rc-steps-head,
-.rc-steps-status-finish:hover .rc-steps-main {
+.navigation-enabled .rc-steps-status-finish:hover .rc-steps-head,
+.navigation-enabled .rc-steps-status-finish:hover .rc-steps-main {
   cursor: pointer;
 }
-.rc-steps-status-finish:hover .rc-steps-head-inner {
+.navigation-enabled .rc-steps-status-finish:hover .rc-steps-head-inner {
   border-color: #00a6d2 !important;
   background-color: #00a6d2 !important;
 }
-.rc-steps-status-finish:hover .rc-steps-icon {
+.navigation-enabled .rc-steps-status-finish:hover .rc-steps-icon {
   color: #fff !important;
 }
-.rc-steps-status-finish:hover .rc-steps-title {
+.navigation-enabled .rc-steps-status-finish:hover .rc-steps-title {
   color: #00a6d2 !important;
 }
 
@@ -364,7 +364,7 @@ button.navbar-toggle:focus {
   display: block;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .navbar .usa-grid {
     padding-left: 0;
     padding-right: 0;

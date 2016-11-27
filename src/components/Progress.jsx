@@ -1,3 +1,4 @@
+import classnames from 'classnames'
 import React, { Component, PropTypes } from 'react'
 import Steps, { Step } from 'rc-steps'
 import { FormattedMessage } from 'react-intl'
@@ -9,25 +10,50 @@ class Progress extends Component {
   constructor(props) {
     super(props)
     this.oldPercent = 0
+    this.handleClick = this.handleClick.bind(this)
+    this.disableNavigation = this.disableNavigation.bind(this)
+    this.enableNavigation = this.enableNavigation.bind(this)
   }
 
-  componentDidMount() {
+  get isNavigationEnabled() {
+    return !this.props.navigationData.isOnFinalSlide
+  }
+
+  get clickElement() {
+    return document.getElementById('progress-desktop')
+  }
+
+  handleClick(e) {
     // Roll our own event delegation to capture step clicks.
-    document.addEventListener('click', function(e) {
-      for (let target = e.target; target && target !== this; target = target.parentNode) {
-        // Loop parent nodes from the target to the delegation node.
-        if (target.hasAttribute('data-hash')) {
-          for (let i = 0; i < target.classList.length; i++) {
-            if (target.classList[i] === 'rc-steps-status-finish' ||
-                target.classList[i] === 'rc-steps-status-process') {
-              window.location.replace(`#/${target.getAttribute('data-hash')}`)
-              break
-            }
+    for (let target = e.target; target && target !== this; target = target.parentNode) {
+      // Loop parent nodes from the target to the delegation node.
+      if (target.hasAttribute('data-hash')) {
+        for (let i = 0; i < target.classList.length; i++) {
+          if (target.classList[i] === 'rc-steps-status-finish' ||
+              target.classList[i] === 'rc-steps-status-process') {
+            window.location.replace(`#/${target.getAttribute('data-hash')}`)
+            break
           }
-          break
         }
+        break
       }
-    }, false)
+    }
+  }
+
+  disableNavigation() {
+    this.clickElement.removeEventListener('click', this.handleClick)
+  }
+
+  enableNavigation() {
+    this.clickElement.addEventListener('click', this.handleClick)
+  }
+
+  componentDidUpdate() {
+    if (this.isNavigationEnabled) {
+      this.enableNavigation()
+    } else {
+      this.disableNavigation()
+    }
   }
 
   get steps() {
@@ -103,6 +129,10 @@ class Progress extends Component {
   render() {
     const { stepsCompleted } = this.props.navigationData
     const localeCode = this.props.localeData.code
+    const desktopClassNames = {
+      'progress-desktop': true,
+      'navigation-enabled': this.isNavigationEnabled
+    }
 
     return (
       <div className="progress-container">
@@ -113,7 +143,7 @@ class Progress extends Component {
                 label={!!this.percent && `${this.percent}%`}
             />
           </div>
-          <div className="progress-desktop">
+          <div className={classnames(desktopClassNames)} id="progress-desktop">
             <Steps current={stepsCompleted}>
               {this.steps.map(step =>
                 <Step {...step} key={localeCode + step['data-hash']} />
@@ -127,6 +157,7 @@ class Progress extends Component {
 }
 
 Progress.propTypes = {
+  enableNavigation: PropTypes.bool.isRequired,
   navigationData: PropTypes.shape({
     stepsCompleted: PropTypes.number
   }).isRequired,
