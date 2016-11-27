@@ -1,7 +1,6 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import Article from '../Article'
 import ArticleFaqSection from '../ArticleFaqSection'
-import ArticleDefinitionSection from '../ArticleDefinitionSection'
 import Topic from '../Topic'
 import Household from '../topics/Household'
 import { help } from './HelpText'

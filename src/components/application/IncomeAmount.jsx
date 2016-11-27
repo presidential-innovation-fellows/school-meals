@@ -2,7 +2,6 @@ import React, { Component, PropTypes } from 'react'
 import IncomeAmountLabel from './IncomeAmountLabel'
 import { numberFormat } from 'underscore.string'
 import { observer } from 'mobx-react'
-import { FormattedMessage } from 'react-intl'
 
 @observer
 class IncomeAmount extends Component {

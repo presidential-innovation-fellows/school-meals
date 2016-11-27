@@ -16,6 +16,8 @@ class IncomeSourceSummary extends Component {
           return 'weekly'
         case 'month':
           return 'monthly'
+        default:
+          return null
       }
     } else {
       return frequency

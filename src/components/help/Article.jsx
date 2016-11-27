@@ -1,5 +1,5 @@
 import jQuery from 'jquery'
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import { observer } from 'mobx-react'
 import Accordion from '../../../node_modules/uswds/src/js/components/accordion';
 
@@ -15,7 +15,10 @@ class Article extends Component {
 
   render() {
     return (
-      <ul className="usa-accordion" ref={(ul) => this.ul = ul}>
+      <ul className="usa-accordion" ref={(ul) => {
+          this.ul = ul
+          return null
+        }}>
         {this.props.children}
       </ul>
     )

@@ -16,7 +16,7 @@ class LocalePicker extends Component {
           <Locale
               locale={locale}
               localeData={this.props.localeData}
-              eventKey={`1.${i++}`}
+              eventKey={`1.${i}`}
               key={i}
           />
          )}

@@ -73,9 +73,9 @@ export default class NavigationData {
           if (i === slides.length - 1) {
             // final slide -- no next
             return null
-          } else {
-            return slides[i + 1]
           }
+
+          return slides[i + 1]
         }
       }
     }
@@ -96,9 +96,9 @@ export default class NavigationData {
           if (i === 0) {
             // first slide -- no prev
             return null
-          } else {
-            return slides[i - 1]
           }
+
+          return slides[i - 1]
         }
       }
     }
@@ -106,7 +106,6 @@ export default class NavigationData {
     // nothing is current -- the first slide should be prev
     return slides[0]
   }
-
 
   get firstIncompleteSlide() {
     const slides = this.slides
@@ -118,18 +117,8 @@ export default class NavigationData {
         return slide
       }
     }
-  }
 
-  get jumpSlide() {
-    return this.firstIncompleteSlide
-  }
-
-  get canJump() {
-    // TODO: complete feature -- difficulties include:
-    //  * when to allow jumping (only once Summary is reached?)
-    //  * which slides may be jumped (all but those with "next" disabled?)
-    //  * how to implement given disconnect of mobx land and navigation land
-    return false
+    return null
   }
 
   @action reflectProgress(slide) {
@@ -142,7 +131,7 @@ export default class NavigationData {
         sectionBeginningsSeen++
       }
 
-      if (slide == slides[i]) {
+      if (slide === slides[i]) {
         break
       }
 
@@ -155,7 +144,7 @@ export default class NavigationData {
 
   goToSlide(id) {
     const slides = this.slides
-    const re = new RegExp(this.CURRENT_CLASS_NAME, 'g') // TODO: imperfect
+    const re = new RegExp(this.CURRENT_CLASS_NAME, 'g') // imperfect
 
     for (let i = 0; i < slides.length; i++) {
       let slide = slides[i]
@@ -188,8 +177,9 @@ export default class NavigationData {
   }
 
   handlebeforeunload(event) {
-    // let the browser's default behavior handle i18n
-    return 'Changes you made may not be saved.'
+    let dialogText = 'If you would like to go back to the previous page in the application, click "Stay," then click the "Back" button at the bottom of the screen.'
+    event.returnValue = dialogText
+    return dialogText
   }
 
   @action init() {
@@ -205,10 +195,6 @@ export default class NavigationData {
 
   @action next() {
     window.location.replace('#/' + this.nextSlide.id)
-  }
-
-  @action jump() {
-    window.location.replace('#/' + this.jumpSlide.id)
   }
 
   @action jumpTo(id) {

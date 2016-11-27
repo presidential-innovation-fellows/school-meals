@@ -1,20 +1,15 @@
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
 import { hoursExceedPeriodCapacity } from '../../helpers'
-import BooleanRadio from './BooleanRadio'
-import Checkbox from './Checkbox'
-import Form from './Form'
 import IncomeSourceAmount from './IncomeSourceAmount'
 import IncomeSourceFrequency from './IncomeSourceFrequency'
 import IncomeSourceHourlyPeriod from './IncomeSourceHourlyPeriod'
 import IncomeSourceSummary from './IncomeSourceSummary'
-import AdditionalIncome from './IncomeSourceAdditional'
 import { FormattedMessage } from 'react-intl'
 
 @observer
 class IncomeSourceSingle extends Component {
   get error() {
-    const { name } = this.props
     const incomeSource = this.props.incomeSource
     const { hourlyPeriod } = incomeSource
 
@@ -48,10 +43,12 @@ class IncomeSourceSingle extends Component {
           return null
       }
     }
+
+    return null
   }
 
   render() {
-    const { name, showHourly, showAnnual } = this.props
+    const { showHourly, showAnnual } = this.props
     const incomeSource = this.props.incomeSource
     const error = this.error
 
@@ -91,7 +88,6 @@ class IncomeSourceSingle extends Component {
 
 IncomeSourceSingle.propTypes = {
   incomeSource: PropTypes.object.isRequired,
-  name: PropTypes.string.isRequired,
   showHourly: PropTypes.bool,
   showAnnual: PropTypes.bool
 }

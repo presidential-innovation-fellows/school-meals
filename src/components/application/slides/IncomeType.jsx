@@ -24,7 +24,7 @@ class IncomeType extends Component {
   }
 
   render() {
-    const { person, name, label, showDefaultText, showMilitaryCaveat } = this.props
+    const { person, name, showDefaultText, showMilitaryCaveat } = this.props
     const incomeType = person.incomeTypes[name]
     const defaultTextProps = { person, showMilitaryCaveat }
     const personName = informalName(person)
@@ -72,7 +72,6 @@ class IncomeType extends Component {
 IncomeType.propTypes = {
   person: PropTypes.object.isRequired,
   name: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
   showDefaultText: PropTypes.bool,
   showMilitaryCaveat: PropTypes.bool
 }

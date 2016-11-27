@@ -9,7 +9,9 @@ class IncomeSourceAmount extends Component {
     this.handleChange = this.handleChange.bind(this)
   }
 
-  handleChange(fieldName, value) {
+  handleChange(fieldName, newValue) {
+    let value = newValue
+
     // allow only digits and decimal
     value = value.replace(/[^\d.]/g, '')
 

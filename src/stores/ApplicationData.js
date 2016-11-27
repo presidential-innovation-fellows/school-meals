@@ -78,7 +78,7 @@ export default class ApplicationData {
           return amount * 26.0
         case 'weekly':
           return amount * 52.0
-        case 'hourly':
+        case 'hourly': {
           let hours = parseFloat(income.hourlyHours, 10)
 
           switch (income.hourlyPeriod) {
@@ -91,6 +91,7 @@ export default class ApplicationData {
             default:
               return 0.0
           }
+        }
         default:
           return 0.0
       }
@@ -256,8 +257,6 @@ class PersonCollection {
       let person = this.items[i]
 
       for (let type in person.incomeTypes) {
-        let sources = person.incomeTypes[type].sources
-
         if (person.incomeTypes[type].isApplicable) {
           return true
         }

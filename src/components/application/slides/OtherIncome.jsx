@@ -14,7 +14,6 @@ class OtherIncome extends Component {
     const incomeSources = incomeType.sources
     const incomeTypeProps = {
       name: 'other',
-      label: 'Other Income',
       person
     }
 

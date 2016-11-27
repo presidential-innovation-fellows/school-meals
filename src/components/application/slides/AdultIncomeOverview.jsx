@@ -1,7 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
 import EditLink from '../EditLink'
-import BooleanRadio from '../BooleanRadio'
 import IncomeTypeFormGroup from '../IncomeTypeFormGroup'
 import { observer } from 'mobx-react'
 import { informalName } from '../../../helpers'

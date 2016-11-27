@@ -24,13 +24,11 @@ class IncomeSourceHourlyPeriod extends Component {
 
   render() {
     const { incomeSource, fieldName } = this.props
-    const hours = incomeSource.hourlyHours
     const value = incomeSource[fieldName]
 
     return (
       <div className="usa-input-grid usa-input-grid-medium">
-        <Select value={incomeSource[fieldName]}
-                onChange={this.handleChange}>
+        <Select value={value} onChange={this.handleChange}>
 
           <FormattedMessage
               id="app.incomeSourceHourlyPeriod.placeholder"

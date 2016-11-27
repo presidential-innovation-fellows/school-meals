@@ -29,15 +29,14 @@ class OtherPrograms extends Component {
       }
     } else {
       for (let key in this.applicability) {
-        switch(this.applicability[key]) {
-          case null:
+        if (this.applicability[key] === null) {
+          return false
+        } else if (this.applicability[key] === true) {
+          if (students
+            .map(student => student[key] !== true)
+            .reduce((a, b) => a && b, true)) {
             return false
-          case true:
-            if (students
-              .map(student => student[key] !== true)
-              .reduce((a, b) => a && b, true)) {
-              return false
-            }
+          }
         }
       }
     }

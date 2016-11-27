@@ -5,7 +5,8 @@ export default class LocaleData {
   @observable code = 'en'
   @observable translations = {}
 
-  @action setLocale(code) {
+  @action setLocale(localeCode) {
+    let code = localeCode
     code = code.split('-')[0].toLowerCase()
 
     // English is the default -- there is no translation file

@@ -1,8 +1,6 @@
 import React from 'react'
 import { observer } from 'mobx-react'
 import Slide from '../Slide'
-import { organization } from '../../../config'
-import { jsonMarkup } from '../../../helpers'
 import {FormattedMessage} from 'react-intl'
 
 @observer
@@ -35,7 +33,7 @@ class ViewAppData extends React.Component {
         />
         </strong>
         <plaintext>
-          {JSON.stringify(this.props.applicationData,undefined, 2)}
+          {JSON.stringify(this.props.applicationData, undefined, 2)}
         </plaintext>
 
       </Slide>

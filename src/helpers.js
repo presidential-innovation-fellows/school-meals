@@ -1,6 +1,4 @@
-﻿import React from 'react'
-
-export function schoolYear(startYear = new Date().getFullYear()) {
+﻿export function schoolYear(startYear = new Date().getFullYear()) {
   return `${startYear}–${startYear + 1}`
 }
 
@@ -146,7 +144,7 @@ function incomeSourceIsValid(incomeSource) {
 
 export function incomeTypeIsValid(incomeType, mustNotBeNull = []) {
   switch (incomeType.isApplicable) {
-    case true:
+    case true: {
       // Invalid if any of the non-nullable incomeType fields are null.
       if (mustNotBeNull.map(name => incomeType[name] == null)
                        .reduce((a, b) => a || b, false)) {
@@ -167,6 +165,7 @@ export function incomeTypeIsValid(incomeType, mustNotBeNull = []) {
       return incomeSources
         .map(incomeSource => incomeSourceIsValid(incomeSource))
         .reduce((a, b) => a && b, true)
+    }
     case false:
       return true
     default:

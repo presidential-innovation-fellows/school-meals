@@ -9,7 +9,7 @@ class Locale extends Component {
     this.handleLocaleClicked = this.handleLocaleClicked.bind(this)
   }
 
-  handleLocaleClicked(event) {
+  handleLocaleClicked() {
     this.props.localeData.setLocale(this.props.locale.code)
   }
 

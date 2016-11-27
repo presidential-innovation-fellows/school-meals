@@ -86,10 +86,6 @@
   "app.incomeAmountLabel.daily": "por día",
   "app.incomeAmountLabel.hourly": "por hora",
 
-  "app.incomeSource.tooManyHours.day": "Sólo hay 24 horas en un día.",
-  "app.incomeSource.tooManyHours.week": "Sólo hay 168 horas en una semana.",
-  "app.incomeSource.tooManyHours.month": "Sólo hay 730 horas en un mes.",
-
   "app.incomeSourceAdditional.addButton": "Agregar fuente de ingresos",
   "app.personForm.removeButton": "Eliminar {name}",
 

@@ -1,9 +1,7 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import Article from '../Article'
 import ArticleFaqSection from '../ArticleFaqSection'
-import ArticleDefinitionSection from '../ArticleDefinitionSection'
 import Topic from '../Topic'
-import { assistanceProgramsVar, organization } from '../../../config'
 import { help } from './HelpText'
 import PaperApp from '../topics/PaperApp'
 

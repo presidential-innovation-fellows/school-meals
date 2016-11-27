@@ -50,6 +50,8 @@ class IncomeAmountLabel extends Component {
                    description="Income earned hourly."
                    defaultMessage="per hour"
                />
+      default:
+        return null
     }
   }
 }

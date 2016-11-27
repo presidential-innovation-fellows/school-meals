@@ -14,7 +14,6 @@ class SpousalIncome extends Component {
     const incomeSources = incomeType.sources
     const incomeTypeProps = {
       name: 'spousal',
-      label: 'Spousal Income',
       person
     }
 

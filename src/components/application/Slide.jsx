@@ -1,4 +1,3 @@
-import classNames from 'classnames'
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
 import Button from './Button'
@@ -10,29 +9,25 @@ class Slide extends Component {
     super(props, context)
     this.handleBack = this.handleBack.bind(this)
     this.handleNext = this.handleNext.bind(this)
-    this.handleJump = this.handleJump.bind(this)
   }
 
   handleBack() {
-    this.props.handleBack ?
-    this.props.handleBack() :
-    this.context.navigationData.back()
+    if (this.props.handleBack) {
+      this.props.handleBack()
+    } else {
+      this.context.navigationData.back()
+    }
   }
 
   handleNext() {
-    this.props.handleNext ?
-    this.props.handleNext() :
-    this.context.navigationData.next()
-  }
-
-  handleJump() {
-    this.props.handleJump ?
-    this.props.handleJump() :
-    this.context.navigationData.jump()
+    if (this.props.handleNext) {
+      this.props.handleNext()
+    } else {
+      this.context.navigationData.next()
+    }
   }
 
   render() {
-    const { navigationData } = this.context
     const props = {
       className: 'slide',
       id: this.props.id,
@@ -77,13 +72,6 @@ class Slide extends Component {
                 </strong>
               </p>
             }
-            {
-              navigationData.canJump &&
-              <Button onClick={this.handleJump}
-                      className="usa-button-primary-alt jump-button">
-                Resume →
-             </Button>
-            }
           </footer>
         </div>
       </section>
@@ -99,8 +87,6 @@ Slide.contextTypes = {
   navigationData: PropTypes.shape({
     back: PropTypes.func.isRequired,
     next: PropTypes.func.isRequired,
-    jump: PropTypes.func.isRequired,
-    canJump: PropTypes.bool.isRequired
   }).isRequired
 }
 
@@ -117,8 +103,7 @@ Slide.propTypes = {
   nextText: PropTypes.node,
   beginsSection: PropTypes.bool,
   handleBack: PropTypes.func,
-  handleNext: PropTypes.func,
-  handleJump: PropTypes.func
+  handleNext: PropTypes.func
 }
 
 Slide.defaultProps = {

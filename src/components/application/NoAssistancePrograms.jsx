@@ -16,8 +16,7 @@ class NoAssistancePrograms extends Component {
 
   render() {
     const { applicationData } = this.props
-    const { allPeopleCollections, electToProvideIncome, students } =
-      applicationData
+    const { allPeopleCollections, students } = applicationData
 
     return (
       <div>

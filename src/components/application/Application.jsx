@@ -16,23 +16,21 @@ import ThankYou from './slides/ThankYou'
 @observer
 class Application extends Component {
   render() {
+    const { applicationData } = this.props
     const {
       attestation,
       students,
       contact,
       adults,
       assistancePrograms,
-      allPeopleCollections
-    } = this.props.applicationData
-
-    const appData = this.props.applicationData
+    } = applicationData
 
     return (
       <div>
         <Welcome />
         <BeforeYouBegin />
         <Attestation attestation={attestation} attestor={adults.first} />
-        <Students students={students} allPeopleCollections={allPeopleCollections} />
+        <Students students={students} />
         <AssistancePrograms applicationData={applicationData} />
 
         {assistancePrograms.hasAny !== true &&

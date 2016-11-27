@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
-import { FormattedMessage } from 'react-intl'
 import { Glyphicon } from 'react-bootstrap'
 import Link from './Link'
 

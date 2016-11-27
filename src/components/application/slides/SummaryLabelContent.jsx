@@ -1,8 +1,6 @@
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
-import { Glyphicon } from 'react-bootstrap'
 import EditLink from '../EditLink'
-import Link from '../Link'
 
 @observer
 class SummaryLabelContent extends Component {

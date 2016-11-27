@@ -1,16 +1,20 @@
 import React, { Component } from 'react'
 import Slide from '../Slide'
 import Alert from '../Alert'
-import Button from '../Button'
 import download from 'downloadjs'
 import { observer } from 'mobx-react'
-import { thankYou } from '../../../config'
 import { FormattedMessage } from 'react-intl'
 
 @observer
 class ThankYou extends Component {
+  constructor (props) {
+    super(props)
+    this.downloadData = this.downloadData.bind(this)
+  }
+
   downloadData() {
-    var stringData = JSON.stringify(applicationData.cleaned, undefined, 2)
+    let { applicationData } = this.props
+    let stringData = JSON.stringify(applicationData.cleaned, undefined, 2)
 
     download(stringData, 'nslp-data.json', 'text/plain');
   }

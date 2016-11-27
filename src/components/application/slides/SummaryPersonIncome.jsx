@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react'
 import EditLink from '../EditLink'
-import FrequencyLabel from '../FrequencyLabel'
 import HourlyPeriodLabel from '../HourlyPeriodLabel'
 import IncomeAmount from '../IncomeAmount'
 import { observer } from 'mobx-react'

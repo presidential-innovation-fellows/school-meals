@@ -2,9 +2,7 @@ import React, { Component, PropTypes } from 'react'
 import IncomeType from './IncomeType'
 import IncomeTypeDefaultText from './IncomeTypeDefaultText'
 import IncomeSource from '../IncomeSource'
-import BooleanRadio from '../BooleanRadio'
 import { observer } from 'mobx-react'
-import { organization } from '../../../config'
 import { tooltiptext } from '../../Tooltiptext'
 import Tooltip from '../Tooltip'
 import {FormattedMessage} from 'react-intl'
@@ -17,7 +15,6 @@ class MilitaryIncome extends Component {
     const incomeSources = incomeType.sources
     const incomeTypeProps = {
       name: 'military',
-      label: 'Military Income',
       person
     }
 

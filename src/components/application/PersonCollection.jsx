@@ -1,7 +1,6 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import { observer } from 'mobx-react'
 import Button from './Button'
-import Form from './Form'
 import PersonForm from './PersonForm'
 import { FormattedMessage } from 'react-intl'
 
@@ -58,7 +57,7 @@ class PersonCollection extends Component {
 }
 
 PersonCollection.defaultProps = {
-  filter: person => true,
+  filter: () => true,
   label: 'person'
 }
 

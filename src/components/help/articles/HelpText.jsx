@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react'
+import React from 'react'
 import { schoolYear } from '../../../helpers'
 import { organization, assistanceProgramsVar, hmrPrograms } from '../../../config'
 import { FormattedMessage } from 'react-intl'

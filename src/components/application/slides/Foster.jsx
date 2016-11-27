@@ -5,7 +5,6 @@ import OtherProgramsProgram from './OtherProgramsProgram'
 import { allStudentsAreFoster } from '../../../helpers'
 import { observable } from 'mobx'
 import { observer } from 'mobx-react'
-import { organization } from '../../../config'
 import { FormattedMessage } from 'react-intl'
 
 @observer
@@ -59,15 +58,14 @@ class Foster extends Component {
       }
     } else {
       for (let key in this.applicability) {
-        switch(this.applicability[key]) {
-          case null:
+        if (this.applicability[key] === null) {
+          return false
+        } else if (this.applicability[key] === true) {
+          if (students
+            .map(student => student[key] !== true)
+            .reduce((a, b) => a && b, true)) {
             return false
-          case true:
-            if (students
-              .map(student => student[key] !== true)
-              .reduce((a, b) => a && b, true)) {
-              return false
-            }
+          }
         }
       }
     }
@@ -77,7 +75,6 @@ class Foster extends Component {
 
   render() {
     const { allPeopleCollections, students } = this.props.applicationData
-    const contact = `${organization.name} (${organization.contact.phone} / ${organization.contact.email} / ${organization.contact.address})`
     const studentCount = students.length
     const props = {
       students: students.items,

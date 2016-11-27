@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import Slide from '../Slide'
 import PersonCollection from '../PersonCollection'
 import { organization } from '../../../config'
@@ -8,7 +8,7 @@ import {FormattedMessage} from 'react-intl'
 @observer
 class Students extends Component {
   render() {
-    const { students, allPeopleCollections } = this.props
+    const { students } = this.props
 
     return (
       <Slide id="students" nextDisabled={!students.isValid} beginsSection>

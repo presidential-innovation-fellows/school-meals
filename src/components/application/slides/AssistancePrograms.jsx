@@ -2,9 +2,8 @@
 import Slide from '../Slide'
 import AssistanceProgramList from './AssistanceProgramList'
 import { observer } from 'mobx-react'
-import { assistancePrograms as programNames, assistanceProgramsVar } from '../../../config'
+import { assistanceProgramsVar } from '../../../config'
 import { ApplicationData } from '../../../stores/ApplicationData'
-import { Glyphicon, OverlayTrigger } from 'react-bootstrap'
 import { tooltiptext } from '../../Tooltiptext'
 import Tooltip from '../Tooltip'
 import InformalNameList from '../InformalNameList'
@@ -13,11 +12,11 @@ import {FormattedMessage} from 'react-intl'
 @observer
 class AssistancePrograms extends Component {
   render() {
+    const { applicationData } = this.props
     const {
       students,
       assistancePrograms,
-      allPeopleCollections
-    } = this.props.applicationData
+    } = applicationData
 
     return(
       <Slide id="assistance-programs"

@@ -30,7 +30,7 @@ class App extends Component {
     navigationData.init()
   }
 
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(prevProps) {
     // We do this because the IntlProvider component gets completely
     // re-rendered when we change locales due to the explicit key property
     // that we set on it.
@@ -98,8 +98,6 @@ App.childContextTypes = {
   navigationData: PropTypes.shape({
     back: PropTypes.func.isRequired,
     next: PropTypes.func.isRequired,
-    jump: PropTypes.func.isRequired,
-    canJump: PropTypes.bool.isRequired
   }).isRequired
 };
 

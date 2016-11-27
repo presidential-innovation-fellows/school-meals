@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react'
-import { observer, observable} from 'mobx-react'
-import { hoursExceedPeriodCapacity } from '../../helpers'
+import { observer } from 'mobx-react'
 import { FormattedMessage } from 'react-intl'
 import IncomeSourceSingle from './IncomeSourceSingle'
 import shortid from 'shortid'
@@ -12,10 +11,6 @@ class AdditionalIncome extends Component {
 
     this.onAddIncomeClick = this.onAddIncomeClick.bind(this)
     this.onDeleteIncomeClick = this.onDeleteIncomeClick.bind(this)
-  }
-
-  get error() {
-    return null
   }
 
   // Handle the event when user clicks the Add Income Source Button
@@ -36,11 +31,9 @@ class AdditionalIncome extends Component {
   }
 
   render() {
-    const { name, showHourly, showAnnual } = this.props
+    const { showHourly, showAnnual } = this.props
     const incomeSource = this.props.incomeSource
-    const error = this.error
     const incomeSourceProps = {
-      name: name,
       showHourly: showHourly,
       showAnnual: showAnnual,
       key: shortid.generate()

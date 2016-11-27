@@ -1,11 +1,10 @@
-﻿import React, { Component, PropTypes } from 'react'
+﻿import React, { Component } from 'react'
 import Slide from '../Slide'
 import InformalNameList from '../InformalNameList'
 import PersonCollection from '../PersonCollection'
 import { computed } from 'mobx'
 import { observer } from 'mobx-react'
 import { organization } from '../../../config'
-import { Glyphicon, OverlayTrigger } from 'react-bootstrap'
 import { tooltiptext } from '../../Tooltiptext'
 import Tooltip from '../Tooltip'
 import {FormattedMessage} from 'react-intl'
@@ -22,7 +21,7 @@ class OtherChildren extends Component {
   }
 
   render() {
-    const { allPeopleCollections, alreadyNamed, otherChildren } = this.props
+    const { alreadyNamed, otherChildren } = this.props
 
     return (
       <Slide nextDisabled={!otherChildren.isValid} nextText={this.nextText}

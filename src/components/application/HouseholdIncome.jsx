@@ -34,14 +34,12 @@ class HouseholdIncome extends Component {
       otherChildren,
       adults,
       signature,
-      allPeopleCollections
     } = this.props.applicationData
 
     return (
       <div>
         <OtherChildren otherChildren={otherChildren}
-                       alreadyNamed={students}
-                       allPeopleCollections={allPeopleCollections} />
+                       alreadyNamed={students} />
 
         <ChildIncome allChildren={this.allChildren} />
         <Adults adults={adults} />

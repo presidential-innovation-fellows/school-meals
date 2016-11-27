@@ -3,7 +3,6 @@ import BooleanRadio from '../BooleanRadio'
 import SerialList from '../SerialList'
 import Slide from '../Slide'
 import InformalNameList from '../InformalNameList'
-import { organization } from '../../../config'
 import { observer } from 'mobx-react'
 import {FormattedMessage} from 'react-intl'
 import { hmrPrograms } from '../../../config'
@@ -90,17 +89,18 @@ class IncomeElection extends Component {
                      studentCount,
                      programName: <Tooltip id="runaway" text={tooltiptext.runaway} target={hmrPrograms.runaway} />
                    }}
-        />
+               />
+      default:
+        return null
     }
   }
 
   get isValid() {
-    return applicationData.electToProvideIncome != null
+    return this.props.applicationData.electToProvideIncome != null
   }
 
   render() {
     const { applicationData } = this.props
-    const { allPeopleCollections } = applicationData
     const allStudents = applicationData.students
     const programSlugs = [
       'isHomeless',

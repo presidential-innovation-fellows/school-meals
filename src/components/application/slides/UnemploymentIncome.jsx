@@ -14,7 +14,6 @@ class UnemploymentIncome extends Component {
     const incomeSources = incomeType.sources
     const incomeTypeProps = {
       name: 'unemployment',
-      label: 'Unemployment Income',
       person
     }
 

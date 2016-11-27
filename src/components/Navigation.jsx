@@ -1,6 +1,6 @@
 ﻿import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
-import { Glyphicon, Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap'
+import { Glyphicon, Navbar, Nav, NavItem } from 'react-bootstrap'
 import { locales, organization } from '../config'
 import { FormattedMessage } from 'react-intl'
 import LocalePicker from './LocalePicker'
@@ -13,19 +13,20 @@ class Navigation extends Component {
     this.handleHelp = this.handleHelp.bind(this)
   }
 
-  handleData(event) {
+  handleData() {
     window.location.replace('#/viewappdata')
   }
 
-  handleHelp(event) {
-    const { localeData, navigationData } = this.props
-    const { currentSlide } = navigationData
+  handleHelp() {
+    const { currentSlide } = this.props.navigationData
     const article = currentSlide.getAttribute('data-help-article')
 
     this.props.helpData.showArticle(article)
   }
 
   render() {
+    const { localeData } = this.props
+
     return (
       <Navbar fixedTop>
         <div className="usa-grid">

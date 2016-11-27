@@ -23,6 +23,9 @@ class Help extends Component {
       case 'cd-panel':
       case 'cd-panel-close':
         this.hideHelp()
+        break
+      default:
+        break
     }
   }
 

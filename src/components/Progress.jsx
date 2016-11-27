@@ -14,7 +14,7 @@ class Progress extends Component {
   componentDidMount() {
     // roll our own event delegation to capture step clicks
     document.addEventListener('click', function(e) {
-      for (let target=e.target; target && target!=this; target=target.parentNode) {
+      for (let target = e.target; target && target !== this; target = target.parentNode) {
         // loop parent nodes from the target to the delegation node
         if (target.hasAttribute('data-hash')) {
           for (let i = 0; i < target.classList.length; i++) {

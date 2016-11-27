@@ -1,4 +1,4 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import { observer } from 'mobx-react'
 import jQuery from 'jquery'
 import LocaleData from '../stores/LocaleData'
@@ -14,9 +14,9 @@ class AppWrapper extends Component {
   componentDidMount() {
     jQuery('#root').on('click', '.slide-content > footer', function(e) {
       // false if an enabled button is clicked, else true
-      if (e.currentTarget == e.target) {
+      if (e.currentTarget === e.target) {
         let $slide = jQuery(e.target).closest('.slide')
-        let $inputs = $slide.find('input:required').filter(function(i) {
+        let $inputs = $slide.find('input:required').filter(function() {
           return !jQuery(this).val()
         })
 
