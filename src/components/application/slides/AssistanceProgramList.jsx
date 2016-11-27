@@ -18,23 +18,23 @@ class AssistanceProgramList extends Component {
     program[fieldName] = value
 
     if (value) {
-      // clear FHMR status
+      // Clear FHMR status.
       students.clearSpecialStatuses()
 
-      // clear income election
+      // Clear income election.
       this.props.applicationData.electToProvideIncome = null
 
-      // clear adults other than attestor
+      // Clear adults other than attestor.
       adults.items.splice(1)
 
-      // clear other children
+      // Clear other children.
       otherChildren.empty()
 
-      // clear attestor and student incomes
+      // Clear attestor and student incomes.
       adults.clearAllIncomes()
       students.clearAllIncomes()
 
-      // clear SSN
+      // Clear SSN.
       signature.noSsn = null
       signature.ssnLastFour = ''
     }

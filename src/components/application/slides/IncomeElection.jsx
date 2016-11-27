@@ -23,23 +23,23 @@ class IncomeElection extends Component {
     applicationData[fieldName] = value
 
     if (value === false) {
-      // clear adults other than attestor
+      // Clear adults other than attestor.
       adults.items.splice(1)
 
-      // clear other children
+      // Clear other children.
       otherChildren.empty()
 
-      // clear attestor and student incomes
+      // Clear attestor and student incomes.
       adults.clearAllIncomes()
       students.clearAllIncomes()
 
-      // clear SSN
+      // Clear SSN.
       signature.noSsn = null
       signature.ssnLastFour = ''
     }
   }
 
-  // returns only H/M/R students
+  // Returns only H/M/R students.
   get students() {
     return this.props.applicationData.students.items.filter(student => {
       return student.isHomeless ||

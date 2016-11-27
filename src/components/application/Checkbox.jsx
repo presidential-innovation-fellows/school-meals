@@ -19,7 +19,7 @@ class Checkbox extends Component {
             this.props.object)
   }
 
-  // side effect, but easier to handle once here than pass in every time
+  // Side effect, but easier to handle once here than pass in every time.
   defaultOnChange(fieldName, value, object) {
     object[fieldName] = value
   }

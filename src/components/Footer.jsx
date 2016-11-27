@@ -5,10 +5,6 @@ import { organization } from '../config'
 
 @observer
 class Footer extends Component {
-  constructor (props) {
-    super(props)
-  }
-
   render () {
     return (
       <footer className="page-footer">

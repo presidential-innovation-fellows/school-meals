@@ -2,7 +2,7 @@
   return `${startYear}–${startYear + 1}`
 }
 
-// retuns zero padded YYYY-MM-DD given a date object
+// Retuns zero padded YYYY-MM-DD given a date object.
 export function formatDate(date) {
   let dd = date.getDate().toString()
   let mm = (date.getMonth() + 1).toString()
@@ -35,9 +35,9 @@ export function fullName(person) {
   return result
 }
 
-// returns the shortest possible unique representation of a name
+// Returns the shortest possible unique representation of a name.
 export function informalName(person,
-                             allPeopleCollections = window.applicationData.allPeopleCollections, // quick hack to avoid passing around in context everywhere
+                             allPeopleCollections = window.applicationData.allPeopleCollections, // Quick hack to avoid passing around in context everywhere.
                              disambiguate = true) {
   let result = person.firstName
 
@@ -99,7 +99,7 @@ export function informalName(person,
     } else if (person.isAdult) {
       result += ' (adult)'
     } else {
-      // should never happen, but good ot have a default
+      // Should never happen, but good ot have a default.
       result += ` (${person.id})`
     }
   }
@@ -241,7 +241,7 @@ export function applicableIncomeSources(person) {
         result.push({
           source: sourceKey,
           type,
-          num: i + 1, // needed for printing summary later
+          num: i + 1, // Needed for printing summary later.
           amount: moreIncome.amount,
           frequency: moreIncome.frequency,
           hourlyHours: moreIncome.hourlyHours,

@@ -17,7 +17,7 @@ class Signature extends Component {
   }
 
   handleSsnChange(name, value) {
-    // only allow numbers
+    // Only allow numbers.
     if (!value.match(/^\d{0,4}$/)) {
       return
     }

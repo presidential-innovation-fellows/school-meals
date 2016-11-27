@@ -12,10 +12,10 @@ class Progress extends Component {
   }
 
   componentDidMount() {
-    // roll our own event delegation to capture step clicks
+    // Roll our own event delegation to capture step clicks.
     document.addEventListener('click', function(e) {
       for (let target = e.target; target && target !== this; target = target.parentNode) {
-        // loop parent nodes from the target to the delegation node
+        // Loop parent nodes from the target to the delegation node.
         if (target.hasAttribute('data-hash')) {
           for (let i = 0; i < target.classList.length; i++) {
             if (target.classList[i] === 'rc-steps-status-finish' ||
@@ -86,7 +86,7 @@ class Progress extends Component {
     return result
   }
 
-  // never returns a value less than a value that's been previously returned
+  // Never returns a value less than a value that's been previously returned.
   get percent() {
     const { currentSlideIndex, slides } = this.props.navigationData
     const newPercent = Math.round(100 * currentSlideIndex / (slides.length - 1))

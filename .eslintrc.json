@@ -76,6 +76,13 @@
     "no-undef-init": 2,
     "no-undefined": 2,
     "no-use-before-define": 2,
+
+    "array-bracket-spacing": 2,
+    "block-spacing": 2,
+    "brace-style": 2,
+    "camelcase": 2,
+    "capitalized-comments": [2, "always", { "ignoreConsecutiveComments": true, "ignoreInlineComments": true }],
+
     "arrow-spacing": 2,
     "generator-star-spacing": 2,
     "no-confusing-arrow": 2,

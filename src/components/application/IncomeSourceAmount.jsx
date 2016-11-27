@@ -12,17 +12,17 @@ class IncomeSourceAmount extends Component {
   handleChange(fieldName, newValue) {
     let value = newValue
 
-    // allow only digits and decimal
+    // Allow only digits and decimal.
     value = value.replace(/[^\d.]/g, '')
 
-    // limit to two decimal places
+    // Limit to two decimal places.
     value = value.replace(/\.(..).+/, '.$1')
 
-    // fix double decimal points
+    // Fix double decimal points.
     value = value.replace(/(\.\d)\./, '$1')
     value = value.replace(/\.\./, '.')
 
-    // cap at $999,999
+    // Cap at $999,999.
     value = value.replace(/(\d{6})[^.]+/, '$1')
 
     this.props.incomeSource[fieldName] = value

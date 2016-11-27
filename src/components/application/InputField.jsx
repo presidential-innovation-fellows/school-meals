@@ -22,7 +22,7 @@ class InputField extends Component {
     handler(event.target.name, sanitizer(event.target.value))
   }
 
-  // side effect, but easier to handle once here than pass in every time
+  // Side effect, but easier to handle once here than pass in every time.
   defaultOnChange(fieldName, value) {
     this.props.object[fieldName] = value
   }
@@ -41,7 +41,7 @@ class InputField extends Component {
     const input = this.props
     const value = input.object[input.name]
 
-    // clear error if value has been input
+    // Clear error if value has been input.
     if (input.required && value) {
       this.$inputField.removeClass('usa-input-error')
     }

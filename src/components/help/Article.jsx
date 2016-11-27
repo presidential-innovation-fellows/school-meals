@@ -6,10 +6,10 @@ import Accordion from '../../../node_modules/uswds/src/js/components/accordion';
 @observer
 class Article extends Component {
   componentDidMount() {
-    // taken in part from https://github.com/18F/web-design-standards/blob/c807e5be3a5786f575869c29145537bf4aa07584/src/js/start.js#L52
+    // Taken in part from https://github.com/18F/web-design-standards/blob/c807e5be3a5786f575869c29145537bf4aa07584/src/js/start.js#L52
     new Accordion(jQuery(this.ul)) // eslint-disable-line no-new
 
-    // always open a new help screen scrolled to the top
+    // Always open a new help screen scrolled to the top.
     document.getElementById('help-content').scrollTop = 0
   }
 

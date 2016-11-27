@@ -18,7 +18,7 @@ class Help extends Component {
   }
 
   handleClick(e) {
-    // home grown event delegation
+    // Home grown event delegation.
     switch (e.target.classList[0]) {
       case 'cd-panel':
       case 'cd-panel-close':
@@ -30,7 +30,7 @@ class Help extends Component {
   }
 
   hideHelp() {
-    // wrap in conditional to mitigate strange bug
+    // Wrap in conditional to mitigate strange bug.
     if (this) {
       this.props.helpData.isVisible = false
     }

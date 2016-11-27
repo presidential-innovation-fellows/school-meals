@@ -17,7 +17,7 @@ class IncomeSourceHourlyPeriod extends Component {
     handler(this.props.fieldName, event.target.value)
   }
 
-  // side effect, but easier to handle once here than pass in every time
+  // Side effect, but easier to handle once here than pass in every time.
   defaultOnChange(fieldName, value) {
     this.props.incomeSource[fieldName] = value
   }

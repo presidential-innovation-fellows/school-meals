@@ -6,14 +6,14 @@ import App from './App'
 
 const localeData = new LocaleData()
 
-// some things occasionally rely on these references (unfortunate shortcut)
+// Some things occasionally rely on these references (unfortunate shortcut).
 window.localeData = localeData
 
 @observer
 class AppWrapper extends Component {
   componentDidMount() {
     jQuery('#root').on('click', '.slide-content > footer', (e) => {
-      // false if an enabled button is clicked, else true
+      // False if an enabled button is clicked, else true.
       if (e.currentTarget === e.target) {
         const $slide = jQuery(e.target).closest('.slide')
         const $inputs = $slide.find('input:required').filter(function() {
@@ -31,7 +31,7 @@ class AppWrapper extends Component {
 
   render() {
     return (
-      // We pass `locale` as a literal for comparison by App.componentDidUpdate
+      // We pass `locale` as a literal for comparison by App.componentDidUpdate.
       <App localeData={localeData} locale={localeData.code} />
     )
   }

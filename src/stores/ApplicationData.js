@@ -226,8 +226,8 @@ class PersonCollection {
     ]
   }
 
-  // kind of ugly -- observable properties to track that aren't part of
-  // the visible properties that #fields returns for person creation
+  // Kind of ugly -- observable properties to track that aren't part of
+  // the visible properties that #fields returns for person creation.
   get propertiesOtherThanFields() {
     return {
       id: shortid.generate()

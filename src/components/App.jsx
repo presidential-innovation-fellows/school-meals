@@ -15,7 +15,7 @@ const applicationData = new ApplicationData()
 const navigationData = new NavigationData()
 const helpData = new HelpData()
 
-// some things occasionally rely on these references (unfortunate shortcut)
+// Some things occasionally rely on these references (unfortunate shortcut).
 window.applicationData = applicationData
 window.helpData = helpData
 window.navigationData = navigationData

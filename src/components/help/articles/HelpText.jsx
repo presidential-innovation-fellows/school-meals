@@ -4,9 +4,9 @@ import { assistanceProgramsVar, hmrPrograms, organization } from '../../../confi
 import { FormattedMessage } from 'react-intl'
 
 export const help = {
-  //variables are paired by contentTitle and contentBody;
-//F1 = PaperApp.jsx
-//F2
+  // Variables are paired by contentTitle and contentBody.
+// F1 = PaperApp.jsx
+// F2
   newAppTitle:
   <FormattedMessage
       id="help.articles.helpText.newAppTitle"
@@ -20,7 +20,7 @@ export const help = {
       defaultMessage="Yes. Eligibility for free or reduced price meals only lasts for one school year. However, eligibility for the previous year carries over for the first few days of the new school year, or until the new eligibility determination is made. Please complete a new application unless you received a letter from the school saying that your child is eligible for the upcoming {schoolYear} school year."
       values={{ schoolYear: schoolYear() }}
   />,
-//F3
+// F3
   childAppTitle:
   <FormattedMessage
     id="help.articles.helpText.childAppTitle"
@@ -34,7 +34,7 @@ export const help = {
     defaultMessage="No. Use one Free and Reduced Price School Meal Application for all students that attend school in {organizationName} in your household."
     values={{ organizationName: organization.name }}
     />,
-//F4
+// F4
   letterTitle:
   <FormattedMessage
     id="help.articles.helpText.letterTitle"
@@ -54,7 +54,7 @@ export const help = {
       organizationAddress: organization.contact.address
     }}
   />,
-//F5
+// F5
   applyLaterTitle:
   <FormattedMessage
     id="help.articles.helpText.applyLaterTitle"
@@ -67,7 +67,7 @@ export const help = {
     description="Help text."
     defaultMessage="Yes, you may apply at any time during the school year.  For example, children with a parent or guardian who becomes unemployed may become eligible for free or reduced price meals if the household income drops below the income limit."
   />,
-//F6
+// F6
   localProgramTitle:
   <FormattedMessage
     id="help.articles.helpText.localProgramTitle"
@@ -89,7 +89,7 @@ export const help = {
       organizationName: organization.name
     }}
   />,
-//F7
+// F7
   fosterQualifyTitle:
   <FormattedMessage
     id="help.articles.helpText.fosterQualifyTitle"
@@ -102,7 +102,7 @@ export const help = {
     description="Help text."
     defaultMessage="Foster children who are formally placed by the State welfare agency or court in a caretaker household are eligible for benefits regardless of household income."
   />,
-//F8
+// F8
   wicTitle:
   <FormattedMessage
     id="help.articles.helpText.wicTitle"
@@ -115,7 +115,7 @@ export const help = {
     description="Help text."
     defaultMessage="Participation in the Special Supplemental Nutrition Program for Women, Infants and Children, or WIC program, does not automatically qualify your children for free or reduced price school meals. You will need to qualify based on your household income by completing this application."
   />,
-//F9
+// F9
   headStartTitle:
   <FormattedMessage
     id="help.articles.helpText.headStartTitle"
@@ -128,7 +128,7 @@ export const help = {
     description="Help text."
     defaultMessage="Yes. Children enrolled in Head Start are automatically eligible for free meals. You do not need to submit an application for school meal benefits unless you are requesting benefits for other school age children in your household."
   />,
-//F10
+// F10
   otherProgramsTitle:
   <FormattedMessage
     id="help.articles.helpText.otherProgramsTitle"
@@ -145,7 +145,7 @@ export const help = {
       snapFullname: assistanceProgramsVar.snap.fullname
     }}
   />,
-//F11
+// F11
   usCitizenTitle:
   <FormattedMessage
     id="help.articles.helpText.usCitizenTitle"
@@ -158,7 +158,7 @@ export const help = {
     description="Help text."
     defaultMessage="Yes. You, your children, or other household members do not have to be U.S. citizens to apply for free or reduced price meals."
   />,
-//F12
+// F12
   publicChargeTitle:
   <FormattedMessage
     id="help.articles.helpText.publicChargeTitle"
@@ -171,7 +171,7 @@ export const help = {
     description="Help text."
     defaultMessage="No, the non-cash benefits received through the National School Lunch Program and School Breakfast Programs are not subject to public charge consideration. In other words, you will not be deported, denied entry to the country, or denied permanent status because you apply for or receive school meal benefits."
   />,
-//F13
+// F13
   checkedTitle:
   <FormattedMessage
     id="help.articles.helpText.checkedTitle"
@@ -184,9 +184,9 @@ export const help = {
     description="Help text."
     defaultMessage="Yes, each application is reviewed by the district to determine eligibility. We may also ask you to send proof of your household’s income."
   />,
-//F14 = WhatInformation.jsx
-//F15 = Household.jsx
-//F16
+// F14 = WhatInformation.jsx
+// F15 = Household.jsx
+// F16
   sharedCustodyTitle:
   <FormattedMessage
     id="help.articles.helpText.sharedCustodyTitle"
@@ -199,7 +199,7 @@ export const help = {
     description="Help text."
     defaultMessage="If time is split between houses, both parents may apply for benefits. If the eligibility statuses are different, the highest level of benefits will apply. For example, if you qualify for free meals but your child’s other parent does not, no matter which house your child is staying at, he or she can still receive free meals. However, if either parent chooses not to have your child receive free meal benefits while residing with them then that parent may simply pay for the meals."
   />,
-//F17
+// F17
   deployedTitle:
   <FormattedMessage
     id="help.articles.helpText.deployedTitle"
@@ -212,7 +212,7 @@ export const help = {
     description="Help text."
     defaultMessage="Yes. Members of the armed services who are activated or deployed are counted as household members. Any money made available by them or on their behalf for the household is included as income to the household with the exception of combat pay."
   />,
-//F18
+// F18
   permanentTitle:
   <FormattedMessage
     id="help.articles.helpText.permanentTitle"
@@ -225,7 +225,7 @@ export const help = {
     description="Help text."
     defaultMessage="No. The foster status only applies to children who are formally placed by the State welfare agency or court in a caretaker household. It does not apply to informal arrangements, such as caretaker arrangements or to permanent guardianship placements, which may exist outside of State or court based systems. The child may still be eligible based on your household income, so we encourage you to complete an application."
   />,
-//F19
+// F19
   fosterTitle:
   <FormattedMessage
     id="help.articles.helpText.fosterTitle"
@@ -238,10 +238,10 @@ export const help = {
     description="Help text."
     defaultMessage="Congratulations on the adoption! And the answer is maybe. If your child was approved for free meals before the adoption went through, then your child is eligible to receive free meals for the rest of the school year. But next year the child will no longer eligible for free meals based on foster status, though they may still qualify based on household income, so we encourage you to submit an application."
   />,
-//F20 = QualifyMigrant.jsx
-//F21 = TBD for next release
-//F22 = QualifyHomeless.jsx
-//F23
+// F20 = QualifyMigrant.jsx
+// F21 = TBD for next release
+// F22 = QualifyHomeless.jsx
+// F23
   qualifyRunawayTitle:
   <FormattedMessage
     id="help.articles.helpText.qualifyRunawayTitle"
@@ -255,8 +255,8 @@ export const help = {
     defaultMessage="Any children living with you who have chosen to leave their prior family or household may qualify for free meals. Please contact {organizationName}."
     values={{ organizationName: organization.name }}
   />,
-//F24 = WhatIncome.jsx
-//F25
+// F24 = WhatIncome.jsx
+// F25
   childIncomeTitle:
   <FormattedMessage
     id="help.articles.helpText.childIncomeTitle"
@@ -269,7 +269,7 @@ export const help = {
     description="Help text."
     defaultMessage="Child income is money received from outside your household that is paid directly to your children. Many households do not have any child income."
   />,
-//F26
+// F26
   grossTitle:
   <FormattedMessage
     id="help.articles.helpText.grossTitle"
@@ -282,7 +282,7 @@ export const help = {
     description="Help text."
     defaultMessage="Gross income is all money earned before deductions, such as income taxes, employee’s social security taxes, and insurance premiums. Gross income also includes money that is garnished from wages, or in the case of bankruptcy, income that is ordered to be paid to creditors."
   />,
-//F27
+// F27
   netTitle:
   <FormattedMessage
     id="help.articles.helpText.netTitle"
@@ -295,8 +295,8 @@ export const help = {
     description="Help text."
     defaultMessage="Commonly referred to as “take home pay,” net income is the amount of money you receive in your pay check. It is your total (or gross) income, minus taxes and deductions."
   />,
-//F28 = NotTheSame.jsx
-//F29
+// F28 = NotTheSame.jsx
+// F29
   militaryTitle:
   <FormattedMessage
     id="help.articles.helpText.militaryTitle"
@@ -309,8 +309,8 @@ export const help = {
     description="Help text."
     defaultMessage="Your basic pay and cash bonuses must be reported as income. If you get any cash value allowances for off-base housing, food, or clothing, (including BAH), it must also be included as income. However, if your housing is part of the Military Housing Privatization Initiative, do not include your housing allowance as income. Do not include payments from the Family Subsistence Supplemental Allowance (FSSA). Any additional combat pay resulting from deployment is also excluded from income. If the service member is deployed, include only the portion that is made available by them or on their behalf to the household as income."
   />,
-//F30 = ReportCombat.jsx
-//F31
+// F30 = ReportCombat.jsx
+// F31
   deipTitle:
   <FormattedMessage
     id="help.articles.helpText.deipTitle"
@@ -323,7 +323,7 @@ export const help = {
     description="Help text."
     defaultMessage="Maybe. If you are not deployed, then it is included in your household income, but if you are away from your home station, then you are exempt from including it as household income."
   />,
-//F32
+// F32
   fssaTitle:
   <FormattedMessage
     id="help.articles.helpText.fssaTitle"
@@ -336,7 +336,7 @@ export const help = {
     description="Help text."
     defaultMessage="Family Subsistence Supplemental Allowance (FSSA) is available to service members living in overseas locations that make less than 130 percent of the federal poverty line, and benefits equal the total dollars required to bring household income to that level."
   />,
-//F33
+// F33
   earningsDifferencesTitle:
   <FormattedMessage
     id="help.articles.helpText.earningsDifferencesTitle"
@@ -349,7 +349,7 @@ export const help = {
     description="Help text."
     defaultMessage="A salary is an agreed-upon, fixed amount of money paid to an employee every year.  Employers pay salaries in different frequencies depending on the work, but often the frequency is monthly, twice a month, or every two weeks. Wages are also an agreed-upon payment for work. Employers usually pay wages at an hourly, daily or weekly frequency."
   />,
-//F34
+// F34
   selfEmployedTitle:
   <FormattedMessage
     id="help.articles.helpText.selfEmployedTitle"
@@ -362,7 +362,7 @@ export const help = {
     description="Help text."
     defaultMessage="If you are self-employed, report income from work as a net amount. This is calculated by subtracting the total operating expenses of your business from its gross receipts or revenue. For more information see the definition for ‘Net income from self-employment"
   />,
-//F35
+// F35
   wagesSelfemploymentTitle:
   <FormattedMessage
     id="help.articles.helpText.wagesSelfemploymentTitle"
@@ -375,7 +375,7 @@ export const help = {
     description="Help text."
     defaultMessage="For a household with income from wages and self-employment, each amount must be listed separately. When there is a business loss, income from wages must not be reduced by the amount of the business loss. If income from self-employment is negative, you should report it as $0 (zero) on your application."
   />,
-//F36
+// F36
   govProgramTitle:
   <FormattedMessage
     id="help.articles.helpText.govProgramTitle"
@@ -394,7 +394,7 @@ export const help = {
       organizationAddress: organization.contact.address
     }}
   />,
-//F37
+// F37
   rentalTitle:
   <FormattedMessage
     id="help.articles.helpText.rentalTitle"
@@ -413,7 +413,7 @@ export const help = {
       organizationAddress: organization.contact.address
     }}
   />,
-//F38
+// F38
   interestTitle:
   <FormattedMessage
     id="help.articles.helpText.interestTitle"
@@ -426,7 +426,7 @@ export const help = {
     description="Help text."
     defaultMessage="If you have money in a savings or investment account, you should have income from earned interest. Interest payments are usually paid out on a quarterly basis, or four times per year. You should see any earned interest on your savings or investment account statement."
   />,
-//F39
+// F39
   seasonalTitle:
   <FormattedMessage
     id="help.articles.helpText.seasonalTitle"
@@ -445,7 +445,7 @@ export const help = {
       organizationAddress: organization.contact.address
     }}
   />,
-//F40
+// F40
   noIncomeTitle:
   <FormattedMessage
     id="help.articles.helpText.noIncomeTitle"
@@ -458,7 +458,7 @@ export const help = {
     description="Help text."
     defaultMessage="You should still list these household members on your application.  Household members may not earn or receive some of the types of income we ask you to report, or they may not receive income at all. Remember your eligibility determination is based on both household income and household size. For more information on who to include in your application, see the FAQ “WHO SHOULD I INCLUDE IN MY HOUSEHOLD?”"
   />,
-//F41
+// F41
   ssnTitle:
   <FormattedMessage
     id="help.articles.helpText.ssnTitle"
@@ -471,7 +471,7 @@ export const help = {
     description="Help text."
     defaultMessage="Don’t worry, you don’t need to have a Social Security number to receive free or reduced price benefits."
   />,
-//F42
+// F42
   contactTitle:
   <FormattedMessage
     id="help.articles.helpText.contactTitle"
@@ -484,7 +484,7 @@ export const help = {
     description="Help text."
     defaultMessage="No, but it is very helpful to have your contact information in case we need to get in touch with you about your application. Also, if your contact information changes in the future, please let us know so that we can maintain up-to-date information for your household throughout the year."
   />,
-//F43
+// F43
   disagreeTitle:
   <FormattedMessage
     id="help.articles.helpText.disagreeTitle"
@@ -506,7 +506,7 @@ export const help = {
 }
 
 export const define = {
-	//variables are paired by contentTerm contentDef
+  // Variables are paired by contentTerm contentDef.
 //D1 = IEG.jsx
 //D2
   mckinneyTerm:

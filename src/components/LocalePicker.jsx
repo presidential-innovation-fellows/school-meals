@@ -6,9 +6,9 @@ import Locale from './Locale'
 @observer
 class LocalePicker extends Component {
   render() {
-    const activeLocale = this.props.locales.find(locale =>
-      { return locale.code === this.props.localeData.code }
-    )
+    const activeLocale = this.props.locales.find(locale => {
+      return locale.code === this.props.localeData.code
+    })
 
     return (
       <NavDropdown eventKey="1" title={activeLocale.language} id="nav-dropdown">

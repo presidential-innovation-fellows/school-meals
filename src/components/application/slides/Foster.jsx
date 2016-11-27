@@ -31,17 +31,17 @@ class Foster extends Component {
     }
 
     if (allStudentsAreFoster(students)) {
-      // clear adults other than attestor
+      // Clear adults other than attestor.
       adults.items.splice(1)
 
-      // clear other children
+      // Clear other children.
       otherChildren.empty()
 
-      // clear attestor and student incomes
+      // Clear attestor and student incomes.
       adults.clearAllIncomes()
       students.clearAllIncomes()
 
-      // clear SSN
+      // Clear SSN.
       signature.noSsn = null
       signature.ssnLastFour = ''
     }

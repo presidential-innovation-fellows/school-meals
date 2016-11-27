@@ -29,22 +29,24 @@ export default class NavigationData {
 
     // Workaround for event.newURL and event.oldURL:
     // https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onhashchange
-    if (!window.HashChangeEvent) {(function() {
-      let lastURL=document.URL;
-      window.addEventListener('hashchange', (event) => {
-        Object.defineProperty(event, 'oldURL', {
-          enumerable: true,
-          configurable: true,
-          value: lastURL
+    if (!window.HashChangeEvent) {
+      (function() {
+        let lastURL=document.URL;
+        window.addEventListener('hashchange', (event) => {
+          Object.defineProperty(event, 'oldURL', {
+            enumerable: true,
+            configurable: true,
+            value: lastURL
+          })
+          Object.defineProperty(event, 'newURL', {
+            enumerable: true,
+            configurable: true,
+            value: document.URL
+          })
+          lastURL = document.URL
         })
-        Object.defineProperty(event, 'newURL', {
-          enumerable: true,
-          configurable: true,
-          value: document.URL
-        })
-        lastURL = document.URL
-      })
-    }())}
+      }())
+    }
 
     this.handleHashChange = this.handleHashChange.bind(this)
     window.onhashchange = this.handleHashChange
@@ -65,13 +67,13 @@ export default class NavigationData {
     const slides = this.slides
 
     for (let i = 0; i < slides.length; i++) {
-      // the current slide
+      // The current slide.
       for (let j = 0; j < slides[i].classList.length; j++) {
         const className = slides[i].classList[j]
 
         if (className === this.CURRENT_CLASS_NAME) {
           if (i === slides.length - 1) {
-            // final slide -- no next
+            // Final slide -- no next.
             return null
           }
 
@@ -80,7 +82,7 @@ export default class NavigationData {
       }
     }
 
-    // nothing is current -- the first slide should be next
+    // Nothing is current -- the first slide should be next.
     return slides[0]
   }
 
@@ -88,13 +90,13 @@ export default class NavigationData {
     const slides = this.slides
 
     for (let i = 0; i < slides.length; i++) {
-      // the current slide
+      // The current slide.
       for (let j = 0; j < slides[i].classList.length; j++) {
         const className = slides[i].classList[j]
 
         if (className === this.CURRENT_CLASS_NAME) {
           if (i === 0) {
-            // first slide -- no prev
+            // First slide -- no prev.
             return null
           }
 
@@ -103,7 +105,7 @@ export default class NavigationData {
       }
     }
 
-    // nothing is current -- the first slide should be prev
+    // Nothing is current -- the first slide should be prev.
     return slides[0]
   }
 
@@ -144,7 +146,7 @@ export default class NavigationData {
 
   goToSlide(id) {
     const slides = this.slides
-    const re = new RegExp(this.CURRENT_CLASS_NAME, 'g') // imperfect
+    const re = new RegExp(this.CURRENT_CLASS_NAME, 'g') // Imperfect.
 
     for (let i = 0; i < slides.length; i++) {
       const slide = slides[i]
@@ -162,12 +164,12 @@ export default class NavigationData {
 
   handleHashChange(event) {
     let newId = (event.newURL.split('#')[1] || '/').substr(1)
-    newId = newId || this.slides[0].id // root (no hash)
+    newId = newId || this.slides[0].id // Root (no hash).
 
     this.goToSlide(newId)
   }
 
-  // re-navigate to current slide
+  // Re-navigate to current slide.
   refreshSlide() {
     const syntheticEvent = {
       newURL: window.location.href
@@ -183,10 +185,11 @@ export default class NavigationData {
   }
 
   @action init() {
-    if (window.location.hash === '#/')
-      {window.location.replace('#')}
-    else
-      {window.location.replace('#/')}
+    if (window.location.hash === '#/') {
+      window.location.replace('#')
+    } else {
+      window.location.replace('#/')
+    }
   }
 
   @action back() {
