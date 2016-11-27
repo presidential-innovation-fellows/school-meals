@@ -55,7 +55,7 @@ class Welcome extends React.Component {
               values={{
                 address: organization.paperApplication.address,
                 link:
-                  <a href={organization.paperApplication.url} target="_blank">
+                  <a href={organization.paperApplication.url} target="_blank" rel="noopener noreferrer">
                     <FormattedMessage
                         id="app.slides.welcome.paperApplication"
                         description="Phrase"

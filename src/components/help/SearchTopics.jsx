@@ -12,6 +12,7 @@ class SearchTopics extends Component {
     }
 
     this.setSearchVal = this.setSearchVal.bind(this)
+    this.handleChange = this.handleChange.bind(this)
   }
 
   componentDidMount() {
@@ -56,7 +57,7 @@ class SearchTopics extends Component {
               name="search"
               placeholder="Search term"
               value={this.state.searchVal}
-              onChange={this.handleChange.bind(this)}
+              onChange={this.handleChange}
           />
         </div>
 
