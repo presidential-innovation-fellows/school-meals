@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import Topic from '../Topic'
 import { FormattedMessage } from 'react-intl'
+import { assistanceProgramsVar } from '../../../config'
 
 // F24
 export default class WhatIncome extends Component {
@@ -271,7 +272,11 @@ export default class WhatIncome extends Component {
           <FormattedMessage
               id="help.topic.WhatIncome.answer37"
               description="Answer for the applicable income help topic."
-              defaultMessage="We do not take into account income from:"
+              defaultMessage="Cash value of benefits from {snapAccronym} or {fdpirAccronym}"
+              values={{
+                snapAccronym: assistanceProgramsVar.snap.accronym,
+                fdpirAccronym: assistanceProgramsVar.fdpir.accronym
+              }}
           />
         </p>
         <ul>
