@@ -66,7 +66,7 @@ class Summary extends Component {
           <FormattedMessage
               id="app.slides.summary.studentsAttending"
               description="student info"
-              defaultMessage="Students attending {organizationName}"
+              defaultMessage="Students attending school in {organizationName}"
               values={{
                 organizationName: organization.name
               }}
