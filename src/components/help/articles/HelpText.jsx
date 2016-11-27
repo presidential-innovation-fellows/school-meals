@@ -139,10 +139,10 @@ export const help = {
     <FormattedMessage
         id="help.articles.helpText.otherProgramsBody"
         description="Help text."
-        defaultMessage="To find out how to apply for {snapFullname} or other assistance benefits, contact your {organizationName}."
+        defaultMessage="To find out how to apply for {snapFullname} or other assistance benefits, contact {organizationName}."
         values={{
           organizationName: organization.name,
-          snapFullname: assistanceProgramsVar.snap.fullname
+          snapFullname: assistanceProgramsVar.snap.fullName
         }}
     />,
 // F11

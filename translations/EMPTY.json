@@ -1911,7 +1911,7 @@
   "help.articles.helpText.otherProgramsTitle": "",
 
   // Help text.
-  // English: "To find out how to apply for {snapFullname} or other assistance benefits, contact your {organizationName}."
+  // English: "To find out how to apply for {snapFullname} or other assistance benefits, contact {organizationName}."
   "help.articles.helpText.otherProgramsBody": "",
 
   // Help text.
@@ -2841,5 +2841,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1480276396759."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1480276934657."
 }
