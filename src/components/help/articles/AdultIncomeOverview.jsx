@@ -57,10 +57,6 @@ export default class AdultIncomeOverview extends Component {
           <Topic title={define.pensionTerm} body={define.pensionDef} />
           <Topic title={define.annuityTerm} body={define.annuityDef} />
           <Topic title={define.trustTerm} body={define.trustDef} />
-          <Topic title={define.ssiChildrenTerm} body={define.ssiChildrenDef} />
-          <Topic title={define.ssSurvivorTerm} body={define.ssSurvivorDef} />
-          <Topic title={define.pensionBeneficiaryTerm} body={define.pensionBeneficiaryDef} />
-          <Topic title={define.annuityChildrenTerm} body={define.annuityChildrenDef} />
         </ArticleDefinitionSection>
       </Article>
     )
