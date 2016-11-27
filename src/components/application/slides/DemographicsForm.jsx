@@ -5,7 +5,7 @@ import Checkbox from '../Checkbox'
 import Checkboxes from '../Checkboxes'
 import { observer } from 'mobx-react'
 import { informalName } from '../../../helpers'
-import {FormattedMessage} from 'react-intl'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class Demographics extends Component {

@@ -5,7 +5,7 @@ import IncomeSource from '../IncomeSource'
 import { observer } from 'mobx-react'
 import { tooltiptext } from '../../Tooltiptext'
 import Tooltip from '../Tooltip'
-import {FormattedMessage} from 'react-intl'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class MilitaryIncome extends Component {

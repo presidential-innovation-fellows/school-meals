@@ -6,7 +6,7 @@ import IncomeTypeDefaultText from './IncomeTypeDefaultText'
 import { computed } from 'mobx'
 import { observer } from 'mobx-react'
 import { incomeTypeIsValid, informalName } from '../../../helpers'
-import {FormattedMessage} from 'react-intl'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class IncomeType extends Component {

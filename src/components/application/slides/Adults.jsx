@@ -5,7 +5,7 @@ import Link from '../Link'
 import { computed } from 'mobx'
 import { observer } from 'mobx-react'
 import { informalName } from '../../../helpers'
-import {FormattedMessage} from 'react-intl'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class Adults extends Component {

@@ -8,7 +8,7 @@ import { observer } from 'mobx-react'
 import { Glyphicon } from 'react-bootstrap'
 import { tooltiptext } from '../../Tooltiptext'
 import Tooltip from '../Tooltip'
-import {FormattedMessage} from 'react-intl'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class BeforeYouBegin extends React.Component {

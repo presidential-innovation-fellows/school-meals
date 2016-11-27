@@ -7,7 +7,7 @@ import { ApplicationData } from '../../../stores/ApplicationData'
 import { tooltiptext } from '../../Tooltiptext'
 import Tooltip from '../Tooltip'
 import InformalNameList from '../InformalNameList'
-import {FormattedMessage} from 'react-intl'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class AssistancePrograms extends Component {

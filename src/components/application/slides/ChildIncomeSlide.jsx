@@ -8,7 +8,7 @@ import { observer } from 'mobx-react'
 import { incomeTypeIsValid, informalName } from '../../../helpers'
 import { tooltiptext } from '../../Tooltiptext'
 import Tooltip from '../Tooltip'
-import {FormattedMessage} from 'react-intl'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class ChildIncomeSlide extends Component {

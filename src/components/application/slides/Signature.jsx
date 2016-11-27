@@ -6,7 +6,7 @@ import Checkboxes from '../Checkboxes'
 import InputField from '../InputField'
 import { observer } from 'mobx-react'
 import { fullName } from '../../../helpers'
-import {FormattedMessage} from 'react-intl'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class Signature extends Component {

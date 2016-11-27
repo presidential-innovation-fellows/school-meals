@@ -4,7 +4,7 @@ import Form from '../Form'
 import Fieldset from '../Fieldset'
 import InputField from '../InputField'
 import { observer } from 'mobx-react'
-import {FormattedMessage} from 'react-intl'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class Attestation extends Component {

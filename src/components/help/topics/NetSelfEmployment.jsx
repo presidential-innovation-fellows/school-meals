@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Topic from '../Topic'
-import {FormattedMessage} from 'react-intl'
+import { FormattedMessage } from 'react-intl'
 
 //D7
 export default class NetSelfEmployment extends Component {

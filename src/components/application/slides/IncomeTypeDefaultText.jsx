@@ -3,7 +3,7 @@ import { observer } from 'mobx-react'
 import { informalName } from '../../../helpers'
 import { tooltiptext } from '../../Tooltiptext'
 import Tooltip from '../Tooltip'
-import {FormattedMessage} from 'react-intl'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class IncomeTypeDefaultText extends Component {

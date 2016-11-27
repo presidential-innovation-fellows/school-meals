@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Topic from '../Topic'
 import { organization } from '../../../config'
-import {FormattedMessage} from 'react-intl'
+import { FormattedMessage } from 'react-intl'
 
 //F20
 export default class QualifyMigrant extends Component {

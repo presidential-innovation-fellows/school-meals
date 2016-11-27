@@ -1,5 +1,5 @@
 ﻿import React from 'react'
-import {FormattedMessage} from 'react-intl'
+import { FormattedMessage } from 'react-intl'
 import Slide from '../Slide'
 import { organization } from '../../../config'
 import { observer } from 'mobx-react'

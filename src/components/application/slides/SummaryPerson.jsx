@@ -3,7 +3,7 @@ import EditLink from '../EditLink'
 import SummaryPersonIncome from './SummaryPersonIncome'
 import { observer } from 'mobx-react'
 import { applicableIncomeSources, fullName } from '../../../helpers'
-import {FormattedMessage} from 'react-intl'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class SummaryPerson extends Component {

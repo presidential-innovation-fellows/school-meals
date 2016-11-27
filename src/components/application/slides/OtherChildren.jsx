@@ -7,7 +7,7 @@ import { observer } from 'mobx-react'
 import { organization } from '../../../config'
 import { tooltiptext } from '../../Tooltiptext'
 import Tooltip from '../Tooltip'
-import {FormattedMessage} from 'react-intl'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class OtherChildren extends Component {

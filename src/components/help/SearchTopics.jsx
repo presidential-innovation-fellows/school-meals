@@ -1,6 +1,6 @@
 import jQuery from 'jquery'
 import React, { Component, PropTypes } from 'react'
-import {FormattedMessage} from 'react-intl'
+import { FormattedMessage } from 'react-intl'
 import All from './articles/All'
 
 class SearchTopics extends Component {

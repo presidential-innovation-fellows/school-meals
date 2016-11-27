@@ -1,7 +1,7 @@
 import classnames from 'classnames';
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
-import {IntlProvider} from 'react-intl'
+import { IntlProvider } from 'react-intl'
 import Application from './application/Application'
 import ApplicationData from '../stores/ApplicationData'
 import NavigationData from '../stores/NavigationData'

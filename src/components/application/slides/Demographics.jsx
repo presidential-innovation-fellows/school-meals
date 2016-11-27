@@ -3,7 +3,7 @@ import Slide from '../Slide'
 import DemographicsForm from './DemographicsForm'
 import { organization } from '../../../config'
 import { observer } from 'mobx-react'
-import {FormattedMessage} from 'react-intl'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class Demographics extends Component {

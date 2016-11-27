@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Topic from '../Topic'
-import {FormattedMessage} from 'react-intl'
+import { FormattedMessage } from 'react-intl'
 
 //F30
 export default class ReportCombat extends Component {

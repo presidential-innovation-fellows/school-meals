@@ -65,7 +65,7 @@ class AdditionalIncome extends Component {
 
                 return (
                   <div key={shortid.generate()}>
-                    <div style={{borderTop: '1px solid LightGray', marginTop: '10px', paddingTop: '10px'}}>
+                    <div style={{ borderTop: '1px solid LightGray', marginTop: '10px', paddingTop: '10px' }}>
                       <IncomeSourceSingle incomeSource={source} {...incomeSourceProps} />
                       <button id={i} {...deleteButtonProps}>Remove</button>
                     </div>
