@@ -60,7 +60,13 @@ class IncomeSourceAdditional extends Component {
           return (
             <div key={shortid.generate()}>
               <IncomeSourceSingle incomeSource={source} {...incomeSourceProps} />
-              <button {...deleteButtonProps}>Remove</button>
+              <button {...deleteButtonProps}>
+                <FormattedMessage
+                    id="app.incomeSourceAdditional.removeButton"
+                    description="Button text to remove an income source"
+                    defaultMessage="Remove"
+                />
+              </button>
             </div>
           )
         }, this)

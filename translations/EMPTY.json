@@ -355,6 +355,10 @@
    *** src/components/application/IncomeSourceAdditional.jsx
    ***/
 
+  // Button text to remove an income source
+  // English: "Remove"
+  "app.incomeSourceAdditional.removeButton": "",
+
   // Button text to add an income source
   // English: "Add Income Source"
   "app.incomeSourceAdditional.addButton": "",
@@ -2841,5 +2845,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1480276934657."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1480295281833."
 }
