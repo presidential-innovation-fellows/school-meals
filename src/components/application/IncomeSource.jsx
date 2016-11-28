@@ -27,6 +27,11 @@ class IncomeSource extends Component {
   render() {
     const { name, showHourly, showAnnual } = this.props
     const incomeSource = this.props.incomeSources[name]
+    const props = {
+      incomeSource,
+      showHourly,
+      showAnnual
+    }
 
     return (
       <div>
@@ -40,11 +45,8 @@ class IncomeSource extends Component {
 
           {incomeSource.has &&
           <div className="income-source-details">
-
-            <IncomeSourceSingle incomeSource={incomeSource} showHourly={showHourly} showAnnual={showAnnual} />
-
-            <IncomeSourceAdditional incomeSource={incomeSource} showHourly={showHourly} showAnnual={showAnnual} />
-
+            <IncomeSourceSingle {...props} />
+            { incomeSource.more && <IncomeSourceAdditional {...props} /> }
           </div>
           }
         </Form>

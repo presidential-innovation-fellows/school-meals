@@ -54,34 +54,24 @@ class IncomeSourceAdditional extends Component {
       onClick: this.onDeleteIncomeClick
     }
 
-
     return (
       <div>
-        { typeof (incomeSource.more) !== 'undefined' &&
-          <div>
-
-            {
-              incomeSource.more.map((source, i) => {
-
-                return (
-                  <div key={shortid.generate()}>
-                    <div style={{ borderTop: '1px solid LightGray', marginTop: '10px', paddingTop: '10px' }}>
-                      <IncomeSourceSingle incomeSource={source} {...incomeSourceProps} />
-                      <button id={i} {...deleteButtonProps}>Remove</button>
-                    </div>
-                  </div>
-                )
-              }, this)
-            }
-            <button {...addButtonProps} >
-              + <FormattedMessage
-                  id="app.incomeSourceAdditional.addButton"
-                  description="Button text to add an income source"
-                  defaultMessage="Add Income Source"
-                />
-            </button>
-          </div>
+        { incomeSource.more.map(source => {
+          return (
+            <div key={shortid.generate()}>
+              <IncomeSourceSingle incomeSource={source} {...incomeSourceProps} />
+              <button {...deleteButtonProps}>Remove</button>
+            </div>
+          )
+        }, this)
         }
+        <button {...addButtonProps} >
+          + <FormattedMessage
+              id="app.incomeSourceAdditional.addButton"
+              description="Button text to add an income source"
+              defaultMessage="Add Income Source"
+            />
+        </button>
       </div>
     )
   }
