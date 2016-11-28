@@ -103,10 +103,10 @@ export function informalName(person,
   return result
 }
 
-export function hoursExceedPeriodCapacity(incomeSource) {
-  const hours = incomeSource.hourlyHours || 0
+export function hoursExceedPeriodCapacity(lineItem) {
+  const hours = lineItem.hourlyHours || 0
 
-  switch (incomeSource.hourlyPeriod) {
+  switch (lineItem.hourlyPeriod) {
     case 'day':
       return hours > 24
     case 'week':
@@ -119,23 +119,35 @@ export function hoursExceedPeriodCapacity(incomeSource) {
 }
 
 function incomeSourceIsValid(incomeSource) {
-  return incomeSource.has === false ||
-         !!(
-             incomeSource.has &&
-             incomeSource.amount &&
-             incomeSource.frequency &&
-             (
-               incomeSource.frequency !== 'hourly' ||
-               (incomeSource.hourlyHours && incomeSource.hourlyPeriod &&
-                !hoursExceedPeriodCapacity(incomeSource))
-             ) &&
-             (
-               !incomeSource.more ||
-               incomeSource.more
-                 .map(moreSource => incomeSourceIsValid(moreSource))
-                 .reduce((a, b) => a && b, true)
-             )
-         )
+  switch (incomeSource.has) {
+    case true:
+      // Invalid if user has income source but zero line items for it.
+      if (!incomeSource.lineItems.length) {
+        return false
+      }
+
+      for (let i = 0; i < incomeSource.lineItems.length; i++) {
+        const lineItem = incomeSource.lineItems[i]
+
+        if (!lineItem.amount ||
+            !lineItem.frequency) {
+          return false
+        }
+
+        if (lineItem.frequency === 'hourly') {
+          if (!lineItem.hourlyHours ||
+              !lineItem.hourlyPeriod ||
+              hoursExceedPeriodCapacity(lineItem)) {
+            return false
+          }
+        }
+      }
+      return true
+    case false:
+      return true
+    default:
+      return false
+  }
 }
 
 export function incomeTypeIsValid(incomeType) {
@@ -195,7 +207,7 @@ export function allStudentsAreFoster(students) {
     .reduce((a, b) => a && b, true)
 }
 
-export function applicableIncomeSources(person) {
+export function applicableIncomeLineItems(person) {
   const result = []
 
   for (const type in person.incomeTypes) {
@@ -212,32 +224,10 @@ export function applicableIncomeSources(person) {
         continue
       }
 
-      result.push({
-        source: sourceKey,
-        type,
-        num: 0,
-        amount: source.amount,
-        frequency: source.frequency,
-        hourlyHours: source.hourlyHours,
-        hourlyPeriod: source.hourlyPeriod
-      })
+      for (let i = 0; i < source.lineItems.length; i++) {
+        const lineItem = source.lineItems[i]
 
-      // Add additional income sources to the total
-      // User can add additional income for each sourceKey in UI
-      // Example: User has 2 Salary/Wage jobs -- Uber and Waiter
-
-      for (let i = 0, len = source.more.length; i < len; i++){
-        const moreIncome = source.more[i]
-
-        result.push({
-          source: sourceKey,
-          type,
-          num: i + 1, // Needed for printing summary later.
-          amount: moreIncome.amount,
-          frequency: moreIncome.frequency,
-          hourlyHours: moreIncome.hourlyHours,
-          hourlyPeriod: moreIncome.hourlyPeriod
-        })
+        result.push(Object.assign({}, lineItem, { source: sourceKey, type }))
       }
     }
   }

@@ -4,9 +4,9 @@ import { observer } from 'mobx-react'
 import IncomeAmount from './IncomeAmount'
 
 @observer
-class IncomeSourceSummary extends Component {
+class IncomeLineItemSummary extends Component {
   get frequency() {
-    const { frequency, hourlyPeriod } = this.props.incomeSource
+    const { frequency, hourlyPeriod } = this.props.lineItem
 
     if (frequency === 'hourly') {
       switch (hourlyPeriod) {
@@ -25,14 +25,14 @@ class IncomeSourceSummary extends Component {
   }
 
   get amount() {
-    const { amount, frequency, hourlyHours } = this.props.incomeSource
+    const { amount, frequency, hourlyHours } = this.props.lineItem
     return (amount || 0) * (frequency === 'hourly' ? (hourlyHours || 0) : 1)
   }
 
   render() {
     const className = classnames({
       'usa-label-big': true,
-      'income-source-summary': true,
+      'income-line-item-summary': true,
       'invisible': !(this.amount && this.frequency)
     })
 
@@ -48,8 +48,8 @@ class IncomeSourceSummary extends Component {
   }
 }
 
-IncomeSourceSummary.propTypes = {
-  incomeSource: PropTypes.object.isRequired
+IncomeLineItemSummary.propTypes = {
+  lineItem: PropTypes.object.isRequired
 }
 
-export default IncomeSourceSummary
+export default IncomeLineItemSummary

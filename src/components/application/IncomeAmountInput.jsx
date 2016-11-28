@@ -3,7 +3,7 @@ import { observer } from 'mobx-react'
 import InputField from './InputField'
 
 @observer
-class IncomeSourceAmount extends Component {
+class IncomeAmountInput extends Component {
   constructor(props) {
     super(props)
     this.handleChange = this.handleChange.bind(this)
@@ -25,17 +25,17 @@ class IncomeSourceAmount extends Component {
     // Cap at $999,999.
     value = value.replace(/(\d{6})[^.]+/, '$1')
 
-    this.props.incomeSource[fieldName] = value
+    this.props.lineItem[fieldName] = value
   }
 
   render() {
-    const { incomeSource, fieldName, placeholder, prepend, type } = this.props
-    const value = incomeSource[fieldName]
+    const { lineItem, fieldName, placeholder, prepend, type } = this.props
+    const value = lineItem[fieldName]
 
     return (
       <InputField
           type={type}
-          object={incomeSource}
+          object={lineItem}
           name={fieldName}
           grid={true}
           size="small"
@@ -48,8 +48,8 @@ class IncomeSourceAmount extends Component {
   }
 }
 
-IncomeSourceAmount.propTypes = {
-  incomeSource: PropTypes.object.isRequired,
+IncomeAmountInput.propTypes = {
+  lineItem: PropTypes.object.isRequired,
   fieldName: PropTypes.string,
   type: PropTypes.string,
   placeholder: PropTypes.string,
@@ -57,11 +57,11 @@ IncomeSourceAmount.propTypes = {
   error: PropTypes.bool
 }
 
-IncomeSourceAmount.defaultProps = {
+IncomeAmountInput.defaultProps = {
   fieldName: 'amount',
   type: 'tel',
   placeholder: '$',
   prepend: '$'
 }
 
-export default IncomeSourceAmount
+export default IncomeAmountInput

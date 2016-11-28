@@ -1,8 +1,8 @@
 import React, { Component, PropTypes } from 'react'
 import EditLink from '../EditLink'
-import SummaryPersonIncome from './SummaryPersonIncome'
+import SummaryPersonIncomeLineItem from './SummaryPersonIncomeLineItem'
 import { observer } from 'mobx-react'
-import { applicableIncomeSources, fullName } from '../../../helpers'
+import { applicableIncomeLineItems, fullName } from '../../../helpers'
 import { FormattedMessage } from 'react-intl'
 
 @observer
@@ -62,11 +62,11 @@ class SummaryPerson extends Component {
             <EditLink id="other-programs" />
           </li>}
 
-          {applicableIncomeSources(person).map(income =>
-            <SummaryPersonIncome
-                key={person.id + income.type + income.source + income.num}
+          {applicableIncomeLineItems(person).map(lineItem =>
+            <SummaryPersonIncomeLineItem
+                key={lineItem.id}
                 person={person}
-                income={income}
+                lineItem={lineItem}
             />
            )}
 

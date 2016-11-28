@@ -135,8 +135,10 @@ class ChildIncomeOverview extends Component {
 
         {allChildren.map(child =>
           <IncomeTypeFormGroup
-              person={child} incomeTypeName="child"
-              key={child.id} incomeDescription="income"
+              person={child}
+              key={child.id}
+              incomeTypeName="child"
+              incomeDescription="income"
           >
             <FormattedMessage
                 id="app.slides.childIncomeOverview.label"

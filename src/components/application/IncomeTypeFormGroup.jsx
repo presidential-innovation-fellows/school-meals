@@ -45,11 +45,7 @@ class IncomeTypeFormGroup extends Component {
       for (const sourceKey in incomeType.sources) {
         incomeType.sources[sourceKey] = {
           has: null,
-          amount: '',
-          frequency: '',
-          hourlyHours: '',
-          hourlyPeriod: '',
-          more: []
+          lineItems: []
         }
       }
 

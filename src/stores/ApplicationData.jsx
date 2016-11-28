@@ -6,7 +6,7 @@ import { assistancePrograms as assistanceProgramNames,
          assistanceProgramsVarArray } from '../config'
 import { allStudentsAreFHMR,
          allStudentsAreFoster,
-         applicableIncomeSources,
+         applicableIncomeLineItems,
          formatDate } from '../helpers'
 
 export default class ApplicationData {
@@ -53,21 +53,21 @@ export default class ApplicationData {
       .reduce((a, b) => a + b, 0)
   }
 
-  @computed get allIncomes() {
+  @computed get allIncomeLineItems() {
     return this.allPeopleCollections
       .map(collection =>
                  collection.items
-                   .map(person => applicableIncomeSources(person))
+                   .map(person => applicableIncomeLineItems(person))
                    .reduce((a, b) => a.concat(b), [])
                )
       .reduce((a, b) => a.concat(b), [])
   }
 
   @computed get totalAnnualHouseholdIncome() {
-    function toAnnual(income) {
-      const amount = parseFloat(income.amount, 10)
+    function toAnnual(lineItem) {
+      const amount = parseFloat(lineItem.amount, 10)
 
-      switch (income.frequency) {
+      switch (lineItem.frequency) {
         case 'annually':
           return amount * 1.0
         case 'monthly':
@@ -79,9 +79,9 @@ export default class ApplicationData {
         case 'weekly':
           return amount * 52.0
         case 'hourly': {
-          const hours = parseFloat(income.hourlyHours, 10)
+          const hours = parseFloat(lineItem.hourlyHours, 10)
 
-          switch (income.hourlyPeriod) {
+          switch (lineItem.hourlyPeriod) {
             case 'day':
               return amount * hours * 365.0
             case 'week':
@@ -97,8 +97,8 @@ export default class ApplicationData {
       }
     }
 
-    return this.allIncomes
-      .map(income => toAnnual(income))
+    return this.allIncomeLineItems
+      .map(lineItem => toAnnual(lineItem))
       .reduce((a, b) => a + b, 0)
   }
 
@@ -123,13 +123,23 @@ export default class ApplicationData {
     return this
   }
 
-  @action addIncomeSource(source) {
-    source.more.push({ has: true, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '' })
+  @action addIncomeLineItem(source) {
+    source.lineItems.push({
+      amount: '',
+      frequency: '',
+      hourlyHours: '',
+      hourlyPeriod: '',
+      id: shortid.generate()
+    })
   }
 
-  @action removeIncomeSource(source, i) {
-    if (i < source.more.length) {
-      source.more.splice(i, 1)
+  @action removeIncomeLineItem(incomeSource, lineItem) {
+    const lineItems = incomeSource.lineItems
+
+    for (let i = 0; i < lineItems.length; i++) {
+      if (lineItems[i].id === lineItem.id) {
+        lineItems.splice(i, 1)
+      }
     }
   }
 }
@@ -306,7 +316,7 @@ class PersonCollection {
         type.isApplicable = null
 
         for (const sourceKey in sources) {
-          sources[sourceKey] = { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }
+          sources[sourceKey] = { has: null, lineItems: [] }
         }
       }
     }
@@ -331,61 +341,61 @@ class AdultCollection extends PersonCollection {
           isApplicable: null,
           isDeployed: null,
           sources: {
-            basic:     { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }, // eslint-disable-line key-spacing
-            cashBonus: { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }, // eslint-disable-line key-spacing
-            allowance: { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }  // eslint-disable-line key-spacing
+            basic:     { has: null, lineItems: [] }, // eslint-disable-line key-spacing
+            cashBonus: { has: null, lineItems: [] }, // eslint-disable-line key-spacing
+            allowance: { has: null, lineItems: [] }  // eslint-disable-line key-spacing
           }
         },
         employment: {
           isApplicable: null,
           sources: {
-            salaryWages:    { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }, // eslint-disable-line key-spacing
-            tips:           { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }, // eslint-disable-line key-spacing
-            commission:     { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }, // eslint-disable-line key-spacing
-            cashBonus:      { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }, // eslint-disable-line key-spacing
-            selfEmployment: { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }  // eslint-disable-line key-spacing
+            salaryWages:    { has: null, lineItems: [] }, // eslint-disable-line key-spacing
+            tips:           { has: null, lineItems: [] }, // eslint-disable-line key-spacing
+            commission:     { has: null, lineItems: [] }, // eslint-disable-line key-spacing
+            cashBonus:      { has: null, lineItems: [] }, // eslint-disable-line key-spacing
+            selfEmployment: { has: null, lineItems: [] }  // eslint-disable-line key-spacing
           }
         },
         publicAssistance: {
           isApplicable: null,
           sources: {
-            ssi:        { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }, // eslint-disable-line key-spacing
-            stateLocal: { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }  // eslint-disable-line key-spacing
+            ssi:        { has: null, lineItems: [] }, // eslint-disable-line key-spacing
+            stateLocal: { has: null, lineItems: [] }  // eslint-disable-line key-spacing
           }
         },
         spousal: {
           isApplicable: null,
           sources: {
-            alimony:      { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }, // eslint-disable-line key-spacing
-            childSupport: { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }  // eslint-disable-line key-spacing
+            alimony:      { has: null, lineItems: [] }, // eslint-disable-line key-spacing
+            childSupport: { has: null, lineItems: [] }  // eslint-disable-line key-spacing
           }
         },
         unemployment: {
           isApplicable: null,
           sources: {
-            unemployment: { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }, // eslint-disable-line key-spacing
-            workersComp:  { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }, // eslint-disable-line key-spacing
-            strike:       { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }, // eslint-disable-line key-spacing
-            ssdi:         { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }, // eslint-disable-line key-spacing
-            veteran:      { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }  // eslint-disable-line key-spacing
+            unemployment: { has: null, lineItems: [] }, // eslint-disable-line key-spacing
+            workersComp:  { has: null, lineItems: [] }, // eslint-disable-line key-spacing
+            strike:       { has: null, lineItems: [] }, // eslint-disable-line key-spacing
+            ssdi:         { has: null, lineItems: [] }, // eslint-disable-line key-spacing
+            veteran:      { has: null, lineItems: [] }  // eslint-disable-line key-spacing
           }
         },
         retirement: {
           isApplicable: null,
           sources: {
-            socialSecurity: { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }, // eslint-disable-line key-spacing
-            privatePension: { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }  // eslint-disable-line key-spacing
+            socialSecurity: { has: null, lineItems: [] }, // eslint-disable-line key-spacing
+            privatePension: { has: null, lineItems: [] }  // eslint-disable-line key-spacing
           }
         },
         other: {
           isApplicable: null,
           sources: {
-            regularCashPayments: { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }, // eslint-disable-line key-spacing
-            rentalIncome:        { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }, // eslint-disable-line key-spacing
-            earnedInterest:      { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }, // eslint-disable-line key-spacing
-            investmentIncome:    { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }, // eslint-disable-line key-spacing
-            annuity:             { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }, // eslint-disable-line key-spacing
-            other:               { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }  // eslint-disable-line key-spacing
+            regularCashPayments: { has: null, lineItems: [] }, // eslint-disable-line key-spacing
+            rentalIncome:        { has: null, lineItems: [] }, // eslint-disable-line key-spacing
+            earnedInterest:      { has: null, lineItems: [] }, // eslint-disable-line key-spacing
+            investmentIncome:    { has: null, lineItems: [] }, // eslint-disable-line key-spacing
+            annuity:             { has: null, lineItems: [] }, // eslint-disable-line key-spacing
+            other:               { has: null, lineItems: [] }  // eslint-disable-line key-spacing
           }
         }
       }
@@ -405,11 +415,11 @@ class ChildCollection extends PersonCollection {
         child: {
           isApplicable: null,
           sources: {
-            job:                 { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }, // eslint-disable-line key-spacing
-            socialSecurity:      { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }, // eslint-disable-line key-spacing
-            friendsFamily:       { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }, // eslint-disable-line key-spacing
-            pensionAnnuityTrust: { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }, // eslint-disable-line key-spacing
-            other:               { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }  // eslint-disable-line key-spacing
+            job:                 { has: null, lineItems: [] }, // eslint-disable-line key-spacing
+            socialSecurity:      { has: null, lineItems: [] }, // eslint-disable-line key-spacing
+            friendsFamily:       { has: null, lineItems: [] }, // eslint-disable-line key-spacing
+            pensionAnnuityTrust: { has: null, lineItems: [] }, // eslint-disable-line key-spacing
+            other:               { has: null, lineItems: [] }  // eslint-disable-line key-spacing
           }
         }
       }

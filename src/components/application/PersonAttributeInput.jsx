@@ -13,7 +13,7 @@ class PersonAttributeInput extends Component {
       case PropTypes.bool:
         return <div>
           <br />
-          <Checkboxes>
+          <Checkboxes legend="Child attributes">
             <Checkbox
                 name={field.name}
                 object={person}

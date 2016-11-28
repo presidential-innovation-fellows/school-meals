@@ -113,8 +113,10 @@ class AdultIncomeOverview extends Component {
 
         { person.incomeTypes.military.isApplicable &&
           <IncomeTypeFormGroup
-              person={person} incomeTypeName="military"
-              boolAttribute="isDeployed" validate={false}
+              person={person}
+              incomeTypeName="military"
+              boolAttribute="isDeployed"
+              validate={false}
           >
             <FormattedMessage
                 id="app.slides.adultIncomeOverview.deployedQuestion"

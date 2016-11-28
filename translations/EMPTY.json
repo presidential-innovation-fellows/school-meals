@@ -352,51 +352,51 @@
 
 
   /***
-   *** src/components/application/IncomeSourceAdditional.jsx
-   ***/
-
-  // Button text to remove an income source
-  // English: "Remove"
-  "app.incomeSourceAdditional.removeButton": "",
-
-  // Button text to add an income source
-  // English: "Add Income Source"
-  "app.incomeSourceAdditional.addButton": "",
-
-
-  /***
-   *** src/components/application/IncomeSourceFrequency.jsx
+   *** src/components/application/IncomeFrequency.jsx
    ***/
 
   // Default text for income frequency select box.
   // English: "frequency…"
-  "app.incomeSourceFrequency.placeholder": "",
+  "app.incomeFrequency.placeholder": "",
 
 
   /***
-   *** src/components/application/IncomeSourceHourlyPeriod.jsx
+   *** src/components/application/IncomeHourlyPeriod.jsx
    ***/
 
   // Default text for hourly period select box.
   // English: "hours per…"
-  "app.incomeSourceHourlyPeriod.placeholder": "",
+  "app.incomeHourlyPeriod.placeholder": "",
 
 
   /***
-   *** src/components/application/IncomeSourceSingle.jsx
+   *** src/components/application/IncomeLineItem.jsx
    ***/
+
+  // Button text to remove an income source line item.
+  // English: "Remove"
+  "app.incomeLineItem.removeButton": "",
 
   // Message about too many hours being entered for the selected period.
   // English: "There are only 24 hours in a day."
-  "app.incomeSourceSingle.tooManyHours.day": "",
+  "app.incomeLineItem.tooManyHours.day": "",
 
   // Message about too many hours being entered for the selected period.
   // English: "There are only 168 hours in a week."
-  "app.incomeSourceSingle.tooManyHours.week": "",
+  "app.incomeLineItem.tooManyHours.week": "",
 
   // Message about too many hours being entered for the selected period.
   // English: "There are only 730 hours in a month."
-  "app.incomeSourceSingle.tooManyHours.month": "",
+  "app.incomeLineItem.tooManyHours.month": "",
+
+
+  /***
+   *** src/components/application/IncomeLineItems.jsx
+   ***/
+
+  // Button text to add an income source line item.
+  // English: "Add Income Source"
+  "app.incomeLineItems.addButton": "",
 
 
   /***
@@ -1587,128 +1587,128 @@
 
 
   /***
-   *** src/components/application/slides/SummaryPersonIncome.jsx
+   *** src/components/application/slides/SummaryPersonIncomeLineItem.jsx
    ***/
 
   // Short income source description used on Summary page.
   // English: "Full or part-time job"
-  "app.slides.summaryPersonIncome.description.child.job": "",
+  "app.slides.summaryPersonIncomeLineItem.description.child.job": "",
 
   // Short income source description used on Summary page.
   // English: "SSI or Social Security"
-  "app.slides.summaryPersonIncome.description.child.socialSecurity": "",
+  "app.slides.summaryPersonIncomeLineItem.description.child.socialSecurity": "",
 
   // Short income source description used on Summary page.
   // English: "Friends or family"
-  "app.slides.summaryPersonIncome.description.child.friendsFamily": "",
+  "app.slides.summaryPersonIncomeLineItem.description.child.friendsFamily": "",
 
   // Short income source description used on Summary page.
   // English: "Pension, annuity, or trust"
-  "app.slides.summaryPersonIncome.description.child.pensionAnnuityTrust": "",
+  "app.slides.summaryPersonIncomeLineItem.description.child.pensionAnnuityTrust": "",
 
   // Short income source description used on Summary page.
   // English: "Other income source"
-  "app.slides.summaryPersonIncome.description.child.other": "",
+  "app.slides.summaryPersonIncomeLineItem.description.child.other": "",
 
   // Short income source description used on Summary page.
   // English: "Military basic pay"
-  "app.slides.summaryPersonIncome.description.military.basic": "",
+  "app.slides.summaryPersonIncomeLineItem.description.military.basic": "",
 
   // Short income source description used on Summary page.
   // English: "Military cash bonus"
-  "app.slides.summaryPersonIncome.description.military.cashBonus": "",
+  "app.slides.summaryPersonIncomeLineItem.description.military.cashBonus": "",
 
   // Short income source description used on Summary page.
   // English: "Military allowance"
-  "app.slides.summaryPersonIncome.description.military.allowance": "",
+  "app.slides.summaryPersonIncomeLineItem.description.military.allowance": "",
 
   // Short income source description used on Summary page.
   // English: "Salary / Wages"
-  "app.slides.summaryPersonIncome.description.employment.salaryWages": "",
+  "app.slides.summaryPersonIncomeLineItem.description.employment.salaryWages": "",
 
   // Short income source description used on Summary page.
   // English: "Tips"
-  "app.slides.summaryPersonIncome.description.employment.tips": "",
+  "app.slides.summaryPersonIncomeLineItem.description.employment.tips": "",
 
   // Short income source description used on Summary page.
   // English: "Commission"
-  "app.slides.summaryPersonIncome.description.employment.commission": "",
+  "app.slides.summaryPersonIncomeLineItem.description.employment.commission": "",
 
   // Short income source description used on Summary page.
   // English: "Cash bonus"
-  "app.slides.summaryPersonIncome.description.employment.cashBonus": "",
+  "app.slides.summaryPersonIncomeLineItem.description.employment.cashBonus": "",
 
   // Short income source description used on Summary page.
   // English: "Net income from self-employment"
-  "app.slides.summaryPersonIncome.description.employment.selfEmployment": "",
+  "app.slides.summaryPersonIncomeLineItem.description.employment.selfEmployment": "",
 
   // Short income source description used on Summary page.
   // English: "Supplemental Security Income (SSI)"
-  "app.slides.summaryPersonIncome.description.publicAssistance.ssi": "",
+  "app.slides.summaryPersonIncomeLineItem.description.publicAssistance.ssi": "",
 
   // Short income source description used on Summary page.
   // English: "Cash assistance program"
-  "app.slides.summaryPersonIncome.description.publicAssistance.stateLocal": "",
+  "app.slides.summaryPersonIncomeLineItem.description.publicAssistance.stateLocal": "",
 
   // Short income source description used on Summary page.
   // English: "Alimony"
-  "app.slides.summaryPersonIncome.description.spousal.alimony": "",
+  "app.slides.summaryPersonIncomeLineItem.description.spousal.alimony": "",
 
   // Short income source description used on Summary page.
   // English: "Child support"
-  "app.slides.summaryPersonIncome.description.spousal.childSupport": "",
+  "app.slides.summaryPersonIncomeLineItem.description.spousal.childSupport": "",
 
   // Short income source description used on Summary page.
   // English: "Unemployment benefits"
-  "app.slides.summaryPersonIncome.description.unemployment.unemployment": "",
+  "app.slides.summaryPersonIncomeLineItem.description.unemployment.unemployment": "",
 
   // Short income source description used on Summary page.
   // English: "Worker’s compensation"
-  "app.slides.summaryPersonIncome.description.unemployment.workersComp": "",
+  "app.slides.summaryPersonIncomeLineItem.description.unemployment.workersComp": "",
 
   // Short income source description used on Summary page.
   // English: "Strike benefits"
-  "app.slides.summaryPersonIncome.description.unemployment.strike": "",
+  "app.slides.summaryPersonIncomeLineItem.description.unemployment.strike": "",
 
   // Short income source description used on Summary page.
   // English: "Social Security Disability Insurance (SSDI)"
-  "app.slides.summaryPersonIncome.description.unemployment.ssdi": "",
+  "app.slides.summaryPersonIncomeLineItem.description.unemployment.ssdi": "",
 
   // Short income source description used on Summary page.
   // English: "Veteran’s benefits"
-  "app.slides.summaryPersonIncome.description.unemployment.veteran": "",
+  "app.slides.summaryPersonIncomeLineItem.description.unemployment.veteran": "",
 
   // Short income source description used on Summary page.
   // English: "Social Security"
-  "app.slides.summaryPersonIncome.description.retirement.socialSecurity": "",
+  "app.slides.summaryPersonIncomeLineItem.description.retirement.socialSecurity": "",
 
   // Short income source description used on Summary page.
   // English: "Pension"
-  "app.slides.summaryPersonIncome.description.retirement.privatePension": "",
+  "app.slides.summaryPersonIncomeLineItem.description.retirement.privatePension": "",
 
   // Short income source description used on Summary page.
   // English: "Regular cash payments"
-  "app.slides.summaryPersonIncome.description.other.regularCashPayments": "",
+  "app.slides.summaryPersonIncomeLineItem.description.other.regularCashPayments": "",
 
   // Short income source description used on Summary page.
   // English: "Rental income"
-  "app.slides.summaryPersonIncome.description.other.rentalIncome": "",
+  "app.slides.summaryPersonIncomeLineItem.description.other.rentalIncome": "",
 
   // Short income source description used on Summary page.
   // English: "Earned interest"
-  "app.slides.summaryPersonIncome.description.other.earnedInterest": "",
+  "app.slides.summaryPersonIncomeLineItem.description.other.earnedInterest": "",
 
   // Short income source description used on Summary page.
   // English: "Investment income"
-  "app.slides.summaryPersonIncome.description.other.investmentIncome": "",
+  "app.slides.summaryPersonIncomeLineItem.description.other.investmentIncome": "",
 
   // Short income source description used on Summary page.
   // English: "Annuity"
-  "app.slides.summaryPersonIncome.description.other.annuity": "",
+  "app.slides.summaryPersonIncomeLineItem.description.other.annuity": "",
 
   // Short income source description used on Summary page.
   // English: "Other income source"
-  "app.slides.summaryPersonIncome.description.other.other": "",
+  "app.slides.summaryPersonIncomeLineItem.description.other.other": "",
 
 
   /***
@@ -2845,5 +2845,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1480295281833."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1480306771681."
 }

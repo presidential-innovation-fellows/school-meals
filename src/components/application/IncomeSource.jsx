@@ -2,36 +2,30 @@ import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
 import BooleanRadio from './BooleanRadio'
 import Form from './Form'
-import IncomeSourceSingle from './IncomeSourceSingle'
-import IncomeSourceAdditional from './IncomeSourceAdditional'
+import IncomeLineItems from './IncomeLineItems'
 
 @observer
 class IncomeSource extends Component {
-  constructor(props) {
-    super(props)
+  constructor(props, context) {
+    super(props, context)
     this.handleChange = this.handleChange.bind(this)
   }
 
   handleChange(fieldName, value, incomeSource) {
     incomeSource[fieldName] = value
 
-    if (!value) {
-      incomeSource.amount = ''
-      incomeSource.frequency = ''
-      incomeSource.hourlyHours = ''
-      incomeSource.hourlyPeriod = ''
-      incomeSource.more = []
+    if (value) {
+      if (!incomeSource.lineItems.length) {
+        this.context.applicationData.addIncomeLineItem(incomeSource)
+      }
+    } else {
+      incomeSource.lineItems = []
     }
   }
 
   render() {
     const { name, showHourly, showAnnual } = this.props
     const incomeSource = this.props.incomeSources[name]
-    const props = {
-      incomeSource,
-      showHourly,
-      showAnnual
-    }
 
     return (
       <div>
@@ -44,15 +38,20 @@ class IncomeSource extends Component {
           />
 
           {incomeSource.has &&
-          <div className="income-source-details">
-            <IncomeSourceSingle {...props} />
-            { incomeSource.more && <IncomeSourceAdditional {...props} /> }
-          </div>
+          <IncomeLineItems
+              incomeSource={incomeSource}
+              showHourly={showHourly}
+              showAnnua={showAnnual}
+          />
           }
         </Form>
       </div>
     )
   }
+}
+
+IncomeSource.contextTypes = {
+  applicationData: PropTypes.object.isRequired
 }
 
 IncomeSource.propTypes = {
