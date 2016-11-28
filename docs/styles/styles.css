@@ -56,18 +56,25 @@ label small {
   font-weight: normal;
 }
 
-.income-source-details .usa-input-grid input,
-.income-source-details .usa-input-grid select {
+.income-line-items .usa-input-grid input,
+.income-line-items .usa-input-grid select {
   margin-bottom: 1rem;
 }
 
-.income-source-details .usa-input-error-message {
+.income-line-items .usa-input-error-message {
   padding-top: 0;
   padding-bottom: 0;
 }
 
-.income-source-summary {
+.income-line-item-summary {
+  display: inline-block;
+  margin-bottom: 0.5em;
   text-transform: lowercase;
+}
+
+.income-line-item button {
+  margin-bottom: 1em;
+  margin-top: 0;
 }
 
 select.usa-input-success {
