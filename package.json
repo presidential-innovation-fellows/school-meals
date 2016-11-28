@@ -4,7 +4,8 @@
   "description": "A model web application for school meal benefits developed by USDA to demonstrate the potential functionality of a school district's application.",
   "scripts": {
     "start": "node server.js",
-    "build-language": "node build-language.js",
+    "build": "webpack --progress -p --config ./webpack.production.config.js",
+    "build-language": "rm -rf i18n && webpack --progress && node build-language.js",
     "lint": "eslint --fix --ext .js --ext .jsx src"
   },
   "repository": {
@@ -48,7 +49,6 @@
     "jsonfile": "^2.4.0",
     "mobx": "^2.2.2",
     "mobx-react": "^3.3.1",
-    "mobx-react-devtools": "^4.2.0",
     "rc-steps": "^2.1.5",
     "react": "^15.1.0",
     "react-bootstrap": "^0.29.5",
