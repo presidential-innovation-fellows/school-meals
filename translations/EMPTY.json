@@ -2749,7 +2749,7 @@
   "help.topic.WhatIncome.answer44": "",
 
   // Answer for the applicable income help topic.
-  // English: "Cash  value of benefits from SNAP or FDPIR"
+  // English: "Cash value of benefits from {snapAccronym} or {fdpirAccronym}"
   "help.topic.WhatIncome.answer45": "",
 
   // Answer for the applicable income help topic.
@@ -2845,5 +2845,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1480306771681."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1480308290660."
 }
