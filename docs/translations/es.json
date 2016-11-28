@@ -96,7 +96,7 @@
   "app.incomeLineItem.tooManyHours.month": "Sólo hay 730 horas en un mes.",
 
   "app.slides.incomeTypeFormGroup.missingIncomeTitle": "Falta de Ingresos",
-  "app.slides.incomeTypeFormGroup.missingIncome": "",
+  "app.slides.incomeTypeFormGroup.missingIncome": "Usted indicó que {persona} recibe ingresos del siguiente tipo, pero seleccionó "No" para cada fuente de ingresos relacionada en una página siguiente. Corrija esta respuesta o proporcione los detalles en las siguientes páginas.",
 
   "app.inputField.required": "obligatorio",
 
