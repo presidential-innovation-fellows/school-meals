@@ -57,7 +57,7 @@ class IncomeTypeFormGroup extends Component {
   }
 
   render() {
-    const { boolAttribute, incomeDescription, incomeTypeName, person } = this.props
+    const { boolAttribute, incomeTypeName, person } = this.props
     const incomeType = person.incomeTypes[incomeTypeName]
 
     return (
@@ -77,9 +77,8 @@ class IncomeTypeFormGroup extends Component {
                 <FormattedMessage
                     id="app.slides.incomeTypeFormGroup.missingIncome"
                     description="Missing Income alert"
-                    defaultMessage="You indicated that {person} receives {incomeDescription}, but you selected “No” for each related income source on a following page. Please correct this answer or provide details on the following pages."
+                    defaultMessage="You indicated that {person} receives income of the following type, but you selected “No” for each related income source on a following page. Please correct this answer or provide details on the following pages."
                     values={{
-                      incomeDescription,
                       person: <strong>{informalName(person)}</strong>
                     }}
                 />
@@ -102,13 +101,11 @@ IncomeTypeFormGroup.propTypes = {
   incomeTypeName: PropTypes.string.isRequired,
   person: PropTypes.object.isRequired,
   boolAttribute: PropTypes.string,
-  incomeDescription: PropTypes.string,
   validate: PropTypes.bool
 }
 
 IncomeTypeFormGroup.defaultProps = {
   boolAttribute: 'isApplicable',
-  incomeDescription: 'income of the following type',
   validate: true
 }
 

@@ -408,7 +408,7 @@
   "app.slides.incomeTypeFormGroup.missingIncomeTitle": "",
 
   // Missing Income alert
-  // English: "You indicated that {person} receives {incomeDescription}, but you selected “No” for each related income source on a following page. Please correct this answer or provide details on the following pages."
+  // English: "You indicated that {person} receives income of the following type, but you selected “No” for each related income source on a following page. Please correct this answer or provide details on the following pages."
   "app.slides.incomeTypeFormGroup.missingIncome": "",
 
 
@@ -2845,5 +2845,5 @@
 
   /***/
 
-  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1480308290660."
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1480308689616."
 }

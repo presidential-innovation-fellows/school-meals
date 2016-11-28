@@ -138,7 +138,6 @@ class ChildIncomeOverview extends Component {
               person={child}
               key={child.id}
               incomeTypeName="child"
-              incomeDescription="income"
           >
             <FormattedMessage
                 id="app.slides.childIncomeOverview.label"
