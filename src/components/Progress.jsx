@@ -157,7 +157,6 @@ class Progress extends Component {
 }
 
 Progress.propTypes = {
-  enableNavigation: PropTypes.bool.isRequired,
   navigationData: PropTypes.shape({
     stepsCompleted: PropTypes.number
   }).isRequired,
