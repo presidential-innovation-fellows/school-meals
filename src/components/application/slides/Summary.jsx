@@ -196,7 +196,7 @@ class Summary extends Component {
 
         <Checkboxes legend="Certification">
           <Checkbox name="certifiedCorrect" object={applicationData}>
-            { applicationData.showHousehold ?
+            { applicationData.showHousehold ? // eslint-disable-line no-nested-ternary
               <strong>
                 <FormattedMessage
                     id="app.slides.summary.certification"

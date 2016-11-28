@@ -306,7 +306,7 @@ class PersonCollection {
         type.isApplicable = null
 
         for (const sourceKey in sources) {
-          sources[sourceKey] = { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] } // eslint-disable-line key-spacing
+          sources[sourceKey] = { has: null, amount: '', frequency: '', hourlyHours: '', hourlyPeriod: '', more: [] }
         }
       }
     }
