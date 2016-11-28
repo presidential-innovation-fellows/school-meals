@@ -66,7 +66,7 @@
   "app.booleanRadio.trueLabel": "Sí",
   "app.booleanRadio.falseLabel": "No",
 
-  "app.frequencyLabel.placeholder": "frecuencia…",
+  "app.incomeSourceFrequency.placeholder": "frecuencia…",
   "app.frequencyLabel.annually": "anualmente",
   "app.frequencyLabel.monthly": "mensual",
   "app.frequencyLabel.twicePerMonth": "dos veces al mes",
@@ -87,7 +87,7 @@
   "app.incomeAmountLabel.hourly": "por hora",
 
   "app.incomeSourceAdditional.addButton": "Agregar fuente de ingresos",
-  "app.personForm.removeButton": "Eliminar {name}",
+  "app.incomeSourceAdditional.removeButton": "Eliminar",
 
   "app.incomeSourceHourlyPeriod.placeholder": "horas al…",
 
@@ -101,6 +101,8 @@
   "app.inputField.required": "obligatorio",
 
   "app.personCollection.addButton": "+ Agregar otro {personType}",
+
+  "app.personForm.removeButton": "Eliminar {name}",
 
   "app.serialList.intersectionDelim": "o",
   "app.serialList.unionDelim": "y",
