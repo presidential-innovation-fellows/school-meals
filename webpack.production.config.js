@@ -10,7 +10,7 @@ module.exports = {
     configFile: '.eslintrc.json'
   },
   output: {
-    path: path.join(__dirname, 'dist'),
+    path: path.join(__dirname, 'docs', 'static'),
     filename: 'bundle.js',
     publicPath: '/static/'
   },
