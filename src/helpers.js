@@ -138,14 +138,9 @@ function incomeSourceIsValid(incomeSource) {
          )
 }
 
-export function incomeTypeIsValid(incomeType, mustNotBeNull = []) {
+export function incomeTypeIsValid(incomeType) {
   switch (incomeType.isApplicable) {
     case true: {
-      // Invalid if any of the non-nullable incomeType fields are null.
-      if (mustNotBeNull.map(name => incomeType[name] == null)
-        .reduce((a, b) => a || b, false)) {
-        return false
-      }
       const incomeSources = []
       for (const name in incomeType.sources) {
         incomeSources.push(incomeType.sources[name])
