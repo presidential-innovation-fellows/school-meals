@@ -66,7 +66,7 @@
   "app.booleanRadio.trueLabel": "Sí",
   "app.booleanRadio.falseLabel": "No",
 
-  "app.frequencyLabel.placeholder": "frecuencia…",
+  "app.incomeSourceFrequency.placeholder": "frecuencia…",
   "app.frequencyLabel.annually": "anualmente",
   "app.frequencyLabel.monthly": "mensual",
   "app.frequencyLabel.twicePerMonth": "dos veces al mes",
