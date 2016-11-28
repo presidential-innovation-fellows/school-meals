@@ -96,7 +96,7 @@ class IncomeElection extends Component {
   }
 
   get isValid() {
-    return this.props.applicationData.electToProvideIncome != null
+    return this.props.applicationData.electToProvideIncome !== null
   }
 
   render() {

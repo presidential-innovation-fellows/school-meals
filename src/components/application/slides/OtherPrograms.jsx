@@ -22,7 +22,7 @@ class OtherPrograms extends Component {
 
     if (students.length === 1) {
       for (const key in this.applicability) {
-        if (students[0][key] == null) {
+        if (students[0][key] === null) {
           return false
         }
       }

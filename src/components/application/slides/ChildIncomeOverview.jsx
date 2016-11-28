@@ -11,7 +11,7 @@ import { FormattedMessage } from 'react-intl'
 class ChildIncomeOverview extends Component {
   get isValid() {
     return this.props.allChildren
-      .map(child => child.incomeTypes.child.isApplicable != null)
+      .map(child => child.incomeTypes.child.isApplicable !== null)
       .reduce((a, b) => a && b, true)
   }
 

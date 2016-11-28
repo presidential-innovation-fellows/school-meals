@@ -52,7 +52,7 @@ class Foster extends Component {
 
     if (students.length === 1) {
       for (const key in this.applicability) {
-        if (students.first[key] == null) {
+        if (students.first[key] === null) {
           return false
         }
       }

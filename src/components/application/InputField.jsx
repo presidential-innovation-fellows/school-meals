@@ -68,7 +68,7 @@ class InputField extends Component {
 
 
     if (input.pattern && !input.error &&
-        (input.value == null ? value : input.value).match(input.pattern)) {
+        (input.value == null ? value : input.value).match(input.pattern)) { // eslint-disable-line eqeqeq
       className += ' usa-input-success'
     }
 
@@ -90,7 +90,7 @@ class InputField extends Component {
       id: this.controlId,
       name: input.name,
       type: input.type,
-      value: input.value == null ? value : input.value,
+      value: input.value == null ? value : input.value, // eslint-disable-line eqeqeq
       placeholder: input.placeholder,
       disabled: input.disabled,
       onChange: this.handleChange,

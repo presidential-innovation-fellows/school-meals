@@ -14,12 +14,12 @@ class AdultIncomeOverview extends Component {
     const incomeTypes = this.props.person.incomeTypes
 
     if (incomeTypes.military.isApplicable &&
-        incomeTypes.military.isDeployed == null) {
+        incomeTypes.military.isDeployed === null) {
       return false
     }
 
     for (const incomeType in incomeTypes) {
-      if (incomeTypes[incomeType].isApplicable == null) {
+      if (incomeTypes[incomeType].isApplicable === null) {
         return false
       }
     }
