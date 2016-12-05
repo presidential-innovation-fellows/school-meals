@@ -6,6 +6,7 @@ import IncomeTypeDefaultText from './IncomeTypeDefaultText'
 import { computed } from 'mobx'
 import { observer } from 'mobx-react'
 import { incomeTypeIsValid, informalName } from '../../../helpers'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class IncomeType extends Component {
@@ -13,7 +14,7 @@ class IncomeType extends Component {
     const { person, name } = this.props
     const sources = person.incomeTypes[name].sources
 
-    for (let key in sources) {
+    for (const key in sources) {
       if (sources[key].has !== false) {
         return false
       }
@@ -23,27 +24,48 @@ class IncomeType extends Component {
   }
 
   render() {
-    const { person, name, label, showDefaultText, showMilitaryCaveat } = this.props
+    const { person, name, showDefaultText, showMilitaryCaveat } = this.props
     const incomeType = person.incomeTypes[name]
     const defaultTextProps = { person, showMilitaryCaveat }
     const personName = informalName(person)
-    return(
-      <Slide header={personName}
-             id={`income/${person.id}/${name}`}
-             helpArticle={`${name}-income`}
-             nextDisabled={!incomeTypeIsValid(incomeType)}>
+    const missingIncomeTitle =
+      <FormattedMessage
+          id="app.slides.incomeType.missingIncomeTitle"
+          description="Missing Income alert title"
+          defaultMessage="Missing Income"
+      />
+
+    return (
+      <Slide
+          header={personName}
+          id={`income/${person.id}/${name}`}
+          helpArticle={`${name}-income`}
+          nextDisabled={!incomeTypeIsValid(incomeType)}
+      >
         {showDefaultText && <IncomeTypeDefaultText {...defaultTextProps} />}
         {this.props.children}
 
         { this.allSourcesFalse &&
-          <Alert heading="Missing Income">
-            On a previous page, you indicated
-            that <strong>{personName}</strong> receives income from
-            one of the above sources. Please enter this income above or
-            correct your previous answer.
+          <Alert heading={missingIncomeTitle}>
+            <FormattedMessage
+                id="app.slides.incomeType.missingIncome"
+                description="Missing Income Alert"
+                defaultMessage="On a previous page, you indicated that {adult} receives income from one of the above sources. Please enter this income above or correct your previous answer."
+                values={{
+                  adult: <strong>{personName}</strong>
+                }}
+            />
             <br />
-            <Button slideId={`income/${person.id}`}
-                    className="usa-button-gray">Change previous answer</Button>
+            <Button
+                slideId={`income/${person.id}`}
+                className="usa-button-gray"
+            >
+              <FormattedMessage
+                  id="app.slides.incomeType.changeAnswer"
+                  description="Change previous answer"
+                  defaultMessage="Change previous answer"
+              />
+            </Button>
           </Alert>
         }
       </Slide>
@@ -54,7 +76,6 @@ class IncomeType extends Component {
 IncomeType.propTypes = {
   person: PropTypes.object.isRequired,
   name: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
   showDefaultText: PropTypes.bool,
   showMilitaryCaveat: PropTypes.bool
 }

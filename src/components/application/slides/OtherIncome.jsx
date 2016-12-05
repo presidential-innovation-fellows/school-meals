@@ -3,7 +3,8 @@ import IncomeSource from '../IncomeSource'
 import IncomeType from './IncomeType'
 import { observer } from 'mobx-react'
 import { tooltiptext } from '../../Tooltiptext'
-import Tooltipcomp from '../Tooltip'
+import Tooltip from '../Tooltip'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class OtherIncome extends Component {
@@ -12,38 +13,75 @@ class OtherIncome extends Component {
     const incomeType = person.incomeTypes.other
     const incomeSources = incomeType.sources
     const incomeTypeProps = {
-      name: "other",
-      label: "Other Income",
+      name: 'other',
       person
     }
 
-    return(
+    return (
       <IncomeType {...incomeTypeProps}>
 
         <IncomeSource incomeSources={incomeSources} name="regularCashPayments">
-          <Tooltipcomp id="regularCashPayments" text={tooltiptext.regularCashPayments} target="Regular cash payments" />
-          &nbsp; from outside the household
+          <FormattedMessage
+              id="app.slides.otherIncome.regularCashPayments"
+              description="Regular Cash Payments"
+              defaultMessage="{tooltip} from outside the household"
+              values={{
+                tooltip:
+                  <Tooltip text={tooltiptext.regularCashPayments}>
+                    <FormattedMessage
+                        id="app.slides.otherIncome.regularCashPaymentsTooltip"
+                        description="Regular cash payments"
+                        defaultMessage="Regular cash payments"
+                    />
+                  </Tooltip>
+              }}
+          />
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="rentalIncome">
-          <Tooltipcomp id="rentalIncome" text={tooltiptext.rentalIncome} target="Rental income" />
+          <Tooltip text={tooltiptext.rental}>
+            <FormattedMessage
+                id="app.slides.otherIncome.rental"
+                description="Rental income"
+                defaultMessage="Rental income"
+            />
+          </Tooltip>
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="earnedInterest">
-          <Tooltipcomp id="earnedInterest" text={tooltiptext.earnedInterest} target="Earned interest" />
+          <Tooltip text={tooltiptext.earnedInterest}>
+            <FormattedMessage
+                id="app.slides.otherIncome.earnedInterest"
+                description="Earned interest"
+                defaultMessage="Earned interest"
+            />
+          </Tooltip>
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="investmentIncome">
-          Investment income
+          <FormattedMessage
+              id="app.slides.otherIncome.investmentIncome"
+              description="Investment income"
+              defaultMessage="Investment income"
+          />
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="annuity">
-          <Tooltipcomp id="annuity" text={tooltiptext.annuity} target="Annuity" />
-          Annuity
+          <Tooltip text={tooltiptext.annuity}>
+            <FormattedMessage
+                id="app.slides.otherIncome.annuity"
+                description="Annuity"
+                defaultMessage="Annuity"
+            />
+          </Tooltip>
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="other">
-          Any other income available to pay for children’s school meals
+          <FormattedMessage
+              id="app.slides.otherIncome.otherIncome"
+              description="other income"
+              defaultMessage="Any other income available to pay for children’s school meals"
+          />
         </IncomeSource>
       </IncomeType>
     )

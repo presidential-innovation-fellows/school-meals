@@ -1,10 +1,12 @@
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
 import Select from './Select'
+import HourlyPeriodLabel from './HourlyPeriodLabel'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class IncomeSourceHourlyPeriod extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.defaultOnChange = this.defaultOnChange.bind(this)
     this.handleChange = this.handleChange.bind(this)
@@ -15,25 +17,34 @@ class IncomeSourceHourlyPeriod extends Component {
     handler(this.props.fieldName, event.target.value)
   }
 
-  // side effect, but easier to handle once here than pass in every time
+  // Side effect, but easier to handle once here than pass in every time.
   defaultOnChange(fieldName, value) {
     this.props.incomeSource[fieldName] = value
   }
 
   render() {
     const { incomeSource, fieldName } = this.props
-    const hours = incomeSource.hourlyHours
     const value = incomeSource[fieldName]
-    const prefix = (hours ? `${hours} ` : '') +
-                   'hour' + (parseInt(hours) === 1 ? '' : 's') + ' per'
 
     return (
       <div className="usa-input-grid usa-input-grid-medium">
-        <Select value={incomeSource[fieldName]}
-                onChange={this.handleChange}>
-          <option value="" disabled>hours per…</option>
-          <option value="week">hours per week</option>
-          <option value="month">hours per month</option>
+        <Select value={value} onChange={this.handleChange}>
+
+          <FormattedMessage
+              id="app.incomeSourceHourlyPeriod.placeholder"
+              description="Default text for hourly period select box."
+              defaultMessage="hours per…"
+          >
+            {message => <option value="" disabled>{message}</option>}
+          </FormattedMessage>
+
+          <HourlyPeriodLabel period="week">
+            {message => <option value="week">{message}</option>}
+          </HourlyPeriodLabel>
+
+          <HourlyPeriodLabel period="month">
+            {message => <option value="month">{message}</option>}
+          </HourlyPeriodLabel>
         </Select>
       </div>
     )

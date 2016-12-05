@@ -1,52 +1,43 @@
 import React, { Component, PropTypes } from 'react'
+import { observable } from 'mobx'
 import { observer } from 'mobx-react'
 import { organization } from '../../config'
 import classNames from 'classnames'
-
-import Welcome from './articles/Welcome'
-import BeforeYouBegin from './articles/BeforeYouBegin'
-import Attestation from './articles/Attestation'
-import AssistancePrograms from './articles/AssistancePrograms'
-import OtherPrograms from './articles/OtherPrograms'
-import OtherChildren from './articles/OtherChildren'
-import ChildIncome from './articles/ChildIncome'
-import Adults from './articles/Adults'
-import AdultIncomeOverview from './articles/AdultIncomeOverview'
-import MilitaryIncome from './articles/MilitaryIncome'
-import EmploymentIncome from './articles/EmploymentIncome'
-import PublicAssistanceIncome from './articles/PublicAssistanceIncome'
-import SpousalIncome from './articles/SpousalIncome'
-import UnemploymentIncome from './articles/UnemploymentIncome'
-import RetirementIncome from './articles/RetirementIncome'
-import OtherIncome from './articles/OtherIncome'
-import Signature from './articles/Signature'
-
-
-import All from './articles/All_flat'
-
 import SearchTopics from './SearchTopics'
+import SlideTopics from './SlideTopics'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class Help extends Component {
-  constructor (props) {
+  @observable isSearching = false
+
+  constructor(props) {
     super(props)
     this.handleClick = this.handleClick.bind(this)
+    this.handleSearchChange = this.handleSearchChange.bind(this)
   }
 
   handleClick(e) {
-    // home grown event delegation
+    // Home grown event delegation.
     switch (e.target.classList[0]) {
       case 'cd-panel':
       case 'cd-panel-close':
-        this.hideHelp()
+        this.handleHideHelp()
+        break
+      default:
+        break
     }
   }
 
-  hideHelp() {
-    // wrap in conditional to mitigate strange bug
+  handleHideHelp() {
+    // Wrap in conditional to mitigate strange bug.
     if (this) {
       this.props.helpData.isVisible = false
     }
+  }
+
+  handleSearchChange(searchVal) {
+    this.isSearching = !!searchVal
   }
 
   render() {
@@ -60,42 +51,40 @@ class Help extends Component {
     return (
       <asside className={classes} onClick={this.handleClick} id="help">
         <header className="cd-panel-header">
-          <h1>Help</h1>
-          <a className="cd-panel-close" onClick={this.hideHelp}>Close</a>
+          <h1>
+            <FormattedMessage
+                id="help.title"
+                description="Text for the title bar of the help area."
+                defaultMessage="Help"
+            />
+          </h1>
+          <a className="cd-panel-close" onClick={this.handleHideHelp}>
+            <FormattedMessage
+                id="help.close"
+                description="Text for the link to close the help area."
+                defaultMessage="Close"
+            />
+          </a>
         </header>
 
         <div className="cd-panel-container">
-
           <div className="cd-panel-content" id="help-content">
-            <SearchTopics/>
-
-            {(() => {
-               switch (article) {
-                 case 'welcome':                 return <Welcome />
-                 case 'before-you-begin':        return <BeforeYouBegin />
-                 case 'attestation':             return <Attestation />
-                 case 'assistance-programs':     return <AssistancePrograms />
-                 case 'other-programs':          return <OtherPrograms />
-                 case 'other-children':          return <OtherChildren />
-                 case 'child-income':            return <ChildIncome />
-                 case 'adults':                  return <Adults />
-                 case 'adult-income-overview':   return <AdultIncomeOverview />
-                 case 'military-income':         return <MilitaryIncome />
-                 case 'employment-income':       return <EmploymentIncome />
-                 case 'publicAssistance-income': return <PublicAssistanceIncome />
-                 case 'spousal-income':          return <SpousalIncome />
-                 case 'unemployment-income':     return <UnemploymentIncome />
-                 case 'retirement-income':       return <RetirementIncome />
-                 case 'other-income':            return <OtherIncome />
-                 case 'ssn':                     return <Signature />
-                 case 'summary':                 return <All />
-                 default:                        return <All />;
-               }
-             })()}
+            <SearchTopics onChange={this.handleSearchChange} />
+            { !this.isSearching &&
+              <SlideTopics article={article} />
+            }
 
             <footer>
               <p>
-                If you have any questions about the program or how to apply, contact {organization.name} ({organization.contact.phone} / {organization.contact.email} / {organization.contact.address}).
+                <FormattedMessage
+                    id="help.footer"
+                    description="Footer text for the help area."
+                    defaultMessage="If you have any questions about the program or how to apply, contact {organizationName} ({organizationContactInfo})."
+                    values={{
+                      organizationName: organization.name,
+                      organizationContactInfo: `${organization.contact.phone} / ${organization.contact.email} / ${organization.contact.address}`
+                    }}
+                />
               </p>
             </footer>
           </div>

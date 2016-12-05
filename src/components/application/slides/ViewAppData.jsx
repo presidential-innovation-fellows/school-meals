@@ -1,8 +1,7 @@
 import React from 'react'
 import { observer } from 'mobx-react'
 import Slide from '../Slide'
-import { organization } from '../../../config'
-import { jsonMarkup } from '../../../helpers'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class ViewAppData extends React.Component {
@@ -11,13 +10,30 @@ class ViewAppData extends React.Component {
     return (
       <Slide header="View Application Data!" id="viewappdata" showBack={false} showNext={false} >
         <p className="slide-content">
-          This is a special <strong>applicationData</strong> view for developers. As you fill out the application, you can come back to this
-          page to see how the dataset has changed. If you want to pre-load applicationData with test values, just update /src/debug.js
-          and set DEBUG = true in /src/stores/applicationData.jsx.
+          <FormattedMessage
+              id="app.slides.viewAppData.intro"
+              description="Intro text"
+              defaultMessage="This is a special {appData} view for developers. As you fill out the application, you can come back to this page to see how the dataset has changed."
+              values={{
+                appData: <strong>
+                  <FormattedMessage
+                      id="app.slides.viewAppData.applicationData"
+                      description="applicationData"
+                      defaultMessage="applicationData"
+                  />
+                </strong>
+              }}
+          />
         </p>
-        <strong>Application Data Set:</strong>
+        <strong>
+          <FormattedMessage
+              id="app.slides.viewAppData.appDataSet"
+              description="Application Data Set"
+              defaultMessage="Application Data Set:"
+          />
+        </strong>
         <plaintext>
-          {JSON.stringify(this.props.applicationData,undefined, 2)}
+          {JSON.stringify(this.props.applicationData, null, 2)}
         </plaintext>
 
       </Slide>

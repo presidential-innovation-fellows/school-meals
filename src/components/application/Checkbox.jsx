@@ -6,7 +6,7 @@ import { observer } from 'mobx-react'
 class Checkbox extends Component {
   name = shortid.generate()
 
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.defaultOnChange = this.defaultOnChange.bind(this)
     this.handleChange = this.handleChange.bind(this)
@@ -14,12 +14,14 @@ class Checkbox extends Component {
 
   handleChange(event) {
     const handler = this.props.onChange || this.defaultOnChange
-    handler(this.props.name, !!event.target.checked)
+    handler(this.props.name,
+            this.props.invert ? !event.target.checked : !!event.target.checked,
+            this.props.object)
   }
 
-  // side effect, but easier to handle once here than pass in every time
-  defaultOnChange(fieldName, value) {
-    this.props.object[fieldName] = this.props.invert ? !value : value
+  // Side effect, but easier to handle once here than pass in every time.
+  defaultOnChange(fieldName, value, object) {
+    object[fieldName] = value
   }
 
   render() {

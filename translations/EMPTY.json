@@ -1,0 +1,2849 @@
+{
+  /***
+   *** src/components/Footer.jsx
+   ***/
+
+  // Disclaimer that this it not a real application.
+  // English: "This is not a real application for school meal benefits"
+  "footer.notRealDisclaimer": "",
+
+
+  /***
+   *** src/components/Navigation.jsx
+   ***/
+
+  // Text for the page title.
+  // English: "{organizationName} Application for Free and Reduced Price School Meals"
+  "nav.title": "",
+
+  // Text for the page title on mobile devices.
+  // English: "Application for School Meals"
+  "nav.shortTitle": "",
+
+  // Text for the Help navigation item.
+  // English: "Help"
+  "nav.help": "",
+
+
+  /***
+   *** src/components/Progress.jsx
+   ***/
+
+  // Text for the Begin progress bar step.
+  // English: "Begin"
+  "progress.begin": "",
+
+  // Text for the Students progress bar step.
+  // English: "Students"
+  "progress.students": "",
+
+  // Text for the Programs progress bar step.
+  // English: "Programs"
+  "progress.assistancePrograms": "",
+
+  // Text for the Other Kids progress bar step.
+  // English: "Other Kids"
+  "progress.otherKids": "",
+
+  // Text for the Adults progress bar step.
+  // English: "Adults"
+  "progress.adults": "",
+
+  // Text for the Summary progress bar step.
+  // English: "Summary"
+  "progress.summary": "",
+
+
+  /***
+   *** src/components/Tooltiptext.jsx
+   ***/
+
+  // Tooltip text explaining total household income calculation methodoloty.
+  // English: "We calculated this number by converting all the income you reported into a monthly amount."
+  "tooltip.totalHouseholdIncome": "",
+
+  // Tooltip text about letter requiring that all strudents are named.
+  // English: "Check that the letter includes all the students in the household, because they are eligible for free meals.  If not, contact the school to correct the mistake."
+  "tooltip.letter": "",
+
+  // Tooltip text encouraging user to apply for program.
+  // English: "If you are unsure if you qualify, fill out an application and officials at {organizationName} will determine if you are eligible."
+  "tooltip.threethings": "",
+
+  // Tooltip text about this program not resulting in public charges.
+  // English: "The non-cash benefits received through the school meal programs are not subject to public charge consideration. You will not be deported, denied entry to the country, or denied permanent status because you apply for or receive school meal benefits."
+  "tooltip.usStatus": "",
+
+  // Tooltip text explaining SNAP.
+  // English: "{snapFullName} ({snapAccronym}) is a program that offers nutrition assistance to millions of eligible, low-income individuals and families."
+  "tooltip.snap": "",
+
+  // Tooltip text explaining TANF.
+  // English: "{tanfFullName} ({tanfAccronym}) program is designed to help needy familities achieve self-sufficiency by providing cash assistance, as well as other supports and services."
+  "tooltip.tanf": "",
+
+  // Tooltip text explaining FDPIR.
+  // English: "{fdpirFullName} ({fdpirAccronym}) is a Federal program that provides USDA foods to low-icome households, including the elderly, living on Indian reservations, and to Native American families residing in designated areas near reservations and in the State of Oklahoma."
+  "tooltip.fdpir": "",
+
+  // Tooltip text explaining the household.
+  // English: "A household includes grandparents or other extended family members that are living with you.  It also includes people that are away on a temporary basis, like kids that are away at college. It includes people regardless of age or whether they earn or receive income."
+  "tooltip.household": "",
+
+  // Tooltip text explaining foster.
+  // English: "Foster child(ren) are eligible for free school meal benefits.  This only applies to children who are formally placed by the State welfare agency or court in a caretaker household."
+  "tooltip.foster": "",
+
+  // Tooltip text explaining household reminder.
+  // English: "Remember, for the purposes of applying for school meal benefits, a household is defined as a group of people, related or unrelated, that usually live together and share income and expenses."
+  "tooltip.householdReminder": "",
+
+  // Tooltip text explaining child income.
+  // English: "Income earned or received by all household members, incuding children, is included when determining eligibility for benefits."
+  "tooltip.childIncome": "",
+
+  // Tooltip text explaining social security.
+  // English: "Monthly payments to people (or spouses, or dependent children of people) who are retired or disabled, but have worked and paid taxes into the Social Security system. Payments are based on your reported earnings. Also, upon death, survivors can collect benefits."
+  "tooltip.socialSecurity": "",
+
+  // Tooltip text explaining pension.
+  // English: "A series of payments made to you after you retire from work.  Pension payments are made regularly and are based on such factors as years of service and prior compensation."
+  "tooltip.pension": "",
+
+  // Tooltip text explaining annuity.
+  // English: "A series of payments under a contractmade at regular intervals over a period of more than one full year.  They can be either fixed (under which you receive a definite amount) or variable (not fixed). Annuities can be purchased by individuals alone, or with the help of an employer."
+  "tooltip.annuity": "",
+
+  // Tooltip text explaining trust.
+  // English: "In general, a relationship in which one person holds title to property, subject to an obligation to keep or use the property for the benefit of another."
+  "tooltip.trust": "",
+
+  // Tooltip text explaining current adult income.
+  // English: "Income earned or received in the current month, or in the month before the completion of this application. If your household’s current income is higher or lower than usual and does not fairly or accurately represent your household’s actual circumstances, see Help for more information."
+  "tooltip.currentAdult": "",
+
+  // Tooltip text explaining current child income.
+  // English: "Income earned or received in the current month, or in the month before the completion of this application. If your child’s income is higher or lower than usual, see the FAQ “What if my income is not always the same?” in Help."
+  "tooltip.currentChild": "",
+
+  // Tooltip text explaining net income.
+  // English: "Net income is total (or gross) income, minus taxes and deductions, as is commonly referred to as “take home pay”.  See Help for more information."
+  "tooltip.netIncome": "",
+
+  // Tooltip text explaining basic pay.
+  // English: "The base salary for a Military service member on active duty."
+  "tooltip.basicPay": "",
+
+  // Tooltip text explaining cash bonuses.
+  // English: "A lump sum of money awarded to an employee, either occasionally or periodically."
+  "tooltip.cashBonus": "",
+
+  // Tooltip text explaining allowances.
+  // English: "Allowances for off-base housing, such as the Basic Allowance for Housing (BAH), is to help service members cover the cost of housing in the private sector."
+  "tooltip.allowances": "",
+
+  // Tooltip text explaining income made available to the household.
+  // English: "Include only the portion of the deployed service member’s income that is made available to the household."
+  "tooltip.availableToHousehold": "",
+
+  // Tooltip text explaining social security insurance.
+  // English: "Provices cash to meet basic needs for food, clothing, and shelter to aged, blind, and disabled people who have little or no income."
+  "tooltip.socialSecurityInsurance": "",
+
+  // Tooltip text explaining cash assistance.
+  // English: "Cash benefits, including housing subsidies, from state or local government programs must be reported as household income.  If you have questions about whether to include benefits from a specific program, contact {organizationName} ({organizationContactInfo})"
+  "tooltip.cashAssistance": "",
+
+  // Tooltip text explaining SSDI.
+  // English: "Benefits paid to people who have worked long enough and paid Social Security taxes, but who can’t work because they have a medical condition that is expected to last at least one year or result in death."
+  "tooltip.ssdi": "",
+
+  // Tooltip text explaining regular cash payments to the household.
+  // English: "For example, if parents or grandparents regularly help cover the cost of groceries, bills, or rent, that money is considered household income. See Help for more information."
+  "tooltip.regularCashPayments": "",
+
+  // Tooltip text explaining self employement.
+  // English: "If you are self-employed, report income from work as a net amount. This is calculated by subtracting the total operating expenses of your business from its gross receipts or revenue. For more information see the definition for “Net income from self-employment” in Help."
+  "tooltip.selfEmployment": "",
+
+  // Tooltip text explaining SSI.
+  // English: "Provides cash to meet basic needs for food, clothing, and shelter to aged, blind, and disabled people who have little or no income."
+  "tooltip.ssi": "",
+
+  // Tooltip text explaining alimony.
+  // English: "Payments received from a spouse or former spouse from whom you are divorced or legally separated."
+  "tooltip.alimony": "",
+
+  // Tooltip text explaining child support.
+  // English: "Payments received by one parent from another to cover the cost of raising a child."
+  "tooltip.childSupport": "",
+
+  // Tooltip text explaining unemployment.
+  // English: "Payments from the government or a labor union to a person who is unemployed."
+  "tooltip.unemployment": "",
+
+  // Tooltip text explaining veteran benefits.
+  // English: "Benefits that are paid to veterans that have a service-connected disability and were not dishonorably discharged."
+  "tooltip.veteranBenefits": "",
+
+  // Tooltip text explaining workers compensation.
+  // English: "Payments to cover lost wages and medical expenses of an employee who is injured on the job."
+  "tooltip.workersComp": "",
+
+  // Tooltip text explaining strike benefits.
+  // English: "Compensation paid by a union to workers on strike."
+  "tooltip.strikeBenefits": "",
+
+  // Tooltip text explaining black lung.
+  // English: "Payments and medical treatment for people that become disabled from Black Lung Disease from working in or around the nation’s coal mines."
+  "tooltip.blackLung": "",
+
+  // Tooltip text explaining railroad.
+  // English: "Payments to qualified railroad employees that are retired or disabled."
+  "tooltip.railroad": "",
+
+  // Tooltip text explaining monthly income summation.
+  // English: "We calculated this number by converting all the income you reported into a monthly amount. Remember, this should be a gross amount, so it will be more than what you receive as take-home pay."
+  "tooltip.monthlyIncomeSum": "",
+
+  // Tooltip text explaining earmed interest.
+  // English: "See the FAQ “How do I know if I have income from earned interest?” in Help."
+  "tooltip.earmedInterest": "",
+
+  // Tooltip text explaining rental.
+  // English: "See the FAQ “How should I report income from rented space or properties?” in Help."
+  "tooltip.rental": "",
+
+  // Tooltip text explaining military.
+  // English: "See Help for information about sources of income in military that are and are not included as household income."
+  "tooltip.military": "",
+
+  // Tooltip text explaining deployed.
+  // English: "We ask because we only count the portion of a deployed service member’s income that is made available to the household."
+  "tooltip.deployed": "",
+
+  // Tooltip text explaining gross.
+  // English: "All money earned or received before deductions, such as income taxes, Social Security taxes, and insurance premiums."
+  "tooltip.gross": "",
+
+  // Tooltip text for getting help on program eligibility.
+  // English: "See Help for the Income Eligibility Guidelines for reduced price benefits."
+  "tooltip.eligibility": "",
+
+  // Tooltip text explaining SSI for children.
+  // English: "Supplemental Security Income (SSI) provides cash to meet basic needs for food, clothing, and shelter to children younger than age 18 who have a physical or mental condition, or combination of conditions, that meets Social Security’s definition of disability for children, and if his or her income and resources fall within the eligibility limits."
+  "tooltip.ssiChildren": "",
+
+  // Tooltip text explaining social security survivor benefits.
+  // English: "Social Security survivor benefits are monthly payments to children of a deceased parent who was retired or disabled, but worked and paid taxes into the Social Security system."
+  "tooltip.ssSurvivor": "",
+
+  // Tooltip text explaining pension benefits for children.
+  // English: "A child may receive payments from the pension of a deceased parent."
+  "tooltip.pensionChildren": "",
+
+  // Tooltip text explaining annuities for children.
+  // English: "A child may be the recipient of payments from an annuity. See Help for the definition of an annuity."
+  "tooltip.annuityChildren": "",
+
+  // Tooltip text explaining McKinney.
+  // English: "Provides Federal money for homeless shelter programs and facilitates public school access for homeless children and youth."
+  "tooltip.mckinney": "",
+
+  // Tooltip text explaining MEP.
+  // English: "Provides services to children who have moved across school district lines, within the last three years, in order to accompany or join a parent or guardian who seeks or obtains temporary or seasonal work in argiculture or fishing."
+  "tooltip.mep": "",
+
+  // Tooltip text explaining Runaway and Homeless Youth Act.
+  // English: "Authorizes community-based runaway and homeless youth projects to provide temporary shelter and care to youth who are in need of temporary shelter, counseling, and aftercare services."
+  "tooltip.runaway": "",
+
+
+  /***
+   *** src/components/application/BooleanRadio.jsx
+   ***/
+
+  // The label for the true selection of a true/false radio button pair.
+  // English: "Yes"
+  "app.booleanRadio.trueLabel": "",
+
+  // The label for the false selection of a true/false radio button pair.
+  // English: "No"
+  "app.booleanRadio.falseLabel": "",
+
+
+  /***
+   *** src/components/application/FrequencyLabel.jsx
+   ***/
+
+  // Once per year.
+  // English: "yearly"
+  "app.frequencyLabel.annually": "",
+
+  // Once per month.
+  // English: "monthly"
+  "app.frequencyLabel.monthly": "",
+
+  // Twice per month.
+  // English: "twice per month"
+  "app.frequencyLabel.twicePerMonth": "",
+
+  // Every two weeks.
+  // English: "every two weeks"
+  "app.frequencyLabel.everyTwoWeeks": "",
+
+  // Once per week.
+  // English: "weekly"
+  "app.frequencyLabel.weekly": "",
+
+  // Once per hour.
+  // English: "hourly"
+  "app.frequencyLabel.hourly": "",
+
+
+  /***
+   *** src/components/application/HourlyPeriodLabel.jsx
+   ***/
+
+  // Number of hours per day.
+  // English: "hours per day"
+  "app.hourlyPeriodLabel.day": "",
+
+  // Number of hours per month.
+  // English: "hours per month"
+  "app.hourlyPeriodLabel.month": "",
+
+  // Number of hours per week.
+  // English: "hours per week"
+  "app.hourlyPeriodLabel.week": "",
+
+
+  /***
+   *** src/components/application/IncomeAmountLabel.jsx
+   ***/
+
+  // Income earned annually.
+  // English: "per year"
+  "app.incomeAmountLabel.annually": "",
+
+  // Income earned monthly.
+  // English: "per month"
+  "app.incomeAmountLabel.monthly": "",
+
+  // Income earned twice per month.
+  // English: "twice per month"
+  "app.incomeAmountLabel.twicePerMonth": "",
+
+  // Income earned every two weeks.
+  // English: "every two weeks"
+  "app.incomeAmountLabel.everyTwoWeeks": "",
+
+  // Income earned weekly.
+  // English: "per week"
+  "app.incomeAmountLabel.weekly": "",
+
+  // Income earned daily.
+  // English: "per day"
+  "app.incomeAmountLabel.daily": "",
+
+  // Income earned hourly.
+  // English: "per hour"
+  "app.incomeAmountLabel.hourly": "",
+
+
+  /***
+   *** src/components/application/IncomeFrequency.jsx
+   ***/
+
+  // Default text for income frequency select box.
+  // English: "frequency…"
+  "app.incomeFrequency.placeholder": "",
+
+
+  /***
+   *** src/components/application/IncomeHourlyPeriod.jsx
+   ***/
+
+  // Default text for hourly period select box.
+  // English: "hours per…"
+  "app.incomeHourlyPeriod.placeholder": "",
+
+
+  /***
+   *** src/components/application/IncomeLineItem.jsx
+   ***/
+
+  // Button text to remove an income source line item.
+  // English: "Remove"
+  "app.incomeLineItem.removeButton": "",
+
+  // Message about too many hours being entered for the selected period.
+  // English: "There are only 24 hours in a day."
+  "app.incomeLineItem.tooManyHours.day": "",
+
+  // Message about too many hours being entered for the selected period.
+  // English: "There are only 168 hours in a week."
+  "app.incomeLineItem.tooManyHours.week": "",
+
+  // Message about too many hours being entered for the selected period.
+  // English: "There are only 730 hours in a month."
+  "app.incomeLineItem.tooManyHours.month": "",
+
+
+  /***
+   *** src/components/application/IncomeLineItems.jsx
+   ***/
+
+  // Button text to add an income source line item.
+  // English: "Add Income Source"
+  "app.incomeLineItems.addButton": "",
+
+
+  /***
+   *** src/components/application/IncomeTypeFormGroup.jsx
+   ***/
+
+  // Missing Income alert title
+  // English: "Missing Income"
+  "app.slides.incomeTypeFormGroup.missingIncomeTitle": "",
+
+  // Missing Income alert
+  // English: "You indicated that {person} receives income of the following type, but you selected “No” for each related income source on a following page. Please correct this answer or provide details on the following pages."
+  "app.slides.incomeTypeFormGroup.missingIncome": "",
+
+
+  /***
+   *** src/components/application/InputField.jsx
+   ***/
+
+  // Text that indicates a field is required.
+  // English: "required"
+  "app.inputField.required": "",
+
+
+  /***
+   *** src/components/application/PersonCollection.jsx
+   ***/
+
+  // Button to add person to collection.
+  // English: "+ Add another {personType}"
+  "app.personCollection.addButton": "",
+
+
+  /***
+   *** src/components/application/PersonForm.jsx
+   ***/
+
+  // Button to remove person from collection.
+  // English: "Remove {name}"
+  "app.personForm.removeButton": "",
+
+
+  /***
+   *** src/components/application/SerialList.jsx
+   ***/
+
+  // Final delimiter for an intersecting list.
+  // English: "or"
+  "app.serialList.intersectionDelim": "",
+
+  // Final delimiter for a union list.
+  // English: "and"
+  "app.serialList.unionDelim": "",
+
+
+  /***
+   *** src/components/application/Slide.jsx
+   ***/
+
+  // Default text for button to move back a slide.
+  // English: "Back"
+  "app.slide.backButton": "",
+
+  // Default text for button to move forward a slide.
+  // English: "Continue"
+  "app.slide.nextButton": "",
+
+  // Default text to tell user that the current slide is incomplete.
+  // English: "Please enter all required information above."
+  "app.slide.helpText": "",
+
+
+  /***
+   *** src/components/application/slides/AdultIncomeOverview.jsx
+   ***/
+
+  // Intro Paragraph
+  // English: "This page is all about {adult}."
+  "app.slides.adultIncomeOverview.adultsInto": "",
+
+  // Income intro
+  // English: "On questions about income, all amounts should be {adult}’s {tooltip}, {grossIncome}."
+  "app.slides.adultIncomeOverview.income": "",
+
+  // Intro Paragraph
+  // English: "current"
+  "app.slides.adultIncomeOverview.current": "",
+
+  // gross income
+  // English: "gross income"
+  "app.slides.adultIncomeOverview.grossIncome": "",
+
+  // Definition of gross income.
+  // English: "Gross income means all money earned or received before deductions such as income taxes, social security taxes, and insurance premiums. You should not report {netIncome}, which is the amount of money received in a pay check."
+  "app.slides.adultIncomeOverview.grossIncomeDefinition": "",
+
+  // Phrase: net income
+  // English: "net income"
+  "app.slides.adultIncomeOverview.netIncome": "",
+
+  // Is adult in military
+  // English: "Is {adult} in the {tooltip}?"
+  "app.slides.adultIncomeOverview.militaryQuestion": "",
+
+  // military
+  // English: "military"
+  "app.slides.adultIncomeOverview.military": "",
+
+  // Is adult deployed
+  // English: "Is {adult} currently {tooltip}?"
+  "app.slides.adultIncomeOverview.deployedQuestion": "",
+
+  // deployed
+  // English: "deployed"
+  "app.slides.adultIncomeOverview.deployed": "",
+
+  // Is adult employed
+  // English: "Does {adult} have earnings from work including salary, wages, tips, commissions, {tooltip} or net income from {tooltip2}"
+  "app.slides.adultIncomeOverview.employmentQuestion": "",
+
+  // cash bonuses
+  // English: "cash bonuses"
+  "app.slides.adultIncomeOverview.cashBonus": "",
+
+  // self-employment
+  // English: "self-employment"
+  "app.slides.adultIncomeOverview.selfEmployment": "",
+
+  // Is adult receiving public assistance income?
+  // English: "Does {adult} have income from public assistance including Supplemental Security Income {tooltip}, or {tooltip2} or housing subsidies from state or local government?"
+  "app.slides.adultIncomeOverview.publicAssistanceIncome": "",
+
+  // SSI
+  // English: "(SSI)"
+  "app.slides.adultIncomeOverview.ssi": "",
+
+  // cash assistance
+  // English: "cash assistance"
+  "app.slides.adultIncomeOverview.cashAssistance": "",
+
+  // Is adult receiving spousal income?
+  // English: "Does {adult} have income from {tooltip} or {tooltip2}?"
+  "app.slides.adultIncomeOverview.spousalIncome": "",
+
+  // alimony
+  // English: "alimony"
+  "app.slides.adultIncomeOverview.alimony": "",
+
+  // child support
+  // English: "child support"
+  "app.slides.adultIncomeOverview.childSupport": "",
+
+  // Is adult receiving unemployment income?
+  // English: "Does {adult} have income from {tooltip}, {tooltip2}, {tooltip3}, {tooltip4}, or Social Security Disability Insurance {tooltip5}?"
+  "app.slides.adultIncomeOverview.unemploymentIncome": "",
+
+  // unemployment benefits
+  // English: "unemployment benefits"
+  "app.slides.adultIncomeOverview.unemployment": "",
+
+  // Veteran's benefits
+  // English: "Veteran's benefits"
+  "app.slides.adultIncomeOverview.veteranBenefits": "",
+
+  // worker's compensation
+  // English: "worker's compensation"
+  "app.slides.adultIncomeOverview.workersComp": "",
+
+  // strike benefits
+  // English: "strike benefits"
+  "app.slides.adultIncomeOverview.strikeBenefits": "",
+
+  // SSDI
+  // English: "(SSDI)"
+  "app.slides.adultIncomeOverview.ssdi": "",
+
+  // Is adult receiving retirement income?
+  // English: "Does {adult} have retirement income from Social Security (including survivor benefits, {tooltip} and {tooltip2}) or {tooltip3}?"
+  "app.slides.adultIncomeOverview.retirementIncome": "",
+
+  // Black Lung Benefits
+  // English: "Black Lung Benefits"
+  "app.slides.adultIncomeOverview.blackLung": "",
+
+  // Railroad Retirement
+  // English: "Railroad Retirement"
+  "app.slides.adultIncomeOverview.railroad": "",
+
+  // pensions
+  // English: "pensions"
+  "app.slides.adultIncomeOverview.pension": "",
+
+  // Is adult receiving otherincome?
+  // English: "Does {adult} have other sources of income including {tooltip} from outside the household, {tooltip2}, {tooltip3}, investment income and {tooltip4}, or any other source of income available to pay for children’s school meals?"
+  "app.slides.adultIncomeOverview.otherIncome": "",
+
+  // regular cash payments
+  // English: "regular cash payments"
+  "app.slides.adultIncomeOverview.regularCashPayments": "",
+
+  // rental income
+  // English: "rental income"
+  "app.slides.adultIncomeOverview.rental": "",
+
+  // earned interest
+  // English: "earned interest"
+  "app.slides.adultIncomeOverview.earnedInterest": "",
+
+  // annuities
+  // English: "annuities"
+  "app.slides.adultIncomeOverview.annuity": "",
+
+
+  /***
+   *** src/components/application/slides/Adults.jsx
+   ***/
+
+  // Intro Paragraph
+  // English: "Okay, now let’s talk about the adults in your household."
+  "app.slides.adults.adultsInto": "",
+
+  // What other adults live in household
+  // English: "Not including {attestor}, what other adults live in the household?"
+  "app.slides.adults.notIncluding": "",
+
+  // Remember Household definitions
+  // English: "Remember, for the purposes of applying for school meal benefits, a household is defined as a group of people, related or unrelated, that usually live together and share income and expenses. Don't forget about:"
+  "app.slides.adults.remember": "",
+
+  // Grandparents or extended family
+  // English: "grandparents or other extended family members that are living with you"
+  "app.slides.adults.grandparents": "",
+
+  // Also include people not living there right now
+  // English: "Also include people that are not currently living with you, but are only away on a temporary basis, like:"
+  "app.slides.adults.alsoInclude": "",
+
+  // college kids
+  // English: "kids that are away at college,"
+  "app.slides.adults.collegeKids": "",
+
+  // deployed military
+  // English: "members of your family that are in the military, and are deployed"
+  "app.slides.adults.military": "",
+
+  // Include people regardless of age or income
+  // English: "Include people regardless of age or whether they earn or receive income."
+  "app.slides.adults.includeRegardless": "",
+
+  // Label used for title, add/remove buttons.
+  // English: "Adult"
+  "app.slides.adults.label": "",
+
+  // Text to show on next slide button if no other adults are added.
+  // English: "No other adults"
+  "app.slides.adults.nextText": "",
+
+
+  /***
+   *** src/components/application/slides/AssistancePrograms.jsx
+   ***/
+
+  // Intro paragraph
+  // English: "If anyone in your household participates in {snap}, {tanf}, or {fdpir} then {studentList} {studentCount, plural, one {is eligible} other {are eligible}} for free school meals."
+  "app.slides.assistancePrograms.intro": "",
+
+  // Household definition
+  // English: "A household is defined as a group of people, related or unrelated, that usually live together and share income and expenses."
+  "app.slides.assistancePrograms.household": "",
+
+  // Household definition includes
+  // English: "This includes grandparents or other extended family members that are living with you. It also includes people that are not currently living with you, but are only away on a temporary basis, like kids that are away at college. It includes people regardless of age or whether they earn or receive income."
+  "app.slides.assistancePrograms.householdIncludes": "",
+
+  // Household who to include
+  // English: "If you need more detailed information, see the ‘WHO SHOULD I INCLUDE IN MY HOUSEHOLD?’ question in Help."
+  "app.slides.assistancePrograms.whoToInclude": "",
+
+  // Household people who participates in programs
+  // English: "If anyone in your household (including you) currently participates in any of the following programs, please select one or more of the checkboxes below. If not, press continue."
+  "app.slides.assistancePrograms.followingPrograms": "",
+
+
+  /***
+   *** src/components/application/slides/Attestation.jsx
+   ***/
+
+  // Text for the header of the slide.
+  // English: "I certify (promise)..."
+  "app.slides.attestation.header": "",
+
+  // Introductory paragraph.
+  // English: "that all information on this application is true and that all income is reported."
+  "app.slides.attestation.intro": "",
+
+  // Understand that the information give should be correct.
+  // English: "I understand that this information is given in connection with the receipt of Federal funds, and that school o­fficials may verify (check) the information. I am aware that if I purposely* give false information, my children may lose meal benefits."
+  "app.slides.attestation.understand": "",
+
+  // Name of individual completing app
+  // English: "Enter the name of the adult household member completing the application."
+  "app.slides.attestation.completingApp": "",
+
+  // Field label.
+  // English: "First name"
+  "app.slides.attestation.firstName.label": "",
+
+  // Field label.
+  // English: "Middle name"
+  "app.slides.attestation.middleName.label": "",
+
+  // Field label.
+  // English: "Last name"
+  "app.slides.attestation.lastName.label": "",
+
+  // Field label.
+  // English: "Suffix (e.g. Jr., Sr., I, II, III)"
+  "app.slides.attestation.suffix.label": "",
+
+  // Field label.
+  // English: "Today's date"
+  "app.slides.attestation.date.label": "",
+
+  // Starred message that lying on the form is fraud.
+  // English: "*Deliberate misrepresentation of information may subject applicants to prosecution under applicable State and Federal law."
+  "app.slides.attestation.misrepresentation": "",
+
+
+  /***
+   *** src/components/application/slides/BeforeYouBegin.jsx
+   ***/
+
+  // Text for the header of the slide.
+  // English: "Before you begin…"
+  "app.slides.beforeYouBegin.header": "",
+
+  // Introductory tagline.
+  // English: "there are a few things you should know."
+  "app.slides.beforeYouBegin.subheading": "",
+
+  // Hist that you can skip most of application with a household program.
+  // English: "If you received a {tooltip} from the school saying that your children were automatically approved (directly certified) for free meals for the {schoolYear} school year because someone in your household participates in {assistanceProgramList} then you do not need to submit an application."
+  "app.slides.beforeYouBegin.householdPrograms": "",
+
+  // As in a letter from a school.
+  // English: "letter"
+  "app.slides.beforeYouBegin.letter": "",
+
+  // Only need one application for your household
+  // English: "We need only one application for all the children in your household that attend school in {organizationName}."
+  "app.slides.beforeYouBegin.oneApplication": "",
+
+  // As in the qulifications for this program.
+  // English: "Eligibility"
+  "app.slides.beforeYouBegin.eligibility": "",
+
+  // Only need one application for your household
+  // English: "for free or reduced price school meal benefits is based on any one of these"
+  "app.slides.beforeYouBegin.mealEligibilityDescription": "",
+
+  // As in the requirements for program qualification.
+  // English: "three things:"
+  "app.slides.beforeYouBegin.threeThings": "",
+
+  // Eligibility List item
+  // English: "your total household income and size in the month the application is filled out, or the month before, or"
+  "app.slides.beforeYouBegin.eligibility1": "",
+
+  // Eligibility List item
+  // English: "your child’s individual status as foster, homeless, migrant or runaway, or"
+  "app.slides.beforeYouBegin.eligibility2": "",
+
+  // Eligibility List item
+  // English: "participation in an assistance program by any member of your household"
+  "app.slides.beforeYouBegin.eligibility3": "",
+
+  // citizenship or immigration doesn't affect status
+  // English: "Your {tooltip} does not affect your eligibility for free and reduced price benefits."
+  "app.slides.beforeYouBegin.status": "",
+
+  // As in the status of the person/family applying for benefits.
+  // English: "US citizenship or immigration status"
+  "app.slides.beforeYouBegin.usStatus": "",
+
+  // Click the question mark icons
+  // English: "If you have questions at any point during the application, click the question mark icon {glyphIcon} to get help with the current section."
+  "app.slides.beforeYouBegin.questions": "",
+
+  // Things you'll need section header.
+  // English: "Things you'll need"
+  "app.slides.beforeYouBegin.thingsNeeded": "",
+
+  // Invitation to view full list of things needed to apply.
+  // English: "Lastly, we compiled a list of the information you might need to complete the application."
+  "app.slides.beforeYouBegin.thingsNeededMore": "",
+
+  // Text for the link to view all information needed to apply.
+  // English: "Check it out!"
+  "app.slides.beforeYouBegin.thingsNeededMoreLinkText": "",
+
+  // Handy Information Lead
+  // English: "If you have this information handy, it will make the application process fast and easy."
+  "app.slides.beforeYouBegin.informationHandy": "",
+
+  // List of programs that will require a case number.
+  // English: "If you participate in {snap}, {tanf} , or {fdpir} you will need to know your case number (not your card or account number)."
+  "app.slides.beforeYouBegin.caseNumber": "",
+
+  // Description of when household income reporting is required.
+  // English: "If you do not participate in any of the above assistance programs, you will need to report your total household income. In that case…"
+  "app.slides.beforeYouBegin.whenReportHouseholdIncome": "",
+
+  // Item required for household income reporting.
+  // English: "if anyone in your household has a job, you may need to reference the earnings statements or pay stubs to report your gross income, which is different from the amount you actually receive in your paycheck."
+  "app.slides.beforeYouBegin.whenReportHouseholdIncome1": "",
+
+  // Item required for household income reporting.
+  // English: "if anyone receives Social Security or retirement benefits, you may need to gather the benefit statements to report the amount and frequency of the payments."
+  "app.slides.beforeYouBegin.whenReportHouseholdIncome2": "",
+
+  // Item required for household income reporting.
+  // English: "you may also need to reference other financial documents for additional sources of income."
+  "app.slides.beforeYouBegin.whenReportHouseholdIncome3": "",
+
+  // Reassuring message about the application prompting for information as needed.
+  // English: "Still not sure if you have everything you need? Don’t worry! The income section of the application contains detailed instructions and explanations about the sources of income you must include, and you can gather additional information then."
+  "app.slides.beforeYouBegin.notSure": "",
+
+
+  /***
+   *** src/components/application/slides/ChildIncomeOverview.jsx
+   ***/
+
+  // Possessive phrase for a single child's income.
+  // English: "child's income"
+  "app.slides.childIncomeOverview.singleChildIncome": "",
+
+  // Possessive phrase for multiple children's income.
+  // English: "children's income"
+  "app.slides.childIncomeOverview.multipleChildIncome": "",
+
+  // Introductory paragraph.
+  // English: "The next few questions are about your {tooltip}."
+  "app.slides.childIncomeOverview.intro": "",
+
+  // income Source List beginning
+  // English: "Some common sources of income for children are:"
+  "app.slides.childIncomeOverview.sources": "",
+
+  // Full-/part-time job
+  // English: "a full-time or part-time job,"
+  "app.slides.childIncomeOverview.fullOrPartJob": "",
+
+  // Social Security
+  // English: "{socialSecurity} benefits, if the child is disabled, or is the {beneficiary} of another person’s Social Security benefits,"
+  "app.slides.childIncomeOverview.socialSecurity": "",
+
+  // social
+  // English: "Social Security"
+  "app.slides.childIncomeOverview.social": "",
+
+  // benefit
+  // English: "beneficiary"
+  "app.slides.childIncomeOverview.benefit": "",
+
+  // money regularly received
+  // English: "money regularly received from extended family or friends outside the household, or"
+  "app.slides.childIncomeOverview.money": "",
+
+  // money From pension, annuity, or trust
+  // English: "money from a {pension}, {annuity}, or {trust}"
+  "app.slides.childIncomeOverview.moneyFrom": "",
+
+  // pension
+  // English: "pension"
+  "app.slides.childIncomeOverview.pension": "",
+
+  // annuity
+  // English: "annuity"
+  "app.slides.childIncomeOverview.annuity": "",
+
+  // trust
+  // English: "trust"
+  "app.slides.childIncomeOverview.trust": "",
+
+  // Message about which types of child income to exclude from reporting.
+  // English: "Do not include infrequent earnings, such as income from occasional baby-sitting or mowing lawns."
+  "app.slides.childIncomeOverview.exclusions": "",
+
+  // Question asking if child has income sources.
+  // English: "Does {child} have income from any of these, or any other, sources?"
+  "app.slides.childIncomeOverview.label": "",
+
+
+  /***
+   *** src/components/application/slides/ChildIncomeSlide.jsx
+   ***/
+
+  // Missing Income alert title
+  // English: "Missing Income"
+  "app.slides.childIncomeSlide.missingIncomeTitle": "",
+
+  // Introductory paragraph.
+  // English: "Does {child} have income from any of the following sources?"
+  "app.slides.childIncomeSlide.intro": "",
+
+  // Income reported should be child's.
+  // English: "Income reported here should be the child’s {tooltip}, {gross}  income."
+  "app.slides.childIncomeSlide.incomeReported": "",
+
+  // current
+  // English: "current"
+  "app.slides.childIncomeSlide.current": "",
+
+  // gross
+  // English: "gross"
+  "app.slides.childIncomeSlide.gross": "",
+
+  // Gross Income definition.
+  // English: "{grossIncome}  means all money earned or received before deductions, such as income taxes, social security taxes, and insurance premiums. You should not report net income, which is the amount of money received in a pay check. Net income is total (or gross) income, minus taxes and deductions, and is commonly referred to as “take home pay”."
+  "app.slides.childIncomeSlide.childGross": "",
+
+  // Gross income
+  // English: "Gross income"
+  "app.slides.childIncomeSlide.grossIncome": "",
+
+  // Money earned from a full or part-time job
+  // English: "Money earned from a full or part-time job"
+  "app.slides.childIncomeSlide.moneyEarned": "",
+
+  // Supplemental income
+  // English: "Supplemental Security Insurance {tooltip} or Social Security {tooltip2}"
+  "app.slides.childIncomeSlide.supplementalIncome": "",
+
+  // SSI
+  // English: "(SSI)"
+  "app.slides.childIncomeSlide.ssiChildren": "",
+
+  // survivor benefits
+  // English: "survivor benefits"
+  "app.slides.childIncomeSlide.ssSurvivor": "",
+
+  // Regular Cash Payments
+  // English: "{tooltip} from extended family or friends outside the household"
+  "app.slides.childIncomeSlide.regularCash": "",
+
+  // Money regularly received
+  // English: "Money regularly received"
+  "app.slides.childIncomeSlide.regularCashPayments": "",
+
+  // Pensions annuities & trusts
+  // English: "{tooltip}, {tooltip2}, or {tooltip3}"
+  "app.slides.childIncomeSlide.pensionAnnuityTrust": "",
+
+  // Pension
+  // English: "Pension"
+  "app.slides.childIncomeSlide.pensionChildren": "",
+
+  // annuity
+  // English: "annuity"
+  "app.slides.childIncomeSlide.annuityChildren": "",
+
+  // trust
+  // English: "trust"
+  "app.slides.childIncomeSlide.trust": "",
+
+  // other income
+  // English: "Any other source of income"
+  "app.slides.childIncomeSlide.otherIncome": "",
+
+  // Missing Income Alert
+  // English: "On a previous page, you indicated that {child} receives income. Please enter this income above or correct your previous answer."
+  "app.slides.childIncomeSlide.missingIncome": "",
+
+  // Change Answer
+  // English: "Change previous answer"
+  "app.slides.childIncomeSlide.changeAnswer": "",
+
+
+  /***
+   *** src/components/application/slides/Contact.jsx
+   ***/
+
+  // Text for the header of the slide.
+  // English: "Contact Info"
+  "app.slides.contact.header": "",
+
+  // Introductory paragraph.
+  // English: "Please enter your contact information so that we can reach you in case there are any issues with your application. This information is optional, but we strongly encourage you to provide it."
+  "app.slides.contact.intro": "",
+
+  // Field label.
+  // English: "Phone number"
+  "app.slides.contact.phone.label": "",
+
+  // Field label.
+  // English: "Email"
+  "app.slides.contact.email.label": "",
+
+  // Field label.
+  // English: "Street address 1"
+  "app.slides.contact.address1.label": "",
+
+  // Field label.
+  // English: "Street address 2"
+  "app.slides.contact.address2.label": "",
+
+  // Field label.
+  // English: "City"
+  "app.slides.contact.city.label": "",
+
+  // Field label.
+  // English: "State"
+  "app.slides.contact.state.label": "",
+
+  // Field label.
+  // English: "ZIP"
+  "app.slides.contact.zip.label": "",
+
+
+  /***
+   *** src/components/application/slides/Demographics.jsx
+   ***/
+
+  // Introductory paragraph.
+  // English: "This is an optional question for information we collect about students that attend school in {organizationName}."
+  "app.slides.demographics.intro": "",
+
+  // Required to ask...
+  // English: "We are required to ask for information about the race and ethnicity of the students that are applying for the program."
+  "app.slides.demographics.required": "",
+
+  // info is important because...
+  // English: "This information is important and helps to make sure we are fully serving our community. Responding to this section is optional and does not affect your children's eligibility for free or reduced price meals."
+  "app.slides.demographics.importantInfo": "",
+
+
+  /***
+   *** src/components/application/slides/DemographicsForm.jsx
+   ***/
+
+  // Label for choice if student is hispanic/latino.
+  // English: "Hispanic or Latino"
+  "app.slides.demographics.radioTrue": "",
+
+  // Label for choice if student is not hispanic/latino.
+  // English: "Non Hispanic or Latino"
+  "app.slides.demographics.radioFalse": "",
+
+  // Ethnicity
+  // English: "Ethnicity"
+  "app.slides.demographicsForm.ethnicity": "",
+
+  // Race
+  // English: "Race"
+  "app.slides.demographicsForm.race": "",
+
+  // American Indian or Alaskan Native
+  // English: "American Indian or Alaskan Native"
+  "app.slides.demographicsForm.americanIndianOrAlaskanNative": "",
+
+  // Asian
+  // English: "Asian"
+  "app.slides.demographicsForm.asian": "",
+
+  // Black or African American
+  // English: "Black or African American"
+  "app.slides.demographicsForm.africanAmerican": "",
+
+  // Native Hawaiian or Other Pacific Islander
+  // English: "Native Hawaiian or Other Pacific Islander"
+  "app.slides.demographicsForm.pacificIslander": "",
+
+  // White
+  // English: "White"
+  "app.slides.demographicsForm.white": "",
+
+  // Clear
+  // English: "Clear"
+  "app.slides.demographicsForm.clear": "",
+
+
+  /***
+   *** src/components/application/slides/EmploymentIncome.jsx
+   ***/
+
+  // Salary / Wages
+  // English: "Salary / Wages"
+  "app.slides.employmentIncome.salaryWages": "",
+
+  // Tips
+  // English: "Tips"
+  "app.slides.employmentIncome.tips": "",
+
+  // Commission
+  // English: "Commission"
+  "app.slides.employmentIncome.commission": "",
+
+  // Cash bonus tooltip
+  // English: "Cash bonus"
+  "app.slides.employmentIncome.tooltipCashBonus": "",
+
+  // Cash bonus
+  // English: "Net income from {tooltip}"
+  "app.slides.employmentIncome.selfEmployment": "",
+
+  // self-employment
+  // English: "self-employment"
+  "app.slides.employmentIncome.tooltipSelf": "",
+
+
+  /***
+   *** src/components/application/slides/Foster.jsx
+   ***/
+
+  // Question asking if student in foster care.
+  // English: "{studentCount, plural, one {Does} other {Do}} {studentNames} live with you under a formal (court-ordered) foster care arrangement?"
+  "app.slides.foster.label": "",
+
+  // No problem.
+  // English: "No problem! There are other ways to qualify."
+  "app.slides.foster.confirm": "",
+
+
+  /***
+   *** src/components/application/slides/IncomeElection.jsx
+   ***/
+
+  // Third-person verb describing applicability of program.
+  // English: "{studentCount, plural, one {lives} other {live}} with you under a formal (court-ordered) foster care arrangement"
+  "app.slides.incomeElection.isFoster": "",
+
+  // Third-person verb describing applicability of program.
+  // English: "{studentCount, plural, one {receives} other {receive}} assistance under the {programName}"
+  "app.slides.incomeElection.isHomeless": "",
+
+  // Third-person verb describing applicability of program.
+  // English: "{studentCount, plural, one {participates} other {participate}} in the {programName} ({programShortName})"
+  "app.slides.incomeElection.isMigrant": "",
+
+  // Third-person verb describing applicability of program.
+  // English: "{studentCount, plural, one {participates} other {participate}} in a program under the {programName}"
+  "app.slides.incomeElection.isRunaway": "",
+
+  // Lead paragraph detailing the programs that have been selected.
+  // English: "You have indicated that {names}"
+  "app.slides.incomeElection.intro": "",
+
+  // Need to confirm with program staff
+  // English: "We just need to confirm that with program staff. If we are unable to do that, you will need to submit an application with income information to determine your benefit level."
+  "app.slides.incomeElection.confirmWithStaff": "",
+
+  // Label for the following radio buttons
+  // English: "Please choose one of the following:"
+  "app.slides.incomeElection.chooseFollowing": "",
+
+  // Option to provide household income now.
+  // English: "Provide income information now"
+  "app.slides.incomeElection.electToProvideIncome.trueLabel": "",
+
+  // Option to not provide household income now.
+  // English: "Submit my application without income information"
+  "app.slides.incomeElection.electToProvideIncome.falseLabel": "",
+
+
+  /***
+   *** src/components/application/slides/IncomeType.jsx
+   ***/
+
+  // Missing Income alert title
+  // English: "Missing Income"
+  "app.slides.incomeType.missingIncomeTitle": "",
+
+  // Missing Income Alert
+  // English: "On a previous page, you indicated that {adult} receives income from one of the above sources. Please enter this income above or correct your previous answer."
+  "app.slides.incomeType.missingIncome": "",
+
+  // Change previous answer
+  // English: "Change previous answer"
+  "app.slides.incomeType.changeAnswer": "",
+
+
+  /***
+   *** src/components/application/slides/IncomeTypeDefaultText.jsx
+   ***/
+
+  // Introductory paragraph.
+  // English: "Does {person} have income from the following sources{militaryCaveat}?"
+  "app.slides.IncomeTypeDefaultText.intro": "",
+
+  // not including earnings
+  // English: ", not including earnings from the military that were already reported"
+  "app.slides.IncomeTypeDefaultText.notIncludingEarnings": "",
+
+  // note: remember to report...
+  // English: "NOTE: Remember to report {tooltip}, {tooltip2} income."
+  "app.slides.IncomeTypeDefaultText.note": "",
+
+  // current
+  // English: "current"
+  "app.slides.IncomeTypeDefaultText.currentAdult": "",
+
+  // gross
+  // English: "gross"
+  "app.slides.IncomeTypeDefaultText.gross": "",
+
+
+  /***
+   *** src/components/application/slides/LegalStatements.jsx
+   ***/
+
+  // Text for the header of the slide.
+  // English: "Legal Statements"
+  "app.slides.legalStatements.header": "",
+
+  // Almost done
+  // English: "Almost done! Please read and acknowledge the following legal statements."
+  "app.slides.legalStatements.almostDone": "",
+
+  // {usda} Use of info statement
+  // English: "Use of Information Statement"
+  "app.slides.legalStatements.useOfStatement": "",
+
+  // National School Lunch Act
+  // English: "The Richard B. Russell National School Lunch Act requires the information on this application. You do not have to give the information, but if you do not submit all needed information, we cannot approve your child for free or reduced price meals. You must include the last four digits of the social security number of the adult household member who signs the application. The social security number is not required when you apply on behalf of a foster child or you list a Supplemental Nutrition Assistance Program (SNAP), Temporary Assistance for Needy Families (TANF) Program or Food Distribution Program on Indian Reservations (FDPIR) case number or other FDPIR identifier for your child or when you indicate that the adult household member signing the application does not have a social security number. We will use your information to determine if your child is eligible for free or reduced price meals, and for administration and enforcement of the lunch and breakfast programs."
+  "app.slides.legalStatements.nationalSchoolLunchAct": "",
+
+  // tool may share info
+  // English: "We may share your eligibility information with education, health, and nutrition programs to help them evaluate, fund, or determine benefits for their programs, auditors for program reviews, and law enforcement officials to help them look into violations of program rules."
+  "app.slides.legalStatements.shareInfo": "",
+
+  // Non-Discrimination Statement
+  // English: "{usda} Non-Discrimination Statement"
+  "app.slides.legalStatements.nondiscrimination": "",
+
+  // Civil rights paragraph
+  // English: "In accordance with Federal civil rights law and U.S. Department of Agriculture {usda} civil rights regulations and policies, the {usda}, its Agencies, offices, and employees, and institutions participating in or administering {usda} programs are prohibited from discriminating based on race, color, national origin, religion, sex, gender identity (including gender expression), sexual orientation, disability, age, marital status, family/parental status, income derived from a public assistance program, political beliefs, or reprisal or retaliation for prior civil rights activity, in any program or activity conducted or funded by {usda}  (not all bases apply to all programs). Remedies and complaint filing deadlines vary by program or incident."
+  "app.slides.legalStatements.fedCivilRights": "",
+
+  // Persons with disabilities
+  // English: "Persons with disabilities who require alternative means of communication for program information (e.g., Braille, large print, audiotape, American Sign Language, etc.) should contact the responsible Agency or {usda}'s TARGET Center at (202) 720-2600 (voice and TTY) or contact {usda} through the Federal Relay Service at (800) 877-8339. Additionally, program information may be made available in languages other than English."
+  "app.slides.legalStatements.disabilities": "",
+
+  // to file a complaint...
+  // English: "To file a program discrimination complaint, complete the {usda} Program Discrimination Complaint Form, AD-3027, found online at How to File a Program Discrimination Complaint and at any {usda} office or write a letter addressed to {usda} and provide in the letter all of the information requested in the form. To request a copy of the complaint form, call (866) 632-9992. Submit your completed form or letter to {usda} by: (1) mail: U.S. Department of Agriculture, Office of the Assistant Secretary for Civil Rights, 1400 Independence Avenue, SW, Washington, D.C. 20250-9410; (2) fax: (202) 690-7442; or (3) email: program.intake@usda.gov."
+  "app.slides.legalStatements.fileComplaint": "",
+
+  // USDA is an equal opportunity...
+  // English: "{usda} is an equal opportunity provider, employer, and lender."
+  "app.slides.legalStatements.equalOpportunity": "",
+
+
+  /***
+   *** src/components/application/slides/MilitaryIncome.jsx
+   ***/
+
+  // Military Pay info
+  // English: "Military basic pay, drill pay, and cash bonuses made available to the household, as well as allowances for off-base housing, food or clothing (including BAH) are includable income sources. Do not include combat pay, Family Subsistence Supplemental Allowance (FSSA), or Military Housing Privatization Initiative (MHPI)."
+  "app.slides.militaryIncome.basicPay": "",
+
+  // Military Pay info more
+  // English: "Military basic pay, drill pay, cash bonuses and allowances for off-base housing, food, or clothing (including BAH) count as income for purposes of applying for school meal benefits. Do not include combat pay, Family Subsistence Supplemental Allowance (FSSA), or Military Housing Privatization Initiative (MHPI)."
+  "app.slides.militaryIncome.basicPayMore": "",
+
+  // Military basic pay
+  // English: "Military basic pay"
+  "app.slides.militaryIncome.basicPayTooltip": "",
+
+  // made available
+  // English: "(made available to the household)"
+  "app.slides.militaryIncome.madeAvailable": "",
+
+  // Military cash bonus
+  // English: "Military {tooltip}"
+  "app.slides.militaryIncome.cashBonus": "",
+
+  // cash bonus
+  // English: "cash bonus"
+  "app.slides.militaryIncome.cashBonusTooltip": "",
+
+  // Military allowance income
+  // English: "Military {tooltip} for off-base housing, food, clothing (other than FSSA and MHPI)"
+  "app.slides.militaryIncome.allowance": "",
+
+  // allowance
+  // English: "allowance"
+  "app.slides.militaryIncome.allowanceTooltip": "",
+
+
+  /***
+   *** src/components/application/slides/OtherChildren.jsx
+   ***/
+
+  // Introductory paragraph.
+  // English: "Okay, it looks like we will need more information about your {tooltip} and income in order to determine if you are eligible for benefits."
+  "app.slides.otherChildren.intro": "",
+
+  // household
+  // English: "household"
+  "app.slides.otherChildren.introTooltip": "",
+
+  // nameChildren
+  // English: "Let's talk about the other kids in the house, and then we'll move on to the adults.  Other than {namedChildren}, are there any other children in your household? Don’t forget to include:"
+  "app.slides.otherChildren.namedChildren": "",
+
+  // Type of child to include in income reporting.
+  // English: "students that are in grade 12 or below and attend school in a school district other than {organizationName}"
+  "app.slides.otherChildren.childType1": "",
+
+  // Type of child to include in income reporting.
+  // English: "children that attend day care or pre-school, or are not of school age, including infants"
+  "app.slides.otherChildren.childType2": "",
+
+  // Type of child to include in income reporting.
+  // English: "anyone 18 years of age or younger living in your household that does not currently attend school"
+  "app.slides.otherChildren.childType3": "",
+
+  // Label used for title, add/remove buttons.
+  // English: "Child"
+  "app.slides.otherChildren.label": "",
+
+  // Text to show on next slide button if no other children are added.
+  // English: "No other children"
+  "app.slides.otherChildren.nextText": "",
+
+
+  /***
+   *** src/components/application/slides/OtherIncome.jsx
+   ***/
+
+  // Regular Cash Payments
+  // English: "{tooltip} from outside the household"
+  "app.slides.otherIncome.regularCashPayments": "",
+
+  // Regular cash payments
+  // English: "Regular cash payments"
+  "app.slides.otherIncome.regularCashPaymentsTooltip": "",
+
+  // Rental income
+  // English: "Rental income"
+  "app.slides.otherIncome.rental": "",
+
+  // Earned interest
+  // English: "Earned interest"
+  "app.slides.otherIncome.earnedInterest": "",
+
+  // Investment income
+  // English: "Investment income"
+  "app.slides.otherIncome.investmentIncome": "",
+
+  // Annuity
+  // English: "Annuity"
+  "app.slides.otherIncome.annuity": "",
+
+  // other income
+  // English: "Any other income available to pay for children’s school meals"
+  "app.slides.otherIncome.otherIncome": "",
+
+
+  /***
+   *** src/components/application/slides/OtherPrograms.jsx
+   ***/
+
+  // Question asking if student is a homeless child.
+  // English: "{studentCount, plural, one {Does} other {Do}} {studentNames} receive assistance under the {programName}?"
+  "app.slides.otherPrograms.isHomeless.label": "",
+
+  // Homeless organizations
+  // English: "If not, but your household lacks a permanent address, or stays together in a shelter, hotel, or other temporary housing arrangement, contact {organizationName} for help."
+  "app.slides.otherPrograms.isHomeless": "",
+
+  // Question asking if student is a migrant child.
+  // English: "{studentCount, plural, one {Does} other {Do}} {studentNames} participate in the {programName}?"
+  "app.slides.otherPrograms.isMigrant.label": "",
+
+  // Migrant Organizations
+  // English: "If not, but you moved your household into a different school district within the last three years to gain or look for temporary/seasonal work in agriculture or fishing, contact {organizationName} for help."
+  "app.slides.otherPrograms.isMigrant": "",
+
+  // Question asking if student is a runaway child.
+  // English: "{studentCount, plural, one {Does} other {Do}} {studentNames} participate in a program under the {programName}?"
+  "app.slides.otherPrograms.isRunaway.label": "",
+
+  // Run Away Organizations
+  // English: "If not, but {studentCount, plural, one {he/she} other {they}} chose to leave {studentCount, plural, one {his/her} other {their}} prior family or household, contact {organizationName} for help."
+  "app.slides.otherPrograms.isRunaway": "",
+
+  // Introductory paragraph.
+  // English: "Your children can also qualify for free meals if any of these apply."
+  "app.slides.otherPrograms.intro": "",
+
+
+  /***
+   *** src/components/application/slides/OtherProgramsProgram.jsx
+   ***/
+
+  // Which students?
+  // English: "Which students?"
+  "app.slides.otherProgramsProgram.whichStudents": "",
+
+
+  /***
+   *** src/components/application/slides/PublicAssistanceIncome.jsx
+   ***/
+
+  // SSI
+  // English: "Supplemental Security Income {tooltip}"
+  "app.slides.publicAssistanceIncome.ssi": "",
+
+  // SSI tooltip
+  // English: "(SSI)"
+  "app.slides.publicAssistanceIncome.ssiToolTip": "",
+
+  // SSI
+  // English: "{tooltip} from state or local government (including housing subsidies)"
+  "app.slides.publicAssistanceIncome.cashAssistance": "",
+
+  // Cash assistance
+  // English: "Cash assistance"
+  "app.slides.publicAssistanceIncome.cashAssistanceToolTip": "",
+
+
+  /***
+   *** src/components/application/slides/RetirementIncome.jsx
+   ***/
+
+  // List of retirement income
+  // English: "{tooltip} (including survivor benefits, {tooltip2}, and {tooltip3})"
+  "app.slides.retirementIncome.incomeList": "",
+
+  // Social Security
+  // English: "Social Security"
+  "app.slides.retirementIncome.socialSecurity": "",
+
+  // Black Lung benefits
+  // English: "Black Lung benefits"
+  "app.slides.retirementIncome.blackLung": "",
+
+  // Railroad Retirement
+  // English: "Railroad Retirement"
+  "app.slides.retirementIncome.railroad": "",
+
+  // Pension
+  // English: "Pension"
+  "app.slides.retirementIncome.pension": "",
+
+
+  /***
+   *** src/components/application/slides/Signature.jsx
+   ***/
+
+  // Almost Done
+  // English: "Great, you are almost done!"
+  "app.slides.signature.almostDone": "",
+
+  // Please Provide...
+  // English: "Please provide the last four digits of the Social Security number for the person that signed at the beginning of the application {adult}. If that person does not have a Social Security number, please check the box below labeled 'No {ssn}'."
+  "app.slides.signature.pleaseProvide": "",
+
+  // No SSN
+  // English: "No SSN"
+  "app.slides.signature.noSSN": "",
+
+  // Note: on eligibility
+  // English: "Note: United States citizenship or immigration status is not a condition of eligibility for free and reduced price benefits. The non-cash benefits received through the school meal programs are not subject to public charge consideration. In other words, you will not be deported, denied entry to the country, or denied permanent status because you apply for or receive school meal benefits."
+  "app.slides.signature.note": "",
+
+
+  /***
+   *** src/components/application/slides/SpousalIncome.jsx
+   ***/
+
+  // Alimony
+  // English: "Alimony"
+  "app.slides.spousalIncome.alimony": "",
+
+  // Child support
+  // English: "Child support"
+  "app.slides.spousalIncome.childSupport": "",
+
+
+  /***
+   *** src/components/application/slides/Students.jsx
+   ***/
+
+  // Introductory paragraph.
+  // English: "List the names of the students in your household that attend school in {organizationName} and are applying for school meal benefits."
+  "app.slides.students.intro": "",
+
+  // Label used for title, add/remove buttons.
+  // English: "Student"
+  "app.slides.students.label": "",
+
+
+  /***
+   *** src/components/application/slides/Summary.jsx
+   ***/
+
+  // Text for the header of the slide.
+  // English: "Summary"
+  "app.slides.summary.header": "",
+
+  // Text on the button to submit final applicaiton.
+  // English: "Submit"
+  "app.slides.summary.nextText": "",
+
+  // Awesome, you're finished!
+  // English: "Awesome, you finished!"
+  "app.slides.summary.finished": "",
+
+  // Summary Info is below
+  // English: "Here is a summary of the information you provided in the application. We encourage you to save or print this screen for your records. If everything looks good, click the 'Submit' button at the bottom of the page."
+  "app.slides.summary.summaryInfo": "",
+
+  // student info
+  // English: "Students attending school in {organizationName}"
+  "app.slides.summary.studentsAttending": "",
+
+  // Other children
+  // English: "Other children"
+  "app.slides.summary.otherChildren": "",
+
+  // Assistance program case numbers
+  // English: "Assistance program case numbers"
+  "app.slides.summary.caseNumbers": "",
+
+  // Placeholder indicating that no assistance programs have been selected.
+  // English: "(none)"
+  "app.slides.summary.noAssistancePrograms": "",
+
+  // Contact information
+  // English: "Contact information"
+  "app.slides.summary.contactInfo": "",
+
+  // Total household income
+  // English: "Total household income"
+  "app.slides.summary.totalIncome": "",
+
+  // Certification statement
+  // English: "I certify* that {totalHouseholdMembers} are in my household and that our household income is about {totalHouseholdIncome}"
+  "app.slides.summary.certification": "",
+
+  // people
+  // English: "people"
+  "app.slides.summary.people": "",
+
+  // Certification statement for programs
+  // English: "I certify* that my household participates in"
+  "app.slides.summary.certificationPrograms": "",
+
+  // acknowledge info is correct
+  // English: "I certify* that the information on this page is correct to the best of my knowledge."
+  "app.slides.summary.infoCorrect": "",
+
+  // fine print, if info is wrong, it is fraud.
+  // English: "*I understand that this information is given in connection with the receipt of Federal funds, and that school officials may verify (check) the information. I am aware that if I purposely give false information, my children may lose meal benefits. Deliberate misrepresentation of information may subject applicants to prosecution under applicable State and Federal law."
+  "app.slides.summary.finePrint": "",
+
+
+  /***
+   *** src/components/application/slides/SummaryAdults.jsx
+   ***/
+
+  // Adults
+  // English: "Adults"
+  "app.slides.summary.adults": "",
+
+
+  /***
+   *** src/components/application/slides/SummaryPerson.jsx
+   ***/
+
+  // Foster child
+  // English: "Foster child"
+  "app.slides.summaryPerson.foster": "",
+
+  // Migrant youth
+  // English: "Migrant youth"
+  "app.slides.summaryPerson.migrant": "",
+
+  // Homeless youth
+  // English: "Homeless youth"
+  "app.slides.summaryPerson.homeless": "",
+
+  // Runaway youth
+  // English: "Runaway youth"
+  "app.slides.summaryPerson.runaway": "",
+
+
+  /***
+   *** src/components/application/slides/SummaryPersonIncomeLineItem.jsx
+   ***/
+
+  // Short income source description used on Summary page.
+  // English: "Full or part-time job"
+  "app.slides.summaryPersonIncomeLineItem.description.child.job": "",
+
+  // Short income source description used on Summary page.
+  // English: "SSI or Social Security"
+  "app.slides.summaryPersonIncomeLineItem.description.child.socialSecurity": "",
+
+  // Short income source description used on Summary page.
+  // English: "Friends or family"
+  "app.slides.summaryPersonIncomeLineItem.description.child.friendsFamily": "",
+
+  // Short income source description used on Summary page.
+  // English: "Pension, annuity, or trust"
+  "app.slides.summaryPersonIncomeLineItem.description.child.pensionAnnuityTrust": "",
+
+  // Short income source description used on Summary page.
+  // English: "Other income source"
+  "app.slides.summaryPersonIncomeLineItem.description.child.other": "",
+
+  // Short income source description used on Summary page.
+  // English: "Military basic pay"
+  "app.slides.summaryPersonIncomeLineItem.description.military.basic": "",
+
+  // Short income source description used on Summary page.
+  // English: "Military cash bonus"
+  "app.slides.summaryPersonIncomeLineItem.description.military.cashBonus": "",
+
+  // Short income source description used on Summary page.
+  // English: "Military allowance"
+  "app.slides.summaryPersonIncomeLineItem.description.military.allowance": "",
+
+  // Short income source description used on Summary page.
+  // English: "Salary / Wages"
+  "app.slides.summaryPersonIncomeLineItem.description.employment.salaryWages": "",
+
+  // Short income source description used on Summary page.
+  // English: "Tips"
+  "app.slides.summaryPersonIncomeLineItem.description.employment.tips": "",
+
+  // Short income source description used on Summary page.
+  // English: "Commission"
+  "app.slides.summaryPersonIncomeLineItem.description.employment.commission": "",
+
+  // Short income source description used on Summary page.
+  // English: "Cash bonus"
+  "app.slides.summaryPersonIncomeLineItem.description.employment.cashBonus": "",
+
+  // Short income source description used on Summary page.
+  // English: "Net income from self-employment"
+  "app.slides.summaryPersonIncomeLineItem.description.employment.selfEmployment": "",
+
+  // Short income source description used on Summary page.
+  // English: "Supplemental Security Income (SSI)"
+  "app.slides.summaryPersonIncomeLineItem.description.publicAssistance.ssi": "",
+
+  // Short income source description used on Summary page.
+  // English: "Cash assistance program"
+  "app.slides.summaryPersonIncomeLineItem.description.publicAssistance.stateLocal": "",
+
+  // Short income source description used on Summary page.
+  // English: "Alimony"
+  "app.slides.summaryPersonIncomeLineItem.description.spousal.alimony": "",
+
+  // Short income source description used on Summary page.
+  // English: "Child support"
+  "app.slides.summaryPersonIncomeLineItem.description.spousal.childSupport": "",
+
+  // Short income source description used on Summary page.
+  // English: "Unemployment benefits"
+  "app.slides.summaryPersonIncomeLineItem.description.unemployment.unemployment": "",
+
+  // Short income source description used on Summary page.
+  // English: "Worker’s compensation"
+  "app.slides.summaryPersonIncomeLineItem.description.unemployment.workersComp": "",
+
+  // Short income source description used on Summary page.
+  // English: "Strike benefits"
+  "app.slides.summaryPersonIncomeLineItem.description.unemployment.strike": "",
+
+  // Short income source description used on Summary page.
+  // English: "Social Security Disability Insurance (SSDI)"
+  "app.slides.summaryPersonIncomeLineItem.description.unemployment.ssdi": "",
+
+  // Short income source description used on Summary page.
+  // English: "Veteran’s benefits"
+  "app.slides.summaryPersonIncomeLineItem.description.unemployment.veteran": "",
+
+  // Short income source description used on Summary page.
+  // English: "Social Security"
+  "app.slides.summaryPersonIncomeLineItem.description.retirement.socialSecurity": "",
+
+  // Short income source description used on Summary page.
+  // English: "Pension"
+  "app.slides.summaryPersonIncomeLineItem.description.retirement.privatePension": "",
+
+  // Short income source description used on Summary page.
+  // English: "Regular cash payments"
+  "app.slides.summaryPersonIncomeLineItem.description.other.regularCashPayments": "",
+
+  // Short income source description used on Summary page.
+  // English: "Rental income"
+  "app.slides.summaryPersonIncomeLineItem.description.other.rentalIncome": "",
+
+  // Short income source description used on Summary page.
+  // English: "Earned interest"
+  "app.slides.summaryPersonIncomeLineItem.description.other.earnedInterest": "",
+
+  // Short income source description used on Summary page.
+  // English: "Investment income"
+  "app.slides.summaryPersonIncomeLineItem.description.other.investmentIncome": "",
+
+  // Short income source description used on Summary page.
+  // English: "Annuity"
+  "app.slides.summaryPersonIncomeLineItem.description.other.annuity": "",
+
+  // Short income source description used on Summary page.
+  // English: "Other income source"
+  "app.slides.summaryPersonIncomeLineItem.description.other.other": "",
+
+
+  /***
+   *** src/components/application/slides/ThankYou.jsx
+   ***/
+
+  // Text for the header of the slide.
+  // English: "Thank you for applying for school meal benefits!"
+  "app.slides.thankYou.header": "",
+
+  // application has been submitted
+  // English: "Your application has been submitted."
+  "app.slides.thankYou.submitted": "",
+
+  // Warning message heading
+  // English: "Caution"
+  "app.slides.thankYou.cautionHeading": "",
+
+  // Button to download data
+  // English: "Download Data"
+  "app.slides.thankYou.download": "",
+
+  // Indication of what happens next.
+  // English: "You will hear from us soon with your certification decision!"
+  "app.slides.thankYou.nextSteps": "",
+
+  // Warning message
+  // English: "NO DATA HAS BEEN SAVED. THIS IS NOT A REAL APPLICATION FOR SCHOOL MEAL BENEFITS. THIS IS A MODEL APPLICATION DEVELOPED BY USDA TO DEMONSTRATE THE POTENTIAL FUNCTIONALITY OF A SCHOOL DISTRICT'S APPLICATION. CONTACT YOUR CHILD'S SCHOOL TO FIND OUT WHERE YOU CAN ACCESS THEIR APPLICATION FOR SCHOOL MEAL BENEFITS."
+  "app.slides.thankYou.caution": "",
+
+
+  /***
+   *** src/components/application/slides/UnemploymentIncome.jsx
+   ***/
+
+  // Unemployment benefits
+  // English: "Unemployment benefits"
+  "app.slides.unemploymentIncome.unemployment": "",
+
+  // Worker’s compensation
+  // English: "Worker’s compensation"
+  "app.slides.unemploymentIncome.workersComp": "",
+
+  // Strike benefits
+  // English: "Strike benefits"
+  "app.slides.unemploymentIncome.strikeBenefits": "",
+
+  // Social Security Disability Insurance
+  // English: "Social Security Disability Insurance {tooltip}"
+  "app.slides.unemploymentIncome.ssdi": "",
+
+  // (SSDI)
+  // English: "(SSDI)"
+  "app.slides.unemploymentIncome.ssdiToolTip": "",
+
+  // Veteran’s benefits
+  // English: "Veteran’s benefits"
+  "app.slides.unemploymentIncome.veteranBenefits": "",
+
+
+  /***
+   *** src/components/application/slides/Welcome.jsx
+   ***/
+
+  // Text for the header of the slide.
+  // English: "Welcome!"
+  "app.slides.welcome.header": "",
+
+  // Text for button to advance to the next slide.
+  // English: "Get started"
+  "app.slides.welcome.nextButton": "",
+
+  // Introductory paragraph.
+  // English: "This is the {organizationName} electronic application for free and reduced priced meals for the {usda}’s National School Lunch & School Breakfast Programs."
+  "app.slides.welcome.intro": "",
+
+  // Instructions on how to apply online.
+  // English: "This interactive application will guide you through the application process. When you are ready to apply, click the ‘{buttonText}’ button below to begin."
+  "app.slides.welcome.onlineInstructions": "",
+
+  // Instructions on how to apply with a paper application.
+  // English: "If you would like to apply using the {link}, you can print and complete it and then return it to us at {address}."
+  "app.slides.welcome.paperInstructions": "",
+
+  // Phrase
+  // English: "paper application"
+  "app.slides.welcome.paperApplication": "",
+
+
+  /***
+   *** src/components/help/ArticleDefinitionSection.jsx
+   ***/
+
+  // Definition help section title.
+  // English: "Definitions"
+  "help.articleDefinitionSection.header": "",
+
+
+  /***
+   *** src/components/help/ArticleFaqSection.jsx
+   ***/
+
+  // FAQ help section title.
+  // English: "Frequently Asked Questions"
+  "help.articleFaqSection.header": "",
+
+
+  /***
+   *** src/components/help/Help.jsx
+   ***/
+
+  // Text for the title bar of the help area.
+  // English: "Help"
+  "help.title": "",
+
+  // Text for the link to close the help area.
+  // English: "Close"
+  "help.close": "",
+
+  // Footer text for the help area.
+  // English: "If you have any questions about the program or how to apply, contact {organizationName} ({organizationContactInfo})."
+  "help.footer": "",
+
+
+  /***
+   *** src/components/help/SearchTopics.jsx
+   ***/
+
+  // Search results help section title.
+  // English: "Search Results"
+  "help.searchResults": "",
+
+
+  /***
+   *** src/components/help/articles/HelpText.jsx
+   ***/
+
+  // Help text.
+  // English: "My child’s application was approved last year. Do I need to fill out a new one?"
+  "help.articles.helpText.newAppTitle": "",
+
+  // Help text.
+  // English: "Yes. Eligibility for free or reduced price meals only lasts for one school year. However, eligibility for the previous year carries over for the first few days of the new school year, or until the new eligibility determination is made. Please complete a new application unless you received a letter from the school saying that your child is eligible for the upcoming {schoolYear} school year."
+  "help.articles.helpText.newAppBody": "",
+
+  // Help text.
+  // English: "Do I need to fill out an application for each child?"
+  "help.articles.helpText.childAppTitle": "",
+
+  // Help text.
+  // English: "No. Use one Free and Reduced Price School Meal Application for all students that attend school in {organizationName} in your household."
+  "help.articles.helpText.childAppBody": "",
+
+  // Help text.
+  // English: "I received a letter from the school saying that my children were automatically approved for free meals for the upcoming {schoolYear} school year. Do I still need to complete an application?"
+  "help.articles.helpText.letterTitle": "",
+
+  // Help text.
+  // English: "No, but please read the letter carefully. If any children in your household were missing from your eligibility notification letter, they are also eligible for free meals, so you should contact {organizationName} ({organizationPhone} / {organizationEmail} / {organizationAddress} ) immediately."
+  "help.articles.helpText.letterBody": "",
+
+  // Help text.
+  // English: "If I don’t qualify now, may I apply later?"
+  "help.articles.helpText.applyLaterTitle": "",
+
+  // Help text.
+  // English: "Yes, you may apply at any time during the school year.  For example, children with a parent or guardian who becomes unemployed may become eligible for free or reduced price meals if the household income drops below the income limit."
+  "help.articles.helpText.applyLaterBody": "",
+
+  // Help text.
+  // English: "My household participates in {snapFullname} and/or {tanfFullname}. Are my children eligible for free meals?"
+  "help.articles.helpText.localProgramTitle": "",
+
+  // Help text.
+  // English: "All children in households are eligible for free meals when at least one household member is receiving benefits from {snapFullname}, the Food Distribution Program on Indian Reservations (FDPIR), or {tanfFullName}. If you participate in other assistance programs, contact {organizationName} to see if you qualify for school meal benefits. You may qualify for free meals!"
+  "help.articles.helpText.localProgramBody": "",
+
+  // Help text.
+  // English: "What if my household does not qualify for free or reduced price meal benefits based on income, but I have a foster child?"
+  "help.articles.helpText.fosterQualifyTitle": "",
+
+  // Help text.
+  // English: "Foster children who are formally placed by the State welfare agency or court in a caretaker household are eligible for benefits regardless of household income."
+  "help.articles.helpText.fosterQualifyBody": "",
+
+  // Help text.
+  // English: "I get WIC. Can my children get free meals?"
+  "help.articles.helpText.wicTitle": "",
+
+  // Help text.
+  // English: "Participation in the Special Supplemental Nutrition Program for Women, Infants and Children, or WIC program, does not automatically qualify your children for free or reduced price school meals. You will need to qualify based on your household income by completing this application."
+  "help.articles.helpText.wicBody": "",
+
+  // Help text.
+  // English: "My child attends Head Start. Is he/she eligible for free school meals and do I need to fill out an application?"
+  "help.articles.helpText.headStartTitle": "",
+
+  // Help text.
+  // English: "Yes. Children enrolled in Head Start are automatically eligible for free meals. You do not need to submit an application for school meal benefits unless you are requesting benefits for other school age children in your household."
+  "help.articles.helpText.headStartBody": "",
+
+  // Help text.
+  // English: "My family needs more help. Are there other programs we might apply for?"
+  "help.articles.helpText.otherProgramsTitle": "",
+
+  // Help text.
+  // English: "To find out how to apply for {snapFullname} or other assistance benefits, contact {organizationName}."
+  "help.articles.helpText.otherProgramsBody": "",
+
+  // Help text.
+  // English: "May I apply if someone in my household is not a U.S. citizen?"
+  "help.articles.helpText.usCitizenTitle": "",
+
+  // Help text.
+  // English: "Yes. You, your children, or other household members do not have to be U.S. citizens to apply for free or reduced price meals."
+  "help.articles.helpText.usCitizenBody": "",
+
+  // Help text.
+  // English: "Will my child or I be subject to public charge if I apply for or receive school meal benefits?"
+  "help.articles.helpText.publicChargeTitle": "",
+
+  // Help text.
+  // English: "No, the non-cash benefits received through the National School Lunch Program and School Breakfast Programs are not subject to public charge consideration. In other words, you will not be deported, denied entry to the country, or denied permanent status because you apply for or receive school meal benefits."
+  "help.articles.helpText.publicChargeBody": "",
+
+  // Help text.
+  // English: "Will the information I give be checked?"
+  "help.articles.helpText.checkedTitle": "",
+
+  // Help text.
+  // English: "Yes, each application is reviewed by the district to determine eligibility. We may also ask you to send proof of your household’s income."
+  "help.articles.helpText.FormattedMessage": "",
+
+  // Help text.
+  // English: "What if I share custody of my child?"
+  "help.articles.helpText.sharedCustodyTitle": "",
+
+  // Help text.
+  // English: "If time is split between houses, both parents may apply for benefits. If the eligibility statuses are different, the highest level of benefits will apply. For example, if you qualify for free meals but your child’s other parent does not, no matter which house your child is staying at, he or she can still receive free meals. However, if either parent chooses not to have your child receive free meal benefits while residing with them then that parent may simply pay for the meals."
+  "help.articles.helpText.sharedCustodyBody": "",
+
+  // Help text.
+  // English: "Should I include a member of our household on the application if they are currently deployed?"
+  "help.articles.helpText.deployedTitle": "",
+
+  // Help text.
+  // English: "Yes. Members of the armed services who are activated or deployed are counted as household members. Any money made available by them or on their behalf for the household is included as income to the household with the exception of combat pay."
+  "help.articles.helpText.deployedBody": "",
+
+  // Help text.
+  // English: "I am the permanent guardian of a child. Do they automatically qualify for free meals as a foster child?"
+  "help.articles.helpText.permanentTitle": "",
+
+  // Help text.
+  // English: "No. The foster status only applies to children who are formally placed by the State welfare agency or court in a caretaker household. It does not apply to informal arrangements, such as caretaker arrangements or to permanent guardianship placements, which may exist outside of State or court based systems. The child may still be eligible based on your household income, so we encourage you to complete an application."
+  "help.articles.helpText.permanentBody": "",
+
+  // Help text.
+  // English: "I adopted a foster child. Are they still eligible for free meals?"
+  "help.articles.helpText.fosterTitle": "",
+
+  // Help text.
+  // English: "Congratulations on the adoption! And the answer is maybe. If your child was approved for free meals before the adoption went through, then your child is eligible to receive free meals for the rest of the school year. But next year the child will no longer eligible for free meals based on foster status, though they may still qualify based on household income, so we encourage you to submit an application."
+  "help.articles.helpText.fosterBody": "",
+
+  // Help text.
+  // English: "How do I know if a child qualifies as a runaway?"
+  "help.articles.helpText.qualifyRunawayTitle": "",
+
+  // Help text.
+  // English: "Any children living with you who have chosen to leave their prior family or household may qualify for free meals. Please contact {organizationName}."
+  "help.articles.helpText.qualifyRunawayBody": "",
+
+  // Help text.
+  // English: "What is child income?"
+  "help.articles.helpText.childIncomeTitle": "",
+
+  // Help text.
+  // English: "Child income is money received from outside your household that is paid directly to your children. Many households do not have any child income."
+  "help.articles.helpText.childIncomeBody": "",
+
+  // Help text.
+  // English: "What is gross income?"
+  "help.articles.helpText.grossTitle": "",
+
+  // Help text.
+  // English: "Gross income is all money earned before deductions, such as income taxes, employee’s social security taxes, and insurance premiums. Gross income also includes money that is garnished from wages, or in the case of bankruptcy, income that is ordered to be paid to creditors."
+  "help.articles.helpText.grossBody": "",
+
+  // Help text.
+  // English: "What is net income?"
+  "help.articles.helpText.netTitle": "",
+
+  // Help text.
+  // English: "Commonly referred to as “take home pay,” net income is the amount of money you receive in your pay check. It is your total (or gross) income, minus taxes and deductions."
+  "help.articles.helpText.netBody": "",
+
+  // Help text.
+  // English: "We are in the military. Do we report our income differently?"
+  "help.articles.helpText.militaryTitle": "",
+
+  // Help text.
+  // English: "Your basic pay and cash bonuses must be reported as income. If you get any cash value allowances for off-base housing, food, or clothing, (including BAH), it must also be included as income. However, if your housing is part of the Military Housing Privatization Initiative, do not include your housing allowance as income. Do not include payments from the Family Subsistence Supplemental Allowance (FSSA). Any additional combat pay resulting from deployment is also excluded from income. If the service member is deployed, include only the portion that is made available by them or on their behalf to the household as income."
+  "help.articles.helpText.militaryBody": "",
+
+  // Help text.
+  // English: "I get deployment extension incentive pay (DEIP). Should I report that as income in my application?"
+  "help.articles.helpText.deipTitle": "",
+
+  // Help text.
+  // English: "Maybe. If you are not deployed, then it is included in your household income, but if you are away from your home station, then you are exempt from including it as household income."
+  "help.articles.helpText.deipBody": "",
+
+  // Help text.
+  // English: "What is the family subsistence supplemental allowance?"
+  "help.articles.helpText.fssaTitle": "",
+
+  // Help text.
+  // English: "Family Subsistence Supplemental Allowance (FSSA) is available to service members living in overseas locations that make less than 130 percent of the federal poverty line, and benefits equal the total dollars required to bring household income to that level."
+  "help.articles.helpText.fssaBody": "",
+
+  // Help text.
+  // English: "What is the difference between earnings from a salary and earnings from wages?"
+  "help.articles.helpText.earningsDifferencesTitle": "",
+
+  // Help text.
+  // English: "A salary is an agreed-upon, fixed amount of money paid to an employee every year.  Employers pay salaries in different frequencies depending on the work, but often the frequency is monthly, twice a month, or every two weeks. Wages are also an agreed-upon payment for work. Employers usually pay wages at an hourly, daily or weekly frequency."
+  "help.articles.helpText.earningsDifferencesBody": "",
+
+  // Help text.
+  // English: "What if I am self-employed?"
+  "help.articles.helpText.selfEmployedTitle": "",
+
+  // Help text.
+  // English: "If you are self-employed, report income from work as a net amount. This is calculated by subtracting the total operating expenses of your business from its gross receipts or revenue. For more information see the definition for ‘Net income from self-employment’."
+  "help.articles.helpText.selfEmployedBody": "",
+
+  // Help text.
+  // English: "What if I have income from both wages and self-employment?"
+  "help.articles.helpText.wagesSelfemploymentTitle": "",
+
+  // Help text.
+  // English: "For a household with income from wages and self-employment, each amount must be listed separately. When there is a business loss, income from wages must not be reduced by the amount of the business loss. If income from self-employment is negative, you should report it as $0 (zero) on your application."
+  "help.articles.helpText.wagesSelfemploymentBody": "",
+
+  // Help text.
+  // English: "What government program benefits should I include in my household income?"
+  "help.articles.helpText.govProgramTitle": "",
+
+  // Help text.
+  // English: "If you have questions about whether to include benefits from a specific program, contact {organizationName} ({organizationPhone} / {organizationEmail} / {organizationAddress})."
+  "help.articles.helpText.govProgramBody": "",
+
+  // Help text.
+  // English: "How should I report income from rented space or properties?"
+  "help.articles.helpText.rentalTitle": "",
+
+  // Help text.
+  // English: "If you receive income from a room or property that you rent out, you should report the net amount of income. In other words, take the total amount you receive in rent for one month (the gross income), and subtract the monthly cost of maintaining the property. If you have questions or need help figuring out how to estimate maintenance costs, contact {organizationName} ({organizationPhone} / {organizationEmail} / {organizationAddress})."
+  "help.articles.helpText.rentalBody": "",
+
+  // Help text.
+  // English: "How do I know if I have income from earned interest?"
+  "help.articles.helpText.interestTitle": "",
+
+  // Help text.
+  // English: "If you have money in a savings or investment account, you should have income from earned interest. Interest payments are usually paid out on a quarterly basis, or four times per year. You should see any earned interest on your savings or investment account statement."
+  "help.articles.helpText.interestBody": "",
+
+  // Help text.
+  // English: "How should I report my income if I work on a seasonal basis?"
+  "help.articles.helpText.seasonalTitle": "",
+
+  // Help text.
+  // English: "If you work on a seasonal basis and your household’s current, gross income is higher or lower than usual and does not fairly or accurately represent your household’s actual circumstances, see the ‘WHAT IF MY INCOME IS NOT ALWAYS THE SAME?’ question in the HELP. If you have additional questions, contact {organizationName} ({organizationPhone} / {organizationEmail} / {organizationAddress}), and they will help you figure out your household’s annual rate of income based on USDA guidelines."
+  "help.articles.helpText.seasonalBody": "",
+
+  // Help text.
+  // English: "What if some household members have no income to report?"
+  "help.articles.helpText.noIncomeTitle": "",
+
+  // Help text.
+  // English: "You should still list these household members on your application.  Household members may not earn or receive some of the types of income we ask you to report, or they may not receive income at all. Remember your eligibility determination is based on both household income and household size. For more information on who to include in your application, see the FAQ “WHO SHOULD I INCLUDE IN MY HOUSEHOLD?”"
+  "help.articles.helpText.noIncomeBody": "",
+
+  // Help text.
+  // English: "What if I do not have a Social Security number?"
+  "help.articles.helpText.ssnTitle": "",
+
+  // Help text.
+  // English: "Don’t worry, you don’t need to have a Social Security number to receive free or reduced price benefits."
+  "help.articles.helpText.ssnBody": "",
+
+  // Help text.
+  // English: "Do I have to provide my contact information?"
+  "help.articles.helpText.contactTitle": "",
+
+  // Help text.
+  // English: "No, but it is very helpful to have your contact information in case we need to get in touch with you about your application. Also, if your contact information changes in the future, please let us know so that we can maintain up-to-date information for your household throughout the year."
+  "help.articles.helpText.contactBody": "",
+
+  // Help text.
+  // English: "What if I disagree with the school’s decision about my application?"
+  "help.articles.helpText.disagreeTitle": "",
+
+  // Help text.
+  // English: "You should talk to school officials. You also may ask for a hearing by calling or writing to {organizationName} ({organizationPhone} / {organizationEmail} / {organizationAddress})."
+  "help.articles.helpText.disagreeBody": "",
+
+  // Help text.
+  // English: "{mckinneyShortName}"
+  "help.articles.helpText.mckinneyTerm": "",
+
+  // Help text.
+  // English: "{mckinneyFullName} provides Federal money for homeless shelter programs and facilitates public school access for homeless children and youth."
+  "help.articles.helpText.mckinneyDef": "",
+
+  // Help text.
+  // English: "{mepFullName} ({mepAccronym})"
+  "help.articles.helpText.mepTerm": "",
+
+  // Help text.
+  // English: "{mepAccronym} provides services to children who have moved across school district lines, within the last three years, in order to accompany or join a parent or guardian who seeks or obtains temporary or seasonal work in agriculture or fishing."
+  "help.articles.helpText.mepDef": "",
+
+  // Help text.
+  // English: "{programRunaway}"
+  "help.articles.helpText.runawayHomelessActTerm": "",
+
+  // Help text.
+  // English: "{programRunaway} authorizes community-based runaway and homeless youth projects to provide temporary shelter and care to runaway or otherwise homeless youth who are in need of temporary shelter, counseling, and aftercare services."
+  "help.articles.helpText.runawayHomelessActDef": "",
+
+  // Help text.
+  // English: "Current income"
+  "help.articles.helpText.currentTerm": "",
+
+  // Help text.
+  // English: "Current income is income earned or received in the current month, or in the month before the completion of this application."
+  "help.articles.helpText.currentDef": "",
+
+  // Help text.
+  // English: "Cash Bonus"
+  "help.articles.helpText.cashBonusTerm": "",
+
+  // Help text.
+  // English: "A cash bonus is a lump sum of money awarded to an employee, either occasionally or periodically."
+  "help.articles.helpText.cashBonusDef": "",
+
+  // Help text.
+  // English: "Supplemental Security Income (SSI)"
+  "help.articles.helpText.ssiTerm": "",
+
+  // Help text.
+  // English: "Supplemental Security Income (SSI) provides cash to meet basic needs for food, clothing, and shelter to aged, blind, and disabled people who have little or no income."
+  "help.articles.helpText.ssiDef": "",
+
+  // Help text.
+  // English: "Cash assistance from state or local government"
+  "help.articles.helpText.cashAssistanceTerm": "",
+
+  // Help text.
+  // English: "Income in the form of cash benefits, including housing assistance, from state or local government programs should be reported as household income. If you have questions about whether to include benefits from a specific program, contact {organizationName} ({organizationPhone} / {organizationEmail} / {organizationAddress})."
+  "help.articles.helpText.cashAssistanceDef": "",
+
+  // Help text.
+  // English: "Alimony"
+  "help.articles.helpText.alimonyTerm": "",
+
+  // Help text.
+  // English: "Alimony is income from payments paid by a spouse or former spouse from whom you are divorced or legally separated."
+  "help.articles.helpText.alimonyDef": "",
+
+  // Help text.
+  // English: "Child support"
+  "help.articles.helpText.childSupportTerm": "",
+
+  // Help text.
+  // English: "Child support payments are payments received by one parent from another to cover the cost of raising a child."
+  "help.articles.helpText.childSupportDef": "",
+
+  // Help text.
+  // English: "Unemployment benefits"
+  "help.articles.helpText.unemploymentTerm": "",
+
+  // Help text.
+  // English: "Unemployment benefits are payments from the government or a labor union to a person who is unemployed."
+  "help.articles.helpText.unemploymentDef": "",
+
+  // Help text.
+  // English: "Worker’s compensation"
+  "help.articles.helpText.workersCompTerm": "",
+
+  // Help text.
+  // English: "Worker’s compensation benefits are payments to cover lost wages and medical expenses of an employee who is injured on the job."
+  "help.articles.helpText.workersCompDef": "",
+
+  // Help text.
+  // English: "Strike benefits"
+  "help.articles.helpText.strikeBenefitsTerm": "",
+
+  // Help text.
+  // English: "Strike benefits are compensation paid by a union to workers on strike."
+  "help.articles.helpText.strikeBenefitsDef": "",
+
+  // Help text.
+  // English: "Social Security Disability Insurance (SSDI)"
+  "help.articles.helpText.ssdiTerm": "",
+
+  // Help text.
+  // English: "Social Security Disability Insurance (SSDI) are benefits paid to people who have worked long enough and paid Social Security taxes but who can’t work because they have a medical condition that is expected to last at least one year or result in death."
+  "help.articles.helpText.ssdiDef": "",
+
+  // Help text.
+  // English: "Verteran’s benefits"
+  "help.articles.helpText.veteransBenefitsTerm": "",
+
+  // Help text.
+  // English: "Benefits that are paid to veterans that have a service-connected disability and were not dishonorably discharged."
+  "help.articles.helpText.veteransBenefitsDef": "",
+
+  // Help text.
+  // English: "Social Security benefits"
+  "help.articles.helpText.socialSecurityTerm": "",
+
+  // Help text.
+  // English: "Social Security retirement benefits are monthly payments to people (or spouses, or dependent children of people) who are retired or disabled, but have worked and paid taxes into the Social Security system. Payments are based on your reported earnings. Also, upon death, survivors can collect benefits."
+  "help.articles.helpText.socialSecurityDef": "",
+
+  // Help text.
+  // English: "Black Lung benefits"
+  "help.articles.helpText.blackLungTerm": "",
+
+  // Help text.
+  // English: "Black Lung benefits provide monthly payments and medical treatment for people that became disabled from black lung disease from working in or around the nation’s coal mines."
+  "help.articles.helpText.blackLungDef": "",
+
+  // Help text.
+  // English: "Railroad Retirement benefits"
+  "help.articles.helpText.railroadRetirementTerm": "",
+
+  // Help text.
+  // English: "Railroad retirement benefits provide retirement and disability annuities for qualified railroad employees, spouse annuities for their wives or husbands, and survivor benefits for the families of deceased employees who were insured under the Railroad Retirement Act."
+  "help.articles.helpText.railroadRetirementDef": "",
+
+  // Help text.
+  // English: "Pension"
+  "help.articles.helpText.pensionTerm": "",
+
+  // Help text.
+  // English: "A pension is generally a series of payments made to you after you retire from work. Pension payments are made regularly and are based on such factors as years of service and prior compensation."
+  "help.articles.helpText.pensionDef": "",
+
+  // Help text.
+  // English: "Annuity"
+  "help.articles.helpText.annuityTerm": "",
+
+  // Help text.
+  // English: "An annuity is a series of payments under a contract made at regular intervals over a period of more than one full year. They can be either fixed (under which you receive a definite amount) or variable (not fixed). Annuities can be purchased by individuals alone, or with the help of an employer."
+  "help.articles.helpText.annuityDef": "",
+
+  // Help text.
+  // English: "Trust"
+  "help.articles.helpText.trustTerm": "",
+
+  // Help text.
+  // English: "A trust is, in general, a relationship in which one person holds title to property, subject to an obligation to keep or use the property for the benefit of another."
+  "help.articles.helpText.trustDef": "",
+
+  // Help text.
+  // English: "Supplemental Security Income (SSI) for children"
+  "help.articles.helpText.ssiChildrenTerm": "",
+
+  // Help text.
+  // English: "Supplemental Security Income (SSI) provides cash to meet basic needs for food, clothing, and shelter to children younger than age 18 who have a physical or mental condition, or combination of conditions, that meets Social Security’s definition of disability for children, and if his or her income and resources fall within the eleigibility limits."
+  "help.articles.helpText.ssiChildrenDef": "",
+
+  // Help text.
+  // English: "Social Security survivor benefits"
+  "help.articles.helpText.ssSurvivorTerm": "",
+
+  // Help text.
+  // English: "Social Security survivor benefits are monthly payments to children of a deceased parent who was retired or disabled, but worked and paid taxes into the Social Security system."
+  "help.articles.helpText.ssSurvivorDef": "",
+
+  // Help text.
+  // English: "Pension beneficiary or survivor"
+  "help.articles.helpText.pensionBeneficiaryTerm": "",
+
+  // Help text.
+  // English: "A child may receive payments from a pension of a deceased parent."
+  "help.articles.helpText.pensionBeneficiaryDef": "",
+
+  // Help text.
+  // English: "Annuity for a child"
+  "help.articles.helpText.annuityChildrenTerm": "",
+
+  // Help text.
+  // English: "A child may be the recipient of payments from an annuity.  See Help for the definition of an annuity."
+  "help.articles.helpText.annuityChildrenDef": "",
+
+
+  /***
+   *** src/components/help/topics/Household.jsx
+   ***/
+
+  // Question for the household help topic.
+  // English: "Who should I include in my household?"
+  "help.topic.household.question": "",
+
+  // Answer for the household help topic.
+  // English: "A household is defined as a group of people, related or unrelated, that usually live together and share income and expenses."
+  "help.topic.household.answer1": "",
+
+  // Answer for the household help topic.
+  // English: "Don't forget to include people if you support them financially, regardless of whether they earn or receive income, including:"
+  "help.topic.household.answer2": "",
+
+  // Answer for the household help topic.
+  // English: "foster children"
+  "help.topic.household.answer3": "",
+
+  // Answer for the household help topic.
+  // English: "children that are away at college or boarding school"
+  "help.topic.household.answer4": "",
+
+  // Answer for the household help topic.
+  // English: "grandparents"
+  "help.topic.household.answer5": "",
+
+  // Answer for the household help topic.
+  // English: "extended family members that are living with you"
+  "help.topic.household.answer6": "",
+
+  // Answer for the household help topic.
+  // English: "foreign exchange students that are living with you"
+  "help.topic.household.answer7": "",
+
+  // Answer for the household help topic.
+  // English: "people that are not currently living with you, but are only away on a temporary basis (like kids that are away at college)"
+  "help.topic.household.answer8": "",
+
+  // Answer for the household help topic.
+  // English: "family members of the armed services who are away from home because they are activated or deployed"
+  "help.topic.household.answer9": "",
+
+  // Answer for the household help topic.
+  // English: "people living away from home for an extended period of time (such as parents who live and work away from home)"
+  "help.topic.household.answer10": "",
+
+  // Answer for the household help topic.
+  // English: "other people who stay at your house and you provide with shelter, utilities, clothing, or food"
+  "help.topic.household.answe11": "",
+
+  // Answer for the household help topic.
+  // English: "You should NOT include:"
+  "help.topic.household.answer12": "",
+
+  // Answer for the household help topic.
+  // English: "renters"
+  "help.topic.household.answer13": "",
+
+  // Answer for the household help topic.
+  // English: "boarders"
+  "help.topic.household.answer14": "",
+
+  // Answer for the household help topic.
+  // English: "children who do not live with you (such as children that live permanently with other relatives or friends)"
+  "help.topic.household.answer15": "",
+
+  // Answer for the household help topic.
+  // English: "children for whom you do not have custody and therefore do not live with you (if you have joint custody, see the help question: WHAT IF I SHARE CUSTODY OF MY CHILD?"
+  "help.topic.household.answer16": "",
+
+
+  /***
+   *** src/components/help/topics/Ieg.jsx
+   ***/
+
+  // Definition for the Income Eligibility Guidelines.
+  // English: "Federal Income Eligibility Guidelines"
+  "help.topic.IEG.term": "",
+
+  // Definition for the IEG help topic.
+  // English: "Children may receive free or reduced price meals if your household’s income is within the limits on the Federal Income Eligibility Guidelines. Your children may qualify for free or reduced price meals if your household income falls at or below the limits on this chart."
+  "help.topic.IEG.definition": "",
+
+
+  /***
+   *** src/components/help/topics/NetSelfEmployment.jsx
+   ***/
+
+  // Definition for the term Net Self Employment.
+  // English: "Net income from self-employment"
+  "help.topic.netSelfEmployment.term": "",
+
+  // Definition for the term net self employment.
+  // English: "Income from self-employment should be reported as your current net income, equal to gross revenue (income) minus business expenses. Gross revenue (income) includes the total income from goods sold or services rendered by the business, or the value of all products sold."
+  "help.topic.netSelfEmployment.definition1": "",
+
+  // Definition for the term net self employment.
+  // English: "Deductible business expenses include the cost of goods purchased; rent; utilities; depreciation charges; wages and salaries paid; and business taxes;"
+  "help.topic.netSelfEmployment.definition2": "",
+
+  // Definition for the term net self employment.
+  // English: "Non-deductible business expenses include the value of salable merchandise used by the proprietors of retail businesses; and personal, Federal, State, or local income taxes;"
+  "help.topic.netSelfEmployment.definition3": "",
+
+  // Definition for the term net self employment.
+  // English: "Net income for self-employed farmers is figured by subtracting the farmer’s operating expenses from the gross revenue (income). Gross income includes money received from the rental of farm land, buildings, or equipment to others; and incidental receipts from the sale of items such as wood, sand, or gravel. Operating expenses include cost of feed, fertilizer, seed, and other farming supplies; cash wages paid to farmhands; depreciation charges; cash rent; interest on farm mortgages; farm building repairs; and farm taxes;"
+  "help.topic.netSelfEmployment.definition4": "",
+
+  // Definition for the term net self employment.
+  // English: "If your current net income is not your usual income, you may use last year’s income as a basis to report net income, or refer to the question ‘WHAT IF MY INCOME IS NOT ALWAYS THE SAME?’ in the HELP."
+  "help.topic.netSelfEmployment.definitio5": "",
+
+
+  /***
+   *** src/components/help/topics/NotTheSame.jsx
+   ***/
+
+  // Question for the Not the Same help topic.
+  // English: "What if my income is not always the same?"
+  "help.topic.NotTheSame.question": "",
+
+  // Answer for the Not the Same help topic.
+  // English: "If your income is different this month than a normal month because of overtime, holiday pay, missing a couple of shifts at work, or some other reason, put down what you would have made if those things hadn’t happened. For example, if you normally make $1000 each month, but you missed some work last month and only made $900, put down that you make $1000 per month. Similarly, if you normally make $500 per month, but you worked overtime and made $750, put down that you make $500 per month."
+  "help.topic.NotTheSame.answer1": "",
+
+  // Answer for the Not the Same help topic.
+  // English: "If you work on a seasonal basis, like in agriculture or tourism, and earn more money in some months than in other months, you may add up all your earnings for the year and divide it by twelve in order to report a monthly amount. If you expect to earn the same amount as last year, you can use your earnings from last year as the basis of your projected monthly income."
+  "help.topic.NotTheSame.answer2": "",
+
+  // Answer for the Not the Same help topic.
+  // English: "If you receive a one-time payment, it should not be reported as current, monthly income since it is not received on a regular basis. However, if you receive a one-time payment, such as from an award, settlement, inheritance or prize winnings, and then regularly draw on that money for living expenses later on, the amount withdrawn should be reported in your application for school meal benefits."
+  "help.topic.NotTheSame.answer3": "",
+
+  // Answer for the Not the Same help topic.
+  // English: "If you need additional help or information about how to report your income, contact {organizationName} at {organizationContactInfo}, and they will help you figure out your household’s annual rate of income based on USDA guidelines."
+  "help.topic.NotTheSame.answer4": "",
+
+
+  /***
+   *** src/components/help/topics/PaperApp.jsx
+   ***/
+
+  // Question for the paper application help topic.
+  // English: "Can I apply using a paper application?"
+  "help.topic.paperApp.question": "",
+
+  // Answer for the paper application help topic.
+  // English: "Yes. If you would like to apply using the paper application, you can print the {paperApplicationLink} or contact {organizationName} ({organizationContactInfo}) to request an application. Then return the completed application to {organizationName}."
+  "help.topic.paperApp.answer": "",
+
+  // Phrase
+  // English: "paper application"
+  "help.topic.paperApp.paperApplication": "",
+
+
+  /***
+   *** src/components/help/topics/QualifyHomeless.jsx
+   ***/
+
+  // Question for the qualification of homeless students topic.
+  // English: "How do I know if my children qualify as homeless?"
+  "help.topic.QualifyHomeless.question": "",
+
+  // Answer for the qualification of homeless students topic.
+  // English: "Your children may qualify as homeless if they…"
+  "help.topic.QualifyHomeless.answer1": "",
+
+  // Answer for the qualification of homeless students topic.
+  // English: "are sharing the housing of other persons due to loss of housing, economic hardship, or a similar reason, or are living in motels, hotels, trailer parks, or camping grounds due to the lack of alternative adequate accommodations;"
+  "help.topic.QualifyHomeless.answer2": "",
+
+  // Answer for the qualification of homeless students topic.
+  // English: "are living in emergency or transitional shelters, are abandoned in hospitals, or are awaiting foster care placement;"
+  "help.topic.QualifyHomeless.answer3": "",
+
+  // Answer for the qualification of homeless students topic.
+  // English: "have a primary nighttime residence that is a public or private place not designed for or ordinarily used as a regular sleeping accommodation for human beings; or"
+  "help.topic.QualifyHomeless.answer4": "",
+
+  // Answer for the qualification of homeless students topic.
+  // English: "are living in cars, parks, public spaces, abandoned buildings, substandard housing, bus or train stations, or similar settings."
+  "help.topic.QualifyHomeless.answer5": "",
+
+  // Answer for the qualification of homeless students topic.
+  // English: "If you believe children in your household meet one or more of these descriptions and you haven’t been told your children will get free meals, please contact {organizationName}."
+  "help.topic.QualifyHomeless.answer6": "",
+
+
+  /***
+   *** src/components/help/topics/QualifyMigrant.jsx
+   ***/
+
+  // Question for the students qualifying as migrant help topic.
+  // English: "How do I know if my children qualify as migrant?"
+  "help.topic.QualifyMigrant.question": "",
+
+  // Answer for the students qualifying as migrant help topic.
+  // English: "Your children may qualify as a migrant if you have moved your household into a different school district within the last three years to gain or look for temporary/seasonal work in agriculture or fishing."
+  "help.topic.QualifyMigrant.answer1": "",
+
+  // Answer for the students qualifying as migrant help topic.
+  // English: "If you believe children in your household meet one or more of these descriptions and you haven’t been told your children will get free meals, please contact {organizationName}."
+  "help.topic.QualifyMigrant.answer2": "",
+
+
+  /***
+   *** src/components/help/topics/RegularCash.jsx
+   ***/
+
+  // Term for regular cash received by household help topic.
+  // English: "Regular cash payments from outside the household"
+  "help.topic.RegularCash.term": "",
+
+  // Definition for regular cash received by household help topic.
+  // English: "Regular cash payments from outside the household is money regularly received from extended family or friends that do not live with you.  For example, if parents or grandparents regularly help cover the cost of groceries, bills, or rent, that money is considered household income and should be reported in your application for school meal benefits."
+  "help.topic.RegularCash.definition1": "",
+
+  // Definition for regular cash received by household help topic.
+  // English: "One-time payments should not be reported as current, monthly income since they are not received on a regular basis. However, if you receive a one-time payment, such as from an award, settlement, inheritance or prize winnings, and then regularly draw on that money for living expenses later on, the amount withdrawn should be reported in your application for school meal benefits in the space for ‘Any other income available to pay for children’s school meals’."
+  "help.topic.RegularCash.definition2": "",
+
+
+  /***
+   *** src/components/help/topics/ReportCombat.jsx
+   ***/
+
+  // Question for the reporting combat pay help topic.
+  // English: "Do I need to report my combat pay as income on my application?"
+  "help.topic.ReportCombat.question": "",
+
+  // Answer for the reporting combat pay help topic.
+  // English: "No, as long as the following conditions are met:"
+  "help.topic.ReportCombat.answer1": "",
+
+  // Answer for the reporting combat pay help topic.
+  // English: "It was received in addition to basic pay;"
+  "help.topic.ReportCombat.answer2": "",
+
+  // Answer for the reporting combat pay help topic.
+  // English: "It was received for the deployment to or service in an area designated as a combat zone; and"
+  "help.topic.ReportCombat.answer3": "",
+
+  // Answer for the reporting combat pay help topic.
+  // English: "It was not received prior to deployment to or service in the designated combat zone."
+  "help.topic.ReportCombat.answer4": "",
+
+  // Answer for the reporting combat pay help topic.
+  // English: "If any of these conditions are not met, you should report the amount as military basic pay."
+  "help.topic.ReportCombat.answer5": "",
+
+
+  /***
+   *** src/components/help/topics/WhatIncome.jsx
+   ***/
+
+  // Question for the applicable income help topic.
+  // English: "What income sources do I have to report in my application?"
+  "help.topic.WhatIncome.question": "",
+
+  // Answer for the applicable income help topic.
+  // English: "The income section of this application will ask about the money received on a regular basis from the following sources:"
+  "help.topic.WhatIncome.answer1": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Military basic pay and drill pay"
+  "help.topic.WhatIncome.answer2": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Military cash bonuses"
+  "help.topic.WhatIncome.answer3": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Military allowance for off-base housing, food, clothing (BAH)"
+  "help.topic.WhatIncome.answer4": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Military benefits"
+  "help.topic.WhatIncome.answer5": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Salary"
+  "help.topic.WhatIncome.answer6": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Wages"
+  "help.topic.WhatIncome.answer7": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Tips"
+  "help.topic.WhatIncome.answer8": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Commissions"
+  "help.topic.WhatIncome.answer9": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Cash bonuses"
+  "help.topic.WhatIncome.answer10": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Income for the Self-Employed"
+  "help.topic.WhatIncome.answer11": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Income from Wages and Self-Employment"
+  "help.topic.WhatIncome.answer12": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Strike benefits"
+  "help.topic.WhatIncome.answer13": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Projected Income for Seasonal Workers"
+  "help.topic.WhatIncome.answer14": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Supplemental Security Income (SSI)"
+  "help.topic.WhatIncome.answer15": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Veteran’s benefits"
+  "help.topic.WhatIncome.answer16": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Cash assistance from State or local government"
+  "help.topic.WhatIncome.answer17": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Housing subsidies (not including those from federal housing programs)"
+  "help.topic.WhatIncome.answer18": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Alimony received"
+  "help.topic.WhatIncome.answer19": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Child support received"
+  "help.topic.WhatIncome.answer20": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Adoption assistance"
+  "help.topic.WhatIncome.answer21": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Unemployment benefits"
+  "help.topic.WhatIncome.answer22": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Worker’s compensation"
+  "help.topic.WhatIncome.answer23": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Social Security Disability Insurance (SSDI)"
+  "help.topic.WhatIncome.answer24": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Social Security"
+  "help.topic.WhatIncome.answer25": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Black Lung benefits"
+  "help.topic.WhatIncome.answer26": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Railroad retirement"
+  "help.topic.WhatIncome.answer27": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Pensions"
+  "help.topic.WhatIncome.answer28": "",
+
+  // Answer for the applicable income help topic.
+  // English: "College financial aid for room and board (living expenses), not  including Pell Grants, Supplemental Education Opportunity Grants, State Student Incentive Grants, National Direct Student Loans, PLUS, College Work Study, or Byrd Honor Scholarship Programs"
+  "help.topic.WhatIncome.answer29": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Regular cash payments from outside the household (for example, money regularly received from extended family or friends that do not live in the household)"
+  "help.topic.WhatIncome.answer30": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Regular payments or withdrawals from sources such as an award, settlement, inheritance or prize winnings"
+  "help.topic.WhatIncome.answer31": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Net income from rental properties"
+  "help.topic.WhatIncome.answer32": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Earned interest"
+  "help.topic.WhatIncome.answer33": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Annuities"
+  "help.topic.WhatIncome.answer34": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Other investment income"
+  "help.topic.WhatIncome.answer35": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Any other money that may be available to pay for children’s meals"
+  "help.topic.WhatIncome.answer36": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Cash value of benefits from {snapAccronym} or {fdpirAccronym}"
+  "help.topic.WhatIncome.answer37": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Irregular overtime pay"
+  "help.topic.WhatIncome.answer38": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Military Family Substance Supplemental Allowance (FSSA)"
+  "help.topic.WhatIncome.answer39": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Military Housing Privatization Initiative"
+  "help.topic.WhatIncome.answer40": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Combat Pay when it is:"
+  "help.topic.WhatIncome.answer41": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Received in addition to the service member’s basic pay;"
+  "help.topic.WhatIncome.answer42": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Received as a result of deployment to or service in an area that has been designated as a combat zone; and"
+  "help.topic.WhatIncome.answer43": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Not received by the service member prior to deployment to or service in the designated combat zone"
+  "help.topic.WhatIncome.answer44": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Cash value of benefits from {snapAccronym} or {fdpirAccronym}"
+  "help.topic.WhatIncome.answer45": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Payments received from a foster care agency or court for the care of foster children"
+  "help.topic.WhatIncome.answer46": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Student financial assistance provided for the costs of attendance at an educational institution, such as grants and scholarships awarded to meet educational expenses and not available to pay for meals"
+  "help.topic.WhatIncome.answer47": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Loans, such as bank loans, since these funds are only temporarily available and must be repaid"
+  "help.topic.WhatIncome.answer48": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Earnings received on an irregular basis, such as payment for occasional baby-sitting or mowing lawns"
+  "help.topic.WhatIncome.answer49": "",
+
+  // Answer for the applicable income help topic.
+  // English: "Housing subsidies from federal housing programs"
+  "help.topic.WhatIncome.answer50": "",
+
+
+  /***
+   *** src/components/help/topics/WhatInformation.jsx
+   ***/
+
+  // Question for the necessary information help topic.
+  // English: "What information will I need to fill out the application?"
+  "help.topic.WhatInformation.question": "",
+
+  // Answer for the necessary information help topic.
+  // English: "If you have this information handy, it will make the application process fast and easy."
+  "help.topic.WhatInformation.answer1": "",
+
+  // Answer for the necessary information help topic.
+  // English: "If you participate in {assistanceProgramsShort} you will need to know your case number (not your card or account number)."
+  "help.topic.WhatInformation.answer2": "",
+
+  // Answer for the necessary information help topic.
+  // English: "If you do not participate in any of the above assistance program, you will need to report your total household income. In that case…"
+  "help.topic.WhatInformation.answer3": "",
+
+  // Answer for the necessary information help topic.
+  // English: "If anyone in your household has a job, you may need to reference the earnings statements or pay stubs to report your gross income, which is different than the amount in your paycheck."
+  "help.topic.WhatInformation.answer3a": "",
+
+  // Answer for the necessary information help topic.
+  // English: "If anyone receives Social Security or retirement benefits, you may need to gather the benefit statements to report the amount and frequency of the payments."
+  "help.topic.WhatInformation.answer3b": "",
+
+  // Answer for the necessary information help topic.
+  // English: "You may also need to reference other financial documents for additional sources of income."
+  "help.topic.WhatInformation.answer3c": "",
+
+  // Answer for the necessary information help topic.
+  // English: "Still not sure if you have everything you need? Don’t worry. The income section of the application contains detailed instructions and explanations about the sources of income you must include, and you can gather additional information then."
+  "help.topic.WhatInformation.answer4": "",
+
+
+  /***
+   *** src/stores/ApplicationData.jsx
+   ***/
+
+  // The label used for form fields.
+  // English: "First name"
+  "applicationData.person.firstName.label": "",
+
+  // The label used for form fields.
+  // English: "Middle name"
+  "applicationData.person.middleName.label": "",
+
+  // The label used for form fields.
+  // English: "Last name"
+  "applicationData.person.lastName.label": "",
+
+  // The label used for form fields.
+  // English: "Suffix (e.g. Jr., Sr., I, II, III)"
+  "applicationData.person.suffix.label": "",
+
+  // The label used for form fields.
+  // English: "Foster child"
+  "applicationData.otherChild.isFoster.label": "",
+
+  // The label used for form fields.
+  // English: "School"
+  "applicationData.student.school.label": "",
+
+  // The label used for form fields.
+  // English: "Grade"
+  "applicationData.student.grade.label": "",
+
+
+  /***/
+
+  "NOTE": "All comments must be deleted before use (to create a valid JSON file). Message definitions version 1480308689616."
+}

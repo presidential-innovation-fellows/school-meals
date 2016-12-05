@@ -1,4 +1,4 @@
-import { action, computed, observable } from 'mobx'
+import { action, observable } from 'mobx'
 
 // NOTE -- this is admittedly not very reacty. Navigation is basically just
 //         using CSS to show the appropriate section.slide at a given time.
@@ -22,6 +22,10 @@ export default class NavigationData {
   @observable stepsCompleted = null
   @observable currentSlideIndex = 0
 
+  get isOnFinalSlide() {
+    return this.currentSlideIndex === this.slides.length - 1
+  }
+
   constructor() {
     this.CURRENT_CLASS_NAME = 'current'
     this.history = []
@@ -29,25 +33,30 @@ export default class NavigationData {
 
     // Workaround for event.newURL and event.oldURL:
     // https://developer.mozilla.org/en-US/docs/Web/API/WindowEventHandlers/onhashchange
-    if (!window.HashChangeEvent) (function() {
-      var lastURL=document.URL;
-      window.addEventListener('hashchange', function(event){
-        Object.defineProperty(event, 'oldURL', {
-          enumerable: true,
-          configurable: true,
-          value: lastURL
+    if (!window.HashChangeEvent) {
+      (function() {
+        let lastURL = document.URL;
+        window.addEventListener('hashchange', (event) => {
+          Object.defineProperty(event, 'oldURL', {
+            enumerable: true,
+            configurable: true,
+            value: lastURL
+          })
+          Object.defineProperty(event, 'newURL', {
+            enumerable: true,
+            configurable: true,
+            value: document.URL
+          })
+          lastURL = document.URL
         })
-        Object.defineProperty(event, 'newURL', {
-          enumerable: true,
-          configurable: true,
-          value: document.URL
-        })
-        lastURL = document.URL
-      })
-    }())
-  
+      }())
+    }
+
     this.handleHashChange = this.handleHashChange.bind(this)
     window.onhashchange = this.handleHashChange
+
+    this.handlebeforeunload = this.handlebeforeunload.bind(this)
+    window.onbeforeunload = this.handlebeforeunload
   }
 
   get slides() {
@@ -62,71 +71,60 @@ export default class NavigationData {
     const slides = this.slides
 
     for (let i = 0; i < slides.length; i++) {
-      // the current slide
+      // The current slide.
       for (let j = 0; j < slides[i].classList.length; j++) {
-        let className = slides[i].classList[j]
+        const className = slides[i].classList[j]
 
         if (className === this.CURRENT_CLASS_NAME) {
           if (i === slides.length - 1) {
-            // final slide -- no next
+            // Final slide -- no next.
             return null
-          } else {
-            return slides[i + 1]
           }
+
+          return slides[i + 1]
         }
       }
     }
 
-    // nothing is current -- the first slide should be next
+    // Nothing is current -- the first slide should be next.
     return slides[0]
   }
 
-  get lastSlide() {
+  get prevSlide() {
     const slides = this.slides
 
     for (let i = 0; i < slides.length; i++) {
-      // the current slide
+      // The current slide.
       for (let j = 0; j < slides[i].classList.length; j++) {
-        let className = slides[i].classList[j]
+        const className = slides[i].classList[j]
 
         if (className === this.CURRENT_CLASS_NAME) {
-          if (i === slides.length - 1) {
-            // final slide -- no next
+          if (i === 0) {
+            // First slide -- no prev.
             return null
-          } else {
-            return slides[i - 1]
           }
+
+          return slides[i - 1]
         }
       }
     }
 
-    // nothing is current -- the first slide should be next
+    // Nothing is current -- the first slide should be prev.
     return slides[0]
   }
-
 
   get firstIncompleteSlide() {
     const slides = this.slides
 
     for (let i = 0; i < slides.length; i++) {
-      let slide = slides[i]
+      const slide = slides[i]
 
       if (slide.hasAttribute('data-incomplete')) {
         return slide
       }
     }
-  }
 
-  get jumpSlide() {
-    return this.firstIncompleteSlide
-  }
-
-  get canJump() {
-    // TODO: complete feature -- difficulties include:
-    //  * when to allow jumping (only once Summary is reached?)
-    //  * which slides may be jumped (all but those with "next" disabled?)
-    //  * how to implement given disconnect of mobx land and navigation land
-    return false
+    return null
   }
 
   @action reflectProgress(slide) {
@@ -139,7 +137,7 @@ export default class NavigationData {
         sectionBeginningsSeen++
       }
 
-      if (slide == slides[i]) {
+      if (slide === slides[i]) {
         break
       }
 
@@ -150,47 +148,63 @@ export default class NavigationData {
     this.currentSlideIndex = slidesSeen
   }
 
-  @action goToSlide(id) {
+  goToSlide(id) {
     const slides = this.slides
-    const re = new RegExp(this.CURRENT_CLASS_NAME, 'g') // TODO: imperfect
+    const re = new RegExp(this.CURRENT_CLASS_NAME, 'g') // Imperfect.
 
     for (let i = 0; i < slides.length; i++) {
-      let slide = slides[i]
+      const slide = slides[i]
 
       if (slide.id === id || id === 'debug') {
-        slide.className += ' ' + this.CURRENT_CLASS_NAME
+        slide.className += ` ${this.CURRENT_CLASS_NAME}`
         this.reflectProgress(slide)
       } else {
         slide.className = slide.className.replace(re, '')
       }
     }
 
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 1)
   }
 
   handleHashChange(event) {
     let newId = (event.newURL.split('#')[1] || '/').substr(1)
-    newId = newId || this.slides[0].id // root (no hash)
+    newId = newId || this.slides[0].id // Root (no hash).
 
     this.goToSlide(newId)
   }
 
+  // Re-navigate to current slide.
+  refreshSlide() {
+    const syntheticEvent = {
+      newURL: window.location.href
+    }
+
+    this.handleHashChange(syntheticEvent)
+  }
+
+  handlebeforeunload(event) {
+    const dialogText = 'If you would like to go back to the previous page in the application, click "Stay," then click the "Back" button at the bottom of the screen.'
+    event.returnValue = dialogText
+    return dialogText
+  }
+
   @action init() {
-    if (window.location.hash === '#/')
-      window.location.hash = '#'
-    else
-      window.location.hash = '#/'
+    if (window.location.hash === '#/') {
+      window.location.replace('#')
+    } else {
+      window.location.replace('#/')
+    }
   }
 
   @action back() {
-    window.location.hash = '#/' + this.lastSlide.id
+    window.location.replace(`#/${this.prevSlide.id}`)
   }
 
   @action next() {
-    window.location.hash = '#/' + this.nextSlide.id
+    window.location.replace(`#/${this.nextSlide.id}`)
   }
 
-  @action jump() {
-    window.location.hash = '#/' + this.jumpSlide.id
+  @action jumpTo(id) {
+    window.location.replace(`#/${id}`)
   }
 }

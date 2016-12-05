@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
-import BooleanRadio from '../BooleanRadio'
 import Alert from '../Alert'
 import Button from '../Button'
 import IncomeSource from '../IncomeSource'
@@ -8,14 +7,15 @@ import { computed } from 'mobx'
 import { observer } from 'mobx-react'
 import { incomeTypeIsValid, informalName } from '../../../helpers'
 import { tooltiptext } from '../../Tooltiptext'
-import Tooltipcomp from '../Tooltip'
+import Tooltip from '../Tooltip'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class ChildIncomeSlide extends Component {
   @computed get allSourcesFalse() {
     const sources = this.props.person.incomeTypes.child.sources
 
-    for (let key in sources) {
+    for (const key in sources) {
       if (sources[key].has !== false) {
         return false
       }
@@ -29,58 +29,185 @@ class ChildIncomeSlide extends Component {
     const incomeType = person.incomeTypes.child
     const incomeSources = incomeType.sources
     const name = informalName(person)
+    const missingIncomeTitle =
+      <FormattedMessage
+          id="app.slides.childIncomeSlide.missingIncomeTitle"
+          description="Missing Income alert title"
+          defaultMessage="Missing Income"
+      />
 
-    return(
-      <Slide header={name}
-             id={`income/${person.id}/child`}
-             helpArticle="child-income"
-             nextDisabled={!incomeTypeIsValid(incomeType)}>
+    return (
+      <Slide
+          header={name}
+          id={`income/${person.id}/child`}
+          helpArticle="child-income"
+          nextDisabled={!incomeTypeIsValid(incomeType)}
+      >
 
-        <p className="usa-font-lead">Does <strong>{name}</strong> have income from any of the following sources?</p>
+        <p className="usa-font-lead">
+          <FormattedMessage
+              id="app.slides.childIncomeSlide.intro"
+              description="Introductory paragraph."
+              defaultMessage="Does {child} have income from any of the following sources?"
+              values={{
+                child: <strong>{name}</strong>
+              }}
+          />
+        </p>
 
-        <p>Income reported here should be the child’s &nbsp;
-        <Tooltipcomp id="current" text={tooltiptext.currentChild} target="current" />
-        &nbsp;, <em>gross</em> income.</p>
+        <p>
+          <FormattedMessage
+              id="app.slides.childIncomeSlide.incomeReported"
+              description="Income reported should be child's."
+              defaultMessage="Income reported here should be the child’s {tooltip}, {gross}  income."
+              values={{
+                tooltip: <Tooltip text={tooltiptext.currentChild} >
+                  <FormattedMessage
+                      id="app.slides.childIncomeSlide.current"
+                      description="current"
+                      defaultMessage="current"
+                  />
+                </Tooltip>,
+                gross: <em>
+                  <FormattedMessage
+                      id="app.slides.childIncomeSlide.gross"
+                      description="gross"
+                      defaultMessage="gross"
+                  />
+                </em>
+              }}
+          />
+        </p>
 
-        <p className="well"><dfn>Gross income</dfn> means all money earned or received before deductions, such as income taxes, social security taxes, and insurance premiums. You should not report net income, which is the amount of money received in a pay check. Net income is total (or gross) income, minus taxes and deductions, and is commonly referred to as “take home pay”.</p>
+        <p className="well">
+          <FormattedMessage
+              id="app.slides.childIncomeSlide.childGross"
+              description="Gross Income definition."
+              defaultMessage="{grossIncome}  means all money earned or received before deductions, such as income taxes, social security taxes, and insurance premiums. You should not report net income, which is the amount of money received in a pay check. Net income is total (or gross) income, minus taxes and deductions, and is commonly referred to as “take home pay”."
+              values={{
+                grossIncome: <dfn>
+                  <FormattedMessage
+                      id="app.slides.childIncomeSlide.grossIncome"
+                      description="Gross income"
+                      defaultMessage="Gross income"
+                  />
+                </dfn>
+              }}
+          />
+        </p>
 
-        <IncomeSource incomeSources={incomeSources} name="job"
-                      showHourly={true} showAnnual={true}>
-          Money earned from a full or part-time job
+        <IncomeSource
+            incomeSources={incomeSources} name="job"
+            showHourly={true} showAnnual={false}
+        >
+          <FormattedMessage
+              id="app.slides.childIncomeSlide.moneyEarned"
+              description="Money earned from a full or part-time job"
+              defaultMessage="Money earned from a full or part-time job"
+          />
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="socialSecurity">
-            <Tooltipcomp id="SSDI" text={tooltiptext.SSDI} target="Social Security Disability Insurance (SSDI)" />
-          &nbsp; or &nbsp;
-            <Tooltipcomp id="socialSecurity" text={tooltiptext.socialsecurity} target="Social Security" />
-          &nbsp; survivor benefits
+          <FormattedMessage
+              id="app.slides.childIncomeSlide.supplementalIncome"
+              description="Supplemental income"
+              defaultMessage="Supplemental Security Insurance {tooltip} or Social Security {tooltip2}"
+              values={{
+                tooltip: <Tooltip text={tooltiptext.ssiChildren} >
+                  <FormattedMessage
+                      id="app.slides.childIncomeSlide.ssiChildren"
+                      description="SSI"
+                      defaultMessage="(SSI)"
+                  />
+                </Tooltip>,
+                tooltip2: <Tooltip text={tooltiptext.ssSurvivor} >
+                  <FormattedMessage
+                      id="app.slides.childIncomeSlide.ssSurvivor"
+                      description="survivor benefits"
+                      defaultMessage="survivor benefits"
+                  />
+                </Tooltip>
+              }}
+          />
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="friendsFamily">
-            <Tooltipcomp id="regularCashPayments" text={tooltiptext.regularCashPayments} target="Money" />
-          &nbsp; regularly received from extended family or friends outside the household
+          <FormattedMessage
+              id="app.slides.childIncomeSlide.regularCash"
+              description="Regular Cash Payments"
+              defaultMessage="{tooltip} from extended family or friends outside the household"
+              values={{
+                tooltip: <Tooltip text={tooltiptext.regularCashPayments} >
+                  <FormattedMessage
+                      id="app.slides.childIncomeSlide.regularCashPayments"
+                      description="Money regularly received"
+                      defaultMessage="Money regularly received"
+                  />
+                </Tooltip>
+              }}
+          />
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="pensionAnnuityTrust">
-          <Tooltipcomp id="pension" text={tooltiptext.pension} target="Pension" />
-          &nbsp;, &nbsp;
-          <Tooltipcomp id="annuity" text={tooltiptext.annuity} target="annuity" />
-          &nbsp;, or &nbsp;
-          <Tooltipcomp id="trust" text={tooltiptext.trust} target="trust" />
+          <FormattedMessage
+              id="app.slides.childIncomeSlide.pensionAnnuityTrust"
+              description="Pensions annuities & trusts"
+              defaultMessage="{tooltip}, {tooltip2}, or {tooltip3}"
+              values={{
+                tooltip: <Tooltip text={tooltiptext.pensionChildren} >
+                  <FormattedMessage
+                      id="app.slides.childIncomeSlide.pensionChildren"
+                      description="Pension"
+                      defaultMessage="Pension"
+                  />
+                </Tooltip>,
+                tooltip2: <Tooltip text={tooltiptext.annuityChildren} >
+                  <FormattedMessage
+                      id="app.slides.childIncomeSlide.annuityChildren"
+                      description="annuity"
+                      defaultMessage="annuity"
+                  />
+                </Tooltip>,
+                tooltip3: <Tooltip text={tooltiptext.trust} >
+                  <FormattedMessage
+                      id="app.slides.childIncomeSlide.trust"
+                      description="trust"
+                      defaultMessage="trust"
+                  />
+                </Tooltip>
+              }}
+          />
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="other">
-          Any other source of income
+          <FormattedMessage
+              id="app.slides.childIncomeSlide.otherIncome"
+              description="other income"
+              defaultMessage="Any other source of income"
+          />
         </IncomeSource>
 
         { this.allSourcesFalse &&
-          <Alert heading="Missing Income">
-            On a previous page, you indicated
-            that <strong>{name}</strong> receives income.
-            Please enter this income above or correct your previous answer.
+          <Alert heading={missingIncomeTitle}>
+            <FormattedMessage
+                id="app.slides.childIncomeSlide.missingIncome"
+                description="Missing Income Alert"
+                defaultMessage="On a previous page, you indicated that {child} receives income. Please enter this income above or correct your previous answer."
+                values={{
+                  child: <strong>{name}</strong>
+                }}
+            />
             <br />
-            <Button className="usa-button-gray"
-                    slideId="child-income">Change previous answer</Button>
+            <Button
+                className="usa-button-gray"
+                slideId="child-income"
+            >
+              <FormattedMessage
+                  id="app.slides.childIncomeSlide.changeAnswer"
+                  description="Change Answer"
+                  defaultMessage="Change previous answer"
+              />
+            </Button>
           </Alert>
         }
       </Slide>

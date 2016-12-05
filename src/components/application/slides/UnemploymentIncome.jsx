@@ -3,7 +3,8 @@ import IncomeSource from '../IncomeSource'
 import IncomeType from './IncomeType'
 import { observer } from 'mobx-react'
 import { tooltiptext } from '../../Tooltiptext'
-import Tooltipcomp from '../Tooltip'
+import Tooltip from '../Tooltip'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class UnemploymentIncome extends Component {
@@ -12,33 +13,69 @@ class UnemploymentIncome extends Component {
     const incomeType = person.incomeTypes.unemployment
     const incomeSources = incomeType.sources
     const incomeTypeProps = {
-      name: "unemployment",
-      label: "Unemployment Income",
+      name: 'unemployment',
       person
     }
 
-    return(
+    return (
       <IncomeType {...incomeTypeProps}>
 
         <IncomeSource incomeSources={incomeSources} name="unemployment">
-          <Tooltipcomp id="unemployment" text={tooltiptext.unemployment} target="Unemployment benefits" />
+          <Tooltip text={tooltiptext.unemployment}>
+            <FormattedMessage
+                id="app.slides.unemploymentIncome.unemployment"
+                description="Unemployment benefits"
+                defaultMessage="Unemployment benefits"
+            />
+          </Tooltip>
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="workersComp">
-          <Tooltipcomp id="workersComp" text={tooltiptext.workersComp} target="Worker’s compensation" />
+          <Tooltip text={tooltiptext.workersComp}>
+            <FormattedMessage
+                id="app.slides.unemploymentIncome.workersComp"
+                description="Worker’s compensation"
+                defaultMessage="Worker’s compensation"
+            />
+          </Tooltip>
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="strike">
-          <Tooltipcomp id="strikeBenefits" text={tooltiptext.strikeBenefits} target="Strike benefits" />
+          <Tooltip text={tooltiptext.strikeBenefits}>
+            <FormattedMessage
+                id="app.slides.unemploymentIncome.strikeBenefits"
+                description="Strike benefits"
+                defaultMessage="Strike benefits"
+            />
+          </Tooltip>
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="ssdi">
-          Social Security Disability Insurance &nbsp;
-          <Tooltipcomp id="SSDI" text={tooltiptext.SSDI} target="(SSDI)" />
+          <FormattedMessage
+              id="app.slides.unemploymentIncome.ssdi"
+              description="Social Security Disability Insurance"
+              defaultMessage="Social Security Disability Insurance {tooltip}"
+              values={{
+                tooltip:
+                  <Tooltip text={tooltiptext.SSDI}>
+                    <FormattedMessage
+                        id="app.slides.unemploymentIncome.ssdiToolTip"
+                        description="(SSDI)"
+                        defaultMessage="(SSDI)"
+                    />
+                  </Tooltip>
+              }}
+          />
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="veteran">
-          <Tooltipcomp id="veteranBenefits" text={tooltiptext.veteranBenefits} target="Veteran’s benefits" />
+          <Tooltip text={tooltiptext.veteranBenefits}>
+            <FormattedMessage
+                id="app.slides.unemploymentIncome.veteranBenefits"
+                description="Veteran’s benefits"
+                defaultMessage="Veteran’s benefits"
+            />
+          </Tooltip>
         </IncomeSource>
       </IncomeType>
     )

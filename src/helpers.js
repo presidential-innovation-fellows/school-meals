@@ -1,21 +1,15 @@
-﻿import { toSentenceSerial } from 'underscore.string'
-
-export function schoolYear(startYear = new Date().getFullYear()) {
-  return `${startYear}–${startYear + 1}`
-}
-
-// retuns zero padded YYYY-MM-DD given a date object
+// Retuns zero padded YYYY-MM-DD given a date object.
 export function formatDate(date) {
   let dd = date.getDate().toString()
   let mm = (date.getMonth() + 1).toString()
-  let yyyy = date.getFullYear().toString()
+  const yyyy = date.getFullYear().toString()
 
   if (dd.length === 1) {
-    dd = '0' + dd
+    dd = `0${dd}`
   }
 
   if (mm.length === 1) {
-    mm = '0' + mm
+    mm = `0${mm}`
   }
 
   return `${mm}/${dd}/${yyyy}`
@@ -25,21 +19,21 @@ export function fullName(person) {
   let result = person.firstName
 
   if (person.middleName) {
-    result += ' ' + person.middleName
+    result += ` ${person.middleName}`
   }
 
-  result += ' ' + person.lastName
+  result += ` ${person.lastName}`
 
   if (person.suffix) {
-    result += ' ' + person.suffix
+    result += ` ${person.suffix}`
   }
 
   return result
 }
 
-// returns the shortest possible unique representation of a name
+// Returns the shortest possible unique representation of a name.
 export function informalName(person,
-                             allPeopleCollections = window.applicationData.allPeopleCollections, // quick hack to avoid passing around in context everywhere
+                             allPeopleCollections = window.applicationData.allPeopleCollections, // Quick hack to avoid passing around in context everywhere.
                              disambiguate = true) {
   let result = person.firstName
 
@@ -50,7 +44,7 @@ export function informalName(person,
 
   for (let i = 0; i < allPeopleCollections.length; i++) {
     for (let j = 0; j < allPeopleCollections[i].items.length; j++) {
-      let otherPerson = allPeopleCollections[i].items[j]
+      const otherPerson = allPeopleCollections[i].items[j]
 
       if (person.id === otherPerson.id) {
         continue
@@ -80,15 +74,15 @@ export function informalName(person,
   }
 
   if (includeMiddle) {
-    result += ' ' + person.middleName
+    result += ` ${person.middleName}`
   }
 
   if (includeLast) {
-    result += ' ' + person.lastName
+    result += ` ${person.lastName}`
   }
 
   if (includeSuffix) {
-    result += ' ' + person.suffix
+    result += ` ${person.suffix}`
   }
 
   if (includeDisambig && disambiguate) {
@@ -101,7 +95,7 @@ export function informalName(person,
     } else if (person.isAdult) {
       result += ' (adult)'
     } else {
-      // should never happen, but good ot have a default
+      // Should never happen, but good ot have a default.
       result += ` (${person.id})`
     }
   }
@@ -109,23 +103,10 @@ export function informalName(person,
   return result
 }
 
-// given an array of people-like objects, return e.g. "Bob, Joe, and Joe Jr."
-export function informalList(people,
-                             allPeopleCollections,
-                             lastDelimiter = ' and ',
-                             disambiguate = false,
-                             delimiter = ', ') {
+export function hoursExceedPeriodCapacity(lineItem) {
+  const hours = lineItem.hourlyHours || 0
 
-  const names = people.map(person => informalName(person,
-                                                  allPeopleCollections,
-                                                  disambiguate))
-  return toSentenceSerial(names, delimiter, lastDelimiter)
-}
-
-export function hoursExceedPeriodCapacity(incomeSource) {
-  const hours = incomeSource.hourlyHours || 0
-
-  switch(incomeSource.hourlyPeriod) {
+  switch (lineItem.hourlyPeriod) {
     case 'day':
       return hours > 24
     case 'week':
@@ -137,16 +118,43 @@ export function hoursExceedPeriodCapacity(incomeSource) {
   }
 }
 
-export function incomeTypeIsValid(incomeType, mustNotBeNull = []) {
-  switch(incomeType.isApplicable) {
+function incomeSourceIsValid(incomeSource) {
+  switch (incomeSource.has) {
     case true:
-      // Invalid if any of the non-nullable incomeType fields are null.
-      if (mustNotBeNull.map(name => incomeType[name] == null)
-                       .reduce((a, b) => a || b, false)) {
+      // Invalid if user has income source but zero line items for it.
+      if (!incomeSource.lineItems.length) {
         return false
       }
-      let incomeSources = []
-      for (let name in incomeType.sources) {
+
+      for (let i = 0; i < incomeSource.lineItems.length; i++) {
+        const lineItem = incomeSource.lineItems[i]
+
+        if (!lineItem.amount ||
+            !lineItem.frequency) {
+          return false
+        }
+
+        if (lineItem.frequency === 'hourly') {
+          if (!lineItem.hourlyHours ||
+              !lineItem.hourlyPeriod ||
+              hoursExceedPeriodCapacity(lineItem)) {
+            return false
+          }
+        }
+      }
+      return true
+    case false:
+      return true
+    default:
+      return false
+  }
+}
+
+export function incomeTypeIsValid(incomeType) {
+  switch (incomeType.isApplicable) {
+    case true: {
+      const incomeSources = []
+      for (const name in incomeType.sources) {
         incomeSources.push(incomeType.sources[name])
       }
 
@@ -158,24 +166,11 @@ export function incomeTypeIsValid(incomeType, mustNotBeNull = []) {
       }
 
       return incomeSources
-        .map(incomeSource => { return(
-          incomeSource.has === false ||
-          !!(
-            incomeSource.has &&
-            incomeSource.amount &&
-            incomeSource.frequency &&
-            (
-              incomeSource.frequency !== 'hourly' ||
-              (incomeSource.hourlyHours && incomeSource.hourlyPeriod &&
-               !hoursExceedPeriodCapacity(incomeSource))
-            )
-          )
-        )})
+        .map(incomeSource => incomeSourceIsValid(incomeSource))
         .reduce((a, b) => a && b, true)
-      break
+    }
     case false:
       return true
-      break
     default:
       return false
   }
@@ -202,27 +197,40 @@ export function allStudentsAreFHMR(students) {
     .reduce((a, b) => a && b, true)
 }
 
-// Added a new function to calculate if all students are Foster
 export function allStudentsAreFoster(students) {
-  const qualifyingAttribute = "isFoster";
-
   if (!students.length) {
     return false
   }
 
   return students
     .map(student => student.isFoster)
-    .reduce ( (acc, item) => acc && item, true);
+    .reduce((a, b) => a && b, true)
 }
 
-export function programDescription(slug) {
-  return {
-    isFoster: 'live with you under a formal (court-ordered) foster care arrangement',
-    isHomeless: 'receive assistance under the McKinney-Vento Homeless Assistance Act',
-    isMigrant: 'participate in the Migrant Education Program (MEP)',
-    isRunaway: 'participate in a program under the Runaway and Homeless Youth Act'
-  }[slug]
+export function applicableIncomeLineItems(person) {
+  const result = []
+
+  for (const type in person.incomeTypes) {
+    const sources = person.incomeTypes[type].sources
+
+    if (!person.incomeTypes[type].isApplicable) {
+      continue
+    }
+
+    for (const sourceKey in sources) {
+      const source = sources[sourceKey]
+
+      if (!source.has) {
+        continue
+      }
+
+      for (let i = 0; i < source.lineItems.length; i++) {
+        const lineItem = source.lineItems[i]
+
+        result.push(Object.assign({}, lineItem, { source: sourceKey, type }))
+      }
+    }
+  }
+
+  return result
 }
-
-
-

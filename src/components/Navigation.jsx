@@ -1,86 +1,83 @@
-﻿import React, { Component, PropTypes } from 'react'
+import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
-import { Glyphicon, Navbar, Nav, NavItem, NavDropdown, MenuItem } from 'react-bootstrap'
-import { organization } from '../config'
+import { Glyphicon, Nav, NavItem, Navbar } from 'react-bootstrap'
+import { locales, organization } from '../config'
+import { FormattedMessage } from 'react-intl'
+import LocalePicker from './LocalePicker'
 
 @observer
 class Navigation extends Component {
-  constructor (props, context) {
+  constructor(props, context) {
     super(props, context)
     this.handleData = this.handleData.bind(this)
     this.handleHelp = this.handleHelp.bind(this)
   }
 
-
-  handleData(event) {
-    window.location.hash = '#/viewappdata'
+  handleData() {
+    window.location.replace('#/viewappdata')
   }
 
-  handleHelp(event) {
-    const { navigationData } = this.props
-    const { currentSlide } = navigationData
+  handleHelp() {
+    const { currentSlide } = this.props.navigationData
     const article = currentSlide.getAttribute('data-help-article')
 
     this.props.helpData.showArticle(article)
   }
 
   render() {
-    let lang = 'en'
-
-    if (window.location.search.split('?')[1]) {
-      let pairs = window.location.search.split('?')[1].split('=')
-      for (var i = 0; i < pairs.length; i += 2) {
-        if (pairs[i] === 'lang') {
-          lang = pairs[i + 1]
-        }
-      }
-    }
-
-    const map = {
-      en: 'English',
-      zh: '中文',
-      fr: 'Français',
-      pa: 'ਪੰਜਾਬੀ',
-      ru: 'Русский',
-      es: 'Español',
-      tl: 'Wikang Tagalog',
-      vi: 'Tiếng Việt'
-    }
+    const { localeData } = this.props
 
     return (
       <Navbar fixedTop>
         <div className="usa-grid">
-        <Navbar.Header>
-          <Navbar.Brand>
-            <span className="hidden-xs">
-              {organization.name} Application for Free and Reduced Price School Meals
-            </span>
-            <span className="hidden-sm hidden-md hidden-lg">
-              {organization.contact.shortname} Application for School Meals
-            </span>
-          </Navbar.Brand>
-          <Navbar.Toggle />
-        </Navbar.Header>
-        <Navbar.Collapse>
-          <Nav pullRight>
+          <Navbar.Header>
+            <Navbar.Brand>
+              <span className="hidden-xs">
+                <FormattedMessage
+                    id="nav.title"
+                    description="Text for the page title."
+                    defaultMessage="{organizationName} Application for Free and Reduced Price School Meals"
+                    values={{
+                      organizationName: organization.name
+                    }}
+                />
+              </span>
+              <span className="hidden-sm hidden-md hidden-lg">
+                <FormattedMessage
+                    id="nav.shortTitle"
+                    description="Text for the page title on mobile devices."
+                    defaultMessage="Application for School Meals"
+                    values={{
+                      organizationShortName: organization.shortname
+                    }}
+                />
+              </span>
+            </Navbar.Brand>
+            <Navbar.Toggle />
+          </Navbar.Header>
+          <Navbar.Collapse>
+            <Nav pullRight>
+              {/*
             <NavItem eventKey={2} onClick={this.handleData}>
-              <Glyphicon glyph="list-alt" /> Data
+              <Glyphicon glyph="list-alt" />&nbsp;
+              <FormattedMessage
+                  id="nav.data"
+                  description="Text for the Data navigation item."
+                  defaultMessage="Data"
+              />
             </NavItem>
-            <NavItem eventKey={1} onClick={this.handleHelp}>
-              <Glyphicon glyph="question-sign" /> Help
-            </NavItem>
-            <NavDropdown eventKey="1" title={map[lang]} id="nav-dropdown">
-              <MenuItem eventKey="1.1" lang="en" href="./?lang=en">I speak English</MenuItem>
-              <MenuItem eventKey="1.2" lang="zh" href="./?lang=zh">我说中文</MenuItem>
-              <MenuItem eventKey="1.3" lang="fr" href="./?lang=fr">Je parle français</MenuItem>
-              <MenuItem eventKey="1.4" lang="pa" href="./?lang=pa">ਇ ਸ੍ਪੇਆਕ ਪੰਜਾਬੀ</MenuItem>
-              <MenuItem eventKey="1.5" lang="ru" href="./?lang=ru">Я говoрю по-русски</MenuItem>
-              <MenuItem eventKey="1.6" lang="es" href="./?lang=es">Yo hablo español</MenuItem>
-              <MenuItem eventKey="1.7" lang="tl" href="./?lang=tl">Marunong po akong magsalita ng Tagalog</MenuItem>
-              <MenuItem eventKey="1.8" lang="vi" href="./?lang=vi">Tôi nói tiếng Việt</MenuItem>
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
+            */}
+              <NavItem eventKey={1} onClick={this.handleHelp}>
+                <Glyphicon glyph="question-sign" className="help-icon" />&nbsp;
+                <FormattedMessage
+                    id="nav.help"
+                    description="Text for the Help navigation item."
+                    defaultMessage="Help"
+                />
+              </NavItem>
+              <LocalePicker localeData={localeData} locales={locales} />
+            </Nav>
+          </Navbar.Collapse>
         </div>
       </Navbar>
     )
@@ -88,8 +85,9 @@ class Navigation extends Component {
 }
 
 Navigation.propTypes = {
-  navigationData: PropTypes.object.isRequired,
-  helpData: PropTypes.object.isRequired
+  helpData: PropTypes.object.isRequired,
+  localeData: PropTypes.object.isRequired,
+  navigationData: PropTypes.object.isRequired
 };
 
 export default Navigation

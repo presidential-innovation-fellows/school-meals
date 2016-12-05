@@ -5,17 +5,19 @@ import { observer } from 'mobx-react'
 @observer
 class Topic extends Component {
   render() {
-    const { title } = this.props
+    const { body, children, title } = this.props
     const id = shortid.generate()
 
     return (
       <li>
-        <button className="usa-accordion-button"
-                aria-controls={`amendment-${id}`}>
+        <button
+            className="usa-accordion-button"
+            aria-controls={`amendment-${id}`}
+        >
           {title || '--- HELP ---'}
         </button>
         <div id={`amendment-${id}`} className="usa-accordion-content">
-          {this.props.children}
+          {body || children}
         </div>
       </li>
     )
@@ -23,7 +25,8 @@ class Topic extends Component {
 }
 
 Topic.propTypes = {
-  title: PropTypes.string
+  body: PropTypes.node,
+  title: PropTypes.node
 }
 
 export default Topic

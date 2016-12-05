@@ -2,17 +2,58 @@ import React, { Component, PropTypes } from 'react'
 import Checkboxes from '../Checkboxes'
 import AssistanceProgram from './AssistanceProgram'
 import { observer } from 'mobx-react'
-import { AssistancePrograms as Store } from '../../../stores/ApplicationData'
+import { ApplicationData } from '../../../stores/ApplicationData'
 
 @observer
 class AssistanceProgramList extends Component {
-  render() {
-    const { assistancePrograms } = this.props
+  constructor(props) {
+    super(props)
+    this.handleChange = this.handleChange.bind(this)
+  }
 
-    return(
+  handleChange(fieldName, value, program) {
+    const { students, adults, otherChildren, signature } =
+      this.props.applicationData
+
+    program[fieldName] = value
+
+    if (value) {
+      // Clear FHMR status.
+      students.clearSpecialStatuses()
+
+      // Clear income election.
+      this.props.applicationData.electToProvideIncome = null
+
+      // Clear adults other than attestor.
+      adults.items.splice(1)
+
+      // Clear other children.
+      otherChildren.empty()
+
+      // Clear attestor and student incomes.
+      adults.clearAllIncomes()
+      students.clearAllIncomes()
+
+      // Clear SSN.
+      signature.noSsn = null
+      signature.ssnLastFour = ''
+    } else {
+      // Clear case number.
+      program.caseNumber = ''
+    }
+  }
+
+  render() {
+    const { assistancePrograms } = this.props.applicationData
+
+    return (
       <Checkboxes legend="Assistance programs">
         {assistancePrograms.map(program =>
-          <AssistanceProgram program={program} key={program.id} />
+          <AssistanceProgram
+              program={program}
+              onChange={this.handleChange}
+              key={program.id}
+          />
          )}
       </Checkboxes>
     )
@@ -20,7 +61,7 @@ class AssistanceProgramList extends Component {
 }
 
 AssistanceProgramList.propTypes = {
-  assistancePrograms: PropTypes.instanceOf(Store).isRequired
+  aplicationData: PropTypes.instanceOf(ApplicationData).isRequired
 }
 
 export default AssistanceProgramList

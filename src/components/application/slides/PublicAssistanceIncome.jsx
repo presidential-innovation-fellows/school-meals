@@ -3,7 +3,8 @@ import IncomeSource from '../IncomeSource'
 import IncomeType from './IncomeType'
 import { observer } from 'mobx-react'
 import { tooltiptext } from '../../Tooltiptext'
-import Tooltipcomp from '../Tooltip'
+import Tooltip from '../Tooltip'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class PublicAssistanceIncome extends Component {
@@ -12,22 +13,47 @@ class PublicAssistanceIncome extends Component {
     const incomeType = person.incomeTypes.publicAssistance
     const incomeSources = incomeType.sources
     const incomeTypeProps = {
-      name: "publicAssistance",
-      label: "Public Assistance",
+      name: 'publicAssistance',
       person
     }
 
-    return(
+    return (
       <IncomeType {...incomeTypeProps}>
 
         <IncomeSource incomeSources={incomeSources} name="ssi">
-          Supplemental Security Income &nbsp;
-          <Tooltipcomp id="SSI" text={tooltiptext.SSI} target="(SSI)" />
+          <FormattedMessage
+              id="app.slides.publicAssistanceIncome.ssi"
+              description="SSI"
+              defaultMessage="Supplemental Security Income {tooltip}"
+              values={{
+                tooltip:
+                  <Tooltip text={tooltiptext.SSI}>
+                    <FormattedMessage
+                        id="app.slides.publicAssistanceIncome.ssiToolTip"
+                        description="SSI tooltip"
+                        defaultMessage="(SSI)"
+                    />
+                  </Tooltip>
+              }}
+          />
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="stateLocal">
-          <Tooltipcomp id="cashAssistance" text={tooltiptext.cashAssistance} target="Cash assistance" />
-          &nbsp; from state or local government (including housing subsidies)
+          <FormattedMessage
+              id="app.slides.publicAssistanceIncome.cashAssistance"
+              description="SSI"
+              defaultMessage="{tooltip} from state or local government (including housing subsidies)"
+              values={{
+                tooltip:
+                  <Tooltip text={tooltiptext.cashAssistance}>
+                    <FormattedMessage
+                        id="app.slides.publicAssistanceIncome.cashAssistanceToolTip"
+                        description="Cash assistance"
+                        defaultMessage="Cash assistance"
+                    />
+                  </Tooltip>
+              }}
+          />
         </IncomeSource>
       </IncomeType>
     )

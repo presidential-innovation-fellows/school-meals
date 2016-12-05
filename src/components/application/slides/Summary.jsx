@@ -1,281 +1,253 @@
-﻿import React, { Component, PropTypes, responsive, bordered } from 'react'
+import React, { Component, PropTypes } from 'react'
 import Slide from '../Slide'
-import Link from '../Link'
+import SerialList from '../SerialList'
+import SummaryAdults from './SummaryAdults'
 import SummaryLabel from './SummaryLabel'
-import SummaryLabelSmall from './SummaryLabelSmall'
+import SummaryPersonCollection from './SummaryPersonCollection'
 import Checkbox from '../Checkbox'
 import Checkboxes from '../Checkboxes'
+import IncomeAmount from '../IncomeAmount'
+import Tooltip from '../Tooltip'
 import { observer } from 'mobx-react'
-import { Glyphicon, OverlayTrigger, Table, Tooltip, Well } from 'react-bootstrap'
-import { humanize, numberFormat } from 'underscore.string'
 import { organization } from '../../../config'
-import { allStudentsAreFHMR, fullName, informalName } from '../../../helpers'
+import { fullName } from '../../../helpers'
 import { tooltiptext } from '../../Tooltiptext'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class Summary extends Component {
+  constructor(props) {
+    super(props)
+    this.assistanceProgramAccronym = this.assistanceProgramAccronym.bind(this)
+  }
+
   get isValid() {
     return this.props.applicationData.certifiedCorrect
   }
 
-  get allOtherChildren() {
-    return this.props.applicationData.otherChildren
-  }
-
-  get totalHouseholdMembers() {
-    return this.props.applicationData.allPeopleCollections
-               .map(collection => collection.length)
-               .reduce((a, b) => a + b, 0)
-  }
-
-  get allIncomes() {
-    return this.props.applicationData.allPeopleCollections
-      .map(collection => collection.allApplicableIncomeSources)
-      .reduce((a, b) => a.concat(b), [])
-  }
-
-  get totalAnnualHouseholdIncome() {
-    function toAnnual(income) {
-      let amount = parseFloat(income.amount, 10)
-
-      switch (income.frequency) {
-        case 'yearly':
-        case 'annually':
-          return amount * 1.0
-        case 'monthly':
-          return amount * 12.0
-        case 'twicePerMonth':
-          return amount * 24.0
-        case 'everyTwoWeeks':
-          return amount * 26.0
-        case 'weekly':
-          return amount * 52.0
-        case 'hourly':
-          let hours = parseFloat(income.hourlyHours, 10)
-
-          switch (income.hourlyPeriod) {
-            case 'day':
-              return amount * hours * 365.0
-            case 'week':
-              return amount * hours * 52.0
-            case 'month':
-              return amount * hours * 12.0
-            default:
-              return 0.0
-          }
-        default:
-          return 0.0
-      }
-    }
-
-    return this.allIncomes
-               .map(income => toAnnual(income))
-               .reduce((a, b) => a + b, 0)
-  }
-
-  get totalMonthlyHouseholdIncome() {
-    return this.totalAnnualHouseholdIncome / 12.0
-  }
-
-  fhmr(student) {
-    return ([
-      student.isFoster && 'foster',
-      student.isHomeless && 'homeless',
-      student.isMigrant && 'migrant',
-      student.isRunaway && 'runaway'
-    ].filter(x => x))
+  assistanceProgramAccronym(program) {
+    return program.accronym
   }
 
   render() {
     const { applicationData } = this.props
-    const { adults,
-            contact,
-            students,
-            assistancePrograms } = applicationData
-    const attestor = adults.first
-    const showHousehold =
-      !assistancePrograms.hasAny ||
-      !allStudentsAreFHMR(students)
+    const { contact,
+            otherChildren,
+            students } = applicationData
+    const assistancePrograms = applicationData.assistancePrograms.applicable
+
+    const headerText =
+      <FormattedMessage
+          id="app.slides.summary.header"
+          description="Text for the header of the slide."
+          defaultMessage="Summary"
+      />
+
+    const nextText =
+      <FormattedMessage
+          id="app.slides.summary.nextText"
+          description="Text on the button to submit final applicaiton."
+          defaultMessage="Submit"
+      />
 
     return (
-      <Slide header="Summary" nextText="Submit" nextDisabled={!this.isValid}
-             id="summary">
-        <p className="usa-font-lead">Awesome, you finished!</p>
-        <p>Here is a summary of the information you provided in the application. We encourage you to save or print this screen for your records. If everything looks good, click the "Submit" button at the bottom of the page.</p>
+      <Slide
+          header={headerText}
+          nextText={nextText}
+          nextDisabled={!this.isValid}
+          id="summary"
+      >
+        <p className="usa-font-lead">
+          <FormattedMessage
+              id="app.slides.summary.finished"
+              description="Awesome, you're finished!"
+              defaultMessage="Awesome, you finished!"
+          />
+        </p>
+        <p>
+          <FormattedMessage
+              id="app.slides.summary.summaryInfo"
+              description="Summary Info is below"
+              defaultMessage="Here is a summary of the information you provided in the application. We encourage you to save or print this screen for your records. If everything looks good, click the 'Submit' button at the bottom of the page."
+          />
+        </p>
 
-        {!showHousehold &&
-         <div>
-           <SummaryLabel id="students">
-             Students attending {organization.name}
-           </SummaryLabel>
-           <ul>
-             {students.map(person =>
-               <li key={person.id}>
-                 {informalName(person)}
-                 { !!this.fhmr(person).length &&
-                   ` (${this.fhmr(person).join(', ')})`
-                 }
-               </li>
-              )}
-           </ul>
-         </div>
+        <SummaryPersonCollection
+            collection={students} id="students"
+            showIncomes={applicationData.showHousehold}
+        >
+          <FormattedMessage
+              id="app.slides.summary.studentsAttending"
+              description="student info"
+              defaultMessage="Students attending school in {organizationName}"
+              values={{
+                organizationName: organization.name
+              }}
+          />
+        </SummaryPersonCollection>
+
+        {applicationData.showHousehold &&
+        <SummaryPersonCollection
+            collection={otherChildren}
+            id="other-children"
+            showIncomes={true}
+        >
+          <FormattedMessage
+              id="app.slides.summary.otherChildren"
+              description="Other children"
+              defaultMessage="Other children"
+          />
+        </SummaryPersonCollection>
         }
 
-         {assistancePrograms.hasAny &&
-         <div>
-             <SummaryLabel id="assistance-programs">
-               Assistance Program{assistancePrograms.applicable.length !== 1 && 's'}
-             </SummaryLabel>
-            <ul>
-              {assistancePrograms.applicable.map(program =>
+        <SummaryAdults applicationData={applicationData} />
+
+        <div>
+          <SummaryLabel id="assistance-programs">
+            <FormattedMessage
+                id="app.slides.summary.caseNumbers"
+                description="Assistance program case numbers"
+                defaultMessage="Assistance program case numbers"
+            />
+          </SummaryLabel>
+
+          <ul>
+            {
+              assistancePrograms.length ?
+              assistancePrograms.map(program =>
                 <li key={program.id}>
-                  {program.name}
-                  —case number: <strong>{program.caseNumber}</strong>
+                  {program.name} — <strong>{program.caseNumber}</strong>
                 </li>
-               )}
-            </ul>
-          </div>
-        }
+              )
+              :
+                <li>
+                  <FormattedMessage
+                      id="app.slides.summary.noAssistancePrograms"
+                      description="Placeholder indicating that no assistance programs have been selected."
+                      defaultMessage="(none)"
+                  />
+                </li>
+            }
+          </ul>
+        </div>
 
-        {showHousehold &&
-         <div>
-           <SummaryLabel>Household</SummaryLabel>
-           <Well>
-             <SummaryLabelSmall id="students" small={true}>
-               Students attending {organization.name}
-             </SummaryLabelSmall>
-             <ul>
-               {students.map(person =>
-                 <li key={person.id}>
-                   {informalName(person)}
-                   { !!this.fhmr(person).length &&
-                     ` (${this.fhmr(person).join(', ')})`
-                   }
-                 </li>
-                )}
-             </ul>
-
-             <SummaryLabelSmall id="other-children">
-               Other Children
-             </SummaryLabelSmall>
-             <ul>
-               {this.allOtherChildren.map(person =>
-                 <li key={person.id}>{informalName(person)}</li>
-                )}
-                 {!this.allOtherChildren.length && <li><em>none</em></li>}
-             </ul>
-
-             <SummaryLabelSmall id="adults">Adults</SummaryLabelSmall>
-             <ul>
-               {adults.map(person =>
-                 <li key={person.id}>{informalName(person)}</li>
-                )}
-                 {!adults.length && <li><em>none</em></li>}
-             </ul>
-
-             <div>
-               <SummaryLabelSmall>
-                 Total household members: {this.totalHouseholdMembers}
-               </SummaryLabelSmall>
-             </div>
-           </Well>
-
-           <SummaryLabel>Income</SummaryLabel>
-           <Table responsive bordered>
-             <thead>
-               <tr>
-                 <th>Name</th>
-                 <th>Income Type</th>
-                 <th>Amount</th>
-                 <th>Frequency</th>
-               </tr>
-             </thead>
-             <tbody>
-               {this.allIncomes.map(income =>
-                 <tr key={income.person.id + income.type + income.source + income.num}>
-                   <td>{informalName(income.person)}</td>
-                   <td>
-                     {humanize(income.type)} income
-                     {' '}
-                     (<Link id={`income/${income.person.id}/${income.type}`}>edit</Link>)
-                   </td>
-                   <td>${numberFormat(parseFloat(income.amount, 10), 2)}</td>
-                   <td>
-                     {humanize(income.frequency)}
-                     {income.frequency === 'hourly' &&
-                      ` (${income.hourlyHours} hrs./${income.hourlyPeriod})`}
-                   </td>
-                 </tr>
-                )}
-               </tbody>
-               <tfoot>
-                 <tr>
-                   <td colSpan="2">
-                     <strong>Total household income:</strong>
-                   </td>
-                   <td>
-                     <OverlayTrigger placement="top" overlay={
-                       <Tooltip id="total-income">
-                         {tooltiptext.monthlyIncomeSum}
-                       </Tooltip>
-                     }>
-                       <strong className="info-target">
-                         ${numberFormat(this.totalMonthlyHouseholdIncome, 2)}
-                         <Glyphicon glyph="question-sign" />
-                       </strong>
-                     </OverlayTrigger>
-                   </td>
-                   <td><strong>Monthly</strong></td>
-                 </tr>
-             </tfoot>
-           </Table>
-         </div>
-        }
-
-        <SummaryLabel id="contact">Contact Information</SummaryLabel>
-        <Well>
-          { fullName(attestor) }
+        <SummaryLabel id="contact">
+          <FormattedMessage
+              id="app.slides.summary.contactInfo"
+              description="Contact information"
+              defaultMessage="Contact information"
+          />
+        </SummaryLabel>
+        <p>
+          { fullName(applicationData.attestor) }
           {!!contact.address1 &&
-           <span>
-             <br />
-             { contact.address1 }
-           </span>
+          <span>
+            <br />
+            { contact.address1 }
+          </span>
           }
           {!!contact.address2 &&
-           <span>
-             <br />
-             { contact.address2 }
-           </span>
+          <span>
+            <br />
+            { contact.address2 }
+          </span>
           }
           {!!contact.city &&
-           <span>
-             <br />
-             { contact.city },{' '}
-           </span>
+          <span>
+            <br />
+            { contact.city },{' '}
+          </span>
           }
           { contact.state }
           {' '}
           { contact.zip }
           {!!contact.phone &&
-           <span>
-             <br />
-             { contact.phone }
-           </span>
+          <span>
+            <br />
+            { contact.phone }
+          </span>
           }
           {!!contact.email &&
-           <span>
-             <br />
-             { contact.email }
-           </span>
+          <span>
+            <br />
+            { contact.email }
+          </span>
           }
-        </Well>
+        </p>
+
+        {applicationData.showHousehold &&
+        <div>
+          <SummaryLabel>
+            <FormattedMessage
+                id="app.slides.summary.totalIncome"
+                description="Total household income"
+                defaultMessage="Total household income"
+            />
+          </SummaryLabel>
+          <Tooltip text={tooltiptext.monthlyIncomeSum}>
+            <IncomeAmount
+                frequency="monthly"
+                decimals={2}
+                amount={parseFloat(applicationData.totalMonthlyHouseholdIncome, 10)}
+            />
+          </Tooltip>
+        </div>
+        }
 
         <Checkboxes legend="Certification">
           <Checkbox name="certifiedCorrect" object={applicationData}>
-            <strong>I certify* that <span className="usa-label-big">{this.totalHouseholdMembers}</span> people are in my household and that our household income is about <span className="usa-label-big">${numberFormat(this.totalMonthlyHouseholdIncome)}</span> per month.</strong>
+            { applicationData.showHousehold ? // eslint-disable-line no-nested-ternary
+              <strong>
+                <FormattedMessage
+                    id="app.slides.summary.certification"
+                    description="Certification statement"
+                    defaultMessage="I certify* that {totalHouseholdMembers} are in my household and that our household income is about {totalHouseholdIncome}"
+                    values={{
+                      totalHouseholdMembers: <span className="usa-label-big">
+                        {applicationData.totalHouseholdMembers}&nbsp;
+                        <FormattedMessage
+                            id="app.slides.summary.people"
+                            description="people"
+                            defaultMessage=" people"
+                        />
+                      </span>,
+                      totalHouseholdIncome: <span className="usa-label-big">
+                        <IncomeAmount
+                            frequency="monthly"
+                            amount={applicationData.totalMonthlyHouseholdIncome}
+                        />
+                      </span>
+                    }}
+                />
+              </strong>
+              : (assistancePrograms.length ?
+                <strong>
+                  <FormattedMessage
+                      id="app.slides.summary.certificationPrograms"
+                      description="Certification statement for programs"
+                      defaultMessage="I certify* that my household participates in"
+                  />&nbsp;
+                  <SerialList className="usa-label-big" items={assistancePrograms} mapFunc={this.assistanceProgramAccronym} />
+                </strong>
+                 :
+                <strong>
+                  <FormattedMessage
+                      id="app.slides.summary.infoCorrect"
+                      description="acknowledge info is correct"
+                      defaultMessage="I certify* that the information on this page is correct to the best of my knowledge."
+                  />
+                </strong>
+              )
+            }
           </Checkbox>
         </Checkboxes>
-        <p><small>*I understand that this information is given in connection with the receipt of Federal funds, and that school o­fficials may verify (check) the information. I am aware that if I purposely give false information, my children may lose meal benefits. Deliberate misrepresentation of information may subject applicants to prosecution under applicable State and Federal law.</small></p>
+        <p><small><em>
+          <FormattedMessage
+              id="app.slides.summary.finePrint"
+              description="fine print, if info is wrong, it is fraud."
+              defaultMessage="*I understand that this information is given in connection with the receipt of Federal funds, and that school officials may verify (check) the information. I am aware that if I purposely give false information, my children may lose meal benefits. Deliberate misrepresentation of information may subject applicants to prosecution under applicable State and Federal law."
+          />
+        </em></small></p>
       </Slide>
     )
   }

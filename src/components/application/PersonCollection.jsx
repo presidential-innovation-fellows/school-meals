@@ -1,22 +1,22 @@
-import React, { Component, PropTypes } from 'react'
+import React, { Component } from 'react'
 import { observer } from 'mobx-react'
 import Button from './Button'
-import Form from './Form'
 import PersonForm from './PersonForm'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class PersonCollection extends Component {
   constructor(props) {
     super(props);
-    this.onAdd = this.onAdd.bind(this);
-    this.onRemove = this.onRemove.bind(this);
+    this.handleAdd = this.handleAdd.bind(this);
+    this.handleRemove = this.handleRemove.bind(this);
   }
 
-  onAdd() {
+  handleAdd() {
     this.props.collection.add()
   }
 
-  onRemove(person) {
+  handleRemove(person) {
     this.props.collection.remove(person)
   }
 
@@ -24,26 +24,36 @@ class PersonCollection extends Component {
     const {
       collection,
       filter,
-      label,
-      labelPlural
+      label
     } = this.props
 
-    return(
+    return (
       <div>
         <div>
           {collection.items.filter(filter).map(person =>
-            <PersonForm person={person}
-                        fields={collection.fields}
-                        label={label}
-                        key={person.id}
-                        onRemove={this.onRemove} />
+            <PersonForm
+                person={person}
+                fields={collection.fields}
+                label={label}
+                key={person.id}
+                onRemove={this.handleRemove}
+            />
           )}
         </div>
 
-        <Button onClick={this.onAdd}
-                className="usa-button-secondary add-person">
-          Add {collection.length ? 'another ' : 'a '}
-          <span className="lowercase">{label}</span>
+        <Button
+            onClick={this.handleAdd}
+            className="usa-button-primary-alt"
+        >
+          <FormattedMessage
+              id="app.personCollection.addButton"
+              description="Button to add person to collection."
+              defaultMessage="+ Add another {personType}"
+              values={{
+                personCount: collection.length,
+                personType: <span className="lowercase">{label}</span>
+              }}
+          />
         </Button>
       </div>
     )
@@ -51,9 +61,8 @@ class PersonCollection extends Component {
 }
 
 PersonCollection.defaultProps = {
-  filter: person => true,
-  label: 'person',
-  labelPlural: 'people'
+  filter: () => true,
+  label: 'person'
 }
 
 export default PersonCollection

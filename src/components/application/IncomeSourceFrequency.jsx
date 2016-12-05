@@ -1,10 +1,12 @@
 import React, { Component, PropTypes } from 'react'
-import { observer } from 'mobx-react'
 import Select from './Select'
+import FrequencyLabel from './FrequencyLabel'
+import { observer } from 'mobx-react'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class IncomeSourceFrequency extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.defaultOnChange = this.defaultOnChange.bind(this)
     this.handleChange = this.handleChange.bind(this)
@@ -15,7 +17,7 @@ class IncomeSourceFrequency extends Component {
     handler(this.props.fieldName, event.target.value)
   }
 
-  // side effect, but easier to handle once here than pass in every time
+  // Side effect, but easier to handle once here than pass in every time.
   defaultOnChange(fieldName, value) {
     this.props.incomeSource[fieldName] = value
   }
@@ -26,15 +28,45 @@ class IncomeSourceFrequency extends Component {
 
     return (
       <div className="usa-input-grid usa-input-grid-medium">
-        <Select value={value}
-                onChange={this.handleChange}>
-          <option value="" disabled>Frequency…</option>
-          {showAnnual && <option value="annually">Annually</option>}
-          <option value="monthly">Monthly</option>
-          <option value="twicePerMonth">Twice per month</option>
-          <option value="everyTwoWeeks">Every two weeks</option>
-          <option value="weekly">Weekly</option>
-          {showHourly && <option value="hourly">Hourly</option>}
+        <Select
+            value={value}
+            onChange={this.handleChange}
+        >
+          <FormattedMessage
+              id="app.incomeSourceFrequency.placeholder"
+              description="Default text for income frequency select box."
+              defaultMessage="frequency…"
+          >
+            {message => <option value="" disabled>{message}</option>}
+          </FormattedMessage>
+
+          {showAnnual &&
+          <FrequencyLabel frequency="annually">
+            {message => <option value="annually">{message}</option>}
+          </FrequencyLabel>
+          }
+
+          <FrequencyLabel frequency="monthly">
+            {message => <option value="monthly">{message}</option>}
+          </FrequencyLabel>
+
+          <FrequencyLabel frequency="twicePerMonth">
+            {message => <option value="twicePerMonth">{message}</option>}
+          </FrequencyLabel>
+
+          <FrequencyLabel frequency="everyTwoWeeks">
+            {message => <option value="everyTwoWeeks">{message}</option>}
+          </FrequencyLabel>
+
+          <FrequencyLabel frequency="weekly">
+            {message => <option value="weekly">{message}</option>}
+          </FrequencyLabel>
+
+          {showHourly &&
+          <FrequencyLabel frequency="hourly">
+            {message => <option value="hourly">{message}</option>}
+          </FrequencyLabel>
+          }
         </Select>
       </div>
     )

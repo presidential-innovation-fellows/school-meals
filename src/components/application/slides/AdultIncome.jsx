@@ -5,7 +5,7 @@ import { observer } from 'mobx-react'
 @observer
 class AdultIncome extends Component {
   render() {
-    return(
+    return (
       <div>
         {this.props.adults.map(person =>
           <AdultIncomeSlides person={person} key={person.id} />

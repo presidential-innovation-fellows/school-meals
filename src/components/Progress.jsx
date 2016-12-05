@@ -1,59 +1,124 @@
-﻿import React, { Component, PropTypes } from 'react'
+import classnames from 'classnames'
+import React, { Component, PropTypes } from 'react'
 import Steps, { Step } from 'rc-steps'
+import { FormattedMessage } from 'react-intl'
 import { observer } from 'mobx-react'
 import { ProgressBar } from 'react-bootstrap'
-import { allStudentsAreFHMR } from '../helpers'
 
 @observer
 class Progress extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.oldPercent = 0
+    this.handleClick = this.handleClick.bind(this)
+    this.disableNavigation = this.disableNavigation.bind(this)
+    this.enableNavigation = this.enableNavigation.bind(this)
   }
 
-  componentDidMount() {
-    // roll our own event delegation to capture step clicks
-    document.addEventListener('click', function(e) {
-      for (let target=e.target; target && target!=this; target=target.parentNode) {
-        // loop parent nodes from the target to the delegation node
-        if (target.hasAttribute('data-hash')) {
-          for (let i = 0; i < target.classList.length; i++) {
-            if (target.classList[i] === 'rc-steps-status-finish' ||
-                target.classList[i] === 'rc-steps-status-process') {
-              window.location.hash = '#/' + target.getAttribute('data-hash')
-              break
-            }
+  get isNavigationEnabled() {
+    return !this.props.navigationData.isOnFinalSlide
+  }
+
+  get clickElement() {
+    return document.getElementById('progress-desktop')
+  }
+
+  handleClick(e) {
+    // Roll our own event delegation to capture step clicks.
+    for (let target = e.target; target && target !== this; target = target.parentNode) {
+      // Loop parent nodes from the target to the delegation node.
+      if (target.hasAttribute('data-hash')) {
+        for (let i = 0; i < target.classList.length; i++) {
+          if (target.classList[i] === 'rc-steps-status-finish' ||
+              target.classList[i] === 'rc-steps-status-process') {
+            window.location.replace(`#/${target.getAttribute('data-hash')}`)
+            break
           }
-          break
         }
+        break
       }
-    }, false)
+    }
   }
 
-  get showHousehold() {
-    return !this.props.applicationData.assistancePrograms.hasAny &&
-           (!allStudentsAreFHMR(this.props.applicationData.students) ||
-            this.props.applicationData.electToProvideIncome !== false)
+  disableNavigation() {
+    this.clickElement.removeEventListener('click', this.handleClick)
+  }
+
+  enableNavigation() {
+    this.clickElement.addEventListener('click', this.handleClick)
+  }
+
+  componentDidUpdate() {
+    if (this.isNavigationEnabled) {
+      this.enableNavigation()
+    } else {
+      this.disableNavigation()
+    }
   }
 
   get steps() {
-    let result = []
+    const result = []
 
-    result.push({ title: 'Begin', 'data-hash': 'welcome' })
-    result.push({ title: 'Students', 'data-hash': 'students' })
-    result.push({ title: 'Programs', 'data-hash': 'assistance-programs' })
+    result.push({
+      'data-hash': 'welcome',
+      'title': <FormattedMessage
+          id="progress.begin"
+          description="Text for the Begin progress bar step."
+          defaultMessage="Begin"
+               />
+    })
 
-    if (this.showHousehold) {
-      result.push({ title: 'Other Kids', 'data-hash': 'other-children' })
-      result.push({ title: 'Adults', 'data-hash': 'adults' })
+    result.push({
+      'data-hash': 'students',
+      'title': <FormattedMessage
+          id="progress.students"
+          description="Text for the Students progress bar step."
+          defaultMessage="Students"
+               />
+    })
+
+    result.push({
+      'data-hash': 'assistance-programs',
+      'title': <FormattedMessage
+          id="progress.assistancePrograms"
+          description="Text for the Programs progress bar step."
+          defaultMessage="Programs"
+               />
+    })
+
+    if (this.props.applicationData.showHousehold) {
+      result.push({
+        'data-hash': 'other-children',
+        'title': <FormattedMessage
+            id="progress.otherKids"
+            description="Text for the Other Kids progress bar step."
+            defaultMessage="Other Kids"
+                 />
+      })
+
+      result.push({
+        'data-hash': 'adults',
+        'title': <FormattedMessage
+            id="progress.adults"
+            description="Text for the Adults progress bar step."
+            defaultMessage="Adults"
+                 />
+      })
     }
 
-    result.push({ title: 'Finish', 'data-hash': 'summary' })
+    result.push({
+      'data-hash': 'summary',
+      'title': <FormattedMessage
+          id="progress.summary"
+          description="Text for the Summary progress bar step."
+          defaultMessage="Summary"
+               />
+    })
 
     return result
   }
 
-  // never returns a value less than a value that's been previously returned
+  // Never returns a value less than a value that's been previously returned.
   get percent() {
     const { currentSlideIndex, slides } = this.props.navigationData
     const newPercent = Math.round(100 * currentSlideIndex / (slides.length - 1))
@@ -63,18 +128,25 @@ class Progress extends Component {
 
   render() {
     const { stepsCompleted } = this.props.navigationData
+    const localeCode = this.props.localeData.code
+    const desktopClassNames = {
+      'progress-desktop': true,
+      'navigation-enabled': this.isNavigationEnabled
+    }
 
     return (
       <div className="progress-container">
         <div className="usa-grid">
           <div className="progress-mobile">
-            <ProgressBar now={this.percent}
-                         label={!!this.percent && `${this.percent}%`} />
+            <ProgressBar
+                now={this.percent}
+                label={!!this.percent && `${this.percent}%`}
+            />
           </div>
-          <div className="progress-desktop">
+          <div className={classnames(desktopClassNames)} id="progress-desktop">
             <Steps current={stepsCompleted}>
               {this.steps.map(step =>
-                <Step {...step} key={step['data-hash']} />
+                <Step {...step} key={localeCode + step['data-hash']} />
                )}
             </Steps>
           </div>
@@ -88,9 +160,11 @@ Progress.propTypes = {
   navigationData: PropTypes.shape({
     stepsCompleted: PropTypes.number
   }).isRequired,
+  localeData: PropTypes.shape({
+    code: PropTypes.string
+  }).isRequired,
   applicationData: PropTypes.shape({
-    assistancePrograms: PropTypes.object.isRequired,
-    students: PropTypes.object.isRequired
+    showHousehold: PropTypes.bool.isRequired
   }).isRequired
 };
 

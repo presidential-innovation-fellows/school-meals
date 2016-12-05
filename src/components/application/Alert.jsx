@@ -6,7 +6,7 @@ class Alert extends Component {
   render() {
     const { heading, type } = this.props
 
-    return(
+    return (
       <div className={`usa-alert usa-alert-${type}`}>
         <div className="usa-alert-body">
           {heading && <h3 className="usa-alert-heading">{heading}</h3>}
@@ -20,8 +20,8 @@ class Alert extends Component {
 }
 
 Alert.propTypes = {
-  heading: PropTypes.string,
-  type: PropTypes.string
+  heading: PropTypes.node,
+  type: PropTypes.oneOf(['success', 'warning', 'error', 'info'])
 }
 
 Alert.defaultProps = {

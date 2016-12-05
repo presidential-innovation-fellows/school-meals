@@ -1,8 +1,8 @@
 import React, { PropTypes } from 'react'
-import { schoolYear } from '../../helpers'
+import { schoolYear } from '../../config'
 
 const SchoolYear = (props) => {
-  return <span>{schoolYear(props.startYear)}</span>
+  return <span>{`${props.startYear}–${props.startYear + 1}`}</span>
 }
 
 SchoolYear.propTypes = {
@@ -10,7 +10,7 @@ SchoolYear.propTypes = {
 }
 
 SchoolYear.defaultProps = {
-  startYear: new Date().getFullYear()
+  startYear: schoolYear || new Date().getFullYear()
 }
 
 export default SchoolYear

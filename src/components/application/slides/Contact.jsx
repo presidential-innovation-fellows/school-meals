@@ -5,69 +5,116 @@ import Form from '../Form'
 import Fieldset from '../Fieldset'
 import InputField from '../InputField'
 import { observer } from 'mobx-react'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class Contact extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
-    this.onUsStateChange = this.onUsStateChange.bind(this)
+    this.handleUsStateChange = this.handleUsStateChange.bind(this)
   }
 
-  onUsStateChange(event) {
+  handleUsStateChange(event) {
     this.props.contact.state = event.target.value
   }
 
   render() {
     const { contact } = this.props
 
+    const headerText =
+      <FormattedMessage
+          id="app.slides.contact.header"
+          description="Text for the header of the slide."
+          defaultMessage="Contact Info"
+      />
+
     return (
-      <Slide header="Contact Info" id="contact" beginsSection>
-        <p className="usa-font-lead">Please enter your contact information so that we can reach you in case there are any issues with your application. This information is optional, but we strongly encourage you to provide it.</p>
+      <Slide header={headerText} id="contact" beginsSection>
+        <p className="usa-font-lead">
+          <FormattedMessage
+              id="app.slides.contact.intro"
+              description="Introductory paragraph."
+              defaultMessage="Please enter your contact information so that we can reach you in case there are any issues with your application. This information is optional, but we strongly encourage you to provide it."
+          />
+        </p>
 
         <Form large>
           <InputField
               name="phone"
-              label="Phone number"
               type="tel"
               pattern="( \d{3}- | \(\d{3}\) )?\d{3}-\d{4}"
               object={contact}
-          />
+          >
+            <FormattedMessage
+                id="app.slides.contact.phone.label"
+                description="Field label."
+                defaultMessage="Phone number"
+            />
+          </InputField>
 
           <InputField
               name="email"
-              label="Email"
               type="email"
               pattern="^\S+@\S+\.\S+$"
               object={contact}
-          />
+          >
+            <FormattedMessage
+                id="app.slides.contact.email.label"
+                description="Field label."
+                defaultMessage="Email"
+            />
+          </InputField>
 
           <Fieldset legend="Address">
             <InputField
                 name="address1"
-                label="Street address 1"
                 object={contact}
-            />
+            >
+              <FormattedMessage
+                  id="app.slides.contact.address1.label"
+                  description="Field label."
+                  defaultMessage="Street address 1"
+              />
+            </InputField>
 
             <InputField
                 name="address2"
-                label="Street address 2"
                 object={contact}
-            />
+            >
+              <FormattedMessage
+                  id="app.slides.contact.address2.label"
+                  description="Field label."
+                  defaultMessage="Street address 2"
+              />
+            </InputField>
 
             <div>
               <InputField
                   name="city"
-                  label="City"
                   size="medium"
                   object={contact}
                   grid
-              />
+              >
+                <FormattedMessage
+                    id="app.slides.contact.city.label"
+                    description="Field label."
+                    defaultMessage="City"
+                />
+              </InputField>
 
               <div className="usa-input-grid usa-input-grid-small">
-                <label htmlFor="state">State</label>
-                <Select id="state" name="state" value={contact.state}
-                        onChange={this.onUsStateChange}>
-                  <option value=""></option>
+                <label htmlFor="state">
+                  <FormattedMessage
+                      id="app.slides.contact.state.label"
+                      description="Field label."
+                      defaultMessage="State"
+                  />
+                </label>
+                <Select
+                    id="state" name="state" value={contact.state}
+                    onChange={this.handleUsStateChange}
+                >
+                  <option value="" />
                   <option value="AL">Alabama</option>
                   <option value="AK">Alaska</option>
                   <option value="AZ">Arizona</option>
@@ -125,10 +172,15 @@ class Contact extends Component {
 
             <InputField
                 name="zip"
-                label="ZIP"
                 size="medium"
                 object={contact}
-            />
+            >
+              <FormattedMessage
+                  id="app.slides.contact.zip.label"
+                  description="Field label."
+                  defaultMessage="ZIP"
+              />
+            </InputField>
           </Fieldset>
         </Form>
       </Slide>

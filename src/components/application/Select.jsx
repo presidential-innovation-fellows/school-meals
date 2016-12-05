@@ -9,7 +9,7 @@ class Select extends Component {
 
     let classNames = className
     if (typeof classNames === 'string') {
-      let key = classNames
+      const key = classNames
       classNames = {}
       classNames[key] = true
     }

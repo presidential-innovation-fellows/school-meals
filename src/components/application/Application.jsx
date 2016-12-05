@@ -12,42 +12,36 @@ import Contact from './slides/Contact'
 import Demographics from './slides/Demographics'
 import Summary from './slides/Summary'
 import ThankYou from './slides/ThankYou'
-import ViewAppData from './slides/ViewAppData'
 
 @observer
 class Application extends Component {
   render() {
+    const { applicationData } = this.props
     const {
       attestation,
       students,
       contact,
       adults,
-      assistancePrograms,
-      allPeopleCollections
-    } = this.props.applicationData
-
-    const appData = this.props.applicationData
+      assistancePrograms
+    } = applicationData
 
     return (
       <div>
         <Welcome />
         <BeforeYouBegin />
         <Attestation attestation={attestation} attestor={adults.first} />
-        <Students students={students} allPeopleCollections={allPeopleCollections} />
-        <AssistancePrograms assistancePrograms={assistancePrograms}
-                            students={students}
-                            allPeopleCollections={allPeopleCollections} />
+        <Students students={students} />
+        <AssistancePrograms applicationData={applicationData} />
 
         {assistancePrograms.hasAny !== true &&
-         <NoAssistancePrograms applicationData={this.props.applicationData} />
+        <NoAssistancePrograms applicationData={this.props.applicationData} />
         }
 
         <Contact contact={contact} />
         <Demographics students={students} />
         <LegalStatements />
         <Summary applicationData={this.props.applicationData} />
-        <ThankYou />
-        <ViewAppData applicationData={appData}/>
+        <ThankYou applicationData={this.props.applicationData} />
       </div>
     )
   }

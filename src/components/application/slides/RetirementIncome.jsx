@@ -3,7 +3,8 @@ import IncomeSource from '../IncomeSource'
 import IncomeType from './IncomeType'
 import { observer } from 'mobx-react'
 import { tooltiptext } from '../../Tooltiptext'
-import Tooltipcomp from '../Tooltip'
+import Tooltip from '../Tooltip'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class RetirementIncome extends Component {
@@ -12,25 +13,55 @@ class RetirementIncome extends Component {
     const incomeType = person.incomeTypes.retirement
     const incomeSources = incomeType.sources
     const incomeTypeProps = {
-      name: "retirement",
-      label: "Retirement Income",
+      name: 'retirement',
       person
     }
 
-    return(
+    return (
       <IncomeType {...incomeTypeProps}>
 
         <IncomeSource incomeSources={incomeSources} name="socialSecurity">
-            <Tooltipcomp id="socialSecurity" text={tooltiptext.socialSecurity} target="Social Security" />
-          &nbsp; (including survivor benefits, &nbsp;
-            <Tooltipcomp id="blackLung" text={tooltiptext.blackLung} target="Black Lung benefits" />
-          &nbsp;, and &nbsp;
-            <Tooltipcomp id="railroad" text={tooltiptext.railroad} target="Railroad Retirement" />
-          &nbsp; )
+          <FormattedMessage
+              id="app.slides.retirementIncome.incomeList"
+              description="List of retirement income"
+              defaultMessage="{tooltip} (including survivor benefits, {tooltip2}, and {tooltip3})"
+              values={{
+                tooltip:
+                  <Tooltip text={tooltiptext.socialSecurity}>
+                    <FormattedMessage
+                        id="app.slides.retirementIncome.socialSecurity"
+                        description="Social Security"
+                        defaultMessage="Social Security"
+                    />
+                  </Tooltip>,
+                tooltip2:
+                  <Tooltip text={tooltiptext.blackLung}>
+                    <FormattedMessage
+                        id="app.slides.retirementIncome.blackLung"
+                        description="Black Lung benefits"
+                        defaultMessage="Black Lung benefits"
+                    />
+                  </Tooltip>,
+                tooltip3:
+                  <Tooltip text={tooltiptext.railroad}>
+                    <FormattedMessage
+                        id="app.slides.retirementIncome.railroad"
+                        description="Railroad Retirement"
+                        defaultMessage="Railroad Retirement"
+                    />
+                  </Tooltip>
+              }}
+          />
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="privatePension">
-          <Tooltipcomp id="pension" text={tooltiptext.pension} target="Pension" />
+          <Tooltip text={tooltiptext.pension}>
+            <FormattedMessage
+                id="app.slides.retirementIncome.pension"
+                description="Pension"
+                defaultMessage="Pension"
+            />
+          </Tooltip>
         </IncomeSource>
       </IncomeType>
     )

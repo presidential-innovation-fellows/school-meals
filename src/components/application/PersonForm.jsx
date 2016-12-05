@@ -4,15 +4,16 @@ import Button from './Button'
 import Form from './Form'
 import Fieldset from './Fieldset'
 import PersonAttributeInput from './PersonAttributeInput'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class PersonForm extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
-    this.onRemove = this.onRemove.bind(this)
+    this.handleRemove = this.handleRemove.bind(this)
   }
 
-  onRemove() {
+  handleRemove() {
     this.props.onRemove(this.props.person)
   }
 
@@ -20,12 +21,12 @@ class PersonForm extends Component {
     const {
       label,
       person,
-      fields,
+      fields
     } = this.props
 
     const name = person.firstName || label
 
-    return(
+    return (
       <div className="person-form">
         <Form>
           <Fieldset legend="Name">
@@ -35,16 +36,22 @@ class PersonForm extends Component {
                 {fields.map((field, index) =>
                   <PersonAttributeInput
                       person={person}
-                      name={field.name}
-                      label={field.label}
-                      required={!!field.required}
-                      key={index} />
+                      field={field}
+                      key={index}
+                  />
                  )}
               </div>
               <div>
-                <Button onClick={this.onRemove}
-                        className="usa-button-gray remove-person">
-                  Remove {name}
+                <Button
+                    onClick={this.handleRemove}
+                    className="usa-button-gray remove-person"
+                >
+                  <FormattedMessage
+                      id="app.personForm.removeButton"
+                      description="Button to remove person from collection."
+                      defaultMessage="Remove {name}"
+                      values={{ name }}
+                  />
                 </Button>
               </div>
             </div>
@@ -57,11 +64,11 @@ class PersonForm extends Component {
 
 PersonForm.propTypes = {
   onRemove: PropTypes.func.isRequired,
-  label: PropTypes.string.isRequired,
+  label: PropTypes.node.isRequired,
   person: PropTypes.object.isRequired,
   fields: PropTypes.arrayOf(PropTypes.shape({
     name: PropTypes.string.isRequired,
-    label: PropTypes.string.isRequired,
+    label: PropTypes.node.isRequired,
     required: PropTypes.bool
   })).isRequired
 }

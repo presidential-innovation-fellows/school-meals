@@ -1,7 +1,7 @@
-import classNames from 'classnames'
 import React, { Component, PropTypes } from 'react'
 import { observer } from 'mobx-react'
 import Button from './Button'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class Slide extends Component {
@@ -9,28 +9,30 @@ class Slide extends Component {
     super(props, context)
     this.handleBack = this.handleBack.bind(this)
     this.handleNext = this.handleNext.bind(this)
-    this.handleJump = this.handleJump.bind(this)
   }
 
   handleBack() {
-    this.context.navigationData.back()
+    if (this.props.handleBack) {
+      this.props.handleBack()
+    } else {
+      this.context.navigationData.back()
+    }
   }
 
   handleNext() {
-    this.context.navigationData.next()
-  }
-
-  handleJump() {
-    this.context.navigationData.jump()
+    if (this.props.handleNext) {
+      this.props.handleNext()
+    } else {
+      this.context.navigationData.next()
+    }
   }
 
   render() {
-    const { navigationData } = this.context
     const props = {
-      className: "slide",
-      id: this.props.id,
+      'className': 'slide',
+      'id': this.props.id,
       'data-begins-section': this.props.beginsSection,
-      'data-help-article': this.props.helpArticle || this.props.id,
+      'data-help-article': this.props.helpArticle || this.props.id
     }
 
     if (this.props.nextDisabled) {
@@ -48,26 +50,31 @@ class Slide extends Component {
           <footer>
             {
               this.props.showBack &&
-              <Button onClick={this.handleBack}
-                      disabled={this.props.backDisabled}
-                      className="usa-button-outline">
+              <Button
+                  onClick={this.handleBack}
+                  disabled={this.props.backDisabled}
+                  className="usa-button-outline"
+              >
                 {this.props.backText}
               </Button>
             }
             {this.props.showBack && this.props.showNext && ' '}
             {
               this.props.showNext &&
-              <Button onClick={this.handleNext}
-                      disabled={this.props.nextDisabled}>
+              <Button
+                  onClick={this.handleNext}
+                  disabled={this.props.nextDisabled}
+              >
                 {this.props.nextText}
-             </Button>
+              </Button>
             }
             {
-              navigationData.canJump &&
-              <Button onClick={this.handleJump}
-                      className="usa-button-primary-alt jump-button">
-                Resume →
-             </Button>
+              this.props.showNext && this.props.nextDisabled &&
+              <p className="required-text hidden">
+                <strong>
+                  {this.props.helpText}
+                </strong>
+              </p>
             }
           </footer>
         </div>
@@ -83,24 +90,24 @@ Slide.contextTypes = {
   }).isRequired,
   navigationData: PropTypes.shape({
     back: PropTypes.func.isRequired,
-    next: PropTypes.func.isRequired,
-    jump: PropTypes.func.isRequired,
-    canJump: PropTypes.bool.isRequired
+    next: PropTypes.func.isRequired
   }).isRequired
-};
+}
 
 Slide.propTypes = {
   id: PropTypes.string.isRequired,
   children: PropTypes.node.isRequired,
-  header: PropTypes.string,
+  header: PropTypes.node,
   helpArticle: PropTypes.string,
   showBack: PropTypes.bool,
   showNext: PropTypes.bool,
   backDisabled: PropTypes.bool,
   nextDisabled: PropTypes.bool,
-  backText: PropTypes.string,
-  nextText: PropTypes.string,
-  beginsSection: PropTypes.bool
+  backText: PropTypes.node,
+  nextText: PropTypes.node,
+  beginsSection: PropTypes.bool,
+  handleBack: PropTypes.func,
+  handleNext: PropTypes.func
 }
 
 Slide.defaultProps = {
@@ -108,8 +115,24 @@ Slide.defaultProps = {
   showNext: true,
   backDisabled: false,
   nextDisabled: false,
-  backText: 'Back',
-  nextText: 'Continue'
+  backText:
+    <FormattedMessage
+        id="app.slide.backButton"
+        description="Default text for button to move back a slide."
+        defaultMessage="Back"
+    />,
+  nextText:
+    <FormattedMessage
+        id="app.slide.nextButton"
+        description="Default text for button to move forward a slide."
+        defaultMessage="Continue"
+    />,
+  helpText:
+    <FormattedMessage
+        id="app.slide.helpText"
+        description="Default text to tell user that the current slide is incomplete."
+        defaultMessage="Please enter all required information above."
+    />
 }
 
 export default Slide

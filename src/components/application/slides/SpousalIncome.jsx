@@ -3,7 +3,8 @@ import IncomeSource from '../IncomeSource'
 import IncomeType from './IncomeType'
 import { observer } from 'mobx-react'
 import { tooltiptext } from '../../Tooltiptext'
-import Tooltipcomp from '../Tooltip'
+import Tooltip from '../Tooltip'
+import { FormattedMessage } from 'react-intl'
 
 @observer
 class SpousalIncome extends Component {
@@ -13,19 +14,30 @@ class SpousalIncome extends Component {
     const incomeSources = incomeType.sources
     const incomeTypeProps = {
       name: 'spousal',
-      label: 'Spousal Income',
       person
     }
 
-    return(
+    return (
       <IncomeType {...incomeTypeProps}>
 
         <IncomeSource incomeSources={incomeSources} name="alimony">
-          <Tooltipcomp id="alimony" text={tooltiptext.alimony} target="Alimony" />
+          <Tooltip text={tooltiptext.alimony}>
+            <FormattedMessage
+                id="app.slides.spousalIncome.alimony"
+                description="Alimony"
+                defaultMessage="Alimony"
+            />
+          </Tooltip>
         </IncomeSource>
 
         <IncomeSource incomeSources={incomeSources} name="childSupport">
-          <Tooltipcomp id="childSupport" text={tooltiptext.childSupport} target="Child support" />
+          <Tooltip text={tooltiptext.childSupport}>
+            <FormattedMessage
+                id="app.slides.spousalIncome.childSupport"
+                description="Child support"
+                defaultMessage="Child support"
+            />
+          </Tooltip>
         </IncomeSource>
       </IncomeType>
     )

@@ -50,12 +50,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>School Meals Application</title>
 
-    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css?v=6d3bd9">
-    <link rel="stylesheet" href="vendor/uswds/dist/css/uswds.min.css?v=6d3bd9">
-    <link rel="stylesheet" href="vendor/styles/rc-steps.css?v=6d3bd9">
-    <link rel="stylesheet" href="vendor/styles/rc-steps-iconfont.css?v=6d3bd9">
-    <link rel="stylesheet" href="styles/styles.css?v=1d1a19">
-    <link rel="stylesheet" href="styles/help.css?v=4380bf">
+    <meta property="og:site_name" content="School Meals Application"/>
+    <meta property="og:title" content="School Meals Application"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="https://d55ey47q998kv.cloudfront.net/og-image.png"/>
+    <meta itemprop="thumbnailUrl" content="https://d55ey47q998kv.cloudfront.net/og-image.png"/>
+    <link rel="image_src" href="https://d55ey47q998kv.cloudfront.net/og-image.png" />
+    <meta itemprop="image" content="https://d55ey47q998kv.cloudfront.net/og-image.png"/>
+    <meta name="twitter:title" content="School Meals Application"/>
+    <meta name="twitter:image" content="https://d55ey47q998kv.cloudfront.net/og-image.png"/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="description" content="A model application developed by USDA to demonstrate the potential functionality of a school district's application for school meals (***NOT A REAL APPLICATION FOR SCHOOL MEAL BENEFITS***)." />
+
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/uswds/dist/css/uswds.min.css">
+    <link rel="stylesheet" href="vendor/styles/rc-steps.css">
+    <link rel="stylesheet" href="vendor/styles/rc-steps-iconfont.css">
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/help.css">
     <!-- Favicons
     ================================================== -->
     <!-- 128x128 -->
@@ -89,6 +101,7 @@
   </head>
   <body>
     <div id="root"></div>
-    <script src="./dist/bundle.js?v=1d1a19"></script>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Intl.~locale.en,Intl.~locale.es"></script>
+    <script src="./static/bundle.js"></script>
   </body>
 </html>

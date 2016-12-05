@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <meta charset="utf-8">
+
+<!--
+                      __,__r========qL,
+                   ,m**`~'            XW;
+            ____Lm/'      _mmmm    jW@+===m___,
+      .m+*f~TX7''|    `Y*X@X7~MMLL          ._JXmL,
+    jf~'    `YM#:~      !*##@ d j@~Y!     `~~~+m_
+   Z            M       `Nd*=+5+      -====L__ !M-
+  m!            `Y=;m_,   ~Yf~~               YL`W;
+  |        .mmmmmqrL_XXX~*==mL,                 Y#|
+  |  ,Z~~~~~'        ~~~~    X#         -==L__,  !#,
+  | |tL             ____WY*f~~                `~qd#W
+  V,| `~~Y*+mL_,  :f~~ ~                   q_    V#b
+  `b|         `Y+-W;                        `\\,  _#
+    V              N,  m                 YL,   `\L#@
+                    N  #                   YL,   `##,
+                   .P  #                     `\   V#|
+                 ../   #           ^           YL |W
+                -P     #    :P  ;  ||           `|!W
+                Z'     #   :P  :'   #,           #L#
+            _ _Wb    jWD  jf   /    |b           V@*
+          j+N##8#4rt8#~.,jf    |    |#       b   |W
+       .r*'m8####q#P8###*'    W    :##       V;  d|
+      /K_jWK#X###~#|###mW#   :P  j;##|    #, `#, @
+     !TGW###8#m#K7q=WWmd##mmm#m.Z8###!    #W  |b |
+     /4#@##W#+##P:WZWMZ*W=m##WMN|WZWP:#;m,d#W;Dd |
+    W*~~~M#W!KWjW5!!/WV##N7j#KXPNMX#DW###b###D#Xb|
+   !'    d!JXXXW!`!Ldm@#bd#WW8K)X|X#8#8#K##V#!K5|#
+        d@f~  jf.Z\/Vb*Y+W#j(WMZPrMM#@##K#@##;WWj##,
+        ~    m*~'   '#`\8#W4KW#qX@VW##W#8##8#rNWK###G-
+            `'       #`8*=#YWWK/b+WW#W#*#MWm8*KKd#M#**m,
+                     #Z'  VW#f'~M+NM#####K#8@WLMZKX#W#+M;
+                              ~` *YM#######@*)P/+DK####m#
+                                   `'*##fXVPX|Vr~##Z#W@N@
+                                      `WL_d**DfWX#8#WK##*b
+                                                `W###@#N#/b
+                                                 .#mj#X~YM#
+                                                 ~`#WdD~  Y!
+                                                 `'_|#f+-
+
+  Built by Presidential Innovation Fellows (http://pif.gov)
+
+-->
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>School Meals Application</title>
+
+    <meta property="og:site_name" content="School Meals Application"/>
+    <meta property="og:title" content="School Meals Application"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:image" content="https://d55ey47q998kv.cloudfront.net/og-image.png"/>
+    <meta itemprop="thumbnailUrl" content="https://d55ey47q998kv.cloudfront.net/og-image.png"/>
+    <link rel="image_src" href="https://d55ey47q998kv.cloudfront.net/og-image.png" />
+    <meta itemprop="image" content="https://d55ey47q998kv.cloudfront.net/og-image.png"/>
+    <meta name="twitter:title" content="School Meals Application"/>
+    <meta name="twitter:image" content="https://d55ey47q998kv.cloudfront.net/og-image.png"/>
+    <meta name="twitter:card" content="summary"/>
+    <meta name="description" content="A model application developed by USDA to demonstrate the potential functionality of a school district's application for school meals (***NOT A REAL APPLICATION FOR SCHOOL MEAL BENEFITS***)." />
+
+    <link rel="stylesheet" href="./static/vendor/bootstrap/css/bootstrap.min.css?v=351206">
+    <link rel="stylesheet" href="./static/vendor/uswds/dist/css/uswds.min.css?v=deb3dc33">
+    <link rel="stylesheet" href="./static/vendor/styles/rc-steps.css?v=351206">
+    <link rel="stylesheet" href="./static/vendor/styles/rc-steps-iconfont.css?v=351206">
+    <link rel="stylesheet" href="./styles/styles.css?v=74ac26534e">
+    <link rel="stylesheet" href="./styles/help.css?v=351206">
+    <!-- Favicons
+    ================================================== -->
+    <!-- 128x128 -->
+    <link rel="shortcut icon" type="image/ico" href="img/favicons/favicon.ico" />
+    <link rel="icon" type="image/png" href="img/favicons/favicon.png" />
+
+    <!-- 192x192, as recommended for Android
+    http://updates.html5rocks.com/2014/11/Support-for-theme-color-in-Chrome-39-for-Android
+    -->
+    <link rel="icon" type="image/png" sizes="192x192" href="img/favicons/favicon-192.png" />
+
+    <!-- 57x57 (precomposed) for iPhone 3GS, pre-2011 iPod Touch and older Android devices -->
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/favicon-57.png">
+    <!-- 72x72 (precomposed) for 1st generation iPad, iPad 2 and iPad mini -->
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/favicons/favicon-72.png">
+    <!-- 114x114 (precomposed) for iPhone 4, 4S, 5 and post-2011 iPod Touch -->
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/favicons/favicon-114.png">
+    <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/favicons/favicon-144.png">
+
+    <!--[if lt IE 9]>
+    <script>
+    (function(){
+      var ef = function(){};
+      window.console = window.console || {log:ef,warn:ef,error:ef,dir:ef};
+    }());
+    </script>
+    <script src="./static/vendor/js/html5shiv-printshiv.min.js?v=351206"></script>
+    <script src="./static/vendor/js/es5-shim.min.js?v=351206"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="root"></div>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Intl.~locale.en,Intl.~locale.es"></script>
+    <script src="./static/bundle.js?v=d7ac85caff"></script>
+  </body>
+</html>
