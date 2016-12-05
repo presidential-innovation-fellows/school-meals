@@ -1,3 +1,5 @@
+NOTE: THIS REPOSITORY IS NO LONGER BEING MAINTAINED AND WILL NOT ACCEPT ANY PULL REQUESTS. IT DOES NOT REPRESENT ANY WORK DONE BY THE USDA.
+
 # school-meals
 Application for free/reduced [school meals](http://www.fns.usda.gov/school-meals/child-nutrition-programs).
 
